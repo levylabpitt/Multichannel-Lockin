@@ -14,11 +14,19 @@
 			<Item Name="data2string.vi" Type="VI" URL="../DAQ-Lockin-SubVI/data2string.vi"/>
 			<Item Name="Display.vi" Type="VI" URL="../DAQ-Lockin-SubVI/Display.vi"/>
 			<Item Name="Get Terminal Name with Device Prefix.vi" Type="VI" URL="../DAQ-Lockin-SubVI/Get Terminal Name with Device Prefix.vi"/>
+			<Item Name="Lock-in Globles Multiple Inputs and Outputs used with FGV.vi" Type="VI" URL="../DAQ-Lockin-SubVI/Lock-in Globles Multiple Inputs and Outputs used with FGV.vi"/>
 			<Item Name="Lock-in Globles Multiple Inputs and Outputs.vi" Type="VI" URL="../DAQ-Lockin-SubVI/Lock-in Globles Multiple Inputs and Outputs.vi"/>
 			<Item Name="Lock-in_dem_mul Multiple Inputs and Outputs.vi" Type="VI" URL="../DAQ-Lockin-SubVI/Lock-in_dem_mul Multiple Inputs and Outputs.vi"/>
 			<Item Name="Lock-in_dem_mul.vi" Type="VI" URL="../DAQ-Lockin-SubVI/Lock-in_dem_mul.vi"/>
 			<Item Name="Reference_new version_1.0.vi" Type="VI" URL="../DAQ-Lockin-SubVI/Reference_new version_1.0.vi"/>
 			<Item Name="Stream_lock_in_data.vi" Type="VI" URL="../DAQ-Lockin-SubVI/Stream_lock_in_data.vi"/>
+		</Item>
+		<Item Name="FGV" Type="Folder">
+			<Item Name="Input Signals FGV.vi" Type="VI" URL="../FGV/Input Signals FGV.vi"/>
+			<Item Name="OSC Configuration FGV.vi" Type="VI" URL="../FGV/OSC Configuration FGV.vi"/>
+			<Item Name="Output FGV.vi" Type="VI" URL="../FGV/Output FGV.vi"/>
+			<Item Name="Results FGV.vi" Type="VI" URL="../FGV/Results FGV.vi"/>
+			<Item Name="Sampling Information FGV.vi" Type="VI" URL="../FGV/Sampling Information FGV.vi"/>
 		</Item>
 		<Item Name="SubVIs" Type="Folder">
 			<Item Name="Create IO Channels.vi" Type="VI" URL="../SubVIs/Create IO Channels.vi"/>
@@ -27,6 +35,7 @@
 			<Item Name="Read Data.vi" Type="VI" URL="../SubVIs/Read Data.vi"/>
 		</Item>
 		<Item Name="Lockin-4461_Multiple Inputs and Outputs_KH.vi" Type="VI" URL="../Lockin-4461_Multiple Inputs and Outputs_KH.vi"/>
+		<Item Name="Lockin-4461_Multiple Inputs and Outputs_KH_functional_global.vi" Type="VI" URL="../Lockin-4461_Multiple Inputs and Outputs_KH_functional_global.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="Read PPMS T and B.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/PPMS VI/Read PPMS T and B.vi"/>
