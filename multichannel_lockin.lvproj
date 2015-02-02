@@ -38,7 +38,7 @@
 		<Item Name="Lockin-4461_Multiple Inputs and Outputs_KH_functional_global.vi" Type="VI" URL="../Lockin-4461_Multiple Inputs and Outputs_KH_functional_global.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
-				<Item Name="Read PPMS T and B.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/PPMS VI/Read PPMS T and B.vi"/>
+				<Item Name="Read PPMS T and B.vi" Type="VI" URL="/&lt;userlib&gt;/Levylab/PPMS VI/Read PPMS T and B.vi"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>
@@ -291,7 +291,7 @@
 				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
-			<Item Name="Global Value.vi" Type="VI" URL="/Q/inst/Leiden measurements VIs/IV measurement/Sub VIs/Global Value.vi"/>
+			<Item Name="Global Value.vi" Type="VI" URL="../../../Labview_Local/Lockin-4461_Multiple Inputs and Outputs_KH Folder/Q/inst/Leiden measurements VIs/IV measurement/Sub VIs/Global Value.vi"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="nilvaiu.dll" Type="Document" URL="nilvaiu.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
