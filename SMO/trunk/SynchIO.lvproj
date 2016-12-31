@@ -10,6 +10,7 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
+		<Item Name="StreamReader.lvclass" Type="LVClass" URL="../../framework/StreamReader/StreamReader.lvclass"/>
 		<Item Name="SynchIO.lvclass" Type="LVClass" URL="../SynchIO/SynchIO/SynchIO.lvclass"/>
 		<Item Name="SynchIO.USB4431.lvclass" Type="LVClass" URL="../SynchIO/SynchIO.USB4431/SynchIO.USB4431.lvclass"/>
 		<Item Name="Dependencies" Type="Dependencies">
