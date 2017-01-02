@@ -12,6 +12,7 @@
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="StreamReader.lvclass" Type="LVClass" URL="../../framework/StreamReader/StreamReader.lvclass"/>
 		<Item Name="SynchIO.lvclass" Type="LVClass" URL="../SynchIO/SynchIO/SynchIO.lvclass"/>
+		<Item Name="SynchIO.PXI-4461.lvclass" Type="LVClass" URL="../SynchIO/SynchIO.PXI-4461/SynchIO.PXI-4461.lvclass"/>
 		<Item Name="SynchIO.USB4431.lvclass" Type="LVClass" URL="../SynchIO/SynchIO.USB4431/SynchIO.USB4431.lvclass"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
@@ -266,7 +267,9 @@
 			<Item Name="4431 Calculate buffer info.vi" Type="VI" URL="../../../subVIs - DAQ/4431 Calculate buffer info.vi"/>
 			<Item Name="4431 USB - Create IO Channels.vi" Type="VI" URL="../../../subVIs - DAQ/4431 USB - Create IO Channels.vi"/>
 			<Item Name="4461 - AI AND AI - Read AND Write Uneven -- Array.vi" Type="VI" URL="../../../subVIs - DAQ/4461 - AI AND AI - Read AND Write Uneven -- Array.vi"/>
+			<Item Name="4461 - AI AND AI - Read AND Write Uneven.vi" Type="VI" URL="../../../subVIs - DAQ/4461 - AI AND AI - Read AND Write Uneven.vi"/>
 			<Item Name="4461 - Create AO waveforms.vi" Type="VI" URL="../../../subVIs - DAQ/4461 - Create AO waveforms.vi"/>
+			<Item Name="4461 - Create IO Channels Parallel Uneven.vi" Type="VI" URL="../../../subVIs - DAQ/4461 - Create IO Channels Parallel Uneven.vi"/>
 			<Item Name="4461 - Create Reference Waveforms.vi" Type="VI" URL="../../../subVIs - DAQ/4461 - Create Reference Waveforms.vi"/>
 			<Item Name="AI.Coupling.enum.convert.vi" Type="VI" URL="../../../SubVIs/AI.Coupling.enum.convert.vi"/>
 			<Item Name="decimate_waveforms.vi" Type="VI" URL="../../../SubVIs/decimate_waveforms.vi"/>
