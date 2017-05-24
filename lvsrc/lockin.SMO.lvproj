@@ -14,6 +14,7 @@
 		<Item Name="DAQ.lvclass" Type="LVClass" URL="../DAQ/DAQ.lvclass"/>
 		<Item Name="DAQ.4461.lvclass" Type="LVClass" URL="../DAQ.4461/DAQ.4461.lvclass"/>
 		<Item Name="DAQ.Virtual.lvclass" Type="LVClass" URL="../DAQ.Virtual/DAQ.Virtual.lvclass"/>
+		<Item Name="lockin.SMO.vi" Type="VI" URL="../lockin.SMO.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Add State(s) to Queue__jki_lib_state_machine.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/State Machine/_JKI_lib_State_Machine.llb/Add State(s) to Queue__jki_lib_state_machine.vi"/>
