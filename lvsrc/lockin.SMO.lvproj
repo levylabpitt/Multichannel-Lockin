@@ -11,7 +11,6 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="DAQ.lvclass" Type="LVClass" URL="../DAQ/DAQ.lvclass"/>
 		<Item Name="DAQ.4461.lvclass" Type="LVClass" URL="../DAQ.4461/DAQ.4461.lvclass"/>
 		<Item Name="DAQ.Virtual.lvclass" Type="LVClass" URL="../DAQ.Virtual/DAQ.Virtual.lvclass"/>
 		<Item Name="lockin.SMO.vi" Type="VI" URL="../lockin.SMO.vi"/>
@@ -60,6 +59,7 @@
 			<Item Name="PublicEvents--DAQ.Channels.ctl" Type="VI" URL="../DAQ/Typedefs/PublicEvents--DAQ.Channels.ctl"/>
 			<Item Name="PublicEvents--DAQ.Read.ctl" Type="VI" URL="../DAQ/Typedefs/PublicEvents--DAQ.Read.ctl"/>
 			<Item Name="PrivateEvents--DAQ.UpdateChannels.ctl" Type="VI" URL="../DAQ/Typedefs/PrivateEvents--DAQ.UpdateChannels.ctl"/>
+			<Item Name="DAQ.lvclass" Type="LVClass" URL="../DAQ/DAQ.lvclass"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
