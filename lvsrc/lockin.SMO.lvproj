@@ -55,6 +55,11 @@
 			</Item>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="PublicEvents--DAQ.Test.ctl" Type="VI" URL="../DAQ/Typedefs/PublicEvents--DAQ.Test.ctl"/>
+			<Item Name="DAQ.Channels.vi" Type="VI" URL="../DAQ/DAQ.Channels.vi"/>
+			<Item Name="DAQ.Read.vi" Type="VI" URL="../DAQ/DAQ.Read.vi"/>
+			<Item Name="PublicEvents--DAQ.Channels.ctl" Type="VI" URL="../DAQ/Typedefs/PublicEvents--DAQ.Channels.ctl"/>
+			<Item Name="PublicEvents--DAQ.Read.ctl" Type="VI" URL="../DAQ/Typedefs/PublicEvents--DAQ.Read.ctl"/>
+			<Item Name="PrivateEvents--DAQ.UpdateChannels.ctl" Type="VI" URL="../DAQ/Typedefs/PrivateEvents--DAQ.UpdateChannels.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
