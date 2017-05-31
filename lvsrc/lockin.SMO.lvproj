@@ -12,6 +12,7 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="DAQ.lvclass" Type="LVClass" URL="../DAQ/DAQ.lvclass"/>
+		<Item Name="DAQmx.lvclass" Type="LVClass" URL="../DAQmx/DAQmx.lvclass"/>
 		<Item Name="lockin.SMO.vi" Type="VI" URL="../lockin.SMO.vi"/>
 		<Item Name="DAQ create sandbox.vi" Type="VI" URL="../DAQ/DAQ create sandbox.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
