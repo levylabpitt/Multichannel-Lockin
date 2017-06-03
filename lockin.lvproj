@@ -62,12 +62,12 @@
 			<Item Name="Waveform 64-128 channels LP pt by pt.vi" Type="VI" URL="../SubVIs/Waveform 64-128 channels LP pt by pt.vi"/>
 		</Item>
 		<Item Name="subVIs - DAQ" Type="Folder">
-			<Item Name="4461 - AI AND AI - Read AND Write Uneven - SINGLE TASK.vi" Type="VI" URL="../subVIs - DAQ/4461 - AI AND AI - Read AND Write Uneven - SINGLE TASK.vi"/>
+			<Item Name="4461 - AI AND AI - Read AND Write Uneven.vi" Type="VI" URL="../subVIs - DAQ/4461 - AI AND AI - Read AND Write Uneven.vi"/>
 			<Item Name="4461 - AI Read Data.vi" Type="VI" URL="../subVIs - DAQ/4461 - AI Read Data.vi"/>
 			<Item Name="4461 - AO Write Data.vi" Type="VI" URL="../subVIs - DAQ/4461 - AO Write Data.vi"/>
 			<Item Name="4461 - Cal Info.vi" Type="VI" URL="../subVIs - DAQ/4461 - Cal Info.vi"/>
 			<Item Name="4461 - Create AO waveforms.vi" Type="VI" URL="../subVIs - DAQ/4461 - Create AO waveforms.vi"/>
-			<Item Name="4461 - Create IO Channels Parallel Uneven - SINGLE TASK.vi" Type="VI" URL="../subVIs - DAQ/4461 - Create IO Channels Parallel Uneven - SINGLE TASK.vi"/>
+			<Item Name="4461 - Create IO Channels Parallel Uneven.vi" Type="VI" URL="../subVIs - DAQ/4461 - Create IO Channels Parallel Uneven.vi"/>
 			<Item Name="4461 - Create Reference Waveforms.vi" Type="VI" URL="../subVIs - DAQ/4461 - Create Reference Waveforms.vi"/>
 			<Item Name="4461 - Lockin Engine.vi" Type="VI" URL="../subVIs - DAQ/4461 - Lockin Engine.vi"/>
 			<Item Name="4461 Sim - Noise.vi" Type="VI" URL="../subVIs - DAQ/4461 Sim - Noise.vi"/>
@@ -221,7 +221,7 @@
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
-				<Item Name="Add State(s) to Queue__jki_lib_state_machine.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/State Machine/_JKI_lib_State_Machine.llb/Add State(s) to Queue__jki_lib_state_machine.vi"/>
+				<Item Name="Add State(s) to Queue__JKI_lib_State_Machine.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/State Machine/_JKI_lib_State_Machine.llb/Add State(s) to Queue__JKI_lib_State_Machine.vi"/>
 				<Item Name="Append Waveforms.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/Append Waveforms.vi"/>
 				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>
 				<Item Name="Check for Equality.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/Check for Equality.vi"/>
@@ -493,7 +493,7 @@
 				<Item Name="Open URL in Default Browser (string).vi" Type="VI" URL="/&lt;vilib&gt;/Platform/browser.llb/Open URL in Default Browser (string).vi"/>
 				<Item Name="Open URL in Default Browser core.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/browser.llb/Open URL in Default Browser core.vi"/>
 				<Item Name="Open URL in Default Browser.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/browser.llb/Open URL in Default Browser.vi"/>
-				<Item Name="Parse State Queue__jki_lib_state_machine.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/State Machine/_JKI_lib_State_Machine.llb/Parse State Queue__jki_lib_state_machine.vi"/>
+				<Item Name="Parse State Queue__JKI_lib_State_Machine.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/State Machine/_JKI_lib_State_Machine.llb/Parse State Queue__JKI_lib_State_Machine.vi"/>
 				<Item Name="Path to URL.vi" Type="VI" URL="/&lt;vilib&gt;/printing/PathToURL.llb/Path to URL.vi"/>
 				<Item Name="ProgressBar_Win_WireFlow.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/addons/WireFlow/_WF_ProgressBar.llb/ProgressBar_Win_WireFlow.lvclass"/>
 				<Item Name="ProgressBar_WireFlow.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/addons/WireFlow/_WF_ProgressBar.llb/ProgressBar_WireFlow.lvclass"/>
