@@ -13,8 +13,9 @@
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="DAQ.lvclass" Type="LVClass" URL="../DAQ/DAQ.lvclass"/>
 		<Item Name="DAQmx.lvclass" Type="LVClass" URL="../DAQmx/DAQmx.lvclass"/>
+		<Item Name="DAQmx.AI.lvclass" Type="LVClass" URL="../DAQmx.AI/DAQmx.AI.lvclass"/>
+		<Item Name="DAQmx.AO.lvclass" Type="LVClass" URL="../DAQmx.AO/DAQmx.AO.lvclass"/>
 		<Item Name="lockin.SMO.vi" Type="VI" URL="../lockin.SMO.vi"/>
-		<Item Name="DAQ create sandbox.vi" Type="VI" URL="../DAQ/DAQ create sandbox.vi"/>
 		<Item Name="4461 - Create IO Channels Parallel Uneven - SINGLE TASK.vi" Type="VI" URL="../temp/4461 - Create IO Channels Parallel Uneven - SINGLE TASK.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -137,8 +138,6 @@
 				<Item Name="DAQmx Create Channel (AI-Voltage-Custom with Excitation).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create Channel (AI-Voltage-Custom with Excitation).vi"/>
 				<Item Name="DAQmx Create Channel (AI-Voltage-Basic).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create Channel (AI-Voltage-Basic).vi"/>
 				<Item Name="DAQmx Create Virtual Channel.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create Virtual Channel.vi"/>
-				<Item Name="DAQmx Unflatten Channel String.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/miscellaneous.llb/DAQmx Unflatten Channel String.vi"/>
-				<Item Name="DAQmx Flatten Channel String.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/miscellaneous.llb/DAQmx Flatten Channel String.vi"/>
 				<Item Name="DAQmx Configure Input Buffer.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/buffer.llb/DAQmx Configure Input Buffer.vi"/>
 				<Item Name="DAQmx Timing (Pipelined Sample Clock).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/timing.llb/DAQmx Timing (Pipelined Sample Clock).vi"/>
 				<Item Name="DAQmx Timing (Burst Export Clock).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/timing.llb/DAQmx Timing (Burst Export Clock).vi"/>
@@ -276,6 +275,10 @@
 			<Item Name="Get Terminal Name with Device Prefix.vi" Type="VI" URL="../../../lockin/subVIs - DAQ/Get Terminal Name with Device Prefix.vi"/>
 			<Item Name="Fs_to_FilterDelay.vi" Type="VI" URL="../temp/Fs_to_FilterDelay.vi"/>
 			<Item Name="Get Dev Product Type.vi" Type="VI" URL="../temp/Get Dev Product Type.vi"/>
+			<Item Name="DAQ.AI.Channels.vi" Type="VI" URL="../DAQ/DAQ.AI.Channels.vi"/>
+			<Item Name="DAQ.AO.Channels.vi" Type="VI" URL="../DAQ/DAQ.AO.Channels.vi"/>
+			<Item Name="Read AI.Channels.vi" Type="VI" URL="../DAQ/Read AI.Channels.vi"/>
+			<Item Name="Read AO.Channels.vi" Type="VI" URL="../DAQ/Read AO.Channels.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
