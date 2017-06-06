@@ -15,6 +15,7 @@
 		<Item Name="DAQmx.lvclass" Type="LVClass" URL="../DAQmx/DAQmx.lvclass"/>
 		<Item Name="lockin.SMO.vi" Type="VI" URL="../lockin.SMO.vi"/>
 		<Item Name="DAQ create sandbox.vi" Type="VI" URL="../DAQ/DAQ create sandbox.vi"/>
+		<Item Name="4461 - Create IO Channels Parallel Uneven - SINGLE TASK.vi" Type="VI" URL="../temp/4461 - Create IO Channels Parallel Uneven - SINGLE TASK.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="SMO.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/JKI/JKI SMO/SMO/SMO.lvclass"/>
@@ -273,6 +274,8 @@
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="Get Terminal Name with Device Prefix.vi" Type="VI" URL="../../../lockin/subVIs - DAQ/Get Terminal Name with Device Prefix.vi"/>
+			<Item Name="Fs_to_FilterDelay.vi" Type="VI" URL="../temp/Fs_to_FilterDelay.vi"/>
+			<Item Name="Get Dev Product Type.vi" Type="VI" URL="../temp/Get Dev Product Type.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
