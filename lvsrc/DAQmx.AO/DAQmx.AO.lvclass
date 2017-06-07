@@ -47,10 +47,19 @@
 		</Item>
 	</Item>
 	<Item Name="Methods (Overrides)" Type="Folder">
-		<Item Name="DAQ.Write.vi" Type="VI" URL="../DAQ.Write.vi">
-			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;G!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#J!=!!?!!!3%%2"57VY,E&amp;0,GRW9WRB=X-!!!R%16&amp;N?#Z"4S"P&gt;81!!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!%%"5!!-)6W&amp;W:7:P=GU!!%=!]1!!!!!!!!!##U2"53ZM&gt;G.M98.T(&amp;"S;8:B&gt;'6&amp;&gt;G6O&gt;(-N,52"53Z8=GFU:3ZD&gt;'Q!&amp;E"!!!(`````!!=&amp;6X*J&gt;'5!+%"Q!"Y!!")12%&amp;2&lt;8AO15]O&lt;(:D&lt;'&amp;T=Q!!#U2"57VY,E&amp;0)'FO!&amp;1!]!!-!!-!"!!%!!5!"!!%!!1!"!!'!!1!#!!*!A!!?!!!$1A!!!!!!!!!!!!!D1M!!!!!!!!!!!!!!!!!!!!!!!!)!!!!!!!!!AA!!!#1!!!!!!%!#A!!!!!</Property>
+		<Item Name="DAQ.Write.vi" Type="VI" URL="../methods (overrides)/DAQ.Write.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;G!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#J!=!!?!!!3%%2"57VY,E&amp;0,GRW9WRB=X-!!!R%16&amp;N?#Z"4S"P&gt;81!!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!%%"5!!-)6W&amp;W:7:P=GU!!%=!]1!!!!!!!!!##U2"53ZM&gt;G.M98.T(&amp;"S;8:B&gt;'6&amp;&gt;G6O&gt;(-N,52"53Z8=GFU:3ZD&gt;'Q!&amp;E"!!!(`````!!=&amp;6X*J&gt;'5!+%"Q!"Y!!")12%&amp;2&lt;8AO15]O&lt;(:D&lt;'&amp;T=Q!!#U2"57VY,E&amp;0)'FO!&amp;1!]!!-!!-!"!!%!!5!"!!%!!1!"!!'!!1!#!!*!Q!!?!!!$1A!!!!!!!!!!!!!D1M!!!!!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!AA!!!#1!!!!!!%!#A!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-			<Property Name="NI.ClassItem.Flags" Type="Int">1090519168</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">16777344</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">false</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1107821072</Property>
+		</Item>
+		<Item Name="DAQ.Init.vi" Type="VI" URL="../methods (overrides)/DAQ.Init.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%0!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#J!=!!?!!!3%%2"57VY,E&amp;0,GRW9WRB=X-!!!R%16&amp;N?#Z"4S"P&gt;81!!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!+%"Q!"Y!!")12%&amp;2&lt;8AO15]O&lt;(:D&lt;'&amp;T=Q!!#U2"57VY,E&amp;0)'FO!&amp;1!]!!-!!-!"!!%!!5!"!!%!!1!"!!'!!1!"!!(!A!!?!!!$1A!!!!!!!!!!!!!D1M!!!!!!!!!!!!!!!!!!!!!!!!)!!!!!!!!!!!!!!#1!!!!!!%!#!!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
 			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">false</Property>
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
