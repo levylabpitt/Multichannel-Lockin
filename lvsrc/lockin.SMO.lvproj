@@ -273,7 +273,7 @@
 			<Item Name="nilvaiu.dll" Type="Document" URL="nilvaiu.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="Get Terminal Name with Device Prefix.vi" Type="VI" URL="../../../lockin/subVIs - DAQ/Get Terminal Name with Device Prefix.vi"/>
+			<Item Name="Get Terminal Name with Device Prefix.vi" Type="VI" URL="../temp/Get Terminal Name with Device Prefix.vi"/>
 			<Item Name="Fs_to_FilterDelay.vi" Type="VI" URL="../temp/Fs_to_FilterDelay.vi"/>
 			<Item Name="Get Dev Product Type.vi" Type="VI" URL="../temp/Get Dev Product Type.vi"/>
 			<Item Name="PrivateEvents--DAQ.AI.Channels.ctl" Type="VI" URL="../DAQ/Typedefs/PrivateEvents--DAQ.AI.Channels.ctl"/>
