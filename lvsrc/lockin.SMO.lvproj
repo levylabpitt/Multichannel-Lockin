@@ -19,6 +19,8 @@
 		<Item Name="multichannel.lockin.SMO.vi" Type="VI" URL="../multichannel.lockin.SMO.vi"/>
 		<Item Name="4461 - Create IO Channels Parallel Uneven - SINGLE TASK.vi" Type="VI" URL="../temp/4461 - Create IO Channels Parallel Uneven - SINGLE TASK.vi"/>
 		<Item Name="4461 - AI AND AI - Read AND Write Uneven - SINGLE TASK.vi" Type="VI" URL="../temp/4461 - AI AND AI - Read AND Write Uneven - SINGLE TASK.vi"/>
+		<Item Name="AppendWaveformRead.vi" Type="VI" URL="../AppendWaveformRead.vi"/>
+		<Item Name="AppendWaveformWrite.vi" Type="VI" URL="../AppendWaveformWrite.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="SMO.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/JKI/JKI SMO/SMO/SMO.lvclass"/>
