@@ -32,6 +32,7 @@
 		<Item Name="DAQmx.lvclass" Type="LVClass" URL="../../SMOs/DAQmx/DAQmx.lvclass"/>
 		<Item Name="DAQmx.AI.lvclass" Type="LVClass" URL="../../SMOs/DAQmx.AI/DAQmx.AI.lvclass"/>
 		<Item Name="DAQmx.AO.lvclass" Type="LVClass" URL="../../SMOs/DAQmx.AO/DAQmx.AO.lvclass"/>
+		<Item Name="lockin.lvclass" Type="LVClass" URL="../../SMOs/lockin/lockin.lvclass"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="SMO.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/JKI/JKI SMO/SMO/SMO.lvclass"/>
