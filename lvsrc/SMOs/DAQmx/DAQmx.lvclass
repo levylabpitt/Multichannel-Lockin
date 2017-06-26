@@ -99,13 +99,13 @@
 	</Item>
 	<Item Name="API" Type="Folder">
 		<Item Name="Create DAQmx.vi" Type="VI" URL="../Create DAQmx.vi">
-			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!+7!!!!%A!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#*!=!!?!!!0$52"57VY,GRW9WRB=X-!#52"57VY)'^V&gt;!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!%%!]1!!!!!!!!!")F"S;8:B&gt;'6&amp;&gt;G6O&gt;(-N,52"53Z"33Z$;'&amp;O&lt;G6M=SZD&gt;'Q!&amp;E!Q`````QB$;'&amp;O&lt;G6M=Q!!/1$R!!!!!!!!!!),2%&amp;2,GRW9WRB=X-,2%&amp;26(FQ:3ZD&gt;'Q!'5!7!!)#15E#15]!"U2"562Z='5!%U!+!!VN;7ZJ&lt;86N)(:B&lt;(6F!".!#A!.&lt;7&amp;Y;7VV&lt;3"W97RV:1!*1!I!!E:T!!!*1!I!!C.T!!""!0%!!!!!!!!!!AN%16%O&lt;(:D&lt;'&amp;T=R"497VQ&lt;'FO:UFO:G]O9X2M!"R!5!!#!!M!$!VT97VQ&lt;'FO:S"J&lt;G:P!&amp;!!]1!!!!!!!!!##U2"53ZM&gt;G.M98.T%&amp;.B&lt;8"M;7ZH47^E:3ZD&gt;'Q!+U!7!!)+1W^O&gt;'FO&gt;7^V=Q:';7ZJ&gt;'5!$&amp;.B&lt;8"M;7ZH47^E:1!!21$R!!!!!!!!!!),2%&amp;2,GRW9WRB=X-/2%&amp;2,E.P&lt;G:J:SZD&gt;'Q!)E"1!!9!"Q!)!!E!#A!.!!Y+2%&amp;2,E.P&lt;G:J:Q!!)E"Q!"Y!!!].2%&amp;2&lt;8AO&lt;(:D&lt;'&amp;T=Q!)2%&amp;2&lt;8AA;7Y!!'%!]!!-!!-!"!!%!!5!"!!%!!1!"!!'!!1!$Q!1!Q!!?!!!$1A!!!!!!!!!!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!!I!!!!#!!!.!!!!$!!!!!!!!!!!!!!"!"%!!!!!</Property>
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!+C!!!!%A!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#*!=!!?!!!0$52"57VY,GRW9WRB=X-!#52"57VY)'^V&gt;!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!%U!]1!!!!!!!!!##U2"53ZM&gt;G.M98.T)F"S;8:B&gt;'6&amp;&gt;G6O&gt;(-N,52"53Z"33Z$;'&amp;O&lt;G6M=SZD&gt;'Q!&amp;E!Q`````QB$;'&amp;O&lt;G6M=Q!!/1$R!!!!!!!!!!),2%&amp;2,GRW9WRB=X-,2%&amp;26(FQ:3ZD&gt;'Q!'5!7!!)#15E#15]!"U2"562Z='5!%U!+!!VN;7ZJ&lt;86N)(:B&lt;(6F!".!#A!.&lt;7&amp;Y;7VV&lt;3"W97RV:1!*1!I!!E:T!!!*1!I!!C.T!!""!0%!!!!!!!!!!AN%16%O&lt;(:D&lt;'&amp;T=R"497VQ&lt;'FO:UFO:G]O9X2M!"R!5!!#!!M!$!VT97VQ&lt;'FO:S"J&lt;G:P!&amp;!!]1!!!!!!!!!##U2"53ZM&gt;G.M98.T%&amp;.B&lt;8"M;7ZH47^E:3ZD&gt;'Q!+U!7!!)+1W^O&gt;'FO&gt;7^V=Q:';7ZJ&gt;'5!$&amp;.B&lt;8"M;7ZH47^E:1!!21$R!!!!!!!!!!),2%&amp;2,GRW9WRB=X-/2%&amp;2,E.P&lt;G:J:SZD&gt;'Q!)E"1!!9!"Q!)!!E!#A!.!!Y+2%&amp;2,E.P&lt;G:J:Q!!)E"Q!"Y!!!].2%&amp;2&lt;8AO&lt;(:D&lt;'&amp;T=Q!)2%&amp;2&lt;8AA;7Y!!'%!]!!-!!-!"!!%!!5!"!!%!!1!"!!'!!1!$Q!1!Q!!?!!!$1A!!!!!!!!!!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!!I!!!!#!!!.!!!!$!!!!!!!!!!!!!!"!"%!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
 			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-			<Property Name="NI.ClassItem.State" Type="Int">1107821074</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1350574608</Property>
 		</Item>
 	</Item>
 	<Item Name="SubVIs" Type="Folder">
@@ -117,6 +117,15 @@
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1342972416</Property>
+		</Item>
+		<Item Name="DAQmx_Get_Devices.vi" Type="VI" URL="../subVIs/DAQmx_Get_Devices.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!#[!!!!"1!%!!!!#!!Q`````Q!=1%!!!@````]!!1Z$;'&amp;O&lt;G6M=S""=H*B?1!!.E!X`````Q!/&amp;A#!!!!!!!%!"!!!!!%!!!!!!!!72%&amp;2&lt;8AA5'BZ=WFD97QA1WBB&lt;GZF&lt;!!!6!$Q!!Q!!!!!!!!!!A!!!!!!!!!!!!!!!!!!!!-#!!"Y!!!!!!!!!!!!!!!!!!!*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!AA!!!!!!1!%!!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1082143232</Property>
 		</Item>
 		<Item Name="DAQmx_SyncAll.vi" Type="VI" URL="../subVIs/DAQmx_SyncAll.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%N!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#*!=!!?!!!0$52"57VY,GRW9WRB=X-!#52"57VY)'^V&gt;!!71%!!!@````]!"1F"=H*B?3"P&gt;81!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!C1(!!(A!!$QV%16&amp;N?#ZM&gt;G.M98.T!!B%16&amp;N?#"J&lt;A!!&amp;E"!!!(`````!!A)18*S98EA;7Y!!&amp;1!]!!-!!-!"!!%!!9!"!!%!!1!"!!(!!1!"!!*!Q!!?!!!$1A!!!!!!!!!!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!!!!!!%+!!!!!!%!#A!!!!!</Property>
