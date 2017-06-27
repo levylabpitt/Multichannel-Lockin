@@ -311,7 +311,6 @@
 				<Item Name="General Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler.vi"/>
 				<Item Name="Simple Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Simple Error Handler.vi"/>
 				<Item Name="DAQmx Self Calibrate.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/calibration/calibrationInfo.llb/DAQmx Self Calibrate.vi"/>
-				<Item Name="NI_AALPro.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALPro.lvlib"/>
 				<Item Name="NI_PtbyPt.lvlib" Type="Library" URL="/&lt;vilib&gt;/ptbypt/NI_PtbyPt.lvlib"/>
 			</Item>
 			<Item Name="user.lib" Type="Folder">
@@ -340,14 +339,14 @@
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
-			<Item Name="decimate_waveforms.vi" Type="VI" URL="../SMOs/lockin/subVIs/decimate_waveforms.vi"/>
-			<Item Name="4461 - Create Reference Waveforms.vi" Type="VI" URL="../SMOs/lockin/subVIs/4461 - Create Reference Waveforms.vi"/>
+			<Item Name="Generate_REF_Waveforms.vi" Type="VI" URL="../SMOs/lockin/subVIs/Generate_REF_Waveforms.vi"/>
 			<Item Name="Split 1D ARRAY in half.vi" Type="VI" URL="../SMOs/lockin/subVIs/Split 1D ARRAY in half.vi"/>
 			<Item Name="Waveform 64-128 channels LP pt by pt.vi" Type="VI" URL="../SMOs/lockin/subVIs/Waveform 64-128 channels LP pt by pt.vi"/>
 			<Item Name="Replace timestamp.vi" Type="VI" URL="../SMOs/lockin/subVIs/Replace timestamp.vi"/>
 			<Item Name="Split WAVEFORM array in half.vi" Type="VI" URL="../SMOs/lockin/subVIs/Split WAVEFORM array in half.vi"/>
 			<Item Name="4461 - Lockin Engine.vi" Type="VI" URL="../SMOs/lockin/subVIs/4461 - Lockin Engine.vi"/>
-			<Item Name="GenerateWaveforms.vi" Type="VI" URL="../SMOs/lockin/subVIs/GenerateWaveforms.vi"/>
+			<Item Name="Generate_AO_Waveforms.vi" Type="VI" URL="../SMOs/lockin/subVIs/Generate_AO_Waveforms.vi"/>
+			<Item Name="PrivateEvents--lockin.lockin_REF_waveform.ctl" Type="VI" URL="../SMOs/lockin/Typedefs/PrivateEvents--lockin.lockin_REF_waveform.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
