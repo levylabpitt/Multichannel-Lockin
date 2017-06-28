@@ -339,14 +339,7 @@
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
-			<Item Name="Generate_REF_Waveforms.vi" Type="VI" URL="../SMOs/lockin/subVIs/Generate_REF_Waveforms.vi"/>
-			<Item Name="Split 1D ARRAY in half.vi" Type="VI" URL="../SMOs/lockin/subVIs/Split 1D ARRAY in half.vi"/>
-			<Item Name="Waveform 64-128 channels LP pt by pt.vi" Type="VI" URL="../SMOs/lockin/subVIs/Waveform 64-128 channels LP pt by pt.vi"/>
-			<Item Name="Replace timestamp.vi" Type="VI" URL="../SMOs/lockin/subVIs/Replace timestamp.vi"/>
-			<Item Name="Split WAVEFORM array in half.vi" Type="VI" URL="../SMOs/lockin/subVIs/Split WAVEFORM array in half.vi"/>
-			<Item Name="Lockin Engine.vi" Type="VI" URL="../SMOs/lockin/subVIs/Lockin Engine.vi"/>
-			<Item Name="Generate_AO_Waveforms.vi" Type="VI" URL="../SMOs/lockin/subVIs/Generate_AO_Waveforms.vi"/>
-			<Item Name="PrivateEvents--lockin.lockin_REF_waveform.ctl" Type="VI" URL="../SMOs/lockin/Typedefs/PrivateEvents--lockin.lockin_REF_waveform.ctl"/>
+			<Item Name="format display.vi" Type="VI" URL="../../../lockin/SubVIs/format display.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
