@@ -344,7 +344,7 @@
 			<Item Name="Waveform 64-128 channels LP pt by pt.vi" Type="VI" URL="../SMOs/lockin/subVIs/Waveform 64-128 channels LP pt by pt.vi"/>
 			<Item Name="Replace timestamp.vi" Type="VI" URL="../SMOs/lockin/subVIs/Replace timestamp.vi"/>
 			<Item Name="Split WAVEFORM array in half.vi" Type="VI" URL="../SMOs/lockin/subVIs/Split WAVEFORM array in half.vi"/>
-			<Item Name="4461 - Lockin Engine.vi" Type="VI" URL="../SMOs/lockin/subVIs/4461 - Lockin Engine.vi"/>
+			<Item Name="Lockin Engine.vi" Type="VI" URL="../SMOs/lockin/subVIs/Lockin Engine.vi"/>
 			<Item Name="Generate_AO_Waveforms.vi" Type="VI" URL="../SMOs/lockin/subVIs/Generate_AO_Waveforms.vi"/>
 			<Item Name="PrivateEvents--lockin.lockin_REF_waveform.ctl" Type="VI" URL="../SMOs/lockin/Typedefs/PrivateEvents--lockin.lockin_REF_waveform.ctl"/>
 		</Item>
