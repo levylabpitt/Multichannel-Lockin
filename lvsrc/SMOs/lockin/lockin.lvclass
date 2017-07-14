@@ -448,4 +448,13 @@
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 		<Property Name="NI.ClassItem.State" Type="Int">1082143248</Property>
 	</Item>
+	<Item Name="SimulateNoise.vi" Type="VI" URL="../subVIs/SimulateNoise.vi">
+		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%"!!!!#1!%!!!!%%"5!!-)6W&amp;W:7:P=GU!!":!1!!"`````Q!"#5&amp;S=G&amp;Z)'^V&gt;!!31&amp;1!!QJT;7&gt;O97QA&lt;X6U!!!71%!!!@````]!!QB"=H*B?3"J&lt;A!!#5!+!!*'=Q!!#5!+!!)D=Q!!11$R!!!!!!!!!!),2%&amp;2,GRW9WRB=X-15W&amp;N='RJ&lt;G&gt;*&lt;G:P,G.U&lt;!!=1&amp;!!!A!&amp;!!9.=W&amp;N='RJ&lt;G=A;7ZG&lt;Q"5!0!!$!!!!!!!!!!#!!!!!!!!!!!!!!!!!!1!"Q-!!(A!!!!!!!!!!!!!!!!!!!U+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!%+!!!!#!!!!!!"!!A!!!!!</Property>
+		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+		<Property Name="NI.ClassItem.Flags" Type="Int">16777344</Property>
+		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">1107821072</Property>
+	</Item>
 </LVClass>
