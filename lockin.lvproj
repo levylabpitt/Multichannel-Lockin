@@ -57,8 +57,6 @@
 			<Item Name="Split 1D ARRAY in half.vi" Type="VI" URL="../SubVIs/Split 1D ARRAY in half.vi"/>
 			<Item Name="Split WAVEFORM array in half.vi" Type="VI" URL="../SubVIs/Split WAVEFORM array in half.vi"/>
 			<Item Name="StateHistory.vi" Type="VI" URL="../SubVIs/StateHistory.vi"/>
-			<Item Name="Waveform 64-128 channels LP pt by pt Prefilter 1.vi" Type="VI" URL="../SubVIs/Waveform 64-128 channels LP pt by pt Prefilter 1.vi"/>
-			<Item Name="Waveform 64-128 channels LP pt by pt Prefilter 2.vi" Type="VI" URL="../SubVIs/Waveform 64-128 channels LP pt by pt Prefilter 2.vi"/>
 			<Item Name="Waveform 64-128 channels LP pt by pt.vi" Type="VI" URL="../SubVIs/Waveform 64-128 channels LP pt by pt.vi"/>
 		</Item>
 		<Item Name="subVIs - DAQ" Type="Folder">
@@ -553,7 +551,6 @@
 				<Item Name="WDT Waveform to XY Pairs U64.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/WDT Waveform to XY Pairs U64.vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
-			<Item Name="ChannelListToNumChannels.vi" Type="VI" URL="../SubVIs/ChannelListToNumChannels.vi"/>
 			<Item Name="Get Terminal Name with Device Prefix.vi" Type="VI" URL="../subVIs - DAQ/Get Terminal Name with Device Prefix.vi"/>
 			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
