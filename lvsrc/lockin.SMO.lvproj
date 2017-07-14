@@ -32,9 +32,9 @@
 		<Item Name="DAQmx.AI.lvclass" Type="LVClass" URL="../SMOs/DAQmx.AI/DAQmx.AI.lvclass"/>
 		<Item Name="DAQmx.AO.lvclass" Type="LVClass" URL="../SMOs/DAQmx.AO/DAQmx.AO.lvclass"/>
 		<Item Name="DSP.lvclass" Type="LVClass" URL="../SMOs/DSP/DSP.lvclass"/>
+		<Item Name="DSP.lockin.lvclass" Type="LVClass" URL="../SMOs/DSP.lockin/DSP.lockin.lvclass"/>
+		<Item Name="DSP.FFT.lvclass" Type="LVClass" URL="../SMOs/DSP.FFT/DSP.FFT.lvclass"/>
 		<Item Name="DSP_sandbox.vi" Type="VI" URL="../SMOs/DSP/DSP_sandbox.vi"/>
-		<Item Name="LockinResult.ctl" Type="VI" URL="../SMOs/DSP/Typedefs/LockinResult.ctl"/>
-		<Item Name="LockinResults.ctl" Type="VI" URL="../SMOs/DSP/Typedefs/LockinResults.ctl"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="SMO.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/JKI/JKI SMO/SMO/SMO.lvclass"/>
