@@ -43,6 +43,53 @@
 			<Property Name="NI.ClassItem.State" Type="Int">1082143232</Property>
 		</Item>
 	</Item>
+	<Item Name="lockin" Type="Folder">
+		<Item Name="Lockin Engine.vi" Type="VI" URL="../subVIs/Lockin Engine.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;N!!!!%!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!!N!#A!%&lt;76B&lt;A!!*E"!!!,``````````Q!&amp;&amp;6*F=X6M&gt;(-A+&amp;AM73R3,&amp;2I:82B+1!61!I!$G:J&lt;(2F=C"G1S!I3(IJ!!!,1!-!"7^S:'6S!!V!#A!'6%-A+(-J!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!"*!6!!$#H.J:WZB&lt;#"P&gt;81!!"J!1!!"`````Q!,$&amp;*F:G6S:7ZD:3"*&lt;A!!%%"5!!-)6W&amp;W:7:P=GU!!":!1!!"`````Q!.#6.J:WZB&lt;#"J&lt;A"5!0!!$!!$!!1!"A!%!!=!#!!%!!E!#A!%!!Q!$A-!!(A!!!U)!!!!!!!!#1!!!!!!!!!."Q!!#!!!!!!!!!!+!!!!#!!!!!!!!!))!!!##!!!!!!"!!]!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">1073741824</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1082143248</Property>
+		</Item>
+		<Item Name="Split 1D ARRAY in half.vi" Type="VI" URL="../subVIs/Split 1D ARRAY in half.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!#L!!!!"A!%!!!!#U!+!!2N:7&amp;O!!!71%!!!@````]!!1F"=H*B?3"P&gt;81!&amp;%"!!!(`````!!%(18*S98EA-Q!71%!!!@````]!!1B"=H*B?3"J&lt;A!!6!$Q!!Q!!!!!!!)!!Q!!!!!!!!!!!!!!!!!!!!1#!!"Y!!!!!!!!!!!!!!E!!!!*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!AA!!!!!!1!&amp;!!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1082143232</Property>
+		</Item>
+		<Item Name="Waveform 64-128 channels LP pt by pt.vi" Type="VI" URL="../subVIs/Waveform 64-128 channels LP pt by pt.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!#Z!!!!#!!%!!!!%%"5!!-)6W&amp;W:7:P=GU!!":!1!!"`````Q!"#5&amp;S=G&amp;Z)'^V&gt;!!,1!-!"7^S:'6S!!F!#A!#:GQ!!!F!#A!#:H-!!":!1!!"`````Q!"#%&amp;S=G&amp;Z)'FO!!"5!0!!$!!!!!!!!!!#!!!!!!!$!!!!"!!!!!5!"A-!!(A!!!!!!!!!!!!!!!!!!!U,!!!!!!!!!!!!!!A!!!!!!!!!#!!!!!!!!!!)!!!"#A!!!!!"!!=!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1082143248</Property>
+		</Item>
+		<Item Name="Replace timestamp.vi" Type="VI" URL="../subVIs/Replace timestamp.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!$!!!!!"Q!%!!!!%E"5!!-+=WFH&lt;G&amp;M)'^V&gt;!!!&amp;E"!!!(`````!!%*18*S98EA4X6U!""!6!!$#&amp;&gt;B&gt;G6G&lt;X*N!!!51%!!!@````]!!Q&gt;"=H*B?3!S!"2!1!!"`````Q!""U&amp;S=G&amp;Z)$%!6!$Q!!Q!!!!!!!!!!A!!!!!!!!!!!!!!!!!%!!5$!!"Y!!!!!!!!!!!!!!!!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!##!!!!AI!!!!!!1!'!!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1082143248</Property>
+		</Item>
+		<Item Name="Split WAVEFORM array in half.vi" Type="VI" URL="../subVIs/Split WAVEFORM array in half.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!#Q!!!!"A!%!!!!%E"5!!-+=WFH&lt;G&amp;M)'^V&gt;!!!&amp;%"!!!(`````!!%(18*S98EA-A!51%!!!@````]!!1&gt;"=H*B?3!R!":!1!!"`````Q!"#%&amp;0)%&amp;S=G&amp;Z!!"5!0!!$!!!!!!!!A!$!!!!!!!!!!!!!!!!!!!!"!)!!(A!!!!!!!!!!!!!#1!!!!E!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!##!!!!!!"!!5!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1082143232</Property>
+		</Item>
+	</Item>
 	<Item Name="Process.vi" Type="VI" URL="../Process.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%,!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#Z!=!!?!!!5%E245#ZM&lt;W.L;7YO&lt;(:D&lt;'&amp;T=Q!!$E245#ZM&lt;W.L;7YA&lt;X6U!!!71&amp;!!!Q!!!!%!!ABF=H*P=C"J&lt;A!!+E"Q!"Y!!"132&amp;.1,GRP9WNJ&lt;CZM&gt;G.M98.T!!!+2&amp;.1,GRP9WNJ&lt;A!!6!$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!%!!=$!!"Y!!!.#!!!!!!!!!!!!!#*!!!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!!!!!!*)!!!!!!1!)!!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
