@@ -22,4 +22,13 @@
 	<Item Name="DSP.FFT.ctl" Type="Class Private Data" URL="DSP.FFT.ctl">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
+	<Item Name="FFT Engine.vi" Type="VI" URL="../FFT Engine.vi">
+		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!,?!!!!&amp;1!%!!!!'5!+!"*B&gt;G6S97&gt;F=S"D&lt;WVQ&lt;'6U:71!!!F!#A!#:D!!!!F!#A!#:'9!!!V!#A!(4H6N:8*J9Q!71%!!!@````]!"!FN97&gt;O;82V:'5!(%"1!!-!!A!$!!5/='^X:8)A=X"F9X2S&gt;7U!!#*!1!!"`````Q!'&amp;&amp;"P&gt;W6S)&amp;.Q:7.U=H6N)#]A5&amp;.%!!!51#%/98:F=G&amp;H;7ZH)'2P&lt;G5!!%V!&amp;A!%$%ZP)'&amp;W:8*B:WFO:R"7:7.U&lt;X)A98:F=G&amp;H;7ZH$6*.5S"B&gt;G6S97&gt;J&lt;G=*5'6B;S"I&lt;WRE!!ZB&gt;G6S97&gt;J&lt;G=A&lt;7^E:1!!+U!7!!)'4'FO:7&amp;S#U6Y='^O:7ZU;7&amp;M!!!/&gt;W6J:WBU;7ZH)'VP:'5!!"F!"Q!3&lt;H6N9G6S)'^G)'&amp;W:8*B:W6T!!!C1&amp;!!!Q!*!!I!#R2B&gt;G6S97&gt;J&lt;G=A='&amp;S97VF&gt;'6S=Q!!.A$RP`HOU1!!!!)04EF@15&amp;-5(*P,GRW&lt;'FC$(&gt;J&lt;G2P&gt;V2E,G.U&lt;!!21!=!"H&gt;J&lt;G2P&gt;Q!!5Q$R!!!!!!!!!!)/4EF@45&amp;1=G]O&lt;(:M;7)G5'^X:8)A5X"F9X2S&gt;7UA97ZE)&amp;"42#"&amp;?("P=H1A47^E:3ZD&gt;'Q!&amp;5!'!!NF?("P=H1A&lt;7^E:1!81!I!%(&gt;J&lt;G2P&gt;S"Q98*B&lt;76U:8)!!"J!)26S:8.U98*U)'&amp;W:8*B:WFO:S!I2CE!1Q$R!!!!!!!!!!),2&amp;.1,GRW9WRB=X-/2E:58U.P&lt;G:J:SZD&gt;'Q!)%"1!!5!$!!.!!Y!$Q!1#E:'6#"D&lt;WZG;7=!!"2!6!!$$&amp;&gt;B&gt;G6G&lt;X*N)'^V&gt;!!!'E"!!!(`````!").6W&amp;W:7:P=GVT)%^V&gt;!"5!0!!$!!!!!%!"Q!)!!!!!!!!!!!!!!!!!"%!%Q-!!(A!!!!!!!!*!!!!#1!!!!E!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!)!!!##A!!!!!"!"1!!!!!</Property>
+		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">1082143248</Property>
+	</Item>
 </LVClass>
