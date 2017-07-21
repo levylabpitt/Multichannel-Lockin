@@ -34,6 +34,7 @@
 		<Item Name="DSP.lvclass" Type="LVClass" URL="../SMOs/DSP/DSP.lvclass"/>
 		<Item Name="DSP.lockin.lvclass" Type="LVClass" URL="../SMOs/DSP.lockin/DSP.lockin.lvclass"/>
 		<Item Name="DSP.FFT.lvclass" Type="LVClass" URL="../SMOs/DSP.FFT/DSP.FFT.lvclass"/>
+		<Item Name="DSP.Filter.lvclass" Type="LVClass" URL="../SMOs/DSP.Filter/DSP.Filter.lvclass"/>
 		<Item Name="DSP_sandbox.vi" Type="VI" URL="../SMOs/DSP/DSP_sandbox.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
