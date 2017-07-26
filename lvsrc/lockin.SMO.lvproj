@@ -12,6 +12,7 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="DAQ" Type="Folder">
+			<Item Name="DAQ_Manager.lvclass" Type="LVClass" URL="../SMOs/DAQ_Manager/DAQ_Manager.lvclass"/>
 			<Item Name="DAQ.lvclass" Type="LVClass" URL="../SMOs/DAQ/DAQ.lvclass"/>
 			<Item Name="DAQmx.lvclass" Type="LVClass" URL="../SMOs/DAQmx/DAQmx.lvclass"/>
 			<Item Name="DAQmx.AI.lvclass" Type="LVClass" URL="../SMOs/DAQmx.AI/DAQmx.AI.lvclass"/>
@@ -23,9 +24,9 @@
 			<Item Name="DSP_Filter.lvclass" Type="LVClass" URL="../SMOs/DSP.Filter/DSP_Filter.lvclass"/>
 			<Item Name="DSP_FFT.lvclass" Type="LVClass" URL="../SMOs/DSP.FFT/DSP_FFT.lvclass"/>
 		</Item>
-		<Item Name="DSP_sandbox.vi" Type="VI" URL="../SMOs/DSP/DSP_sandbox.vi"/>
 		<Item Name="instrument.lvclass" Type="LVClass" URL="../SMOs/instrument/instrument.lvclass"/>
 		<Item Name="lockin.lvclass" Type="LVClass" URL="../SMOs/lockin/lockin.lvclass"/>
+		<Item Name="DSP_sandbox.vi" Type="VI" URL="../SMOs/DSP/DSP_sandbox.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="SMO.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/JKI/JKI SMO/SMO/SMO.lvclass"/>
