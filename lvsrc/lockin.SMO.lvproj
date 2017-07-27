@@ -24,9 +24,15 @@
 			<Item Name="DSP_Filter.lvclass" Type="LVClass" URL="../SMOs/DSP.Filter/DSP_Filter.lvclass"/>
 			<Item Name="DSP_FFT.lvclass" Type="LVClass" URL="../SMOs/DSP.FFT/DSP_FFT.lvclass"/>
 		</Item>
+		<Item Name="UI" Type="Folder">
+			<Item Name="UI_main.lvclass" Type="LVClass" URL="../SMOs/main_UI/UI_main.lvclass"/>
+			<Item Name="UI_DAQ_config.lvclass" Type="LVClass" URL="../SMOs/DAQ_config_UI/UI_DAQ_config.lvclass"/>
+			<Item Name="SMO.Activity.lvclass" Type="LVClass" URL="../SMOs/SMO.Activity/SMO.Activity.lvclass"/>
+		</Item>
 		<Item Name="instrument.lvclass" Type="LVClass" URL="../SMOs/instrument/instrument.lvclass"/>
 		<Item Name="lockin.lvclass" Type="LVClass" URL="../SMOs/lockin/lockin.lvclass"/>
 		<Item Name="DSP_sandbox.vi" Type="VI" URL="../SMOs/DSP/DSP_sandbox.vi"/>
+		<Item Name="AppLauncher.vi" Type="VI" URL="../AppLauncher.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="SMO.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/JKI/JKI SMO/SMO/SMO.lvclass"/>
@@ -318,6 +324,8 @@
 			</Item>
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="Periodic Trigger__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/time/time.llb/Periodic Trigger__ogtk.vi"/>
+				<Item Name="Current VIs Parents Ref__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/appcontrol/appcontrol.llb/Current VIs Parents Ref__ogtk.vi"/>
+				<Item Name="Fit VI window to Largest Dec__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/appcontrol/appcontrol.llb/Fit VI window to Largest Dec__ogtk.vi"/>
 			</Item>
 			<Item Name="nilvaiu.dll" Type="Document" URL="nilvaiu.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
