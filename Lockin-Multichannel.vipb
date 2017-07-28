@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="0.6" Created_Date="2016-04-26 22:20:34" Modified_Date="2017-07-14 13:41:21" Creator="Patrick Irvin" Comments="" ID="f33ab17e50f901a9474aafb3449c3230">
+<VI_Package_Builder_Settings Version="0.6" Created_Date="2016-04-26 22:20:34" Modified_Date="2017-07-14 14:07:48" Creator="Patrick Irvin" Comments="" ID="87db1a60c0a4be243fbae515b1aefcfb">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.2.1.31</Library_Version>
+    <Library_Version>2.3.2.33</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -43,7 +43,9 @@
       <Release_Notes>bugfix
 
 - revert to 0 for timeout
-- create macros for state sequences</Release_Notes>
+- create macros for state sequences
+- tries to make size of gain and offset variables = #AI channels
+- add checks for Digitial Filter Toolkit</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -300,7 +302,7 @@
         <Path>Lockin-4461 -Patrick -State.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>50C3C615E5EC56AA10B0E9975D47926A</GUID>
+      <GUID>6C4C807B4B5B8AD20F36EC7BC85AB4F8</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -349,7 +351,7 @@
         <Path>Examples\Lockin_Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>53FFFAABD9FF10B729AE1B51130CB111</GUID>
+      <GUID>E99C0D826B309C4E0D578BF99C533A39</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -412,7 +414,7 @@
         <Path>Expt\testlockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F8933C257E5FCB54618C98D34694FF0E</GUID>
+      <GUID>07137E13D34E83FE3FD4CF176D988AE8</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -573,7 +575,7 @@
         <Path>FGV\FGV - Trigger.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>D9CB005C8F2926B831CB5AB2C3E49BF7</GUID>
+      <GUID>AE0CCDCBE3AEB5E7937153D349BDE928</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -648,20 +650,6 @@
         </Position>
         <Icon>00000000</Icon>
         <Path>SubVIs\AppendWaveformArray.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>ChannelListToNumChannels.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>5</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>SubVIs\ChannelListToNumChannels.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -947,34 +935,6 @@
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Waveform 64-128 channels LP pt by pt Prefilter 1.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>5</Row>
-          <Column>2</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>SubVIs\Waveform 64-128 channels LP pt by pt Prefilter 1.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Waveform 64-128 channels LP pt by pt Prefilter 2.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>5</Row>
-          <Column>3</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>SubVIs\Waveform 64-128 channels LP pt by pt Prefilter 2.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
         <NameSub_Menu_Name>Waveform 64-128 channels LP pt by pt.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
@@ -986,7 +946,7 @@
         <Path>SubVIs\Waveform 64-128 channels LP pt by pt.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B0227E9143467136BEF8515EECBD22FC</GUID>
+      <GUID>75AB12F11C88B5A16D2AD4F8CDE1D2C3</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1175,7 +1135,7 @@
         <Path>subVIs - DAQ\Get Terminal Name with Device Prefix.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>5EEB271D2A5ED19B7CB93341142E6A91</GUID>
+      <GUID>FF554B8D4CEA6E57434AAA906EE4CAF2</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
