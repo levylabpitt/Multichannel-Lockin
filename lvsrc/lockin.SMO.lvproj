@@ -331,12 +331,7 @@
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
-			<Item Name="format display.vi" Type="VI" URL="../../../lockin/SubVIs/format display.vi"/>
 			<Item Name="LVDFD.dll" Type="Document" URL="/&lt;resource&gt;/LVDFD.dll"/>
-			<Item Name="Get Terminal Name with Device Prefix.vi" Type="VI" URL="../trashes/lockin/temp/Get Terminal Name with Device Prefix.vi"/>
-			<Item Name="PublicEvents--DSP.getWaveforms.ctl" Type="VI" URL="../SMOs/DSP/Typedefs/PublicEvents--DSP.getWaveforms.ctl"/>
-			<Item Name="PrivateEvents--DSP.setWaveform.ctl" Type="VI" URL="../SMOs/DSP/Typedefs/PrivateEvents--DSP.setWaveform.ctl"/>
-			<Item Name="Create UI_main.vi" Type="VI" URL="../SMOs/main_UI/Create UI_main.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
