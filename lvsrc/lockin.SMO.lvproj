@@ -25,9 +25,9 @@
 			<Item Name="DSP_FFT.lvclass" Type="LVClass" URL="../SMOs/DSP.FFT/DSP_FFT.lvclass"/>
 		</Item>
 		<Item Name="UI" Type="Folder">
+			<Item Name="SMO.Activity.lvclass" Type="LVClass" URL="../SMOs/SMO.Activity/SMO.Activity.lvclass"/>
 			<Item Name="UI_main.lvclass" Type="LVClass" URL="../SMOs/main_UI/UI_main.lvclass"/>
 			<Item Name="UI_DAQ_config.lvclass" Type="LVClass" URL="../SMOs/DAQ_config_UI/UI_DAQ_config.lvclass"/>
-			<Item Name="SMO.Activity.lvclass" Type="LVClass" URL="../SMOs/SMO.Activity/SMO.Activity.lvclass"/>
 		</Item>
 		<Item Name="instrument.lvclass" Type="LVClass" URL="../SMOs/instrument/instrument.lvclass"/>
 		<Item Name="lockin.lvclass" Type="LVClass" URL="../SMOs/lockin/lockin.lvclass"/>
