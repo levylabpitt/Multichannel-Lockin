@@ -26,8 +26,8 @@
 		</Item>
 		<Item Name="UI" Type="Folder">
 			<Item Name="SMO.Activity.lvclass" Type="LVClass" URL="../SMOs/SMO.Activity/SMO.Activity.lvclass"/>
-			<Item Name="UI_main.lvclass" Type="LVClass" URL="../SMOs/main_UI/UI_main.lvclass"/>
-			<Item Name="UI_DAQ_config.lvclass" Type="LVClass" URL="../SMOs/DAQ_config_UI/UI_DAQ_config.lvclass"/>
+			<Item Name="UI_Main.lvclass" Type="LVClass" URL="../SMOs/UI_Main_Test/UI_Main.lvclass"/>
+			<Item Name="UI_DAQ_config.lvclass" Type="LVClass" URL="../SMOs/UI_DAQ_config/UI_DAQ_config.lvclass"/>
 		</Item>
 		<Item Name="instrument.lvclass" Type="LVClass" URL="../SMOs/instrument/instrument.lvclass"/>
 		<Item Name="lockin.lvclass" Type="LVClass" URL="../SMOs/lockin/lockin.lvclass"/>
@@ -324,8 +324,8 @@
 			</Item>
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="Periodic Trigger__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/time/time.llb/Periodic Trigger__ogtk.vi"/>
-				<Item Name="Current VIs Parents Ref__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/appcontrol/appcontrol.llb/Current VIs Parents Ref__ogtk.vi"/>
 				<Item Name="Fit VI window to Largest Dec__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/appcontrol/appcontrol.llb/Fit VI window to Largest Dec__ogtk.vi"/>
+				<Item Name="Current VIs Parents Ref__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/appcontrol/appcontrol.llb/Current VIs Parents Ref__ogtk.vi"/>
 			</Item>
 			<Item Name="nilvaiu.dll" Type="Document" URL="nilvaiu.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -336,6 +336,7 @@
 			<Item Name="Get Terminal Name with Device Prefix.vi" Type="VI" URL="../trashes/lockin/temp/Get Terminal Name with Device Prefix.vi"/>
 			<Item Name="PublicEvents--DSP.getWaveforms.ctl" Type="VI" URL="../SMOs/DSP/Typedefs/PublicEvents--DSP.getWaveforms.ctl"/>
 			<Item Name="PrivateEvents--DSP.setWaveform.ctl" Type="VI" URL="../SMOs/DSP/Typedefs/PrivateEvents--DSP.setWaveform.ctl"/>
+			<Item Name="Create UI_main.vi" Type="VI" URL="../SMOs/main_UI/Create UI_main.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
