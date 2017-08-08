@@ -33,6 +33,7 @@
 		<Item Name="lockin.lvclass" Type="LVClass" URL="../SMOs/lockin/lockin.lvclass"/>
 		<Item Name="DSP_sandbox.vi" Type="VI" URL="../SMOs/DSP/DSP_sandbox.vi"/>
 		<Item Name="AppLauncher.vi" Type="VI" URL="../AppLauncher.vi"/>
+		<Item Name="SubUIs.ctl" Type="VI" URL="../SMOs/UI_Main_Test/Typedefs/SubUIs.ctl"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="SMO.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/JKI/JKI SMO/SMO/SMO.lvclass"/>
