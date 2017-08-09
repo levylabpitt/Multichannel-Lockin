@@ -34,6 +34,8 @@
 		<Item Name="AppLauncher.vi" Type="VI" URL="../AppLauncher.vi"/>
 		<Item Name="system.lvclass" Type="LVClass" URL="../SMOs/lockin/system.lvclass"/>
 		<Item Name="Generator.lvclass" Type="LVClass" URL="../SMOs/Generator/Generator.lvclass"/>
+		<Item Name="4461AIRange.ctl" Type="VI" URL="../SMOs/DAQmx.AI/Typedefs/4461AIRange.ctl"/>
+		<Item Name="4461AORange.ctl" Type="VI" URL="../SMOs/DAQmx.AO/Typedefs/4461AORange.ctl"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="SMO.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/JKI/JKI SMO/SMO/SMO.lvclass"/>
