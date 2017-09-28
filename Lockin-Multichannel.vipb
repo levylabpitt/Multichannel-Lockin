@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="0.6" Created_Date="2016-04-26 22:20:34" Modified_Date="2017-07-28 18:46:38" Creator="Patrick Irvin" Comments="" ID="742c1331be405a7f5324c0bca37ba222">
+<VI_Package_Builder_Settings Version="0.6" Created_Date="2016-04-26 22:20:34" Modified_Date="2017-08-02 15:46:59" Creator="Patrick Irvin" Comments="" ID="8e9ab70d1abbe547b332c1e3c895efe2">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.4.0.34</Library_Version>
+    <Library_Version>2.4.1.35</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -40,9 +40,7 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>- lockin starts in local mode
-- add wait in event structure in IV mode
-- inline some subVIs to improve performance</Release_Notes>
+      <Release_Notes>- revert FGVs to nonreentrant execution</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -299,7 +297,7 @@
         <Path>Lockin-4461 -Patrick -State.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>55B1149A6823D8988681B9AE026E4889</GUID>
+      <GUID>B8057F3D556AC24A8D09F7F479196C64</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -348,7 +346,7 @@
         <Path>Examples\Lockin_Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F44D146395296CCD0B142FE583E916B2</GUID>
+      <GUID>68876EF0C61DD7AF1DE9242A7F72A863</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -411,7 +409,7 @@
         <Path>Expt\testlockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>70D94600CCDED0A9CA2A561A8BA3BE90</GUID>
+      <GUID>05CDB687F343EC5835D8015A2E314393</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -572,7 +570,7 @@
         <Path>FGV\FGV - Trigger.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>C0E2FDBA3352363AA93F50C04DC68D34</GUID>
+      <GUID>7ACBFC6A8B1E9599A048984A131141A3</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -943,7 +941,7 @@
         <Path>SubVIs\Waveform 64-128 channels LP pt by pt.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>8B8C694F5CF3B8FEA3D9F4B32F56EEB8</GUID>
+      <GUID>593BF0C2E778871F5B63C4A269A47CD2</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1132,7 +1130,7 @@
         <Path>subVIs - DAQ\Get Terminal Name with Device Prefix.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>DE3C44878C2ADF0C52E6406D4DFC53B3</GUID>
+      <GUID>61E2387733064CEDD1F682401F8DC98B</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
