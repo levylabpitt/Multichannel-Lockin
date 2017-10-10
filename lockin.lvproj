@@ -72,6 +72,27 @@
 			<Item Name="Cal Progress Bar.vi" Type="VI" URL="../subVIs - DAQ/Cal Progress Bar.vi"/>
 			<Item Name="Get Dev Product Type.vi" Type="VI" URL="../subVIs - DAQ/Get Dev Product Type.vi"/>
 		</Item>
+		<Item Name="Typedefs" Type="Folder">
+			<Item Name="AO" Type="Folder">
+				<Item Name="AO-cluster.ctl" Type="VI" URL="../Typedefs/AO-cluster.ctl"/>
+				<Item Name="AO_Amp-array.ctl" Type="VI" URL="../Typedefs/AO_Amp-array.ctl"/>
+				<Item Name="AO_DC-array.ctl" Type="VI" URL="../Typedefs/AO_DC-array.ctl"/>
+				<Item Name="AO_f-array.ctl" Type="VI" URL="../Typedefs/AO_f-array.ctl"/>
+				<Item Name="AO_phi-array.ctl" Type="VI" URL="../Typedefs/AO_phi-array.ctl"/>
+				<Item Name="Function-array.ctl" Type="VI" URL="../Typedefs/Function-array.ctl"/>
+				<Item Name="Function-enum.ctl" Type="VI" URL="../Typedefs/Function-enum.ctl"/>
+			</Item>
+			<Item Name="DAQ" Type="Folder">
+				<Item Name="AI.config-cluster.ctl" Type="VI" URL="../Typedefs/AI.config-cluster.ctl"/>
+				<Item Name="AI.coupling-enum.ctl" Type="VI" URL="../Typedefs/AI.coupling-enum.ctl"/>
+				<Item Name="AO.config-cluster.ctl" Type="VI" URL="../Typedefs/AO.config-cluster.ctl"/>
+			</Item>
+			<Item Name="REF" Type="Folder">
+				<Item Name="REF-cluster.ctl" Type="VI" URL="../Typedefs/REF-cluster.ctl"/>
+				<Item Name="REF_f-array.ctl" Type="VI" URL="../Typedefs/REF_f-array.ctl"/>
+				<Item Name="REF_phi-array.ctl" Type="VI" URL="../Typedefs/REF_phi-array.ctl"/>
+			</Item>
+		</Item>
 		<Item Name="Lockin-4461 -Patrick -State.vi" Type="VI" URL="../Lockin-4461 -Patrick -State.vi"/>
 		<Item Name="Lockin-4461 IV mode trigger and wait.vi" Type="VI" URL="../Lockin-4461 IV mode trigger and wait.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
@@ -79,6 +100,7 @@
 				<Item Name="1D Array to String__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/string/string.llb/1D Array to String__ogtk.vi"/>
 				<Item Name="Array Size(s)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Array Size(s)__ogtk.vi"/>
 				<Item Name="Build Error Cluster__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/error/error.llb/Build Error Cluster__ogtk.vi"/>
+				<Item Name="Channel-Enum.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Krohn Hite 7008/typedefs/Channel-Enum.ctl"/>
 				<Item Name="Clear All Errors__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/error/error.llb/Clear All Errors__ogtk.vi"/>
 				<Item Name="Current VIs Parent Directory__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/file/file.llb/Current VIs Parent Directory__ogtk.vi"/>
 				<Item Name="Current VIs Parents Ref__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/appcontrol/appcontrol.llb/Current VIs Parents Ref__ogtk.vi"/>
@@ -132,8 +154,12 @@
 				<Item Name="Filter Error Codes__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/error/error.llb/Filter Error Codes__ogtk.vi"/>
 				<Item Name="Filtered Error Details - Cluster__ogtk.ctl" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/error/error.llb/Filtered Error Details - Cluster__ogtk.ctl"/>
 				<Item Name="Format number_123456.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/FileUtilities/Format number_123456.vi"/>
+				<Item Name="Gain-Enum.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Krohn Hite 7008/typedefs/Gain-Enum.ctl"/>
 				<Item Name="Get Header from TD__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Get Header from TD__ogtk.vi"/>
 				<Item Name="increment filename.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/FileUtilities/increment filename.vi"/>
+				<Item Name="KH_config.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Krohn Hite 7008/globals/KH_config.vi"/>
+				<Item Name="KH_control.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Krohn Hite 7008/typedefs/KH_control.ctl"/>
+				<Item Name="KH_control_array.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Krohn Hite 7008/typedefs/KH_control_array.ctl"/>
 				<Item Name="LV to ITX 2.2 ITX2.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/LV to ITX/Main/LV to ITX 2.2 ITX2.vi"/>
 				<Item Name="LV to ITX 2.2 XY.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/LV to ITX/Main/LV to ITX 2.2 XY.vi"/>
 				<Item Name="LV to ITX AutoPlot.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/LV to ITX/LV to ITX AutoPlot.vi"/>
@@ -145,6 +171,7 @@
 				<Item Name="LVITX Format Path&amp;Filename.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/LV to ITX/util/LVITX Format Path&amp;Filename.vi"/>
 				<Item Name="LVITX ITX2 Plot Commands.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/LV to ITX/util/LVITX ITX2 Plot Commands.vi"/>
 				<Item Name="LVITX XY Plot Commands.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/LV to ITX/util/LVITX XY Plot Commands.vi"/>
+				<Item Name="Measure-Enum.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Krohn Hite 7008/typedefs/Measure-Enum.ctl"/>
 				<Item Name="MGI Create Directory Chain Behavior Enum.ctl" Type="VI" URL="/&lt;userlib&gt;/_MGI/File/MGI Create Directory Chain Behavior Enum.ctl"/>
 				<Item Name="MGI Create Directory Chain.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/File/MGI Create Directory Chain.vi"/>
 				<Item Name="MGI Get Cluster Elements.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Cluster/MGI Get Cluster Elements.vi"/>
@@ -207,6 +234,7 @@
 				<Item Name="Remove Duplicates from 1D Array (Variant)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/array/array.llb/Remove Duplicates from 1D Array (Variant)__ogtk.vi"/>
 				<Item Name="Remove Duplicates from 1D Array__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/array/array.llb/Remove Duplicates from 1D Array__ogtk.vi"/>
 				<Item Name="sfpCore Hue to RGB.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/ColorUtillities/sfpCore Hue to RGB.vi"/>
+				<Item Name="Shunt-Enum.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Krohn Hite 7008/typedefs/Shunt-Enum.ctl"/>
 				<Item Name="Strip Path - Arrays__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/file/file.llb/Strip Path - Arrays__ogtk.vi"/>
 				<Item Name="Strip Path - Traditional__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/file/file.llb/Strip Path - Traditional__ogtk.vi"/>
 				<Item Name="Strip Path__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/file/file.llb/Strip Path__ogtk.vi"/>
