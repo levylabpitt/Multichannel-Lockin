@@ -11,6 +11,7 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="API" Type="Folder">
+			<Item Name="Lockin-4461 IV mode trigger and wait.vi" Type="VI" URL="../API/Lockin-4461 IV mode trigger and wait.vi"/>
 			<Item Name="setAO_Amp.vi" Type="VI" URL="../API/setAO_Amp.vi"/>
 			<Item Name="setAO_DC.vi" Type="VI" URL="../API/setAO_DC.vi"/>
 			<Item Name="setAO_f.vi" Type="VI" URL="../API/setAO_f.vi"/>
@@ -89,8 +90,10 @@
 				<Item Name="Function-enum.ctl" Type="VI" URL="../Typedefs/Function-enum.ctl"/>
 			</Item>
 			<Item Name="DAQ" Type="Folder">
+				<Item Name="AI.config-array.ctl" Type="VI" URL="../Typedefs/AI.config-array.ctl"/>
 				<Item Name="AI.config-cluster.ctl" Type="VI" URL="../Typedefs/AI.config-cluster.ctl"/>
 				<Item Name="AI.coupling-enum.ctl" Type="VI" URL="../Typedefs/AI.coupling-enum.ctl"/>
+				<Item Name="AO.config-array.ctl" Type="VI" URL="../Typedefs/AO.config-array.ctl"/>
 				<Item Name="AO.config-cluster.ctl" Type="VI" URL="../Typedefs/AO.config-cluster.ctl"/>
 			</Item>
 			<Item Name="REF" Type="Folder">
@@ -98,9 +101,11 @@
 				<Item Name="REF_f-array.ctl" Type="VI" URL="../Typedefs/REF_f-array.ctl"/>
 				<Item Name="REF_phi-array.ctl" Type="VI" URL="../Typedefs/REF_phi-array.ctl"/>
 			</Item>
+			<Item Name="AmplifierType-enum.ctl" Type="VI" URL="../Typedefs/AmplifierType-enum.ctl"/>
+			<Item Name="DAQType-enum.ctl" Type="VI" URL="../Typedefs/DAQType-enum.ctl"/>
+			<Item Name="INI-enum.ctl" Type="VI" URL="../Typedefs/INI-enum.ctl"/>
 		</Item>
 		<Item Name="Lockin-4461 -Patrick -State.vi" Type="VI" URL="../Lockin-4461 -Patrick -State.vi"/>
-		<Item Name="Lockin-4461 IV mode trigger and wait.vi" Type="VI" URL="../Lockin-4461 IV mode trigger and wait.vi"/>
 		<Item Name="Lockin-Multichannel.vipb" Type="Document" URL="../Lockin-Multichannel.vipb"/>
 		<Item Name="Lockin-Multichannel.vipc" Type="Document" URL="../Lockin-Multichannel.vipc"/>
 		<Item Name="Dependencies" Type="Dependencies">
