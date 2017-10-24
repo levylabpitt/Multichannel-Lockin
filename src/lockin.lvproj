@@ -10,6 +10,13 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
+		<Item Name="API" Type="Folder">
+			<Item Name="setAO_Amp.vi" Type="VI" URL="../API/setAO_Amp.vi"/>
+			<Item Name="setAO_DC.vi" Type="VI" URL="../API/setAO_DC.vi"/>
+			<Item Name="setAO_f.vi" Type="VI" URL="../API/setAO_f.vi"/>
+			<Item Name="setAO_function.vi" Type="VI" URL="../API/setAO_function.vi"/>
+			<Item Name="setAO_phi.vi" Type="VI" URL="../API/setAO_phi.vi"/>
+		</Item>
 		<Item Name="Examples" Type="Folder">
 			<Item Name="Lockin_Example_IV_Curves.vi" Type="VI" URL="../Examples/Lockin_Example_IV_Curves.vi"/>
 			<Item Name="Lockin_Example_Lockin.vi" Type="VI" URL="../Examples/Lockin_Example_Lockin.vi"/>
@@ -36,7 +43,6 @@
 			<Item Name="AI_Select_CheckBox.vi" Type="VI" URL="../SubVIs/AI_Select_CheckBox.vi"/>
 			<Item Name="AO_Select_CheckBox.vi" Type="VI" URL="../SubVIs/AO_Select_CheckBox.vi"/>
 			<Item Name="AppendWaveformArray.vi" Type="VI" URL="../SubVIs/AppendWaveformArray.vi"/>
-			<Item Name="config.ini" Type="Document" URL="../SubVIs/config.ini"/>
 			<Item Name="config.vi" Type="VI" URL="../SubVIs/config.vi"/>
 			<Item Name="decimate_waveforms.vi" Type="VI" URL="../SubVIs/decimate_waveforms.vi"/>
 			<Item Name="Display n or dt.vi" Type="VI" URL="../SubVIs/Display n or dt.vi"/>
