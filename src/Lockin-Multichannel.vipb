@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="0.6" Created_Date="2016-04-26 22:20:34" Modified_Date="2017-10-24 11:52:08" Creator="Patrick Irvin" Comments="" ID="8fafdb350c3709799fddabba02242323">
+<VI_Package_Builder_Settings Version="0.6" Created_Date="2016-04-26 22:20:34" Modified_Date="2017-10-26 12:03:18" Creator="Patrick Irvin" Comments="" ID="f6bdb8f0f070bc6941f2d1612e15dbb0">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.4.6.45</Library_Version>
+    <Library_Version>2.4.7.45</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -71,12 +71,17 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>- new lockin output demodulated value onto another analog output
+      <Release_Notes>[2.4.8]
+- new typedefs
+- change AI and AO range control
+- update subVI icons
+
+[2.4.7]
+- new lockin output demodulated value onto another analog output
 - new function palette
 - new front panel defaults
 - new available presets (MFP3D and CYPHER)
-- new typedefs
-</Release_Notes>
+- new typedefs</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -333,7 +338,7 @@
         <Path>subVIs - DAQ</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>CF2D35D8A64269087C1BECD246404B04</GUID>
+      <GUID>A692A56F7749AAA9C8EAFBD3012A0D7A</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -438,7 +443,7 @@
         <Path>API\setAO_phi.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>2BFFA4D10E80ABE2776B203ACFB52E18</GUID>
+      <GUID>E84D600DF61BD03EDD1B110E64DF8E0D</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -487,7 +492,7 @@
         <Path>Examples\Lockin_Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>469BA2DB5D9DF8C77FB383E950A92E2A</GUID>
+      <GUID>5E873EC19105E1CE67B04B5EB58FCEE4</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -550,7 +555,7 @@
         <Path>Expt\testlockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>4A216E8590ABFAD2EBA792A36C5ED855</GUID>
+      <GUID>4479A4E9007E66FD3D7F500420063069</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -711,7 +716,7 @@
         <Path>FGV\FGV - Trigger.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>4D72962C95F69C2E69C920AB6D86A35C</GUID>
+      <GUID>AF26BB658025376CE67740649587494A</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1082,7 +1087,7 @@
         <Path>SubVIs\Waveform 64-128 channels LP pt by pt.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>67B63FA0E0F31D07A4704BF19897B42F</GUID>
+      <GUID>5BFD265C197035FB130465879EAFA408</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1271,7 +1276,7 @@
         <Path>subVIs - DAQ\Get Terminal Name with Device Prefix.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>A727454F67A8FA880AD3ADC2484F2DFC</GUID>
+      <GUID>CC565AE8A2BE93EDED69E7B312A7069B</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -1306,7 +1311,7 @@
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>FF44A5321CCDAE1A3B494DE102FF322B</GUID>
+      <GUID>A21639A7B509F5CD49E369C354C82984</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1579,7 +1584,7 @@
         <Path>Typedefs\REF_phi-array.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>D05F2361DE23515E30A965199730E9BB</GUID>
+      <GUID>493F0DE8C2010DEB22BBF94071E420B5</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
