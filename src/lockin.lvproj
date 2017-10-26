@@ -67,6 +67,8 @@
 			<Item Name="Waveform 64-128 channels LP pt by pt.vi" Type="VI" URL="../SubVIs/Waveform 64-128 channels LP pt by pt.vi"/>
 		</Item>
 		<Item Name="subVIs - DAQ" Type="Folder">
+			<Item Name="446x_AI_MinMax.vi" Type="VI" URL="../subVIs - DAQ/446x_AI_MinMax.vi"/>
+			<Item Name="446x_AO_MinMax.vi" Type="VI" URL="../subVIs - DAQ/446x_AO_MinMax.vi"/>
 			<Item Name="4461 - AI AND AI - Read AND Write Uneven.vi" Type="VI" URL="../subVIs - DAQ/4461 - AI AND AI - Read AND Write Uneven.vi"/>
 			<Item Name="4461 - AI Read Data.vi" Type="VI" URL="../subVIs - DAQ/4461 - AI Read Data.vi"/>
 			<Item Name="4461 - AO Write Data.vi" Type="VI" URL="../subVIs - DAQ/4461 - AO Write Data.vi"/>
@@ -90,9 +92,12 @@
 				<Item Name="Function-enum.ctl" Type="VI" URL="../Typedefs/Function-enum.ctl"/>
 			</Item>
 			<Item Name="DAQ" Type="Folder">
+				<Property Name="NI.SortType" Type="Int">3</Property>
+				<Item Name="446xAI-enum.ctl" Type="VI" URL="../Typedefs/446xAI-enum.ctl"/>
 				<Item Name="AI.config-array.ctl" Type="VI" URL="../Typedefs/AI.config-array.ctl"/>
 				<Item Name="AI.config-cluster.ctl" Type="VI" URL="../Typedefs/AI.config-cluster.ctl"/>
 				<Item Name="AI.coupling-enum.ctl" Type="VI" URL="../Typedefs/AI.coupling-enum.ctl"/>
+				<Item Name="446xAO-enum.ctl" Type="VI" URL="../Typedefs/446xAO-enum.ctl"/>
 				<Item Name="AO.config-array.ctl" Type="VI" URL="../Typedefs/AO.config-array.ctl"/>
 				<Item Name="AO.config-cluster.ctl" Type="VI" URL="../Typedefs/AO.config-cluster.ctl"/>
 			</Item>
@@ -104,6 +109,7 @@
 			<Item Name="AmplifierType-enum.ctl" Type="VI" URL="../Typedefs/AmplifierType-enum.ctl"/>
 			<Item Name="DAQType-enum.ctl" Type="VI" URL="../Typedefs/DAQType-enum.ctl"/>
 			<Item Name="INI-enum.ctl" Type="VI" URL="../Typedefs/INI-enum.ctl"/>
+			<Item Name="XP Style VISA Control.ctl" Type="VI" URL="../Typedefs/XP Style VISA Control.ctl"/>
 		</Item>
 		<Item Name="Lockin-4461 -Patrick -State.vi" Type="VI" URL="../Lockin-4461 -Patrick -State.vi"/>
 		<Item Name="Lockin-Multichannel.vipb" Type="Document" URL="../Lockin-Multichannel.vipb"/>
