@@ -101,6 +101,15 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1082130960</Property>
 		</Item>
+		<Item Name="DAQmx_SyncAll.vi" Type="VI" URL="../APIs/DAQmx_SyncAll.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%N!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#*!=!!?!!!0$52"57VY,GRW9WRB=X-!#52"57VY)'^V&gt;!!71%!!!@````]!"1F"=H*B?3"P&gt;81!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!C1(!!(A!!$QV%16&amp;N?#ZM&gt;G.M98.T!!B%16&amp;N?#"J&lt;A!!&amp;E"!!!(`````!!A)18*S98EA;7Y!!&amp;1!]!!-!!-!"!!%!!9!"!!%!!1!"!!(!!1!"!!*!Q!!?!!!$1A!!!!!!!!!!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!!!!!!%+!!!!!!%!#A!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1107821072</Property>
+		</Item>
 		<Item Name="getDAQmx_Config.vi" Type="VI" URL="../APIs/getDAQmx_Config.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!'*!!!!$!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!"6!!Q!01H6G:G6S)&amp;.J?G5A+&amp;-J!#.!&amp;A!#"EV"5V2&amp;5A644%&amp;721!!$%VB=X2F=C"4&lt;'&amp;W:1!!1Q$R!!!!!!!!!!).2%&amp;2&lt;8AO&lt;(:D&lt;'&amp;T=R"%16&amp;N?&amp;^$&lt;WZG;7=O9X2M!"R!5!!#!!5!"AR%16&amp;N?#Z$&lt;WZG;7=!!#*!=!!?!!!0$52"57VY,GRW9WRB=X-!#52"57VY)'^V&gt;!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!#*!=!!?!!!0$52"57VY,GRW9WRB=X-!#%2"57VY)'FO!!"B!0!!$!!$!!1!"Q!)!!1!"!!%!!1!#1!%!!1!#A)!!(A!!!U)!!!!!!!!#1!!!!U,!!!!!!!!!!!!!!!!!!!!!!!!#!!!!!!!!!!!!!!!%!!!$1!!!!Q!!!!!!!!!!!!!!1!,!!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
@@ -165,24 +174,6 @@
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1342972416</Property>
-		</Item>
-		<Item Name="DAQmx_Get_Devices.vi" Type="VI" URL="../subVIs/DAQmx_Get_Devices.vi">
-			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!#[!!!!"1!%!!!!#!!Q`````Q!=1%!!!@````]!!1Z$;'&amp;O&lt;G6M=S""=H*B?1!!.E!X`````Q!/&amp;A#!!!!!!!%!"!!!!!%!!!!!!!!72%&amp;2&lt;8AA5'BZ=WFD97QA1WBB&lt;GZF&lt;!!!6!$Q!!Q!!!!!!!!!!A!!!!!!!!!!!!!!!!!!!!-#!!"Y!!!!!!!!!!!!!!!!!!!*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!AA!!!!!!1!%!!!!!!</Property>
-			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
-			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
-			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
-			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-			<Property Name="NI.ClassItem.State" Type="Int">1082143232</Property>
-		</Item>
-		<Item Name="DAQmx_SyncAll.vi" Type="VI" URL="../subVIs/DAQmx_SyncAll.vi">
-			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%N!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#*!=!!?!!!0$52"57VY,GRW9WRB=X-!#52"57VY)'^V&gt;!!71%!!!@````]!"1F"=H*B?3"P&gt;81!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!C1(!!(A!!$QV%16&amp;N?#ZM&gt;G.M98.T!!B%16&amp;N?#"J&lt;A!!&amp;E"!!!(`````!!A)18*S98EA;7Y!!&amp;1!]!!-!!-!"!!%!!9!"!!%!!1!"!!(!!1!"!!*!Q!!?!!!$1A!!!!!!!!!!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!!!!!!%+!!!!!!%!#A!!!!!</Property>
-			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
-			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
-			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
-			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-			<Property Name="NI.ClassItem.State" Type="Int">1107821072</Property>
 		</Item>
 		<Item Name="DAQmx_Put_Master_First.vi" Type="VI" URL="../subVIs/DAQmx_Put_Master_First.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%N!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#*!=!!?!!!0$52"57VY,GRW9WRB=X-!#52"57VY)'^V&gt;!!71%!!!@````]!"1F%16&amp;N?#"P&gt;81!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!C1(!!(A!!$QV%16&amp;N?#ZM&gt;G.M98.T!!B%16&amp;N?#"J&lt;A!!&amp;E"!!!(`````!!A)2%&amp;2&lt;8AA;7Y!!&amp;1!]!!-!!-!"!!%!!9!"!!%!!1!"!!(!!1!"!!*!Q!!?!!!$1A!!!!!!!!!!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!)!!!!!!!!!!!!!!%+!!!!!!%!#A!!!!!</Property>
