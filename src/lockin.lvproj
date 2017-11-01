@@ -83,12 +83,14 @@
 		</Item>
 		<Item Name="Typedefs" Type="Folder">
 			<Item Name="AO" Type="Folder">
+				<Property Name="NI.SortType" Type="Int">3</Property>
 				<Item Name="AO-cluster.ctl" Type="VI" URL="../Typedefs/AO-cluster.ctl"/>
 				<Item Name="AO_Amp-array.ctl" Type="VI" URL="../Typedefs/AO_Amp-array.ctl"/>
 				<Item Name="AO_DC-array.ctl" Type="VI" URL="../Typedefs/AO_DC-array.ctl"/>
 				<Item Name="AO_f-array.ctl" Type="VI" URL="../Typedefs/AO_f-array.ctl"/>
 				<Item Name="AO_phi-array.ctl" Type="VI" URL="../Typedefs/AO_phi-array.ctl"/>
 				<Item Name="Function-array.ctl" Type="VI" URL="../Typedefs/Function-array.ctl"/>
+				<Item Name="Function+DC-enum.ctl" Type="VI" URL="../Typedefs/Function+DC-enum.ctl"/>
 				<Item Name="Function-enum.ctl" Type="VI" URL="../Typedefs/Function-enum.ctl"/>
 			</Item>
 			<Item Name="DAQ" Type="Folder">
