@@ -11,18 +11,22 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="DAQ" Type="Folder">
-			<Item Name="DAQ_Manager.lvclass" Type="LVClass" URL="../SMOs/DAQ_Manager/DAQ_Manager.lvclass"/>
-			<Item Name="DAQ.lvclass" Type="LVClass" URL="../SMOs/DAQ/DAQ.lvclass"/>
-			<Item Name="DAQmx.lvclass" Type="LVClass" URL="../SMOs/DAQmx/DAQmx.lvclass"/>
-			<Item Name="DAQmx.AI.lvclass" Type="LVClass" URL="../SMOs/DAQmx.AI/DAQmx.AI.lvclass"/>
-			<Item Name="DAQmx.AO.lvclass" Type="LVClass" URL="../SMOs/DAQmx.AO/DAQmx.AO.lvclass"/>
-		</Item>
-		<Item Name="DSP" Type="Folder">
-			<Item Name="DSP.lvclass" Type="LVClass" URL="../SMOs/DSP/DSP.lvclass"/>
-			<Item Name="DSP_lockin.lvclass" Type="LVClass" URL="../SMOs/DSP.lockin/DSP_lockin.lvclass"/>
-			<Item Name="DSP_Filter.lvclass" Type="LVClass" URL="../SMOs/DSP.Filter/DSP_Filter.lvclass"/>
-			<Item Name="DSP_FFT.lvclass" Type="LVClass" URL="../SMOs/DSP.FFT/DSP_FFT.lvclass"/>
+		<Item Name="Dependencies" Type="Folder">
+			<Item Name="DAQ" Type="Folder">
+				<Item Name="DAQ_Manager.lvclass" Type="LVClass" URL="../SMOs/DAQ_Manager/DAQ_Manager.lvclass"/>
+				<Item Name="DAQ.lvclass" Type="LVClass" URL="../SMOs/DAQ/DAQ.lvclass"/>
+				<Item Name="DAQmx.lvclass" Type="LVClass" URL="../SMOs/DAQmx/DAQmx.lvclass"/>
+				<Item Name="DAQmx.AI.lvclass" Type="LVClass" URL="../SMOs/DAQmx.AI/DAQmx.AI.lvclass"/>
+				<Item Name="DAQmx.AO.lvclass" Type="LVClass" URL="../SMOs/DAQmx.AO/DAQmx.AO.lvclass"/>
+			</Item>
+			<Item Name="DSP" Type="Folder">
+				<Item Name="DSP.lvclass" Type="LVClass" URL="../SMOs/DSP/DSP.lvclass"/>
+				<Item Name="DSP_lockin.lvclass" Type="LVClass" URL="../SMOs/DSP.lockin/DSP_lockin.lvclass"/>
+				<Item Name="DSP_Filter.lvclass" Type="LVClass" URL="../SMOs/DSP.Filter/DSP_Filter.lvclass"/>
+				<Item Name="DSP_FFT.lvclass" Type="LVClass" URL="../SMOs/DSP.FFT/DSP_FFT.lvclass"/>
+			</Item>
+			<Item Name="Generator.lvclass" Type="LVClass" URL="../SMOs/Generator/Generator.lvclass"/>
+			<Item Name="Scope.lvclass" Type="LVClass" URL="../SMOs/Scope/Scope.lvclass"/>
 		</Item>
 		<Item Name="UI" Type="Folder">
 			<Item Name="UI_Main.lvclass" Type="LVClass" URL="../SMOs/UI_Main_Test/UI_Main.lvclass"/>
@@ -32,7 +36,6 @@
 			<Item Name="UI_Scope.lvclass" Type="LVClass" URL="../SMOs/UI_Scope/UI_Scope.lvclass"/>
 		</Item>
 		<Item Name="system.lvclass" Type="LVClass" URL="../SMOs/lockin/system.lvclass"/>
-		<Item Name="Generator.lvclass" Type="LVClass" URL="../SMOs/Generator/Generator.lvclass"/>
 		<Item Name="AppLauncher.vi" Type="VI" URL="../AppLauncher.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
