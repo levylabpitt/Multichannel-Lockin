@@ -22,16 +22,16 @@
 			<Item Name="readAI.vi" Type="VI" URL="../API/readAI.vi"/>
 			<Item Name="readAO.vi" Type="VI" URL="../API/readAO.vi"/>
 			<Item Name="configAO.vi" Type="VI" URL="../API/configAO.vi"/>
-			<Item Name="setAO_Amp.vi" Type="VI" URL="../API/setAO_Amp.vi"/>
-			<Item Name="setAO_DC.vi" Type="VI" URL="../API/setAO_DC.vi"/>
-			<Item Name="setAO_f.vi" Type="VI" URL="../API/setAO_f.vi"/>
-			<Item Name="setAO_function.vi" Type="VI" URL="../API/setAO_function.vi"/>
-			<Item Name="setAO_phi.vi" Type="VI" URL="../API/setAO_phi.vi"/>
+			<Item Name="configAO_Amp.vi" Type="VI" URL="../API/configAO_Amp.vi"/>
+			<Item Name="configAO_DC.vi" Type="VI" URL="../API/configAO_DC.vi"/>
+			<Item Name="configAO_f.vi" Type="VI" URL="../API/configAO_f.vi"/>
+			<Item Name="configAO_function.vi" Type="VI" URL="../API/configAO_function.vi"/>
+			<Item Name="configAO_phi.vi" Type="VI" URL="../API/configAO_phi.vi"/>
 			<Item Name="configLockin.vi" Type="VI" URL="../API/configLockin.vi"/>
-			<Item Name="setLockin_f.vi" Type="VI" URL="../API/setLockin_f.vi"/>
-			<Item Name="setLockin_phi.vi" Type="VI" URL="../API/setLockin_phi.vi"/>
-			<Item Name="setIVmode.vi" Type="VI" URL="../API/setIVmode.vi"/>
-			<Item Name="setRemote.vi" Type="VI" URL="../API/setRemote.vi"/>
+			<Item Name="configREF_f.vi" Type="VI" URL="../API/configREF_f.vi"/>
+			<Item Name="configREF_phi.vi" Type="VI" URL="../API/configREF_phi.vi"/>
+			<Item Name="configIVmode.vi" Type="VI" URL="../API/configIVmode.vi"/>
+			<Item Name="configRemote.vi" Type="VI" URL="../API/configRemote.vi"/>
 		</Item>
 		<Item Name="Examples" Type="Folder">
 			<Item Name="Lockin_Example_IV_Curves.vi" Type="VI" URL="../Examples/Lockin_Example_IV_Curves.vi"/>
@@ -127,6 +127,10 @@
 			<Item Name="DAQType-enum.ctl" Type="VI" URL="../Typedefs/DAQType-enum.ctl"/>
 			<Item Name="INI-enum.ctl" Type="VI" URL="../Typedefs/INI-enum.ctl"/>
 			<Item Name="XP Style VISA Control.ctl" Type="VI" URL="../Typedefs/XP Style VISA Control.ctl"/>
+		</Item>
+		<Item Name="RemoteControl" Type="Folder">
+			<Item Name="RemoteControl.lvclass" Type="LVClass" URL="../RemoteControl/RemoteControl.lvclass"/>
+			<Item Name="STP_Client.vi" Type="VI" URL="../RemoteControl/STP_Client.vi"/>
 		</Item>
 		<Item Name="Lockin-4461 -Patrick -State.vi" Type="VI" URL="../Lockin-4461 -Patrick -State.vi"/>
 		<Item Name="Lockin-Multichannel.vipb" Type="Document" URL="../Lockin-Multichannel.vipb"/>
@@ -280,6 +284,8 @@
 				<Item Name="Type Descriptor__ogtk.ctl" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Type Descriptor__ogtk.ctl"/>
 				<Item Name="Variant to Header Info__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Variant to Header Info__ogtk.vi"/>
 				<Item Name="Wait (ms)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/time/time.llb/Wait (ms)__ogtk.vi"/>
+				<Item Name="Tick Count (ms)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/time/time.llb/Tick Count (ms)__ogtk.vi"/>
+				<Item Name="MGI Milliseconds Since Last Call.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Timing/MGI Milliseconds Since Last Call.vi"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
@@ -627,6 +633,31 @@
 				<Item Name="NI_App_Builder_API.lvlib" Type="Library" URL="/&lt;vilib&gt;/AppBuilder/AB_API_Simple/NI_App_Builder_API.lvlib"/>
 				<Item Name="GetTargetBuildSpecs.vi" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/GetTargetBuildSpecs.vi"/>
 				<Item Name="Invoke BuildTarget.vi" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/Invoke BuildTarget.vi"/>
+				<Item Name="NI STM.lvlib" Type="Library" URL="/&lt;vilib&gt;/NI/STM/NI STM.lvlib"/>
+				<Item Name="SMO.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/JKI/JKI SMO/SMO/SMO.lvclass"/>
+				<Item Name="Attribute.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/JKI/JKI SMO/Support/Attribute/Attribute.lvclass"/>
+				<Item Name="Attribute.Owner.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/JKI/JKI SMO/Support/Attribute.Owner/Attribute.Owner.lvclass"/>
+				<Item Name="MD5Checksum pad.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/MD5Checksum.llb/MD5Checksum pad.vi"/>
+				<Item Name="MD5Checksum core.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/MD5Checksum.llb/MD5Checksum core.vi"/>
+				<Item Name="MD5Checksum format message-digest.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/MD5Checksum.llb/MD5Checksum format message-digest.vi"/>
+				<Item Name="MD5Checksum string.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/MD5Checksum.llb/MD5Checksum string.vi"/>
+				<Item Name="Attribute.Identity.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/JKI/JKI SMO/Support/Attribute.Identity/Attribute.Identity.lvclass"/>
+				<Item Name="Attribute.SharedResource.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/JKI/JKI SMO/Support/Attribute.SharedResource/Attribute.SharedResource.lvclass"/>
+				<Item Name="Attribute.Config.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/JKI/JKI SMO/Support/Attribute.Config/Attribute.Config.lvclass"/>
+				<Item Name="Registry-SMO.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/JKI/JKI SMO/Registry/Registry-SMO.lvclass"/>
+				<Item Name="Terminal.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/JKI/JKI SMO/SMOFacade/Terminal/Terminal.lvclass"/>
+				<Item Name="Type Specific Details.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/VariantDataType/Type Specific Details.ctl"/>
+				<Item Name="Check for Contained Data Type.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/VariantDataType/Check for Contained Data Type.vi"/>
+				<Item Name="ArrayToCluster.vi" Type="VI" URL="/&lt;vilib&gt;/JKI/JKI SMO/Utilities/ArrayToCluster.vi"/>
+				<Item Name="Get LV Class Path.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/LVClass/Get LV Class Path.vi"/>
+				<Item Name="Get LV Class Name.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/LVClass/Get LV Class Name.vi"/>
+				<Item Name="Attribute.StartupBehavior.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/JKI/JKI SMO/Support/Attribute.StartupBehavior/Attribute.StartupBehavior.lvclass"/>
+				<Item Name="Dependency.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/JKI/JKI SMO/Dependency/Dependency.lvclass"/>
+				<Item Name="Build State String with Arguments__JKI_lib_State_Machine.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/State Machine/_JKI_lib_State_Machine.llb/Build State String with Arguments__JKI_lib_State_Machine.vi"/>
+				<Item Name="TCP Listen List Operations.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/tcp.llb/TCP Listen List Operations.ctl"/>
+				<Item Name="TCP Listen Internal List.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tcp.llb/TCP Listen Internal List.vi"/>
+				<Item Name="Internecine Avoider.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tcp.llb/Internecine Avoider.vi"/>
+				<Item Name="TCP Listen.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tcp.llb/TCP Listen.vi"/>
 			</Item>
 			<Item Name="Get Terminal Name with Device Prefix.vi" Type="VI" URL="../subVIs - DAQ/Get Terminal Name with Device Prefix.vi"/>
 			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
