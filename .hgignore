@@ -1,0 +1,5 @@
+syntax: glob
+builds/Multichannel Lockin/lockin/lockin.ini
+builds/Multichannel Lockin/lockin/data/lvanlys.dll
+builds/Multichannel Lockin/lockin/data/LVDFD.dll
+builds/Multichannel Lockin/lockin/lockin.exe
