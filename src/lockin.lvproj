@@ -27,7 +27,7 @@
 			<Item Name="configAO_f.vi" Type="VI" URL="../API/configAO_f.vi"/>
 			<Item Name="configAO_function.vi" Type="VI" URL="../API/configAO_function.vi"/>
 			<Item Name="configAO_phi.vi" Type="VI" URL="../API/configAO_phi.vi"/>
-			<Item Name="configLockin.vi" Type="VI" URL="../API/configLockin.vi"/>
+			<Item Name="configREF.vi" Type="VI" URL="../API/configREF.vi"/>
 			<Item Name="configREF_f.vi" Type="VI" URL="../API/configREF_f.vi"/>
 			<Item Name="configREF_phi.vi" Type="VI" URL="../API/configREF_phi.vi"/>
 			<Item Name="configIVmode.vi" Type="VI" URL="../API/configIVmode.vi"/>
