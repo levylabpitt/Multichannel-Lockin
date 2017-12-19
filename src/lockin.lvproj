@@ -32,6 +32,7 @@
 			<Item Name="configREF_phi.vi" Type="VI" URL="../API/configREF_phi.vi"/>
 			<Item Name="configIVmode.vi" Type="VI" URL="../API/configIVmode.vi"/>
 			<Item Name="configRemote.vi" Type="VI" URL="../API/configRemote.vi"/>
+			<Item Name="assertTrigger.vi" Type="VI" URL="../API/assertTrigger.vi"/>
 		</Item>
 		<Item Name="Examples" Type="Folder">
 			<Item Name="Lockin_Example_IV_Curves.vi" Type="VI" URL="../Examples/Lockin_Example_IV_Curves.vi"/>
@@ -135,7 +136,6 @@
 		<Item Name="Lockin-4461 -Patrick -State.vi" Type="VI" URL="../Lockin-4461 -Patrick -State.vi"/>
 		<Item Name="Lockin-Multichannel.vipb" Type="Document" URL="../Lockin-Multichannel.vipb"/>
 		<Item Name="Lockin-Multichannel.vipc" Type="Document" URL="../Lockin-Multichannel.vipc"/>
-		<Item Name="deleteme.vi" Type="VI" URL="../RemoteControl/deleteme.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="1D Array to String__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/string/string.llb/1D Array to String__ogtk.vi"/>
@@ -736,7 +736,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{BE714A7E-B7D4-4888-A1F2-966F210EC573}</Property>
-				<Property Name="Bld_version.build" Type="Int">3</Property>
+				<Property Name="Bld_version.build" Type="Int">4</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">lockin.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/Multichannel Lockin/NI_AB_PROJECTNAME/lockin.exe</Property>
