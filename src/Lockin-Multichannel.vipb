@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2017-12-19 10:33:16" Creator="Patrick Irvin" Comments="" ID="b4bec3e5ab603b75b0d7b5d0ae350000">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2017-12-19 14:42:26" Creator="Patrick Irvin" Comments="" ID="71582b143bc81982d27552dceaa77e53">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.4.9.50</Library_Version>
+    <Library_Version>2.4.9.51</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -332,7 +332,7 @@
         <Path>Examples</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>8815A36CC77277D51B53D042CB7C453C</GUID>
+      <GUID>6FC68C3C59FD4E42F0DAE7F78317A20A</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -493,7 +493,7 @@
         <Path>FGV\FGV - Remote.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>4F544C9D58034F0C301D834F422C9EDD</GUID>
+      <GUID>5F8ECC3FE73F71E31313622102F91E2A</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -724,7 +724,7 @@
         <Path>API\Lockin-4461 IV mode trigger and wait.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>59EB7C6CA300AB3046C35CAB2BAEDD70</GUID>
+      <GUID>00B64C27065526A7CD17A388F9E65E86</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -773,7 +773,7 @@
         <Path>Examples\Lockin_Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>C2495E15C6F78F8C2A9C2D1D44D74875</GUID>
+      <GUID>E06823FC702CAC91B67FA494B0BB9159</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -808,7 +808,7 @@
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>4983C47B011D7E379278B0BD477242F7</GUID>
+      <GUID>874D584C40B5829F08BFD25E34A602A1</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1137,7 +1137,7 @@
         <Path>Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>42236BF783A33B1130E0A5170252332E</GUID>
+      <GUID>8CBB8A8E5F96B980C88EF786F397F186</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
