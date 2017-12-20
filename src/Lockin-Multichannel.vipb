@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2017-12-19 14:42:26" Creator="Patrick Irvin" Comments="" ID="71582b143bc81982d27552dceaa77e53">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2017-12-20 09:12:21" Creator="Patrick Irvin" Comments="" ID="a9f9dc131872df1e1f181d9729d48631">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
     <Library_Version>2.4.9.51</Library_Version>
@@ -81,7 +81,8 @@
       <Packager>Patrick Irvin</Packager>
       <URL/>
       <Release_Notes>[2.4.9]
-- limited remote APIs available for EXE
+- remote APIs available for EXE:
+readAO, readAI, readResults, assertTrigger, configRemote, configIVmode, configREF, configAO
 
 [2.4.8]
 - new APIs
@@ -332,7 +333,7 @@
         <Path>Examples</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>6FC68C3C59FD4E42F0DAE7F78317A20A</GUID>
+      <GUID>D75A0DC5E21BD13DE29DF4B79154D33A</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -493,7 +494,7 @@
         <Path>FGV\FGV - Remote.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>5F8ECC3FE73F71E31313622102F91E2A</GUID>
+      <GUID>29AE52936E572362E9DDB55C24DC0551</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -724,7 +725,7 @@
         <Path>API\Lockin-4461 IV mode trigger and wait.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>00B64C27065526A7CD17A388F9E65E86</GUID>
+      <GUID>8ECCC663657D7018615E3FBEEA2FF0C8</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -773,7 +774,7 @@
         <Path>Examples\Lockin_Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E06823FC702CAC91B67FA494B0BB9159</GUID>
+      <GUID>80644524D93C67744684CD37D07EDBFD</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -808,7 +809,7 @@
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>874D584C40B5829F08BFD25E34A602A1</GUID>
+      <GUID>AA6B41971E49573A398F73AA560451CE</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1137,7 +1138,7 @@
         <Path>Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>8CBB8A8E5F96B980C88EF786F397F186</GUID>
+      <GUID>99B6FFEA2DE254232C0B9FD8AA040676</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
