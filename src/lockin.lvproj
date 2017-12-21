@@ -81,6 +81,8 @@
 			<Item Name="Split WAVEFORM array in half.vi" Type="VI" URL="../SubVIs/Split WAVEFORM array in half.vi"/>
 			<Item Name="StateHistory.vi" Type="VI" URL="../SubVIs/StateHistory.vi"/>
 			<Item Name="Waveform 64-128 channels LP pt by pt.vi" Type="VI" URL="../SubVIs/Waveform 64-128 channels LP pt by pt.vi"/>
+			<Item Name="write_lockin_FP_DSC.vi" Type="VI" URL="../SubVIs/write_lockin_FP_DSC.vi"/>
+			<Item Name="read_lockin_FP_DSC.vi" Type="VI" URL="../SubVIs/read_lockin_FP_DSC.vi"/>
 		</Item>
 		<Item Name="subVIs - DAQ" Type="Folder">
 			<Item Name="446x_AI_MinMax.vi" Type="VI" URL="../subVIs - DAQ/446x_AI_MinMax.vi"/>
@@ -136,6 +138,7 @@
 		<Item Name="Lockin-4461 -Patrick -State.vi" Type="VI" URL="../Lockin-4461 -Patrick -State.vi"/>
 		<Item Name="Lockin-Multichannel.vipb" Type="Document" URL="../Lockin-Multichannel.vipb"/>
 		<Item Name="Lockin-Multichannel.vipc" Type="Document" URL="../Lockin-Multichannel.vipc"/>
+		<Item Name="Front Panel Cluster.ctl" Type="VI" URL="../Typedefs/Front Panel Cluster.ctl"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="1D Array to String__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/string/string.llb/1D Array to String__ogtk.vi"/>
@@ -736,7 +739,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{BE714A7E-B7D4-4888-A1F2-966F210EC573}</Property>
-				<Property Name="Bld_version.build" Type="Int">7</Property>
+				<Property Name="Bld_version.build" Type="Int">8</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">lockin.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/Multichannel Lockin/NI_AB_PROJECTNAME/lockin.exe</Property>

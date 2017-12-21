@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2017-12-20 09:41:04" Creator="Patrick Irvin" Comments="" ID="08b9b10a676e0c74956351a3e29a1e49">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2017-12-20 13:21:27" Creator="Patrick Irvin" Comments="" ID="fb22f68acffd612a93088c9e76704ef6">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.4.9.52</Library_Version>
+    <Library_Version>2.4.9.53</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -83,6 +83,7 @@
       <Release_Notes>[2.4.9]
 - remote APIs available for EXE:
 readAO, readAI, readResults, assertTrigger, configRemote, configIVmode, configREF, configAO
+build 52: change from JSON to flatten/unflatten for waveforms and 2D arrays
 
 [2.4.8]
 - new APIs
@@ -333,7 +334,7 @@ readAO, readAI, readResults, assertTrigger, configRemote, configIVmode, configRE
         <Path>Examples</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>D75A0DC5E21BD13DE29DF4B79154D33A</GUID>
+      <GUID>E96D4D148F3A088A99E9908E9D69FC1E</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -494,7 +495,7 @@ readAO, readAI, readResults, assertTrigger, configRemote, configIVmode, configRE
         <Path>FGV\FGV - Remote.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>29AE52936E572362E9DDB55C24DC0551</GUID>
+      <GUID>487091698B13CF295717D8DDBBA1DEB2</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -725,7 +726,7 @@ readAO, readAI, readResults, assertTrigger, configRemote, configIVmode, configRE
         <Path>API\Lockin-4461 IV mode trigger and wait.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>8ECCC663657D7018615E3FBEEA2FF0C8</GUID>
+      <GUID>E380803794612A52EC3E91099598D968</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -774,7 +775,7 @@ readAO, readAI, readResults, assertTrigger, configRemote, configIVmode, configRE
         <Path>Examples\Lockin_Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>80644524D93C67744684CD37D07EDBFD</GUID>
+      <GUID>F0B7660CEE3B2D98A25A36009E7D3D95</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -809,7 +810,7 @@ readAO, readAI, readResults, assertTrigger, configRemote, configIVmode, configRE
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>AA6B41971E49573A398F73AA560451CE</GUID>
+      <GUID>4849EEEE94125437695C964BA3BA91CB</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1138,7 +1139,7 @@ readAO, readAI, readResults, assertTrigger, configRemote, configIVmode, configRE
         <Path>Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>99B6FFEA2DE254232C0B9FD8AA040676</GUID>
+      <GUID>29ECE15719227CBB6D30BB9ED0180A7A</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
