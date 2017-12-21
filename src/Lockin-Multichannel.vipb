@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2017-12-20 13:21:27" Creator="Patrick Irvin" Comments="" ID="fb22f68acffd612a93088c9e76704ef6">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2017-12-21 14:50:00" Creator="Patrick Irvin" Comments="" ID="b8f6a82f61b380500c9b0e8882c7768d">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.4.9.53</Library_Version>
+    <Library_Version>2.4.9.54</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -81,9 +81,9 @@
       <Packager>Patrick Irvin</Packager>
       <URL/>
       <Release_Notes>[2.4.9]
-- remote APIs available for EXE:
-readAO, readAI, readResults, assertTrigger, configRemote, configIVmode, configREF, configAO
+- remote APIs available for EXE: readAO, readAI, readResults, assertTrigger, configRemote, configIVmode, configREF, configAO
 build 52: change from JSON to flatten/unflatten for waveforms and 2D arrays
+build 53: write front panel to DSC. make sure there exists a variable of string type called "computername_lockin_fp" on houses of the holy
 
 [2.4.8]
 - new APIs
@@ -334,7 +334,7 @@ build 52: change from JSON to flatten/unflatten for waveforms and 2D arrays
         <Path>Examples</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E96D4D148F3A088A99E9908E9D69FC1E</GUID>
+      <GUID>2FB197C66B40C32CC3E10308270E915A</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -495,7 +495,7 @@ build 52: change from JSON to flatten/unflatten for waveforms and 2D arrays
         <Path>FGV\FGV - Remote.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>487091698B13CF295717D8DDBBA1DEB2</GUID>
+      <GUID>883AA111842A2D56CEF953315C94DECB</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -726,7 +726,7 @@ build 52: change from JSON to flatten/unflatten for waveforms and 2D arrays
         <Path>API\Lockin-4461 IV mode trigger and wait.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E380803794612A52EC3E91099598D968</GUID>
+      <GUID>792AF73E2EBE0C9175444A14927A809F</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -775,7 +775,7 @@ build 52: change from JSON to flatten/unflatten for waveforms and 2D arrays
         <Path>Examples\Lockin_Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F0B7660CEE3B2D98A25A36009E7D3D95</GUID>
+      <GUID>C7ED24A9E419F6AC7C267A5D74D51225</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -810,7 +810,7 @@ build 52: change from JSON to flatten/unflatten for waveforms and 2D arrays
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>4849EEEE94125437695C964BA3BA91CB</GUID>
+      <GUID>1B87768FC9EB372EB222349A55EC0CB2</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1139,7 +1139,7 @@ build 52: change from JSON to flatten/unflatten for waveforms and 2D arrays
         <Path>Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>29ECE15719227CBB6D30BB9ED0180A7A</GUID>
+      <GUID>BB2BD4D6C577EF01D5E94807A43A0643</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
