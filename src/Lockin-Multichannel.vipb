@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2017-12-21 14:50:00" Creator="Patrick Irvin" Comments="" ID="b8f6a82f61b380500c9b0e8882c7768d">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2018-01-02 16:37:22" Creator="Patrick Irvin" Comments="" ID="cc01b58a7a5a38864fa07f615fbe06a7">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
     <Library_Version>2.4.9.54</Library_Version>
@@ -84,6 +84,7 @@
 - remote APIs available for EXE: readAO, readAI, readResults, assertTrigger, configRemote, configIVmode, configREF, configAO
 build 52: change from JSON to flatten/unflatten for waveforms and 2D arrays
 build 53: write front panel to DSC. make sure there exists a variable of string type called "computername_lockin_fp" on houses of the holy
+build 54: change ini function to DSC and local copy as backup
 
 [2.4.8]
 - new APIs
@@ -334,7 +335,7 @@ build 53: write front panel to DSC. make sure there exists a variable of string 
         <Path>Examples</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>2FB197C66B40C32CC3E10308270E915A</GUID>
+      <GUID>CB58117DF7C32BE2962B2FEB8931418D</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -495,7 +496,7 @@ build 53: write front panel to DSC. make sure there exists a variable of string 
         <Path>FGV\FGV - Remote.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>883AA111842A2D56CEF953315C94DECB</GUID>
+      <GUID>FE41528B741857D1CC19E6777B96FB3F</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -726,7 +727,7 @@ build 53: write front panel to DSC. make sure there exists a variable of string 
         <Path>API\Lockin-4461 IV mode trigger and wait.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>792AF73E2EBE0C9175444A14927A809F</GUID>
+      <GUID>ABD4049B5F679C4B5DB4498159E4C404</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -775,7 +776,7 @@ build 53: write front panel to DSC. make sure there exists a variable of string 
         <Path>Examples\Lockin_Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>C7ED24A9E419F6AC7C267A5D74D51225</GUID>
+      <GUID>20F49E96E5A9F589105FA4B19597A2B4</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -810,7 +811,7 @@ build 53: write front panel to DSC. make sure there exists a variable of string 
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>1B87768FC9EB372EB222349A55EC0CB2</GUID>
+      <GUID>AC4B8956254F7B3EB3A56FD18EBC18F2</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1139,7 +1140,7 @@ build 53: write front panel to DSC. make sure there exists a variable of string 
         <Path>Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>BB2BD4D6C577EF01D5E94807A43A0643</GUID>
+      <GUID>DBEB9E2D8187A8001D78C0239EFA247F</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
