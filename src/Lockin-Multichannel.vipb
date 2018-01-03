@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2018-01-03 13:44:00" Creator="Patrick Irvin" Comments="" ID="509f3de0b38b528d3091c8496a139d80">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2018-01-03 17:50:08" Creator="Patrick Irvin" Comments="" ID="8fecdf7a8cb77edb4c582dff5d388c15">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.4.9.56</Library_Version>
+    <Library_Version>2.4.9.57</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -86,6 +86,7 @@ build 52: change from JSON to flatten/unflatten for waveforms and 2D arrays
 build 53: write front panel to DSC. make sure there exists a variable of string type called "computername_lockin_fp" on houses of the holy
 build 54: change ini function to DSC and local copy as backup
 build 55: resize front panel
+build 56: change get hostname method
 
 [2.4.8]
 - new APIs
@@ -336,7 +337,7 @@ build 55: resize front panel
         <Path>Examples</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>8970217420504FEA6D52D0BC6C658D60</GUID>
+      <GUID>884D42D164AE8F1637D8ECEEE0DDF1F4</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -497,7 +498,7 @@ build 55: resize front panel
         <Path>FGV\FGV - Remote.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E975DDCD4FFA937670FED088CD41F0B3</GUID>
+      <GUID>4B349F9B63E89B8FE0AAFFD9EE8022DC</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -728,7 +729,7 @@ build 55: resize front panel
         <Path>API\Lockin-4461 IV mode trigger and wait.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>71F3326A14CAFACB2DC09FDF75B7800A</GUID>
+      <GUID>5D314A32AD019E65B36AFE0B9A65F269</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -777,7 +778,7 @@ build 55: resize front panel
         <Path>Examples\Lockin_Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>5BCBA23CD35EA7B91A4DD7E65C087EEA</GUID>
+      <GUID>BE1F17BA8A1BEDED014F15EC9C92EFCE</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -812,7 +813,7 @@ build 55: resize front panel
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>8E2A130069B53F4B788FD253BA9D27E9</GUID>
+      <GUID>3E529C7A5E049D0A253C7C5BB2FE44D0</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1141,7 +1142,7 @@ build 55: resize front panel
         <Path>Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B1A4BCC15D1C2BBB680B5BBD2914E648</GUID>
+      <GUID>793EB6C3E7CCE5004EAA9F56CB218416</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
