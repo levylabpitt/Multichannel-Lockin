@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2018-01-03 17:50:08" Creator="Patrick Irvin" Comments="" ID="8fecdf7a8cb77edb4c582dff5d388c15">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2018-01-04 09:57:31" Creator="Patrick Irvin" Comments="" ID="7b57214c3f1681c765339abfe1b18dc5">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.4.9.57</Library_Version>
+    <Library_Version>2.4.9.58</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -87,22 +87,7 @@ build 53: write front panel to DSC. make sure there exists a variable of string 
 build 54: change ini function to DSC and local copy as backup
 build 55: resize front panel
 build 56: change get hostname method
-
-[2.4.8]
-- new APIs
-- experimental EXE (NO API)
-- new typedefs
-- change AI and AO range control
-- update subVI icons
-- change where ini file is saved
-- change top-level window appearance and size
-
-[2.4.7]
-- new lockin output demodulated value onto another analog output
-- new function palette
-- new front panel defaults
-- new available presets (MFP3D and CYPHER)
-- new typedefs</Release_Notes>
+build 57: hostname bugfix</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -337,7 +322,7 @@ build 56: change get hostname method
         <Path>Examples</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>884D42D164AE8F1637D8ECEEE0DDF1F4</GUID>
+      <GUID>099F61B9B70D631F89F493B6744853D9</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -498,7 +483,7 @@ build 56: change get hostname method
         <Path>FGV\FGV - Remote.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>4B349F9B63E89B8FE0AAFFD9EE8022DC</GUID>
+      <GUID>48FD7E940B0E383568CB5CB95CCF9A3E</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -729,7 +714,7 @@ build 56: change get hostname method
         <Path>API\Lockin-4461 IV mode trigger and wait.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>5D314A32AD019E65B36AFE0B9A65F269</GUID>
+      <GUID>6BF336CECB7D1D7CEF79F584A6951EAD</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -778,7 +763,7 @@ build 56: change get hostname method
         <Path>Examples\Lockin_Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>BE1F17BA8A1BEDED014F15EC9C92EFCE</GUID>
+      <GUID>60CF37CCCF9468B1153938684457E5B7</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -813,7 +798,7 @@ build 56: change get hostname method
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>3E529C7A5E049D0A253C7C5BB2FE44D0</GUID>
+      <GUID>F11BAD86E7BC85497669358FE90E8AA5</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1142,7 +1127,7 @@ build 56: change get hostname method
         <Path>Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>793EB6C3E7CCE5004EAA9F56CB218416</GUID>
+      <GUID>283C94EF455FC3C55C99077FF8419FFC</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
