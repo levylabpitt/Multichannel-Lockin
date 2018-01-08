@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2018-01-05 17:09:27" Creator="Patrick Irvin" Comments="" ID="847f62a739b6127810f919bbaf65bd74">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2018-01-08 06:39:31" Creator="Patrick Irvin" Comments="" ID="b5d2fc5bf53786fdd3821eb25f9c41b8">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.4.9.59</Library_Version>
+    <Library_Version>2.4.9.60</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -90,7 +90,8 @@ build 56: change get hostname method
 build 57: hostname bugfix
 build 58:
 - Warning to user regarding update rate.
-- Update from DSC or ini does not update AO channels, lockin, offsets, or gains</Release_Notes>
+- Update from DSC or ini does not update AO channels, lockin, offsets, or gains
+build 59: timing diagnostics</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -325,7 +326,7 @@ build 58:
         <Path>Examples</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>3E42A8007A15831CB6CC2DC8B0742808</GUID>
+      <GUID>E984E6D30AA3D8EEA9467CF7FB03B00F</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -486,7 +487,7 @@ build 58:
         <Path>FGV\FGV - Remote.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>CDC017860A259AC2B2804A7BE66915C5</GUID>
+      <GUID>902068B42A58B828DC47652259D8B313</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -717,7 +718,7 @@ build 58:
         <Path>API\Lockin-4461 IV mode trigger and wait.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>EF95425E205A18FC9F0230367B5D1E7C</GUID>
+      <GUID>78107997D0DD09E701428A7B64B95D87</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -766,7 +767,7 @@ build 58:
         <Path>Examples\Lockin_Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>209D918D27D8C660C7ABD2AD2146066C</GUID>
+      <GUID>303E1000ACF90DE17D9645BF453534E7</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -801,7 +802,7 @@ build 58:
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>272A604972CDC67CC0612D6D99E55D36</GUID>
+      <GUID>1CB1AA253F9D4CE8A75BBC01FF1190EB</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1130,7 +1131,7 @@ build 58:
         <Path>Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>888DAB8D69761B0A14E918DB88337868</GUID>
+      <GUID>856EAE4E4A6DFAEBAA6ED931B9AF4F0A</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
