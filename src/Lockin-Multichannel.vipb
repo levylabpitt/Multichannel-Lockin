@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2018-02-01 14:39:10" Creator="Patrick Irvin" Comments="" ID="a7c747a7e060771bbc0d0d3a85ab6212">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2018-02-02 07:01:13" Creator="Patrick Irvin" Comments="" ID="babec5b5cff8f72d25ff81c3f4d9ea7a">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.4.10.63</Library_Version>
+    <Library_Version>2.4.10.64</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -81,6 +81,10 @@
       <Packager>Patrick Irvin</Packager>
       <URL/>
       <Release_Notes>[2.4.10]
+build 63:
+- feature: multiple 4431 cards are possible (they are not synced)
+- bug fix: #AO channels autoselect for 4431 devces
+
 build 62:
 - fix package install location
 - ignore errors produced by DSC write
@@ -161,12 +165,6 @@ build 62:
         <Additional_Destination>false</Additional_Destination>
         <Additional_Destination_Index>0</Additional_Destination_Index>
       </Destination_Overrides>
-      <Destination_Overrides>
-        <Path>builds</Path>
-        <Destination>0</Destination>
-        <Additional_Destination>true</Additional_Destination>
-        <Additional_Destination_Index>0</Additional_Destination_Index>
-      </Destination_Overrides>
       <Password_Overrides>
         <Path>.</Path>
         <Password/>
@@ -177,9 +175,6 @@ build 62:
         <Namespace_Type>Prefix</Namespace_Type>
         <Namespace/>
       </Namespace_Overrides>
-      <Exclusions>
-        <Path>build_support</Path>
-      </Exclusions>
     </Source_Files>
     <License_Agreement_Filepath/>
     <Licensing_and_Activation>
@@ -321,7 +316,7 @@ build 62:
         <Path>FGV</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>7AB691BD919A4D31F398F54895B4572E</GUID>
+      <GUID>0276BC8B84CACB48A565456D6A333B68</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -566,7 +561,7 @@ build 62:
         <Path>API\readAI.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>771327FBDEA9D29AD6DB5D8FA5ACF497</GUID>
+      <GUID>98592EF182B8CE2BEBCFC6A31BF7E2DE</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -615,7 +610,7 @@ build 62:
         <Path>Examples\Lockin_Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>1C076FAE4C79B951551F72CC6F21972B</GUID>
+      <GUID>F9E4D2DE6ED7F41B71AB0C4CE2467EC2</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -776,7 +771,7 @@ build 62:
         <Path>FGV\FGV - Trigger.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B27EE4B31028A29687C03C56005E1D02</GUID>
+      <GUID>3896F865815262DAA8D7C4F014A8FB38</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -811,7 +806,7 @@ build 62:
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>14F6EFB12415F11A9A23D95110469456</GUID>
+      <GUID>BF381D46DAE014FC954B35396D0D88B9</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1154,7 +1149,7 @@ build 62:
         <Path>Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>FF091AC54E5816C3905B9BD3A1E03406</GUID>
+      <GUID>90B64178D5DC2763894C2E61EC8D74FF</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
