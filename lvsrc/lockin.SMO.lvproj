@@ -37,6 +37,7 @@
 		</Item>
 		<Item Name="system.lvclass" Type="LVClass" URL="../SMOs/lockin/system.lvclass"/>
 		<Item Name="AppLauncher.vi" Type="VI" URL="../AppLauncher.vi"/>
+		<Item Name="ToDo-2018-03-23.vi" Type="VI" URL="../ToDo-2018-03-23.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="SMO.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/JKI/JKI SMO/SMO/SMO.lvclass"/>
