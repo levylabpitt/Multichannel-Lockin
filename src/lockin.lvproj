@@ -21,6 +21,9 @@
 			<Item Name="readResults.vi" Type="VI" URL="../API/readResults.vi"/>
 			<Item Name="readAI.vi" Type="VI" URL="../API/readAI.vi"/>
 			<Item Name="readAO.vi" Type="VI" URL="../API/readAO.vi"/>
+			<Item Name="readTrigger.vi" Type="VI" URL="../API/readTrigger.vi"/>
+			<Item Name="readAOconfig.vi" Type="VI" URL="../API/readAOconfig.vi"/>
+			<Item Name="readREFconfig.vi" Type="VI" URL="../API/readREFconfig.vi"/>
 			<Item Name="configAO.vi" Type="VI" URL="../API/configAO.vi"/>
 			<Item Name="configAO_Amp.vi" Type="VI" URL="../API/configAO_Amp.vi"/>
 			<Item Name="configAO_DC.vi" Type="VI" URL="../API/configAO_DC.vi"/>
