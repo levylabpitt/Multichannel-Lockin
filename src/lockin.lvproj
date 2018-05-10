@@ -88,6 +88,7 @@
 			<Item Name="read_lockin_FP_DSC.vi" Type="VI" URL="../SubVIs/read_lockin_FP_DSC.vi"/>
 			<Item Name="update_rate_and_time.vi" Type="VI" URL="../SubVIs/update_rate_and_time.vi"/>
 			<Item Name="ms to Hz.vi" Type="VI" URL="../SubVIs/ms to Hz.vi"/>
+			<Item Name="getTimeWithError.vi" Type="VI" URL="../SubVIs/getTimeWithError.vi"/>
 		</Item>
 		<Item Name="subVIs - DAQ" Type="Folder">
 			<Item Name="446x_AI_MinMax.vi" Type="VI" URL="../subVIs - DAQ/446x_AI_MinMax.vi"/>
