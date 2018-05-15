@@ -22,6 +22,7 @@
 			<Item Name="readAI.vi" Type="VI" URL="../API/readAI.vi"/>
 			<Item Name="readAO.vi" Type="VI" URL="../API/readAO.vi"/>
 			<Item Name="readTrigger.vi" Type="VI" URL="../API/readTrigger.vi"/>
+			<Item Name="readIVmode.vi" Type="VI" URL="../API/readIVmode.vi"/>
 			<Item Name="readAOconfig.vi" Type="VI" URL="../API/readAOconfig.vi"/>
 			<Item Name="readREFconfig.vi" Type="VI" URL="../API/readREFconfig.vi"/>
 			<Item Name="configAO.vi" Type="VI" URL="../API/configAO.vi"/>
@@ -35,6 +36,7 @@
 			<Item Name="configREF_phi.vi" Type="VI" URL="../API/configREF_phi.vi"/>
 			<Item Name="configIVmode.vi" Type="VI" URL="../API/configIVmode.vi"/>
 			<Item Name="configRemote.vi" Type="VI" URL="../API/configRemote.vi"/>
+			<Item Name="configReset.vi" Type="VI" URL="../API/configReset.vi"/>
 			<Item Name="assertTrigger.vi" Type="VI" URL="../API/assertTrigger.vi"/>
 		</Item>
 		<Item Name="Examples" Type="Folder">
