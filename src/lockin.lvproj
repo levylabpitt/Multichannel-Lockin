@@ -42,6 +42,7 @@
 		<Item Name="Examples" Type="Folder">
 			<Item Name="Lockin_Example_IV_Curves.vi" Type="VI" URL="../Examples/Lockin_Example_IV_Curves.vi"/>
 			<Item Name="Lockin_Example_Lockin.vi" Type="VI" URL="../Examples/Lockin_Example_Lockin.vi"/>
+			<Item Name="Test_Lockin_API.vi" Type="VI" URL="../Examples/Test_Lockin_API.vi"/>
 		</Item>
 		<Item Name="Expt" Type="Folder">
 			<Item Name="Lockin_Metrics.vi" Type="VI" URL="../Expt/Lockin_Metrics.vi"/>
@@ -148,7 +149,6 @@
 		<Item Name="Lockin-4461 -Patrick -State.vi" Type="VI" URL="../Lockin-4461 -Patrick -State.vi"/>
 		<Item Name="Lockin-Multichannel.vipb" Type="Document" URL="../Lockin-Multichannel.vipb"/>
 		<Item Name="Lockin-Multichannel.vipc" Type="Document" URL="../Lockin-Multichannel.vipc"/>
-		<Item Name="Test_Lockin_API.vi" Type="VI" URL="../Examples/Test_Lockin_API.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="1D Array to String__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/string/string.llb/1D Array to String__ogtk.vi"/>
