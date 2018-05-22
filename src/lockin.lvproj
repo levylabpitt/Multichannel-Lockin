@@ -18,6 +18,7 @@
 		<Item Name="API" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">3</Property>
 			<Item Name="Lockin-4461 IV mode trigger and wait.vi" Type="VI" URL="../API/Lockin-4461 IV mode trigger and wait.vi"/>
+			<Item Name="waitForNewWaveforms.vi" Type="VI" URL="../API/waitForNewWaveforms.vi"/>
 			<Item Name="readResults.vi" Type="VI" URL="../API/readResults.vi"/>
 			<Item Name="readAI.vi" Type="VI" URL="../API/readAI.vi"/>
 			<Item Name="readAO.vi" Type="VI" URL="../API/readAO.vi"/>
@@ -312,6 +313,8 @@
 				<Item Name="IBW to Labview Array 2.2.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/IBWtoLV/IBW to Labview Array 2.2.vi"/>
 				<Item Name="sgl-wordswap.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/IBWtoLV/utl/sgl-wordswap.vi"/>
 				<Item Name="Make Color Table.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Graph Utilities/Make Color Table.vi"/>
+				<Item Name="Ramp.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Control VI/Ramp.vi"/>
+				<Item Name="Max_Min_conversion.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Control VI/SubVIs/Max_Min_conversion.vi"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
