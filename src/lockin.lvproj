@@ -46,6 +46,9 @@
 			<Item Name="RemoteControl.lvclass" Type="LVClass" URL="../SMOs/RemoteControl/RemoteControl.lvclass"/>
 			<Item Name="STP_Client.vi" Type="VI" URL="../SMOs/RemoteControl/STP_Client.vi"/>
 		</Item>
+		<Item Name="DAQ SMOs" Type="Folder">
+			<Item Name="DAQ_Manager.lvclass" Type="LVClass" URL="../SMOs/DAQ_Manager/DAQ_Manager.lvclass"/>
+		</Item>
 		<Item Name="Examples" Type="Folder">
 			<Item Name="Lockin_Example_IV_Curves.vi" Type="VI" URL="../Examples/Lockin_Example_IV_Curves.vi"/>
 			<Item Name="Lockin_Example_Lockin.vi" Type="VI" URL="../Examples/Lockin_Example_Lockin.vi"/>
@@ -711,7 +714,10 @@
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="provcom_StringGlobals.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_StringGlobals.vi"/>
-			<Item Name="Remote-SMO-Commands-Enum.ctl" Type="VI" URL="../RemoteControl/Typedefs/Remote-SMO-Commands-Enum.ctl"/>
+			<Item Name="DAQmx.AO.lvclass" Type="LVClass" URL="../SMOs/DAQmx.AO/DAQmx.AO.lvclass"/>
+			<Item Name="DAQmx.lvclass" Type="LVClass" URL="../SMOs/DAQmx/DAQmx.lvclass"/>
+			<Item Name="DAQmx.AI.lvclass" Type="LVClass" URL="../SMOs/DAQmx.AI/DAQmx.AI.lvclass"/>
+			<Item Name="DAQ.lvclass" Type="LVClass" URL="../SMOs/DAQ/DAQ.lvclass"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lockin" Type="EXE">
