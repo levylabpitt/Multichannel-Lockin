@@ -14,6 +14,8 @@
 		<Item Name="build_support" Type="Folder">
 			<Item Name="Pre-Build Custom Action.vi" Type="VI" URL="../../build_support/Pre-Build Custom Action.vi"/>
 			<Item Name="Pre-Install Custom Action.vi" Type="VI" URL="../../build_support/Pre-Install Custom Action.vi"/>
+			<Item Name="Lockin-Multichannel.vipb" Type="Document" URL="../../build_support/Lockin-Multichannel.vipb"/>
+			<Item Name="Lockin-Multichannel.vipc" Type="Document" URL="../../build_support/Lockin-Multichannel.vipc"/>
 		</Item>
 		<Item Name="API" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">3</Property>
@@ -148,8 +150,6 @@
 			<Item Name="STP_Client.vi" Type="VI" URL="../RemoteControl/STP_Client.vi"/>
 		</Item>
 		<Item Name="Lockin-4461 -Patrick -State.vi" Type="VI" URL="../Lockin-4461 -Patrick -State.vi"/>
-		<Item Name="Lockin-Multichannel.vipb" Type="Document" URL="../Lockin-Multichannel.vipb"/>
-		<Item Name="Lockin-Multichannel.vipc" Type="Document" URL="../Lockin-Multichannel.vipc"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="1D Array to String__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/string/string.llb/1D Array to String__ogtk.vi"/>
