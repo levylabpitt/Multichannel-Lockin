@@ -117,6 +117,8 @@
 			<Item Name="4461 Sim - Noise.vi" Type="VI" URL="../subVIs - DAQ/4461 Sim - Noise.vi"/>
 			<Item Name="Cal Progress Bar.vi" Type="VI" URL="../subVIs - DAQ/Cal Progress Bar.vi"/>
 			<Item Name="Get Dev Product Type.vi" Type="VI" URL="../subVIs - DAQ/Get Dev Product Type.vi"/>
+			<Item Name="OldLockinToDAQSMOConfig.vi" Type="VI" URL="../SMOs/DAQ_Manager/OldLockinToDAQSMOConfig.vi"/>
+			<Item Name="Lockin to DAQ SMO config.vi" Type="VI" URL="../subVIs - DAQ/Lockin to DAQ SMO config.vi"/>
 		</Item>
 		<Item Name="Typedefs" Type="Folder">
 			<Item Name="AO" Type="Folder">
