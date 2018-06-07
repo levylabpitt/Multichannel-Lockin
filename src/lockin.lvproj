@@ -95,8 +95,8 @@
 			<Item Name="getTimeWithError.vi" Type="VI" URL="../SubVIs/getTimeWithError.vi"/>
 		</Item>
 		<Item Name="subVIs - DAQ" Type="Folder">
-			<Item Name="446x_AI_MinMax.vi" Type="VI" URL="../subVIs - DAQ/446x_AI_MinMax.vi"/>
-			<Item Name="446x_AO_MinMax.vi" Type="VI" URL="../subVIs - DAQ/446x_AO_MinMax.vi"/>
+			<Item Name="44xx_AI_MinMax.vi" Type="VI" URL="../subVIs - DAQ/44xx_AI_MinMax.vi"/>
+			<Item Name="44xx_AO_MinMax.vi" Type="VI" URL="../subVIs - DAQ/44xx_AO_MinMax.vi"/>
 			<Item Name="4461 - AI AND AI - Read AND Write Uneven.vi" Type="VI" URL="../subVIs - DAQ/4461 - AI AND AI - Read AND Write Uneven.vi"/>
 			<Item Name="4461 - AI Read Data.vi" Type="VI" URL="../subVIs - DAQ/4461 - AI Read Data.vi"/>
 			<Item Name="4461 - AO Write Data.vi" Type="VI" URL="../subVIs - DAQ/4461 - AO Write Data.vi"/>
