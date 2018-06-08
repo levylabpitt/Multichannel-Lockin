@@ -108,6 +108,7 @@
 			<Item Name="4461 Sim - Noise.vi" Type="VI" URL="../subVIs - DAQ/4461 Sim - Noise.vi"/>
 			<Item Name="Cal Progress Bar.vi" Type="VI" URL="../subVIs - DAQ/Cal Progress Bar.vi"/>
 			<Item Name="Get Dev Product Type.vi" Type="VI" URL="../subVIs - DAQ/Get Dev Product Type.vi"/>
+			<Item Name="44xxRefClk.vi" Type="VI" URL="../subVIs - DAQ/44xxRefClk.vi"/>
 		</Item>
 		<Item Name="Typedefs" Type="Folder">
 			<Item Name="AO" Type="Folder">
@@ -307,7 +308,6 @@
 				<Item Name="Get TDEnum from Data__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Get TDEnum from Data__ogtk.vi"/>
 				<Item Name="Array of VData to VArray__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Array of VData to VArray__ogtk.vi"/>
 				<Item Name="Array of VData to VCluster__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Array of VData to VCluster__ogtk.vi"/>
-				<Item Name="Current VI&apos;s Path__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/file/file.llb/Current VI&apos;s Path__ogtk.vi"/>
 				<Item Name="MGI Remove All Whitespace.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/String/MGI Remove All Whitespace.vi"/>
 				<Item Name="LVtoITX.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/LV to ITX/LVtoITX.lvclass"/>
 				<Item Name="IBW to Labview Array 2.2.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/IBWtoLV/IBW to Labview Array 2.2.vi"/>
