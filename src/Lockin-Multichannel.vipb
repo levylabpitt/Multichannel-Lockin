@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2018-05-22 20:22:14" Creator="Patrick Irvin" Comments="" ID="3bdc8cb3132b87c5473c2541a22e25f2">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2018-06-11 12:11:58" Creator="Patrick Irvin" Comments="" ID="c529358c157d0c0705dee7241731f532">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.5.1.69</Library_Version>
+    <Library_Version>2.5.2.69</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -80,7 +80,7 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.5.1.68]
+      <Release_Notes>[2.5.2.69]
 - New APIs exclusively use TCP communication for remote control of lockin
 --- [!!! ---&gt; You must remove all references to FGVs from your programs &lt;--- !!!]
 - Experimental release. See important note above about FGVs. Try at your own risk!!!
@@ -296,7 +296,7 @@
         <Path>Expt</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>957F2B47C6A5A33E0B5F309D3FE08AE2</GUID>
+      <GUID>C7961DC0933377E9DD8287E046216EAC</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -625,7 +625,7 @@
         <Path>API\configReset.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>7E3B54792632E1D3074012654B0167D7</GUID>
+      <GUID>3683490057FCB919FE8B892F6765B129</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -688,7 +688,7 @@
         <Path>Expt\testlockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E246A7E8D8F1847E2540BFBEC778185C</GUID>
+      <GUID>EFF41521E91DAB16A3706B154D04EA16</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -723,7 +723,7 @@
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>DB1CF0D2704ACC3107A2D427AC7F3FA1</GUID>
+      <GUID>069B4E79F3CAF8215FCF730D9154AFC3</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1066,7 +1066,7 @@
         <Path>Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>BA6864FE533501C16AA7E03EEE513C44</GUID>
+      <GUID>ACBED37BD9C3F420620ADCA1870D9BA5</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
