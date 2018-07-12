@@ -146,7 +146,7 @@
 		</Item>
 		<Item Name="RemoteControl" Type="Folder">
 			<Item Name="RemoteControl.lvclass" Type="LVClass" URL="../RemoteControl/RemoteControl.lvclass"/>
-			<Item Name="STP_Client.vi" Type="VI" URL="../RemoteControl/STP_Client.vi"/>
+			<Item Name="STM_Client.vi" Type="VI" URL="../RemoteControl/STM_Client.vi"/>
 		</Item>
 		<Item Name="Lockin-4461 -Patrick -State.vi" Type="VI" URL="../Lockin-4461 -Patrick -State.vi"/>
 		<Item Name="Lockin-Multichannel.vipb" Type="Document" URL="../../build_support/Lockin-Multichannel.vipb"/>
