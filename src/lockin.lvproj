@@ -41,8 +41,8 @@
 			<Item Name="assertTrigger.vi" Type="VI" URL="../API/assertTrigger.vi"/>
 		</Item>
 		<Item Name="Examples" Type="Folder">
-			<Item Name="Lockin_Example_IV_Curves.vi" Type="VI" URL="../Examples/Lockin_Example_IV_Curves.vi"/>
-			<Item Name="Lockin_Example_Lockin.vi" Type="VI" URL="../Examples/Lockin_Example_Lockin.vi"/>
+			<Item Name="Example_IV_Curves.vi" Type="VI" URL="../Examples/Example_IV_Curves.vi"/>
+			<Item Name="Example_Lockin.vi" Type="VI" URL="../Examples/Example_Lockin.vi"/>
 			<Item Name="Test_Lockin_API.vi" Type="VI" URL="../Examples/Test_Lockin_API.vi"/>
 		</Item>
 		<Item Name="Expt" Type="Folder">
