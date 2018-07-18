@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2018-07-12 17:14:46" Creator="Patrick Irvin" Comments="" ID="98aaa405ed18d99854d2e456d6bcaf0b">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2018-07-17 22:42:03" Creator="Patrick Irvin" Comments="" ID="b44223b91705269823ac5031984a43b6">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.5.3.71</Library_Version>
+    <Library_Version>2.5.4.72</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -80,11 +80,8 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.5.3.70]
-- improments to remote control API speed
-- update examples
-- palette
-</Release_Notes>
+      <Release_Notes>[2.5.4.71]
+- fix error in which new Results typedef was not used by the lockin</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -310,7 +307,7 @@
         <Path>..\src\Examples</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F0B1DD6A7C9E6B8C1E7E74C141F51681</GUID>
+      <GUID>7332DC2A807A0E0407035E2ADEF4E6F8</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -639,7 +636,7 @@
         <Path>..\src\API\assertTrigger.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>28B52DE2C434F2A98F0F5B3AAD0F3D07</GUID>
+      <GUID>44519F46312EC4216DC89C3EFBA300E6</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -800,7 +797,7 @@
         <Path>..\src\FGV\FGV - Trigger.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>05A6D3C769B011E86017D5B307A946EC</GUID>
+      <GUID>DFD87FB9FB02ABB4D1D7E7D82D345C60</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -863,7 +860,7 @@
         <Path>..\src\Examples\Test_Lockin_API.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>805159F1277734320F327A4550249AD1</GUID>
+      <GUID>FB62144EDA101A1AB5978E258BA08B5C</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -912,7 +909,7 @@
         <Path>..\src\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>A9CCF47B16CF471F65F5E59F6DDA1975</GUID>
+      <GUID>D4B3C25A599C14588F43C4A0DBC39C16</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -947,7 +944,7 @@
         <Path>..\src\RemoteControl\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>61AA1C2C7499329B16BEE363227755FD</GUID>
+      <GUID>436E6EFBC2CB60A001E73737F95CFD72</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1304,7 +1301,7 @@
         <Path>..\src\Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>122EE4726DBB41C2946F2377CE1E1A3F</GUID>
+      <GUID>CB21371876558740DC87CC3714D49AC2</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1577,7 +1574,7 @@
         <Path>..\src\RemoteControl\Typedefs\Remote-SMO-Commands-Enum.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>DE72FE2A90E06FC00AFD009D9EA59B08</GUID>
+      <GUID>7C0E683BD8E8221FDF53756C6826B6D1</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
