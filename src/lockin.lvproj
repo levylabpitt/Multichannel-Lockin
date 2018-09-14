@@ -95,6 +95,8 @@
 			<Item Name="update_rate_and_time.vi" Type="VI" URL="../SubVIs/update_rate_and_time.vi"/>
 			<Item Name="ms to Hz.vi" Type="VI" URL="../SubVIs/ms to Hz.vi"/>
 			<Item Name="getTimeWithError.vi" Type="VI" URL="../SubVIs/getTimeWithError.vi"/>
+			<Item Name="SI prefix.vi" Type="VI" URL="../SubVIs/SI prefix.vi"/>
+			<Item Name="DownKeyEvent.vi" Type="VI" URL="../SubVIs/DownKeyEvent.vi"/>
 		</Item>
 		<Item Name="subVIs - DAQ" Type="Folder">
 			<Item Name="44xx_AI_MinMax.vi" Type="VI" URL="../subVIs - DAQ/44xx_AI_MinMax.vi"/>
@@ -123,6 +125,7 @@
 				<Item Name="Function-array.ctl" Type="VI" URL="../Typedefs/Function-array.ctl"/>
 				<Item Name="Function+DC-enum.ctl" Type="VI" URL="../Typedefs/Function+DC-enum.ctl"/>
 				<Item Name="Function-enum.ctl" Type="VI" URL="../Typedefs/Function-enum.ctl"/>
+				<Item Name="AO_Channel-Numeric.ctl" Type="VI" URL="../Typedefs/AO_Channel-Numeric.ctl"/>
 			</Item>
 			<Item Name="DAQ" Type="Folder">
 				<Property Name="NI.SortType" Type="Int">3</Property>
@@ -138,6 +141,7 @@
 				<Item Name="REF-cluster.ctl" Type="VI" URL="../Typedefs/REF-cluster.ctl"/>
 				<Item Name="REF_f-array.ctl" Type="VI" URL="../Typedefs/REF_f-array.ctl"/>
 				<Item Name="REF_phi-array.ctl" Type="VI" URL="../Typedefs/REF_phi-array.ctl"/>
+				<Item Name="REF_Channel-Numeric.ctl" Type="VI" URL="../Typedefs/REF_Channel-Numeric.ctl"/>
 			</Item>
 			<Item Name="Front Panel Cluster.ctl" Type="VI" URL="../Typedefs/Front Panel Cluster.ctl"/>
 			<Item Name="AmplifierType-enum.ctl" Type="VI" URL="../Typedefs/AmplifierType-enum.ctl"/>
@@ -151,6 +155,7 @@
 			<Item Name="STM_Client.vi" Type="VI" URL="../RemoteControl/STM_Client.vi"/>
 		</Item>
 		<Item Name="Lockin-4461 -Patrick -State.vi" Type="VI" URL="../Lockin-4461 -Patrick -State.vi"/>
+		<Item Name="Untitled 2.vi" Type="VI" URL="../SubVIs/Untitled 2.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="1D Array to String__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/string/string.llb/1D Array to String__ogtk.vi"/>
@@ -307,7 +312,8 @@
 				<Item Name="Make Color Table.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Graph Utilities/Make Color Table.vi"/>
 				<Item Name="Ramp.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Control VI/Ramp.vi"/>
 				<Item Name="Max_Min_conversion.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Control VI/SubVIs/Max_Min_conversion.vi"/>
-				<Item Name="KH7008.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/Krohn Hite 7008/SMOs/KH7008/KH7008.lvclass"/>
+				<Item Name="KH7008.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/Krohn Hite 7008/KH7008.lvclass"/>
+				<Item Name="MGI Approximately Equal.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Numeric/Comparison/MGI Approximately Equal.vi"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
