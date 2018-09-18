@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2018-07-17 22:42:03" Creator="Patrick Irvin" Comments="" ID="b44223b91705269823ac5031984a43b6">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2018-09-18 15:50:53" Creator="Patrick Irvin" Comments="" ID="28d01c7cbd75e9f6014bb740fe9137b9">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.5.4.72</Library_Version>
+    <Library_Version>2.5.5.73</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -80,8 +80,8 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.5.4.71]
-- fix error in which new Results typedef was not used by the lockin</Release_Notes>
+      <Release_Notes>[2.5.5.72]
+- lockin channels are now numbered 1-8!</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -307,7 +307,7 @@
         <Path>..\src\Examples</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>7332DC2A807A0E0407035E2ADEF4E6F8</GUID>
+      <GUID>000AB87D4638C8D731842CEDBECC7A68</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -636,7 +636,7 @@
         <Path>..\src\API\assertTrigger.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>44519F46312EC4216DC89C3EFBA300E6</GUID>
+      <GUID>FF373C99648E5830090F748F61E4BDA8</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -797,7 +797,7 @@
         <Path>..\src\FGV\FGV - Trigger.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>DFD87FB9FB02ABB4D1D7E7D82D345C60</GUID>
+      <GUID>3C3596488C0F4F6160A3AAFF7BA7D68F</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -860,7 +860,7 @@
         <Path>..\src\Examples\Test_Lockin_API.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>FB62144EDA101A1AB5978E258BA08B5C</GUID>
+      <GUID>8B8BDBD5B77B7E6F9143B3D27A05B269</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -909,7 +909,7 @@
         <Path>..\src\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>D4B3C25A599C14588F43C4A0DBC39C16</GUID>
+      <GUID>BC695C60D9BF6AD11FD2428063562E4C</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -944,7 +944,7 @@
         <Path>..\src\RemoteControl\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>436E6EFBC2CB60A001E73737F95CFD72</GUID>
+      <GUID>04738E45F29463C64981F3B124E5E211</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1301,7 +1301,7 @@
         <Path>..\src\Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>CB21371876558740DC87CC3714D49AC2</GUID>
+      <GUID>58F18176D327AB6262EF7105EB7B3DC5</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1574,7 +1574,7 @@
         <Path>..\src\RemoteControl\Typedefs\Remote-SMO-Commands-Enum.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>7C0E683BD8E8221FDF53756C6826B6D1</GUID>
+      <GUID>D00767F8FAACC77E967E515449665E2A</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
