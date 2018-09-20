@@ -20,25 +20,25 @@
 		<Item Name="API" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">3</Property>
 			<Item Name="Lockin-4461 IV mode trigger and wait.vi" Type="VI" URL="../API/Lockin-4461 IV mode trigger and wait.vi"/>
-			<Item Name="waitForNewWaveforms.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/API/waitForNewWaveforms.vi"/>
-			<Item Name="readResults.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/API/readResults.vi"/>
-			<Item Name="readAI.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/API/readAI.vi"/>
-			<Item Name="readAO.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/API/readAO.vi"/>
+			<Item Name="waitForNewWaveforms.vi" Type="VI" URL="../API/waitForNewWaveforms.vi"/>
 			<Item Name="readTrigger.vi" Type="VI" URL="../API/readTrigger.vi"/>
 			<Item Name="readIVmode.vi" Type="VI" URL="../API/readIVmode.vi"/>
 			<Item Name="readAOconfig.vi" Type="VI" URL="../API/readAOconfig.vi"/>
 			<Item Name="readREFconfig.vi" Type="VI" URL="../API/readREFconfig.vi"/>
+			<Item Name="readResults.vi" Type="VI" URL="../API/readResults.vi"/>
+			<Item Name="readAO.vi" Type="VI" URL="../API/readAO.vi"/>
+			<Item Name="readAI.vi" Type="VI" URL="../API/readAI.vi"/>
 			<Item Name="configAO.vi" Type="VI" URL="../API/configAO.vi"/>
 			<Item Name="configAO_Amp.vi" Type="VI" URL="../API/configAO_Amp.vi"/>
 			<Item Name="configAO_DC.vi" Type="VI" URL="../API/configAO_DC.vi"/>
 			<Item Name="configAO_f.vi" Type="VI" URL="../API/configAO_f.vi"/>
 			<Item Name="configAO_function.vi" Type="VI" URL="../API/configAO_function.vi"/>
 			<Item Name="configAO_phi.vi" Type="VI" URL="../API/configAO_phi.vi"/>
+			<Item Name="configRemote.vi" Type="VI" URL="../API/configRemote.vi"/>
 			<Item Name="configREF.vi" Type="VI" URL="../API/configREF.vi"/>
 			<Item Name="configREF_f.vi" Type="VI" URL="../API/configREF_f.vi"/>
 			<Item Name="configREF_phi.vi" Type="VI" URL="../API/configREF_phi.vi"/>
 			<Item Name="configIVmode.vi" Type="VI" URL="../API/configIVmode.vi"/>
-			<Item Name="configRemote.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/API/configRemote.vi"/>
 			<Item Name="configReset.vi" Type="VI" URL="../API/configReset.vi"/>
 			<Item Name="assertTrigger.vi" Type="VI" URL="../API/assertTrigger.vi"/>
 		</Item>
@@ -57,12 +57,12 @@
 			<Item Name="FGV - Configuration - Output.vi" Type="VI" URL="../FGV/FGV - Configuration - Output.vi"/>
 			<Item Name="FGV - Fs Divisor.vi" Type="VI" URL="../FGV/FGV - Fs Divisor.vi"/>
 			<Item Name="FGV - IV mode.vi" Type="VI" URL="../FGV/FGV - IV mode.vi"/>
-			<Item Name="FGV - Lockin Results.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/FGV/FGV - Lockin Results.vi"/>
 			<Item Name="FGV - Remote.vi" Type="VI" URL="../FGV/FGV - Remote.vi"/>
 			<Item Name="FGV - Reset.vi" Type="VI" URL="../FGV/FGV - Reset.vi"/>
-			<Item Name="FGV - Signals - Input.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/FGV/FGV - Signals - Input.vi"/>
-			<Item Name="FGV - Signals - Output.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/FGV/FGV - Signals - Output.vi"/>
 			<Item Name="FGV - Trigger.vi" Type="VI" URL="../FGV/FGV - Trigger.vi"/>
+			<Item Name="FGV - Lockin Results.vi" Type="VI" URL="../FGV/FGV - Lockin Results.vi"/>
+			<Item Name="FGV - Signals - Input.vi" Type="VI" URL="../FGV/FGV - Signals - Input.vi"/>
+			<Item Name="FGV - Signals - Output.vi" Type="VI" URL="../FGV/FGV - Signals - Output.vi"/>
 		</Item>
 		<Item Name="SubVIs" Type="Folder">
 			<Item Name="AI.Coupling.enum.convert.vi" Type="VI" URL="../SubVIs/AI.Coupling.enum.convert.vi"/>
@@ -114,6 +114,7 @@
 			<Item Name="Cal Progress Bar.vi" Type="VI" URL="../subVIs - DAQ/Cal Progress Bar.vi"/>
 			<Item Name="Get Dev Product Type.vi" Type="VI" URL="../subVIs - DAQ/Get Dev Product Type.vi"/>
 			<Item Name="44xxRefClk.vi" Type="VI" URL="../subVIs - DAQ/44xxRefClk.vi"/>
+			<Item Name="Get Terminal Name with Device Prefix.vi" Type="VI" URL="../subVIs - DAQ/Get Terminal Name with Device Prefix.vi"/>
 		</Item>
 		<Item Name="Typedefs" Type="Folder">
 			<Item Name="AO" Type="Folder">
@@ -354,20 +355,8 @@
 				<Item Name="MGI Origin at Top Left.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Application Control/MGI Origin at Top Left.vi"/>
 				<Item Name="MGI Default ini Path.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/File/MGI Default ini Path.vi"/>
 				<Item Name="MGI Mac Documents Path.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/File/MGI Mac Documents Path.vi"/>
-				<Item Name="RemoteControl.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/RemoteControl/RemoteControl.lvclass"/>
-				<Item Name="REF-cluster.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Typedefs/REF-cluster.ctl"/>
-				<Item Name="REF_f-array.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Typedefs/REF_f-array.ctl"/>
-				<Item Name="REF_phi-array.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Typedefs/REF_phi-array.ctl"/>
-				<Item Name="AO-cluster.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Typedefs/AO-cluster.ctl"/>
-				<Item Name="AO_Amp-array.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Typedefs/AO_Amp-array.ctl"/>
-				<Item Name="AO_DC-array.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Typedefs/AO_DC-array.ctl"/>
-				<Item Name="AO_f-array.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Typedefs/AO_f-array.ctl"/>
-				<Item Name="AO_phi-array.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Typedefs/AO_phi-array.ctl"/>
-				<Item Name="Function-array.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Typedefs/Function-array.ctl"/>
-				<Item Name="Function-enum.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Typedefs/Function-enum.ctl"/>
-				<Item Name="StateHistory.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/StateHistory.vi"/>
-				<Item Name="STM_Client.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/RemoteControl/STM_Client.vi"/>
-				<Item Name="FGV - Remote.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/FGV/FGV - Remote.vi"/>
+				<Item Name="Control Experiment FGV.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Transport/Transport/subVI/Control Experiment FGV.vi"/>
+				<Item Name="Control Experiment FGV-cluster.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Transport/Transport/subVI/Control Experiment FGV-cluster.ctl"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
@@ -768,7 +757,6 @@
 				<Item Name="Rectangle Size__lava_lib_ui_tools.vi" Type="VI" URL="/&lt;vilib&gt;/LAVA/UI Tools/Alignment/Rectangle Size__lava_lib_ui_tools.vi"/>
 				<Item Name="LVPointTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVPointTypeDef.ctl"/>
 			</Item>
-			<Item Name="Get Terminal Name with Device Prefix.vi" Type="VI" URL="../subVIs - DAQ/Get Terminal Name with Device Prefix.vi"/>
 			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
@@ -781,14 +769,6 @@
 			<Item Name="shell32.dll" Type="Document" URL="shell32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="configRemote.vi" Type="VI" URL="../API/configRemote.vi"/>
-			<Item Name="FGV - Lockin Results.vi" Type="VI" URL="../FGV/FGV - Lockin Results.vi"/>
-			<Item Name="readAI.vi" Type="VI" URL="../API/readAI.vi"/>
-			<Item Name="FGV - Signals - Input.vi" Type="VI" URL="../FGV/FGV - Signals - Input.vi"/>
-			<Item Name="readAO.vi" Type="VI" URL="../API/readAO.vi"/>
-			<Item Name="FGV - Signals - Output.vi" Type="VI" URL="../FGV/FGV - Signals - Output.vi"/>
-			<Item Name="readResults.vi" Type="VI" URL="../API/readResults.vi"/>
-			<Item Name="waitForNewWaveforms.vi" Type="VI" URL="../API/waitForNewWaveforms.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lockin" Type="EXE">
