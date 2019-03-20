@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2018-11-09 10:25:10" Creator="Patrick Irvin" Comments="" ID="55bf406860cad9d0ab79f8d2321f5fb4">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-03-20 15:24:57" Creator="Patrick Irvin" Comments="" ID="34de7fd45ea254e4b4f5cd4faca1502d">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
     <Library_Version>2.5.6.76</Library_Version>
@@ -18,17 +18,18 @@
   <Advanced_Settings>
     <Package_Dependencies>
       <External_Dependencies>jki_lib_json_serialization &gt;= 1.1.10.37</External_Dependencies>
-      <External_Dependencies>jki_lib_state_machine &gt;= 3.0.0.8</External_Dependencies>
+      <External_Dependencies>jki_lib_state_machine &gt;= 2018.0.7.45</External_Dependencies>
       <External_Dependencies>jki_statemachineobjects &gt;= 1.3.0.56</External_Dependencies>
       <External_Dependencies>levylab_lib_colorutillities &gt;= 1.0.0.2</External_Dependencies>
       <External_Dependencies>levylab_lib_control_vi &gt;= 1.3.0.11</External_Dependencies>
       <External_Dependencies>levylab_lib_fileutilities &gt;= 1.2.1.7</External_Dependencies>
-      <External_Dependencies>levylab_lib_krohn_hite_7008 &gt;= 1.3.2.14</External_Dependencies>
-      <External_Dependencies>levylab_lib_lvtoitx &gt;= 2.6.4.19</External_Dependencies>
-      <External_Dependencies>levylab_lib_ppms_daq_femto &gt;= 1.1.0.3</External_Dependencies>
+      <External_Dependencies>levylab_lib_krohn_hite_7008 &gt;= 1.4.3.18</External_Dependencies>
+      <External_Dependencies>levylab_lib_lvtoitx &gt;= 2.6.5.21</External_Dependencies>
       <External_Dependencies>mgi_lib_cluster &gt;= 1.1.0.1</External_Dependencies>
       <External_Dependencies>mgi_lib_error_handling &gt;= 1.1.1.3</External_Dependencies>
+      <External_Dependencies>mgi_lib_error_reporter &gt;= 1.0.2.5</External_Dependencies>
       <External_Dependencies>mgi_lib_file &gt;= 1.1.0.4</External_Dependencies>
+      <External_Dependencies>mgi_lib_numeric &gt;= 1.1.0.2</External_Dependencies>
       <External_Dependencies>mgi_lib_read_write_anything &gt;= 2.1.4.4</External_Dependencies>
       <External_Dependencies>mgi_lib_string &gt;= 1.1.1.5</External_Dependencies>
       <External_Dependencies>mgi_lib_timing &gt;= 1.1.0.2</External_Dependencies>
@@ -40,19 +41,21 @@
       <External_Dependencies>oglib_string &gt;= 4.1.0.12</External_Dependencies>
       <External_Dependencies>oglib_time &gt;= 4.0.1.3</External_Dependencies>
       <External_Dependencies>wireflow_ab_lib_wf_progressbar &gt;= 1.0.2.56</External_Dependencies>
+      <Additional_External_Dependencies>levylab_lib_transport &gt;=1.0.1.18</Additional_External_Dependencies>
       <Additional_External_Dependencies>openg.org_lib_openg_toolkit &gt;=4.0.1.9</Additional_External_Dependencies>
       <Direct_Dependencies>jki_lib_json_serialization-1.1.10.37</Direct_Dependencies>
-      <Direct_Dependencies>jki_lib_state_machine-3.0.0.8</Direct_Dependencies>
+      <Direct_Dependencies>jki_lib_state_machine-2018.0.7.45</Direct_Dependencies>
       <Direct_Dependencies>jki_statemachineobjects-1.3.0.56</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_colorutillities-1.0.0.2</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_control_vi-1.3.0.11</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_fileutilities-1.2.1.7</Direct_Dependencies>
-      <Direct_Dependencies>levylab_lib_krohn_hite_7008-1.3.2.14</Direct_Dependencies>
-      <Direct_Dependencies>levylab_lib_lvtoitx-2.6.4.19</Direct_Dependencies>
-      <Direct_Dependencies>levylab_lib_ppms_daq_femto-1.1.0.3</Direct_Dependencies>
+      <Direct_Dependencies>levylab_lib_krohn_hite_7008-1.4.3.18</Direct_Dependencies>
+      <Direct_Dependencies>levylab_lib_lvtoitx-2.6.5.21</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_cluster-1.1.0.1</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_error_handling-1.1.1.3</Direct_Dependencies>
+      <Direct_Dependencies>mgi_lib_error_reporter-1.0.2.5</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_file-1.1.0.4</Direct_Dependencies>
+      <Direct_Dependencies>mgi_lib_numeric-1.1.0.2</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_read_write_anything-2.1.4.4</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_string-1.1.1.5</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_timing-1.1.0.2</Direct_Dependencies>
@@ -87,7 +90,9 @@
 [2.5.6.74]
 - bug fixes for lockin display
 [2.5.6.75]
-- new icons</Release_Notes>
+- new icons
+[2.5.7.76]
+- fix package dependencies</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -313,7 +318,7 @@
         <Path>..\src\Examples</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>4C4CB07C1E6169F437AB5175CE619220</GUID>
+      <GUID>AA0A0C33CD5DB144784D155DDD30F0F8</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -642,7 +647,7 @@
         <Path>..\src\API\assertTrigger.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>09403192D1AA9BB5639C7492659F36F5</GUID>
+      <GUID>03190AC8963ACCF8F5D34C9ABF765E63</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -803,7 +808,7 @@
         <Path>..\src\FGV\FGV - Trigger.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>ABD8A857E65BAB0876ED7F7A68DDDE48</GUID>
+      <GUID>D651DC4D5D47CA5857614411A8E8DECC</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -866,7 +871,7 @@
         <Path>..\src\Examples\Test_Lockin_API.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>767AC58E5146DA0F49BD263614675CDF</GUID>
+      <GUID>C7CAE18181E0639758DE59CC6E060F23</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -915,7 +920,7 @@
         <Path>..\src\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>EACFB44963F8D36EE49DB7CADEC7E505</GUID>
+      <GUID>5CEF3978ABE498B3420115F457CB04FE</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -950,7 +955,7 @@
         <Path>..\src\RemoteControl\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>0888EB613AFF61FE8DA345A6E867D1E5</GUID>
+      <GUID>0FD52806C6EE45FB5E8C6AFF3B216C06</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1307,7 +1312,7 @@
         <Path>..\src\Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>BF86D92400A1B3DEB226D0E6FE64E22F</GUID>
+      <GUID>43C64EA9E4BD319529C552A3D6795B30</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1580,7 +1585,7 @@
         <Path>..\src\RemoteControl\Typedefs\Remote-SMO-Commands-Enum.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>6DEB984903765F6C03B2E512FFEA8E43</GUID>
+      <GUID>1EF68A241C1DBA246DF39AF4EFCBED9A</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
