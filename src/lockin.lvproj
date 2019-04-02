@@ -25,9 +25,12 @@
 			<Item Name="readIVmode.vi" Type="VI" URL="../API/readIVmode.vi"/>
 			<Item Name="readAOconfig.vi" Type="VI" URL="../API/readAOconfig.vi"/>
 			<Item Name="readREFconfig.vi" Type="VI" URL="../API/readREFconfig.vi"/>
+			<Item Name="readREFfilter.vi" Type="VI" URL="../API/readREFfilter.vi"/>
 			<Item Name="readResults.vi" Type="VI" URL="../API/readResults.vi"/>
+			<Item Name="readSampling.vi" Type="VI" URL="../API/readSampling.vi"/>
 			<Item Name="readAO.vi" Type="VI" URL="../API/readAO.vi"/>
 			<Item Name="readAI.vi" Type="VI" URL="../API/readAI.vi"/>
+			<Item Name="configSampling.vi" Type="VI" URL="../API/configSampling.vi"/>
 			<Item Name="configAO.vi" Type="VI" URL="../API/configAO.vi"/>
 			<Item Name="configAO_Amp.vi" Type="VI" URL="../API/configAO_Amp.vi"/>
 			<Item Name="configAO_DC.vi" Type="VI" URL="../API/configAO_DC.vi"/>
@@ -38,6 +41,7 @@
 			<Item Name="configREF.vi" Type="VI" URL="../API/configREF.vi"/>
 			<Item Name="configREF_f.vi" Type="VI" URL="../API/configREF_f.vi"/>
 			<Item Name="configREF_phi.vi" Type="VI" URL="../API/configREF_phi.vi"/>
+			<Item Name="configREFfilter.vi" Type="VI" URL="../API/configREFfilter.vi"/>
 			<Item Name="configIVmode.vi" Type="VI" URL="../API/configIVmode.vi"/>
 			<Item Name="configReset.vi" Type="VI" URL="../API/configReset.vi"/>
 			<Item Name="assertTrigger.vi" Type="VI" URL="../API/assertTrigger.vi"/>
@@ -139,11 +143,13 @@
 				<Item Name="446xAO-enum.ctl" Type="VI" URL="../Typedefs/446xAO-enum.ctl"/>
 				<Item Name="AO.config-array.ctl" Type="VI" URL="../Typedefs/AO.config-array.ctl"/>
 				<Item Name="AO.config-cluster.ctl" Type="VI" URL="../Typedefs/AO.config-cluster.ctl"/>
+				<Item Name="Sampling.ctl" Type="VI" URL="../Typedefs/Sampling.ctl"/>
 			</Item>
 			<Item Name="REF" Type="Folder">
 				<Item Name="REF-cluster.ctl" Type="VI" URL="../Typedefs/REF-cluster.ctl"/>
 				<Item Name="REF_f-array.ctl" Type="VI" URL="../Typedefs/REF_f-array.ctl"/>
 				<Item Name="REF_phi-array.ctl" Type="VI" URL="../Typedefs/REF_phi-array.ctl"/>
+				<Item Name="REF filter-cluster.ctl" Type="VI" URL="../Typedefs/REF filter-cluster.ctl"/>
 				<Item Name="REF_Channel-Numeric.ctl" Type="VI" URL="../Typedefs/REF_Channel-Numeric.ctl"/>
 			</Item>
 			<Item Name="Front Panel Cluster.ctl" Type="VI" URL="../Typedefs/Front Panel Cluster.ctl"/>
