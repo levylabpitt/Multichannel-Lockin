@@ -21,6 +21,7 @@
 			<Property Name="NI.SortType" Type="Int">3</Property>
 			<Item Name="Lockin-4461 IV mode trigger and wait.vi" Type="VI" URL="../API/Lockin-4461 IV mode trigger and wait.vi"/>
 			<Item Name="waitForNewWaveforms.vi" Type="VI" URL="../API/waitForNewWaveforms.vi"/>
+			<Item Name="waitForNewResults.vi" Type="VI" URL="../API/waitForNewResults.vi"/>
 			<Item Name="readTrigger.vi" Type="VI" URL="../API/readTrigger.vi"/>
 			<Item Name="readIVmode.vi" Type="VI" URL="../API/readIVmode.vi"/>
 			<Item Name="readAOconfig.vi" Type="VI" URL="../API/readAOconfig.vi"/>

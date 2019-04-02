@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-04-02 10:27:50" Creator="Patrick Irvin" Comments="" ID="51cd3756c80faced561f04e5b43170ca">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-04-02 13:21:13" Creator="Patrick Irvin" Comments="" ID="d46650cd530f11df3cf7c296fdf5a59c">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.5.7.78</Library_Version>
+    <Library_Version>2.5.8.79</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -24,7 +24,7 @@
       <External_Dependencies>levylab_lib_control_vi &gt;= 1.3.0.11</External_Dependencies>
       <External_Dependencies>levylab_lib_fileutilities &gt;= 1.2.1.7</External_Dependencies>
       <External_Dependencies>levylab_lib_krohn_hite_7008 &gt;= 1.4.3.18</External_Dependencies>
-      <External_Dependencies>levylab_lib_lvtoitx &gt;= 2.6.6.22</External_Dependencies>
+      <External_Dependencies>levylab_lib_lvtoitx &gt;= 2.6.6.23</External_Dependencies>
       <External_Dependencies>mgi_lib_cluster &gt;= 1.1.0.1</External_Dependencies>
       <External_Dependencies>mgi_lib_error_handling &gt;= 1.1.1.3</External_Dependencies>
       <External_Dependencies>mgi_lib_error_reporter &gt;= 1.0.2.5</External_Dependencies>
@@ -50,7 +50,7 @@
       <Direct_Dependencies>levylab_lib_control_vi-1.3.0.11</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_fileutilities-1.2.1.7</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_krohn_hite_7008-1.4.3.18</Direct_Dependencies>
-      <Direct_Dependencies>levylab_lib_lvtoitx-2.6.6.22</Direct_Dependencies>
+      <Direct_Dependencies>levylab_lib_lvtoitx-2.6.6.23</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_cluster-1.1.0.1</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_error_handling-1.1.1.3</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_error_reporter-1.0.2.5</Direct_Dependencies>
@@ -83,19 +83,12 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.5.5.72]
-- lockin channels are now numbered 1-8!
-[2.5.5.73]
-- update gain FGV (experimental)
-[2.5.6.74]
-- bug fixes for lockin display
-[2.5.6.75]
-- new icons
-[2.5.7.77]
-- fix package dependencies
-- STP client filters TCP error 56
-[2.5.8.78]
-- rename RemoteControl.lvclass --&gt; LockinRemoteControl.lvclass</Release_Notes>
+      <Release_Notes>[2.5.8.78]
+- rename RemoteControl.lvclass --&gt; LockinRemoteControl.lvclass
+- new APIs:
+--- Sampling (Fs &amp; #s)
+--- Lockin filter (TC &amp; filter order)
+--- Wait for new Results</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -269,20 +262,6 @@
         <Synchronize_Directory_Path>.</Synchronize_Directory_Path>
       </Synchronization_Info>
       <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Lockin-4461 -Patrick -State.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Lockin-4461 -Patrick -State.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
         <Type>Sub Palette</Type>
         <Sub_Palette_Index>2</Sub_Palette_Index>
         <NameSub_Menu_Name>Examples</NameSub_Menu_Name>
@@ -324,14 +303,28 @@
         <Path>..\src\Expt</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E85A29007BEFA43B4C1FFE1BBD1021D2</GUID>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>Lockin-4461 -Patrick -State.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>1</Row>
+          <Column>1</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Lockin-4461 -Patrick -State.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <GUID>60E622B5666277F702B71644AA14B6DD</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
       <Name>API</Name>
       <View_Format>Icons</View_Format>
       <Size>
-        <Height_Row>4</Height_Row>
+        <Height_Row>5</Height_Row>
         <Width_Col.>7</Width_Col.>
       </Size>
       <_256_Color_Icon>00000367002900000012000000020000000D00FFFFFF000100000000000A0000000800000000002000200028000000E3000000BD0000000C0007001500180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFF000000000000FFFFFFFFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000000000000000000000FFFFFF000000000000FFFFFFFFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF007F4CFFAAFFECFFA8FFA8FF007F002900000012000000020000000D00CCCCFF000100000000000A00000008001900000020002000280000022C000001F8001900040020001C00180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF9AAA26FF92AA55FF9ABA76FF939255FFD91356FF000000FF</_256_Color_Icon>
@@ -345,20 +338,6 @@
         <Synchronyze_with_Directory>false</Synchronyze_with_Directory>
         <Synchronize_Directory_Path>API</Synchronize_Directory_Path>
       </Synchronization_Info>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>configRemote.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>7</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\API\configRemote.vi</Path>
-        <VI_Title/>
-      </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
@@ -460,76 +439,6 @@
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>configREF_f.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>4</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\API\configREF_f.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>configREF_phi.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>5</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\API\configREF_phi.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>readAO.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>4</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\API\readAO.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>readAI.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>4</Row>
-          <Column>2</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\API\readAI.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>readResults.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>4</Row>
-          <Column>3</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\API\readResults.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
         <NameSub_Menu_Name>readAOconfig.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
@@ -539,6 +448,34 @@
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\API\readAOconfig.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>configSampling.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>4</Row>
+          <Column>1</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\API\configSampling.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>readSampling.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>4</Row>
+          <Column>2</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\API\readSampling.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -558,11 +495,67 @@
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>readREFfilter.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>2</Row>
+          <Column>4</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\API\readREFfilter.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>configREFfilter.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>2</Row>
+          <Column>3</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\API\configREFfilter.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>configREF_f.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>2</Row>
+          <Column>5</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\API\configREF_f.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>configREF_phi.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>2</Row>
+          <Column>6</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\API\configREF_phi.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
         <NameSub_Menu_Name>Lockin-4461 IV mode trigger and wait.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>3</Row>
+          <Row>5</Row>
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
@@ -576,7 +569,7 @@
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>3</Row>
+          <Row>5</Row>
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
@@ -586,53 +579,11 @@
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>configReset.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>7</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\API\configReset.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>waitForNewWaveforms.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>6</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\API\waitForNewWaveforms.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>readTrigger.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>5</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\API\readTrigger.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
         <NameSub_Menu_Name>readIVmode.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>3</Row>
+          <Row>5</Row>
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
@@ -646,14 +597,126 @@
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>3</Row>
+          <Row>5</Row>
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\API\assertTrigger.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>CCA3A60761DAEFBF9A69AA3780489C75</GUID>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>readTrigger.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>5</Row>
+          <Column>5</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\API\readTrigger.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>configReset.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>5</Row>
+          <Column>6</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\API\configReset.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>configRemote.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>5</Row>
+          <Column>7</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\API\configRemote.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>readResults.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>3</Row>
+          <Column>1</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\API\readResults.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>waitForNewResults.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>3</Row>
+          <Column>2</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\API\waitForNewResults.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>readAI.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>3</Row>
+          <Column>3</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\API\readAI.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>waitForNewWaveforms.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>3</Row>
+          <Column>4</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\API\waitForNewWaveforms.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>readAO.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>3</Row>
+          <Column>5</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\API\readAO.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <GUID>5008D656B4F459D5FCF89FE738B04270</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -702,15 +765,15 @@
         <Path>..\src\Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>FFE37624E7FF5F6C2B27C67F962D8DFB</GUID>
+      <GUID>558F05F522576E27DFC32C4BE67567B5</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
       <Name>Expt</Name>
       <View_Format>Icons</View_Format>
       <Size>
-        <Height_Row>1</Height_Row>
-        <Width_Col.>5</Width_Col.>
+        <Height_Row>2</Height_Row>
+        <Width_Col.>4</Width_Col.>
       </Size>
       <_256_Color_Icon>000003BB002900000012000000020000000D00FFFFFF000100000000000A000000080000000000200020002800000137000001110000000A0007001700180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFF000000FFFFFFFFFFFF000000FFFFFF000000FFFFFF000000000000FFFFFFFFFFFF000000000000000000000000FFFFFFFFFFFF000000FFFFFFFFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFF000000000000FFFFFFFFFFFF000000FFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0007C017959FC9578997D50F0007002900000012000000020000000D00CCCCFF000100000000000A00000008001900000020002000280000022C000001F8001900040020001C00180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF9AAA26FF92AA55FF9ABA76FF939255FFD91356FF000000FF</_256_Color_Icon>
       <BW_Color_Icon>00000000</BW_Color_Icon>
@@ -754,12 +817,26 @@
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Lockin_Metrics.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>Test_Lockin_API.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
           <Row>1</Row>
-          <Column>4</Column>
+          <Column>1</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Expt\Test_Lockin_API.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>Lockin_Metrics.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>2</Row>
+          <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\Expt\Lockin_Metrics.vi</Path>
@@ -772,28 +849,14 @@
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>1</Row>
-          <Column>5</Column>
+          <Row>2</Row>
+          <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\Expt\Lockin_Metrics_Results.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Test_Lockin_API.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Expt\Test_Lockin_API.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <GUID>7B3CA8154EF88C5DD8C0E720CE19D1C7</GUID>
+      <GUID>7C9BAA7D8E493FF51420796C783B7841</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -842,7 +905,7 @@
         <Path>..\src\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>5F9945188831378B0665673520F89F44</GUID>
+      <GUID>737901684472BBF9E024E51571117524</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -877,7 +940,7 @@
         <Path>..\src\RemoteControl\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>7E9AA782B2B9C15C7B3F7BB1862C0908</GUID>
+      <GUID>6934A9498AAB656419E5BF6CCB35C98E</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1195,12 +1258,26 @@
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>REF-cluster.ctl</NameSub_Menu_Name>
+        <NameSub_Menu_Name>REF filter-cluster.ctl</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
           <Row>4</Row>
           <Column>4</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Typedefs\REF filter-cluster.ctl</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>REF-cluster.ctl</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>4</Row>
+          <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\Typedefs\REF-cluster.ctl</Path>
@@ -1214,7 +1291,7 @@
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
           <Row>4</Row>
-          <Column>5</Column>
+          <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\Typedefs\REF_Channel-Numeric.ctl</Path>
@@ -1227,8 +1304,8 @@
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>4</Row>
-          <Column>6</Column>
+          <Row>5</Row>
+          <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\Typedefs\REF_f-array.ctl</Path>
@@ -1242,10 +1319,24 @@
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
           <Row>5</Row>
-          <Column>1</Column>
+          <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\Typedefs\REF_phi-array.ctl</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>Sampling.ctl</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>5</Row>
+          <Column>3</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Typedefs\Sampling.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1256,20 +1347,20 @@
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
           <Row>5</Row>
-          <Column>2</Column>
+          <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>01B4F47FB9AAC244DDFF196AC7557712</GUID>
+      <GUID>68AD4E1D5EA094E7D506FD0BACE90B40</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
       <Name>Typedefs</Name>
       <View_Format>Icons</View_Format>
       <Size>
-        <Height_Row>3</Height_Row>
+        <Height_Row>4</Height_Row>
         <Width_Col.>6</Width_Col.>
       </Size>
       <_256_Color_Icon>0000052E002900000012000000020000000D00FFFFFF000100000000000A0000000800000000002000200028000002AA00000276000000010007001F00180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFF000000FFFFFF000000FFFFFF000000000000FFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFF000000000000FFFFFFFFFFFF000000FFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFF000000000000FFFFFF000000FFFFFFFFFFFF000000000000000000FFFFFF000000FFFFFF000000FFFFFF000000000000000000FFFFFF000000FFFFFF000000FFFFFF000000000000000000FFFFFF000000000000FFFFFF000000000000FFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFF000000000000FFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFF000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFF000000FFFFFFFFFFFF000000000000FFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFF000000000000FFFFFFFFFFFF000000000000FFFFFFFFFFFF000000000000FFFFFF000000FFFFFFFFFFFF000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000003E00020434AC4648F4EAEAEDB42C8A8874C86669B00000003002900000012000000020000000D00CCCCFF000100000000000A00000008001900000020002000280000022C000001F8001900040020001C00180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF9AAA26FF92AA55FF9ABA76FF939255FFD91356FF000000FF</_256_Color_Icon>
@@ -1300,7 +1391,7 @@
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PrivateEvents--RemoteControl.setAI.ctl</NameSub_Menu_Name>
+        <NameSub_Menu_Name>PrivateEvents--LockinRemoteControl.setAI.ctl</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1308,13 +1399,13 @@
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\RemoteControl\Typedefs\PrivateEvents--RemoteControl.setAI.ctl</Path>
+        <Path>..\src\RemoteControl\Typedefs\PrivateEvents--LockinRemoteControl.setAI.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PrivateEvents--RemoteControl.setAllowedRemoteAddress.ctl</NameSub_Menu_Name>
+        <NameSub_Menu_Name>PrivateEvents--LockinRemoteControl.setAllowedRemoteAddress.ctl</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1322,13 +1413,13 @@
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\RemoteControl\Typedefs\PrivateEvents--RemoteControl.setAllowedRemoteAddress.ctl</Path>
+        <Path>..\src\RemoteControl\Typedefs\PrivateEvents--LockinRemoteControl.setAllowedRemoteAddress.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PrivateEvents--RemoteControl.setAO.ctl</NameSub_Menu_Name>
+        <NameSub_Menu_Name>PrivateEvents--LockinRemoteControl.setAO.ctl</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1336,13 +1427,13 @@
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\RemoteControl\Typedefs\PrivateEvents--RemoteControl.setAO.ctl</Path>
+        <Path>..\src\RemoteControl\Typedefs\PrivateEvents--LockinRemoteControl.setAO.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PrivateEvents--RemoteControl.setAOconfig.ctl</NameSub_Menu_Name>
+        <NameSub_Menu_Name>PrivateEvents--LockinRemoteControl.setAOconfig.ctl</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1350,13 +1441,13 @@
           <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\RemoteControl\Typedefs\PrivateEvents--RemoteControl.setAOconfig.ctl</Path>
+        <Path>..\src\RemoteControl\Typedefs\PrivateEvents--LockinRemoteControl.setAOconfig.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PrivateEvents--RemoteControl.setIVmode.ctl</NameSub_Menu_Name>
+        <NameSub_Menu_Name>PrivateEvents--LockinRemoteControl.setIVmode.ctl</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1364,13 +1455,13 @@
           <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\RemoteControl\Typedefs\PrivateEvents--RemoteControl.setIVmode.ctl</Path>
+        <Path>..\src\RemoteControl\Typedefs\PrivateEvents--LockinRemoteControl.setIVmode.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PrivateEvents--RemoteControl.setREFconfig.ctl</NameSub_Menu_Name>
+        <NameSub_Menu_Name>PrivateEvents--LockinRemoteControl.setREFconfig.ctl</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1378,13 +1469,13 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\RemoteControl\Typedefs\PrivateEvents--RemoteControl.setREFconfig.ctl</Path>
+        <Path>..\src\RemoteControl\Typedefs\PrivateEvents--LockinRemoteControl.setREFconfig.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PrivateEvents--RemoteControl.setReset.ctl</NameSub_Menu_Name>
+        <NameSub_Menu_Name>PrivateEvents--LockinRemoteControl.setREFfilterconfig.ctl</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1392,13 +1483,13 @@
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\RemoteControl\Typedefs\PrivateEvents--RemoteControl.setReset.ctl</Path>
+        <Path>..\src\RemoteControl\Typedefs\PrivateEvents--LockinRemoteControl.setREFfilterconfig.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PrivateEvents--RemoteControl.setResults.ctl</NameSub_Menu_Name>
+        <NameSub_Menu_Name>PrivateEvents--LockinRemoteControl.setReset.ctl</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1406,13 +1497,13 @@
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\RemoteControl\Typedefs\PrivateEvents--RemoteControl.setResults.ctl</Path>
+        <Path>..\src\RemoteControl\Typedefs\PrivateEvents--LockinRemoteControl.setReset.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PrivateEvents--RemoteControl.setTrigger.ctl</NameSub_Menu_Name>
+        <NameSub_Menu_Name>PrivateEvents--LockinRemoteControl.setResults.ctl</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1420,7 +1511,35 @@
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\RemoteControl\Typedefs\PrivateEvents--RemoteControl.setTrigger.ctl</Path>
+        <Path>..\src\RemoteControl\Typedefs\PrivateEvents--LockinRemoteControl.setResults.ctl</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>PrivateEvents--LockinRemoteControl.setSamplingconfig.ctl</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>2</Row>
+          <Column>5</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\RemoteControl\Typedefs\PrivateEvents--LockinRemoteControl.setSamplingconfig.ctl</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>PrivateEvents--LockinRemoteControl.setTrigger.ctl</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>2</Row>
+          <Column>6</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\RemoteControl\Typedefs\PrivateEvents--LockinRemoteControl.setTrigger.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1430,8 +1549,8 @@
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>2</Row>
-          <Column>5</Column>
+          <Row>3</Row>
+          <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\RemoteControl\Typedefs\PublicEvents--Cluster.ctl</Path>
@@ -1440,35 +1559,7 @@
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PublicEvents--RemoteControl.assertTrigger.ctl</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>6</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\RemoteControl\Typedefs\PublicEvents--RemoteControl.assertTrigger.ctl</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PublicEvents--RemoteControl.configAO.ctl</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\RemoteControl\Typedefs\PublicEvents--RemoteControl.configAO.ctl</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PublicEvents--RemoteControl.configIVmode.ctl</NameSub_Menu_Name>
+        <NameSub_Menu_Name>PublicEvents--LockinRemoteControl.assertTrigger.ctl</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1476,13 +1567,13 @@
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\RemoteControl\Typedefs\PublicEvents--RemoteControl.configIVmode.ctl</Path>
+        <Path>..\src\RemoteControl\Typedefs\PublicEvents--LockinRemoteControl.assertTrigger.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PublicEvents--RemoteControl.configREF.ctl</NameSub_Menu_Name>
+        <NameSub_Menu_Name>PublicEvents--LockinRemoteControl.configAO.ctl</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1490,13 +1581,13 @@
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\RemoteControl\Typedefs\PublicEvents--RemoteControl.configREF.ctl</Path>
+        <Path>..\src\RemoteControl\Typedefs\PublicEvents--LockinRemoteControl.configAO.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PublicEvents--RemoteControl.configRemote.ctl</NameSub_Menu_Name>
+        <NameSub_Menu_Name>PublicEvents--LockinRemoteControl.configIVmode.ctl</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1504,13 +1595,13 @@
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\RemoteControl\Typedefs\PublicEvents--RemoteControl.configRemote.ctl</Path>
+        <Path>..\src\RemoteControl\Typedefs\PublicEvents--LockinRemoteControl.configIVmode.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PublicEvents--RemoteControl.configReset.ctl</NameSub_Menu_Name>
+        <NameSub_Menu_Name>PublicEvents--LockinRemoteControl.configREF.ctl</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -1518,7 +1609,63 @@
           <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\RemoteControl\Typedefs\PublicEvents--RemoteControl.configReset.ctl</Path>
+        <Path>..\src\RemoteControl\Typedefs\PublicEvents--LockinRemoteControl.configREF.ctl</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>PublicEvents--LockinRemoteControl.configREFfilter.ctl</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>3</Row>
+          <Column>6</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\RemoteControl\Typedefs\PublicEvents--LockinRemoteControl.configREFfilter.ctl</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>PublicEvents--LockinRemoteControl.configRemote.ctl</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>4</Row>
+          <Column>1</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\RemoteControl\Typedefs\PublicEvents--LockinRemoteControl.configRemote.ctl</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>PublicEvents--LockinRemoteControl.configReset.ctl</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>4</Row>
+          <Column>2</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\RemoteControl\Typedefs\PublicEvents--LockinRemoteControl.configReset.ctl</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>PublicEvents--LockinRemoteControl.configSampling.ctl</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>4</Row>
+          <Column>3</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\RemoteControl\Typedefs\PublicEvents--LockinRemoteControl.configSampling.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1528,14 +1675,14 @@
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>3</Row>
-          <Column>6</Column>
+          <Row>4</Row>
+          <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\RemoteControl\Typedefs\Remote-SMO-Commands-Enum.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>D53B4252C488D279B70686E3F064524A</GUID>
+      <GUID>2C454CB9676DEB2A2FD8AF8FF46BCD93</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
