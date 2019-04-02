@@ -51,6 +51,8 @@
 			<Item Name="Lockin_Metrics.vi" Type="VI" URL="../Expt/Lockin_Metrics.vi"/>
 			<Item Name="Lockin_Metrics_Results.vi" Type="VI" URL="../Expt/Lockin_Metrics_Results.vi"/>
 			<Item Name="testlockin.vi" Type="VI" URL="../Expt/testlockin.vi"/>
+			<Item Name="446xAntiAliasSimulator.vi" Type="VI" URL="../Expt/446xAntiAliasSimulator.vi"/>
+			<Item Name="Lockin Noise Measurement.vi" Type="VI" URL="../Expt/Lockin Noise Measurement.vi"/>
 		</Item>
 		<Item Name="FGV" Type="Folder">
 			<Item Name="FGV - Configuration - lockin.vi" Type="VI" URL="../FGV/FGV - Configuration - lockin.vi"/>
