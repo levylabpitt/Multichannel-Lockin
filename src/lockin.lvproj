@@ -153,8 +153,7 @@
 			<Item Name="Cal Info - Cluster.ctl" Type="VI" URL="../Typedefs/Cal Info - Cluster.ctl"/>
 		</Item>
 		<Item Name="RemoteControl" Type="Folder">
-			<Item Name="RemoteControl.lvclass" Type="LVClass" URL="../RemoteControl/RemoteControl.lvclass"/>
-			<Item Name="STM_Client.vi" Type="VI" URL="../RemoteControl/STM_Client.vi"/>
+			<Item Name="LockinRemoteControl.lvclass" Type="LVClass" URL="../RemoteControl/LockinRemoteControl.lvclass"/>
 		</Item>
 		<Item Name="Lockin-4461 -Patrick -State.vi" Type="VI" URL="../Lockin-4461 -Patrick -State.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
