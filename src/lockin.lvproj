@@ -104,6 +104,9 @@
 			<Item Name="SI prefix.vi" Type="VI" URL="../SubVIs/SI prefix.vi"/>
 			<Item Name="DownKeyEvent.vi" Type="VI" URL="../SubVIs/DownKeyEvent.vi"/>
 			<Item Name="FPDAQtoDAQstrings.vi" Type="VI" URL="../SubVIs/FPDAQtoDAQstrings.vi"/>
+			<Item Name="LegendWaveformChart.vi" Type="VI" URL="../SubVIs/LegendWaveformChart.vi"/>
+			<Item Name="LegendWaveformGraph.vi" Type="VI" URL="../SubVIs/LegendWaveformGraph.vi"/>
+			<Item Name="LegendXYGraph.vi" Type="VI" URL="../SubVIs/LegendXYGraph.vi"/>
 		</Item>
 		<Item Name="subVIs - DAQ" Type="Folder">
 			<Item Name="44xx_AI_MinMax.vi" Type="VI" URL="../subVIs - DAQ/44xx_AI_MinMax.vi"/>
