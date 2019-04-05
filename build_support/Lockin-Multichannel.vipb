@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-04-03 15:04:00" Creator="Patrick Irvin" Comments="" ID="607c6fbaa26ea050baf1492081f21b25">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-04-05 11:56:03" Creator="Patrick Irvin" Comments="" ID="4ee84f0942b3fbcb7dba2fd9c09d2465">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.5.9.80</Library_Version>
+    <Library_Version>2.5.10.81</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -83,8 +83,8 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.5.9.79]
-- rename Display legend labels</Release_Notes>
+      <Release_Notes>[2.5.10.80]
+- improve handling of graph legends</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -313,7 +313,7 @@
         <Path>..\src\Lockin-4461 -Patrick -State.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>566800A8BBB20DE387CD4A929C9AA8C6</GUID>
+      <GUID>5788D93C20059C374101B60DD3AE4B90</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -712,7 +712,7 @@
         <Path>..\src\API\readAO.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>71BD6AF865B11C090E7EFCA69D77C0F1</GUID>
+      <GUID>3BF6E00699862C8C6B959F7D240B9CF2</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -761,7 +761,7 @@
         <Path>..\src\Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>C3505EA43EA5A0304A8E5E5031D6EB61</GUID>
+      <GUID>7BAA9900754C0A08661327363AC23A82</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -852,7 +852,7 @@
         <Path>..\src\Expt\Lockin_Metrics_Results.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>5862B29CA377584217868999F801F166</GUID>
+      <GUID>11372DE998246E69BA14B5E2E00390B3</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -901,7 +901,7 @@
         <Path>..\src\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F757D8294CE5C198DC60A5522186EAD9</GUID>
+      <GUID>2DD1273F2A9497E601133C4EEF634B61</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -936,7 +936,7 @@
         <Path>..\src\RemoteControl\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>6432DA06D569A6A72ABCAF85EEE6A152</GUID>
+      <GUID>2C687565CB8A85C92CE793FA38B7909D</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1349,7 +1349,7 @@
         <Path>..\src\Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>2C540B9401A341A359E04512E68BCFE8</GUID>
+      <GUID>468AA2CDEEF158A34765C4DA1532EAB5</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1678,7 +1678,7 @@
         <Path>..\src\RemoteControl\Typedefs\Remote-SMO-Commands-Enum.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>08895619AFB94CFC04755183DD6D8D66</GUID>
+      <GUID>0F0E966CF16277E6F1FD9CD3F756A633</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
