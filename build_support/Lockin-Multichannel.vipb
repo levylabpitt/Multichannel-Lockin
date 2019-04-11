@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-04-11 17:01:26" Creator="Patrick Irvin" Comments="" ID="13973bd55be48db6a699e6e578adb0a8">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-04-11 17:15:05" Creator="Patrick Irvin" Comments="" ID="70c4f759e3cb86a2804a2fe511af7551">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.5.11.81</Library_Version>
+    <Library_Version>2.5.11.83</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -22,9 +22,9 @@
       <External_Dependencies>jki_statemachineobjects &gt;= 1.3.0.56</External_Dependencies>
       <External_Dependencies>levylab_lib_colorutillities &gt;= 1.0.0.2</External_Dependencies>
       <External_Dependencies>levylab_lib_control_vi &gt;= 1.3.0.11</External_Dependencies>
-      <External_Dependencies>levylab_lib_fileutilities &gt;= 1.2.1.7</External_Dependencies>
+      <External_Dependencies>levylab_lib_fileutilities &gt;= 1.2.2.8</External_Dependencies>
       <External_Dependencies>levylab_lib_krohn_hite_7008 &gt;= 1.4.3.18</External_Dependencies>
-      <External_Dependencies>levylab_lib_lvtoitx &gt;= 2.6.6.23</External_Dependencies>
+      <External_Dependencies>levylab_lib_lvtoitx &gt;= 2.6.8.25</External_Dependencies>
       <External_Dependencies>mgi_lib_cluster &gt;= 1.1.0.1</External_Dependencies>
       <External_Dependencies>mgi_lib_error_handling &gt;= 1.1.1.3</External_Dependencies>
       <External_Dependencies>mgi_lib_error_reporter &gt;= 1.0.2.5</External_Dependencies>
@@ -48,9 +48,9 @@
       <Direct_Dependencies>jki_statemachineobjects-1.3.0.56</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_colorutillities-1.0.0.2</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_control_vi-1.3.0.11</Direct_Dependencies>
-      <Direct_Dependencies>levylab_lib_fileutilities-1.2.1.7</Direct_Dependencies>
+      <Direct_Dependencies>levylab_lib_fileutilities-1.2.2.8</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_krohn_hite_7008-1.4.3.18</Direct_Dependencies>
-      <Direct_Dependencies>levylab_lib_lvtoitx-2.6.6.23</Direct_Dependencies>
+      <Direct_Dependencies>levylab_lib_lvtoitx-2.6.8.25</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_cluster-1.1.0.1</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_error_handling-1.1.1.3</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_error_reporter-1.0.2.5</Direct_Dependencies>
@@ -86,6 +86,7 @@
       <Release_Notes>[2.5.11.81]
 Bug fixes:
 - getSampling and getREFfilter now working
+- configSampling now working (autosize Fs and # must be FALSE)
 - RESET button now working</Release_Notes>
     </Description>
     <Destinations>
@@ -315,7 +316,7 @@ Bug fixes:
         <Path>..\src\Lockin-4461 -Patrick -State.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>C2E2261F5804DF6D7AAFF746C9B66618</GUID>
+      <GUID>E0EF02B555A9D4C15A34A62CBAC520CB</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -714,7 +715,7 @@ Bug fixes:
         <Path>..\src\API\readAO.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>32407BA998021AC433308BC118A4D0F5</GUID>
+      <GUID>4278B00B73EE30E3FB905D912BB17A63</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -763,7 +764,7 @@ Bug fixes:
         <Path>..\src\Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>562AB2B28A3B6D2CAD6870F2A02635E6</GUID>
+      <GUID>A6118FED80CB961906792EE8F8E24CEA</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -854,7 +855,7 @@ Bug fixes:
         <Path>..\src\Expt\Lockin_Metrics_Results.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>C38E248116998E5A94B544DC9560E476</GUID>
+      <GUID>AC3F9A68358515C8A989DCA7BCC32D4A</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -903,7 +904,7 @@ Bug fixes:
         <Path>..\src\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>08B0CA1D8C73774E5552DDC56B4930AE</GUID>
+      <GUID>CD3597223DB7B1BC1CFE5BD2AC53D129</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -938,7 +939,7 @@ Bug fixes:
         <Path>..\src\RemoteControl\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>0BB94D97B8227C385D1E1474D68CA3D5</GUID>
+      <GUID>969E92A89B24D1A0829270173F0C5DA7</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1351,7 +1352,7 @@ Bug fixes:
         <Path>..\src\Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F33C05C861327A992946F62B0713810A</GUID>
+      <GUID>807946068D5BE2E4B6B6D286FBC0635D</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1680,7 +1681,7 @@ Bug fixes:
         <Path>..\src\RemoteControl\Typedefs\Remote-SMO-Commands-Enum.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>6A912063944A0CBD0AE3597DE04DE704</GUID>
+      <GUID>9CA6D6A0E2C220BD07AEE89A015C9A88</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
