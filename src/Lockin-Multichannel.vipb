@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-04-25 13:22:22" Creator="Patrick Irvin" Comments="" ID="5d455cc03a9a6ea06d148ac40eb40643">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-04-25 14:39:58" Creator="Patrick Irvin" Comments="" ID="f9c74ac153b25f9998dcb77348737e77">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.5.12.84</Library_Version>
+    <Library_Version>2.5.12.85</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -83,9 +83,10 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.5.12.83]
+      <Release_Notes>[2.5.12.84]
 Bug fixes:
-- Macro: IV now updates display in lockin</Release_Notes>
+- Macro: IV now updates display in lockin
+- IV Curve mode should now work with very low sampling rates (1000 S/s)</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -311,7 +312,7 @@ Bug fixes:
         <Path>Lockin-4461 -Patrick -State.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B2F107A8E325206847B54F0114C2DADF</GUID>
+      <GUID>6DD259339C0CB77A5F4FC6BBDEE02104</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -710,7 +711,7 @@ Bug fixes:
         <Path>API\readAO.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>D70A1A3881513D129FF7A5046786872C</GUID>
+      <GUID>5D4EBFD2DDC655612B8444042668D8C5</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -759,7 +760,7 @@ Bug fixes:
         <Path>Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>578CE284D7C61E2243A1FBDD653422C9</GUID>
+      <GUID>3DC0F8DF620A76F13DAE96CD4CC194F6</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -850,7 +851,7 @@ Bug fixes:
         <Path>Expt\Lockin_Metrics_Results.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>7CDEDDD7580C0531B4E8FB1068AA7F6A</GUID>
+      <GUID>4DBB98CCBF3A8C5B8FAFA7B693716ADD</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -899,7 +900,7 @@ Bug fixes:
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>A030B77FDE29A599893FC997311FB9FA</GUID>
+      <GUID>577A5E8066CF65C902DA998CA5BDA0E6</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -934,7 +935,7 @@ Bug fixes:
         <Path>RemoteControl\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B684FF0283AF578A6B8DCAFABEBFCABA</GUID>
+      <GUID>0A29985131331CC7B17A7777102139FE</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1347,7 +1348,7 @@ Bug fixes:
         <Path>Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>657352D8A97B3A7A62380E5F3E2A3B61</GUID>
+      <GUID>5DF40406374681EE42E46DAB9CDA4A1F</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1676,7 +1677,7 @@ Bug fixes:
         <Path>RemoteControl\Typedefs\Remote-SMO-Commands-Enum.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>A191D115DBDDD8138FEF179EF7578B80</GUID>
+      <GUID>5A41F6516AB86C4665466858C7B28A86</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
