@@ -12,163 +12,163 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="build_support" Type="Folder">
-			<Item Name="Lockin-Multichannel.vipb" Type="Document" URL="../build_support/Lockin-Multichannel.vipb"/>
-			<Item Name="Lockin-Multichannel.vipc" Type="Document" URL="../build_support/Lockin-Multichannel.vipc"/>
-			<Item Name="Pre-Build Custom Action.vi" Type="VI" URL="../build_support/Pre-Build Custom Action.vi"/>
-			<Item Name="Pre-Install Custom Action.vi" Type="VI" URL="../build_support/Pre-Install Custom Action.vi"/>
+			<Item Name="Lockin-Multichannel.vipb" Type="Document" URL="../Lockin-Multichannel.vipb"/>
+			<Item Name="Lockin-Multichannel.vipc" Type="Document" URL="../Lockin-Multichannel.vipc"/>
+			<Item Name="Pre-Build Custom Action.vi" Type="VI" URL="../../build_support/Pre-Build Custom Action.vi"/>
+			<Item Name="Pre-Install Custom Action.vi" Type="VI" URL="../../build_support/Pre-Install Custom Action.vi"/>
 		</Item>
 		<Item Name="API" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">3</Property>
-			<Item Name="Lockin-4461 IV mode trigger and wait.vi" Type="VI" URL="../src/API/Lockin-4461 IV mode trigger and wait.vi"/>
-			<Item Name="waitForNewWaveforms.vi" Type="VI" URL="../src/API/waitForNewWaveforms.vi"/>
-			<Item Name="waitForNewResults.vi" Type="VI" URL="../src/API/waitForNewResults.vi"/>
-			<Item Name="readTrigger.vi" Type="VI" URL="../src/API/readTrigger.vi"/>
-			<Item Name="readIVmode.vi" Type="VI" URL="../src/API/readIVmode.vi"/>
-			<Item Name="readAOconfig.vi" Type="VI" URL="../src/API/readAOconfig.vi"/>
-			<Item Name="readREFconfig.vi" Type="VI" URL="../src/API/readREFconfig.vi"/>
-			<Item Name="readREFfilter.vi" Type="VI" URL="../src/API/readREFfilter.vi"/>
-			<Item Name="readResults.vi" Type="VI" URL="../src/API/readResults.vi"/>
-			<Item Name="readSampling.vi" Type="VI" URL="../src/API/readSampling.vi"/>
-			<Item Name="readAO.vi" Type="VI" URL="../src/API/readAO.vi"/>
-			<Item Name="readAI.vi" Type="VI" URL="../src/API/readAI.vi"/>
-			<Item Name="configSampling.vi" Type="VI" URL="../src/API/configSampling.vi"/>
-			<Item Name="configAO.vi" Type="VI" URL="../src/API/configAO.vi"/>
-			<Item Name="configAO_Amp.vi" Type="VI" URL="../src/API/configAO_Amp.vi"/>
-			<Item Name="configAO_DC.vi" Type="VI" URL="../src/API/configAO_DC.vi"/>
-			<Item Name="configAO_f.vi" Type="VI" URL="../src/API/configAO_f.vi"/>
-			<Item Name="configAO_function.vi" Type="VI" URL="../src/API/configAO_function.vi"/>
-			<Item Name="configAO_phi.vi" Type="VI" URL="../src/API/configAO_phi.vi"/>
-			<Item Name="configRemote.vi" Type="VI" URL="../src/API/configRemote.vi"/>
-			<Item Name="configREF.vi" Type="VI" URL="../src/API/configREF.vi"/>
-			<Item Name="configREF_f.vi" Type="VI" URL="../src/API/configREF_f.vi"/>
-			<Item Name="configREF_phi.vi" Type="VI" URL="../src/API/configREF_phi.vi"/>
-			<Item Name="configREFfilter.vi" Type="VI" URL="../src/API/configREFfilter.vi"/>
-			<Item Name="configIVmode.vi" Type="VI" URL="../src/API/configIVmode.vi"/>
-			<Item Name="configReset.vi" Type="VI" URL="../src/API/configReset.vi"/>
-			<Item Name="assertTrigger.vi" Type="VI" URL="../src/API/assertTrigger.vi"/>
+			<Item Name="Lockin-4461 IV mode trigger and wait.vi" Type="VI" URL="../API/Lockin-4461 IV mode trigger and wait.vi"/>
+			<Item Name="waitForNewWaveforms.vi" Type="VI" URL="../API/waitForNewWaveforms.vi"/>
+			<Item Name="waitForNewResults.vi" Type="VI" URL="../API/waitForNewResults.vi"/>
+			<Item Name="readTrigger.vi" Type="VI" URL="../API/readTrigger.vi"/>
+			<Item Name="readIVmode.vi" Type="VI" URL="../API/readIVmode.vi"/>
+			<Item Name="readAOconfig.vi" Type="VI" URL="../API/readAOconfig.vi"/>
+			<Item Name="readREFconfig.vi" Type="VI" URL="../API/readREFconfig.vi"/>
+			<Item Name="readREFfilter.vi" Type="VI" URL="../API/readREFfilter.vi"/>
+			<Item Name="readResults.vi" Type="VI" URL="../API/readResults.vi"/>
+			<Item Name="readSampling.vi" Type="VI" URL="../API/readSampling.vi"/>
+			<Item Name="readAO.vi" Type="VI" URL="../API/readAO.vi"/>
+			<Item Name="readAI.vi" Type="VI" URL="../API/readAI.vi"/>
+			<Item Name="configSampling.vi" Type="VI" URL="../API/configSampling.vi"/>
+			<Item Name="configAO.vi" Type="VI" URL="../API/configAO.vi"/>
+			<Item Name="configAO_Amp.vi" Type="VI" URL="../API/configAO_Amp.vi"/>
+			<Item Name="configAO_DC.vi" Type="VI" URL="../API/configAO_DC.vi"/>
+			<Item Name="configAO_f.vi" Type="VI" URL="../API/configAO_f.vi"/>
+			<Item Name="configAO_function.vi" Type="VI" URL="../API/configAO_function.vi"/>
+			<Item Name="configAO_phi.vi" Type="VI" URL="../API/configAO_phi.vi"/>
+			<Item Name="configRemote.vi" Type="VI" URL="../API/configRemote.vi"/>
+			<Item Name="configREF.vi" Type="VI" URL="../API/configREF.vi"/>
+			<Item Name="configREF_f.vi" Type="VI" URL="../API/configREF_f.vi"/>
+			<Item Name="configREF_phi.vi" Type="VI" URL="../API/configREF_phi.vi"/>
+			<Item Name="configREFfilter.vi" Type="VI" URL="../API/configREFfilter.vi"/>
+			<Item Name="configIVmode.vi" Type="VI" URL="../API/configIVmode.vi"/>
+			<Item Name="configReset.vi" Type="VI" URL="../API/configReset.vi"/>
+			<Item Name="assertTrigger.vi" Type="VI" URL="../API/assertTrigger.vi"/>
 		</Item>
 		<Item Name="Examples" Type="Folder">
-			<Item Name="Example_IV_Curves.vi" Type="VI" URL="../src/Examples/Example_IV_Curves.vi"/>
-			<Item Name="Example_Lockin.vi" Type="VI" URL="../src/Examples/Example_Lockin.vi"/>
+			<Item Name="Example_IV_Curves.vi" Type="VI" URL="../Examples/Example_IV_Curves.vi"/>
+			<Item Name="Example_Lockin.vi" Type="VI" URL="../Examples/Example_Lockin.vi"/>
 		</Item>
 		<Item Name="Tests" Type="Folder">
-			<Item Name="Test_Lockin_API.vi" Type="VI" URL="../src/Expt/Test_Lockin_API.vi"/>
-			<Item Name="Lockin_Metrics.vi" Type="VI" URL="../src/Expt/Lockin_Metrics.vi"/>
-			<Item Name="Lockin_Metrics_Results.vi" Type="VI" URL="../src/Expt/Lockin_Metrics_Results.vi"/>
-			<Item Name="446xAntiAliasSimulator.vi" Type="VI" URL="../src/Expt/446xAntiAliasSimulator.vi"/>
-			<Item Name="Lockin Noise Measurement.vi" Type="VI" URL="../src/Expt/Lockin Noise Measurement.vi"/>
+			<Item Name="Test_Lockin_API.vi" Type="VI" URL="../Expt/Test_Lockin_API.vi"/>
+			<Item Name="Lockin_Metrics.vi" Type="VI" URL="../Expt/Lockin_Metrics.vi"/>
+			<Item Name="Lockin_Metrics_Results.vi" Type="VI" URL="../Expt/Lockin_Metrics_Results.vi"/>
+			<Item Name="446xAntiAliasSimulator.vi" Type="VI" URL="../Expt/446xAntiAliasSimulator.vi"/>
+			<Item Name="Lockin Noise Measurement.vi" Type="VI" URL="../Expt/Lockin Noise Measurement.vi"/>
 		</Item>
 		<Item Name="FGV (don&apos;t use!)" Type="Folder">
-			<Item Name="FGV - Configuration - lockin.vi" Type="VI" URL="../src/FGV/FGV - Configuration - lockin.vi"/>
-			<Item Name="FGV - Configuration - Output.vi" Type="VI" URL="../src/FGV/FGV - Configuration - Output.vi"/>
-			<Item Name="FGV - Fs Divisor.vi" Type="VI" URL="../src/FGV/FGV - Fs Divisor.vi"/>
-			<Item Name="FGV - IV mode.vi" Type="VI" URL="../src/FGV/FGV - IV mode.vi"/>
-			<Item Name="FGV - Remote.vi" Type="VI" URL="../src/FGV/FGV - Remote.vi"/>
-			<Item Name="FGV - Reset.vi" Type="VI" URL="../src/FGV/FGV - Reset.vi"/>
-			<Item Name="FGV - Trigger.vi" Type="VI" URL="../src/FGV/FGV - Trigger.vi"/>
-			<Item Name="FGV - Lockin Results.vi" Type="VI" URL="../src/FGV/FGV - Lockin Results.vi"/>
-			<Item Name="FGV - Signals - Input.vi" Type="VI" URL="../src/FGV/FGV - Signals - Input.vi"/>
-			<Item Name="FGV - Signals - Output.vi" Type="VI" URL="../src/FGV/FGV - Signals - Output.vi"/>
+			<Item Name="FGV - Configuration - lockin.vi" Type="VI" URL="../FGV/FGV - Configuration - lockin.vi"/>
+			<Item Name="FGV - Configuration - Output.vi" Type="VI" URL="../FGV/FGV - Configuration - Output.vi"/>
+			<Item Name="FGV - Fs Divisor.vi" Type="VI" URL="../FGV/FGV - Fs Divisor.vi"/>
+			<Item Name="FGV - IV mode.vi" Type="VI" URL="../FGV/FGV - IV mode.vi"/>
+			<Item Name="FGV - Remote.vi" Type="VI" URL="../FGV/FGV - Remote.vi"/>
+			<Item Name="FGV - Reset.vi" Type="VI" URL="../FGV/FGV - Reset.vi"/>
+			<Item Name="FGV - Trigger.vi" Type="VI" URL="../FGV/FGV - Trigger.vi"/>
+			<Item Name="FGV - Lockin Results.vi" Type="VI" URL="../FGV/FGV - Lockin Results.vi"/>
+			<Item Name="FGV - Signals - Input.vi" Type="VI" URL="../FGV/FGV - Signals - Input.vi"/>
+			<Item Name="FGV - Signals - Output.vi" Type="VI" URL="../FGV/FGV - Signals - Output.vi"/>
 		</Item>
 		<Item Name="SubVIs" Type="Folder">
-			<Item Name="AI.Coupling.enum.convert.vi" Type="VI" URL="../src/SubVIs/AI.Coupling.enum.convert.vi"/>
-			<Item Name="AI_Select_CheckBox.vi" Type="VI" URL="../src/SubVIs/AI_Select_CheckBox.vi"/>
-			<Item Name="AO_Select_CheckBox.vi" Type="VI" URL="../src/SubVIs/AO_Select_CheckBox.vi"/>
-			<Item Name="AppendWaveformArray.vi" Type="VI" URL="../src/SubVIs/AppendWaveformArray.vi"/>
-			<Item Name="config.vi" Type="VI" URL="../src/SubVIs/config.vi"/>
-			<Item Name="decimate_waveforms.vi" Type="VI" URL="../src/SubVIs/decimate_waveforms.vi"/>
-			<Item Name="Display n or dt.vi" Type="VI" URL="../src/SubVIs/Display n or dt.vi"/>
-			<Item Name="FloatApprox.vi" Type="VI" URL="../src/SubVIs/FloatApprox.vi"/>
-			<Item Name="format display.vi" Type="VI" URL="../src/SubVIs/format display.vi"/>
-			<Item Name="Fs and Ns for integer periods.vi" Type="VI" URL="../src/SubVIs/Fs and Ns for integer periods.vi"/>
-			<Item Name="Fs_to_FilterDelay.vi" Type="VI" URL="../src/SubVIs/Fs_to_FilterDelay.vi"/>
-			<Item Name="Graph_TraceSelect_CheckBox.vi" Type="VI" URL="../src/SubVIs/Graph_TraceSelect_CheckBox.vi"/>
-			<Item Name="lockin - Set all f same.vi" Type="VI" URL="../src/SubVIs/lockin - Set all f same.vi"/>
-			<Item Name="lockin - Set REF f equal AO f.vi" Type="VI" URL="../src/SubVIs/lockin - Set REF f equal AO f.vi"/>
-			<Item Name="lockin - Set REF phase equals zero.vi" Type="VI" URL="../src/SubVIs/lockin - Set REF phase equals zero.vi"/>
-			<Item Name="Patrick-multichannel-Sim-Aq.vi" Type="VI" URL="../src/SubVIs/Patrick-multichannel-Sim-Aq.vi"/>
-			<Item Name="Prefilter_60Hz_Notch.vi" Type="VI" URL="../src/SubVIs/Prefilter_60Hz_Notch.vi"/>
-			<Item Name="Prefilter_LP.vi" Type="VI" URL="../src/SubVIs/Prefilter_LP.vi"/>
-			<Item Name="Replace timestamp.vi" Type="VI" URL="../src/SubVIs/Replace timestamp.vi"/>
-			<Item Name="Simple PID Array.vi" Type="VI" URL="../src/SubVIs/Simple PID Array.vi"/>
-			<Item Name="simple PID.vi" Type="VI" URL="../src/SubVIs/simple PID.vi"/>
-			<Item Name="Split 1D ARRAY in half.vi" Type="VI" URL="../src/SubVIs/Split 1D ARRAY in half.vi"/>
-			<Item Name="Split WAVEFORM array in half.vi" Type="VI" URL="../src/SubVIs/Split WAVEFORM array in half.vi"/>
-			<Item Name="StateHistory.vi" Type="VI" URL="../src/SubVIs/StateHistory.vi"/>
-			<Item Name="Waveform 64-128 channels LP pt by pt.vi" Type="VI" URL="../src/SubVIs/Waveform 64-128 channels LP pt by pt.vi"/>
-			<Item Name="write_lockin_FP_DSC.vi" Type="VI" URL="../src/SubVIs/write_lockin_FP_DSC.vi"/>
-			<Item Name="read_lockin_FP_DSC.vi" Type="VI" URL="../src/SubVIs/read_lockin_FP_DSC.vi"/>
-			<Item Name="update_rate_and_time.vi" Type="VI" URL="../src/SubVIs/update_rate_and_time.vi"/>
-			<Item Name="ms to Hz.vi" Type="VI" URL="../src/SubVIs/ms to Hz.vi"/>
-			<Item Name="getTimeWithError.vi" Type="VI" URL="../src/SubVIs/getTimeWithError.vi"/>
-			<Item Name="SI prefix.vi" Type="VI" URL="../src/SubVIs/SI prefix.vi"/>
-			<Item Name="DownKeyEvent.vi" Type="VI" URL="../src/SubVIs/DownKeyEvent.vi"/>
-			<Item Name="FPDAQtoDAQstrings.vi" Type="VI" URL="../src/SubVIs/FPDAQtoDAQstrings.vi"/>
-			<Item Name="LegendWaveformChart.vi" Type="VI" URL="../src/SubVIs/LegendWaveformChart.vi"/>
-			<Item Name="LegendWaveformGraph.vi" Type="VI" URL="../src/SubVIs/LegendWaveformGraph.vi"/>
-			<Item Name="LegendXYGraph.vi" Type="VI" URL="../src/SubVIs/LegendXYGraph.vi"/>
-			<Item Name="lockin - add phase element.vi" Type="VI" URL="../src/SubVIs/lockin - add phase element.vi"/>
-			<Item Name="Channel String to Number of Channels.vi" Type="VI" URL="../src/SubVIs/Channel String to Number of Channels.vi"/>
+			<Item Name="AI.Coupling.enum.convert.vi" Type="VI" URL="../SubVIs/AI.Coupling.enum.convert.vi"/>
+			<Item Name="AI_Select_CheckBox.vi" Type="VI" URL="../SubVIs/AI_Select_CheckBox.vi"/>
+			<Item Name="AO_Select_CheckBox.vi" Type="VI" URL="../SubVIs/AO_Select_CheckBox.vi"/>
+			<Item Name="AppendWaveformArray.vi" Type="VI" URL="../SubVIs/AppendWaveformArray.vi"/>
+			<Item Name="config.vi" Type="VI" URL="../SubVIs/config.vi"/>
+			<Item Name="decimate_waveforms.vi" Type="VI" URL="../SubVIs/decimate_waveforms.vi"/>
+			<Item Name="Display n or dt.vi" Type="VI" URL="../SubVIs/Display n or dt.vi"/>
+			<Item Name="FloatApprox.vi" Type="VI" URL="../SubVIs/FloatApprox.vi"/>
+			<Item Name="format display.vi" Type="VI" URL="../SubVIs/format display.vi"/>
+			<Item Name="Fs and Ns for integer periods.vi" Type="VI" URL="../SubVIs/Fs and Ns for integer periods.vi"/>
+			<Item Name="Fs_to_FilterDelay.vi" Type="VI" URL="../SubVIs/Fs_to_FilterDelay.vi"/>
+			<Item Name="Graph_TraceSelect_CheckBox.vi" Type="VI" URL="../SubVIs/Graph_TraceSelect_CheckBox.vi"/>
+			<Item Name="lockin - Set all f same.vi" Type="VI" URL="../SubVIs/lockin - Set all f same.vi"/>
+			<Item Name="lockin - Set REF f equal AO f.vi" Type="VI" URL="../SubVIs/lockin - Set REF f equal AO f.vi"/>
+			<Item Name="lockin - Set REF phase equals zero.vi" Type="VI" URL="../SubVIs/lockin - Set REF phase equals zero.vi"/>
+			<Item Name="Patrick-multichannel-Sim-Aq.vi" Type="VI" URL="../SubVIs/Patrick-multichannel-Sim-Aq.vi"/>
+			<Item Name="Prefilter_60Hz_Notch.vi" Type="VI" URL="../SubVIs/Prefilter_60Hz_Notch.vi"/>
+			<Item Name="Prefilter_LP.vi" Type="VI" URL="../SubVIs/Prefilter_LP.vi"/>
+			<Item Name="Replace timestamp.vi" Type="VI" URL="../SubVIs/Replace timestamp.vi"/>
+			<Item Name="Simple PID Array.vi" Type="VI" URL="../SubVIs/Simple PID Array.vi"/>
+			<Item Name="simple PID.vi" Type="VI" URL="../SubVIs/simple PID.vi"/>
+			<Item Name="Split 1D ARRAY in half.vi" Type="VI" URL="../SubVIs/Split 1D ARRAY in half.vi"/>
+			<Item Name="Split WAVEFORM array in half.vi" Type="VI" URL="../SubVIs/Split WAVEFORM array in half.vi"/>
+			<Item Name="StateHistory.vi" Type="VI" URL="../SubVIs/StateHistory.vi"/>
+			<Item Name="Waveform 64-128 channels LP pt by pt.vi" Type="VI" URL="../SubVIs/Waveform 64-128 channels LP pt by pt.vi"/>
+			<Item Name="write_lockin_FP_DSC.vi" Type="VI" URL="../SubVIs/write_lockin_FP_DSC.vi"/>
+			<Item Name="read_lockin_FP_DSC.vi" Type="VI" URL="../SubVIs/read_lockin_FP_DSC.vi"/>
+			<Item Name="update_rate_and_time.vi" Type="VI" URL="../SubVIs/update_rate_and_time.vi"/>
+			<Item Name="ms to Hz.vi" Type="VI" URL="../SubVIs/ms to Hz.vi"/>
+			<Item Name="getTimeWithError.vi" Type="VI" URL="../SubVIs/getTimeWithError.vi"/>
+			<Item Name="SI prefix.vi" Type="VI" URL="../SubVIs/SI prefix.vi"/>
+			<Item Name="DownKeyEvent.vi" Type="VI" URL="../SubVIs/DownKeyEvent.vi"/>
+			<Item Name="FPDAQtoDAQstrings.vi" Type="VI" URL="../SubVIs/FPDAQtoDAQstrings.vi"/>
+			<Item Name="LegendWaveformChart.vi" Type="VI" URL="../SubVIs/LegendWaveformChart.vi"/>
+			<Item Name="LegendWaveformGraph.vi" Type="VI" URL="../SubVIs/LegendWaveformGraph.vi"/>
+			<Item Name="LegendXYGraph.vi" Type="VI" URL="../SubVIs/LegendXYGraph.vi"/>
+			<Item Name="lockin - add phase element.vi" Type="VI" URL="../SubVIs/lockin - add phase element.vi"/>
+			<Item Name="Channel String to Number of Channels.vi" Type="VI" URL="../SubVIs/Channel String to Number of Channels.vi"/>
 		</Item>
 		<Item Name="subVIs - DAQ" Type="Folder">
-			<Item Name="44xx_AI_MinMax.vi" Type="VI" URL="../src/subVIs - DAQ/44xx_AI_MinMax.vi"/>
-			<Item Name="44xx_AO_MinMax.vi" Type="VI" URL="../src/subVIs - DAQ/44xx_AO_MinMax.vi"/>
-			<Item Name="4461 - AI AND AI - Read AND Write Uneven.vi" Type="VI" URL="../src/subVIs - DAQ/4461 - AI AND AI - Read AND Write Uneven.vi"/>
-			<Item Name="4461 - AI Read Data.vi" Type="VI" URL="../src/subVIs - DAQ/4461 - AI Read Data.vi"/>
-			<Item Name="4461 - AO Write Data.vi" Type="VI" URL="../src/subVIs - DAQ/4461 - AO Write Data.vi"/>
-			<Item Name="4461 - Cal Info.vi" Type="VI" URL="../src/subVIs - DAQ/4461 - Cal Info.vi"/>
-			<Item Name="4461 - Create AO waveforms.vi" Type="VI" URL="../src/subVIs - DAQ/4461 - Create AO waveforms.vi"/>
-			<Item Name="4461 - Create IO Channels Parallel Uneven.vi" Type="VI" URL="../src/subVIs - DAQ/4461 - Create IO Channels Parallel Uneven.vi"/>
-			<Item Name="4461 - Create Reference Waveforms.vi" Type="VI" URL="../src/subVIs - DAQ/4461 - Create Reference Waveforms.vi"/>
-			<Item Name="4461 - Lockin Engine.vi" Type="VI" URL="../src/subVIs - DAQ/4461 - Lockin Engine.vi"/>
-			<Item Name="4461 Sim - Noise.vi" Type="VI" URL="../src/subVIs - DAQ/4461 Sim - Noise.vi"/>
-			<Item Name="Cal Progress Bar.vi" Type="VI" URL="../src/subVIs - DAQ/Cal Progress Bar.vi"/>
-			<Item Name="Get Dev Product Type.vi" Type="VI" URL="../src/subVIs - DAQ/Get Dev Product Type.vi"/>
-			<Item Name="44xxRefClk.vi" Type="VI" URL="../src/subVIs - DAQ/44xxRefClk.vi"/>
-			<Item Name="Get Terminal Name with Device Prefix.vi" Type="VI" URL="../src/subVIs - DAQ/Get Terminal Name with Device Prefix.vi"/>
+			<Item Name="44xx_AI_MinMax.vi" Type="VI" URL="../subVIs - DAQ/44xx_AI_MinMax.vi"/>
+			<Item Name="44xx_AO_MinMax.vi" Type="VI" URL="../subVIs - DAQ/44xx_AO_MinMax.vi"/>
+			<Item Name="4461 - AI AND AI - Read AND Write Uneven.vi" Type="VI" URL="../subVIs - DAQ/4461 - AI AND AI - Read AND Write Uneven.vi"/>
+			<Item Name="4461 - AI Read Data.vi" Type="VI" URL="../subVIs - DAQ/4461 - AI Read Data.vi"/>
+			<Item Name="4461 - AO Write Data.vi" Type="VI" URL="../subVIs - DAQ/4461 - AO Write Data.vi"/>
+			<Item Name="4461 - Cal Info.vi" Type="VI" URL="../subVIs - DAQ/4461 - Cal Info.vi"/>
+			<Item Name="4461 - Create AO waveforms.vi" Type="VI" URL="../subVIs - DAQ/4461 - Create AO waveforms.vi"/>
+			<Item Name="4461 - Create IO Channels Parallel Uneven.vi" Type="VI" URL="../subVIs - DAQ/4461 - Create IO Channels Parallel Uneven.vi"/>
+			<Item Name="4461 - Create Reference Waveforms.vi" Type="VI" URL="../subVIs - DAQ/4461 - Create Reference Waveforms.vi"/>
+			<Item Name="4461 - Lockin Engine.vi" Type="VI" URL="../subVIs - DAQ/4461 - Lockin Engine.vi"/>
+			<Item Name="4461 Sim - Noise.vi" Type="VI" URL="../subVIs - DAQ/4461 Sim - Noise.vi"/>
+			<Item Name="Cal Progress Bar.vi" Type="VI" URL="../subVIs - DAQ/Cal Progress Bar.vi"/>
+			<Item Name="Get Dev Product Type.vi" Type="VI" URL="../subVIs - DAQ/Get Dev Product Type.vi"/>
+			<Item Name="44xxRefClk.vi" Type="VI" URL="../subVIs - DAQ/44xxRefClk.vi"/>
+			<Item Name="Get Terminal Name with Device Prefix.vi" Type="VI" URL="../subVIs - DAQ/Get Terminal Name with Device Prefix.vi"/>
 		</Item>
 		<Item Name="Typedefs" Type="Folder">
 			<Item Name="AO" Type="Folder">
 				<Property Name="NI.SortType" Type="Int">3</Property>
-				<Item Name="AO-cluster.ctl" Type="VI" URL="../src/Typedefs/AO-cluster.ctl"/>
-				<Item Name="AO_Amp-array.ctl" Type="VI" URL="../src/Typedefs/AO_Amp-array.ctl"/>
-				<Item Name="AO_DC-array.ctl" Type="VI" URL="../src/Typedefs/AO_DC-array.ctl"/>
-				<Item Name="AO_f-array.ctl" Type="VI" URL="../src/Typedefs/AO_f-array.ctl"/>
-				<Item Name="AO_phi-array.ctl" Type="VI" URL="../src/Typedefs/AO_phi-array.ctl"/>
-				<Item Name="Function-array.ctl" Type="VI" URL="../src/Typedefs/Function-array.ctl"/>
-				<Item Name="Function+DC-enum.ctl" Type="VI" URL="../src/Typedefs/Function+DC-enum.ctl"/>
-				<Item Name="Function-enum.ctl" Type="VI" URL="../src/Typedefs/Function-enum.ctl"/>
-				<Item Name="AO_Channel-Numeric.ctl" Type="VI" URL="../src/Typedefs/AO_Channel-Numeric.ctl"/>
+				<Item Name="AO-cluster.ctl" Type="VI" URL="../Typedefs/AO-cluster.ctl"/>
+				<Item Name="AO_Amp-array.ctl" Type="VI" URL="../Typedefs/AO_Amp-array.ctl"/>
+				<Item Name="AO_DC-array.ctl" Type="VI" URL="../Typedefs/AO_DC-array.ctl"/>
+				<Item Name="AO_f-array.ctl" Type="VI" URL="../Typedefs/AO_f-array.ctl"/>
+				<Item Name="AO_phi-array.ctl" Type="VI" URL="../Typedefs/AO_phi-array.ctl"/>
+				<Item Name="Function-array.ctl" Type="VI" URL="../Typedefs/Function-array.ctl"/>
+				<Item Name="Function+DC-enum.ctl" Type="VI" URL="../Typedefs/Function+DC-enum.ctl"/>
+				<Item Name="Function-enum.ctl" Type="VI" URL="../Typedefs/Function-enum.ctl"/>
+				<Item Name="AO_Channel-Numeric.ctl" Type="VI" URL="../Typedefs/AO_Channel-Numeric.ctl"/>
 			</Item>
 			<Item Name="DAQ" Type="Folder">
 				<Property Name="NI.SortType" Type="Int">3</Property>
-				<Item Name="446xAI-enum.ctl" Type="VI" URL="../src/Typedefs/446xAI-enum.ctl"/>
-				<Item Name="AI.config-array.ctl" Type="VI" URL="../src/Typedefs/AI.config-array.ctl"/>
-				<Item Name="AI.config-cluster.ctl" Type="VI" URL="../src/Typedefs/AI.config-cluster.ctl"/>
-				<Item Name="AI.coupling-enum.ctl" Type="VI" URL="../src/Typedefs/AI.coupling-enum.ctl"/>
-				<Item Name="446xAO-enum.ctl" Type="VI" URL="../src/Typedefs/446xAO-enum.ctl"/>
-				<Item Name="AO.config-array.ctl" Type="VI" URL="../src/Typedefs/AO.config-array.ctl"/>
-				<Item Name="AO.config-cluster.ctl" Type="VI" URL="../src/Typedefs/AO.config-cluster.ctl"/>
-				<Item Name="Sampling.ctl" Type="VI" URL="../src/Typedefs/Sampling.ctl"/>
+				<Item Name="446xAI-enum.ctl" Type="VI" URL="../Typedefs/446xAI-enum.ctl"/>
+				<Item Name="AI.config-array.ctl" Type="VI" URL="../Typedefs/AI.config-array.ctl"/>
+				<Item Name="AI.config-cluster.ctl" Type="VI" URL="../Typedefs/AI.config-cluster.ctl"/>
+				<Item Name="AI.coupling-enum.ctl" Type="VI" URL="../Typedefs/AI.coupling-enum.ctl"/>
+				<Item Name="446xAO-enum.ctl" Type="VI" URL="../Typedefs/446xAO-enum.ctl"/>
+				<Item Name="AO.config-array.ctl" Type="VI" URL="../Typedefs/AO.config-array.ctl"/>
+				<Item Name="AO.config-cluster.ctl" Type="VI" URL="../Typedefs/AO.config-cluster.ctl"/>
+				<Item Name="Sampling.ctl" Type="VI" URL="../Typedefs/Sampling.ctl"/>
 			</Item>
 			<Item Name="REF" Type="Folder">
-				<Item Name="REF-cluster.ctl" Type="VI" URL="../src/Typedefs/REF-cluster.ctl"/>
-				<Item Name="REF_f-array.ctl" Type="VI" URL="../src/Typedefs/REF_f-array.ctl"/>
-				<Item Name="REF_phi-array.ctl" Type="VI" URL="../src/Typedefs/REF_phi-array.ctl"/>
-				<Item Name="REF filter-cluster.ctl" Type="VI" URL="../src/Typedefs/REF filter-cluster.ctl"/>
-				<Item Name="REF_Channel-Numeric.ctl" Type="VI" URL="../src/Typedefs/REF_Channel-Numeric.ctl"/>
+				<Item Name="REF-cluster.ctl" Type="VI" URL="../Typedefs/REF-cluster.ctl"/>
+				<Item Name="REF_f-array.ctl" Type="VI" URL="../Typedefs/REF_f-array.ctl"/>
+				<Item Name="REF_phi-array.ctl" Type="VI" URL="../Typedefs/REF_phi-array.ctl"/>
+				<Item Name="REF filter-cluster.ctl" Type="VI" URL="../Typedefs/REF filter-cluster.ctl"/>
+				<Item Name="REF_Channel-Numeric.ctl" Type="VI" URL="../Typedefs/REF_Channel-Numeric.ctl"/>
 			</Item>
-			<Item Name="Front Panel Cluster.ctl" Type="VI" URL="../src/Typedefs/Front Panel Cluster.ctl"/>
-			<Item Name="AmplifierType-enum.ctl" Type="VI" URL="../src/Typedefs/AmplifierType-enum.ctl"/>
-			<Item Name="DAQType-enum.ctl" Type="VI" URL="../src/Typedefs/DAQType-enum.ctl"/>
-			<Item Name="INI-enum.ctl" Type="VI" URL="../src/Typedefs/INI-enum.ctl"/>
-			<Item Name="XP Style VISA Control.ctl" Type="VI" URL="../src/Typedefs/XP Style VISA Control.ctl"/>
-			<Item Name="Cal Info - Cluster.ctl" Type="VI" URL="../src/Typedefs/Cal Info - Cluster.ctl"/>
+			<Item Name="Front Panel Cluster.ctl" Type="VI" URL="../Typedefs/Front Panel Cluster.ctl"/>
+			<Item Name="AmplifierType-enum.ctl" Type="VI" URL="../Typedefs/AmplifierType-enum.ctl"/>
+			<Item Name="DAQType-enum.ctl" Type="VI" URL="../Typedefs/DAQType-enum.ctl"/>
+			<Item Name="INI-enum.ctl" Type="VI" URL="../Typedefs/INI-enum.ctl"/>
+			<Item Name="XP Style VISA Control.ctl" Type="VI" URL="../Typedefs/XP Style VISA Control.ctl"/>
+			<Item Name="Cal Info - Cluster.ctl" Type="VI" URL="../Typedefs/Cal Info - Cluster.ctl"/>
 		</Item>
 		<Item Name="RemoteControl" Type="Folder">
-			<Item Name="LockinRemoteControl.lvclass" Type="LVClass" URL="../src/RemoteControl/LockinRemoteControl.lvclass"/>
+			<Item Name="LockinRemoteControl.lvclass" Type="LVClass" URL="../RemoteControl/LockinRemoteControl.lvclass"/>
 		</Item>
-		<Item Name="Lockin-4461 -Patrick -State.vi" Type="VI" URL="../src/Lockin-4461 -Patrick -State.vi"/>
+		<Item Name="Lockin-4461 -Patrick -State.vi" Type="VI" URL="../Lockin-4461 -Patrick -State.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="1D Array to String__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/string/string.llb/1D Array to String__ogtk.vi"/>
