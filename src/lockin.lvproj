@@ -121,6 +121,7 @@
 			<Item Name="4461 - Create IO Channels Parallel Uneven.vi" Type="VI" URL="../subVIs - DAQ/4461 - Create IO Channels Parallel Uneven.vi"/>
 			<Item Name="4461 - Create Reference Waveforms.vi" Type="VI" URL="../subVIs - DAQ/4461 - Create Reference Waveforms.vi"/>
 			<Item Name="4461 - Lockin Engine.vi" Type="VI" URL="../subVIs - DAQ/4461 - Lockin Engine.vi"/>
+			<Item Name="4461 - Stop Tasks.vi" Type="VI" URL="../subVIs - DAQ/4461 - Stop Tasks.vi"/>
 			<Item Name="4461 Sim - Noise.vi" Type="VI" URL="../subVIs - DAQ/4461 Sim - Noise.vi"/>
 			<Item Name="Cal Progress Bar.vi" Type="VI" URL="../subVIs - DAQ/Cal Progress Bar.vi"/>
 			<Item Name="Get Dev Product Type.vi" Type="VI" URL="../subVIs - DAQ/Get Dev Product Type.vi"/>
