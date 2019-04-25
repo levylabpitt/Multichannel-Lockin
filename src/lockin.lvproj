@@ -111,22 +111,11 @@
 			<Item Name="Channel String to Number of Channels.vi" Type="VI" URL="../SubVIs/Channel String to Number of Channels.vi"/>
 		</Item>
 		<Item Name="subVIs - DAQ" Type="Folder">
-			<Item Name="44xx_AI_MinMax.vi" Type="VI" URL="../subVIs - DAQ/44xx_AI_MinMax.vi"/>
-			<Item Name="44xx_AO_MinMax.vi" Type="VI" URL="../subVIs - DAQ/44xx_AO_MinMax.vi"/>
-			<Item Name="4461 - AI AND AI - Read AND Write Uneven.vi" Type="VI" URL="../subVIs - DAQ/4461 - AI AND AI - Read AND Write Uneven.vi"/>
-			<Item Name="4461 - AI Read Data.vi" Type="VI" URL="../subVIs - DAQ/4461 - AI Read Data.vi"/>
-			<Item Name="4461 - AO Write Data.vi" Type="VI" URL="../subVIs - DAQ/4461 - AO Write Data.vi"/>
-			<Item Name="4461 - Cal Info.vi" Type="VI" URL="../subVIs - DAQ/4461 - Cal Info.vi"/>
 			<Item Name="4461 - Create AO waveforms.vi" Type="VI" URL="../subVIs - DAQ/4461 - Create AO waveforms.vi"/>
-			<Item Name="4461 - Create IO Channels Parallel Uneven.vi" Type="VI" URL="../subVIs - DAQ/4461 - Create IO Channels Parallel Uneven.vi"/>
 			<Item Name="4461 - Create Reference Waveforms.vi" Type="VI" URL="../subVIs - DAQ/4461 - Create Reference Waveforms.vi"/>
 			<Item Name="4461 - Lockin Engine.vi" Type="VI" URL="../subVIs - DAQ/4461 - Lockin Engine.vi"/>
-			<Item Name="4461 - Stop Tasks.vi" Type="VI" URL="../subVIs - DAQ/4461 - Stop Tasks.vi"/>
 			<Item Name="4461 Sim - Noise.vi" Type="VI" URL="../subVIs - DAQ/4461 Sim - Noise.vi"/>
-			<Item Name="Cal Progress Bar.vi" Type="VI" URL="../subVIs - DAQ/Cal Progress Bar.vi"/>
 			<Item Name="Get Dev Product Type.vi" Type="VI" URL="../subVIs - DAQ/Get Dev Product Type.vi"/>
-			<Item Name="44xxRefClk.vi" Type="VI" URL="../subVIs - DAQ/44xxRefClk.vi"/>
-			<Item Name="Get Terminal Name with Device Prefix.vi" Type="VI" URL="../subVIs - DAQ/Get Terminal Name with Device Prefix.vi"/>
 		</Item>
 		<Item Name="Typedefs" Type="Folder">
 			<Item Name="AO" Type="Folder">
@@ -166,9 +155,8 @@
 			<Item Name="XP Style VISA Control.ctl" Type="VI" URL="../Typedefs/XP Style VISA Control.ctl"/>
 			<Item Name="Cal Info - Cluster.ctl" Type="VI" URL="../Typedefs/Cal Info - Cluster.ctl"/>
 		</Item>
-		<Item Name="RemoteControl" Type="Folder">
-			<Item Name="LockinRemoteControl.lvclass" Type="LVClass" URL="../RemoteControl/LockinRemoteControl.lvclass"/>
-		</Item>
+		<Item Name="LockinDAQ.lvclass" Type="LVClass" URL="../LockinDAQ/LockinDAQ.lvclass"/>
+		<Item Name="LockinRemoteControl.lvclass" Type="LVClass" URL="../RemoteControl/LockinRemoteControl.lvclass"/>
 		<Item Name="Lockin-4461 -Patrick -State.vi" Type="VI" URL="../Lockin-4461 -Patrick -State.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
