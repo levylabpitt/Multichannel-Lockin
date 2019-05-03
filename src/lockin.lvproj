@@ -99,11 +99,7 @@
 			<Item Name="Channel String to Number of Channels.vi" Type="VI" URL="../SubVIs/Channel String to Number of Channels.vi"/>
 		</Item>
 		<Item Name="subVIs - DAQ" Type="Folder">
-			<Item Name="4461 - Create AO waveforms.vi" Type="VI" URL="../subVIs - DAQ/4461 - Create AO waveforms.vi"/>
-			<Item Name="4461 - Create Reference Waveforms.vi" Type="VI" URL="../subVIs - DAQ/4461 - Create Reference Waveforms.vi"/>
-			<Item Name="4461 - Lockin Engine.vi" Type="VI" URL="../subVIs - DAQ/4461 - Lockin Engine.vi"/>
 			<Item Name="4461 Sim - Noise.vi" Type="VI" URL="../subVIs - DAQ/4461 Sim - Noise.vi"/>
-			<Item Name="Get Dev Product Type.vi" Type="VI" URL="../subVIs - DAQ/Get Dev Product Type.vi"/>
 		</Item>
 		<Item Name="Typedefs" Type="Folder">
 			<Item Name="AO" Type="Folder">
@@ -368,7 +364,8 @@
 				<Item Name="MGI Search Sorted.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/String/MGI Search Sorted.vi"/>
 				<Item Name="MGI String Pattern Match Exists.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/String/MGI String Pattern Match Exists.vi"/>
 				<Item Name="Format number_123456.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/FileUtilities/Format number_123456.vi"/>
-				<Item Name="sfpCore Hue to RGB.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/ColorUtillities/sfpCore Hue to RGB.vi"/>
+				<Item Name="MGI Append String to Error Source.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Error Handling/MGI Append String to Error Source.vi"/>
+				<Item Name="MGI Make String Filesafe.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/String/MGI Make String Filesafe.vi"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
@@ -777,16 +774,10 @@
 				<Item Name="Create Semaphore.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Create Semaphore.vi"/>
 				<Item Name="Acquire Semaphore.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Acquire Semaphore.vi"/>
 				<Item Name="Guid Generator.vi" Type="VI" URL="/&lt;vilib&gt;/National Instruments/GUID Generator/Guid Generator.vi"/>
-				<Item Name="DAQmx Rollback Channel If Error.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Rollback Channel If Error.vi"/>
-				<Item Name="DAQmx Create AI Channel (sub).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create AI Channel (sub).vi"/>
-				<Item Name="DAQmx Set CJC Parameters (sub).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Set CJC Parameters (sub).vi"/>
-				<Item Name="DAQmx Create AO Channel (sub).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create AO Channel (sub).vi"/>
-				<Item Name="DAQmx Create DI Channel (sub).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create DI Channel (sub).vi"/>
-				<Item Name="DAQmx Create DO Channel (sub).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create DO Channel (sub).vi"/>
-				<Item Name="DAQmx Create CI Channel (sub).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create CI Channel (sub).vi"/>
-				<Item Name="DAQmx Create CO Channel (sub).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create CO Channel (sub).vi"/>
-				<Item Name="DAQmx Create AI Channel TEDS(sub).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create AI Channel TEDS(sub).vi"/>
-				<Item Name="DAQmx Create Strain Rosette AI Channels (sub).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create Strain Rosette AI Channels (sub).vi"/>
+				<Item Name="DAQmx Create Channel (AI-Acceleration-4 Wire DC Voltage).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create Channel (AI-Acceleration-4 Wire DC Voltage).vi"/>
+				<Item Name="DAQmx Create Channel (AI-Acceleration-Charge).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create Channel (AI-Acceleration-Charge).vi"/>
+				<Item Name="DAQmx Create Channel (AI-Charge).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create Channel (AI-Charge).vi"/>
+				<Item Name="IVI Error Message Builder.vi" Type="VI" URL="/&lt;vilib&gt;/errclust.llb/IVI Error Message Builder.vi"/>
 			</Item>
 			<Item Name="instr.lib" Type="Folder">
 				<Item Name="pi40iv Close.vi" Type="VI" URL="/&lt;instrlib&gt;/pi40iv/pi40iv.llb/pi40iv Close.vi"/>
@@ -794,6 +785,7 @@
 				<Item Name="pi40iv Connect Channels.vi" Type="VI" URL="/&lt;instrlib&gt;/pi40iv/pi40iv.llb/pi40iv Connect Channels.vi"/>
 				<Item Name="pi40iv Disconnect All Channels.vi" Type="VI" URL="/&lt;instrlib&gt;/pi40iv/pi40iv.llb/pi40iv Disconnect All Channels.vi"/>
 				<Item Name="pi40iv Initialize With Options.vi" Type="VI" URL="/&lt;instrlib&gt;/pi40iv/pi40iv.llb/pi40iv Initialize With Options.vi"/>
+				<Item Name="pi40iv IVI Error Converter.vi" Type="VI" URL="/&lt;instrlib&gt;/pi40iv/pi40iv.llb/pi40iv IVI Error Converter.vi"/>
 			</Item>
 			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -822,8 +814,9 @@
 			<Item Name="FGV - Signals - Output.vi" Type="VI" URL="../FGV/FGV - Signals - Output.vi"/>
 			<Item Name="FGV - Configuration - lockin.vi" Type="VI" URL="../FGV/FGV - Configuration - lockin.vi"/>
 			<Item Name="FGV - Fs Divisor.vi" Type="VI" URL="../FGV/FGV - Fs Divisor.vi"/>
-			<Item Name="MGI Append String to Error Source.vi" Type="VI" URL="../../../leiden-tc/1. Sources TC/lib/Lib.llb/MGI Append String to Error Source.vi"/>
-			<Item Name="MGI Make String Filesafe.vi" Type="VI" URL="../../../leiden-tc/1. Sources TC/lib/Lib.llb/MGI Make String Filesafe.vi"/>
+			<Item Name="pi40iv32.dll" Type="Document" URL="pi40iv32.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lockin" Type="EXE">

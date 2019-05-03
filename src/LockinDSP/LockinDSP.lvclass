@@ -47,4 +47,13 @@
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 		<Property Name="NI.ClassItem.State" Type="Int">1082143248</Property>
 	</Item>
+	<Item Name="4461 - Lockin Engine.vi" Type="VI" URL="../4461 - Lockin Engine.vi">
+		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%[!!!!$A!61!I!$G:J&lt;(2F=C"G1S!I3(IJ!!!%!!!!#U!+!!2N:7&amp;O!!!G1%!!!P``````````!!)65G6T&gt;7RU=S!I7#R:,&amp;)M6'BF&gt;'%J!!N!!Q!&amp;&lt;X*E:8)!$5!+!!:51S!I=SE!!!F!#A!#2H-!!!F!#A!#)X-!!"B!5!!#!!9!"QVT97VQ&lt;'FO:S"J&lt;G:P!"*!6!!$#H.J:WZB&lt;#"P&gt;81!!"J!1!!"`````Q!*$&amp;*F:G6S:7ZD:3"*&lt;A!!%%"5!!-)6W&amp;W:7:P=GU!!":!1!!"`````Q!,#6.J:WZB&lt;#"J&lt;A"5!0!!$!!!!!%!!1!$!!1!!1!&amp;!!%!!1!)!!I!$!-!!(A!!!U'!!!!!!!!!!!!!!E!!!!)!!!!!!!!!!I!!!!!!!!!!!!!!!A!!!!+!!!##!!!!!!"!!U!!!!!</Property>
+		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">1082143248</Property>
+	</Item>
 </LVClass>
