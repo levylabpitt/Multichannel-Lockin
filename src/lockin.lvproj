@@ -805,6 +805,8 @@
 				<Item Name="Create Semaphore.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Create Semaphore.vi"/>
 				<Item Name="Acquire Semaphore.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Acquire Semaphore.vi"/>
 				<Item Name="Guid Generator.vi" Type="VI" URL="/&lt;vilib&gt;/National Instruments/GUID Generator/Guid Generator.vi"/>
+				<Item Name="System Directory Type.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/sysdir.llb/System Directory Type.ctl"/>
+				<Item Name="Get System Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/sysdir.llb/Get System Directory.vi"/>
 			</Item>
 			<Item Name="instr.lib" Type="Folder">
 				<Item Name="pi40iv IVI Error Converter.vi" Type="VI" URL="/&lt;instrlib&gt;/pi40iv/pi40iv.llb/pi40iv IVI Error Converter.vi"/>
@@ -835,6 +837,13 @@
 			<Item Name="mscorlib" Type="VI" URL="mscorlib">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="AO_Amp-array.ctl" Type="VI" URL="../../.src/Typedefs/AO_Amp-array.ctl"/>
+			<Item Name="AO_DC-array.ctl" Type="VI" URL="../../.src/Typedefs/AO_DC-array.ctl"/>
+			<Item Name="AO_phi-array.ctl" Type="VI" URL="../../.src/Typedefs/AO_phi-array.ctl"/>
+			<Item Name="Function-enum.ctl" Type="VI" URL="../../.src/Typedefs/Function-enum.ctl"/>
+			<Item Name="Function-array.ctl" Type="VI" URL="../../.src/Typedefs/Function-array.ctl"/>
+			<Item Name="AO_f-array.ctl" Type="VI" URL="../../.src/Typedefs/AO_f-array.ctl"/>
+			<Item Name="AO-cluster.ctl" Type="VI" URL="../../.src/Typedefs/AO-cluster.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lockin" Type="EXE">
