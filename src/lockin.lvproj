@@ -837,13 +837,6 @@
 			<Item Name="mscorlib" Type="VI" URL="mscorlib">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="AO_Amp-array.ctl" Type="VI" URL="../../.src/Typedefs/AO_Amp-array.ctl"/>
-			<Item Name="AO_DC-array.ctl" Type="VI" URL="../../.src/Typedefs/AO_DC-array.ctl"/>
-			<Item Name="AO_phi-array.ctl" Type="VI" URL="../../.src/Typedefs/AO_phi-array.ctl"/>
-			<Item Name="Function-enum.ctl" Type="VI" URL="../../.src/Typedefs/Function-enum.ctl"/>
-			<Item Name="Function-array.ctl" Type="VI" URL="../../.src/Typedefs/Function-array.ctl"/>
-			<Item Name="AO_f-array.ctl" Type="VI" URL="../../.src/Typedefs/AO_f-array.ctl"/>
-			<Item Name="AO-cluster.ctl" Type="VI" URL="../../.src/Typedefs/AO-cluster.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lockin" Type="EXE">
