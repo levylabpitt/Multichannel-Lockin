@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-05-16 17:34:55" Creator="Patrick Irvin" Comments="" ID="09baa42e777935b45343e5f39f3ee946">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-05-17 14:05:59" Creator="Patrick Irvin" Comments="" ID="f21c16929234fcd66d0c85ce89d61ad0">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.5.13.89</Library_Version>
+    <Library_Version>2.5.15.90</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -83,10 +83,8 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.5.14.88]
-- bugfix continuous/finite update AO
-- ini files saved in C:\ProgramData\LevyLab\Lockin\
-- fix bug in configIVmode method</Release_Notes>
+      <Release_Notes>[2.5.15.89]
+- defer updates to graph</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -312,7 +310,7 @@
         <Path>Lockin-4461 -Patrick -State.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>A4400564E8C4828721C322ABF056BDB6</GUID>
+      <GUID>AFDDAFE6A307D4BF13D4B93F5304D314</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -711,7 +709,7 @@
         <Path>API\readAO.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>FD2707BC75A39C9E14CF808C5E7F74CA</GUID>
+      <GUID>C936BFBBE0F4198EB93FD8AE0A9C6ADD</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -760,7 +758,7 @@
         <Path>Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>7FA9D2BB53A6E013BBFED962EE9BDF51</GUID>
+      <GUID>80F982E8685381818B0ADC8C8231668A</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -851,7 +849,7 @@
         <Path>Expt\Lockin_Metrics_Results.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>1CDA583D1B6B9A4AA1FE89A6D0F47E26</GUID>
+      <GUID>9C73F6B21A6A356EB6225C6F8820D34E</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -900,7 +898,7 @@
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>DAB4911CEA85E41B97A1590088CC92D0</GUID>
+      <GUID>FA4548609D403D1C5A30EAD8924B9595</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -935,7 +933,7 @@
         <Path>RemoteControl\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>BBB265704768DAACCFBD9A2980279246</GUID>
+      <GUID>3EBF2701132BB59DDBC47E942EE59DDD</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1348,7 +1346,7 @@
         <Path>Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>50775379340BF3C06BF483EBD4C22C8D</GUID>
+      <GUID>F3D9F15718253C1DDA0C5F3C38BFA56A</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1677,7 +1675,7 @@
         <Path>RemoteControl\Typedefs\Remote-SMO-Commands-Enum.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>25403AE9F776AA941C672F8B6F999308</GUID>
+      <GUID>20A21FE2A27DC60123CA60DC4574CD35</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
