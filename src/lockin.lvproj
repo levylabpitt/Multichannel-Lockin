@@ -58,18 +58,6 @@
 			<Item Name="446xAntiAliasSimulator.vi" Type="VI" URL="../Expt/446xAntiAliasSimulator.vi"/>
 			<Item Name="Lockin Noise Measurement.vi" Type="VI" URL="../Expt/Lockin Noise Measurement.vi"/>
 		</Item>
-		<Item Name="FGV (don&apos;t use!)" Type="Folder">
-			<Item Name="FGV - Configuration - lockin.vi" Type="VI" URL="../FGV/FGV - Configuration - lockin.vi"/>
-			<Item Name="FGV - Configuration - Output.vi" Type="VI" URL="../FGV/FGV - Configuration - Output.vi"/>
-			<Item Name="FGV - Fs Divisor.vi" Type="VI" URL="../FGV/FGV - Fs Divisor.vi"/>
-			<Item Name="FGV - IV mode.vi" Type="VI" URL="../FGV/FGV - IV mode.vi"/>
-			<Item Name="FGV - Remote.vi" Type="VI" URL="../FGV/FGV - Remote.vi"/>
-			<Item Name="FGV - Reset.vi" Type="VI" URL="../FGV/FGV - Reset.vi"/>
-			<Item Name="FGV - Trigger.vi" Type="VI" URL="../FGV/FGV - Trigger.vi"/>
-			<Item Name="FGV - Lockin Results.vi" Type="VI" URL="../FGV/FGV - Lockin Results.vi"/>
-			<Item Name="FGV - Signals - Input.vi" Type="VI" URL="../FGV/FGV - Signals - Input.vi"/>
-			<Item Name="FGV - Signals - Output.vi" Type="VI" URL="../FGV/FGV - Signals - Output.vi"/>
-		</Item>
 		<Item Name="SubVIs" Type="Folder">
 			<Item Name="AI.Coupling.enum.convert.vi" Type="VI" URL="../SubVIs/AI.Coupling.enum.convert.vi"/>
 			<Item Name="AI_Select_CheckBox.vi" Type="VI" URL="../SubVIs/AI_Select_CheckBox.vi"/>
@@ -837,6 +825,15 @@
 			<Item Name="mscorlib" Type="VI" URL="mscorlib">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="FGV - Remote.vi" Type="VI" URL="../FGV/FGV - Remote.vi"/>
+			<Item Name="FGV - IV mode.vi" Type="VI" URL="../FGV/FGV - IV mode.vi"/>
+			<Item Name="FGV - Configuration - Output.vi" Type="VI" URL="../FGV/FGV - Configuration - Output.vi"/>
+			<Item Name="FGV - Trigger.vi" Type="VI" URL="../FGV/FGV - Trigger.vi"/>
+			<Item Name="FGV - Lockin Results.vi" Type="VI" URL="../FGV/FGV - Lockin Results.vi"/>
+			<Item Name="FGV - Signals - Input.vi" Type="VI" URL="../FGV/FGV - Signals - Input.vi"/>
+			<Item Name="FGV - Signals - Output.vi" Type="VI" URL="../FGV/FGV - Signals - Output.vi"/>
+			<Item Name="FGV - Configuration - lockin.vi" Type="VI" URL="../FGV/FGV - Configuration - lockin.vi"/>
+			<Item Name="FGV - Fs Divisor.vi" Type="VI" URL="../FGV/FGV - Fs Divisor.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lockin" Type="EXE">
