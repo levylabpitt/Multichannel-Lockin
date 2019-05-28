@@ -99,6 +99,7 @@
 			<Item Name="LegendXYGraph.vi" Type="VI" URL="../SubVIs/LegendXYGraph.vi"/>
 			<Item Name="lockin - add phase element.vi" Type="VI" URL="../SubVIs/lockin - add phase element.vi"/>
 			<Item Name="Channel String to Number of Channels.vi" Type="VI" URL="../SubVIs/Channel String to Number of Channels.vi"/>
+			<Item Name="Spinner.vi" Type="VI" URL="../RemoteControl/Spinner.vi"/>
 		</Item>
 		<Item Name="subVIs - DAQ" Type="Folder">
 			<Item Name="44xx_AI_MinMax.vi" Type="VI" URL="../subVIs - DAQ/44xx_AI_MinMax.vi"/>
@@ -763,15 +764,6 @@
 			<Item Name="shell32.dll" Type="Document" URL="shell32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="FGV - Remote.vi" Type="VI" URL="../FGV/FGV - Remote.vi"/>
-			<Item Name="FGV - IV mode.vi" Type="VI" URL="../FGV/FGV - IV mode.vi"/>
-			<Item Name="FGV - Configuration - Output.vi" Type="VI" URL="../FGV/FGV - Configuration - Output.vi"/>
-			<Item Name="FGV - Trigger.vi" Type="VI" URL="../FGV/FGV - Trigger.vi"/>
-			<Item Name="FGV - Lockin Results.vi" Type="VI" URL="../FGV/FGV - Lockin Results.vi"/>
-			<Item Name="FGV - Signals - Input.vi" Type="VI" URL="../FGV/FGV - Signals - Input.vi"/>
-			<Item Name="FGV - Signals - Output.vi" Type="VI" URL="../FGV/FGV - Signals - Output.vi"/>
-			<Item Name="FGV - Configuration - lockin.vi" Type="VI" URL="../FGV/FGV - Configuration - lockin.vi"/>
-			<Item Name="FGV - Fs Divisor.vi" Type="VI" URL="../FGV/FGV - Fs Divisor.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lockin" Type="EXE">
