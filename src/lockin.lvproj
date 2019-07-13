@@ -40,7 +40,6 @@
 			<Item Name="configAO_f.vi" Type="VI" URL="../API/configAO_f.vi"/>
 			<Item Name="configAO_function.vi" Type="VI" URL="../API/configAO_function.vi"/>
 			<Item Name="configAO_phi.vi" Type="VI" URL="../API/configAO_phi.vi"/>
-			<Item Name="configRemote.vi" Type="VI" URL="../API/configRemote.vi"/>
 			<Item Name="configREF.vi" Type="VI" URL="../API/configREF.vi"/>
 			<Item Name="configREF_f.vi" Type="VI" URL="../API/configREF_f.vi"/>
 			<Item Name="configREF_phi.vi" Type="VI" URL="../API/configREF_phi.vi"/>
@@ -119,47 +118,8 @@
 			<Item Name="44xxRefClk.vi" Type="VI" URL="../subVIs - DAQ/44xxRefClk.vi"/>
 			<Item Name="Get Terminal Name with Device Prefix.vi" Type="VI" URL="../subVIs - DAQ/Get Terminal Name with Device Prefix.vi"/>
 		</Item>
-		<Item Name="Typedefs" Type="Folder">
-			<Item Name="AO" Type="Folder">
-				<Property Name="NI.SortType" Type="Int">3</Property>
-				<Item Name="AO-cluster.ctl" Type="VI" URL="../Typedefs/AO-cluster.ctl"/>
-				<Item Name="AO_Amp-array.ctl" Type="VI" URL="../Typedefs/AO_Amp-array.ctl"/>
-				<Item Name="AO_DC-array.ctl" Type="VI" URL="../Typedefs/AO_DC-array.ctl"/>
-				<Item Name="AO_f-array.ctl" Type="VI" URL="../Typedefs/AO_f-array.ctl"/>
-				<Item Name="AO_phi-array.ctl" Type="VI" URL="../Typedefs/AO_phi-array.ctl"/>
-				<Item Name="Function-array.ctl" Type="VI" URL="../Typedefs/Function-array.ctl"/>
-				<Item Name="Function+DC-enum.ctl" Type="VI" URL="../Typedefs/Function+DC-enum.ctl"/>
-				<Item Name="Function-enum.ctl" Type="VI" URL="../Typedefs/Function-enum.ctl"/>
-				<Item Name="AO_Channel-Numeric.ctl" Type="VI" URL="../Typedefs/AO_Channel-Numeric.ctl"/>
-			</Item>
-			<Item Name="DAQ" Type="Folder">
-				<Property Name="NI.SortType" Type="Int">3</Property>
-				<Item Name="446xAI-enum.ctl" Type="VI" URL="../Typedefs/446xAI-enum.ctl"/>
-				<Item Name="AI.config-array.ctl" Type="VI" URL="../Typedefs/AI.config-array.ctl"/>
-				<Item Name="AI.config-cluster.ctl" Type="VI" URL="../Typedefs/AI.config-cluster.ctl"/>
-				<Item Name="AI.coupling-enum.ctl" Type="VI" URL="../Typedefs/AI.coupling-enum.ctl"/>
-				<Item Name="446xAO-enum.ctl" Type="VI" URL="../Typedefs/446xAO-enum.ctl"/>
-				<Item Name="AO.config-array.ctl" Type="VI" URL="../Typedefs/AO.config-array.ctl"/>
-				<Item Name="AO.config-cluster.ctl" Type="VI" URL="../Typedefs/AO.config-cluster.ctl"/>
-				<Item Name="Sampling.ctl" Type="VI" URL="../Typedefs/Sampling.ctl"/>
-			</Item>
-			<Item Name="REF" Type="Folder">
-				<Item Name="REF-cluster.ctl" Type="VI" URL="../Typedefs/REF-cluster.ctl"/>
-				<Item Name="REF_f-array.ctl" Type="VI" URL="../Typedefs/REF_f-array.ctl"/>
-				<Item Name="REF_phi-array.ctl" Type="VI" URL="../Typedefs/REF_phi-array.ctl"/>
-				<Item Name="REF filter-cluster.ctl" Type="VI" URL="../Typedefs/REF filter-cluster.ctl"/>
-				<Item Name="REF_Channel-Numeric.ctl" Type="VI" URL="../Typedefs/REF_Channel-Numeric.ctl"/>
-			</Item>
-			<Item Name="Front Panel Cluster.ctl" Type="VI" URL="../Typedefs/Front Panel Cluster.ctl"/>
-			<Item Name="AmplifierType-enum.ctl" Type="VI" URL="../Typedefs/AmplifierType-enum.ctl"/>
-			<Item Name="DAQType-enum.ctl" Type="VI" URL="../Typedefs/DAQType-enum.ctl"/>
-			<Item Name="INI-enum.ctl" Type="VI" URL="../Typedefs/INI-enum.ctl"/>
-			<Item Name="XP Style VISA Control.ctl" Type="VI" URL="../Typedefs/XP Style VISA Control.ctl"/>
-			<Item Name="Cal Info - Cluster.ctl" Type="VI" URL="../Typedefs/Cal Info - Cluster.ctl"/>
-		</Item>
-		<Item Name="RemoteControl" Type="Folder">
-			<Item Name="LockinRemoteControl.lvclass" Type="LVClass" URL="../RemoteControl/LockinRemoteControl.lvclass"/>
-		</Item>
+		<Item Name="Typedefs" Type="Folder"/>
+		<Item Name="RemoteControl" Type="Folder"/>
 		<Item Name="Instrument.Lockin.lvclass" Type="LVClass" URL="../Instrument.Lockin/Instrument.Lockin.lvclass"/>
 		<Item Name="Instrument.Lockin.UI.lvclass" Type="LVClass" URL="../Instrument.Lockinl.UI/Instrument.Lockin.UI.lvclass"/>
 		<Item Name="Dependencies" Type="Dependencies">
