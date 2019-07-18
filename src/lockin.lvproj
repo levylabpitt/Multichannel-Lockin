@@ -58,6 +58,7 @@
 			<Item Name="Lockin_Metrics_Results.vi" Type="VI" URL="../Expt/Lockin_Metrics_Results.vi"/>
 			<Item Name="446xAntiAliasSimulator.vi" Type="VI" URL="../Expt/446xAntiAliasSimulator.vi"/>
 			<Item Name="Lockin Noise Measurement.vi" Type="VI" URL="../Expt/Lockin Noise Measurement.vi"/>
+			<Item Name="serialize_test.vi" Type="VI" URL="../Expt/serialize_test.vi"/>
 		</Item>
 		<Item Name="SubVIs" Type="Folder">
 			<Item Name="AI.Coupling.enum.convert.vi" Type="VI" URL="../SubVIs/AI.Coupling.enum.convert.vi"/>
