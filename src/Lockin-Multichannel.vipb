@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-07-13 08:44:13" Creator="Patrick Irvin" Comments="" ID="8acb77b1668a02f764ca2feb94b6370f">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-07-18 17:16:40" Creator="Patrick Irvin" Comments="" ID="3c6c94513606479dc78d43b3dc5ea3b8">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.5.19.94</Library_Version>
+    <Library_Version>2.5.19.95</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -81,10 +81,8 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.5.19.93]
-- remove read/write to DSC
-- adjust timeout
-- add logic to phase adjust state</Release_Notes>
+      <Release_Notes>[2.5.19.94]
+- make window default appearence (meaning the abort button is visible)</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -310,7 +308,7 @@
         <Path>Lockin-4461 -Patrick -State.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>A39FA7472D053EA6AB326AE458198EAB</GUID>
+      <GUID>EB8EC0CE984475DCA7F4C51DD9A0B33F</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -737,7 +735,7 @@
         <Path>API\readGain.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>CB7645E131818DB2488E89F4C9127864</GUID>
+      <GUID>DD988E6B9453AE6A8B8FD592EF0028A5</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -786,7 +784,7 @@
         <Path>Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>0F2AD831A6027FC27079876072806C72</GUID>
+      <GUID>78310DE814FAB0D747DA0EB8DD0467E1</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -877,7 +875,7 @@
         <Path>Expt\Lockin_Metrics_Results.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>CE2B62C3CBAF91C2E8FBB573A7C59098</GUID>
+      <GUID>C220F373AF87D22509E379BF68AAB2A5</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -926,7 +924,7 @@
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>35979C66F722CCB7361F0C644239A59A</GUID>
+      <GUID>3FC0ADF3493EE7F87ED3677B4E04B1DD</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -961,7 +959,7 @@
         <Path>RemoteControl\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>27E17457BA7681CD90B1FA12966C4F10</GUID>
+      <GUID>295CCC78025FFCD653010F1C7F05D646</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1374,7 +1372,7 @@
         <Path>Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>079223E6522C093B22077668D566391C</GUID>
+      <GUID>40426B31098B393E3147A2D7F761917C</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1703,7 +1701,7 @@
         <Path>RemoteControl\Typedefs\Remote-SMO-Commands-Enum.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>50628341C7DB20000CAA202DE90AA796</GUID>
+      <GUID>2BF57DB0A130EA7806773233A786BEC5</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
