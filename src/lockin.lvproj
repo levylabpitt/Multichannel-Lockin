@@ -47,6 +47,8 @@
 			<Item Name="configIVmode.vi" Type="VI" URL="../API/configIVmode.vi"/>
 			<Item Name="configReset.vi" Type="VI" URL="../API/configReset.vi"/>
 			<Item Name="assertTrigger.vi" Type="VI" URL="../API/assertTrigger.vi"/>
+			<Item Name="configAutoSampling.vi" Type="VI" URL="../API/configAutoSampling.vi"/>
+			<Item Name="readAutoSampling.vi" Type="VI" URL="../API/readAutoSampling.vi"/>
 		</Item>
 		<Item Name="Examples" Type="Folder">
 			<Item Name="Example_IV_Curves.vi" Type="VI" URL="../Examples/Example_IV_Curves.vi"/>
