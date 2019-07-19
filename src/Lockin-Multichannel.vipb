@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-07-18 14:52:34" Creator="Patrick Irvin" Comments="" ID="918020a8011bf11af62c906842d17da3">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-07-19 17:19:38" Creator="Patrick Irvin" Comments="" ID="18c6106ac44063ed987ed6b4d5cff57f">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.6.0.2</Library_Version>
+    <Library_Version>2.6.1.3</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -93,7 +93,11 @@ This is a major update:
 - Now using RemoteControl.lvclass:process.vi from Instrument.lvclass. Should be more reliable, easier to manage, will be easier to add future API commands, and will be easier to change communication protocals in the future.
 - new API z setting AO Amplitude, DC, Frequency, Phase, Function that DOES NOT require you to know the current state of the AO cluster
 - New buttons and status indicators on the front panel
-- **Experimental** "sweep mode" that should allow more rapid sweeps of side gate voltage, for example</Release_Notes>
+- **Experimental** "sweep mode" that should allow more rapid sweeps of side gate voltage, for example
+
+[2.6.1.2]
+- fix some issues with the program logic
+- add API for turning on and off auto sample rate</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -319,7 +323,7 @@ This is a major update:
         <Path>Lockin-4461 -Patrick -State.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>AB1DF28BACE22CFAB42E36C3C13B473E</GUID>
+      <GUID>7E1734A8FDEA375B92144B7DECD22F99</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -637,20 +641,6 @@ This is a major update:
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>configRemote.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>5</Row>
-          <Column>7</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>API\configRemote.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
         <NameSub_Menu_Name>readResults.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
@@ -721,12 +711,40 @@ This is a major update:
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>configGain.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>readAutoSampling.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>4</Row>
+          <Column>4</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>API\readAutoSampling.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>configAutoSampling.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
           <Row>4</Row>
           <Column>3</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>API\configAutoSampling.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>configGain.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>4</Row>
+          <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>API\configGain.vi</Path>
@@ -740,13 +758,13 @@ This is a major update:
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
           <Row>4</Row>
-          <Column>4</Column>
+          <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>API\readGain.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>FB8CEA2E32EA7859B911FA92513FB887</GUID>
+      <GUID>73126536B52AC3FB153786FD6F4AD0FB</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -795,7 +813,7 @@ This is a major update:
         <Path>Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>9F072B9F11DCFA6FA4C766584B5E8F5E</GUID>
+      <GUID>2E7D0B875B80C39E64E6FC86A8B37606</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -886,7 +904,7 @@ This is a major update:
         <Path>Expt\Lockin_Metrics_Results.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>C4D391D069831026F40587E300B84650</GUID>
+      <GUID>3B543D1E772CD2FC664B8D81CC053701</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -935,7 +953,7 @@ This is a major update:
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>175CC357AD534B61009BAC73D249D172</GUID>
+      <GUID>85493B0BBBEAA1979EE68FC9546A7FFD</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -970,7 +988,7 @@ This is a major update:
         <Path>RemoteControl\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>17F6F80E6EDE67E0515FE9681879B1DC</GUID>
+      <GUID>054EF9F1C9D0A23532F1C46AF90B7814</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1383,7 +1401,7 @@ This is a major update:
         <Path>Instrument.Lockin\Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>7CFDF1AC49F7237222EDAAC689445972</GUID>
+      <GUID>885B690B8EBADAA54BB96F2E4EF30F2C</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1407,48 +1425,6 @@ This is a major update:
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PrivateEvents--Cluster.ctl</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>RemoteControl\Typedefs\PrivateEvents--Cluster.ctl</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PrivateEvents--LockinRemoteControl.setAI.ctl</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>2</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>RemoteControl\Typedefs\PrivateEvents--LockinRemoteControl.setAI.ctl</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PrivateEvents--LockinRemoteControl.setAllowedRemoteAddress.ctl</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>3</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>RemoteControl\Typedefs\PrivateEvents--LockinRemoteControl.setAllowedRemoteAddress.ctl</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
         <NameSub_Menu_Name>PrivateEvents--LockinRemoteControl.setAO.ctl</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
@@ -1458,48 +1434,6 @@ This is a major update:
         </Position>
         <Icon>00000000</Icon>
         <Path>RemoteControl\Typedefs\PrivateEvents--LockinRemoteControl.setAO.ctl</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PrivateEvents--LockinRemoteControl.setAOconfig.ctl</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>5</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>RemoteControl\Typedefs\PrivateEvents--LockinRemoteControl.setAOconfig.ctl</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PrivateEvents--LockinRemoteControl.setIVmode.ctl</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>6</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>RemoteControl\Typedefs\PrivateEvents--LockinRemoteControl.setIVmode.ctl</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PrivateEvents--LockinRemoteControl.setREFconfig.ctl</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>RemoteControl\Typedefs\PrivateEvents--LockinRemoteControl.setREFconfig.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1519,48 +1453,6 @@ This is a major update:
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PrivateEvents--LockinRemoteControl.setReset.ctl</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>3</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>RemoteControl\Typedefs\PrivateEvents--LockinRemoteControl.setReset.ctl</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PrivateEvents--LockinRemoteControl.setResults.ctl</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>4</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>RemoteControl\Typedefs\PrivateEvents--LockinRemoteControl.setResults.ctl</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PrivateEvents--LockinRemoteControl.setSamplingconfig.ctl</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>5</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>RemoteControl\Typedefs\PrivateEvents--LockinRemoteControl.setSamplingconfig.ctl</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
         <NameSub_Menu_Name>PrivateEvents--LockinRemoteControl.setTrigger.ctl</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
@@ -1570,48 +1462,6 @@ This is a major update:
         </Position>
         <Icon>00000000</Icon>
         <Path>RemoteControl\Typedefs\PrivateEvents--LockinRemoteControl.setTrigger.ctl</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PublicEvents--Cluster.ctl</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>RemoteControl\Typedefs\PublicEvents--Cluster.ctl</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PublicEvents--LockinRemoteControl.assertTrigger.ctl</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>2</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>RemoteControl\Typedefs\PublicEvents--LockinRemoteControl.assertTrigger.ctl</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PublicEvents--LockinRemoteControl.configAO.ctl</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>3</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>RemoteControl\Typedefs\PublicEvents--LockinRemoteControl.configAO.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1631,48 +1481,6 @@ This is a major update:
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PublicEvents--LockinRemoteControl.configREF.ctl</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>5</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>RemoteControl\Typedefs\PublicEvents--LockinRemoteControl.configREF.ctl</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PublicEvents--LockinRemoteControl.configREFfilter.ctl</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>6</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>RemoteControl\Typedefs\PublicEvents--LockinRemoteControl.configREFfilter.ctl</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PublicEvents--LockinRemoteControl.configRemote.ctl</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>4</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>RemoteControl\Typedefs\PublicEvents--LockinRemoteControl.configRemote.ctl</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
         <NameSub_Menu_Name>PublicEvents--LockinRemoteControl.configReset.ctl</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
@@ -1684,21 +1492,7 @@ This is a major update:
         <Path>RemoteControl\Typedefs\PublicEvents--LockinRemoteControl.configReset.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PublicEvents--LockinRemoteControl.configSampling.ctl</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>4</Row>
-          <Column>3</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>RemoteControl\Typedefs\PublicEvents--LockinRemoteControl.configSampling.ctl</Path>
-        <VI_Title/>
-      </Items_Data>
-      <GUID>974E4635B29F796A1D4EC2C87E8666F6</GUID>
+      <GUID>7EA57B673543853921C067B25F94D07C</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
