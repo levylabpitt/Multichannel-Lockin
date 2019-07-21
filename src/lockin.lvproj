@@ -17,9 +17,6 @@
 			<Item Name="Pre-Build Custom Action.vi" Type="VI" URL="../../build_support/Pre-Build Custom Action.vi"/>
 			<Item Name="Pre-Install Custom Action.vi" Type="VI" URL="../../build_support/Pre-Install Custom Action.vi"/>
 		</Item>
-		<Item Name="API" Type="Folder">
-			<Property Name="NI.SortType" Type="Int">3</Property>
-		</Item>
 		<Item Name="Examples" Type="Folder">
 			<Item Name="Example_IV_Curves.vi" Type="VI" URL="../Examples/Example_IV_Curves.vi"/>
 			<Item Name="Example_Lockin.vi" Type="VI" URL="../Examples/Example_Lockin.vi"/>
@@ -92,8 +89,6 @@
 			<Item Name="44xxRefClk.vi" Type="VI" URL="../subVIs - DAQ/44xxRefClk.vi"/>
 			<Item Name="Get Terminal Name with Device Prefix.vi" Type="VI" URL="../subVIs - DAQ/Get Terminal Name with Device Prefix.vi"/>
 		</Item>
-		<Item Name="Typedefs" Type="Folder"/>
-		<Item Name="RemoteControl" Type="Folder"/>
 		<Item Name="Tests" Type="Folder">
 			<Item Name="Test Lockin API.vi" Type="VI" URL="../../Tests/Test Lockin API.vi"/>
 			<Item Name="Test Modes.vi" Type="VI" URL="../../Tests/Test Modes.vi"/>
