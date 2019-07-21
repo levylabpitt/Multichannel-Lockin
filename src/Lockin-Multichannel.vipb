@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-07-19 17:19:38" Creator="Patrick Irvin" Comments="" ID="18c6106ac44063ed987ed6b4d5cff57f">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-07-21 11:38:22" Creator="Patrick Irvin" Comments="" ID="e61ba9433b8b646af51efbeb43af91eb">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.6.1.3</Library_Version>
+    <Library_Version>2.6.1.4</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -97,7 +97,11 @@ This is a major update:
 
 [2.6.1.2]
 - fix some issues with the program logic
-- add API for turning on and off auto sample rate</Release_Notes>
+- add API for turning on and off auto sample rate
+
+[2.6.1.3]
+- Setting the Address and Port only by calling "Connect to Remote Lockin.vi" (not neccessary for local commands)
+- Address and Port are on the class wire</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -323,14 +327,14 @@ This is a major update:
         <Path>Lockin-4461 -Patrick -State.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>7E1734A8FDEA375B92144B7DECD22F99</GUID>
+      <GUID>EE9E11C8CC2C4BB51BA28E6785279D14</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
       <Name>API</Name>
       <View_Format>Icons</View_Format>
       <Size>
-        <Height_Row>5</Height_Row>
+        <Height_Row>6</Height_Row>
         <Width_Col.>7</Width_Col.>
       </Size>
       <_256_Color_Icon>00000367002900000012000000020000000D00FFFFFF000100000000000A0000000800000000002000200028000000E3000000BD0000000C0007001500180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFF000000000000FFFFFFFFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000000000000000000000FFFFFF000000000000FFFFFFFFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF007F4CFFAAFFECFFA8FFA8FF007F002900000012000000020000000D00CCCCFF000100000000000A00000008001900000020002000280000022C000001F8001900040020001C00180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF9AAA26FF92AA55FF9ABA76FF939255FFD91356FF000000FF</_256_Color_Icon>
@@ -351,11 +355,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>1</Row>
+          <Row>2</Row>
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\configAO.vi</Path>
+        <Path>Instrument.Lockin\API\configAO.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -365,11 +369,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>2</Row>
+          <Row>3</Row>
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\configREF.vi</Path>
+        <Path>Instrument.Lockin\API\configREF.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -379,11 +383,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>1</Row>
+          <Row>2</Row>
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\configAO_Amp.vi</Path>
+        <Path>Instrument.Lockin\API\configAO_Amp.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -393,11 +397,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>1</Row>
+          <Row>2</Row>
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\configAO_DC.vi</Path>
+        <Path>Instrument.Lockin\API\configAO_DC.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -407,11 +411,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>1</Row>
+          <Row>2</Row>
           <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\configAO_f.vi</Path>
+        <Path>Instrument.Lockin\API\configAO_f.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -421,11 +425,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>1</Row>
+          <Row>2</Row>
           <Column>7</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\configAO_function.vi</Path>
+        <Path>Instrument.Lockin\API\configAO_function.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -435,11 +439,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>1</Row>
+          <Row>2</Row>
           <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\configAO_phi.vi</Path>
+        <Path>Instrument.Lockin\API\configAO_phi.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -449,11 +453,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>1</Row>
+          <Row>2</Row>
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\readAOconfig.vi</Path>
+        <Path>Instrument.Lockin\API\readAOconfig.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -463,11 +467,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>4</Row>
+          <Row>5</Row>
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\configSampling.vi</Path>
+        <Path>Instrument.Lockin\API\configSampling.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -477,11 +481,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>4</Row>
+          <Row>5</Row>
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\readSampling.vi</Path>
+        <Path>Instrument.Lockin\API\readSampling.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -491,11 +495,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>2</Row>
+          <Row>3</Row>
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\readREFconfig.vi</Path>
+        <Path>Instrument.Lockin\API\readREFconfig.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -505,11 +509,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>2</Row>
+          <Row>3</Row>
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\readREFfilter.vi</Path>
+        <Path>Instrument.Lockin\API\readREFfilter.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -519,11 +523,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>2</Row>
+          <Row>3</Row>
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\configREFfilter.vi</Path>
+        <Path>Instrument.Lockin\API\configREFfilter.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -533,11 +537,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>2</Row>
+          <Row>3</Row>
           <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\configREF_f.vi</Path>
+        <Path>Instrument.Lockin\API\configREF_f.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -547,11 +551,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>2</Row>
+          <Row>3</Row>
           <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\configREF_phi.vi</Path>
+        <Path>Instrument.Lockin\API\configREF_phi.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -561,11 +565,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>5</Row>
+          <Row>6</Row>
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\Lockin-4461 IV mode trigger and wait.vi</Path>
+        <Path>Instrument.Lockin\API\Lockin-4461 IV mode trigger and wait.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -575,11 +579,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>5</Row>
+          <Row>6</Row>
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\configIVmode.vi</Path>
+        <Path>Instrument.Lockin\API\configIVmode.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -589,11 +593,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>5</Row>
+          <Row>6</Row>
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\readIVmode.vi</Path>
+        <Path>Instrument.Lockin\API\readIVmode.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -603,11 +607,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>5</Row>
+          <Row>6</Row>
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\assertTrigger.vi</Path>
+        <Path>Instrument.Lockin\API\assertTrigger.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -617,11 +621,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>5</Row>
+          <Row>6</Row>
           <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\readTrigger.vi</Path>
+        <Path>Instrument.Lockin\API\readTrigger.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -631,11 +635,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>5</Row>
+          <Row>6</Row>
           <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\configReset.vi</Path>
+        <Path>Instrument.Lockin\API\configReset.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -645,11 +649,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>3</Row>
+          <Row>4</Row>
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\readResults.vi</Path>
+        <Path>Instrument.Lockin\API\readResults.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -659,11 +663,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>3</Row>
+          <Row>4</Row>
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\waitForNewResults.vi</Path>
+        <Path>Instrument.Lockin\API\waitForNewResults.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -673,11 +677,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>3</Row>
+          <Row>4</Row>
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\readAI.vi</Path>
+        <Path>Instrument.Lockin\API\readAI.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -687,11 +691,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>3</Row>
+          <Row>4</Row>
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\waitForNewWaveforms.vi</Path>
+        <Path>Instrument.Lockin\API\waitForNewWaveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -701,11 +705,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>3</Row>
+          <Row>4</Row>
           <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\readAO.vi</Path>
+        <Path>Instrument.Lockin\API\readAO.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -715,11 +719,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>4</Row>
+          <Row>5</Row>
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\readAutoSampling.vi</Path>
+        <Path>Instrument.Lockin\API\readAutoSampling.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -729,11 +733,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>4</Row>
+          <Row>5</Row>
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\configAutoSampling.vi</Path>
+        <Path>Instrument.Lockin\API\configAutoSampling.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -743,11 +747,11 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>4</Row>
+          <Row>5</Row>
           <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\configGain.vi</Path>
+        <Path>Instrument.Lockin\API\configGain.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -757,14 +761,28 @@ This is a major update:
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>4</Row>
+          <Row>5</Row>
           <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>API\readGain.vi</Path>
+        <Path>Instrument.Lockin\API\readGain.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>73126536B52AC3FB153786FD6F4AD0FB</GUID>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>Connect to Remote Lockin.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>1</Row>
+          <Column>1</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>Instrument.Lockin\API\Connect to Remote Lockin.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <GUID>5371566BA1B8EBE7C78662DE75625E1A</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -813,7 +831,7 @@ This is a major update:
         <Path>Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>2E7D0B875B80C39E64E6FC86A8B37606</GUID>
+      <GUID>AD24952763861518A2C8D244F24EADE6</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -904,7 +922,7 @@ This is a major update:
         <Path>Expt\Lockin_Metrics_Results.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>3B543D1E772CD2FC664B8D81CC053701</GUID>
+      <GUID>3D473A276B22983EBA5369F444FA0C27</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -953,7 +971,7 @@ This is a major update:
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>85493B0BBBEAA1979EE68FC9546A7FFD</GUID>
+      <GUID>38C584A95E664B4B1DD58549B9C16826</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -988,7 +1006,7 @@ This is a major update:
         <Path>RemoteControl\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>054EF9F1C9D0A23532F1C46AF90B7814</GUID>
+      <GUID>AFF34F8259ED865DFEF8028347B1794E</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1401,7 +1419,7 @@ This is a major update:
         <Path>Instrument.Lockin\Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>885B690B8EBADAA54BB96F2E4EF30F2C</GUID>
+      <GUID>10A4B7D7D37D6E2138623AAEEA5EB3AC</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1425,20 +1443,6 @@ This is a major update:
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PrivateEvents--LockinRemoteControl.setAO.ctl</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>4</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>RemoteControl\Typedefs\PrivateEvents--LockinRemoteControl.setAO.ctl</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
         <NameSub_Menu_Name>PrivateEvents--LockinRemoteControl.setREFfilterconfig.ctl</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
@@ -1448,20 +1452,6 @@ This is a major update:
         </Position>
         <Icon>00000000</Icon>
         <Path>RemoteControl\Typedefs\PrivateEvents--LockinRemoteControl.setREFfilterconfig.ctl</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PrivateEvents--LockinRemoteControl.setTrigger.ctl</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>6</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>RemoteControl\Typedefs\PrivateEvents--LockinRemoteControl.setTrigger.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1478,21 +1468,7 @@ This is a major update:
         <Path>RemoteControl\Typedefs\PublicEvents--LockinRemoteControl.configIVmode.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>PublicEvents--LockinRemoteControl.configReset.ctl</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>4</Row>
-          <Column>2</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>RemoteControl\Typedefs\PublicEvents--LockinRemoteControl.configReset.ctl</Path>
-        <VI_Title/>
-      </Items_Data>
-      <GUID>7EA57B673543853921C067B25F94D07C</GUID>
+      <GUID>DC5F52A03BDB038DA69377C93A798256</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
