@@ -71,24 +71,6 @@
 			<Item Name="Channel String to Number of Channels.vi" Type="VI" URL="../SubVIs/Channel String to Number of Channels.vi"/>
 			<Item Name="Spinner.vi" Type="VI" URL="../SubVIs/Spinner.vi"/>
 		</Item>
-		<Item Name="subVIs - DAQ" Type="Folder">
-			<Item Name="44xx_AI_MinMax.vi" Type="VI" URL="../subVIs - DAQ/44xx_AI_MinMax.vi"/>
-			<Item Name="44xx_AO_MinMax.vi" Type="VI" URL="../subVIs - DAQ/44xx_AO_MinMax.vi"/>
-			<Item Name="4461 - AI AND AI - Read AND Write Uneven.vi" Type="VI" URL="../subVIs - DAQ/4461 - AI AND AI - Read AND Write Uneven.vi"/>
-			<Item Name="4461 - AI Read Data.vi" Type="VI" URL="../subVIs - DAQ/4461 - AI Read Data.vi"/>
-			<Item Name="4461 - AO Write Data.vi" Type="VI" URL="../subVIs - DAQ/4461 - AO Write Data.vi"/>
-			<Item Name="4461 - Cal Info.vi" Type="VI" URL="../subVIs - DAQ/4461 - Cal Info.vi"/>
-			<Item Name="4461 - Create AO waveforms.vi" Type="VI" URL="../subVIs - DAQ/4461 - Create AO waveforms.vi"/>
-			<Item Name="4461 - Create IO Channels Parallel Uneven.vi" Type="VI" URL="../subVIs - DAQ/4461 - Create IO Channels Parallel Uneven.vi"/>
-			<Item Name="4461 - Create Reference Waveforms.vi" Type="VI" URL="../subVIs - DAQ/4461 - Create Reference Waveforms.vi"/>
-			<Item Name="4461 - Lockin Engine.vi" Type="VI" URL="../subVIs - DAQ/4461 - Lockin Engine.vi"/>
-			<Item Name="4461 - Stop Tasks.vi" Type="VI" URL="../subVIs - DAQ/4461 - Stop Tasks.vi"/>
-			<Item Name="4461 Sim - Noise.vi" Type="VI" URL="../subVIs - DAQ/4461 Sim - Noise.vi"/>
-			<Item Name="Cal Progress Bar.vi" Type="VI" URL="../subVIs - DAQ/Cal Progress Bar.vi"/>
-			<Item Name="Get Dev Product Type.vi" Type="VI" URL="../subVIs - DAQ/Get Dev Product Type.vi"/>
-			<Item Name="44xxRefClk.vi" Type="VI" URL="../subVIs - DAQ/44xxRefClk.vi"/>
-			<Item Name="Get Terminal Name with Device Prefix.vi" Type="VI" URL="../subVIs - DAQ/Get Terminal Name with Device Prefix.vi"/>
-		</Item>
 		<Item Name="Tests" Type="Folder">
 			<Item Name="Test Lockin API.vi" Type="VI" URL="../../Tests/Test Lockin API.vi"/>
 			<Item Name="Test Modes.vi" Type="VI" URL="../../Tests/Test Modes.vi"/>
