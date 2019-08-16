@@ -29,48 +29,6 @@
 			<Item Name="Lockin Noise Measurement.vi" Type="VI" URL="../Expt/Lockin Noise Measurement.vi"/>
 			<Item Name="serialize_test.vi" Type="VI" URL="../Expt/serialize_test.vi"/>
 		</Item>
-		<Item Name="SubVIs" Type="Folder">
-			<Item Name="AI.Coupling.enum.convert.vi" Type="VI" URL="../SubVIs/AI.Coupling.enum.convert.vi"/>
-			<Item Name="AI_Select_CheckBox.vi" Type="VI" URL="../SubVIs/AI_Select_CheckBox.vi"/>
-			<Item Name="AO_Select_CheckBox.vi" Type="VI" URL="../SubVIs/AO_Select_CheckBox.vi"/>
-			<Item Name="AppendWaveformArray.vi" Type="VI" URL="../SubVIs/AppendWaveformArray.vi"/>
-			<Item Name="config.vi" Type="VI" URL="../SubVIs/config.vi"/>
-			<Item Name="decimate_waveforms.vi" Type="VI" URL="../SubVIs/decimate_waveforms.vi"/>
-			<Item Name="Display n or dt.vi" Type="VI" URL="../SubVIs/Display n or dt.vi"/>
-			<Item Name="FloatApprox.vi" Type="VI" URL="../SubVIs/FloatApprox.vi"/>
-			<Item Name="FloatApproxPoint1Percent.vi" Type="VI" URL="../SubVIs/FloatApproxPoint1Percent.vi"/>
-			<Item Name="format display.vi" Type="VI" URL="../SubVIs/format display.vi"/>
-			<Item Name="Fs and Ns for integer periods.vi" Type="VI" URL="../SubVIs/Fs and Ns for integer periods.vi"/>
-			<Item Name="Fs_to_FilterDelay.vi" Type="VI" URL="../SubVIs/Fs_to_FilterDelay.vi"/>
-			<Item Name="Graph_TraceSelect_CheckBox.vi" Type="VI" URL="../SubVIs/Graph_TraceSelect_CheckBox.vi"/>
-			<Item Name="lockin - Set all f same.vi" Type="VI" URL="../SubVIs/lockin - Set all f same.vi"/>
-			<Item Name="lockin - Set REF f equal AO f.vi" Type="VI" URL="../SubVIs/lockin - Set REF f equal AO f.vi"/>
-			<Item Name="lockin - Set REF phase equals zero.vi" Type="VI" URL="../SubVIs/lockin - Set REF phase equals zero.vi"/>
-			<Item Name="Patrick-multichannel-Sim-Aq.vi" Type="VI" URL="../SubVIs/Patrick-multichannel-Sim-Aq.vi"/>
-			<Item Name="Prefilter_60Hz_Notch.vi" Type="VI" URL="../SubVIs/Prefilter_60Hz_Notch.vi"/>
-			<Item Name="Prefilter_LP.vi" Type="VI" URL="../SubVIs/Prefilter_LP.vi"/>
-			<Item Name="Replace timestamp.vi" Type="VI" URL="../SubVIs/Replace timestamp.vi"/>
-			<Item Name="Simple PID Array.vi" Type="VI" URL="../SubVIs/Simple PID Array.vi"/>
-			<Item Name="simple PID.vi" Type="VI" URL="../SubVIs/simple PID.vi"/>
-			<Item Name="Split 1D ARRAY in half.vi" Type="VI" URL="../SubVIs/Split 1D ARRAY in half.vi"/>
-			<Item Name="Split WAVEFORM array in half.vi" Type="VI" URL="../SubVIs/Split WAVEFORM array in half.vi"/>
-			<Item Name="StateHistory.vi" Type="VI" URL="../SubVIs/StateHistory.vi"/>
-			<Item Name="Waveform 64-128 channels LP pt by pt.vi" Type="VI" URL="../SubVIs/Waveform 64-128 channels LP pt by pt.vi"/>
-			<Item Name="write_lockin_FP_DSC.vi" Type="VI" URL="../SubVIs/write_lockin_FP_DSC.vi"/>
-			<Item Name="read_lockin_FP_DSC.vi" Type="VI" URL="../SubVIs/read_lockin_FP_DSC.vi"/>
-			<Item Name="update_rate_and_time.vi" Type="VI" URL="../SubVIs/update_rate_and_time.vi"/>
-			<Item Name="ms to Hz.vi" Type="VI" URL="../SubVIs/ms to Hz.vi"/>
-			<Item Name="getTimeWithError.vi" Type="VI" URL="../SubVIs/getTimeWithError.vi"/>
-			<Item Name="SI prefix.vi" Type="VI" URL="../SubVIs/SI prefix.vi"/>
-			<Item Name="DownKeyEvent.vi" Type="VI" URL="../SubVIs/DownKeyEvent.vi"/>
-			<Item Name="FPDAQtoDAQstrings.vi" Type="VI" URL="../SubVIs/FPDAQtoDAQstrings.vi"/>
-			<Item Name="LegendWaveformChart.vi" Type="VI" URL="../SubVIs/LegendWaveformChart.vi"/>
-			<Item Name="LegendWaveformGraph.vi" Type="VI" URL="../SubVIs/LegendWaveformGraph.vi"/>
-			<Item Name="LegendXYGraph.vi" Type="VI" URL="../SubVIs/LegendXYGraph.vi"/>
-			<Item Name="lockin - add phase element.vi" Type="VI" URL="../SubVIs/lockin - add phase element.vi"/>
-			<Item Name="Channel String to Number of Channels.vi" Type="VI" URL="../SubVIs/Channel String to Number of Channels.vi"/>
-			<Item Name="Spinner.vi" Type="VI" URL="../SubVIs/Spinner.vi"/>
-		</Item>
 		<Item Name="Tests" Type="Folder">
 			<Item Name="Test Lockin API.vi" Type="VI" URL="../../Tests/Test Lockin API.vi"/>
 			<Item Name="Test Modes.vi" Type="VI" URL="../../Tests/Test Modes.vi"/>
