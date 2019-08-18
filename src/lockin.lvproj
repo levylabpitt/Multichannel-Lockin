@@ -40,6 +40,7 @@
 		</Item>
 		<Item Name="Instrument.Lockin.lvclass" Type="LVClass" URL="../Instrument.Lockin/Instrument.Lockin.lvclass"/>
 		<Item Name="Instrument.Lockin.UI.lvclass" Type="LVClass" URL="../Instrument.Lockinl.UI/Instrument.Lockin.UI.lvclass"/>
+		<Item Name="LockinDAQ.lvclass" Type="LVClass" URL="../LockinDAQ/LockinDAQ.lvclass"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="1D Array to String__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/string/string.llb/1D Array to String__ogtk.vi"/>
@@ -974,6 +975,28 @@
 			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="446xAO-enum.ctl" Type="VI" URL="../Typedefs/446xAO-enum.ctl"/>
+			<Item Name="AO.config-cluster.ctl" Type="VI" URL="../Typedefs/AO.config-cluster.ctl"/>
+			<Item Name="AO.config-array.ctl" Type="VI" URL="../Typedefs/AO.config-array.ctl"/>
+			<Item Name="AI.coupling-enum.ctl" Type="VI" URL="../Typedefs/AI.coupling-enum.ctl"/>
+			<Item Name="446xAI-enum.ctl" Type="VI" URL="../Typedefs/446xAI-enum.ctl"/>
+			<Item Name="AI.config-cluster.ctl" Type="VI" URL="../Typedefs/AI.config-cluster.ctl"/>
+			<Item Name="AI.config-array.ctl" Type="VI" URL="../Typedefs/AI.config-array.ctl"/>
+			<Item Name="AO_Amp-array.ctl" Type="VI" URL="../Typedefs/AO_Amp-array.ctl"/>
+			<Item Name="AO_DC-array.ctl" Type="VI" URL="../Typedefs/AO_DC-array.ctl"/>
+			<Item Name="AO_phi-array.ctl" Type="VI" URL="../Typedefs/AO_phi-array.ctl"/>
+			<Item Name="Function-enum.ctl" Type="VI" URL="../Typedefs/Function-enum.ctl"/>
+			<Item Name="Function-array.ctl" Type="VI" URL="../Typedefs/Function-array.ctl"/>
+			<Item Name="AO_f-array.ctl" Type="VI" URL="../Typedefs/AO_f-array.ctl"/>
+			<Item Name="AO-cluster.ctl" Type="VI" URL="../Typedefs/AO-cluster.ctl"/>
+			<Item Name="REF_f-array.ctl" Type="VI" URL="../Typedefs/REF_f-array.ctl"/>
+			<Item Name="REF_phi-array.ctl" Type="VI" URL="../Typedefs/REF_phi-array.ctl"/>
+			<Item Name="REF-cluster.ctl" Type="VI" URL="../Typedefs/REF-cluster.ctl"/>
+			<Item Name="Sampling.ctl" Type="VI" URL="../Typedefs/Sampling.ctl"/>
+			<Item Name="decimate_waveforms.vi" Type="VI" URL="../SubVIs/decimate_waveforms.vi"/>
+			<Item Name="Cal Info - Cluster.ctl" Type="VI" URL="../Typedefs/Cal Info - Cluster.ctl"/>
+			<Item Name="Fs_to_FilterDelay.vi" Type="VI" URL="../SubVIs/Fs_to_FilterDelay.vi"/>
+			<Item Name="AI.Coupling.enum.convert.vi" Type="VI" URL="../SubVIs/AI.Coupling.enum.convert.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lockin" Type="EXE">
