@@ -561,6 +561,24 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1082143248</Property>
 		</Item>
+		<Item Name="Initialize AO Channels.vi" Type="VI" URL="../DAQ-private/Initialize AO Channels.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!/I!!!!&amp;Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!!V!#A!'15]A17VQ!!"(!0(8PNUU!!!!!B&amp;-&lt;W.L;7Z%16%O&lt;(:D&lt;'&amp;T=R""4V^"&lt;8!N98*S98EO9X2M!"R!1!!"`````Q!&amp;#E&amp;0)%&amp;N=#!I6CE!!!N!#A!&amp;15]A2%-!2!$RV\\&lt;TQ!!!!)24'^D;WFO2%&amp;2,GRW9WRB=X-015^@2%-N98*S98EO9X2M!"J!1!!"`````Q!(#5&amp;0)%2$)#B7+1!,1!I!"%&amp;0)'9!!%-!]&gt;?_W0!!!!!#%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T$E&amp;08W9N98*S98EO9X2M!"J!1!!"`````Q!*#5&amp;0)'9A+%B[+1!.1!I!"E&amp;0)("I;1!!31$RW6&gt;:;1!!!!)24'^D;WFO2%&amp;2,GRW9WRB=X-115^@='BJ,7&amp;S=G&amp;Z,G.U&lt;!!?1%!!!@````]!#QR"4S"1;'&amp;T:3!IM#E!!'%!]&gt;?_X,I!!!!#%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T%5:V&lt;G.U;7^O,76O&gt;7UO9X2M!$6!&amp;A!%"&amp;.J&lt;G5)6(*J97ZH&lt;'5'5X&amp;V98*F#&amp;.B&gt;X2P&lt;X2I!!N4;7&gt;O97QA6(FQ:1"(!0%!!!!!!!!!!B&amp;-&lt;W.L;7Z%16%O&lt;(:D&lt;'&amp;T=R*'&gt;7ZD&gt;'FP&lt;CVB=H*B?3ZD&gt;'Q!'E"!!!(`````!!U)2H6O9X2J&lt;WY!!!R!)1&gt;#&lt;W^M:7&amp;O!""!1!!"`````Q!0!EEL!!!71%!!!@````]!$QB4&gt;W6F='FO:Q!!41$RW9":_A!!!!)24'^D;WFO2%&amp;2,GRW9WRB=X-/15]N9WRV=X2F=CZD&gt;'Q!*%"1!!=!"A!)!!I!$!!/!"!!%1J"4S"$;'&amp;O:7RT!!![1(!!(A!!'RF*&lt;H.U=H6N:7ZU,ERP9WNJ&lt;CZM&gt;G.M98.T!"6*&lt;H.U=H6N:7ZU,ERP9WNJ&lt;C"P&gt;81!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!W1(!!(A!!'RF*&lt;H.U=H6N:7ZU,ERP9WNJ&lt;CZM&gt;G.M98.T!"&amp;*&lt;H.U=H6N:7ZU,ERP9WNJ&lt;A"B!0!!$!!$!!1!%A!4!!1!"!!%!!1!&amp;!!%!!1!&amp;1-!!(A!!!U)!!!!!!!!#1!!!!U,!!!!!!!!!!!!!!!!!!!!!!!!#!!!!!!!!!!!!!!!#!!!$1!!!!Q!!!!!!!!!!!!!!1!7!!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1342710288</Property>
+		</Item>
+		<Item Name="Initialize Gain.vi" Type="VI" URL="../DAQ-private/Initialize Gain.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;8!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!!N!#A!%2W&amp;J&lt;A!!%E"!!!(`````!!5%2W&amp;J&lt;A!!/E"Q!"Y!!"M:37ZT&gt;(*V&lt;76O&gt;#Z-&lt;W.L;7YO&lt;(:D&lt;'&amp;T=Q!637ZT&gt;(*V&lt;76O&gt;#Z-&lt;W.L;7YA&lt;X6U!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!.E"Q!"Y!!"M:37ZT&gt;(*V&lt;76O&gt;#Z-&lt;W.L;7YO&lt;(:D&lt;'&amp;T=Q!237ZT&gt;(*V&lt;76O&gt;#Z-&lt;W.L;7Y!91$Q!!Q!!Q!%!!9!"Q!%!!1!"!!%!!A!"!!%!!E$!!"Y!!!.#!!!!!!!!!E!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!A!!!!!!!!!!!!!!!A!!!U!!!!-!!!!!!!!!!!!!!%!#A!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1107821072</Property>
+		</Item>
 	</Item>
 	<Item Name="DAQ-public" Type="Folder">
 		<Item Name="AI config not UI to UI.vi" Type="VI" URL="../DAQ-public/AI config not UI to UI.vi">
