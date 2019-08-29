@@ -962,6 +962,8 @@
 			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="Read AI.vi" Type="VI" URL="../LockinDAQ/DAQ/Read AI.vi"/>
+			<Item Name="Write AO.vi" Type="VI" URL="../LockinDAQ/DAQ/Write AO.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lockin" Type="EXE">

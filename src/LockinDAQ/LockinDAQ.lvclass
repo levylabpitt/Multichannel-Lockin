@@ -1211,7 +1211,7 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1074536976</Property>
 		</Item>
-		<Item Name="LockinDAQ.Create.AI" Type="VI" URL="../DAQ/LockinDAQ.Create.AI">
+		<Item Name="LockinDAQ.Create.AI.vi" Type="VI" URL="../DAQ/LockinDAQ.Create.AI.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%;!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#J!=!!?!!!4%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T!!V-&lt;W.L;7Z%16%A&lt;X6U!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!*E"Q!"Y!!"-24'^D;WFO2%&amp;2,GRW9WRB=X-!#5RP9WNJ&lt;E2"51"B!0!!$!!$!!1!"!!&amp;!!1!"!!%!!1!"A!%!!1!"Q-!!(A!!!E!!!!!!!!!!!!!!!U,!!!!!!!!!!!!!!!!!!!!!!!!#!!!!!!!!!!!!!!!#A!!$1!!!!Q!!!!!!!!!!!!!!1!)!!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
@@ -1318,24 +1318,6 @@
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1342710288</Property>
-		</Item>
-		<Item Name="Read AI.vi" Type="VI" URL="../DAQ/Read AI.vi">
-			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;X!!!!$Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!""!6!!$#&amp;&gt;B&gt;G6G&lt;X*N!!!;1%!!!@````]!"1V*&lt;H"V&gt;#"4;7&gt;O97RT!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!#5!+!!*'=Q!!#5!+!!)D=Q!!'%"1!!)!#!!*$8.B&lt;8"M;7ZH)'FO:G]!(A!X`````Q!*&amp;A#!!!!!!!%!"!!!!!%!!!!!!!!!.%"Q!"5%6'&amp;T;Q!!!1!,"5Z*2%&amp;2&amp;A#!!!!!!!%!"!!!!!%!!!!!!!!)&gt;'&amp;T;S"P&gt;81!!"2!1!!"`````Q!-"U&amp;*)(2B=WM!6!$Q!!Q!!Q!%!!1!"A!%!!1!"!!%!!=!#A!%!!U$!!"Y!!!*!!!!!!!!!!!!!!!*!!!!!!!!!!!!!!!!!!!!!!!!!!A!!!!)!!!!!!!!!AA!!!!!!1!/!!!!!!</Property>
-			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-			<Property Name="NI.ClassItem.Flags" Type="Int">1073741824</Property>
-			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
-			<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
-			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-			<Property Name="NI.ClassItem.State" Type="Int">1082130960</Property>
-		</Item>
-		<Item Name="Write AO.vi" Type="VI" URL="../DAQ/Write AO.vi">
-			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;"!!!!$!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!":!5!!$!!!!!1!##'6S=G^S)'FO!!!31&amp;1!!QJT;7&gt;O97QA&lt;X6U!!!71%!!!@````]!"AB"4S""=H*B?1!!(A!X`````Q!*&amp;A#!!!!!!!%!"!!!!!%!!!!!!!!!.%"Q!"5%6'&amp;T;Q!!!1!)"5Z*2%&amp;2&amp;A#!!!!!!!%!"!!!!!%!!!!!!!!)&gt;'&amp;T;S"P&gt;81!!"2!1!!"`````Q!*"U&amp;0)&amp;2B=WM!6!$Q!!Q!!Q!%!!1!"!!%!!1!"!!%!!5!"!!(!!I$!!"Y!!!*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!##!!!!AA!!!!!!1!,!!!!!!</Property>
-			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-			<Property Name="NI.ClassItem.Flags" Type="Int">1073741824</Property>
-			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
-			<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
-			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-			<Property Name="NI.ClassItem.State" Type="Int">1082130960</Property>
 		</Item>
 	</Item>
 	<Item Name="LockinEngine.Test.vi" Type="VI" URL="../LockinEngine.Test.vi">
