@@ -21,26 +21,31 @@
 			<Item Name="Example_IV_Curves.vi" Type="VI" URL="../Examples/Example_IV_Curves.vi"/>
 			<Item Name="Example_Lockin.vi" Type="VI" URL="../Examples/Example_Lockin.vi"/>
 		</Item>
-		<Item Name="Metrics" Type="Folder">
-			<Item Name="Test_Lockin_API.vi" Type="VI" URL="../Expt/Test_Lockin_API.vi"/>
-			<Item Name="Lockin_Metrics.vi" Type="VI" URL="../Expt/Lockin_Metrics.vi"/>
-			<Item Name="Lockin_Metrics_Results.vi" Type="VI" URL="../Expt/Lockin_Metrics_Results.vi"/>
-			<Item Name="446xAntiAliasSimulator.vi" Type="VI" URL="../Expt/446xAntiAliasSimulator.vi"/>
-			<Item Name="Lockin Noise Measurement.vi" Type="VI" URL="../Expt/Lockin Noise Measurement.vi"/>
-			<Item Name="serialize_test.vi" Type="VI" URL="../Expt/serialize_test.vi"/>
-		</Item>
 		<Item Name="Tests" Type="Folder">
-			<Item Name="Test Lockin API.vi" Type="VI" URL="../../Tests/Test Lockin API.vi"/>
-			<Item Name="Test Modes.vi" Type="VI" URL="../../Tests/Test Modes.vi"/>
-			<Item Name="Test AO Configuration.vi" Type="VI" URL="../../Tests/Test AO Configuration.vi"/>
-			<Item Name="Test Gain.vi" Type="VI" URL="../../Tests/Test Gain.vi"/>
-			<Item Name="Test REF Configuration.vi" Type="VI" URL="../../Tests/Test REF Configuration.vi"/>
-			<Item Name="Test Sampling.vi" Type="VI" URL="../../Tests/Test Sampling.vi"/>
-			<Item Name="Test Data.vi" Type="VI" URL="../../Tests/Test Data.vi"/>
+			<Item Name="Test API" Type="Folder">
+				<Item Name="Test Lockin API.vi" Type="VI" URL="../../Tests/Test API/Test Lockin API.vi"/>
+				<Item Name="Test Modes.vi" Type="VI" URL="../../Tests/Test API/Test Modes.vi"/>
+				<Item Name="Test AO Configuration.vi" Type="VI" URL="../../Tests/Test API/Test AO Configuration.vi"/>
+				<Item Name="Test Gain.vi" Type="VI" URL="../../Tests/Test API/Test Gain.vi"/>
+				<Item Name="Test REF Configuration.vi" Type="VI" URL="../../Tests/Test API/Test REF Configuration.vi"/>
+				<Item Name="Test Sampling.vi" Type="VI" URL="../../Tests/Test API/Test Sampling.vi"/>
+				<Item Name="Test Data.vi" Type="VI" URL="../../Tests/Test API/Test Data.vi"/>
+				<Item Name="Test Data 2.vi" Type="VI" URL="../../Tests/Test API/Test Data 2.vi"/>
+			</Item>
+			<Item Name="Metrics" Type="Folder">
+				<Item Name="Lockin_Metrics.vi" Type="VI" URL="../../Tests/Expt/Lockin_Metrics.vi"/>
+				<Item Name="Lockin_Metrics_Results.vi" Type="VI" URL="../../Tests/Expt/Lockin_Metrics_Results.vi"/>
+				<Item Name="446xAntiAliasSimulator.vi" Type="VI" URL="../../Tests/Expt/446xAntiAliasSimulator.vi"/>
+				<Item Name="Lockin Noise Measurement.vi" Type="VI" URL="../../Tests/Expt/Lockin Noise Measurement.vi"/>
+				<Item Name="serialize_test.vi" Type="VI" URL="../../Tests/Expt/serialize_test.vi"/>
+			</Item>
+			<Item Name="Test Sweep Mode vs Lockin_Vsg.vi" Type="VI" URL="../../Tests/Test Sweep Mode vs Lockin_Vsg.vi"/>
+			<Item Name="Test Lockin API State Machine.vi" Type="VI" URL="../../Tests/Test Lockin API State Machine.vi"/>
 		</Item>
 		<Item Name="Instrument.Lockin.lvclass" Type="LVClass" URL="../Instrument.Lockin/Instrument.Lockin.lvclass"/>
 		<Item Name="Instrument.Lockin.UI.lvclass" Type="LVClass" URL="../Instrument.Lockinl.UI/Instrument.Lockin.UI.lvclass"/>
 		<Item Name="LockinDAQ.lvclass" Type="LVClass" URL="../LockinDAQ/LockinDAQ.lvclass"/>
+		<Item Name="formatSweepResults.vi" Type="VI" URL="../Instrument.Lockin/API/formatSweepResults.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="1D Array to String__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/string/string.llb/1D Array to String__ogtk.vi"/>
@@ -284,6 +289,51 @@
 				<Item Name="MGI Make String Filesafe.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/String/MGI Make String Filesafe.vi"/>
 				<Item Name="Get Terminal Name with Device Prefix.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/subVIs - DAQ/Get Terminal Name with Device Prefix.vi"/>
 				<Item Name="MGI Milliseconds Since Last Reset.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Timing/MGI Milliseconds Since Last Reset.vi"/>
+				<Item Name="Instrument.Cryostat.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/Levylab Instruments/Instrument Types/Cryostat/Instrument.Cryostat.lvclass"/>
+				<Item Name="Instrument.KH7008.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/Krohn Hite 7008/Instrument.KH7008.lvclass"/>
+				<Item Name="Control Experiment.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/Transport/Control Experiment/Control Experiment.lvclass"/>
+				<Item Name="SweepControl.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/Transport/SweepControl/SweepControl.lvclass"/>
+				<Item Name="Transport.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/Transport/Transport/Transport.lvclass"/>
+				<Item Name="Current VIs Parent Directory__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/file/file.llb/Current VIs Parent Directory__ogtk.vi"/>
+				<Item Name="Dictionary Object RefNum - Enum__ogtk.ctl" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/dictionary/dictionary.llb/Dictionary Object RefNum - Enum__ogtk.ctl"/>
+				<Item Name="Dictionary Object RefNum__ogtk.ctl" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/dictionary/dictionary.llb/Dictionary Object RefNum__ogtk.ctl"/>
+				<Item Name="Dictionary Object Ref Type__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/dictionary/dictionary.llb/Dictionary Object Ref Type__ogtk.vi"/>
+				<Item Name="Dictionary Get Instance Semaphore RefNum__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/dictionary/dictionary.llb/Dictionary Get Instance Semaphore RefNum__ogtk.vi"/>
+				<Item Name="Dictionary Data__ogtk.ctl" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/dictionary/dictionary.llb/Dictionary Data__ogtk.ctl"/>
+				<Item Name="Dictionary Default Data__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/dictionary/dictionary.llb/Dictionary Default Data__ogtk.vi"/>
+				<Item Name="Dictionary Object Data Store__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/dictionary/dictionary.llb/Dictionary Object Data Store__ogtk.vi"/>
+				<Item Name="Dictionary Object Data Store VI Ref Type__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/dictionary/dictionary.llb/Dictionary Object Data Store VI Ref Type__ogtk.vi"/>
+				<Item Name="Dictionary Object Data Core Task Enum__ogtk.ctl" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/dictionary/dictionary.llb/Dictionary Object Data Core Task Enum__ogtk.ctl"/>
+				<Item Name="Dictionary Data Core__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/dictionary/dictionary.llb/Dictionary Data Core__ogtk.vi"/>
+				<Item Name="Dictionary Set Modified Data__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/dictionary/dictionary.llb/Dictionary Set Modified Data__ogtk.vi"/>
+				<Item Name="Dictionary Get Data to Modify__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/dictionary/dictionary.llb/Dictionary Get Data to Modify__ogtk.vi"/>
+				<Item Name="Dictionary Get Data__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/dictionary/dictionary.llb/Dictionary Get Data__ogtk.vi"/>
+				<Item Name="Dictionary Get Value__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/dictionary/dictionary.llb/Dictionary Get Value__ogtk.vi"/>
+				<Item Name="Dictionary Data Store VI Name__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/dictionary/dictionary.llb/Dictionary Data Store VI Name__ogtk.vi"/>
+				<Item Name="Dictionary Open Object Reference__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/dictionary/dictionary.llb/Dictionary Open Object Reference__ogtk.vi"/>
+				<Item Name="Dictionary New__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/dictionary/dictionary.llb/Dictionary New__ogtk.vi"/>
+				<Item Name="Dictionary Create__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/dictionary/dictionary.llb/Dictionary Create__ogtk.vi"/>
+				<Item Name="Computer Info.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Leiden Tools/subVIs/Computer Info.vi"/>
+				<Item Name="GetLocalComputerName.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Leiden Tools/subVIs/GetLocalComputerName.vi"/>
+				<Item Name="User Library__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/file/file.llb/User Library__ogtk.vi"/>
+				<Item Name="Dictionary Close Object Reference__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/dictionary/dictionary.llb/Dictionary Close Object Reference__ogtk.vi"/>
+				<Item Name="Dictionary Delete__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/dictionary/dictionary.llb/Dictionary Delete__ogtk.vi"/>
+				<Item Name="Dictionary Destroy__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/dictionary/dictionary.llb/Dictionary Destroy__ogtk.vi"/>
+				<Item Name="Get Cluster Elements TDs__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Get Cluster Elements TDs__ogtk.vi"/>
+				<Item Name="Get Cluster Element Names__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Get Cluster Element Names__ogtk.vi"/>
+				<Item Name="Set Cluster Element by Name__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Set Cluster Element by Name__ogtk.vi"/>
+				<Item Name="No of Elements in Cluster__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/No of Elements in Cluster__ogtk.vi"/>
+				<Item Name="MGI String Pattern Match Exists.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/String/MGI String Pattern Match Exists.vi"/>
+				<Item Name="REF_phi-array.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/Typedefs/REF_phi-array.ctl"/>
+				<Item Name="REF_f-array.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/Typedefs/REF_f-array.ctl"/>
+				<Item Name="REF-cluster.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/Typedefs/REF-cluster.ctl"/>
+				<Item Name="Function-enum.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/Typedefs/Function-enum.ctl"/>
+				<Item Name="Function-array.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/Typedefs/Function-array.ctl"/>
+				<Item Name="AO_phi-array.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/Typedefs/AO_phi-array.ctl"/>
+				<Item Name="AO_f-array.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/Typedefs/AO_f-array.ctl"/>
+				<Item Name="AO_DC-array.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/Typedefs/AO_DC-array.ctl"/>
+				<Item Name="AO_Amp-array.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/Typedefs/AO_Amp-array.ctl"/>
+				<Item Name="AO-cluster.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/Typedefs/AO-cluster.ctl"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
@@ -946,6 +996,29 @@
 				<Item Name="Timestamp Subtract.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/TSOps.llb/Timestamp Subtract.vi"/>
 				<Item Name="I128 Timestamp.ctl" Type="VI" URL="/&lt;vilib&gt;/Waveform/TSOps.llb/I128 Timestamp.ctl"/>
 				<Item Name="DU64_U32SubtractWithBorrow.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/TSOps.llb/DU64_U32SubtractWithBorrow.vi"/>
+				<Item Name="VISA Configure Serial Port (Instr).vi" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port (Instr).vi"/>
+				<Item Name="VISA Configure Serial Port (Serial Instr).vi" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port (Serial Instr).vi"/>
+				<Item Name="VISA Configure Serial Port" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port"/>
+				<Item Name="Semaphore Refnum Core.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Semaphore Refnum Core.ctl"/>
+				<Item Name="Semaphore RefNum" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Semaphore RefNum"/>
+				<Item Name="Not A Semaphore.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Not A Semaphore.vi"/>
+				<Item Name="Release Semaphore.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Release Semaphore.vi"/>
+				<Item Name="Release Semaphore_71.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Release Semaphore_71.vi"/>
+				<Item Name="Validate Semaphore Size.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Validate Semaphore Size.vi"/>
+				<Item Name="GetNamedSemaphorePrefix.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/GetNamedSemaphorePrefix.vi"/>
+				<Item Name="AddNamedSemaphorePrefix.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/AddNamedSemaphorePrefix.vi"/>
+				<Item Name="Obtain Semaphore Reference.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Obtain Semaphore Reference.vi"/>
+				<Item Name="RemoveNamedSemaphorePrefix.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/RemoveNamedSemaphorePrefix.vi"/>
+				<Item Name="Get Semaphore Status.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Get Semaphore Status.vi"/>
+				<Item Name="Semaphore Name &amp; Ref DB Action.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Semaphore Name &amp; Ref DB Action.ctl"/>
+				<Item Name="Semaphore Name &amp; Ref DB.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Semaphore Name &amp; Ref DB.vi"/>
+				<Item Name="Create Semaphore.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Create Semaphore.vi"/>
+				<Item Name="Acquire Semaphore.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Acquire Semaphore.vi"/>
+				<Item Name="Get LV Class Default Value.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/LVClass/Get LV Class Default Value.vi"/>
+				<Item Name="Release Semaphore Reference.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Release Semaphore Reference.vi"/>
+				<Item Name="Destroy Semaphore.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Destroy Semaphore.vi"/>
+				<Item Name="DAQmx Wait Until Done.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/task.llb/DAQmx Wait Until Done.vi"/>
+				<Item Name="Voltage Update.vi" Type="VI" URL="/&lt;vilib&gt;/Levylab/Voltage Update/Voltage Update.vi"/>
 			</Item>
 			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -962,6 +1035,9 @@
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="System.Management" Type="Document" URL="System.Management">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 		</Item>
