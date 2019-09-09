@@ -67,7 +67,7 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1342710272</Property>
 		</Item>
-		<Item Name="LockinDAQ.setREFfilter.vi" Type="VI" URL="../LockinDAQ.setREFfilter.vi">
+		<Item Name="LockinDAQ.setREFfilter.vi" Type="VI" URL="../API/LockinDAQ.setREFfilter.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;^!!!!$!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#J!=!!?!!!4%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T!!V-&lt;W.L;7Z%16%A&lt;X6U!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!$5!+!!:51S!I=SE!!!N!!Q!&amp;&lt;X*E:8)!3Q$RW-E`G!!!!!)24'^D;WFO2%&amp;2,GRW9WRB=X-75E6')':J&lt;(2F=CVD&lt;(6T&gt;'6S,G.U&lt;!!;1&amp;!!!A!(!!A+5E6')':J&lt;(2F=A!!*E"Q!"Y!!"-24'^D;WFO2%&amp;2,GRW9WRB=X-!#5RP9WNJ&lt;E2"51"B!0!!$!!$!!1!"!!&amp;!!1!"!!%!!1!"A!%!!E!#A)!!(A!!!U)!!!!!!!!!!!!!!U,!!!!!!!!!!!!!!!!!!!!!!!!#A!!!!!!!!!)!!!!%!!!$1!!!!Q!!!!!!!!!!!!!!1!,!!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
@@ -103,7 +103,7 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1350574592</Property>
 		</Item>
-		<Item Name="LockinDAQ.setGain.vi" Type="VI" URL="../LockinDAQ.setGain.vi">
+		<Item Name="LockinDAQ.setGain.vi" Type="VI" URL="../API/LockinDAQ.setGain.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;_!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#J!=!!?!!!4%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T!!V-&lt;W.L;7Z%16%A&lt;X6U!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!$5!+!!&gt;/&gt;7VF=GFD!&amp;=!]1!!!!!!!!!#%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T*&amp;"S;8:B&gt;'6&amp;&gt;G6O&gt;(-N,5RP9WNJ&lt;E2"53ZT:82(97FO,G.U&lt;!!91%!!!@````]!"Q&gt;T:82(97FO!#:!=!!?!!!4%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T!!F-&lt;W.L;7Z%16%!91$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!)!!E#!!"Y!!!.#!!!!!!!!!!!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!#!!!!"!!!!U!!!!-!!!!!!!!!!!!!!%!#A!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
@@ -112,7 +112,7 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1350574592</Property>
 		</Item>
-		<Item Name="LockinDAQ.setSweep.vi" Type="VI" URL="../LockinDAQ.setSweep.vi">
+		<Item Name="LockinDAQ.setSweep.vi" Type="VI" URL="../API/LockinDAQ.setSweep.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!(?!!!!$Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#J!=!!?!!!4%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T!!V-&lt;W.L;7Z%16%A&lt;X6U!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!%U!$!!V4&gt;W6F=#"$;'&amp;O&lt;G6M!"6!#A!05X&gt;F:8!A5X2B=H1A+&amp;9J!".!#A!.5X&gt;F:8!A27ZE)#B7+1!61!I!$F.X:76Q)&amp;2J&lt;75A+(-J!!!&lt;1!I!&amp;5FO;82J97QA6W&amp;J&gt;#"5;7VF)#BT+1":!0%!!!!!!!!!!B&amp;-&lt;W.L;7Z%16%O&lt;(:D&lt;'&amp;T=S"4&gt;W6F=#"$&lt;WZG;7&gt;V=G&amp;U;7^O,3V$&lt;(6T&gt;'6S,G.U&lt;!!?1&amp;!!"1!(!!A!#1!+!!M)=W6U5X&gt;F:8!!!#:!=!!?!!!4%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T!!F-&lt;W.L;7Z%16%!91$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!-!!U#!!"Y!!!.#!!!!!!!!!!!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!#!!!!"!!!!U!!!!-!!!!!!!!!!!!!!%!$A!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
@@ -121,7 +121,7 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1350574592</Property>
 		</Item>
-		<Item Name="Waveguide Model.vi" Type="VI" URL="../Waveguide Model.vi">
+		<Item Name="Waveguide Model.vi" Type="VI" URL="../API/Waveguide Model.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!"K!!!!"1!21!I!#EF&lt;6H.H83!I13E!!".!#A!.2VN7=W&gt;&gt;)#BF-C^I+1!.1!I!"F:T)#B7+1!!$5!+!!&gt;7=W=A+&amp;9J!#1!]!!%!!!!!1!#!!-#!!!I!!!*!!!!#1!!!!A!!!!+!!!!!!%!"!!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
@@ -826,7 +826,7 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1342710272</Property>
 		</Item>
-		<Item Name="LockinDAQ.getResults.vi" Type="VI" URL="../LockinDAQ.getResults.vi">
+		<Item Name="LockinDAQ.getResults.vi" Type="VI" URL="../private/LockinDAQ.getResults.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!'7!!!!$1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#J!=!!?!!!4%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T!!V-&lt;W.L;7Z%16%A&lt;X6U!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!%E"5!!9+6'FN:3"4&gt;'&amp;N=!!!$5!+!!&gt;/&gt;7VF=GFD!"B!1!!#``````````]!#!&gt;3:8.V&lt;(2T!%5!]1!!!!!!!!!#%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T&amp;&amp;*F=X6M&gt;(-N,5.M&gt;8.U:8)O9X2M!":!5!!#!!=!#1&gt;3:8.V&lt;(2T!#:!=!!?!!!4%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T!!F-&lt;W.L;7Z%16%!91$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!+!!M#!!"Y!!!.#!!!!!!!!!!!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!#!!!!"!!!!U!!!!-!!!!!!!!!!!!!!%!$!!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
@@ -835,7 +835,7 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1342710272</Property>
 		</Item>
-		<Item Name="LockinDAQ.getCalibration.vi" Type="VI" URL="../LockinDAQ.getCalibration.vi">
+		<Item Name="LockinDAQ.getCalibration.vi" Type="VI" URL="../private/LockinDAQ.getCalibration.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!(`!!!!%!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#J!=!!?!!!4%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T!!V-&lt;W.L;7Z%16%A&lt;X6U!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!(A!X`````Q!-&amp;A#!!!!!!!%!"!!!!!%!!!!!!!!!(%"5!!965W6M:E.B&lt;#Z-98.U2'&amp;U:3^5;7VF!"&gt;!#A!15W6M:E.B&lt;#Z-98.U6'6N=!!!$5!+!!&gt;%:8:5:7VQ!"*!)1RS:7.B&lt;'FC=G&amp;U:4]!!"!!5!!&amp;!!=!#!!*!!I!#Q"F!0%!!!!!!!!!!B&amp;-&lt;W.L;7Z%16%O&lt;(:D&lt;'&amp;T=SJ1&gt;7*M;7.&amp;&gt;G6O&gt;(-N,5RP9WNJ&lt;E2"53ZH:82$97RJ9H*B&gt;'FP&lt;CZD&gt;'Q!)%"!!!(`````!!Q/:W6U1W&amp;M;7*S982J&lt;WY!!#:!=!!?!!!4%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T!!F-&lt;W.L;7Z%16%!91$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!.!!Y#!!"Y!!!.#!!!!!!!!!!!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!#!!!!"!!!!U!!!!-!!!!!!!!!!!!!!%!$Q!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
@@ -844,7 +844,7 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1116209664</Property>
 		</Item>
-		<Item Name="LockinDAQ.getAOChannels.vi" Type="VI" URL="../LockinDAQ.getAOChannels.vi">
+		<Item Name="LockinDAQ.getAOChannels.vi" Type="VI" URL="../private/LockinDAQ.getAOChannels.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!/+!!!!&amp;Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#J!=!!?!!!4%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T!!V-&lt;W.L;7Z%16%A&lt;X6U!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!$5!+!!:"4S""&lt;8!!!%=!]&gt;?_X41!!!!#%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T%%&amp;08U&amp;N=#VB=H*B?3ZD&gt;'Q!(%"!!!(`````!!=+15]A17VQ)#B7+1!!#U!+!!6"4S"%1Q"%!0(8PNP0!!!!!B&amp;-&lt;W.L;7Z%16%O&lt;(:D&lt;'&amp;T=Q^"4V^%1SVB=H*B?3ZD&gt;'Q!'E"!!!(`````!!E*15]A2%-A+&amp;9J!!N!#A!%15]A:A!!1Q$RV\\9]!!!!!)24'^D;WFO2%&amp;2,GRW9WRB=X-/15^@:CVB=H*B?3ZD&gt;'Q!'E"!!!(`````!!M*15]A:C!I3(IJ!!V!#A!'15]A='BJ!!"*!0(:6VFJ!!!!!B&amp;-&lt;W.L;7Z%16%O&lt;(:D&lt;'&amp;T=R""4V^Q;'EN98*S98EO9X2M!"Z!1!!"`````Q!.$%&amp;0)&amp;"I98.F)#CQ+1!!91$RV\\=OA!!!!)24'^D;WFO2%&amp;2,GRW9WRB=X-22H6O9X2J&lt;WYN:7ZV&lt;3ZD&gt;'Q!.5!7!!1%5WFO:1B5=GFB&lt;G&gt;M:1:4=86B=G5)5W&amp;X&gt;'^P&gt;'A!#V.J:WZB&lt;#"5?8"F!%=!]1!!!!!!!!!#%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T%E:V&lt;G.U;7^O,7&amp;S=G&amp;Z,G.U&lt;!!;1%!!!@````]!$QB'&gt;7ZD&gt;'FP&lt;A!!$%!B"U*P&lt;WRF97Y!%%"!!!(`````!"%#33M!!":!1!!"`````Q!2#&amp;.X:76Q;7ZH!!"0!0(:A&amp;H[!!!!!B&amp;-&lt;W.L;7Z%16%O&lt;(:D&lt;'&amp;T=QZ"4SVD&lt;(6T&gt;'6S,G.U&lt;!!G1&amp;!!"Q!)!!I!$!!/!"!!%A!4$%.I97ZO:7RT/C""4Q!!*E"Q!"Y!!"-24'^D;WFO2%&amp;2,GRW9WRB=X-!#5RP9WNJ&lt;E2"51"B!0!!$!!$!!1!"!!&amp;!!1!"!!%!!1!"A!%!"1!&amp;1)!!(A!!!U)!!!!!!!!!!!!!!U,!!!!!!!!!!!!!!!!!!!!!!!!#A!!!!!!!!!)!!!!%!!!$1!!!!Q!!!!!!!!!!!!!!1!7!!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
@@ -853,7 +853,7 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1342710272</Property>
 		</Item>
-		<Item Name="LockinDAQ.getREFChannels.vi" Type="VI" URL="../LockinDAQ.getREFChannels.vi">
+		<Item Name="LockinDAQ.getREFChannels.vi" Type="VI" URL="../private/LockinDAQ.getREFChannels.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!)'!!!!$A!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#J!=!!?!!!4%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T!!V-&lt;W.L;7Z%16%A&lt;X6U!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!#U!+!!63259A:A"'!0(8PNQ2!!!!!B&amp;-&lt;W.L;7Z%16%O&lt;(:D&lt;'&amp;T=Q^325:@:CVB=H*B?3ZD&gt;'Q!(%"!!!(`````!!=+5E6')'9A+%B[+1!!$5!+!!&gt;3259A='BJ!%A!]&gt;?_X&amp;A!!!!#%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T%6*&amp;2F^Q;'EN98*S98EO9X2M!"R!1!!"`````Q!*#V*&amp;2C"Q;'EA+,!J!%9!]&gt;G!NV5!!!!#%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T$V*&amp;2CVD&lt;(6T&gt;'6S,G.U&lt;!!=1&amp;!!!A!)!!I.1WBB&lt;GZF&lt;(-[)&amp;*&amp;2A!G1(!!(A!!%R&amp;-&lt;W.L;7Z%16%O&lt;(:D&lt;'&amp;T=Q!*4'^D;WFO2%&amp;2!'%!]!!-!!-!"!!%!!5!"!!%!!1!"!!'!!1!#Q!-!A!!?!!!$1A!!!!!!!!!!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!!A!!!!1!!!.!!!!$!!!!!!!!!!!!!!"!!U!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
@@ -862,7 +862,7 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1342710272</Property>
 		</Item>
-		<Item Name="LockinDAQ.getDAQState.vi" Type="VI" URL="../LockinDAQ.getDAQState.vi">
+		<Item Name="LockinDAQ.getDAQState.vi" Type="VI" URL="../private/LockinDAQ.getDAQState.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;[!!!!#A!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#J!=!!?!!!4%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T!!V-&lt;W.L;7Z%16%A&lt;X6U!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!9!$R!!!!!!!!!!)24'^D;WFO2%&amp;2,GRW9WRB=X-/5X2B&gt;'5N:7ZV&lt;3ZD&gt;'Q!.U!7!!5%;72M:1&gt;D=G6B&gt;'6E"X.U98*U:71(=X2P=("F:!BT&gt;W6F='FO:Q!&amp;=X2B&gt;'5!*E"Q!"Y!!"-24'^D;WFO2%&amp;2,GRW9WRB=X-!#5RP9WNJ&lt;E2"51"B!0!!$!!$!!1!"!!&amp;!!1!"!!%!!1!"A!%!!=!#!)!!(A!!!U)!!!!!!!!!!!!!!U,!!!!!!!!!!!!!!!!!!!!!!!!#A!!!!!!!!!)!!!!%!!!$1!!!!Q!!!!!!!!!!!!!!1!*!!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
@@ -871,7 +871,7 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1350574592</Property>
 		</Item>
-		<Item Name="LockinDAQ.getSweepResults.vi" Type="VI" URL="../LockinDAQ.getSweepResults.vi">
+		<Item Name="LockinDAQ.getSweepResults.vi" Type="VI" URL="../private/LockinDAQ.getSweepResults.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!(X!!!!%Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#J!=!!?!!!4%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T!!V-&lt;W.L;7Z%16%A&lt;X6U!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!%E"5!!9+6'FN:3"4&gt;'&amp;N=!!!"1!+!!!71%!!!@````]!#!FQ98*B&lt;76U:8)!$E"!!!(`````!!A"?!!+!&amp;!!!A!*!!I!&amp;E"!!!(`````!!M*7#"3:8.V&lt;(2T!!Z!1!!"`````Q!)!8E!#A"1!!)!#1!.!":!1!!"`````Q!/#6EA5G6T&gt;7RU=Q"5!0%!!!!!!!!!!B&amp;-&lt;W.L;7Z%16%O&lt;(:D&lt;'&amp;T=RF4&gt;W6F=&amp;*F=X6M&gt;(-N,5.M&gt;8.U:8)O9X2M!#"!5!!$!!=!$!!0$W&gt;F&gt;&amp;.X:76Q5G6T&gt;7RU=Q!G1(!!(A!!%R&amp;-&lt;W.L;7Z%16%O&lt;(:D&lt;'&amp;T=Q!*4'^D;WFO2%&amp;2!'%!]!!-!!-!"!!%!!5!"!!%!!1!"!!'!!1!%!!2!A!!?!!!$1A!!!!!!!!!!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!!A!!!!1!!!.!!!!$!!!!!!!!!!!!!!"!")!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
@@ -906,15 +906,6 @@
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">8388624</Property>
-		</Item>
-		<Item Name="Test Waveguide Model.vi" Type="VI" URL="../Test Waveguide Model.vi">
-			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!#1!!!!!A!%!!!!B!$Q!"1!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Q!"%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1!"!!!!!!</Property>
-			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
-			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
-			<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
-			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-			<Property Name="NI.ClassItem.State" Type="Int">1082143248</Property>
 		</Item>
 		<Item Name="ConcatenateSweepResults.vi" Type="VI" URL="../Sweep/ConcatenateSweepResults.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!+J!!!!&amp;1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!"*!6!!'#F2J&lt;75A5X2B&lt;8!!!!5!#A!!&amp;E"!!!(`````!!9*='&amp;S97VF&gt;'6S!!Z!1!!"`````Q!'!8A!#A"1!!)!"Q!)!":!1!!"`````Q!*#6AA5G6T&gt;7RU=Q!/1%!!!@````]!"A&amp;Z!!I!5!!#!!=!#Q!71%!!!@````]!$!F:)&amp;*F=X6M&gt;(-!7!$R!!!!!!!!!!)24'^D;WFO2%&amp;2,GRW9WRB=X-:5X&gt;F:8"3:8.V&lt;(2T,3V$&lt;(6T&gt;'6S,G.U&lt;!!E1&amp;!!!Q!&amp;!!I!$2.4&gt;W6F=&amp;*F=X6M&gt;(-A7VUA&lt;X6U!#J!=!!?!!!4%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T!!V-&lt;W.L;7Z%16%A&lt;X6U!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!6A$R!!!!!!!!!!)24'^D;WFO2%&amp;2,GRW9WRB=X-:5X&gt;F:8"3:8.V&lt;(2T,3V$&lt;(6T&gt;'6S,G.U&lt;!!C1&amp;!!!Q!&amp;!!I!$2"4&gt;W6F=&amp;*F=X6M&gt;(-A7WF&gt;!!"5!0%!!!!!!!!!!B&amp;-&lt;W.L;7Z%16%O&lt;(:D&lt;'&amp;T=RF4&gt;W6F=&amp;*F=X6M&gt;(-N,5.M&gt;8.U:8)O9X2M!#"!5!!$!!5!#A!.$V.X:76Q5G6T&gt;7RU=S"&lt;81!K1(!!(A!!%R&amp;-&lt;W.L;7Z%16%O&lt;(:D&lt;'&amp;T=Q!-4'^D;WFO2%&amp;2)'FO!!"B!0!!$!!$!!1!$A!0!!1!"!!%!!1!%!!2!")!%Q-!!(A!!!U)!!!!!!!!$1I!!!U,!!!!!!!!!!!!!!!!!!!!!!!!#!!!!!A!!!!+!!!!#!!!$1!!!!Q!!!!!!!!!!!!!!1!5!!!!!!</Property>
