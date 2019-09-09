@@ -41,7 +41,9 @@
 			</Item>
 			<Item Name="Test Lockin API State Machine.vi" Type="VI" URL="../../Tests/Test Lockin API State Machine.vi"/>
 		</Item>
-		<Item Name="formatSweepResults.vi" Type="VI" URL="../Instrument.Lockin/API/formatSweepResults.vi"/>
+		<Item Name="Instrument.Lockin.UI.lvclass" Type="LVClass" URL="../Instrument.Lockinl.UI/Instrument.Lockin.UI.lvclass"/>
+		<Item Name="Instrument.Lockin.lvclass" Type="LVClass" URL="../Instrument.Lockin/Instrument.Lockin.lvclass"/>
+		<Item Name="LockinDAQ.lvclass" Type="LVClass" URL="../LockinDAQ/LockinDAQ.lvclass"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="1D Array to String__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/string/string.llb/1D Array to String__ogtk.vi"/>
@@ -283,49 +285,7 @@
 				<Item Name="Periodic Trigger__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/time/time.llb/Periodic Trigger__ogtk.vi"/>
 				<Item Name="MGI Append String to Error Source.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Error Handling/MGI Append String to Error Source.vi"/>
 				<Item Name="MGI Make String Filesafe.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/String/MGI Make String Filesafe.vi"/>
-				<Item Name="Get Terminal Name with Device Prefix.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/subVIs - DAQ/Get Terminal Name with Device Prefix.vi"/>
 				<Item Name="MGI Milliseconds Since Last Reset.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Timing/MGI Milliseconds Since Last Reset.vi"/>
-				<Item Name="Instrument.Lockin.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/Instrument.Lockin.lvclass"/>
-				<Item Name="getTimeWithError.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/getTimeWithError.vi"/>
-				<Item Name="StateHistory.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/StateHistory.vi"/>
-				<Item Name="Spinner.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/Spinner.vi"/>
-				<Item Name="Channel String to Number of Channels.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/Channel String to Number of Channels.vi"/>
-				<Item Name="LegendWaveformChart.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/LegendWaveformChart.vi"/>
-				<Item Name="LegendXYGraph.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/LegendXYGraph.vi"/>
-				<Item Name="FloatApproxPoint1Percent.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/FloatApproxPoint1Percent.vi"/>
-				<Item Name="Fs and Ns for integer periods.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/Fs and Ns for integer periods.vi"/>
-				<Item Name="FloatApprox.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/FloatApprox.vi"/>
-				<Item Name="4461 - Cal Info.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/subVIs - DAQ/4461 - Cal Info.vi"/>
-				<Item Name="4461 - Create Reference Waveforms.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/subVIs - DAQ/4461 - Create Reference Waveforms.vi"/>
-				<Item Name="decimate_waveforms.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/decimate_waveforms.vi"/>
-				<Item Name="4461 - Create AO waveforms.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/subVIs - DAQ/4461 - Create AO waveforms.vi"/>
-				<Item Name="4461 - Create IO Channels Parallel Uneven.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/subVIs - DAQ/4461 - Create IO Channels Parallel Uneven.vi"/>
-				<Item Name="AI.Coupling.enum.convert.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/AI.Coupling.enum.convert.vi"/>
-				<Item Name="44xx_AI_MinMax.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/subVIs - DAQ/44xx_AI_MinMax.vi"/>
-				<Item Name="Fs_to_FilterDelay.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/Fs_to_FilterDelay.vi"/>
-				<Item Name="Get Dev Product Type.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/subVIs - DAQ/Get Dev Product Type.vi"/>
-				<Item Name="44xxRefClk.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/subVIs - DAQ/44xxRefClk.vi"/>
-				<Item Name="44xx_AO_MinMax.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/subVIs - DAQ/44xx_AO_MinMax.vi"/>
-				<Item Name="4461 - AI AND AI - Read AND Write Uneven.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/subVIs - DAQ/4461 - AI AND AI - Read AND Write Uneven.vi"/>
-				<Item Name="4461 Sim - Noise.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/subVIs - DAQ/4461 Sim - Noise.vi"/>
-				<Item Name="Prefilter_60Hz_Notch.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/Prefilter_60Hz_Notch.vi"/>
-				<Item Name="Prefilter_LP.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/Prefilter_LP.vi"/>
-				<Item Name="lockin - add phase element.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/lockin - add phase element.vi"/>
-				<Item Name="lockin - Set all f same.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/lockin - Set all f same.vi"/>
-				<Item Name="lockin - Set REF phase equals zero.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/lockin - Set REF phase equals zero.vi"/>
-				<Item Name="Simple PID Array.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/Simple PID Array.vi"/>
-				<Item Name="4461 - Lockin Engine.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/subVIs - DAQ/4461 - Lockin Engine.vi"/>
-				<Item Name="Replace timestamp.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/Replace timestamp.vi"/>
-				<Item Name="Waveform 64-128 channels LP pt by pt.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/Waveform 64-128 channels LP pt by pt.vi"/>
-				<Item Name="Split 1D ARRAY in half.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/Split 1D ARRAY in half.vi"/>
-				<Item Name="format display.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/format display.vi"/>
-				<Item Name="Display n or dt.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/Display n or dt.vi"/>
-				<Item Name="LegendWaveformGraph.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/LegendWaveformGraph.vi"/>
-				<Item Name="4461 - Stop Tasks.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/subVIs - DAQ/4461 - Stop Tasks.vi"/>
-				<Item Name="write_lockin_FP_DSC.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/write_lockin_FP_DSC.vi"/>
-				<Item Name="FPDAQtoDAQstrings.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/FPDAQtoDAQstrings.vi"/>
-				<Item Name="read_lockin_FP_DSC.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/SubVIs/read_lockin_FP_DSC.vi"/>
-				<Item Name="Instrument.Lockin.UI.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockinl.UI/Instrument.Lockin.UI.lvclass"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
@@ -1006,9 +966,6 @@
 			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="Instrument.Lockin.UI.lvclass" Type="LVClass" URL="../Instrument.Lockinl.UI/Instrument.Lockin.UI.lvclass"/>
-			<Item Name="Instrument.Lockin.lvclass" Type="LVClass" URL="../Instrument.Lockin/Instrument.Lockin.lvclass"/>
-			<Item Name="LockinDAQ.lvclass" Type="LVClass" URL="../LockinDAQ/LockinDAQ.lvclass"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lockin" Type="EXE">
