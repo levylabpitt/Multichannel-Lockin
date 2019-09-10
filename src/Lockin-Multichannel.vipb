@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-09-10 13:02:53" Creator="Patrick Irvin" Comments="" ID="87c9ed06062afef94689b5df696a6cae">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-07-21 11:38:22" Creator="Patrick Irvin" Comments="" ID="e61ba9433b8b646af51efbeb43af91eb">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.7.0.2</Library_Version>
+    <Library_Version>2.6.1.4</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -87,9 +87,21 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.7.0.1]
-Major update. In addition to Inheriting from Insrument.lvclass, the DAQ functions are now contained in an asynchronous SMO. Almost everything has been refactored.
-This is the first build [ie, EXPERIMENTAL].</Release_Notes>
+      <Release_Notes>[2.6.0.1]
+This is a major update:
+- Now inheriting from Instrument.lvclass. Necessary for future upgrades.
+- Now using RemoteControl.lvclass:process.vi from Instrument.lvclass. Should be more reliable, easier to manage, will be easier to add future API commands, and will be easier to change communication protocals in the future.
+- new API z setting AO Amplitude, DC, Frequency, Phase, Function that DOES NOT require you to know the current state of the AO cluster
+- New buttons and status indicators on the front panel
+- **Experimental** "sweep mode" that should allow more rapid sweeps of side gate voltage, for example
+
+[2.6.1.2]
+- fix some issues with the program logic
+- add API for turning on and off auto sample rate
+
+[2.6.1.3]
+- Setting the Address and Port only by calling "Connect to Remote Lockin.vi" (not neccessary for local commands)
+- Address and Port are on the class wire</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -260,34 +272,6 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
         <Synchronize_Directory_Path>.</Synchronize_Directory_Path>
       </Synchronization_Info>
       <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Lockin-4461 -Patrick -State.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>Lockin-4461 -Patrick -State.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Sub Palette</Type>
-        <Sub_Palette_Index>1</Sub_Palette_Index>
-        <NameSub_Menu_Name>API</NameSub_Menu_Name>
-        <Short_Name>API</Short_Name>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>2</Column>
-        </Position>
-        <Icon>00000367002900000012000000020000000D00FFFFFF000100000000000A0000000800000000002000200028000000E3000000BD0000000C0007001500180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFF000000000000FFFFFFFFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000000000000000000000FFFFFF000000000000FFFFFFFFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF007F4CFFAAFFECFFA8FFA8FF007F002900000012000000020000000D00CCCCFF000100000000000A00000008001900000020002000280000022C000001F8001900040020001C00180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF9AAA26FF92AA55FF9ABA76FF939255FFD91356FF000000FF</Icon>
-        <Path>Instrument.Lockin\API</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
         <Type>Sub Palette</Type>
         <Sub_Palette_Index>2</Sub_Palette_Index>
         <NameSub_Menu_Name>Examples</NameSub_Menu_Name>
@@ -301,14 +285,56 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
         <Path>Examples</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E6C430D54F92AAEA9F6B2B5F4424CCB7</GUID>
+      <Items_Data>
+        <Type>Sub Palette</Type>
+        <Sub_Palette_Index>1</Sub_Palette_Index>
+        <NameSub_Menu_Name>API</NameSub_Menu_Name>
+        <Short_Name>API</Short_Name>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>1</Row>
+          <Column>2</Column>
+        </Position>
+        <Icon>00000367002900000012000000020000000D00FFFFFF000100000000000A0000000800000000002000200028000000E3000000BD0000000C0007001500180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFF000000000000FFFFFFFFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000000000000000000000FFFFFF000000000000FFFFFFFFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF007F4CFFAAFFECFFA8FFA8FF007F002900000012000000020000000D00CCCCFF000100000000000A00000008001900000020002000280000022C000001F8001900040020001C00180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF9AAA26FF92AA55FF9ABA76FF939255FFD91356FF000000FF</Icon>
+        <Path>API</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Sub Palette</Type>
+        <Sub_Palette_Index>3</Sub_Palette_Index>
+        <NameSub_Menu_Name>Expt</NameSub_Menu_Name>
+        <Short_Name>Expt</Short_Name>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>1</Row>
+          <Column>4</Column>
+        </Position>
+        <Icon>000003BB002900000012000000020000000D00FFFFFF000100000000000A000000080000000000200020002800000137000001110000000A0007001700180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFF000000FFFFFFFFFFFF000000FFFFFF000000FFFFFF000000000000FFFFFFFFFFFF000000000000000000000000FFFFFFFFFFFF000000FFFFFFFFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFF000000000000FFFFFFFFFFFF000000FFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0007C017959FC9578997D50F0007002900000012000000020000000D00CCCCFF000100000000000A00000008001900000020002000280000022C000001F8001900040020001C00180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF9AAA26FF92AA55FF9ABA76FF939255FFD91356FF000000FF</Icon>
+        <Path>Expt</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>Lockin-4461 -Patrick -State.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>1</Row>
+          <Column>1</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>Lockin-4461 -Patrick -State.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <GUID>EE9E11C8CC2C4BB51BA28E6785279D14</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
       <Name>API</Name>
       <View_Format>Icons</View_Format>
       <Size>
-        <Height_Row>8</Height_Row>
+        <Height_Row>6</Height_Row>
         <Width_Col.>7</Width_Col.>
       </Size>
       <_256_Color_Icon>00000367002900000012000000020000000D00FFFFFF000100000000000A0000000800000000002000200028000000E3000000BD0000000C0007001500180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFF000000000000FFFFFFFFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000000000000000000000FFFFFF000000000000FFFFFFFFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF007F4CFFAAFFECFFA8FFA8FF007F002900000012000000020000000D00CCCCFF000100000000000A00000008001900000020002000280000022C000001F8001900040020001C00180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF9AAA26FF92AA55FF9ABA76FF939255FFD91356FF000000FF</_256_Color_Icon>
@@ -319,97 +345,13 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
       </Help_Info>
       <Description/>
       <Synchronization_Info>
-        <Synchronyze_with_Directory>true</Synchronyze_with_Directory>
-        <Synchronize_Directory_Path>Instrument.Lockin\API</Synchronize_Directory_Path>
+        <Synchronyze_with_Directory>false</Synchronyze_with_Directory>
+        <Synchronize_Directory_Path>API</Synchronize_Directory_Path>
       </Synchronization_Info>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setSweepFile.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>8</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\setSweepFile.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>startSweep.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>8</Row>
-          <Column>3</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\startSweep.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setSweepConfiguration.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>8</Row>
-          <Column>2</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\setSweepConfiguration.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>stopSweep.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>8</Row>
-          <Column>4</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\stopSweep.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>connectLockin.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\connectLockin.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>reset.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>2</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\reset.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setAO.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>configAO.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -417,13 +359,13 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\setAO.vi</Path>
+        <Path>Instrument.Lockin\API\configAO.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setREF.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>configREF.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -431,41 +373,13 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\setREF.vi</Path>
+        <Path>Instrument.Lockin\API\configREF.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setREFfilterConfig.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>4</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\setREFfilterConfig.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setAO_Amp.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>2</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\setAO_Amp.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setAO_DC.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>configAO_Amp.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -473,13 +387,13 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\setAO_DC.vi</Path>
+        <Path>Instrument.Lockin\API\configAO_Amp.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setAO_f.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>configAO_DC.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -487,13 +401,41 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\setAO_f.vi</Path>
+        <Path>Instrument.Lockin\API\configAO_DC.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setAO_function.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>configAO_f.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>2</Row>
+          <Column>5</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>Instrument.Lockin\API\configAO_f.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>configAO_function.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>2</Row>
+          <Column>7</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>Instrument.Lockin\API\configAO_function.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>configAO_phi.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -501,55 +443,27 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\setAO_function.vi</Path>
+        <Path>Instrument.Lockin\API\configAO_phi.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setAO_phi.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>readAOconfig.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
           <Row>2</Row>
-          <Column>5</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\setAO_phi.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setREF_f.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\setREF_f.vi</Path>
+        <Path>Instrument.Lockin\API\readAOconfig.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setREF_phi.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>3</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\setREF_phi.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setAutoSampling.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>configSampling.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -557,69 +471,97 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\setAutoSampling.vi</Path>
+        <Path>Instrument.Lockin\API\configSampling.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getREFconfig.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>readSampling.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>5</Row>
+          <Column>2</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>Instrument.Lockin\API\readSampling.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>readREFconfig.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
           <Row>3</Row>
-          <Column>7</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\getREFconfig.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getAOconfig.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>7</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\getAOconfig.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getAutoSampling.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>5</Row>
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\getAutoSampling.vi</Path>
+        <Path>Instrument.Lockin\API\readREFconfig.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getSweepResults.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>readREFfilter.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>8</Row>
-          <Column>5</Column>
+          <Row>3</Row>
+          <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\getSweepResults.vi</Path>
+        <Path>Instrument.Lockin\API\readREFfilter.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setIVmodeConfig.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>configREFfilter.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>3</Row>
+          <Column>3</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>Instrument.Lockin\API\configREFfilter.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>configREF_f.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>3</Row>
+          <Column>5</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>Instrument.Lockin\API\configREF_f.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>configREF_phi.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>3</Row>
+          <Column>6</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>Instrument.Lockin\API\configREF_phi.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>Lockin-4461 IV mode trigger and wait.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -627,13 +569,13 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\setIVmodeConfig.vi</Path>
+        <Path>Instrument.Lockin\API\Lockin-4461 IV mode trigger and wait.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getIVmode.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>configIVmode.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -641,13 +583,13 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\getIVmode.vi</Path>
+        <Path>Instrument.Lockin\API\configIVmode.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>trigger.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>readIVmode.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -655,13 +597,13 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\trigger.vi</Path>
+        <Path>Instrument.Lockin\API\readIVmode.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getTrigger.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>assertTrigger.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -669,147 +611,49 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\getTrigger.vi</Path>
+        <Path>Instrument.Lockin\API\assertTrigger.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getAI.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>readTrigger.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>7</Row>
+          <Row>6</Row>
+          <Column>5</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>Instrument.Lockin\API\readTrigger.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>configReset.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>6</Row>
+          <Column>6</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>Instrument.Lockin\API\configReset.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>readResults.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>4</Row>
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\getAI.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getAO.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>7</Row>
-          <Column>2</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\getAO.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getResults.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>7</Row>
-          <Column>3</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\getResults.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getStatus.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>7</Row>
-          <Column>4</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\getStatus.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getREFfilter.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>4</Row>
-          <Column>2</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\getREFfilter.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setSampling.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>4</Row>
-          <Column>4</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\setSampling.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getSampling.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>4</Row>
-          <Column>5</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\getSampling.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setGain.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>5</Row>
-          <Column>4</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\setGain.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getGain.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>5</Row>
-          <Column>5</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\getGain.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>waitForNewWaveforms.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>7</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\waitForNewWaveforms.vi</Path>
+        <Path>Instrument.Lockin\API\readResults.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -819,8 +663,8 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>1</Row>
-          <Column>6</Column>
+          <Row>4</Row>
+          <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>Instrument.Lockin\API\waitForNewResults.vi</Path>
@@ -829,32 +673,116 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>startIVAndWait.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>readAI.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>1</Row>
-          <Column>5</Column>
+          <Row>4</Row>
+          <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\startIVAndWait.vi</Path>
+        <Path>Instrument.Lockin\API\readAI.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>startSweepAndWait.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>waitForNewWaveforms.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>4</Row>
+          <Column>4</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>Instrument.Lockin\API\waitForNewWaveforms.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>readAO.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>4</Row>
+          <Column>5</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>Instrument.Lockin\API\readAO.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>readAutoSampling.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>5</Row>
+          <Column>4</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>Instrument.Lockin\API\readAutoSampling.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>configAutoSampling.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>5</Row>
+          <Column>3</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>Instrument.Lockin\API\configAutoSampling.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>configGain.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>5</Row>
+          <Column>5</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>Instrument.Lockin\API\configGain.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>readGain.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>5</Row>
+          <Column>6</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>Instrument.Lockin\API\readGain.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>Connect to Remote Lockin.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
           <Row>1</Row>
-          <Column>4</Column>
+          <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\startSweepAndWait.vi</Path>
+        <Path>Instrument.Lockin\API\Connect to Remote Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>20597D4CD3FE8B57E295561D1776EA78</GUID>
+      <GUID>5371566BA1B8EBE7C78662DE75625E1A</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -862,7 +790,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
       <View_Format>Icons</View_Format>
       <Size>
         <Height_Row>1</Height_Row>
-        <Width_Col.>2</Width_Col.>
+        <Width_Col.>4</Width_Col.>
       </Size>
       <_256_Color_Icon>00000543002900000012000000020000000D00FFFFFF000100000000000A0000000800000000002000200028000002BF0000028B000000010007002000180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFF000000FFFFFF000000FFFFFFFFFFFF000000000000FFFFFF000000000000FFFFFF000000000000FFFFFF000000000000FFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFF000000000000000000000000FFFFFFFFFFFF000000FFFFFFFFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFFFFFFFF000000000000000000FFFFFF000000000000FFFFFF000000FFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000000000FFFFFFFFFFFF000000FFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000000000FFFFFF000000FFFFFF000000FFFFFFFFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFF000000000000FFFFFF000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000001C000040194DB6447C95554ED89556483D4D5426D00000001002900000012000000020000000D00CCCCFF000100000000000A00000008001900000020002000280000022C000001F8001900040020001C00180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF9AAA26FF92AA55FF9ABA76FF939255FFD91356FF000000FF</_256_Color_Icon>
       <BW_Color_Icon>00000000</BW_Color_Icon>
@@ -903,7 +831,98 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
         <Path>Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>121BDC743F41DC4CEF8B6FBF48FD655C</GUID>
+      <GUID>AD24952763861518A2C8D244F24EADE6</GUID>
+    </Functions_Palette_Data>
+    <Functions_Palette_Data>
+      <Parent_Palette_Index>0</Parent_Palette_Index>
+      <Name>Expt</Name>
+      <View_Format>Icons</View_Format>
+      <Size>
+        <Height_Row>2</Height_Row>
+        <Width_Col.>4</Width_Col.>
+      </Size>
+      <_256_Color_Icon>000003BB002900000012000000020000000D00FFFFFF000100000000000A000000080000000000200020002800000137000001110000000A0007001700180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFF000000FFFFFFFFFFFF000000FFFFFF000000FFFFFF000000000000FFFFFFFFFFFF000000000000000000000000FFFFFFFFFFFF000000FFFFFFFFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFF000000000000FFFFFFFFFFFF000000FFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0007C017959FC9578997D50F0007002900000012000000020000000D00CCCCFF000100000000000A00000008001900000020002000280000022C000001F8001900040020001C00180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF9AAA26FF92AA55FF9ABA76FF939255FFD91356FF000000FF</_256_Color_Icon>
+      <BW_Color_Icon>00000000</BW_Color_Icon>
+      <Help_Info>
+        <Help_Tag/>
+        <Help_File_Path/>
+      </Help_Info>
+      <Description/>
+      <Synchronization_Info>
+        <Synchronyze_with_Directory>true</Synchronyze_with_Directory>
+        <Synchronize_Directory_Path>Expt</Synchronize_Directory_Path>
+      </Synchronization_Info>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>Lockin Noise Measurement.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>1</Row>
+          <Column>2</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>Expt\Lockin Noise Measurement.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>446xAntiAliasSimulator.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>1</Row>
+          <Column>3</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>Expt\446xAntiAliasSimulator.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>Test_Lockin_API.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>1</Row>
+          <Column>1</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>Expt\Test_Lockin_API.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>Lockin_Metrics.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>2</Row>
+          <Column>1</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>Expt\Lockin_Metrics.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>Lockin_Metrics_Results.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>2</Row>
+          <Column>2</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>Expt\Lockin_Metrics_Results.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <GUID>3D473A276B22983EBA5369F444FA0C27</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -952,7 +971,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>94703292FABF6C896FAE22BC5E9D7FEE</GUID>
+      <GUID>38C584A95E664B4B1DD58549B9C16826</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -987,7 +1006,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
         <Path>RemoteControl\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>1CE174408BDF86AE70FDD3D94FC03BEE</GUID>
+      <GUID>AFF34F8259ED865DFEF8028347B1794E</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1019,7 +1038,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\446xAI-enum.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\446xAI-enum.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1033,7 +1052,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\446xAO-enum.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\446xAO-enum.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1047,7 +1066,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\AI.config-array.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\AI.config-array.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1061,7 +1080,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\AI.config-cluster.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\AI.config-cluster.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1075,7 +1094,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\AI.coupling-enum.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\AI.coupling-enum.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1089,7 +1108,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\AmplifierType-enum.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\AmplifierType-enum.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1103,7 +1122,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\AO-cluster.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\AO-cluster.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1117,7 +1136,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\AO.config-array.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\AO.config-array.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1131,7 +1150,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\AO.config-cluster.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\AO.config-cluster.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1145,7 +1164,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\AO_Amp-array.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\AO_Amp-array.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1159,7 +1178,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\AO_Channel-Numeric.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\AO_Channel-Numeric.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1173,7 +1192,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\AO_DC-array.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\AO_DC-array.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1187,7 +1206,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\AO_f-array.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\AO_f-array.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1201,7 +1220,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\AO_phi-array.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\AO_phi-array.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1215,7 +1234,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\Cal Info - Cluster.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\Cal Info - Cluster.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1229,7 +1248,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\DAQType-enum.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\DAQType-enum.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1243,7 +1262,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\Front Panel Cluster.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\Front Panel Cluster.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1257,7 +1276,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\Function+DC-enum.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\Function+DC-enum.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1271,7 +1290,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\Function-array.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\Function-array.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1285,7 +1304,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\Function-enum.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\Function-enum.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1299,7 +1318,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\INI-enum.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\INI-enum.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1313,7 +1332,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\REF filter-cluster.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\REF filter-cluster.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1327,7 +1346,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\REF-cluster.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\REF-cluster.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1341,7 +1360,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\REF_Channel-Numeric.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\REF_Channel-Numeric.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1355,7 +1374,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\REF_f-array.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\REF_f-array.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1369,7 +1388,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\REF_phi-array.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\REF_phi-array.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1383,7 +1402,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\Sampling.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\Sampling.ctl</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1397,10 +1416,10 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\XP Style VISA Control.ctl</Path>
+        <Path>Instrument.Lockin\Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>81B71461A9A06DBE8E555CC7D3A5A2D6</GUID>
+      <GUID>10A4B7D7D37D6E2138623AAEEA5EB3AC</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1424,6 +1443,20 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>PrivateEvents--LockinRemoteControl.setREFfilterconfig.ctl</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>2</Row>
+          <Column>2</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>RemoteControl\Typedefs\PrivateEvents--LockinRemoteControl.setREFfilterconfig.ctl</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
         <NameSub_Menu_Name>PublicEvents--LockinRemoteControl.configIVmode.ctl</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
@@ -1435,7 +1468,7 @@ This is the first build [ie, EXPERIMENTAL].</Release_Notes>
         <Path>RemoteControl\Typedefs\PublicEvents--LockinRemoteControl.configIVmode.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>4B6C110137A32E52E40E0562CB40BADE</GUID>
+      <GUID>DC5F52A03BDB038DA69377C93A798256</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
