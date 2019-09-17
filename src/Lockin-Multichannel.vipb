@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-09-17 12:55:54" Creator="Patrick Irvin" Comments="" ID="a4b470581e02afa36e124cb1fecfcc93">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-09-17 13:32:37" Creator="Patrick Irvin" Comments="" ID="f657317afe75ec4408df12923f4807e7">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.7.2.6</Library_Version>
+    <Library_Version>2.7.2.7</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -87,7 +87,7 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.7.2.5]
+      <Release_Notes>[2.7.2.6]
 - Fix tools palette
 - Change API verb config --&gt; set
 - setSweepFile no longer supported</Release_Notes>
@@ -302,7 +302,7 @@
         <Path>Examples</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>DC915CCEEB7501F9D2CF333F93EEB853</GUID>
+      <GUID>6E15A68DB1DADC7F429EA369655F3054</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -841,7 +841,7 @@
         <Path>Instrument.Lockin\API\setSweepConfiguration.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>4364F1B18FE18DE87B7BC9C9DC80B809</GUID>
+      <GUID>9A4324E9A6DC7E74E9F345FBCAF3B4D6</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -890,7 +890,7 @@
         <Path>Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>A9CB8649FB5B2F60FA8B0CA2DC03EE12</GUID>
+      <GUID>FC1E5C45413F0B3F03B4F84D32A4492F</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -939,7 +939,7 @@
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>5855CE954ACE506A7995CDD4E38DEA34</GUID>
+      <GUID>36441F29F22895659ADAF98A9FE85ABE</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -974,7 +974,7 @@
         <Path>RemoteControl\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>6C950FF721E6634F7F4DCEA476FEE4C4</GUID>
+      <GUID>BB833AC1F4D233FE679FACD9BA2CBDEF</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1387,7 +1387,7 @@
         <Path>LockinDAQ\Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>503A21302703C0B11F99CB720467713E</GUID>
+      <GUID>9BF0D8530689E3519731F6F6D68EF85D</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1408,7 +1408,7 @@
         <Synchronyze_with_Directory>false</Synchronyze_with_Directory>
         <Synchronize_Directory_Path>RemoteControl\Typedefs</Synchronize_Directory_Path>
       </Synchronization_Info>
-      <GUID>8ECD9DC1DB0B9ABBDFABD4C6374D9919</GUID>
+      <GUID>108C473DD040D26AF20416D2945BE591</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
