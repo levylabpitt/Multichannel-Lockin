@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-09-17 12:41:24" Creator="Patrick Irvin" Comments="" ID="7093fe02bce99f8015679f3f8d0c3478">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-09-17 12:55:54" Creator="Patrick Irvin" Comments="" ID="a4b470581e02afa36e124cb1fecfcc93">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.7.1.5</Library_Version>
+    <Library_Version>2.7.2.6</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -87,9 +87,10 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.7.1.4]
-- Bug Fix: DAQ task would not support more than one device
-- Implement measure/zero offset fucntions</Release_Notes>
+      <Release_Notes>[2.7.2.5]
+- Fix tools palette
+- Change API verb config --&gt; set
+- setSweepFile no longer supported</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -301,7 +302,7 @@
         <Path>Examples</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>BD87D93F2514DF025CCCA99D6885D24E</GUID>
+      <GUID>DC915CCEEB7501F9D2CF333F93EEB853</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -840,7 +841,7 @@
         <Path>Instrument.Lockin\API\setSweepConfiguration.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>9345C9FD3612E47E7D3446E74E91381F</GUID>
+      <GUID>4364F1B18FE18DE87B7BC9C9DC80B809</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -889,7 +890,7 @@
         <Path>Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>3A40D73AEC601A9113E32DBB59BB2459</GUID>
+      <GUID>A9CB8649FB5B2F60FA8B0CA2DC03EE12</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -938,7 +939,7 @@
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>95EC7658451C067031F4B5A2CF414F30</GUID>
+      <GUID>5855CE954ACE506A7995CDD4E38DEA34</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -973,7 +974,7 @@
         <Path>RemoteControl\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>17B2D3A432E08B9134380B59A3A8F5E1</GUID>
+      <GUID>6C950FF721E6634F7F4DCEA476FEE4C4</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1386,7 +1387,7 @@
         <Path>LockinDAQ\Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>78104B6CBE192A44C6578DFC006E659D</GUID>
+      <GUID>503A21302703C0B11F99CB720467713E</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1407,7 +1408,7 @@
         <Synchronyze_with_Directory>false</Synchronyze_with_Directory>
         <Synchronize_Directory_Path>RemoteControl\Typedefs</Synchronize_Directory_Path>
       </Synchronization_Info>
-      <GUID>0FAE73D87CD2897F06A209E1669EC9DF</GUID>
+      <GUID>8ECD9DC1DB0B9ABBDFABD4C6374D9919</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
