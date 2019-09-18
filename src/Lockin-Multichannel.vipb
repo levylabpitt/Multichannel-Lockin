@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-09-17 21:16:18" Creator="Patrick Irvin" Comments="" ID="47172d045827c7bf6f3a835d2e2f3ba8">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-09-17 21:40:31" Creator="Patrick Irvin" Comments="" ID="dd5aa9b7ca0437b7de68654643257690">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.7.3.8</Library_Version>
+    <Library_Version>2.7.3.9</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -87,9 +87,9 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.7.3.7]
+      <Release_Notes>[2.7.3.8]
 - improve functionality of waitForNewResults and waitForNewWaveforms
-- resut function more reliabile
+- reset function more reliabile
 - delete unused controls</Release_Notes>
     </Description>
     <Destinations>
@@ -302,7 +302,7 @@
         <Path>Examples</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>2FAF92F0DE613BB5B1D343851E592849</GUID>
+      <GUID>CC850B7500AD6A68C7DE87AB7B46E5CE</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -841,7 +841,7 @@
         <Path>Instrument.Lockin\API\setSweepConfiguration.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>47B4D23966A80E911DC795F8867D7260</GUID>
+      <GUID>EB14039BBF552372CC6389E4A8BB9D5D</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -890,7 +890,7 @@
         <Path>Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>D8B1091D61046B1F1C95220238B05174</GUID>
+      <GUID>FA80F1003E861FECB5547987EB655ACD</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -939,7 +939,7 @@
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>52BCE3C8FDFDD891AA8D1E50C660B72A</GUID>
+      <GUID>61A84B26923D782C077D19CBC8ADA4B9</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -974,7 +974,7 @@
         <Path>RemoteControl\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>621CBD597C8D0C8457722C02319A900F</GUID>
+      <GUID>C555CBFBCC698911EDDB236A2EBEB374</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1387,7 +1387,7 @@
         <Path>LockinDAQ\Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E149244471F1034664F4F0EE88DB085F</GUID>
+      <GUID>ED3359A74474E16FAE95B69AF3E23079</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1408,7 +1408,7 @@
         <Synchronyze_with_Directory>false</Synchronyze_with_Directory>
         <Synchronize_Directory_Path>RemoteControl\Typedefs</Synchronize_Directory_Path>
       </Synchronization_Info>
-      <GUID>509311963CA77258D203BB3F01BA0D44</GUID>
+      <GUID>65245BBB50F68F34F1848C0C9A615A71</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
