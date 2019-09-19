@@ -969,6 +969,11 @@
 			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="AO_Amp-array.ctl" Type="VI" URL="../LockinDAQ/Typedefs/AO_Amp-array.ctl"/>
+			<Item Name="AO_DC-array.ctl" Type="VI" URL="../LockinDAQ/Typedefs/AO_DC-array.ctl"/>
+			<Item Name="AO_f-array.ctl" Type="VI" URL="../LockinDAQ/Typedefs/AO_f-array.ctl"/>
+			<Item Name="AO_phi-array.ctl" Type="VI" URL="../LockinDAQ/Typedefs/AO_phi-array.ctl"/>
+			<Item Name="Function-array.ctl" Type="VI" URL="../LockinDAQ/Typedefs/Function-array.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lockin" Type="EXE">
