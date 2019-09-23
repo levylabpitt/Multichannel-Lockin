@@ -39,6 +39,13 @@
 				<Item Name="Lockin Noise Measurement.vi" Type="VI" URL="../../Tests/Expt/Lockin Noise Measurement.vi"/>
 				<Item Name="serialize_test.vi" Type="VI" URL="../../Tests/Expt/serialize_test.vi"/>
 			</Item>
+			<Item Name="VI Server" Type="Folder">
+				<Item Name="Benchmarking Asynchronous Calls.vi" Type="VI" URL="../../Tests/VI Server/Benchmarking Asynchronous Calls.vi"/>
+				<Item Name="Populating the Asynchronous Call Pool.vi" Type="VI" URL="../../Tests/VI Server/Populating the Asynchronous Call Pool.vi"/>
+				<Item Name="Target - Async (Reentrant).vi" Type="VI" URL="../../Tests/VI Server/Target - Async (Reentrant).vi"/>
+				<Item Name="Asynchronous Call and Collect (Using Option 0x40).vi" Type="VI" URL="../../Tests/VI Server/Asynchronous Call and Collect (Using Option 0x40).vi"/>
+				<Item Name="Populating the Asynchronous Call and Collect Pool.vi" Type="VI" URL="../../Tests/VI Server/Populating the Asynchronous Call and Collect Pool.vi"/>
+			</Item>
 			<Item Name="Test Waveguide Model.vi" Type="VI" URL="../../Tests/Test Waveguide Model.vi"/>
 			<Item Name="Test Lockin API State Machine.vi" Type="VI" URL="../../Tests/Test Lockin API State Machine.vi"/>
 			<Item Name="Test Sweep Mode vs Lockin_Vsg.vi" Type="VI" URL="../../Tests/Test Sweep Mode vs Lockin_Vsg.vi"/>
@@ -966,6 +973,11 @@
 			<Item Name="mscorlib" Type="VI" URL="mscorlib">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="Target - HTTP Get for Async Call.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/Application Control/VI Server/Asynchronous Call By Reference/support/Target - HTTP Get for Async Call.vi"/>
+			<Item Name="Target - Pass HTTP Get Data for Async Call.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/Application Control/VI Server/Asynchronous Call By Reference/support/Target - Pass HTTP Get Data for Async Call.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lockin" Type="EXE">
