@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-09-24 16:29:16" Creator="Patrick Irvin" Comments="" ID="a18407ad1f9b6de33df767f89a3709f6">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-09-25 13:07:33" Creator="Patrick Irvin" Comments="" ID="4ed674157124c0af1eaad0bb7977a56c">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.7.4.10</Library_Version>
+    <Library_Version>2.7.5.11</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>Q:\inst\Lockin</Library_Output_Folder>
@@ -87,12 +87,10 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.7.4.9]
-- dynamically launch asynchronous "call and collect"  calls to DAQms Read and Write. This should allow for an arbitrary number of DAQ cards without any time penalties
-- independent reference filter for each lockin frequency
-- "set all f the same" is now implemented
-- backend changes in the way the lockin calculation is performed
-- UI changes (hopefully they are improvements!)</Release_Notes>
+      <Release_Notes>[2.7.5.10]
+- Fix bugs to make Sweep Mode work properly
+- UI controls to limit AO Amplitude and link AO and REF frequencies
+- Misc UI improvements including better graph labels</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -304,7 +302,7 @@
         <Path>Instrument.Lockin\API</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>A7D54B887403AB55E0FD0817BD2913F2</GUID>
+      <GUID>A8F54FBF819D90EB401C5E72B6A2D9EC</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -353,7 +351,7 @@
         <Path>Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>CBED075C21F00EB34D46C027D7A088C9</GUID>
+      <GUID>AE277B12B9D396DE3211C8F0AD50BE09</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -864,7 +862,7 @@
         <Path>Instrument.Lockin\API\waitForNewWaveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>AF5102467CBF51CEDDB20045231C1432</GUID>
+      <GUID>D7A1A9A936D103637947B359E0FD410E</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -913,7 +911,7 @@
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>0DB72F56B61EA6F51040B8F827A6369B</GUID>
+      <GUID>57FCBEC644AE312FF60EF15B3939AD5C</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -948,7 +946,7 @@
         <Path>RemoteControl\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>2BE685E8C4AD1502F3371A55D327F75C</GUID>
+      <GUID>9FE5B2777D5E656AF579F109BF67AA1B</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1112,20 +1110,6 @@
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>AO_f-array.ctl</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\AO_f-array.ctl</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
         <NameSub_Menu_Name>Cal Info - Cluster.ctl</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
@@ -1238,20 +1222,6 @@
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>REF_phi-array.ctl</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>5</Row>
-          <Column>2</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>LockinDAQ\Typedefs\REF_phi-array.ctl</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
         <NameSub_Menu_Name>Sampling.ctl</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
@@ -1277,7 +1247,7 @@
         <Path>LockinDAQ\Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>12603570F9A67CF13CAF30AEA48D7EF4</GUID>
+      <GUID>3EB7AAFF9C0A32015FAECFC0D140760E</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1298,7 +1268,7 @@
         <Synchronyze_with_Directory>false</Synchronyze_with_Directory>
         <Synchronize_Directory_Path>RemoteControl\Typedefs</Synchronize_Directory_Path>
       </Synchronization_Info>
-      <GUID>BD30FA1E329361EA5FECDCB67C8ECCCF</GUID>
+      <GUID>B72DD2F09C9D833A696BCAA3B8571ABC</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
