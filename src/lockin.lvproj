@@ -1051,7 +1051,6 @@
 			</Item>
 			<Item Name="Target - HTTP Get for Async Call.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/Application Control/VI Server/Asynchronous Call By Reference/support/Target - HTTP Get for Async Call.vi"/>
 			<Item Name="Target - Pass HTTP Get Data for Async Call.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/Application Control/VI Server/Asynchronous Call By Reference/support/Target - Pass HTTP Get Data for Async Call.vi"/>
-			<Item Name="Waveform 64-128 channels LP pt by pt.vi" Type="VI" URL="../LockinDAQ/DAQ/support/Waveform 64-128 channels LP pt by pt.vi"/>
 			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
