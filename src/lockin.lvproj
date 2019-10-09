@@ -16,6 +16,7 @@
 			<Item Name="Lockin-Multichannel.vipc" Type="Document" URL="../Lockin-Multichannel.vipc"/>
 			<Item Name="Pre-Build Custom Action.vi" Type="VI" URL="../../build_support/Pre-Build Custom Action.vi"/>
 			<Item Name="Pre-Install Custom Action.vi" Type="VI" URL="../../build_support/Pre-Install Custom Action.vi"/>
+			<Item Name="Lockin-Multichannel.ico" Type="Document" URL="../../build_support/Lockin-Multichannel.ico"/>
 		</Item>
 		<Item Name="Examples" Type="Folder">
 			<Item Name="Example_IV_Curves.vi" Type="VI" URL="../Examples/Example_IV_Curves.vi"/>
@@ -1080,7 +1081,8 @@
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
 				<Property Name="Destination[1].path" Type="Path">../builds/Multichannel Lockin/NI_AB_PROJECTNAME/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{A6F73688-3F40-4D0F-8304-E945AB173FD2}</Property>
+				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/build_support/Lockin-Multichannel.ico</Property>
+				<Property Name="Source[0].itemID" Type="Str">{5AF70421-1E59-44E3-BE2A-F908BBCACE91}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Instrument.Lockin.lvclass/Lockin-4461 -Patrick -State.vi</Property>
