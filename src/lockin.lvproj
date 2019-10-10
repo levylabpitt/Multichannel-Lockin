@@ -1083,10 +1083,10 @@
 				<Property Name="Destination[1].path" Type="Path">../builds/Multichannel Lockin/NI_AB_PROJECTNAME/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/build_support/Lockin-Multichannel.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{5AF70421-1E59-44E3-BE2A-F908BBCACE91}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{F8A656AD-ECCE-4EE5-B74F-2E48F91967C3}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Instrument.Lockin.lvclass/Lockin-4461 -Patrick -State.vi</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Instrument.Lockin.lvclass/Multichannel Lockin.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
 				<Property Name="SourceCount" Type="Int">2</Property>
