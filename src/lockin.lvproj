@@ -47,6 +47,7 @@
 				<Item Name="Asynchronous Call and Collect (Using Option 0x40).vi" Type="VI" URL="../../Tests/VI Server/Asynchronous Call and Collect (Using Option 0x40).vi"/>
 				<Item Name="Populating the Asynchronous Call and Collect Pool.vi" Type="VI" URL="../../Tests/VI Server/Populating the Asynchronous Call and Collect Pool.vi"/>
 			</Item>
+			<Item Name="API Tree.vi" Type="VI" URL="../../Tests/Test API/API Tree.vi"/>
 			<Item Name="Test Waveguide Model.vi" Type="VI" URL="../../Tests/Test Waveguide Model.vi"/>
 			<Item Name="Test Lockin API State Machine.vi" Type="VI" URL="../../Tests/Test Lockin API State Machine.vi"/>
 			<Item Name="Test Sweep Mode vs Lockin_Vsg.vi" Type="VI" URL="../../Tests/Test Sweep Mode vs Lockin_Vsg.vi"/>
