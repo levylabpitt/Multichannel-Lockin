@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-10-16 21:16:32" Creator="Patrick Irvin" Comments="" ID="7f386b7d5bcf9a8cc7cc45a344600e61">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-10-17 12:33:22" Creator="Patrick Irvin" Comments="" ID="1080e732249be559550b84faaadf96aa">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.8.3.8</Library_Version>
+    <Library_Version>2.8.4.9</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Multichannel Lockin\Package</Library_Output_Folder>
@@ -87,10 +87,11 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.8.3.7]
-- revert to "static" AO/AI (configured for only up to 4 DAQ cards)
-- change sampling of results to Fs in sweep mode
-- update V resolution when calling setSweep remotely</Release_Notes>
+      <Release_Notes>[2.8.4.8]
+Improve Waveguide Modeling
+- Now model V+ and V-
+- Indices are hardcoded [0: Vs / I, 1: Vsg, 2: V+, 3: V-]
+- Parse Waveguide Model--Cluster.ctl inside LockinDAQ.Simulate Waveguide.vi</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -302,7 +303,7 @@
         <Path>Multichannel Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>381A5AC4F43C92FAB62E88CD09B5A398</GUID>
+      <GUID>8629C2ED63607B5F754BA302893E8460</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -351,7 +352,7 @@
         <Path>Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>206F746726F9A46AFD7DA95A52B6C2F0</GUID>
+      <GUID>B641B2A5AEAED61D150F2247E24C378B</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -890,7 +891,7 @@
         <Path>Instrument.Lockin\API\getTrigger.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>A07C762C5B7ECAA768352FF7C0E610DD</GUID>
+      <GUID>61678BD20CD5653E8FD11B0883D79EEA</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -939,7 +940,7 @@
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>848845732997BD59040C843DC9D1B79F</GUID>
+      <GUID>FBADE35969982C2BA37397106AB93888</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -974,7 +975,7 @@
         <Path>RemoteControl\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>0BA70F1F463055CE89026AA0ED63A486</GUID>
+      <GUID>E6F9EFDABAD780426A809F495F11C505</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1275,7 +1276,7 @@
         <Path>LockinDAQ\Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>DE0DBCB3D5F6251140C854904CF3545A</GUID>
+      <GUID>01484E6B7D8B06C4DC0971921A2C7101</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1296,7 +1297,7 @@
         <Synchronyze_with_Directory>false</Synchronyze_with_Directory>
         <Synchronize_Directory_Path>RemoteControl\Typedefs</Synchronize_Directory_Path>
       </Synchronization_Info>
-      <GUID>ED6FED85A0E04F2FF22C7212B8F2C906</GUID>
+      <GUID>E1FE7FF8A22E09F2D3E845BB7A213180</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
