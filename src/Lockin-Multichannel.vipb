@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-10-17 12:33:22" Creator="Patrick Irvin" Comments="" ID="1080e732249be559550b84faaadf96aa">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-10-17 13:44:57" Creator="Patrick Irvin" Comments="" ID="9552cac60235684b5414a26fb9d95059">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.8.4.9</Library_Version>
+    <Library_Version>2.8.4.11</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Multichannel Lockin\Package</Library_Output_Folder>
@@ -87,7 +87,7 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.8.4.8]
+      <Release_Notes>[2.8.4.10]
 Improve Waveguide Modeling
 - Now model V+ and V-
 - Indices are hardcoded [0: Vs / I, 1: Vsg, 2: V+, 3: V-]
@@ -303,7 +303,7 @@ Improve Waveguide Modeling
         <Path>Multichannel Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>8629C2ED63607B5F754BA302893E8460</GUID>
+      <GUID>5CD17A60D69791CE30DE39E6BD30393F</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -352,7 +352,7 @@ Improve Waveguide Modeling
         <Path>Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B641B2A5AEAED61D150F2247E24C378B</GUID>
+      <GUID>86F7793F1DA69EB2E846231051C90EB0</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -891,7 +891,7 @@ Improve Waveguide Modeling
         <Path>Instrument.Lockin\API\getTrigger.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>61678BD20CD5653E8FD11B0883D79EEA</GUID>
+      <GUID>2912B1A003BBD92C701703323ACCE9AE</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -940,7 +940,7 @@ Improve Waveguide Modeling
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>FBADE35969982C2BA37397106AB93888</GUID>
+      <GUID>D154AF1792B397159373282CE70CFB9C</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -975,7 +975,7 @@ Improve Waveguide Modeling
         <Path>RemoteControl\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E6F9EFDABAD780426A809F495F11C505</GUID>
+      <GUID>6A2F0FC3B4B41424870A8B11A4F972DC</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1276,7 +1276,7 @@ Improve Waveguide Modeling
         <Path>LockinDAQ\Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>01484E6B7D8B06C4DC0971921A2C7101</GUID>
+      <GUID>9BF65D506099C7C5A788A52D198F892C</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1297,7 +1297,7 @@ Improve Waveguide Modeling
         <Synchronyze_with_Directory>false</Synchronyze_with_Directory>
         <Synchronize_Directory_Path>RemoteControl\Typedefs</Synchronize_Directory_Path>
       </Synchronization_Info>
-      <GUID>E1FE7FF8A22E09F2D3E845BB7A213180</GUID>
+      <GUID>ADBC4CDB72221414C32EAD67A1C383EC</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
