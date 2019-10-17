@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-10-17 13:44:57" Creator="Patrick Irvin" Comments="" ID="9552cac60235684b5414a26fb9d95059">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-10-17 14:52:57" Creator="Patrick Irvin" Comments="" ID="c622a442654887e662d6b68a15185479">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.8.4.11</Library_Version>
+    <Library_Version>2.8.5.12</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Multichannel Lockin\Package</Library_Output_Folder>
@@ -87,11 +87,8 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.8.4.10]
-Improve Waveguide Modeling
-- Now model V+ and V-
-- Indices are hardcoded [0: Vs / I, 1: Vsg, 2: V+, 3: V-]
-- Parse Waveguide Model--Cluster.ctl inside LockinDAQ.Simulate Waveguide.vi</Release_Notes>
+      <Release_Notes>[2.8.5.11]
+Add 5 s overhead time to sweep end condition check</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -303,7 +300,7 @@ Improve Waveguide Modeling
         <Path>Multichannel Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>5CD17A60D69791CE30DE39E6BD30393F</GUID>
+      <GUID>B16797C7CCDD856F82D1311E64B0D65E</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -352,7 +349,7 @@ Improve Waveguide Modeling
         <Path>Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>86F7793F1DA69EB2E846231051C90EB0</GUID>
+      <GUID>57B1129B1F0EED986292D94A38156C92</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -891,7 +888,7 @@ Improve Waveguide Modeling
         <Path>Instrument.Lockin\API\getTrigger.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>2912B1A003BBD92C701703323ACCE9AE</GUID>
+      <GUID>78BECF33ED31E5949F9FB7F1999BD056</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -940,7 +937,7 @@ Improve Waveguide Modeling
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>D154AF1792B397159373282CE70CFB9C</GUID>
+      <GUID>2090DFA3EB073ECD894385F6A3A02E5F</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -975,7 +972,7 @@ Improve Waveguide Modeling
         <Path>RemoteControl\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>6A2F0FC3B4B41424870A8B11A4F972DC</GUID>
+      <GUID>81EA386770EB98C988B6A5DB9953AA85</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1276,7 +1273,7 @@ Improve Waveguide Modeling
         <Path>LockinDAQ\Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>9BF65D506099C7C5A788A52D198F892C</GUID>
+      <GUID>18407044417BA4A99A64576052EF71BC</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1297,7 +1294,7 @@ Improve Waveguide Modeling
         <Synchronyze_with_Directory>false</Synchronyze_with_Directory>
         <Synchronize_Directory_Path>RemoteControl\Typedefs</Synchronize_Directory_Path>
       </Synchronization_Info>
-      <GUID>ADBC4CDB72221414C32EAD67A1C383EC</GUID>
+      <GUID>67ABA1AF8499EA9B04D97FEDDB891A28</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
