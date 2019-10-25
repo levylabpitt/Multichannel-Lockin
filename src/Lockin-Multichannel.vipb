@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-10-25 14:47:44" Creator="Patrick Irvin" Comments="" ID="daa45ef18a6a3f4f22aec49aec6701c5">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-10-25 18:15:02" Creator="Patrick Irvin" Comments="" ID="dcd25aa5c6793f934db1ae20700ca409">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.8.6.12</Library_Version>
+    <Library_Version>2.8.6.16</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Multichannel Lockin\Package</Library_Output_Folder>
@@ -87,8 +87,9 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.8.6.12]
-Change default max/min for aux out to be +/- 10 V</Release_Notes>
+      <Release_Notes>[2.8.6.15]
+- Change default max/min for aux out to be +/- 10 V
+- Fix error that would not write DC values to AO waveform when task is created</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -300,7 +301,7 @@ Change default max/min for aux out to be +/- 10 V</Release_Notes>
         <Path>Multichannel Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>FD5E01052ACEAB188E36BDBA9674882B</GUID>
+      <GUID>21482C62E34D8CFAC8184E5F2486BA40</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -349,7 +350,7 @@ Change default max/min for aux out to be +/- 10 V</Release_Notes>
         <Path>Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>6A873686E4C9369E55E9D7CC62917A12</GUID>
+      <GUID>0362B1EB5540865BA2150F00E514E4A7</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -888,7 +889,7 @@ Change default max/min for aux out to be +/- 10 V</Release_Notes>
         <Path>Instrument.Lockin\API\getTrigger.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>380E19316469AB266E68C32845776384</GUID>
+      <GUID>2ACF63ACAEC65821FBA13687101FF126</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -937,7 +938,7 @@ Change default max/min for aux out to be +/- 10 V</Release_Notes>
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>605E6CAF7632C02DC2E2A13F2D602685</GUID>
+      <GUID>6186190CAE4468899F162AF26041939D</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -972,7 +973,7 @@ Change default max/min for aux out to be +/- 10 V</Release_Notes>
         <Path>RemoteControl\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>840A682A7B682038C20B8DFAB5BBB224</GUID>
+      <GUID>4E27D424763F3762650BD5E2FF07A5C7</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1273,7 +1274,7 @@ Change default max/min for aux out to be +/- 10 V</Release_Notes>
         <Path>LockinDAQ\Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>CE76847C4D8B61C7F5296EAAD45E8268</GUID>
+      <GUID>891E3C14F737B601F0676AFE76CE043C</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1294,7 +1295,7 @@ Change default max/min for aux out to be +/- 10 V</Release_Notes>
         <Synchronyze_with_Directory>false</Synchronyze_with_Directory>
         <Synchronize_Directory_Path>RemoteControl\Typedefs</Synchronize_Directory_Path>
       </Synchronization_Info>
-      <GUID>D22A010F04C3F3FDE3C6B7829623240B</GUID>
+      <GUID>385BE056338067927522C64383E2BD9A</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
