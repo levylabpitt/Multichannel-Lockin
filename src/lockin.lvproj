@@ -12,16 +12,12 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="build_support" Type="Folder">
+			<Item Name="PostBuildSupport" Type="Folder">
+				<Item Name="PostBuildSupport.lvclass" Type="LVClass" URL="../../build_support/PostBuildSupport/PostBuildSupport.lvclass"/>
+			</Item>
+			<Item Name="Post-Build Custom Action.vi" Type="VI" URL="../../build_support/Post-Build Custom Action.vi"/>
 			<Item Name="Lockin-Multichannel.vipb" Type="Document" URL="../Lockin-Multichannel.vipb"/>
 			<Item Name="Lockin-Multichannel.vipc" Type="Document" URL="../Lockin-Multichannel.vipc"/>
-			<Item Name="Pre-Build Custom Action.vi" Type="VI" URL="../../build_support/Pre-Build Custom Action.vi"/>
-			<Item Name="Post-Build Custom Action.vi" Type="VI" URL="../../build_support/Post-Build Custom Action.vi"/>
-			<Item Name="Pre-Install Custom Action.vi" Type="VI" URL="../../build_support/Pre-Install Custom Action.vi"/>
-			<Item Name="Copy Package.vi" Type="VI" URL="../../build_support/Copy Package.vi"/>
-			<Item Name="Update Build Versions.vi" Type="VI" URL="../../build_support/Update Build Versions.vi"/>
-			<Item Name="Write 7z config.vi" Type="VI" URL="../../build_support/Write 7z config.vi"/>
-			<Item Name="Write 7z bat.vi" Type="VI" URL="../../build_support/Write 7z bat.vi"/>
-			<Item Name="Execute 7z bat.vi" Type="VI" URL="../../build_support/Execute 7z bat.vi"/>
 			<Item Name="Lockin-Multichannel.ico" Type="Document" URL="../../build_support/Lockin-Multichannel.ico"/>
 		</Item>
 		<Item Name="Examples" Type="Folder">
@@ -1044,7 +1040,6 @@
 				<Item Name="DAQmx Wait Until Done.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/task.llb/DAQmx Wait Until Done.vi"/>
 				<Item Name="AB_Generate_Error_Cluster.vi" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/AB_Generate_Error_Cluster.vi"/>
 				<Item Name="GetTargetBuildSpecs (project reference).vi" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/GetTargetBuildSpecs (project reference).vi"/>
-				<Item Name="NI_App_Builder_API.lvlib" Type="Library" URL="/&lt;vilib&gt;/AppBuilder/AB_API_Simple/NI_App_Builder_API.lvlib"/>
 				<Item Name="AB_Relative_Path_Type.ctl" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/AB_Relative_Path_Type.ctl"/>
 				<Item Name="AB_RW_Convert_Path_to_Absolute.vi" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/RW_Project/AB_RW_Convert_Path_to_Absolute.vi"/>
 				<Item Name="Compare Two Paths.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Compare Two Paths.vi"/>
@@ -1059,6 +1054,7 @@
 				<Item Name="IB_RW_Project_PropBag_Action.ctl" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/IB_RW_Project/IB_RW_Project_PropBag_Action.ctl"/>
 				<Item Name="IB_RW_Project_Installer_Data.ctl" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/IB_RW_Project/IB_RW_Project_Installer_Data.ctl"/>
 				<Item Name="IB_RW_Project_Installer.vi" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/IB_RW_Project/IB_RW_Project_Installer.vi"/>
+				<Item Name="NI_App_Builder_API.lvlib" Type="Library" URL="/&lt;vilib&gt;/AppBuilder/AB_API_Simple/NI_App_Builder_API.lvlib"/>
 				<Item Name="GetTargetBuildSpecs.vi" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/GetTargetBuildSpecs.vi"/>
 			</Item>
 			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
