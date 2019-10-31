@@ -12,9 +12,7 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="build support" Type="Folder">
-			<Item Name="PostBuildSupport" Type="Folder">
-				<Item Name="PostBuildSupport.lvclass" Type="LVClass" URL="../../build support/PostBuildSupport/PostBuildSupport.lvclass"/>
-			</Item>
+			<Item Name="PostBuildSupport.lvclass" Type="LVClass" URL="../../build support/PostBuildSupport/PostBuildSupport.lvclass"/>
 			<Item Name="7zSD.sfx" Type="Document" URL="../../build support/7zSD.sfx"/>
 			<Item Name="Lockin-Multichannel.ico" Type="Document" URL="../../build support/Lockin-Multichannel.ico"/>
 			<Item Name="Post-Build Custom Action.vi" Type="VI" URL="../../build support/Post-Build Custom Action.vi"/>
@@ -1814,8 +1812,8 @@
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
 				<Property Name="Destination[1].path" Type="Path">../builds/Multichannel Lockin/Application/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Exe_iconItemID" Type="Ref"></Property>
-				<Property Name="Source[0].itemID" Type="Str">{87923703-8AF3-420A-A186-0CBB8BBD4268}</Property>
+				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/build support/Lockin-Multichannel.ico</Property>
+				<Property Name="Source[0].itemID" Type="Str">{ECA67792-A508-49D4-A16A-5A0B82AEB1DB}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Instrument.Lockin.lvclass/Multichannel Lockin.vi</Property>
