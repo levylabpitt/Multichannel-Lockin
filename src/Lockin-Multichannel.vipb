@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-10-30 13:59:00" Creator="Patrick Irvin" Comments="" ID="70fb3a5fc7a9d6f46142ba2a0b249f2c">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-10-31 14:42:06" Creator="Patrick Irvin" Comments="" ID="3d103a663f851667863455b1cdce6888">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.8.7.16</Library_Version>
+    <Library_Version>2.8.8.18</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Multichannel Lockin\Package</Library_Output_Folder>
@@ -87,8 +87,15 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.8.7.16]
-- Change top-level window appearance</Release_Notes>
+      <Release_Notes>[2.8.8.17]
+Change Sweep Behavior
+- Option to return to starting value, otherwise remain at ending value
+- If stopSweep is called the sweep stops at the current value (or returns to start if that option is chosen)
+- AO Channel on the front panel is updated during the sweep
+
+Other:
+- Improvements to AO Channel initialization
+- AUX now shows amplified output</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -300,7 +307,7 @@
         <Path>Multichannel Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F44DEAE94AB0A7F8225904BE012ADB35</GUID>
+      <GUID>72B8156451D66C461D75E7E46EFA6CDE</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -349,7 +356,7 @@
         <Path>Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>AE8B34B03ABE6A164E5D0D2882D42BAA</GUID>
+      <GUID>34A3A9731C7248481B402A89520D8B28</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -888,7 +895,7 @@
         <Path>Instrument.Lockin\API\getTrigger.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>8871816A85356D9683FC512B22902B01</GUID>
+      <GUID>F486232F83DA18FB258B55320B3EF5C8</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -937,7 +944,7 @@
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>D1485B953D7EFF9E8EFC3C172E6B9F8B</GUID>
+      <GUID>29ED3B59CAD0378F60923ACB3FD826C4</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -972,7 +979,7 @@
         <Path>RemoteControl\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>D38515320BB277F42356D9431297BB2B</GUID>
+      <GUID>FE1582229929BCCBE2720B71C1ECCBF4</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1273,7 +1280,7 @@
         <Path>LockinDAQ\Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>761A1C6F1BB721AF7C84F3432FBB4845</GUID>
+      <GUID>09BA565470B68386CAC3E2F0BB713E58</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1294,7 +1301,7 @@
         <Synchronyze_with_Directory>false</Synchronyze_with_Directory>
         <Synchronize_Directory_Path>RemoteControl\Typedefs</Synchronize_Directory_Path>
       </Synchronization_Info>
-      <GUID>037184F6A1431E2935A29DC6FC457C32</GUID>
+      <GUID>2B75715FBC23243344E3F5074EA285F8</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
