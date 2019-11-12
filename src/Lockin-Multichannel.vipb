@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-11-11 14:00:21" Creator="Patrick Irvin" Comments="" ID="efd7056881467a48fed3d202e147f859">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2019-11-12 13:18:49" Creator="Patrick Irvin" Comments="" ID="e6bccd4c18cc12eb251fded2631c59c4">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.8.10.22</Library_Version>
+    <Library_Version>2.8.11.23</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Multichannel Lockin\Package</Library_Output_Folder>
@@ -91,8 +91,8 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.8.10.21]
-- Fix issue that could case the DAQ process to start in sweep mode</Release_Notes>
+      <Release_Notes>[2.8.11.22]
+- Update server port to 29170</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -304,7 +304,7 @@
         <Path>Multichannel Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>537077E883C3DD457AF592709F098AB7</GUID>
+      <GUID>3A21BE23057EBC4B267B36EF4F2483A2</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -353,7 +353,7 @@
         <Path>Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>7CFC7044014EA81C13B84ACE437A48F9</GUID>
+      <GUID>547E9D114F3F2024BF66EFA0D8B5F30C</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -892,7 +892,7 @@
         <Path>Instrument.Lockin\API\getTrigger.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E770C1771E841E8EE6A44ED107FEA4D0</GUID>
+      <GUID>C9A7E337B4764F9F42B17C70189DD1C4</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -941,7 +941,7 @@
         <Path>Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>85450202D7BED027A2CCE427F5381285</GUID>
+      <GUID>182F735B7CF1434B25A2FD7071D32A06</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -976,7 +976,7 @@
         <Path>RemoteControl\Typedefs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>9E52F75DD14ECE8FB33EA6096703618D</GUID>
+      <GUID>744E3F3AC09F0F3E724FDF1A40C7E6DB</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1277,7 +1277,7 @@
         <Path>LockinDAQ\Typedefs\XP Style VISA Control.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>54394DA34DC4DB4EE4AC5C7C41449DC7</GUID>
+      <GUID>7F93DBE734E403CB95E0DB96A54E396F</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1298,7 +1298,7 @@
         <Synchronyze_with_Directory>false</Synchronyze_with_Directory>
         <Synchronize_Directory_Path>RemoteControl\Typedefs</Synchronize_Directory_Path>
       </Synchronization_Info>
-      <GUID>11FC28A93BC82846EB924D8D106C867C</GUID>
+      <GUID>37CA8B4165E6F488E7ECD155F18FEF37</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
