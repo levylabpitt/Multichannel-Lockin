@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2020-01-14 11:45:10" Creator="Patrick Irvin" Comments="" ID="a4ad9792a7554560fbd6c919bf26e0a1">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2016-04-26 22:20:34" Modified_Date="2020-02-05 14:31:07" Creator="Patrick Irvin" Comments="" ID="92dad1ac9d651fba47e34c69536c2d48">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.9.3.6</Library_Version>
+    <Library_Version>2.9.4.7</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Multichannel Lockin\Package</Library_Output_Folder>
@@ -22,8 +22,8 @@
       <External_Dependencies>jki_statemachineobjects &gt;= 1.3.0.56</External_Dependencies>
       <External_Dependencies>levylab_lib_control_vi &gt;= 1.3.0.11</External_Dependencies>
       <External_Dependencies>levylab_lib_fileutilities &gt;= 1.2.3.9</External_Dependencies>
-      <External_Dependencies>levylab_lib_graph_utilities &gt;= 2.0.0.1</External_Dependencies>
-      <External_Dependencies>levylab_lib_lvtoitx &gt;= 2.7.4.8</External_Dependencies>
+      <External_Dependencies>levylab_lib_graph_utilities &gt;= 2.0.1.2</External_Dependencies>
+      <External_Dependencies>levylab_lib_lvtoitx &gt;= 2.8.0.9</External_Dependencies>
       <External_Dependencies>levylab_lib_voltage_update &gt;= 1.0.3.5</External_Dependencies>
       <External_Dependencies>lvh_toolbox &gt;= 2.0.0.35</External_Dependencies>
       <External_Dependencies>mgi_lib_application_control &gt;= 1.1.1.10</External_Dependencies>
@@ -45,15 +45,15 @@
       <External_Dependencies>oglib_variantconfig &gt;= 4.0.0.5</External_Dependencies>
       <External_Dependencies>wireflow_ab_lib_wf_progressbar &gt;= 1.0.2.56</External_Dependencies>
       <Additional_External_Dependencies>labview-zmq &gt;=3.5.1.109</Additional_External_Dependencies>
-      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.4.1.52</Additional_External_Dependencies>
+      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.4.2.53</Additional_External_Dependencies>
       <Additional_External_Dependencies>national_instruments_lib_guid_generator &gt;=1.0.2.3</Additional_External_Dependencies>
       <Direct_Dependencies>jki_lib_json_serialization-1.1.10.37</Direct_Dependencies>
       <Direct_Dependencies>jki_lib_state_machine-2018.0.7.45</Direct_Dependencies>
       <Direct_Dependencies>jki_statemachineobjects-1.3.0.56</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_control_vi-1.3.0.11</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_fileutilities-1.2.3.9</Direct_Dependencies>
-      <Direct_Dependencies>levylab_lib_graph_utilities-2.0.0.1</Direct_Dependencies>
-      <Direct_Dependencies>levylab_lib_lvtoitx-2.7.4.8</Direct_Dependencies>
+      <Direct_Dependencies>levylab_lib_graph_utilities-2.0.1.2</Direct_Dependencies>
+      <Direct_Dependencies>levylab_lib_lvtoitx-2.8.0.9</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_voltage_update-1.0.3.5</Direct_Dependencies>
       <Direct_Dependencies>lvh_toolbox-2.0.0.35</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_application_control-1.1.1.10</Direct_Dependencies>
@@ -90,10 +90,9 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.9.3.5]
-- build w/ Instrument.lvclass v1.4.1.52
-- update waveguide modeling in simulation mode
-- update sweep API icons</Release_Notes>
+      <Release_Notes>[2.9.4.6]
+- build w/ Instrument.lvclass v1.4.2.53
+- updated Lockin Client.vi</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -305,7 +304,7 @@
         <Path>Multichannel Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>7166302BF499711C52750A3DF7B33913</GUID>
+      <GUID>D6AAF3FFB8B9EB6BB52ED0E191F7ACC5</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -354,7 +353,7 @@
         <Path>Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>2871CBA7EFE834C182A7CA5E0D307B6C</GUID>
+      <GUID>A421124833237092E7E4CCFF468B8070</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -921,7 +920,7 @@
         <Path>Instrument.Lockin\API\getIVSweepResults.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>CCB823986CBE74A8D017ECEF64674C77</GUID>
+      <GUID>9D764F8FE643CB3982A471C8CE7AB6EE</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
