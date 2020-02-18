@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2016-04-26 22:20:34" Modified_Date="2020-02-18 07:14:31" Creator="Patrick Irvin" Comments="" ID="b7581e17533854dc425f36eba95622f5">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2016-04-26 22:20:34" Modified_Date="2020-02-18 07:59:17" Creator="Patrick Irvin" Comments="" ID="73ef245e34314cccee8b9229c1009016">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.9.5.8</Library_Version>
+    <Library_Version>2.9.5.10</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Multichannel Lockin\Package</Library_Output_Folder>
@@ -109,7 +109,7 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.9.5.8]
+      <Release_Notes>[2.9.5.9]
 - build w/ Instrument.lvclass v1.5.7.68</Release_Notes>
     </Description>
     <Destinations>
@@ -322,7 +322,7 @@
         <Path>Multichannel Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>AD783CD73EBD09396BA649992425B718</GUID>
+      <GUID>37AA776E690218301C18037B704F1C0A</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -371,7 +371,7 @@
         <Path>Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>C8B48BF32FD189DABA20B95F9E3B0438</GUID>
+      <GUID>08DD3361F54F608CEAC9B86C8F936D28</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -938,7 +938,7 @@
         <Path>Instrument.Lockin\API\getIVSweepResults.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>33F437408F2661E4973A8D2E2EDC98FC</GUID>
+      <GUID>CD0AB7A47F3E6EC3394FE2E81680E895</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
