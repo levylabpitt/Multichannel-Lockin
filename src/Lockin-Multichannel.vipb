@@ -1,10 +1,10 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2016-04-26 22:20:34" Modified_Date="2020-02-18 07:59:17" Creator="Patrick Irvin" Comments="" ID="73ef245e34314cccee8b9229c1009016">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2016-04-26 22:20:34" Modified_Date="2020-02-18 16:09:50" Creator="Patrick Irvin" Comments="" ID="f66801c202613f75f3fc79c04a5f15e2">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.9.5.10</Library_Version>
+    <Library_Version>2.9.6.10</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
-    <Library_Output_Folder>..\builds\Multichannel Lockin\Package</Library_Output_Folder>
+    <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
     <Company_Name>LevyLab</Company_Name>
     <Library_Summary/>
     <Library_License>BSD-3</Library_License>
@@ -55,7 +55,7 @@
       <External_Dependencies>oglib_variantconfig &gt;= 4.0.0.5</External_Dependencies>
       <External_Dependencies>wireflow_ab_lib_wf_progressbar &gt;= 1.0.2.56</External_Dependencies>
       <Additional_External_Dependencies>labview-zmq &gt;=3.5.1.109</Additional_External_Dependencies>
-      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.5.7.68</Additional_External_Dependencies>
+      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.5.8.70</Additional_External_Dependencies>
       <Direct_Dependencies>jki_lib_json_serialization-1.1.10.37</Direct_Dependencies>
       <Direct_Dependencies>jki_lib_serialization-1.0.1.14</Direct_Dependencies>
       <Direct_Dependencies>jki_lib_state_machine-2018.0.7.45</Direct_Dependencies>
@@ -109,8 +109,9 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.9.5.9]
-- build w/ Instrument.lvclass v1.5.7.68</Release_Notes>
+      <Release_Notes>[2.9.6.10]
+- build w/ Instrument.lvclass v1.5.8.70
+- update API and Lockin Client</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -322,7 +323,7 @@
         <Path>Multichannel Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>37AA776E690218301C18037B704F1C0A</GUID>
+      <GUID>3EC6E3902857A853E591F3C8A4CFE2B5</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -371,7 +372,7 @@
         <Path>Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>08DD3361F54F608CEAC9B86C8F936D28</GUID>
+      <GUID>801F1F54A870BA937A1D75455BD095CD</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -544,34 +545,6 @@
         </Position>
         <Icon>00000000</Icon>
         <Path>Instrument.Lockin\API\getREFconfig.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>connectLockin.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\connectLockin.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getStatus.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>2</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>Instrument.Lockin\API\getStatus.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -938,7 +911,35 @@
         <Path>Instrument.Lockin\API\getIVSweepResults.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>CD0AB7A47F3E6EC3394FE2E81680E895</GUID>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>Open.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>1</Row>
+          <Column>1</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>Instrument.Lockin\API\Open.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>getStatus.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>1</Row>
+          <Column>2</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>Instrument.Lockin\API\getStatus.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <GUID>B33D4B6D90E9351A5BD3F761E52CB34A</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
