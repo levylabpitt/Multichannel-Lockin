@@ -2,6 +2,8 @@
 
 Multichannel Lockin for National Instruments Dynamic Signal Acquisition hardware (4431, 4461, 4462). This version is configured to handle multiple cards for simultaneous, synchronized AI/AO. You can configure a number of analog outputs (8 or more) to output sine, square, sawtooth, or triangle functions with DC offsets. Each of the analog inputs (8 or more) can be demodulated at multiple frequencies.
 
+![Multichannel Lockin Front Panel](images/Lockin-Front-Panel.png)
+
 ## Installation
 - LabVIEW 2016 32-bit required
 - Multichannel Lockin.exe can be installed by downloading the latest installer found here [here](https://github.com/levylabpitt/Multichannel-Lockin/releases/latest)
@@ -9,7 +11,13 @@ Multichannel Lockin for National Instruments Dynamic Signal Acquisition hardware
 
 ## Usage
 
-...coming soon...
+![Block Diagram 1](images/Lockin-Block-Diagram-1.png)
+
+![Block Diagram 2](images/Lockin-Block-Diagram-2.png)
+
+![Block Diagram 3](images/Lockin-Block-Diagram-3.png)
+
+![Block Diagram 4](images/Lockin-Block-Diagram-4.png)
 
 ## Contributing
 
