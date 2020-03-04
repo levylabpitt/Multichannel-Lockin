@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-02-19 11:03:21" Creator="Patrick Irvin" Comments="" ID="da2e22785924214b3229c05903e1dedc">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-03-04 09:43:08" Creator="Patrick Irvin" Comments="" ID="3dbe605f9f57192821c458c88ddd0783">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.9.6.12</Library_Version>
+    <Library_Version>2.9.7.12</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -102,14 +102,14 @@
       <Pre-Uninstall_VI/>
       <Post-Uninstall_VI/>
     </Custom_Action_VIs>
-    <VI_Package_Configuration_File>..\src\Lockin-Multichannel.vipc</VI_Package_Configuration_File>
+    <VI_Package_Configuration_File>Multichannel Lockin.vipc</VI_Package_Configuration_File>
     <Description>
       <One_Line_Description_Summary/>
       <Description>Multichannel Lockin for National Instruments' Dynamic Signal Acquisition hardware (4431, 4461, 4462). This version is configured to handle multiple cards for simultaneous, synchronized AI/AO. You can configure a number of analog outputs (up to 8) to output sine, square, sawtooth, or triangle functions with DC offsets. Each of the analog inputs (up to 8) can be demodulated at multiple frequencies.</Description>
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.9.6.11]
+      <Release_Notes>[2.9.7.12]
 - build w/ Instrument.lvclass v1.5.8.70
 - update API and Lockin Client
 - build using new "Build Support" package</Release_Notes>
@@ -324,7 +324,7 @@
         <Path>..\src\Multichannel Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>856D00EAA8D9F3DEEDE999866D56BE89</GUID>
+      <GUID>FBB96CA2E6722E798A9D50FF0EC5B43C</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -373,7 +373,7 @@
         <Path>..\src\Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>227CABAB660689E83DC24E11C1AC9174</GUID>
+      <GUID>E1A208054B50CFFE713CB7515243953A</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -940,7 +940,7 @@
         <Path>..\src\Instrument.Lockin\API\getStatus.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E696D7D36C23E2BB1DDDB89FE2BAE94A</GUID>
+      <GUID>EF4321B2E114D131C2E5EC87A0D0D9D0</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
