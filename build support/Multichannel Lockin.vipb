@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-03-12 12:22:08" Creator="Patrick Irvin" Comments="" ID="bf2d9fdbec78e1df032bd919dd01b0b6">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-03-12 12:48:11" Creator="Patrick Irvin" Comments="" ID="82bca9b22a2051b3c3084dc6d8b6e06f">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.9.8.15</Library_Version>
+    <Library_Version>2.9.8.16</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
