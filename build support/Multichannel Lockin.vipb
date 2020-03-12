@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-03-04 15:03:58" Creator="Patrick Irvin" Comments="" ID="3dfbdb22fe4392fc170753c34cd5688c">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-03-04 17:13:52" Creator="Patrick Irvin" Comments="" ID="e0c6007596cd622f0778d19dbfba96c0">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.9.7.13</Library_Version>
+    <Library_Version>2.9.7.15</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -109,9 +109,10 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.9.7.13]
+      <Release_Notes>[2.9.7.14]
 - UI updates
-- Bug fix Sweep Mode "return to start"</Release_Notes>
+- Bug fix Sweep Mode "return to start"
+- Add check when exiting program</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -323,7 +324,7 @@
         <Path>..\src\Multichannel Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>443E73A0FC217717B5DD59160C7D7AF0</GUID>
+      <GUID>0CC60119E72F8150398DC714723A9C3B</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -372,7 +373,7 @@
         <Path>..\src\Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B869513EA40C65D606C83B11632A9FE9</GUID>
+      <GUID>FEB67996DCCECF1EACBA8CDAE5A51912</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -939,7 +940,7 @@
         <Path>..\src\Instrument.Lockin\API\startIVSweepAndWait.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>ED3106E88E25FC367F56C52EB58FA9E5</GUID>
+      <GUID>5667595239936FE9A1BEDBCCA77874E5</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
