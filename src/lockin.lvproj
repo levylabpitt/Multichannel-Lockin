@@ -16,6 +16,7 @@
 			<Item Name="Lockin-Multichannel.ico" Type="Document" URL="../../build support/Lockin-Multichannel.ico"/>
 			<Item Name="Multichannel Lockin.vipb" Type="Document" URL="../../build support/Multichannel Lockin.vipb"/>
 			<Item Name="Multichannel Lockin.vipc" Type="Document" URL="../../build support/Multichannel Lockin.vipc"/>
+			<Item Name="Post Build.vi" Type="VI" URL="../../build support/Post Build.vi"/>
 		</Item>
 		<Item Name="Examples" Type="Folder">
 			<Item Name="Example_IV_Curves.vi" Type="VI" URL="../Examples/Example_IV_Curves.vi"/>
@@ -400,8 +401,6 @@
 				<Item Name="Instrument.Strain.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/Levylab Instruments/Instrument Types/Strain/Instrument.Strain.lvclass"/>
 				<Item Name="Instrument.OpticalDelayLine.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/Levylab Instruments/Instrument Types/Optical Delay Line/Instrument.OpticalDelayLine.lvclass"/>
 				<Item Name="Number to String.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/FileUtilities/Number to String.vi"/>
-				<Item Name="LVITX Format Path&amp;Filename.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/LV to ITX/util/LVITX Format Path&amp;Filename.vi"/>
-				<Item Name="LVITX XY Plot Commands.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/LV to ITX/util/LVITX XY Plot Commands.vi"/>
 				<Item Name="Instrument UI.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/Levylab Instruments/SMOs/Instrument UI/Instrument UI.lvclass"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
@@ -1846,10 +1845,10 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{BE714A7E-B7D4-4888-A1F2-966F210EC573}</Property>
-				<Property Name="Bld_version.build" Type="Int">14</Property>
+				<Property Name="Bld_version.build" Type="Int">15</Property>
 				<Property Name="Bld_version.major" Type="Int">2</Property>
 				<Property Name="Bld_version.minor" Type="Int">9</Property>
-				<Property Name="Bld_version.patch" Type="Int">7</Property>
+				<Property Name="Bld_version.patch" Type="Int">8</Property>
 				<Property Name="Destination[0].destName" Type="Str">Multichannel Lockin.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/Application/Multichannel Lockin.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
@@ -1858,7 +1857,7 @@
 				<Property Name="Destination[1].path" Type="Path">../builds/Application/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/build support/Lockin-Multichannel.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{07519F8A-0BC1-4AA8-999E-EEEF6F49493D}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{8CEAC722-7C08-4AF8-A8FE-D6A8082E14FB}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Instrument.Lockin.lvclass/Multichannel Lockin.vi</Property>
@@ -1953,7 +1952,7 @@
 				<Property Name="INST_buildSpecName" Type="Str">Multichannel Lockin Installer</Property>
 				<Property Name="INST_defaultDir" Type="Str">{A127CC0D-3099-41C3-8104-2245C476C6E9}</Property>
 				<Property Name="INST_productName" Type="Str">Multichannel Lockin</Property>
-				<Property Name="INST_productVersion" Type="Str">2.9.7</Property>
+				<Property Name="INST_productVersion" Type="Str">2.9.8</Property>
 				<Property Name="InstSpecBitness" Type="Str">32-bit</Property>
 				<Property Name="InstSpecVersion" Type="Str">16008024</Property>
 				<Property Name="MSI_arpCompany" Type="Str">University of Pittsburgh</Property>
