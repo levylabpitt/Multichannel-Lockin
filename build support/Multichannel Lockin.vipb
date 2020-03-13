@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-03-12 16:53:28" Creator="Patrick Irvin" Comments="" ID="57de132aa84dd2ad908ef5dc8cf2c78e">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-03-13 07:23:26" Creator="Patrick Irvin" Comments="" ID="84c25ecaa4cdc493ab7e6442659814a1">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.9.9.17</Library_Version>
+    <Library_Version>2.9.10.18</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -109,8 +109,11 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.9.9.16]
-- Enable decimation with averaging</Release_Notes>
+      <Release_Notes>[2.9.10.17]
+Decimation improvements:
+- order is now: filter then decimate with averaging
+- AO and REF waveforms are also filtered and decimated (after being sent to the oscillator)
+Remove 'are you sure?' dialog when exiting</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -322,7 +325,7 @@
         <Path>..\src\Multichannel Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>D1158AE45BDF0652B8F5201F97D7E5AE</GUID>
+      <GUID>52FA4C10EAE5FBF4CCB42447C388F0B8</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -371,7 +374,7 @@
         <Path>..\src\Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>9497321EF8C2C227F485162A88003E40</GUID>
+      <GUID>FBB0C80301030261AD26C351320D85D9</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -938,7 +941,7 @@
         <Path>..\src\Instrument.Lockin\API\startIVSweepAndWait.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>CDF186CF661181E2E747A5D8458932D9</GUID>
+      <GUID>AE711B43A8DC286C262436EFB751CD9E</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
