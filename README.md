@@ -43,7 +43,7 @@ If the configured DAQ card is a simulated card, the lockin will automatically re
 
 ## Contributing
 
-Please contact [Patrick Irvin](p.irvin@levylab.org)
+Please contact [Patrick Irvin](https://github.com/ciozi137)
 
 ## License
 
