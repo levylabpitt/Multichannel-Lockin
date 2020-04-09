@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-03-13 07:23:26" Creator="Patrick Irvin" Comments="" ID="84c25ecaa4cdc493ab7e6442659814a1">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-04-09 13:22:41" Creator="Patrick Irvin" Comments="" ID="1576437486fd425e458bebe56baa3a45">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.9.10.18</Library_Version>
+    <Library_Version>2.9.11.19</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -24,13 +24,11 @@
       <External_Dependencies>jki_statemachineobjects &gt;= 1.3.0.56</External_Dependencies>
       <External_Dependencies>lava_lib_ui_tools &gt;= 1.4.1.74</External_Dependencies>
       <External_Dependencies>levylab_lib_control_vi &gt;= 1.3.0.11</External_Dependencies>
-      <External_Dependencies>levylab_lib_fileutilities &gt;= 1.2.3.10</External_Dependencies>
-      <External_Dependencies>levylab_lib_graph_utilities &gt;= 2.0.1.2</External_Dependencies>
-      <External_Dependencies>levylab_lib_ibwtolv &gt;= 1.0.1.3</External_Dependencies>
+      <External_Dependencies>levylab_lib_fileutilities &gt;= 1.2.4.11</External_Dependencies>
+      <External_Dependencies>levylab_lib_graph_utilities &gt;= 2.0.4.4</External_Dependencies>
       <External_Dependencies>levylab_lib_lvtoitx &gt;= 2.8.2.13</External_Dependencies>
       <External_Dependencies>levylab_lib_voltage_update &gt;= 1.0.3.5</External_Dependencies>
-      <External_Dependencies>levylab_lib_xy_utilities &gt;= 1.0.3.4</External_Dependencies>
-      <External_Dependencies>lvh_toolbox &gt;= 2.0.0.35</External_Dependencies>
+      <External_Dependencies>levylab_lib_xy_utilities &gt;= 1.0.4.5</External_Dependencies>
       <External_Dependencies>mgi_lib_application_control &gt;= 1.1.1.10</External_Dependencies>
       <External_Dependencies>mgi_lib_cluster &gt;= 1.1.0.1</External_Dependencies>
       <External_Dependencies>mgi_lib_error_handling &gt;= 1.1.1.3</External_Dependencies>
@@ -63,13 +61,11 @@
       <Direct_Dependencies>jki_statemachineobjects-1.3.0.56</Direct_Dependencies>
       <Direct_Dependencies>lava_lib_ui_tools-1.4.1.74</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_control_vi-1.3.0.11</Direct_Dependencies>
-      <Direct_Dependencies>levylab_lib_fileutilities-1.2.3.10</Direct_Dependencies>
-      <Direct_Dependencies>levylab_lib_graph_utilities-2.0.1.2</Direct_Dependencies>
-      <Direct_Dependencies>levylab_lib_ibwtolv-1.0.1.3</Direct_Dependencies>
+      <Direct_Dependencies>levylab_lib_fileutilities-1.2.4.11</Direct_Dependencies>
+      <Direct_Dependencies>levylab_lib_graph_utilities-2.0.4.4</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_lvtoitx-2.8.2.13</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_voltage_update-1.0.3.5</Direct_Dependencies>
-      <Direct_Dependencies>levylab_lib_xy_utilities-1.0.3.4</Direct_Dependencies>
-      <Direct_Dependencies>lvh_toolbox-2.0.0.35</Direct_Dependencies>
+      <Direct_Dependencies>levylab_lib_xy_utilities-1.0.4.5</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_application_control-1.1.1.10</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_cluster-1.1.0.1</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_error_handling-1.1.1.3</Direct_Dependencies>
@@ -109,11 +105,9 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.9.10.17]
-Decimation improvements:
-- order is now: filter then decimate with averaging
-- AO and REF waveforms are also filtered and decimated (after being sent to the oscillator)
-Remove 'are you sure?' dialog when exiting</Release_Notes>
+      <Release_Notes>[2.9.11.19]
+- Build version automatically updated on front panel
+- Remove LVtoIBW from package dependencies</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -325,7 +319,7 @@ Remove 'are you sure?' dialog when exiting</Release_Notes>
         <Path>..\src\Multichannel Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>52FA4C10EAE5FBF4CCB42447C388F0B8</GUID>
+      <GUID>977E889F3987A59A2CEE1F276F1ABBD0</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -374,7 +368,7 @@ Remove 'are you sure?' dialog when exiting</Release_Notes>
         <Path>..\src\Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>FBB0C80301030261AD26C351320D85D9</GUID>
+      <GUID>D73D66ABFCB9D275592FBFFED99A9104</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -941,7 +935,7 @@ Remove 'are you sure?' dialog when exiting</Release_Notes>
         <Path>..\src\Instrument.Lockin\API\startIVSweepAndWait.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>AE711B43A8DC286C262436EFB751CD9E</GUID>
+      <GUID>3FCCBC126BDDAD0F88BD8E89CE431890</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
