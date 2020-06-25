@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-06-25 17:10:01" Creator="Patrick Irvin" Comments="" ID="65e8c623905dea7e3f466b633a0ea011">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-06-25 17:30:20" Creator="Patrick Irvin" Comments="" ID="dc8eedc1f5fae01e8f150af9cf17cd5e">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.9.12.21</Library_Version>
+    <Library_Version>2.9.12.22</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -105,7 +105,7 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.9.12.20]
+      <Release_Notes>[2.9.12.21]
 - enable scrollbars in all FP graphs</Release_Notes>
     </Description>
     <Destinations>
@@ -318,7 +318,7 @@
         <Path>..\src\Multichannel Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>1CB41FFA00EC1A06A798C1418D8E046B</GUID>
+      <GUID>6F0F097797F93F06FFAB57C862BA0AC7</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -367,7 +367,7 @@
         <Path>..\src\Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>5CD9FE43D4F33C5922799ACD4E384815</GUID>
+      <GUID>43DD3614E28AEF369CFCBB715AD3FFB9</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -934,7 +934,7 @@
         <Path>..\src\Instrument.Lockin\API\startIVSweepAndWait.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>76AFC4F8163E85CC0B2BA4A41F63DEEF</GUID>
+      <GUID>5CA4F0FE5ABE62E34CC51FCC3A2A9532</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
