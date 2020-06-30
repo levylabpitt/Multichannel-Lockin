@@ -59,7 +59,6 @@
 		<Item Name="Instrument.Lockin.lvclass" Type="LVClass" URL="../Instrument.Lockin/Instrument.Lockin.lvclass"/>
 		<Item Name="Instrument.Lockin.UI.lvclass" Type="LVClass" URL="../Instrument.Lockinl.UI/Instrument.Lockin.UI.lvclass"/>
 		<Item Name="LockinDAQ.lvclass" Type="LVClass" URL="../LockinDAQ/LockinDAQ.lvclass"/>
-		<Item Name="Reference--Array of Cluster.ctl" Type="VI" URL="../Instrument.Lockin/Typedefs/Reference--Array of Cluster.ctl"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="1D Array to String__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/string/string.llb/1D Array to String__ogtk.vi"/>
