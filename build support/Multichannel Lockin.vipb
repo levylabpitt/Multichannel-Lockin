@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-06-26 15:26:53" Creator="Patrick Irvin" Comments="" ID="4495d19e38bef342b6e10c561cc9687a">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-06-30 20:31:20" Creator="Patrick Irvin" Comments="" ID="00d7db9c622294f8938239bc86e8d7ea">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.10.0.23</Library_Version>
+    <Library_Version>2.10.1.24</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -105,12 +105,11 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.10.0.22]
-- update AO/AI DAQ loops to parallel loops with 16 instances, allowing dynamic scaling to maximum 16 DAQ cards (32 synchronized AO/AI when using 4461 cards)
-- new APIs:
-  - setAIDAQ: configure AI DAQ hardware
-  - setAODAQ: configure AO DAQ hardware
-  - getRefreshTime: get the lockin refresh time</Release_Notes>
+      <Release_Notes>[2.10.1.23]
+- Issue #21: fix lockin channel ring control
+- Issue #24: fix issues with setting multiple reference frequencies
+- Change handling of mouse events inside cluster controls
+- Change AI graph labels</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -322,7 +321,7 @@
         <Path>..\src\Multichannel Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>3738FC3D19FDE2E1EEDBBFD4B9DD11EE</GUID>
+      <GUID>B7AEFD224D4B8FCE8F2292C5A25F68BB</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -371,7 +370,7 @@
         <Path>..\src\Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>14C0339332BAEBFD3446D975633F5BE4</GUID>
+      <GUID>D751B00C417AB23A1BDDBCC0245C46EE</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -980,7 +979,7 @@
         <Path>..\src\Instrument.Lockin\API\setAIDAQ.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>2C695BE1F28AC05D88C53CA1D3086CD6</GUID>
+      <GUID>DE8AD2A2BE1F160752753ACA9DA70A7B</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
