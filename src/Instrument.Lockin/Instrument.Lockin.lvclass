@@ -74,6 +74,15 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1082143232</Property>
 		</Item>
+		<Item Name="Sample Mode--Enum.ctl" Type="VI" URL="../Typedefs/Sample Mode--Enum.ctl">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!"^!!!!!1"V!0(&lt;-G!&gt;!!!!!BF*&lt;H.U=H6N:7ZU,ERP9WNJ&lt;CZM&gt;G.M98.T&amp;6.B&lt;8"M:3".&lt;W2F,3V&amp;&lt;H6N,G.U&lt;!!^1"9!!Q:.97ZV97Q6186U&lt;S"'=S"B&lt;G1A5S"B9W-O)'9R"E:T)%VB?!!.5W&amp;N='RJ&lt;G=A47^E:1!"!!!!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">3145728</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1082143232</Property>
+		</Item>
 	</Item>
 	<Item Name="API" Type="Folder">
 		<Item Name="Open.vi" Type="VI" URL="../API/Open.vi">
