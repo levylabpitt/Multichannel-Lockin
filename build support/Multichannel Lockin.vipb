@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-07-13 18:35:46" Creator="Patrick Irvin" Comments="" ID="1e196c2a2ac35ceb48a7e1204d82637c">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-07-14 10:02:51" Creator="Patrick Irvin" Comments="" ID="0c61ffb19d4c10db74bc572633f392d3">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.11.0.25</Library_Version>
+    <Library_Version>2.11.1.27</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -105,7 +105,10 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.11.0.24]
+      <Release_Notes>[2.11.1.26]
+- Fix issue where exe would not shut down properly (#4)
+
+[2.11.0.24]
 - Update the way the user choosing the sampling frequency (Fs) and number of samples (N) (issues #7 #26)
   - Manual: user's choice
   - Auto: Fs = N*F1
@@ -330,7 +333,7 @@
         <Path>..\src\Multichannel Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>0217E3B745D2F75A085F302224E24B6C</GUID>
+      <GUID>AAEAAF84BDF9A0E161563F6E5243DD7D</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -379,7 +382,7 @@
         <Path>..\src\Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>5E7B8CCDBFCA7738E8D386AFA15A1DD9</GUID>
+      <GUID>A894420EA44B718317E540339A1D4357</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -988,7 +991,7 @@
         <Path>..\src\Instrument.Lockin\API\setAIDAQ.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>CA0ADEF9CFB9EF1449EDEBD462390A33</GUID>
+      <GUID>789A97E18095DD451BD1CA4C1AAFC657</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
