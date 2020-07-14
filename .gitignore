@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 src/Multichannel Lockin.lvlps
 src/Multichannel Lockin.aliases
@@ -588,3 +589,9 @@ builds/7z Install/Volume.7z
 builds/7z Install/config.txt
 builds/7z Install/7zSD.sfx
 builds/7z Install/7zip.bat
+=======
+/src/*.aliases
+/src/*.lvlps
+/builds/*
+/*.aliases
+>>>>>>> Instrument_Remote
