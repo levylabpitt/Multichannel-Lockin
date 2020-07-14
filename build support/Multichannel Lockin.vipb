@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-07-14 13:09:24" Creator="Patrick Irvin" Comments="" ID="b2f10a6ac026681e50f0478f785ea421">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-07-14 15:08:41" Creator="Patrick Irvin" Comments="" ID="ba025797330554324a9b5bb63a2465a9">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.11.2.27</Library_Version>
+    <Library_Version>2.11.2.29</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -105,7 +105,7 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.11.2.27]
+      <Release_Notes>[2.11.2.28]
 - Max Fs mode does not update decimation setting automatically
 
 [2.11.1.26]
@@ -336,7 +336,7 @@
         <Path>..\src\Multichannel Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>224C380FC244FC572F5696B0E4465D36</GUID>
+      <GUID>A7D6EDC572F0CFBD4193310BA5BFBF69</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -385,7 +385,7 @@
         <Path>..\src\Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>EA65B5876664933EC027FB9E1817AB47</GUID>
+      <GUID>7A5853757A89AD17D9C24044B424C18A</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -994,7 +994,7 @@
         <Path>..\src\Instrument.Lockin\API\setAIDAQ.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>8749507DAB5319E50EE2CBCE79A4F750</GUID>
+      <GUID>CCE64F68D8C9CAC7B04F9F76096CAD9D</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
