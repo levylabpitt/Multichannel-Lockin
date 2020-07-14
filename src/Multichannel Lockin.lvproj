@@ -55,6 +55,8 @@
 			<Item Name="Test Waveguide Model.vi" Type="VI" URL="../../Tests/Test Waveguide Model.vi"/>
 			<Item Name="Test Lockin API State Machine.vi" Type="VI" URL="../../Tests/Test Lockin API State Machine.vi"/>
 			<Item Name="Test Sweep Mode vs Lockin_Vsg.vi" Type="VI" URL="../../Tests/Test Sweep Mode vs Lockin_Vsg.vi"/>
+			<Item Name="Test EXE.vi" Type="VI" URL="../../Tests/Test EXE.vi"/>
+			<Item Name="Build Test EXE.vi" Type="VI" URL="../../Tests/Build Test EXE.vi"/>
 		</Item>
 		<Item Name="Instrument.Lockin.lvclass" Type="LVClass" URL="../Instrument.Lockin/Instrument.Lockin.lvclass"/>
 		<Item Name="Instrument.Lockin.UI.lvclass" Type="LVClass" URL="../Instrument.Lockinl.UI/Instrument.Lockin.UI.lvclass"/>
@@ -1875,6 +1877,48 @@
 				<Property Name="Source[0].tag" Type="Ref">/My Computer/Build Specifications/Multichannel Lockin Application</Property>
 				<Property Name="Source[0].type" Type="Str">EXE</Property>
 				<Property Name="SourceCount" Type="Int">1</Property>
+			</Item>
+			<Item Name="Test EXE" Type="EXE">
+				<Property Name="App_copyErrors" Type="Bool">true</Property>
+				<Property Name="App_INI_aliasGUID" Type="Str">{5BC92D9A-000C-4F70-8A45-158CECA69FF3}</Property>
+				<Property Name="App_INI_GUID" Type="Str">{9791886C-59BA-4071-A40F-A04F8713A703}</Property>
+				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
+				<Property Name="App_serverType" Type="Int">0</Property>
+				<Property Name="Bld_buildCacheID" Type="Str">{F0022AB0-4626-4666-A2AB-63346EC6034F}</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">Test EXE</Property>
+				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
+				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
+				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../builds/NI_AB_PROJECTNAME/Test EXE</Property>
+				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
+				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
+				<Property Name="Bld_previewCacheID" Type="Str">{B9598F00-F716-434C-A425-8642AB405148}</Property>
+				<Property Name="Bld_version.build" Type="Int">25</Property>
+				<Property Name="Bld_version.major" Type="Int">8</Property>
+				<Property Name="Bld_version.minor" Type="Int">11</Property>
+				<Property Name="Bld_version.patch" Type="Int">1</Property>
+				<Property Name="Destination[0].destName" Type="Str">Test.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/Test EXE/Test.exe</Property>
+				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
+				<Property Name="Destination[0].type" Type="Str">App</Property>
+				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
+				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/Test EXE/data</Property>
+				<Property Name="DestinationCount" Type="Int">2</Property>
+				<Property Name="Source[0].itemID" Type="Str">{225AE409-5E84-4BEF-A130-9CC3E6BFF118}</Property>
+				<Property Name="Source[0].type" Type="Str">Container</Property>
+				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Tests/Test EXE.vi</Property>
+				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
+				<Property Name="Source[1].type" Type="Str">VI</Property>
+				<Property Name="SourceCount" Type="Int">2</Property>
+				<Property Name="TgtF_companyName" Type="Str">University of Pittsburgh</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">Test EXE</Property>
+				<Property Name="TgtF_internalName" Type="Str">Test EXE</Property>
+				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2020 University of Pittsburgh</Property>
+				<Property Name="TgtF_productName" Type="Str">Test EXE</Property>
+				<Property Name="TgtF_targetfileGUID" Type="Str">{FF0A5DB1-62F3-4507-B01D-8778356D77C8}</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">Test.exe</Property>
+				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
 			</Item>
 		</Item>
 	</Item>
