@@ -33,7 +33,13 @@ A demodulated lockin signal can also be routed to another analog output.
 
 ### Sweep Mode
 
-**(TO TO)**
+- Sweep Mode will ramp a DC offset of **Sweep Channel** from the **Sweep Start** to **Sweep End** values in time givem by **Sweep Time**.
+- Sweep Channel, Sweep Start, and Sweep End are all arrays.
+- One can choose different starting and ending values (and directions) for each channel, but the Sweep Time is a global setting.
+- The program will wait **Sweep Initial Wait** before beginning the sweep.
+- **Step Size** will indicate how much the voltage changes per each refresh of the lockin for the first sweep channel. This value is determined by (Sweep Start - Sweep End)/(Sweep Time/Lock Refresh Time). You can also change this value and the Sweep Time will be calculated
+
+![Block Diagram 5](images/Lockin-Block-Diagram-5.png)
 
 ### Power Spectrum
 
