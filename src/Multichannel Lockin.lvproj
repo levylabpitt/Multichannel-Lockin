@@ -544,6 +544,7 @@
 				<Item Name="Physical Units__ogtk.ctl" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Physical Units__ogtk.ctl"/>
 				<Item Name="Get Physical Units from TD__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Get Physical Units from TD__ogtk.vi"/>
 				<Item Name="Get TDEnum from TD__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Get TDEnum from TD__ogtk.vi"/>
+				<Item Name="RemoteControl.ZMQ.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/Levylab Instruments/SMOs/RemoteControl.ZMQ/RemoteControl.ZMQ.lvclass"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
@@ -1459,6 +1460,7 @@
 				<Item Name="WDT Append Waveforms I32.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/WDT Append Waveforms I32.vi"/>
 				<Item Name="WDT Append Waveforms I64.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/WDT Append Waveforms I64.vi"/>
 				<Item Name="Caraya Interactive Menu.rtm" Type="Document" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/menu/Caraya Interactive Menu.rtm"/>
+				<Item Name="zeromq.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/zeromq/zeromq.lvlib"/>
 			</Item>
 			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -1476,9 +1478,6 @@
 			</Item>
 			<Item Name="Target - HTTP Get for Async Call.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/Application Control/VI Server/Asynchronous Call By Reference/support/Target - HTTP Get for Async Call.vi"/>
 			<Item Name="Target - Pass HTTP Get Data for Async Call.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/Application Control/VI Server/Asynchronous Call By Reference/support/Target - Pass HTTP Get Data for Async Call.vi"/>
-			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
-				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
-			</Item>
 			<Item Name="version.dll" Type="Document" URL="version.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
@@ -1736,6 +1735,9 @@
 			<Item Name="GetTemplatePathFromLib.vi" Type="VI" URL="/&lt;resource&gt;/ChannelSupport/_ChannelScriptingSupport/GetTemplatePathFromLib.vi"/>
 			<Item Name="NI_MDF.lvlib" Type="Library" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2020/applibs/distkit/MDF/NI_MDF.lvlib"/>
 			<Item Name="NIMdf.dll" Type="Document" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2020/applibs/distkit/MDF/NIMdf.dll"/>
+			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
 			<Item Name="CheckWavenameLength.vi" Type="VI" URL="/../../../../user/patrick/git/LV-to-ITX/.src/util/CheckWavenameLength.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
