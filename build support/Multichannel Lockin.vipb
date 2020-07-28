@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-07-28 16:34:58" Creator="Patrick Irvin" Comments="" ID="13eba3ccdd76c0c616d7a94e2a8153e0">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-07-28 17:39:47" Creator="Patrick Irvin" Comments="" ID="5b5a18d60effbbbe56aae4fab62111d3">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.11.4.30</Library_Version>
+    <Library_Version>2.11.4.31</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -106,7 +106,9 @@
       <Packager>Patrick Irvin</Packager>
       <URL/>
       <Release_Notes>[2.11.4.30]
-- build with Instrument Framework v1.5.15.77
+- Build with Instrument Framework v1.5.15.77
+- Improve error handling in lockinDAQ process
+- Fix issue with reset function
 
 [2.11.3.29]
 - Fix issue if multiple reference frequencies are selected the output is not calculated correctly
@@ -343,7 +345,7 @@
         <Path>..\src\Multichannel Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>606A7F2E77E130447EFD249526FEDA3F</GUID>
+      <GUID>257ADC60486CCD7F344C24762862A4DD</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -392,7 +394,7 @@
         <Path>..\src\Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>EC815FB39169DC02089E757E37FBD8D2</GUID>
+      <GUID>B3DDA288F8743BD8310998A0B2395573</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1001,7 +1003,7 @@
         <Path>..\src\Instrument.Lockin\API\setAIDAQ.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E410565A1D1F880A9A83DA3DE71D2363</GUID>
+      <GUID>CCEABFD65786CF061B0188E96A063371</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
