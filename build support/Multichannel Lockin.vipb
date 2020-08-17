@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-07-30 18:20:58" Creator="Patrick Irvin" Comments="" ID="d2fb8f7710a337b672dfecb895bfe17c">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-08-17 12:05:12" Creator="Patrick Irvin" Comments="" ID="7522f60d8b14a1c3fe53109e3a9620a5">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.11.5.32</Library_Version>
+    <Library_Version>2.11.6.33</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -103,39 +103,7 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.11.5.31]
-- Build for LV2019
-- Disable Save function
-
-[2.11.4.30]
-- Build with Instrument Framework v1.5.15.77
-- Improve error handling in lockinDAQ process
-- Fix issue with reset function
-
-[2.11.3.29]
-- Fix issue if multiple reference frequencies are selected the output is not calculated correctly
-- Fix issue with gain in AI simulation mode not being configured properly
-
-[2.11.2.28]
-- Max Fs mode does not update decimation setting automatically
-
-[2.11.1.26]
-- Fix issue where exe would not shut down properly (#4)
-
-[2.11.0.24]
-- Update the way the user choosing the sampling frequency (Fs) and number of samples (N) (issues #7 #26)
-  - Manual: user's choice
-  - Auto: Fs = N*F1
-  - max Fs: Fs = maximum, decimation = 100, LP filter = Fs/100/4, N = Fs/refresh rate
-- Fix issues where incorrect results would be given if more than one demodulation frequency is choses (issue #27)
-- New AI simulation modes:
-  - HW simulation configured by MAX
-  - AI = noise*AO
-  - AI = simulate electron waveguide (https://github.com/levylabpitt/Multichannel-Lockin#simulation-mode)
-    - AO1 = source voltage
-    - AO2 = gate voltage
-    - AI1  = drain current
-</Release_Notes>
+      <Release_Notes>- Build with Instrument Framework v1.5.16</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -347,7 +315,7 @@
         <Path>..\src\Multichannel Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F3C6197915334DB7E3AB88AA2EEC2374</GUID>
+      <GUID>BAA891F8B4E8B0C9802CE25B3811B32E</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -396,7 +364,7 @@
         <Path>..\src\Examples\Example_Lockin.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>A4CBE5BC8CDE77F998E887489B029C6E</GUID>
+      <GUID>49834C591AF049662BD4861A561780A1</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1005,7 +973,7 @@
         <Path>..\src\Instrument.Lockin\API\setAIDAQ.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>5AF843F4A8FC54602C59B341F33527A9</GUID>
+      <GUID>731D44CE6DDA2DC239451F1F036A0433</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
