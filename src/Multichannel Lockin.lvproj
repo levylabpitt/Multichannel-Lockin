@@ -14,11 +14,11 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="build support" Type="Folder">
-			<Item Name="Post-Build Custom Action.vi" Type="VI" URL="../../build support/Post-Build Custom Action.vi"/>
 			<Item Name="Lockin-Multichannel.ico" Type="Document" URL="../../build support/Lockin-Multichannel.ico"/>
 			<Item Name="Multichannel Lockin.vipb" Type="Document" URL="../../build support/Multichannel Lockin.vipb"/>
 			<Item Name="Multichannel Lockin.vipc" Type="Document" URL="../../build support/Multichannel Lockin.vipc"/>
-			<Item Name="Post Build.vi" Type="VI" URL="../../build support/Post Build.vi"/>
+			<Item Name="Post-Build Custom Action.vi" Type="VI" URL="../../build support/Post-Build Custom Action.vi"/>
+			<Item Name="Manual Post Build.vi" Type="VI" URL="../../build support/Manual Post Build.vi"/>
 		</Item>
 		<Item Name="Examples" Type="Folder">
 			<Item Name="Example_IV_Curves.vi" Type="VI" URL="../Examples/Example_IV_Curves.vi"/>
@@ -1496,7 +1496,6 @@
 			<Item Name="nilvaiu.dll" Type="Document" URL="nilvaiu.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="CheckWavenameLength.vi" Type="VI" URL="/../../user/patrick/git/LV-to-ITX/.src/util/CheckWavenameLength.vi"/>
 			<Item Name="mxLvBuildError.ctl" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/mxLvBuildError.ctl"/>
 			<Item Name="provcom_ProgressBar_Events.ctl" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_ProgressBar_Events.ctl"/>
 			<Item Name="GetSymbols.vi" Type="VI" URL="/&lt;resource&gt;/plugins/Utility/IfDef.llb/GetSymbols.vi"/>
@@ -1716,6 +1715,7 @@
 			<Item Name="LV Config Read Color.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read Color.vi"/>
 			<Item Name="NIMdf.dll" Type="Document" URL="../../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/applibs/distkit/MDF/NIMdf.dll"/>
 			<Item Name="CDK_Utility_Recurse_Folder.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Builds/Installer/CDK_Utility_Recurse_Folder.vi"/>
+			<Item Name="CheckWavenameLength.vi" Type="VI" URL="/../../user/patrick/git/LV-to-ITX/.src/util/CheckWavenameLength.vi"/>
 			<Item Name="CheckWavenameLength.vi" Type="VI" URL="../../../../user/patrick/git/LV-to-ITX/.src/util/CheckWavenameLength.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
@@ -1733,10 +1733,10 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{BE714A7E-B7D4-4888-A1F2-966F210EC573}</Property>
-				<Property Name="Bld_version.build" Type="Int">31</Property>
+				<Property Name="Bld_version.build" Type="Int">33</Property>
 				<Property Name="Bld_version.major" Type="Int">2</Property>
 				<Property Name="Bld_version.minor" Type="Int">11</Property>
-				<Property Name="Bld_version.patch" Type="Int">5</Property>
+				<Property Name="Bld_version.patch" Type="Int">7</Property>
 				<Property Name="Destination[0].destName" Type="Str">Multichannel Lockin.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/Application/NI_AB_PROJECTNAME.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
@@ -1745,7 +1745,7 @@
 				<Property Name="Destination[1].path" Type="Path">../builds/Application/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/build support/Lockin-Multichannel.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{066F3CA9-2393-4958-88CA-8983A5753224}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{6926F03A-EC37-442A-8AB0-FFBF8F5D8D5D}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Instrument.Lockin.lvclass/Multichannel Lockin.vi</Property>
@@ -1771,24 +1771,67 @@
 				<Property Name="Destination[1].type" Type="Str">userFolder</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="DistPart[0].flavorID" Type="Str">DefaultFull</Property>
-				<Property Name="DistPart[0].productID" Type="Str">{E60B4861-89AB-4E60-96C2-93AB25CC9AE4}</Property>
-				<Property Name="DistPart[0].productName" Type="Str">NI Distributed System Manager 2019</Property>
-				<Property Name="DistPart[0].upgradeCode" Type="Str">{CEF5E531-69E2-461E-8628-0998E4DD0317}</Property>
+				<Property Name="DistPart[0].productID" Type="Str">{84A14A37-121A-4BAF-B2D5-4A807910A22F}</Property>
+				<Property Name="DistPart[0].productName" Type="Str">NI Distributed System Manager 2016</Property>
+				<Property Name="DistPart[0].upgradeCode" Type="Str">{AE3BDC39-5362-47B3-866A-80CC36690478}</Property>
 				<Property Name="DistPart[1].flavorID" Type="Str">DefaultFull</Property>
-				<Property Name="DistPart[1].productID" Type="Str">{0A544682-7390-49DD-8471-7F65403AD302}</Property>
-				<Property Name="DistPart[1].productName" Type="Str">NI System Configuration Runtime 20.0.0</Property>
+				<Property Name="DistPart[1].productID" Type="Str">{BBF5CDD9-BBA7-4B7F-BC45-166399B6DDFC}</Property>
+				<Property Name="DistPart[1].productName" Type="Str">NI System Configuration Runtime 19.5.0</Property>
 				<Property Name="DistPart[1].upgradeCode" Type="Str">{0E192465-CC28-4C84-BE81-710B71C595A3}</Property>
 				<Property Name="DistPart[2].flavorID" Type="Str">DefaultFull</Property>
-				<Property Name="DistPart[2].productID" Type="Str">{E7491C92-6FEB-4CD1-8F74-1C6909D1FBAD}</Property>
+				<Property Name="DistPart[2].productID" Type="Str">{FA0DB08E-BC18-4194-9ADC-026B7C8D5CEA}</Property>
 				<Property Name="DistPart[2].productName" Type="Str">NI Variable Engine 2019</Property>
 				<Property Name="DistPart[2].upgradeCode" Type="Str">{EB7A3C81-1C0F-4495-8CE5-0A427E4E6285}</Property>
 				<Property Name="DistPart[3].flavorID" Type="Str">_full_</Property>
-				<Property Name="DistPart[3].productID" Type="Str">{175DA080-55C0-420A-B44D-780B8D4E6AA8}</Property>
-				<Property Name="DistPart[3].productName" Type="Str">NI-DAQmx Runtime 19.5</Property>
+				<Property Name="DistPart[3].productID" Type="Str">{5FD5066E-48F9-4CD6-A2E5-2B3C08CF51F0}</Property>
+				<Property Name="DistPart[3].productName" Type="Str">NI-DAQmx Runtime 19.6</Property>
 				<Property Name="DistPart[3].upgradeCode" Type="Str">{923C9CD5-A0D8-4147-9A8D-998780E30763}</Property>
-				<Property Name="DistPart[4].flavorID" Type="Str"></Property>
-				<Property Name="DistPart[4].productID" Type="Str"></Property>
-				<Property Name="DistPart[4].productName" Type="Str">NI LabVIEW Run-Time Engine 2016</Property>
+				<Property Name="DistPart[4].flavorID" Type="Str">DefaultFull</Property>
+				<Property Name="DistPart[4].productID" Type="Str">{7683E40C-81DF-43DC-BA19-872415406967}</Property>
+				<Property Name="DistPart[4].productName" Type="Str">NI LabVIEW Runtime 2016 f5</Property>
+				<Property Name="DistPart[4].SoftDep[0].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[4].SoftDep[0].productName" Type="Str">NI LabVIEW Runtime 2016 Non-English Support.</Property>
+				<Property Name="DistPart[4].SoftDep[0].upgradeCode" Type="Str">{72AEEB03-DF6A-4C90-B44E-22B1E74CF14F}</Property>
+				<Property Name="DistPart[4].SoftDep[1].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[4].SoftDep[1].productName" Type="Str">NI ActiveX Container</Property>
+				<Property Name="DistPart[4].SoftDep[1].upgradeCode" Type="Str">{1038A887-23E1-4289-B0BD-0C4B83C6BA21}</Property>
+				<Property Name="DistPart[4].SoftDep[10].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[4].SoftDep[10].productName" Type="Str">NI VC2015 Runtime</Property>
+				<Property Name="DistPart[4].SoftDep[10].upgradeCode" Type="Str">{D42E7BAE-6589-4570-B6A3-3E28889392E7}</Property>
+				<Property Name="DistPart[4].SoftDep[11].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[4].SoftDep[11].productName" Type="Str">NI mDNS Responder 17.0</Property>
+				<Property Name="DistPart[4].SoftDep[11].upgradeCode" Type="Str">{9607874B-4BB3-42CB-B450-A2F5EF60BA3B}</Property>
+				<Property Name="DistPart[4].SoftDep[12].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[4].SoftDep[12].productName" Type="Str">NI Deployment Framework 2017</Property>
+				<Property Name="DistPart[4].SoftDep[12].upgradeCode" Type="Str">{838942E4-B73C-492E-81A3-AA1E291FD0DC}</Property>
+				<Property Name="DistPart[4].SoftDep[13].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[4].SoftDep[13].productName" Type="Str">NI Error Reporting 2017</Property>
+				<Property Name="DistPart[4].SoftDep[13].upgradeCode" Type="Str">{42E818C6-2B08-4DE7-BD91-B0FD704C119A}</Property>
+				<Property Name="DistPart[4].SoftDep[2].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[4].SoftDep[2].productName" Type="Str">NI System Web Server 16.0</Property>
+				<Property Name="DistPart[4].SoftDep[2].upgradeCode" Type="Str">{FCF64B73-B7D4-4971-8F11-24BAF7CC3E6C}</Property>
+				<Property Name="DistPart[4].SoftDep[3].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[4].SoftDep[3].productName" Type="Str">Math Kernel Libraries</Property>
+				<Property Name="DistPart[4].SoftDep[3].upgradeCode" Type="Str">{F34FFCA8-C4CB-47CC-8B81-C4E95E227355}</Property>
+				<Property Name="DistPart[4].SoftDep[4].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[4].SoftDep[4].productName" Type="Str">NI Logos 5.9</Property>
+				<Property Name="DistPart[4].SoftDep[4].upgradeCode" Type="Str">{5E4A4CE3-4D06-11D4-8B22-006008C16337}</Property>
+				<Property Name="DistPart[4].SoftDep[5].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[4].SoftDep[5].productName" Type="Str">NI TDM Streaming 17.0</Property>
+				<Property Name="DistPart[4].SoftDep[5].upgradeCode" Type="Str">{4CD11BE6-6BB7-4082-8A27-C13771BC309B}</Property>
+				<Property Name="DistPart[4].SoftDep[6].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[4].SoftDep[6].productName" Type="Str">NI LabVIEW Web Server 2016</Property>
+				<Property Name="DistPart[4].SoftDep[6].upgradeCode" Type="Str">{6A61A967-C04E-47A1-8D08-DF27332A78AB}</Property>
+				<Property Name="DistPart[4].SoftDep[7].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[4].SoftDep[7].productName" Type="Str">NI LabVIEW Real-Time NBFifo 2016</Property>
+				<Property Name="DistPart[4].SoftDep[7].upgradeCode" Type="Str">{718F68F2-14F0-4656-A29E-617F12A7343B}</Property>
+				<Property Name="DistPart[4].SoftDep[8].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[4].SoftDep[8].productName" Type="Str">NI VC2008MSMs</Property>
+				<Property Name="DistPart[4].SoftDep[8].upgradeCode" Type="Str">{FDA3F8BB-BAA9-45D7-8DC7-22E1F5C76315}</Property>
+				<Property Name="DistPart[4].SoftDep[9].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[4].SoftDep[9].productName" Type="Str">NI VC2010MSMs</Property>
+				<Property Name="DistPart[4].SoftDep[9].upgradeCode" Type="Str">{EFBA6F9E-F934-4BD7-AC51-60CCA480489C}</Property>
+				<Property Name="DistPart[4].SoftDepCount" Type="Int">14</Property>
 				<Property Name="DistPart[4].upgradeCode" Type="Str">{E7DBF016-365A-40B6-9526-B4D0B4830F51}</Property>
 				<Property Name="DistPartCount" Type="Int">5</Property>
 				<Property Name="INST_author" Type="Str">University of Pittsburgh</Property>
@@ -1798,9 +1841,9 @@
 				<Property Name="INST_defaultDir" Type="Str">{A127CC0D-3099-41C3-8104-2245C476C6E9}</Property>
 				<Property Name="INST_installerName" Type="Str">setup.exe</Property>
 				<Property Name="INST_productName" Type="Str">Multichannel Lockin</Property>
-				<Property Name="INST_productVersion" Type="Str">2.11.4</Property>
+				<Property Name="INST_productVersion" Type="Str">2.11.7</Property>
 				<Property Name="InstSpecBitness" Type="Str">32-bit</Property>
-				<Property Name="InstSpecVersion" Type="Str">16000000</Property>
+				<Property Name="InstSpecVersion" Type="Str">16008024</Property>
 				<Property Name="MSI_arpCompany" Type="Str">University of Pittsburgh</Property>
 				<Property Name="MSI_arpContact" Type="Str">Patrick Irvin</Property>
 				<Property Name="MSI_arpURL" Type="Str">levylab.org</Property>
