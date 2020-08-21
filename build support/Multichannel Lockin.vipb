@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-08-20 17:05:46" Creator="Patrick Irvin" Comments="" ID="ce677df74e9832651e3810daddc97fcd">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-08-21 14:52:12" Creator="Patrick Irvin" Comments="" ID="f420682c8ac9178838b27dc728d11ba0">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.11.7.34</Library_Version>
+    <Library_Version>2.11.7.36</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -105,9 +105,7 @@
       <URL/>
       <Release_Notes>[2.11.7]
 - Build with Instrument Framework v1.5.17
-- Build for LV 2016
-- Note: This release includes only the LabVIEW API, not the lockin application.
-- To get the lockin application, go to: https://github.com/levylabpitt/Multichannel-Lockin/releases/latest</Release_Notes>
+- Build for LV 2016</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -198,45 +196,6 @@
         <Namespace_Type>Prefix</Namespace_Type>
         <Namespace/>
       </Namespace_Overrides>
-      <Exclusions>
-        <Path>Instrument.Lockin/API (Class)</Path>
-      </Exclusions>
-      <Exclusions>
-        <Path>Instrument.Lockin/DAQ-private</Path>
-      </Exclusions>
-      <Exclusions>
-        <Path>Instrument.Lockin/DAQ-public</Path>
-      </Exclusions>
-      <Exclusions>
-        <Path>Instrument.Lockin/Overrides</Path>
-      </Exclusions>
-      <Exclusions>
-        <Path>Instrument.Lockin/Private</Path>
-      </Exclusions>
-      <Exclusions>
-        <Path>Instrument.Lockin/Typedefs</Path>
-      </Exclusions>
-      <Exclusions>
-        <Path>Instrument.Lockinl.UI</Path>
-      </Exclusions>
-      <Exclusions>
-        <Path>LockinDAQ</Path>
-      </Exclusions>
-      <Exclusions>
-        <Path>Multichannel Lockin.lvproj</Path>
-      </Exclusions>
-      <Exclusions>
-        <Path>Multichannel Lockin.vi</Path>
-      </Exclusions>
-      <Exclusions>
-        <Path>Instrument.Lockin/Process.vi</Path>
-      </Exclusions>
-      <Exclusions>
-        <Path>Instrument.Lockin/Instrument.Lockin.TestLauncher.vi</Path>
-      </Exclusions>
-      <Exclusions>
-        <Path>Instrument.Lockin/Instrument.Lockin.lvclass</Path>
-      </Exclusions>
     </Source_Files>
     <License_Agreement_Filepath>..\LICENSE</License_Agreement_Filepath>
     <Licensing_and_Activation>
@@ -336,7 +295,7 @@
         <Path>..\src\Instrument.Lockin\API</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>273B0227385C9E7F8852ADA17C4A0D4E</GUID>
+      <GUID>D1B02445A37DFBE3527380C48F38D9F7</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -945,7 +904,7 @@
         <Path>..\src\Instrument.Lockin\API\setAIDAQ.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>69552EB33C25DCD9C6614B071442D58D</GUID>
+      <GUID>3C2862E28A921B54C280A9D0D27C8185</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
