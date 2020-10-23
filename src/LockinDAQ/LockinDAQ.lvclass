@@ -1252,11 +1252,11 @@
 		<Item Name="Lockin Engine.vi" Type="VI" URL="../DAQ/Lockin Engine.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!,2!!!!'A!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!%E"5!!9+6'FN:3"4&gt;'&amp;N=!!!"1!+!!!71%!!!@````]!"1FQ98*B&lt;76U:8)!$E"!!!(`````!!5"?!!+!&amp;!!!A!'!!=!&amp;E"!!!(`````!!A*7#"3:8.V&lt;(2T!!Z!1!!"`````Q!&amp;!8E!#A"1!!)!"A!+!":!1!!"`````Q!,#6EA5G6T&gt;7RU=Q"3!0%!!!!!!!!!!B&amp;-&lt;W.L;7Z%16%O&lt;(:D&lt;'&amp;T=RF4&gt;W6F=&amp;*F=X6M&gt;(-N,5.M&gt;8.U:8)O9X2M!"Z!5!!$!!1!#1!-$&amp;.X:76Q5G6T&gt;7RU=Q!!$5!+!!&gt;/&gt;7VF=GFD!"B!1!!#``````````]!$A&gt;3:8.V&lt;(2T!'%!]1!!!!!!!!!#%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T&amp;&amp;*F=X6M&gt;(-N,5.M&gt;8.U:8)O9X2M!$*!5!!#!!1!$S."&gt;G6S97&gt;F:#"3:8.V&lt;(2T)#B9,&amp;EM5CR5;'6U93R.:7&amp;O+1!K1(!!(A!!%R&amp;-&lt;W.L;7Z%16%O&lt;(:D&lt;'&amp;T=Q!.4'^D;WFO2%&amp;2)'^V&gt;!!%!!!!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!31&amp;1!!QJT;7&gt;O97QA&lt;X6U!!!;1%!!!@````]!&amp;!V3259A6W&amp;W:7:P=GVT!""!6!!$#&amp;&gt;B&gt;G6G&lt;X*N!!!;1%!!!@````]!&amp;AR"33"898:F:G^S&lt;8-!!#:!=!!?!!!4%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T!!F-&lt;W.L;7Z%16%!91$Q!!Q!!Q!.!"!!%1!3!")!%A!3!"-!&amp;1!8!"A$!!"Y!!!*!!!!#1!!!!E!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!A!!!))!!!##!!!!!A!!!U!!!!-!!!!!!!!!!!!!!%!'1!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">16777216</Property>
 			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-			<Property Name="NI.ClassItem.State" Type="Int">1107821074</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1342714386</Property>
 		</Item>
 		<Item Name="LockinDAQ.Simulate Waveguide.vi" Type="VI" URL="../DAQ/LockinDAQ.Simulate Waveguide.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!(@!!!!%1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!"*!6!!$#H.J:WZB&lt;#"P&gt;81!!"*!1!!"`````Q!&amp;"5&amp;*)&amp;N&gt;!#J!=!!?!!!4%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T!!V-&lt;W.L;7Z%16%A&lt;X6U!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!%U!$!!V7=W^V=G.F)%FO:'6Y!!^!!Q!*6H.H)%FO:'6Y!!F!!Q!#6CM!!!F!!Q!#6CU!!&amp;M!]1!!!!!!!!!#%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T(&amp;&gt;B&gt;G6H&gt;7FE:3".&lt;W2F&lt;#UN1WRV=X2F=CZD&gt;'Q!*%"1!!1!#1!+!!M!$"&amp;898:F:X6J:'5A1WRV=X2F=A!31%!!!@````]!"16"4S"&lt;81!G1(!!(A!!%R&amp;-&lt;W.L;7Z%16%O&lt;(:D&lt;'&amp;T=Q!*4'^D;WFO2%&amp;2!'%!]!!-!!-!"!!'!!=!"!!%!!1!"!!)!!U!$A!0!Q!!?!!!$1A!!!!!!!!.#A!!$1M!!!!!!!!!!!!!!!!!!!!!!!!)!!!!#!!!!AI!!!!)!!!.!!!!$!!!!!!!!!!!!!!"!"!!!!!!</Property>
@@ -1466,9 +1466,9 @@
 			<Property Name="NI.ClassItem.State" Type="Int">1107821072</Property>
 		</Item>
 		<Item Name="PLL_PID.vi" Type="VI" URL="../DAQ/PLL_PID.vi">
-			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!#E!!!!"A!%!!!!%U!+!!RQ;'&amp;T:3"P&gt;82Q&gt;81!!"&gt;!#A!1:H*F=86F&lt;G.Z)'^V&gt;("V&gt;!!!$E"5!!-'5E6')&amp;N&gt;!!!-1&amp;1!!Q6"4S"&lt;81"5!0!!$!!!!!%!!A!!!!!!!!!!!!!!!!!$!!1!!!-!!(A!!!!!!!!*!!!!#1!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!A!!!!)!!!!!!!!!!!"!!5!!!!!</Property>
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;K!!!!$1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!&amp;U!+!""Q;'&amp;T:3"P&gt;82Q&gt;81A+,!J!!!&lt;1!I!&amp;7:S:8&amp;V:7ZD?3"P&gt;82Q&gt;81A+%B[+1!K1(!!(A!!%R&amp;-&lt;W.L;7Z%16%O&lt;(:D&lt;'&amp;T=Q!.4'^D;WFO2%&amp;2)'^V&gt;!!%!!!!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!/1&amp;1!!Q:3259A7VU!!!R!6!!$"5&amp;0)&amp;N&gt;!#J!=!!?!!!4%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T!!R-&lt;W.L;7Z%16%A;7Y!!'%!]!!-!!-!"!!&amp;!!9!"Q!(!!=!"Q!)!!E!#A!,!Q!!?!!!#1!!!!E!!!!*!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!+!!!!#!!!!!I!!!!)!!!.!!!!$!!!!!!!!!!!!!!"!!Q!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">1073742080</Property>
 			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
@@ -1533,6 +1533,15 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1350574610</Property>
 		</Item>
+		<Item Name="Test PLL.vi" Type="VI" URL="../Tests/Test PLL.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%?!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#J!=!!?!!!4%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T!!V-&lt;W.L;7Z%16%A&lt;X6U!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!+E"Q!"Y!!"-24'^D;WFO2%&amp;2,GRW9WRB=X-!$%RP9WNJ&lt;E2"53"J&lt;A!!91$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!%!!=$!!"Y!!!.#!!!!!!!!!!!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!!!!!!")!!!U!!!!-!!!!!!!!!!!!!!%!#!!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1342710290</Property>
+		</Item>
 	</Item>
 	<Item Name="Waveguide Model" Type="Folder">
 		<Item Name="Waveguide Model.vi" Type="VI" URL="../Waveguide Model/Waveguide Model.vi">
@@ -1572,14 +1581,5 @@
 		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 		<Property Name="NI.ClassItem.State" Type="Int">1082143248</Property>
-	</Item>
-	<Item Name="Test PLL.vi" Type="VI" URL="../Tests/Test PLL.vi">
-		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%?!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#J!=!!?!!!4%5RP9WNJ&lt;E2"53ZM&gt;G.M98.T!!V-&lt;W.L;7Z%16%A&lt;X6U!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!+E"Q!"Y!!"-24'^D;WFO2%&amp;2,GRW9WRB=X-!$%RP9WNJ&lt;E2"53"J&lt;A!!91$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!%!!=$!!"Y!!!.#!!!!!!!!!!!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!!!!!!")!!!U!!!!-!!!!!!!!!!!!!!%!#!!!!!!</Property>
-		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-		<Property Name="NI.ClassItem.Flags" Type="Int">256</Property>
-		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
-		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
-		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-		<Property Name="NI.ClassItem.State" Type="Int">1342972432</Property>
 	</Item>
 </LVClass>
