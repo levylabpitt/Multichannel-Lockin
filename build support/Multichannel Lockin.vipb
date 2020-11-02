@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-10-24 14:05:53" Creator="Patrick Irvin" Comments="" ID="c1375ce56ecf1cf6cae2264576ed28d8">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-11-02 13:03:32" Creator="Patrick Irvin" Comments="" ID="150cb8734747bfb6d6eb4bf08fe95862">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.11.8.41</Library_Version>
+    <Library_Version>2.11.9.42</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -112,10 +112,8 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.11.8]
-- Build with Instrument Framework v1.6.0 (should enable cross-LV communication)
-- Disable automatic LP filter when Max Fs is chosen
-- Update pallete icon</Release_Notes>
+      <Release_Notes>[2.11.9]
+- Bug fix AO/AI Loop parallelism configuration</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -305,7 +303,7 @@
         <Path>..\src\Instrument.Lockin\API</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F9CB9E09A009FB18D93DDAE01482FA49</GUID>
+      <GUID>79E708669DC3FC1FACDFBC4F96C030F9</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -914,7 +912,7 @@
         <Path>..\src\Instrument.Lockin\API\setAIDAQ.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>56046B53F7FD646F34F9F2BD8F72D0FE</GUID>
+      <GUID>AB588D15FC3AC787CCA1072DB73F0E06</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
