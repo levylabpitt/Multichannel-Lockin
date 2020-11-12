@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-11-02 13:03:32" Creator="Patrick Irvin" Comments="" ID="150cb8734747bfb6d6eb4bf08fe95862">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-11-12 13:38:50" Creator="Patrick Irvin" Comments="" ID="c50786fc351140dd243c0295e7f7a314">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.11.9.42</Library_Version>
+    <Library_Version>2.11.10.44</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -26,10 +26,10 @@
       <External_Dependencies>labview-zmq &gt;= 3.5.1.109</External_Dependencies>
       <External_Dependencies>lava_lib_ui_tools &gt;= 1.4.1.74</External_Dependencies>
       <External_Dependencies>levylab_lib_control_vi &gt;= 1.3.0.11</External_Dependencies>
-      <External_Dependencies>levylab_lib_fileutilities &gt;= 1.2.5.12</External_Dependencies>
+      <External_Dependencies>levylab_lib_fileutilities &gt;= 1.2.6.13</External_Dependencies>
       <External_Dependencies>levylab_lib_graph_utilities &gt;= 2.1.2.4</External_Dependencies>
-      <External_Dependencies>levylab_lib_lvtoitx &gt;= 3.0.4.11</External_Dependencies>
-      <External_Dependencies>levylab_lib_postgresql &gt;= 1.0.1.3</External_Dependencies>
+      <External_Dependencies>levylab_lib_lvtoitx &gt;= 3.0.5.13</External_Dependencies>
+      <External_Dependencies>levylab_lib_postgresql &gt;= 1.1.2.6</External_Dependencies>
       <External_Dependencies>levylab_lib_voltage_update &gt;= 1.0.3.5</External_Dependencies>
       <External_Dependencies>levylab_lib_xy_utilities &gt;= 1.2.0.12</External_Dependencies>
       <External_Dependencies>mgi_lib_application_control &gt;= 1.1.1.10</External_Dependencies>
@@ -66,10 +66,10 @@
       <Direct_Dependencies>labview-zmq-3.5.1.109</Direct_Dependencies>
       <Direct_Dependencies>lava_lib_ui_tools-1.4.1.74</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_control_vi-1.3.0.11</Direct_Dependencies>
-      <Direct_Dependencies>levylab_lib_fileutilities-1.2.5.12</Direct_Dependencies>
+      <Direct_Dependencies>levylab_lib_fileutilities-1.2.6.13</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_graph_utilities-2.1.2.4</Direct_Dependencies>
-      <Direct_Dependencies>levylab_lib_lvtoitx-3.0.4.11</Direct_Dependencies>
-      <Direct_Dependencies>levylab_lib_postgresql-1.0.1.3</Direct_Dependencies>
+      <Direct_Dependencies>levylab_lib_lvtoitx-3.0.5.13</Direct_Dependencies>
+      <Direct_Dependencies>levylab_lib_postgresql-1.1.2.6</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_voltage_update-1.0.3.5</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_xy_utilities-1.2.0.12</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_application_control-1.1.1.10</Direct_Dependencies>
@@ -112,8 +112,8 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.11.9]
-- Bug fix AO/AI Loop parallelism configuration</Release_Notes>
+      <Release_Notes>[2.11.10]
+- Bug fix Issue #33 Sweep mode</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -303,7 +303,7 @@
         <Path>..\src\Instrument.Lockin\API</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>79E708669DC3FC1FACDFBC4F96C030F9</GUID>
+      <GUID>39D2451AE87B13526FB241EDF01CBD9D</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -912,7 +912,7 @@
         <Path>..\src\Instrument.Lockin\API\setAIDAQ.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>AB588D15FC3AC787CCA1072DB73F0E06</GUID>
+      <GUID>7695B6ACCE0D36D9201BEC0666FF475B</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
