@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-12-01 13:45:44" Creator="Patrick Irvin" Comments="" ID="d2a48a21f1592d1e028b0ab377ecc64a">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-12-02 12:56:46" Creator="Patrick Irvin" Comments="" ID="f8bd8b2fd25484e895e166f552b5c735">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.12.0.45</Library_Version>
+    <Library_Version>2.12.0.46</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -113,7 +113,7 @@
       <Packager>Patrick Irvin</Packager>
       <URL/>
       <Release_Notes>[2.12.0]
-- Updaed to work with multiple PXI chassis
+- Updated to work with multiple PXI chassis
 - Update DAQ control
 - Auto populate DAQ control with all 44xx devices configured in MAX
 - Add calibration methods (check and set)
@@ -307,7 +307,7 @@
         <Path>..\src\Instrument.Lockin\API</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>033BDAF74C65C6AE46B2FA114B704420</GUID>
+      <GUID>D87C33A3D9C3861335349D3DCB9B316E</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -902,7 +902,7 @@
         <Path>..\src\Instrument.Lockin\API\setDAQ.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>7B279B557127D402E086B1A4A2B7BDEA</GUID>
+      <GUID>2D0B5CF834C8889ADD08D715BA1F0C6E</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
