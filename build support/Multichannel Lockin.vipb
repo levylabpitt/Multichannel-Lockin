@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-12-16 10:26:10" Creator="Patrick Irvin" Comments="" ID="665f7ac5f003ffbf288303dfdf1e8a3f">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-12-16 18:57:59" Creator="Patrick Irvin" Comments="" ID="c719e7b1502bc10009adad54ecc5691f">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.12.1.49</Library_Version>
+    <Library_Version>2.12.1.50</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -115,7 +115,8 @@
       <Release_Notes>[2.12.1]
 - Update to Instrument Framework v1.7 (fixes missing LevyLab.lvclass issue)
 - Change the way Lockin Engine handles waveform arrays (applies low pass filter to interleved X and Y channels rather than parallel low pass filters)
-- Lockin Engine organized into subVIs</Release_Notes>
+- Lockin Engine organized into subVIs
+- fix Sweep issue</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -305,7 +306,7 @@
         <Path>..\src\Instrument.Lockin\API</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>88D9A89F595EC825EED2D32D760C4D69</GUID>
+      <GUID>07471486A3FFF8C7872A953FAE904EB3</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -900,7 +901,7 @@
         <Path>..\src\Instrument.Lockin\API\setDAQ.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>C7CE7DBFAF2BCFA7617AB4122B1677D9</GUID>
+      <GUID>C1B0402764C855982CF85741A55968E0</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
