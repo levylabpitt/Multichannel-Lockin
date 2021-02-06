@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2020-12-16 18:57:59" Creator="Patrick Irvin" Comments="" ID="c719e7b1502bc10009adad54ecc5691f">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2021-02-06 10:51:40" Creator="Patrick Irvin" Comments="" ID="911496539f73729871aaa6259e116267">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.12.1.50</Library_Version>
+    <Library_Version>2.13.0.51</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -29,9 +29,9 @@
       <External_Dependencies>levylab_lib_fileutilities &gt;= 1.2.6.13</External_Dependencies>
       <External_Dependencies>levylab_lib_graph_utilities &gt;= 2.1.2.4</External_Dependencies>
       <External_Dependencies>levylab_lib_lvtoitx &gt;= 3.0.5.13</External_Dependencies>
-      <External_Dependencies>levylab_lib_postgresql &gt;= 1.2.2.14</External_Dependencies>
+      <External_Dependencies>levylab_lib_postgresql &gt;= 1.2.3.16</External_Dependencies>
       <External_Dependencies>levylab_lib_voltage_update &gt;= 1.0.3.5</External_Dependencies>
-      <External_Dependencies>levylab_lib_xy_utilities &gt;= 1.2.0.12</External_Dependencies>
+      <External_Dependencies>levylab_lib_xy_utilities &gt;= 1.3.2.16</External_Dependencies>
       <External_Dependencies>mgi_lib_application_control &gt;= 1.1.1.10</External_Dependencies>
       <External_Dependencies>mgi_lib_cluster &gt;= 1.1.0.1</External_Dependencies>
       <External_Dependencies>mgi_lib_error_handling &gt;= 1.1.1.3</External_Dependencies>
@@ -49,14 +49,14 @@
       <External_Dependencies>oglib_dictionary &gt;= 4.0.0.4</External_Dependencies>
       <External_Dependencies>oglib_error &gt;= 4.2.0.23</External_Dependencies>
       <External_Dependencies>oglib_file &gt;= 4.0.1.22</External_Dependencies>
-      <External_Dependencies>oglib_lvdata &gt;= 4.2.0.21</External_Dependencies>
+      <External_Dependencies>oglib_lvdata &gt;= 5.0.0.27</External_Dependencies>
       <External_Dependencies>oglib_lvzip &gt;= 4.0.1</External_Dependencies>
       <External_Dependencies>oglib_numeric &gt;= 4.1.0.8</External_Dependencies>
-      <External_Dependencies>oglib_string &gt;= 4.1.0.12</External_Dependencies>
+      <External_Dependencies>oglib_string &gt;= 5.0.0.25</External_Dependencies>
       <External_Dependencies>oglib_time &gt;= 4.0.1.3</External_Dependencies>
       <External_Dependencies>oglib_variantconfig &gt;= 4.0.0.5</External_Dependencies>
       <External_Dependencies>wireflow_ab_lib_wf_progressbar &gt;= 1.0.2.56</External_Dependencies>
-      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.7.0.95</Additional_External_Dependencies>
+      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.8.1.97</Additional_External_Dependencies>
       <Direct_Dependencies>jdp_science_postgresql-0.1.1.10</Direct_Dependencies>
       <Direct_Dependencies>jki_lib_json_serialization-1.1.10.37</Direct_Dependencies>
       <Direct_Dependencies>jki_lib_serialization-1.0.1.14</Direct_Dependencies>
@@ -69,9 +69,9 @@
       <Direct_Dependencies>levylab_lib_fileutilities-1.2.6.13</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_graph_utilities-2.1.2.4</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_lvtoitx-3.0.5.13</Direct_Dependencies>
-      <Direct_Dependencies>levylab_lib_postgresql-1.2.2.14</Direct_Dependencies>
+      <Direct_Dependencies>levylab_lib_postgresql-1.2.3.16</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_voltage_update-1.0.3.5</Direct_Dependencies>
-      <Direct_Dependencies>levylab_lib_xy_utilities-1.2.0.12</Direct_Dependencies>
+      <Direct_Dependencies>levylab_lib_xy_utilities-1.3.2.16</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_application_control-1.1.1.10</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_cluster-1.1.0.1</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_error_handling-1.1.1.3</Direct_Dependencies>
@@ -89,10 +89,10 @@
       <Direct_Dependencies>oglib_dictionary-4.0.0.4</Direct_Dependencies>
       <Direct_Dependencies>oglib_error-4.2.0.23</Direct_Dependencies>
       <Direct_Dependencies>oglib_file-4.0.1.22</Direct_Dependencies>
-      <Direct_Dependencies>oglib_lvdata-4.2.0.21</Direct_Dependencies>
+      <Direct_Dependencies>oglib_lvdata-5.0.0.27</Direct_Dependencies>
       <Direct_Dependencies>oglib_lvzip-4.0.1-1</Direct_Dependencies>
       <Direct_Dependencies>oglib_numeric-4.1.0.8</Direct_Dependencies>
-      <Direct_Dependencies>oglib_string-4.1.0.12</Direct_Dependencies>
+      <Direct_Dependencies>oglib_string-5.0.0.25</Direct_Dependencies>
       <Direct_Dependencies>oglib_time-4.0.1.3</Direct_Dependencies>
       <Direct_Dependencies>oglib_variantconfig-4.0.0.5</Direct_Dependencies>
       <Direct_Dependencies>wireflow_ab_lib_wf_progressbar-1.0.2.56</Direct_Dependencies>
@@ -112,11 +112,9 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.12.1]
-- Update to Instrument Framework v1.7 (fixes missing LevyLab.lvclass issue)
-- Change the way Lockin Engine handles waveform arrays (applies low pass filter to interleved X and Y channels rather than parallel low pass filters)
-- Lockin Engine organized into subVIs
-- fix Sweep issue</Release_Notes>
+      <Release_Notes>[2.13.0]
+- Add Measure/Remove Offset API
+- Instrument Framework v1.8.1</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -306,7 +304,7 @@
         <Path>..\src\Instrument.Lockin\API</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>07471486A3FFF8C7872A953FAE904EB3</GUID>
+      <GUID>588CBB1DC11B1F641D38A445FA39B3AF</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -894,14 +892,28 @@
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>4</Row>
+          <Row>5</Row>
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\Instrument.Lockin\API\setDAQ.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>C1B0402764C855982CF85741A55968E0</GUID>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>Offset.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>4</Row>
+          <Column>1</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\Offset.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <GUID>29F8463AB169587411FA7423FC468FAC</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
