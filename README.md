@@ -47,7 +47,7 @@ A demodulated lockin signal can also be routed to another analog output.
 
 ## Simulation Mode
 
-If the lockin is configured to use simulated DAQ hardware, the lockin operates "simulation mode".
+If the lockin is configured to use simulated DAQ hardware, the lockin operates in "simulation mode".
 
 Simulated hardware can be configured in [NI MAX](http://www.ni.com/tutorial/3698/en/). 
 
