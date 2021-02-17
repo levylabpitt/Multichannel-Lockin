@@ -595,3 +595,4 @@ builds/7z Install/7zip.bat
 /builds/*
 /*.aliases
 >>>>>>> Instrument_Remote
+.DS_Store

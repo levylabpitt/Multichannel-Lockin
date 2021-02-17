@@ -1,0 +1,9 @@
+{
+  "name":"Multichannel Lockin",
+  "labview-version":"2016",
+  "labview-bitness":"32-bit",
+  "lv-venv":"",
+  "main-project":"Multichannel Lockin.lvproj",
+  "main-vipc":"../build support/Multichannel Lockin.vipc",
+  "main-vipb":"../build support/Multichannel Lockin.vipb"
+}

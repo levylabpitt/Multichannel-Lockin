@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2021-02-08 15:40:52" Creator="Patrick Irvin" Comments="" ID="04e6c85cd1bec5aea814c91e073f3ff8">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2021-02-15 14:04:55" Creator="Patrick Irvin" Comments="" ID="59af7952a245c48776b094cba1f7bab2">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
     <Library_Version>2.13.1.52</Library_Version>
@@ -56,7 +56,6 @@
       <External_Dependencies>oglib_time &gt;= 4.0.1.3</External_Dependencies>
       <External_Dependencies>oglib_variantconfig &gt;= 4.0.0.5</External_Dependencies>
       <External_Dependencies>wireflow_ab_lib_wf_progressbar &gt;= 1.0.2.56</External_Dependencies>
-      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.8.1.97</Additional_External_Dependencies>
       <Direct_Dependencies>jdp_science_postgresql-0.1.1.10</Direct_Dependencies>
       <Direct_Dependencies>jki_lib_json_serialization-1.1.10.37</Direct_Dependencies>
       <Direct_Dependencies>jki_lib_serialization-1.0.1.14</Direct_Dependencies>
@@ -303,7 +302,7 @@
         <Path>..\src\Instrument.Lockin\API</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>73F269808A29E06357D523CCEA91BF35</GUID>
+      <GUID>06C5EFBBA301BDBDAD2522BF252D1AD1</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -940,7 +939,7 @@
         <Path>..\src\Instrument.Lockin\API\getRefreshTime.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>7B60B872F4B104FE96B97612D1FD454F</GUID>
+      <GUID>F587906F3E44850869DD43A32ACEB753</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
