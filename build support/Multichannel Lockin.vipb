@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2021-02-18 14:05:00" Creator="Patrick Irvin" Comments="" ID="a261fda5e96151f0b010f2f5570dac08">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2021-02-19 17:24:57" Creator="Patrick Irvin" Comments="" ID="889618b94643914cdc30162a59d27210">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.13.2.52</Library_Version>
+    <Library_Version>2.13.2.53</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -32,6 +32,7 @@
       <External_Dependencies>levylab_lib_postgresql &gt;= 1.2.3.16</External_Dependencies>
       <External_Dependencies>levylab_lib_voltage_update &gt;= 1.0.3.5</External_Dependencies>
       <External_Dependencies>levylab_lib_xy_utilities &gt;= 1.3.2.16</External_Dependencies>
+      <External_Dependencies>mgi_lib_1d_array &gt;= 1.0.2.3</External_Dependencies>
       <External_Dependencies>mgi_lib_application_control &gt;= 1.1.1.10</External_Dependencies>
       <External_Dependencies>mgi_lib_cluster &gt;= 1.1.0.1</External_Dependencies>
       <External_Dependencies>mgi_lib_error_handling &gt;= 1.1.1.3</External_Dependencies>
@@ -71,6 +72,7 @@
       <Direct_Dependencies>levylab_lib_postgresql-1.2.3.16</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_voltage_update-1.0.3.5</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_xy_utilities-1.3.2.16</Direct_Dependencies>
+      <Direct_Dependencies>mgi_lib_1d_array-1.0.2.3</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_application_control-1.1.1.10</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_cluster-1.1.0.1</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_error_handling-1.1.1.3</Direct_Dependencies>
@@ -325,7 +327,7 @@
         <Path>..\src\Instrument.Lockin\API</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>C37AE86473DABC6718581DA94913EF44</GUID>
+      <GUID>4DC84E5B2E551C316555173D4139909F</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1046,7 +1048,7 @@
         <Path>..\src\Instrument.Lockin\API\getOutputGain.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>368A31A8F255A43FBC8C232A8FE9FA96</GUID>
+      <GUID>27C2BFBCCCAE09932C2FC9290E40902B</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
