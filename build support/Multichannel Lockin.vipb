@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2021-02-19 17:24:57" Creator="Patrick Irvin" Comments="" ID="889618b94643914cdc30162a59d27210">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2021-02-21 09:45:33" Creator="Patrick Irvin" Comments="" ID="96a4c32d720e26dcedcfd63aa11cfde3">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.13.2.53</Library_Version>
+    <Library_Version>2.13.2.54</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -327,7 +327,7 @@
         <Path>..\src\Instrument.Lockin\API</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>4DC84E5B2E551C316555173D4139909F</GUID>
+      <GUID>1B95FCD432D1BF8C20627C92F6A5C891</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1048,7 +1048,7 @@
         <Path>..\src\Instrument.Lockin\API\getOutputGain.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>27C2BFBCCCAE09932C2FC9290E40902B</GUID>
+      <GUID>6B9B6FD1592C59BBABD7A2009A6520A2</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
