@@ -1798,6 +1798,7 @@
 				<Item Name="LVPositionTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVPositionTypeDef.ctl"/>
 				<Item Name="NewVIObject_LVRelativePositionTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/_script/New VI Object TypeDefs/NewVIObject_LVRelativePositionTypeDef.ctl"/>
 				<Item Name="NewVIObject_LVRelativeDirectionTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/_script/New VI Object TypeDefs/NewVIObject_LVRelativeDirectionTypeDef.ctl"/>
+				<Item Name="NI_AAL_SigProc.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AAL_SigProc.lvlib"/>
 			</Item>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="LVDFD.dll" Type="Document" URL="/&lt;resource&gt;/LVDFD.dll"/>
@@ -1847,7 +1848,7 @@
 			</Item>
 			<Item Name="Waveform Circular Buffer.vi" Type="VI" URL="../Lockin.DAQ/DAQ/Waveform Circular Buffer.vi"/>
 			<Item Name="PrivateEvents--LockinDAQ.Calibrate.ctl" Type="VI" URL="../Lockin.DAQ/Typedefs/PrivateEvents--LockinDAQ.Calibrate.ctl"/>
-			<Item Name="Run Tests in Active Project.vi" Type="VI" URL="/C/Program Files (x86)/National Instruments/LabVIEW 2016/project/Caraya/Run Tests in Active Project.vi"/>
+			<Item Name="Run Tests in Active Project.vi" Type="VI" URL="../../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/project/Caraya/Run Tests in Active Project.vi"/>
 			<Item Name="nilvaiu.dll" Type="Document" URL="nilvaiu.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
@@ -1955,7 +1956,7 @@
 			<Item Name="ApplyManifestResource.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Builds/Common/ApplyManifest/ApplyManifestResource.vi"/>
 			<Item Name="mxLvHasProperty.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/mxLvHasProperty.vi"/>
 			<Item Name="provcom_GetObjectItemFromProjectItem.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_GetObjectItemFromProjectItem.vi"/>
-			<Item Name="NI_MDF.lvlib" Type="Library" URL="/C/Program Files (x86)/National Instruments/LabVIEW 2016/applibs/distkit/MDF/NI_MDF.lvlib"/>
+			<Item Name="NI_MDF.lvlib" Type="Library" URL="../../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/applibs/distkit/MDF/NI_MDF.lvlib"/>
 			<Item Name="CDK_Utility_RemoveBrackets.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Builds/Installer/CDK_Utility_RemoveBrackets.vi"/>
 			<Item Name="CDK_Utility_GetAppVersionString.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Builds/Installer/CDK_Utility_GetAppVersionString.vi"/>
 			<Item Name="CDK_GLOBAL_LABELS.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Builds/Installer/CDK_GLOBAL_LABELS.vi"/>
@@ -2068,7 +2069,7 @@
 			<Item Name="LV Config Read String.vi" Type="VI" URL="/&lt;resource&gt;/Dialog/lvconfig.llb/LV Config Read String.vi"/>
 			<Item Name="LV Config Read Pathlist.vi" Type="VI" URL="/&lt;resource&gt;/Dialog/lvconfig.llb/LV Config Read Pathlist.vi"/>
 			<Item Name="LV Config Read Color.vi" Type="VI" URL="/&lt;resource&gt;/Dialog/lvconfig.llb/LV Config Read Color.vi"/>
-			<Item Name="NIMdf.dll" Type="Document" URL="/C/Program Files (x86)/National Instruments/LabVIEW 2016/applibs/distkit/MDF/NIMdf.dll"/>
+			<Item Name="NIMdf.dll" Type="Document" URL="../../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/applibs/distkit/MDF/NIMdf.dll"/>
 			<Item Name="CDK_Utility_Recurse_Folder.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Builds/Installer/CDK_Utility_Recurse_Folder.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
@@ -2086,10 +2087,9 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{BE714A7E-B7D4-4888-A1F2-966F210EC573}</Property>
-				<Property Name="Bld_version.build" Type="Int">56</Property>
+				<Property Name="Bld_version.build" Type="Int">57</Property>
 				<Property Name="Bld_version.major" Type="Int">2</Property>
-				<Property Name="Bld_version.minor" Type="Int">13</Property>
-				<Property Name="Bld_version.patch" Type="Int">2</Property>
+				<Property Name="Bld_version.minor" Type="Int">14</Property>
 				<Property Name="Destination[0].destName" Type="Str">Multichannel Lockin.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/Application/NI_AB_PROJECTNAME.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
@@ -2198,7 +2198,7 @@
 				<Property Name="INST_defaultDir" Type="Str">{A127CC0D-3099-41C3-8104-2245C476C6E9}</Property>
 				<Property Name="INST_installerName" Type="Str">setup.exe</Property>
 				<Property Name="INST_productName" Type="Str">Multichannel Lockin</Property>
-				<Property Name="INST_productVersion" Type="Str">2.13.2</Property>
+				<Property Name="INST_productVersion" Type="Str">2.14.0</Property>
 				<Property Name="InstSpecBitness" Type="Str">32-bit</Property>
 				<Property Name="InstSpecVersion" Type="Str">16008029</Property>
 				<Property Name="MSI_arpCompany" Type="Str">University of Pittsburgh</Property>
