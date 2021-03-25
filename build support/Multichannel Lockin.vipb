@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2021-03-25 10:44:36" Creator="Patrick Irvin" Comments="" ID="69d4106effc63bba5ae142a5f669bc80">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2021-03-25 13:10:56" Creator="Patrick Irvin" Comments="" ID="d897ae017e98fbd946d87a39747031b7">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.14.0.60</Library_Version>
+    <Library_Version>2.14.0.61</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -310,7 +310,7 @@
         <Path>..\src\Instrument.Lockin\API</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>471E5B709F40004CB10CBB11C52C1239</GUID>
+      <GUID>9D4DD1B26F4C425A6AAEED6FD41FA4EA</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1059,7 +1059,7 @@
         <Path>..\src\Instrument.Lockin\API\waitStatusIdle.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>11BBB722F4DADA4DF05AB27D4C33A0F4</GUID>
+      <GUID>38C0A10253E46A3FD9BD9DC1D65E3106</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
