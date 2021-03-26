@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2021-03-25 13:10:56" Creator="Patrick Irvin" Comments="" ID="d897ae017e98fbd946d87a39747031b7">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2021-03-25 19:28:51" Creator="Patrick Irvin" Comments="" ID="752735f794cc86722726058067fdad6d">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.14.0.61</Library_Version>
+    <Library_Version>2.14.0.62</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -310,7 +310,7 @@
         <Path>..\src\Instrument.Lockin\API</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>9D4DD1B26F4C425A6AAEED6FD41FA4EA</GUID>
+      <GUID>676D50767A159CAE87030D06B7A66722</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1059,7 +1059,21 @@
         <Path>..\src\Instrument.Lockin\API\waitStatusIdle.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>38C0A10253E46A3FD9BD9DC1D65E3106</GUID>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>Parse Results (table).vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>1</Row>
+          <Column>10</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\Parse Results (table).vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <GUID>A28C5979EA7D17CE84B4D68D49AC0964</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
