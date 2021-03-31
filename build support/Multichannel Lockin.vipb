@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2021-03-30 09:51:11" Creator="Patrick Irvin" Comments="" ID="cafff85dfb051f79e19b7869e41602fd">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2021-03-31 15:13:53" Creator="Patrick Irvin" Comments="" ID="87d95b5cb8d6f026b9b6e6f1f7cc692e">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.14.1.64</Library_Version>
+    <Library_Version>2.14.1.65</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -313,7 +313,7 @@
         <Path>..\src\Instrument.Lockin\API</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>DCC8E7B54BBCB8D57B9561C65EEA4688</GUID>
+      <GUID>740FE8F25B66848A3F37844824AA6E22</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1076,7 +1076,7 @@
         <Path>..\src\Instrument.Lockin\API\Parse Results (table).vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>FBC4363FB8931FCC0AE3F5EFC2D1708F</GUID>
+      <GUID>B0C8C5BA198AB10B4BFC4487C2CCA495</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
