@@ -19,6 +19,8 @@
 			<Item Name="Multichannel Lockin.vipc" Type="Document" URL="../../build support/Multichannel Lockin.vipc"/>
 			<Item Name="Post-Build Custom Action.vi" Type="VI" URL="../../build support/Post-Build Custom Action.vi"/>
 			<Item Name="Manual Post Build.vi" Type="VI" URL="../../build support/Manual Post Build.vi"/>
+			<Item Name="libzmq32.dll" Type="Document" URL="/&lt;vilib&gt;/addons/zeromq/libzmq32.dll"/>
+			<Item Name="lvzmq32.dll" Type="Document" URL="/&lt;vilib&gt;/addons/zeromq/lvzmq32.dll"/>
 		</Item>
 		<Item Name="Examples" Type="Folder">
 			<Item Name="Example_IV_Curves.vi" Type="VI" URL="../Examples/Example_IV_Curves.vi"/>
@@ -2092,7 +2094,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{BE714A7E-B7D4-4888-A1F2-966F210EC573}</Property>
-				<Property Name="Bld_version.build" Type="Int">66</Property>
+				<Property Name="Bld_version.build" Type="Int">67</Property>
 				<Property Name="Bld_version.major" Type="Int">2</Property>
 				<Property Name="Bld_version.minor" Type="Int">14</Property>
 				<Property Name="Bld_version.patch" Type="Int">2</Property>
@@ -2104,7 +2106,7 @@
 				<Property Name="Destination[1].path" Type="Path">../builds/Application/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/build support/Lockin-Multichannel.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{B9F223B9-D9B6-4CD1-8AAC-2D05CC94EEAE}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{FE1F16C9-873A-4356-BE26-26F786B4E5EF}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Instrument.Lockin.lvclass/Multichannel Lockin.vi</Property>
@@ -2114,7 +2116,13 @@
 				<Property Name="Source[2].itemID" Type="Ref">/My Computer/Lockin.DAQ.lvclass</Property>
 				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[2].type" Type="Str">Library</Property>
-				<Property Name="SourceCount" Type="Int">3</Property>
+				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[3].itemID" Type="Ref">/My Computer/build support/libzmq32.dll</Property>
+				<Property Name="Source[3].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[4].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[4].itemID" Type="Ref">/My Computer/build support/lvzmq32.dll</Property>
+				<Property Name="Source[4].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="SourceCount" Type="Int">5</Property>
 				<Property Name="TgtF_companyName" Type="Str">Levylab</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">Multichannel Lockin for National Instrument Dynamic Signal Acquisition hardware (4431, 4461, 4462). This version is configured to handle multiple cards for simultaneous, synchronized AI/AO. You can configure a number of analog outputs (8 or more) to output sine, square, sawtooth, or triangle functions with DC offsets. Each of the analog inputs (8 or more) can be demodulated at multiple frequencies.</Property>
 				<Property Name="TgtF_internalName" Type="Str">Multichannel Lockin Application</Property>

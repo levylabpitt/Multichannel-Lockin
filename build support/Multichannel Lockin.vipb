@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2021-09-08 13:53:47" Creator="Patrick Irvin" Comments="" ID="472d60adecf25ba4c5765d2b362b304e">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2021-09-08 16:44:04" Creator="Patrick Irvin" Comments="" ID="badd8a1e62f1fe867125af050518926e">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.14.2.67</Library_Version>
+    <Library_Version>2.14.2.68</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -317,7 +317,7 @@
         <Path>..\src\Instrument.Lockin\API</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>72690614107066B0CDBF7039253E7D5B</GUID>
+      <GUID>EDD005E3693FFBA7F6A63603C8DD5222</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -325,7 +325,7 @@
       <View_Format>Icons</View_Format>
       <Size>
         <Height_Row>7</Height_Row>
-        <Width_Col.>12</Width_Col.>
+        <Width_Col.>13</Width_Col.>
       </Size>
       <_256_Color_Icon>00000367002900000012000000020000000D00FFFFFF000100000000000A0000000800000000002000200028000000E3000000BD0000000C0007001500180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFF000000000000FFFFFFFFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000000000000000000000FFFFFF000000000000FFFFFFFFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF007F4CFFAAFFECFFA8FFA8FF007F002900000012000000020000000D00CCCCFF000100000000000A00000008001900000020002000280000022C000001F8001900040020001C00180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF9AAA26FF92AA55FF9ABA76FF939255FFD91356FF000000FF</_256_Color_Icon>
       <BW_Color_Icon>00000000</BW_Color_Icon>
@@ -341,53 +341,11 @@
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Open.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\Open.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getAOconfig.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>9</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getAOconfig.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getREFconfig.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>9</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getREFconfig.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
         <NameSub_Menu_Name>setREF.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>3</Row>
+          <Row>2</Row>
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
@@ -397,26 +355,12 @@
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setAO.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>3</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setAO.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
         <NameSub_Menu_Name>setAO_Amp.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>2</Row>
-          <Column>4</Column>
+          <Row>1</Row>
+          <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\Instrument.Lockin\API\setAO_Amp.vi</Path>
@@ -429,8 +373,8 @@
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>2</Row>
-          <Column>5</Column>
+          <Row>1</Row>
+          <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\Instrument.Lockin\API\setAO_DC.vi</Path>
@@ -443,8 +387,8 @@
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>2</Row>
-          <Column>6</Column>
+          <Row>1</Row>
+          <Column>7</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\Instrument.Lockin\API\setAO_f.vi</Path>
@@ -457,8 +401,8 @@
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>2</Row>
-          <Column>8</Column>
+          <Row>1</Row>
+          <Column>9</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\Instrument.Lockin\API\setAO_function.vi</Path>
@@ -471,39 +415,11 @@
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>2</Row>
-          <Column>7</Column>
+          <Row>1</Row>
+          <Column>8</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\Instrument.Lockin\API\setAO_phi.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setREF_phi.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>7</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setREF_phi.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setREF_f.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>6</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setREF_f.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -513,7 +429,7 @@
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>4</Row>
+          <Row>3</Row>
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
@@ -527,11 +443,179 @@
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>4</Row>
-          <Column>6</Column>
+          <Row>3</Row>
+          <Column>7</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\Instrument.Lockin\API\getSampling.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>setSweepConfiguration.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>6</Row>
+          <Column>3</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\setSweepConfiguration.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>setSampling.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>3</Row>
+          <Column>6</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\setSampling.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>getREFconfig.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>2</Row>
+          <Column>4</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\getREFconfig.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>getAOconfig.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>1</Row>
+          <Column>4</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\getAOconfig.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>setREF_f.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>2</Row>
+          <Column>5</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\setREF_f.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>setREF_phi.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>2</Row>
+          <Column>6</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\setREF_phi.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>setREF_TC.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>2</Row>
+          <Column>7</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\setREF_TC.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>setREF_RollOff.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>2</Row>
+          <Column>8</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\setREF_RollOff.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>getAUX.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>3</Row>
+          <Column>4</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\getAUX.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>startSweep.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>6</Row>
+          <Column>4</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\startSweep.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>startSweepAndWait.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>6</Row>
+          <Column>5</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\startSweepAndWait.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>stopSweep.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>6</Row>
+          <Column>6</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\stopSweep.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -542,7 +626,7 @@
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
           <Row>5</Row>
-          <Column>5</Column>
+          <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\Instrument.Lockin\API\setIVmodeConfig.vi</Path>
@@ -556,38 +640,10 @@
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
           <Row>5</Row>
-          <Column>6</Column>
+          <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\Instrument.Lockin\API\getIVmode.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setAutoSampling.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>4</Row>
-          <Column>8</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setAutoSampling.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getAutoSampling.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>4</Row>
-          <Column>9</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getAutoSampling.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -598,7 +654,7 @@
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
           <Row>5</Row>
-          <Column>8</Column>
+          <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\Instrument.Lockin\API\trigger.vi</Path>
@@ -612,7 +668,7 @@
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
           <Row>5</Row>
-          <Column>9</Column>
+          <Column>7</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\Instrument.Lockin\API\getTrigger.vi</Path>
@@ -621,91 +677,49 @@
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>waitStatusStarted.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>11</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\waitStatusStarted.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>waitStatusStopped.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>12</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\waitStatusStopped.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>waitStatusSweepingStarted.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>11</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\waitStatusSweepingStarted.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>waitStatusSweepingStopped.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>12</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\waitStatusSweepingStopped.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>waitForNewWaveforms.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>setAutoSampling.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
           <Row>4</Row>
-          <Column>12</Column>
+          <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\waitForNewWaveforms.vi</Path>
+        <Path>..\src\Instrument.Lockin\API\setAutoSampling.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>waitForNewResults.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>getAutoSampling.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
           <Row>4</Row>
-          <Column>11</Column>
+          <Column>7</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\waitForNewResults.vi</Path>
+        <Path>..\src\Instrument.Lockin\API\getAutoSampling.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getStatus.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>getSweepResults.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>6</Row>
+          <Column>11</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\getSweepResults.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>setAO.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
@@ -713,7 +727,21 @@
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getStatus.vi</Path>
+        <Path>..\src\Instrument.Lockin\API\setAO.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>setDAQ.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>3</Row>
+          <Column>1</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\setDAQ.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -733,295 +761,113 @@
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getRefreshTime.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>getStatus.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
           <Row>1</Row>
-          <Column>4</Column>
+          <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getRefreshTime.vi</Path>
+        <Path>..\src\Instrument.Lockin\API\getStatus.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>startIVSweepAndWait.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>Open.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>7</Row>
+          <Row>1</Row>
+          <Column>1</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\Open.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>waitForNewResults.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>4</Row>
           <Column>12</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\startIVSweepAndWait.vi</Path>
+        <Path>..\src\Instrument.Lockin\API\waitForNewResults.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>startIVAndWait.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>7</Row>
-          <Column>11</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\startIVAndWait.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setSweepConfiguration.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>7</Row>
-          <Column>3</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setSweepConfiguration.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>startSweep.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>7</Row>
-          <Column>4</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\startSweep.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>startSweepAndWait.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>7</Row>
-          <Column>5</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\startSweepAndWait.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>stopSweep.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>7</Row>
-          <Column>6</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\stopSweep.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getSweepWaveforms.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>7</Row>
-          <Column>8</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getSweepWaveforms.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getSweepResults.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>7</Row>
-          <Column>9</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getSweepResults.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setSampling.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>waitForNewWaveforms.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
           <Row>4</Row>
-          <Column>5</Column>
+          <Column>13</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setSampling.vi</Path>
+        <Path>..\src\Instrument.Lockin\API\waitForNewWaveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getAUX.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>waitStatusSweepingStarted.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>4</Row>
-          <Column>4</Column>
+          <Row>3</Row>
+          <Column>12</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getAUX.vi</Path>
+        <Path>..\src\Instrument.Lockin\API\waitStatusSweepingStarted.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setInputGain.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>waitStatusSweepingStopped.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>5</Row>
-          <Column>1</Column>
+          <Row>3</Row>
+          <Column>13</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setInputGain.vi</Path>
+        <Path>..\src\Instrument.Lockin\API\waitStatusSweepingStopped.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setOutputGain.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>waitStatusStopped.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>6</Row>
-          <Column>1</Column>
+          <Row>2</Row>
+          <Column>13</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setOutputGain.vi</Path>
+        <Path>..\src\Instrument.Lockin\API\waitStatusStopped.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getInputGain.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>waitStatusStarted.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>5</Row>
-          <Column>2</Column>
+          <Row>2</Row>
+          <Column>12</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getInputGain.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getOutputGain.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>6</Row>
-          <Column>2</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getOutputGain.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getAO.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>5</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getAO.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getAI.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>6</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getAI.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getResults.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>7</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getResults.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Parse Results (all).vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>9</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\Parse Results (all).vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Parse Results (single).vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>8</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\Parse Results (single).vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>waitStatusCreated.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>11</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\waitStatusCreated.vi</Path>
+        <Path>..\src\Instrument.Lockin\API\waitStatusStarted.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1032,10 +878,206 @@
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
           <Row>1</Row>
-          <Column>12</Column>
+          <Column>13</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\Instrument.Lockin\API\waitStatusIdle.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>waitStatusCreated.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>1</Row>
+          <Column>12</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\waitStatusCreated.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>getAI.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>1</Row>
+          <Column>10</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\getAI.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>getAO.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>2</Row>
+          <Column>10</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\getAO.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>getResults.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>1</Row>
+          <Column>11</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\getResults.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>getRefreshTime.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>2</Row>
+          <Column>2</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\getRefreshTime.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>getSweepWaveforms.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>6</Row>
+          <Column>10</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\getSweepWaveforms.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>startIVAndWait.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>7</Row>
+          <Column>1</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\startIVAndWait.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>startIVSweepAndWait.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>7</Row>
+          <Column>2</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\startIVSweepAndWait.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>setInputGain.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>4</Row>
+          <Column>1</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\setInputGain.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>getInputGain.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>4</Row>
+          <Column>2</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\getInputGain.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>setOutputGain.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>5</Row>
+          <Column>1</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\setOutputGain.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>getOutputGain.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>5</Row>
+          <Column>2</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\getOutputGain.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>Parse Results (single).vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>6</Row>
+          <Column>12</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\Parse Results (single).vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>Parse Results (all).vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>6</Row>
+          <Column>13</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\Parse Results (all).vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1045,28 +1087,14 @@
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>1</Row>
-          <Column>10</Column>
+          <Row>7</Row>
+          <Column>13</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\Instrument.Lockin\API\Parse Results (table).vi</Path>
         <VI_Title/>
       </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setDAQ.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>4</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setDAQ.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <GUID>C035AB2DC298481C926B81C85E7C4870</GUID>
+      <GUID>E5B5691F45D9F16C649289FAEC628C7E</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
