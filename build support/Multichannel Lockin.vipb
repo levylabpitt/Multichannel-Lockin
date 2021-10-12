@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2021-09-14 08:28:01" Creator="Patrick Irvin" Comments="" ID="88edbfa65fd03729bc6464f0b4d5b892">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2021-10-12 11:56:23" Creator="Patrick Irvin" Comments="" ID="f7574693152b31bf294176ac8fcc47d0">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.14.3.68</Library_Version>
+    <Library_Version>2.14.4.68</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -114,8 +114,9 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.14.3]
-- Instrument Framework v1.9.2</Release_Notes>
+      <Release_Notes>[2.14.4]
+- Instrument Framework v1.9.3
+- Update Remote Control restart logic</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -305,7 +306,7 @@
         <Path>..\src\Instrument.Lockin\API</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F7A223EACFBFFEA0F748972CB95EC0BB</GUID>
+      <GUID>3B9433E65E4181C41DD35CE5F64FFD04</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1054,7 +1055,7 @@
         <Path>..\src\Instrument.Lockin\API\setDAQ.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>6A7400A51CBB70B2B4E7FD9E7A635C47</GUID>
+      <GUID>91452083BFBAA5761139B2696296D565</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>

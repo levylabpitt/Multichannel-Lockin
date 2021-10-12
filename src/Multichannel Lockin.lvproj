@@ -422,10 +422,6 @@
 				<Item Name="Logger.PGSQL.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/Levylab Instruments/SMOs/Logger.PGSQL/Logger.PGSQL.lvclass"/>
 				<Item Name="Search or Split String__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/string/string.llb/Search or Split String__ogtk.vi"/>
 				<Item Name="String to 1D Array__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/string/string.llb/String to 1D Array__ogtk.vi"/>
-				<Item Name="Data.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/LV to ITX/Data/Data.lvclass"/>
-				<Item Name="Data.DAT.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/LV to ITX/Data.DAT/Data.DAT.lvclass"/>
-				<Item Name="Data.ITX.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/LV to ITX/Data.ITX/Data.ITX.lvclass"/>
-				<Item Name="ITX Commands.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/LV to ITX/Data.ITX/ITX Commands/ITX Commands.lvclass"/>
 				<Item Name="Multi-line String to Array__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/string/string.llb/Multi-line String to Array__ogtk.vi"/>
 				<Item Name="Convert EOLs__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/string/string.llb/Convert EOLs__ogtk.vi"/>
 				<Item Name="Convert EOLs (String)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/string/string.llb/Convert EOLs (String)__ogtk.vi"/>
@@ -435,9 +431,7 @@
 				<Item Name="MGI Approximately Equal.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Numeric/Comparison/MGI Approximately Equal.vi"/>
 				<Item Name="Get Cluster Element Names__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Get Cluster Element Names__ogtk.vi"/>
 				<Item Name="Get Cluster Elements TDs__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Get Cluster Elements TDs__ogtk.vi"/>
-				<Item Name="Data.TDMS.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/LV to ITX/Data.TDMS/Data.TDMS.lvclass"/>
 				<Item Name="Number to String.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/FileUtilities/Number to String.vi"/>
-				<Item Name="Conversion.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/LV to ITX/Macros/Conversion.lvclass"/>
 				<Item Name="Dictionary Create__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/dictionary/dictionary.llb/Dictionary Create__ogtk.vi"/>
 				<Item Name="Dictionary Data__ogtk.ctl" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/dictionary/dictionary.llb/Dictionary Data__ogtk.ctl"/>
 				<Item Name="Dictionary Object RefNum__ogtk.ctl" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/dictionary/dictionary.llb/Dictionary Object RefNum__ogtk.ctl"/>
@@ -504,7 +498,6 @@
 				<Item Name="ZLIB Close Zip Archive__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvzip/lvzip.llb/ZLIB Close Zip Archive__ogtk.vi"/>
 				<Item Name="Increment Filename.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/FileUtilities/Increment Filename.vi"/>
 				<Item Name="Is String Number.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/FileUtilities/Support/Is String Number.vi"/>
-				<Item Name="Data.PGSQL.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/postgreSQL-timescaleDB/Data.PG/Data.PGSQL.lvclass"/>
 				<Item Name="Index 2D Array Elements (LVObject)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/array/array.llb/Index 2D Array Elements (LVObject)__ogtk.vi"/>
 				<Item Name="Index 1D Array Elements (LVObject)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/array/array.llb/Index 1D Array Elements (LVObject)__ogtk.vi"/>
 				<Item Name="Index 2D Array Elements (U64)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/array/array.llb/Index 2D Array Elements (U64)__ogtk.vi"/>
@@ -567,6 +560,13 @@
 				<Item Name="File Exists - Scalar__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/file/file.llb/File Exists - Scalar__ogtk.vi"/>
 				<Item Name="File Exists - Array__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/file/file.llb/File Exists - Array__ogtk.vi"/>
 				<Item Name="Log Error.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Levylab Instruments/SMOs/Logger.Error/Log Error.vi"/>
+				<Item Name="LV-Data.PGSQL.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/LV-Data/LV-Data.PG/LV-Data.PGSQL.lvclass"/>
+				<Item Name="LV-Data.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/LV-Data/LV-Data/LV-Data.lvclass"/>
+				<Item Name="LV-Data.DAT.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/LV-Data/LV-Data.DAT/LV-Data.DAT.lvclass"/>
+				<Item Name="LV-Data.ITX.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/LV-Data/LV-Data.ITX/LV-Data.ITX.lvclass"/>
+				<Item Name="ITX Commands.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/LV-Data/LV-Data.ITX/ITX Commands/ITX Commands.lvclass"/>
+				<Item Name="LV-Data.TDMS.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/LV-Data/LV-Data.TDMS/LV-Data.TDMS.lvclass"/>
+				<Item Name="Conversion.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/LV-Data/Macros/Conversion.lvclass"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
@@ -756,7 +756,6 @@
 				<Item Name="TCP Listen List Operations.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/tcp.llb/TCP Listen List Operations.ctl"/>
 				<Item Name="TCP Listen Internal List.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tcp.llb/TCP Listen Internal List.vi"/>
 				<Item Name="URI.lvlib" Type="Library" URL="/&lt;vilib&gt;/JKI/JKI SMO/URI Parsing/URI.lvlib"/>
-				<Item Name="nisyscfg.lvlib" Type="Library" URL="/&lt;vilib&gt;/nisyscfg/nisyscfg.lvlib"/>
 				<Item Name="LVNumericRepresentation.ctl" Type="VI" URL="/&lt;vilib&gt;/numeric/LVNumericRepresentation.ctl"/>
 				<Item Name="DWDT Empty Digital.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/DWDTOps.llb/DWDT Empty Digital.vi"/>
 				<Item Name="DTbl Empty Digital.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/DTblOps.llb/DTbl Empty Digital.vi"/>
@@ -1835,9 +1834,6 @@
 			<Item Name="mscorlib" Type="VI" URL="mscorlib">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
-				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
-			</Item>
 			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
@@ -2104,7 +2100,7 @@
 				<Property Name="Destination[1].path" Type="Path">../builds/Application/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/build support/Lockin-Multichannel.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{B9F223B9-D9B6-4CD1-8AAC-2D05CC94EEAE}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{1B4F9486-F69C-4A6F-BF7F-9E2D36B9E205}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Instrument.Lockin.lvclass/Multichannel Lockin.vi</Property>
@@ -2115,10 +2111,10 @@
 				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[2].type" Type="Str">Library</Property>
 				<Property Name="SourceCount" Type="Int">3</Property>
-				<Property Name="TgtF_companyName" Type="Str">Levylab</Property>
+				<Property Name="TgtF_companyName" Type="Str">LevyLab</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">Multichannel Lockin for National Instrument Dynamic Signal Acquisition hardware (4431, 4461, 4462). This version is configured to handle multiple cards for simultaneous, synchronized AI/AO. You can configure a number of analog outputs (8 or more) to output sine, square, sawtooth, or triangle functions with DC offsets. Each of the analog inputs (8 or more) can be demodulated at multiple frequencies.</Property>
 				<Property Name="TgtF_internalName" Type="Str">Multichannel Lockin Application</Property>
-				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2019 Levylab</Property>
+				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2021 Levylab</Property>
 				<Property Name="TgtF_productName" Type="Str">Multichannel Lockin</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{F79A4A16-E3DA-45EF-AF6E-CE1DFAF4A4BE}</Property>
 				<Property Name="TgtF_targetfileName" Type="Str">Multichannel Lockin.exe</Property>
@@ -2133,49 +2129,52 @@
 				<Property Name="Destination[1].tag" Type="Str">{A127CC0D-3099-41C3-8104-2245C476C6E9}</Property>
 				<Property Name="Destination[1].type" Type="Str">userFolder</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="DistPart[0].flavorID" Type="Str">DefaultFull</Property>
-				<Property Name="DistPart[0].productID" Type="Str">{84A14A37-121A-4BAF-B2D5-4A807910A22F}</Property>
-				<Property Name="DistPart[0].productName" Type="Str">NI Distributed System Manager 2016</Property>
-				<Property Name="DistPart[0].upgradeCode" Type="Str">{AE3BDC39-5362-47B3-866A-80CC36690478}</Property>
+				<Property Name="DistPart[0].flavorID" Type="Str">_full_</Property>
+				<Property Name="DistPart[0].productID" Type="Str">{175DA080-55C0-420A-B44D-780B8D4E6AA8}</Property>
+				<Property Name="DistPart[0].productName" Type="Str">NI-DAQmx Runtime 19.5</Property>
+				<Property Name="DistPart[0].upgradeCode" Type="Str">{923C9CD5-A0D8-4147-9A8D-998780E30763}</Property>
 				<Property Name="DistPart[1].flavorID" Type="Str">DefaultFull</Property>
-				<Property Name="DistPart[1].productID" Type="Str">{BBF5CDD9-BBA7-4B7F-BC45-166399B6DDFC}</Property>
-				<Property Name="DistPart[1].productName" Type="Str">NI System Configuration Runtime 19.5.0</Property>
-				<Property Name="DistPart[1].upgradeCode" Type="Str">{0E192465-CC28-4C84-BE81-710B71C595A3}</Property>
-				<Property Name="DistPart[2].flavorID" Type="Str">DefaultFull</Property>
-				<Property Name="DistPart[2].productID" Type="Str">{FA0DB08E-BC18-4194-9ADC-026B7C8D5CEA}</Property>
-				<Property Name="DistPart[2].productName" Type="Str">NI Variable Engine 2019</Property>
-				<Property Name="DistPart[2].upgradeCode" Type="Str">{EB7A3C81-1C0F-4495-8CE5-0A427E4E6285}</Property>
-				<Property Name="DistPart[3].flavorID" Type="Str">_full_</Property>
-				<Property Name="DistPart[3].productID" Type="Str">{175DA080-55C0-420A-B44D-780B8D4E6AA8}</Property>
-				<Property Name="DistPart[3].productName" Type="Str">NI-DAQmx Runtime 19.5</Property>
-				<Property Name="DistPart[3].upgradeCode" Type="Str">{923C9CD5-A0D8-4147-9A8D-998780E30763}</Property>
-				<Property Name="DistPart[4].flavorID" Type="Str">DefaultFull</Property>
-				<Property Name="DistPart[4].productID" Type="Str">{1E3C5D81-5D10-421A-AE16-1FC585D2FB7D}</Property>
-				<Property Name="DistPart[4].productName" Type="Str">NI LabVIEW Runtime 2019 SP1 f3</Property>
-				<Property Name="DistPart[4].SoftDep[0].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[4].SoftDep[0].productName" Type="Str">NI ActiveX Container</Property>
-				<Property Name="DistPart[4].SoftDep[0].upgradeCode" Type="Str">{1038A887-23E1-4289-B0BD-0C4B83C6BA21}</Property>
-				<Property Name="DistPart[4].SoftDep[1].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[4].SoftDep[1].productName" Type="Str">NI Deployment Framework 2019</Property>
-				<Property Name="DistPart[4].SoftDep[1].upgradeCode" Type="Str">{838942E4-B73C-492E-81A3-AA1E291FD0DC}</Property>
-				<Property Name="DistPart[4].SoftDep[2].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[4].SoftDep[2].productName" Type="Str">NI Error Reporting 2019</Property>
-				<Property Name="DistPart[4].SoftDep[2].upgradeCode" Type="Str">{42E818C6-2B08-4DE7-BD91-B0FD704C119A}</Property>
-				<Property Name="DistPart[4].SoftDep[3].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[4].SoftDep[3].productName" Type="Str">NI Logos 19.0</Property>
-				<Property Name="DistPart[4].SoftDep[3].upgradeCode" Type="Str">{5E4A4CE3-4D06-11D4-8B22-006008C16337}</Property>
-				<Property Name="DistPart[4].SoftDep[4].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[4].SoftDep[4].productName" Type="Str">NI mDNS Responder 19.0</Property>
-				<Property Name="DistPart[4].SoftDep[4].upgradeCode" Type="Str">{9607874B-4BB3-42CB-B450-A2F5EF60BA3B}</Property>
-				<Property Name="DistPart[4].SoftDep[5].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[4].SoftDep[5].productName" Type="Str">NI VC2015 Runtime</Property>
-				<Property Name="DistPart[4].SoftDep[5].upgradeCode" Type="Str">{D42E7BAE-6589-4570-B6A3-3E28889392E7}</Property>
-				<Property Name="DistPart[4].SoftDep[6].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[4].SoftDep[6].productName" Type="Str">NI TDM Streaming 19.0</Property>
-				<Property Name="DistPart[4].SoftDep[6].upgradeCode" Type="Str">{4CD11BE6-6BB7-4082-8A27-C13771BC309B}</Property>
-				<Property Name="DistPart[4].SoftDepCount" Type="Int">7</Property>
-				<Property Name="DistPart[4].upgradeCode" Type="Str">{7D6295E5-8FB8-4BCE-B1CD-B5B396FA1D3F}</Property>
-				<Property Name="DistPartCount" Type="Int">5</Property>
+				<Property Name="DistPart[1].productID" Type="Str">{1E3C5D81-5D10-421A-AE16-1FC585D2FB7D}</Property>
+				<Property Name="DistPart[1].productName" Type="Str">NI LabVIEW Runtime 2019 SP1 f3</Property>
+				<Property Name="DistPart[1].SoftDep[0].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[1].SoftDep[0].productName" Type="Str">NI ActiveX Container</Property>
+				<Property Name="DistPart[1].SoftDep[0].upgradeCode" Type="Str">{1038A887-23E1-4289-B0BD-0C4B83C6BA21}</Property>
+				<Property Name="DistPart[1].SoftDep[1].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[1].SoftDep[1].productName" Type="Str">NI Deployment Framework 2019</Property>
+				<Property Name="DistPart[1].SoftDep[1].upgradeCode" Type="Str">{838942E4-B73C-492E-81A3-AA1E291FD0DC}</Property>
+				<Property Name="DistPart[1].SoftDep[10].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[1].SoftDep[10].productName" Type="Str">NI VC2015 Runtime</Property>
+				<Property Name="DistPart[1].SoftDep[10].upgradeCode" Type="Str">{D42E7BAE-6589-4570-B6A3-3E28889392E7}</Property>
+				<Property Name="DistPart[1].SoftDep[11].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[1].SoftDep[11].productName" Type="Str">NI TDM Streaming 19.0</Property>
+				<Property Name="DistPart[1].SoftDep[11].upgradeCode" Type="Str">{4CD11BE6-6BB7-4082-8A27-C13771BC309B}</Property>
+				<Property Name="DistPart[1].SoftDep[2].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[1].SoftDep[2].productName" Type="Str">NI Error Reporting 2019</Property>
+				<Property Name="DistPart[1].SoftDep[2].upgradeCode" Type="Str">{42E818C6-2B08-4DE7-BD91-B0FD704C119A}</Property>
+				<Property Name="DistPart[1].SoftDep[3].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[1].SoftDep[3].productName" Type="Str">NI LabVIEW Real-Time NBFifo 2019</Property>
+				<Property Name="DistPart[1].SoftDep[3].upgradeCode" Type="Str">{8386B074-C90C-43A8-99F2-203BAAB4111C}</Property>
+				<Property Name="DistPart[1].SoftDep[4].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[1].SoftDep[4].productName" Type="Str">NI LabVIEW Runtime 2019 SP1 Non-English Support.</Property>
+				<Property Name="DistPart[1].SoftDep[4].upgradeCode" Type="Str">{446D49A5-F830-4ADF-8C78-F03284D6882D}</Property>
+				<Property Name="DistPart[1].SoftDep[5].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[1].SoftDep[5].productName" Type="Str">NI Logos 19.0</Property>
+				<Property Name="DistPart[1].SoftDep[5].upgradeCode" Type="Str">{5E4A4CE3-4D06-11D4-8B22-006008C16337}</Property>
+				<Property Name="DistPart[1].SoftDep[6].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[1].SoftDep[6].productName" Type="Str">NI LabVIEW Web Server 2019</Property>
+				<Property Name="DistPart[1].SoftDep[6].upgradeCode" Type="Str">{0960380B-EA86-4E0C-8B57-14CD8CCF2C15}</Property>
+				<Property Name="DistPart[1].SoftDep[7].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[1].SoftDep[7].productName" Type="Str">NI mDNS Responder 19.0</Property>
+				<Property Name="DistPart[1].SoftDep[7].upgradeCode" Type="Str">{9607874B-4BB3-42CB-B450-A2F5EF60BA3B}</Property>
+				<Property Name="DistPart[1].SoftDep[8].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[1].SoftDep[8].productName" Type="Str">Math Kernel Libraries 2017</Property>
+				<Property Name="DistPart[1].SoftDep[8].upgradeCode" Type="Str">{699C1AC5-2CF2-4745-9674-B19536EBA8A3}</Property>
+				<Property Name="DistPart[1].SoftDep[9].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[1].SoftDep[9].productName" Type="Str">Math Kernel Libraries 2018</Property>
+				<Property Name="DistPart[1].SoftDep[9].upgradeCode" Type="Str">{33A780B9-8BDE-4A3A-9672-24778EFBEFC4}</Property>
+				<Property Name="DistPart[1].SoftDepCount" Type="Int">12</Property>
+				<Property Name="DistPart[1].upgradeCode" Type="Str">{7D6295E5-8FB8-4BCE-B1CD-B5B396FA1D3F}</Property>
+				<Property Name="DistPartCount" Type="Int">2</Property>
 				<Property Name="INST_author" Type="Str">University of Pittsburgh</Property>
 				<Property Name="INST_buildLocation" Type="Path">../builds/Installer</Property>
 				<Property Name="INST_buildLocation.type" Type="Str">relativeToCommon</Property>
