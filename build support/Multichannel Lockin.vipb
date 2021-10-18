@@ -1,10 +1,10 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2021-08-27 12:47:17" Creator="Patrick Irvin" Comments="" ID="110c24d41a8ecd6befcaf11386036828">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2021-10-18 14:13:39" Creator="Patrick Irvin" Comments="" ID="b0d02d5966ede0eb1f3e99c77ff24e0a">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.14.2.66</Library_Version>
+    <Library_Version>2.14.4.70</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
-    <Library_Source_Folder>..\src</Library_Source_Folder>
-    <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
+    <Library_Source_Folder>..\..\..\..\AppData\Local\src</Library_Source_Folder>
+    <Library_Output_Folder>..\..\..\..\AppData\Local\builds\Package</Library_Output_Folder>
     <Company_Name>LevyLab</Company_Name>
     <Library_Summary/>
     <Library_License>BSD-3</Library_License>
@@ -23,13 +23,12 @@
       <External_Dependencies>jki_lib_state_machine &gt;= 2018.0.7.45</External_Dependencies>
       <External_Dependencies>jki_lib_unicode &gt;= 1.0.0.7</External_Dependencies>
       <External_Dependencies>jki_statemachineobjects &gt;= 1.4.0.63</External_Dependencies>
-      <External_Dependencies>labview-zmq &gt;= 3.5.1.109</External_Dependencies>
+      <External_Dependencies>labview-zmq &gt;= 3.6.1.111</External_Dependencies>
       <External_Dependencies>lava_lib_ui_tools &gt;= 1.4.1.74</External_Dependencies>
       <External_Dependencies>levylab_lib_control_vi &gt;= 1.3.0.11</External_Dependencies>
       <External_Dependencies>levylab_lib_fileutilities &gt;= 1.2.6.13</External_Dependencies>
       <External_Dependencies>levylab_lib_graph_utilities &gt;= 2.1.7.10</External_Dependencies>
-      <External_Dependencies>levylab_lib_lvtoitx &gt;= 3.0.6.14</External_Dependencies>
-      <External_Dependencies>levylab_lib_postgresql &gt;= 1.4.0.22</External_Dependencies>
+      <External_Dependencies>levylab_lib_lvtoitx &gt;= 3.1.0.1</External_Dependencies>
       <External_Dependencies>levylab_lib_voltage_update &gt;= 1.0.3.5</External_Dependencies>
       <External_Dependencies>levylab_lib_xy_utilities &gt;= 1.4.0.17</External_Dependencies>
       <External_Dependencies>mgi_lib_1d_array &gt;= 1.0.2.3</External_Dependencies>
@@ -57,19 +56,19 @@
       <External_Dependencies>oglib_time &gt;= 4.0.1.3</External_Dependencies>
       <External_Dependencies>oglib_variantconfig &gt;= 4.0.0.5</External_Dependencies>
       <External_Dependencies>wireflow_ab_lib_wf_progressbar &gt;= 1.0.2.56</External_Dependencies>
+      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.10.1.5</Additional_External_Dependencies>
       <Direct_Dependencies>jdp_science_postgresql-0.3.4.22</Direct_Dependencies>
       <Direct_Dependencies>jki_lib_json_serialization-1.1.10.37</Direct_Dependencies>
       <Direct_Dependencies>jki_lib_serialization-1.0.1.14</Direct_Dependencies>
       <Direct_Dependencies>jki_lib_state_machine-2018.0.7.45</Direct_Dependencies>
       <Direct_Dependencies>jki_lib_unicode-1.0.0.7</Direct_Dependencies>
       <Direct_Dependencies>jki_statemachineobjects-1.4.0.63</Direct_Dependencies>
-      <Direct_Dependencies>labview-zmq-3.5.1.109</Direct_Dependencies>
+      <Direct_Dependencies>labview-zmq-3.6.1.111</Direct_Dependencies>
       <Direct_Dependencies>lava_lib_ui_tools-1.4.1.74</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_control_vi-1.3.0.11</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_fileutilities-1.2.6.13</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_graph_utilities-2.1.7.10</Direct_Dependencies>
-      <Direct_Dependencies>levylab_lib_lvtoitx-3.0.6.14</Direct_Dependencies>
-      <Direct_Dependencies>levylab_lib_postgresql-1.4.0.22</Direct_Dependencies>
+      <Direct_Dependencies>levylab_lib_lvtoitx-3.1.0.1</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_voltage_update-1.0.3.5</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_xy_utilities-1.4.0.17</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_1d_array-1.0.2.3</Direct_Dependencies>
@@ -100,7 +99,7 @@
     </Package_Dependencies>
     <Custom_Action_VIs>
       <Pre-Build_VI/>
-      <Post-Build_VI>Post-Build Custom Action.vi</Post-Build_VI>
+      <Post-Build_VI>..\..\..\..\AppData\Local\Temp\Post-Build Custom Action.vi</Post-Build_VI>
       <Pre-Install_VI/>
       <Post-Install_VI/>
       <Pre-Uninstall_VI/>
@@ -113,21 +112,9 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.14.2]
-- LV2019, Instrument Framework v1.19, SMO v1.4
-- fix Issue #42: error 1077 at startup
-
-[2.14.1]
-- Fix issue with outputs not maintaining value at startup
-- UI changes and improvements
-
-[2.14.0]
-- Updated AO Channels, AI Channels, Reference Channels datatypes: Array of Clusters instead of Cluster of Arrays
-- Updated Lockin Results datatyp: Dictionary; APIs are provided for parsing the dicrtionary
-- Each reference channel has independent control of time constant (Maximum of 4 reference channels)\
-- Individual choice for demodulating each AI Channel (e.g., demodulate each AI with choice of Reference channel, no demodulation, or all demodulation channels)
-- Reset phase option: align AO and Reference phase without resetting DAQ tasks
-- UI improvements</Release_Notes>
+      <Release_Notes>[2.14.4]
+- Instrument Framework v1.10
+- Update Remote Control restart logic</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -202,12 +189,6 @@
         <Additional_Destination>false</Additional_Destination>
         <Additional_Destination_Index>0</Additional_Destination_Index>
       </Destination_Overrides>
-      <Destination_Overrides>
-        <Path>Examples</Path>
-        <Destination>1</Destination>
-        <Additional_Destination>false</Additional_Destination>
-        <Additional_Destination_Index>0</Additional_Destination_Index>
-      </Destination_Overrides>
       <Password_Overrides>
         <Path>.</Path>
         <Password/>
@@ -219,7 +200,7 @@
         <Namespace/>
       </Namespace_Overrides>
     </Source_Files>
-    <License_Agreement_Filepath>..\LICENSE</License_Agreement_Filepath>
+    <License_Agreement_Filepath>..\..\..\..\AppData\Local\LICENSE</License_Agreement_Filepath>
     <Licensing_and_Activation>
       <License_LF_file_path/>
       <Licensed_library_file_path/>
@@ -301,7 +282,7 @@
       <Description/>
       <Synchronization_Info>
         <Synchronyze_with_Directory>false</Synchronyze_with_Directory>
-        <Synchronize_Directory_Path>.</Synchronize_Directory_Path>
+        <Synchronize_Directory_Path>..\..\..\..\AppData\Local\Temp</Synchronize_Directory_Path>
       </Synchronization_Info>
       <Items_Data>
         <Type>Sub Palette</Type>
@@ -314,10 +295,10 @@
           <Column>1</Column>
         </Position>
         <Icon>00000367002900000012000000020000000D00FFFFFF000100000000000A0000000800000000002000200028000000E3000000BD0000000C0007001500180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFF000000000000FFFFFFFFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000000000000000000000FFFFFF000000000000FFFFFFFFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF007F4CFFAAFFECFFA8FFA8FF007F002900000012000000020000000D00CCCCFF000100000000000A00000008001900000020002000280000022C000001F8001900040020001C00180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF9AAA26FF92AA55FF9ABA76FF939255FFD91356FF000000FF</Icon>
-        <Path>..\src\Instrument.Lockin\API</Path>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>CC4611A56E83AA264B16E7A1017501B3</GUID>
+      <GUID>914F8E14CFE13B8F02E215CFD1402546</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -336,50 +317,8 @@
       <Description/>
       <Synchronization_Info>
         <Synchronyze_with_Directory>true</Synchronyze_with_Directory>
-        <Synchronize_Directory_Path>Instrument.Lockin\API</Synchronize_Directory_Path>
+        <Synchronize_Directory_Path>..\..\..\..\AppData\Local\Temp\Instrument.Lockin\API</Synchronize_Directory_Path>
       </Synchronization_Info>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Open.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\Open.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getAOconfig.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>9</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getAOconfig.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getREFconfig.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>9</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getREFconfig.vi</Path>
-        <VI_Title/>
-      </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
@@ -391,21 +330,7 @@
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setREF.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setAO.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>3</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setAO.vi</Path>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API\setREF.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -419,21 +344,7 @@
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setAO_Amp.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setAO_DC.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>5</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setAO_DC.vi</Path>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API\setAO_Amp.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -447,21 +358,7 @@
           <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setAO_f.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setAO_function.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>8</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setAO_function.vi</Path>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API\setAO_f.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -475,21 +372,7 @@
           <Column>7</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setAO_phi.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setREF_phi.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>7</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setREF_phi.vi</Path>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API\setAO_phi.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -503,21 +386,7 @@
           <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setREF_f.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setAUX.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>4</Row>
-          <Column>3</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setAUX.vi</Path>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API\setREF_f.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -531,21 +400,7 @@
           <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getSampling.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setIVmodeConfig.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>5</Row>
-          <Column>5</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setIVmodeConfig.vi</Path>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API\getSampling.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -559,21 +414,7 @@
           <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getIVmode.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setAutoSampling.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>4</Row>
-          <Column>8</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setAutoSampling.vi</Path>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API\getIVmode.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -587,21 +428,7 @@
           <Column>9</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getAutoSampling.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>trigger.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>5</Row>
-          <Column>8</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\trigger.vi</Path>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API\getAutoSampling.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -615,21 +442,7 @@
           <Column>9</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getTrigger.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>waitStatusStarted.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>11</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\waitStatusStarted.vi</Path>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API\getTrigger.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -643,21 +456,7 @@
           <Column>12</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\waitStatusStopped.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>waitStatusSweepingStarted.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>11</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\waitStatusSweepingStarted.vi</Path>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API\waitStatusStopped.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -671,21 +470,7 @@
           <Column>12</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\waitStatusSweepingStopped.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>waitForNewWaveforms.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>4</Row>
-          <Column>12</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\waitForNewWaveforms.vi</Path>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API\waitStatusSweepingStopped.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -699,21 +484,7 @@
           <Column>11</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\waitForNewResults.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getStatus.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>3</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getStatus.vi</Path>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API\waitForNewResults.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -727,49 +498,7 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\reset.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Offset.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\Offset.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setDAQ.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>4</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setDAQ.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getRefreshTime.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>4</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getRefreshTime.vi</Path>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API\reset.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -783,21 +512,7 @@
           <Column>12</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\startIVSweepAndWait.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>startIVAndWait.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>7</Row>
-          <Column>11</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\startIVAndWait.vi</Path>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API\startIVSweepAndWait.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -811,21 +526,7 @@
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setSweepConfiguration.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>startSweep.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>7</Row>
-          <Column>4</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\startSweep.vi</Path>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API\setSweepConfiguration.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -839,21 +540,7 @@
           <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\startSweepAndWait.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>stopSweep.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>7</Row>
-          <Column>6</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\stopSweep.vi</Path>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API\startSweepAndWait.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -867,21 +554,7 @@
           <Column>8</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getSweepWaveforms.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getSweepResults.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>7</Row>
-          <Column>9</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getSweepResults.vi</Path>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API\getSweepWaveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -895,21 +568,7 @@
           <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setSampling.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getAUX.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>4</Row>
-          <Column>4</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getAUX.vi</Path>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API\setSampling.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -923,21 +582,7 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setInputGain.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setOutputGain.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>6</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setOutputGain.vi</Path>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API\setInputGain.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -951,21 +596,7 @@
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getInputGain.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getOutputGain.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>6</Row>
-          <Column>2</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getOutputGain.vi</Path>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API\getInputGain.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -979,21 +610,7 @@
           <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getAO.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getAI.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>6</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getAI.vi</Path>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API\getAO.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1007,21 +624,7 @@
           <Column>7</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getResults.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Parse Results (all).vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>9</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\Parse Results (all).vi</Path>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API\getResults.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1035,21 +638,7 @@
           <Column>8</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\Parse Results (single).vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>waitStatusCreated.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>11</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\waitStatusCreated.vi</Path>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API\Parse Results (single).vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1063,24 +652,52 @@
           <Column>12</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\waitStatusIdle.vi</Path>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API\waitStatusIdle.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Parse Results (table).vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>setDAQ.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>4</Row>
+          <Column>1</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\..\..\..\AppData\Local\src\Instrument.Lockin\API\setDAQ.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>Open.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
           <Row>1</Row>
-          <Column>10</Column>
+          <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\Parse Results (table).vi</Path>
+        <Path>&lt;user.lib&gt;\LevyLab\Levylab Instruments\SMOs\Instrument\API\Open.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>935C56F72757A62909C07882FD2B9380</GUID>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>Close.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>1</Row>
+          <Column>2</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>&lt;user.lib&gt;\LevyLab\Levylab Instruments\SMOs\Instrument\API\Close.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <GUID>A491CEA6CE4FB985CD99AE9FF892E735</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
