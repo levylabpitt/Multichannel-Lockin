@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2021-10-15 15:19:56" Creator="Patrick Irvin" Comments="" ID="1234da258ca96e46c0ed8f992792696a">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2021-08-27 12:47:17" Creator="Patrick Irvin" Comments="" ID="110c24d41a8ecd6befcaf11386036828">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.14.4.70</Library_Version>
+    <Library_Version>2.14.2.66</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -17,20 +17,19 @@
   </Library_General_Settings>
   <Advanced_Settings>
     <Package_Dependencies>
-      <External_Dependencies>jdp_science_jsontext &gt;= 1.6.5.105</External_Dependencies>
-      <External_Dependencies>jdp_science_lib_common_utilities &gt;= 1.3.0.14</External_Dependencies>
-      <External_Dependencies>jdp_science_postgresql &gt;= 0.3.5.23</External_Dependencies>
+      <External_Dependencies>jdp_science_postgresql &gt;= 0.3.4.22</External_Dependencies>
       <External_Dependencies>jki_lib_json_serialization &gt;= 1.1.10.37</External_Dependencies>
       <External_Dependencies>jki_lib_serialization &gt;= 1.0.1.14</External_Dependencies>
       <External_Dependencies>jki_lib_state_machine &gt;= 2018.0.7.45</External_Dependencies>
       <External_Dependencies>jki_lib_unicode &gt;= 1.0.0.7</External_Dependencies>
       <External_Dependencies>jki_statemachineobjects &gt;= 1.4.0.63</External_Dependencies>
-      <External_Dependencies>labview-zmq &gt;= 3.6.1.111</External_Dependencies>
+      <External_Dependencies>labview-zmq &gt;= 3.5.1.109</External_Dependencies>
       <External_Dependencies>lava_lib_ui_tools &gt;= 1.4.1.74</External_Dependencies>
       <External_Dependencies>levylab_lib_control_vi &gt;= 1.3.0.11</External_Dependencies>
       <External_Dependencies>levylab_lib_fileutilities &gt;= 1.2.6.13</External_Dependencies>
       <External_Dependencies>levylab_lib_graph_utilities &gt;= 2.1.7.10</External_Dependencies>
-      <External_Dependencies>levylab_lib_lvtoitx &gt;= 3.1.0.1</External_Dependencies>
+      <External_Dependencies>levylab_lib_lvtoitx &gt;= 3.0.6.14</External_Dependencies>
+      <External_Dependencies>levylab_lib_postgresql &gt;= 1.4.0.22</External_Dependencies>
       <External_Dependencies>levylab_lib_voltage_update &gt;= 1.0.3.5</External_Dependencies>
       <External_Dependencies>levylab_lib_xy_utilities &gt;= 1.4.0.17</External_Dependencies>
       <External_Dependencies>mgi_lib_1d_array &gt;= 1.0.2.3</External_Dependencies>
@@ -58,21 +57,19 @@
       <External_Dependencies>oglib_time &gt;= 4.0.1.3</External_Dependencies>
       <External_Dependencies>oglib_variantconfig &gt;= 4.0.0.5</External_Dependencies>
       <External_Dependencies>wireflow_ab_lib_wf_progressbar &gt;= 1.0.2.56</External_Dependencies>
-      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.10.1.5</Additional_External_Dependencies>
-      <Direct_Dependencies>jdp_science_jsontext-1.6.5.105</Direct_Dependencies>
-      <Direct_Dependencies>jdp_science_lib_common_utilities-1.3.0.14</Direct_Dependencies>
-      <Direct_Dependencies>jdp_science_postgresql-0.3.5.23</Direct_Dependencies>
+      <Direct_Dependencies>jdp_science_postgresql-0.3.4.22</Direct_Dependencies>
       <Direct_Dependencies>jki_lib_json_serialization-1.1.10.37</Direct_Dependencies>
       <Direct_Dependencies>jki_lib_serialization-1.0.1.14</Direct_Dependencies>
       <Direct_Dependencies>jki_lib_state_machine-2018.0.7.45</Direct_Dependencies>
       <Direct_Dependencies>jki_lib_unicode-1.0.0.7</Direct_Dependencies>
       <Direct_Dependencies>jki_statemachineobjects-1.4.0.63</Direct_Dependencies>
-      <Direct_Dependencies>labview-zmq-3.6.1.111</Direct_Dependencies>
+      <Direct_Dependencies>labview-zmq-3.5.1.109</Direct_Dependencies>
       <Direct_Dependencies>lava_lib_ui_tools-1.4.1.74</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_control_vi-1.3.0.11</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_fileutilities-1.2.6.13</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_graph_utilities-2.1.7.10</Direct_Dependencies>
-      <Direct_Dependencies>levylab_lib_lvtoitx-3.1.0.1</Direct_Dependencies>
+      <Direct_Dependencies>levylab_lib_lvtoitx-3.0.6.14</Direct_Dependencies>
+      <Direct_Dependencies>levylab_lib_postgresql-1.4.0.22</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_voltage_update-1.0.3.5</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_xy_utilities-1.4.0.17</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_1d_array-1.0.2.3</Direct_Dependencies>
@@ -116,9 +113,21 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL/>
-      <Release_Notes>[2.14.4]
-- Instrument Framework v1.10
-- Update Remote Control restart logic</Release_Notes>
+      <Release_Notes>[2.14.2]
+- LV2019, Instrument Framework v1.19, SMO v1.4
+- fix Issue #42: error 1077 at startup
+
+[2.14.1]
+- Fix issue with outputs not maintaining value at startup
+- UI changes and improvements
+
+[2.14.0]
+- Updated AO Channels, AI Channels, Reference Channels datatypes: Array of Clusters instead of Cluster of Arrays
+- Updated Lockin Results datatyp: Dictionary; APIs are provided for parsing the dicrtionary
+- Each reference channel has independent control of time constant (Maximum of 4 reference channels)\
+- Individual choice for demodulating each AI Channel (e.g., demodulate each AI with choice of Reference channel, no demodulation, or all demodulation channels)
+- Reset phase option: align AO and Reference phase without resetting DAQ tasks
+- UI improvements</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -308,7 +317,7 @@
         <Path>..\src\Instrument.Lockin\API</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>68C2AE9D9745F2DAB5D4CE7BCC16486D</GUID>
+      <GUID>CC4611A56E83AA264B16E7A1017501B3</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -329,6 +338,34 @@
         <Synchronyze_with_Directory>true</Synchronyze_with_Directory>
         <Synchronize_Directory_Path>Instrument.Lockin\API</Synchronize_Directory_Path>
       </Synchronization_Info>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>Open.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>1</Row>
+          <Column>1</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\Open.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>getAOconfig.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>2</Row>
+          <Column>9</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\getAOconfig.vi</Path>
+        <VI_Title/>
+      </Items_Data>
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
@@ -696,6 +733,34 @@
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>Offset.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>3</Row>
+          <Column>1</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\Offset.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>setDAQ.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>4</Row>
+          <Column>1</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\setDAQ.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
         <NameSub_Menu_Name>getRefreshTime.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
@@ -1015,63 +1080,7 @@
         <Path>..\src\Instrument.Lockin\API\Parse Results (table).vi</Path>
         <VI_Title/>
       </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setDAQ.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>4</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setDAQ.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Open.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>&lt;user.lib&gt;\LevyLab\Levylab Instruments\SMOs\Instrument\API\Open.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Close.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>2</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>&lt;user.lib&gt;\LevyLab\Levylab Instruments\SMOs\Instrument\API\Close.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getAOconfig.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>9</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getAOconfig.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <GUID>C274B339BC4173B4E55DC5AF732C8A12</GUID>
+      <GUID>935C56F72757A62909C07882FD2B9380</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
