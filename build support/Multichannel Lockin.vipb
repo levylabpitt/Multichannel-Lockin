@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2021-10-19 09:15:48" Creator="Patrick Irvin" Comments="" ID="67ea6a9ac3a47d43b52919db5203039b">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2021-11-05 11:30:36" Creator="Patrick Irvin" Comments="" ID="77247fa673921784cea3f6b2303c1a98">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.14.6.72</Library_Version>
+    <Library_Version>2.14.7.74</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -30,7 +30,7 @@
       <External_Dependencies>levylab_lib_control_vi &gt;= 1.3.0.11</External_Dependencies>
       <External_Dependencies>levylab_lib_fileutilities &gt;= 1.2.6.13</External_Dependencies>
       <External_Dependencies>levylab_lib_graph_utilities &gt;= 2.1.7.10</External_Dependencies>
-      <External_Dependencies>levylab_lib_lvtoitx &gt;= 3.1.0.1</External_Dependencies>
+      <External_Dependencies>levylab_lib_lvtoitx &gt;= 3.3.3.7</External_Dependencies>
       <External_Dependencies>levylab_lib_voltage_update &gt;= 1.0.3.5</External_Dependencies>
       <External_Dependencies>levylab_lib_xy_utilities &gt;= 1.4.0.17</External_Dependencies>
       <External_Dependencies>mgi_lib_1d_array &gt;= 1.0.2.3</External_Dependencies>
@@ -58,7 +58,7 @@
       <External_Dependencies>oglib_time &gt;= 4.0.1.3</External_Dependencies>
       <External_Dependencies>oglib_variantconfig &gt;= 4.0.0.5</External_Dependencies>
       <External_Dependencies>wireflow_ab_lib_wf_progressbar &gt;= 1.0.2.56</External_Dependencies>
-      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.10.1.5</Additional_External_Dependencies>
+      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.11.0.8</Additional_External_Dependencies>
       <Direct_Dependencies>jdp_science_jsontext-1.6.5.105</Direct_Dependencies>
       <Direct_Dependencies>jdp_science_lib_common_utilities-1.3.0.14</Direct_Dependencies>
       <Direct_Dependencies>jdp_science_postgresql-0.3.5.23</Direct_Dependencies>
@@ -72,7 +72,7 @@
       <Direct_Dependencies>levylab_lib_control_vi-1.3.0.11</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_fileutilities-1.2.6.13</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_graph_utilities-2.1.7.10</Direct_Dependencies>
-      <Direct_Dependencies>levylab_lib_lvtoitx-3.1.0.1</Direct_Dependencies>
+      <Direct_Dependencies>levylab_lib_lvtoitx-3.3.3.7</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_voltage_update-1.0.3.5</Direct_Dependencies>
       <Direct_Dependencies>levylab_lib_xy_utilities-1.4.0.17</Direct_Dependencies>
       <Direct_Dependencies>mgi_lib_1d_array-1.0.2.3</Direct_Dependencies>
@@ -116,8 +116,10 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>[2.14.6]
-- Fix Issue #47: Handle Command not replying to the proper data cluster</Release_Notes>
+      <Release_Notes>[2.14.7]
+- Update to Instrument Framework v1.11.0
+  - New Open and Close overrides, differene remote control behavior
+- Add shift registers to class wire in "macro" API methods</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -301,7 +303,7 @@
         <Path>..\src\Instrument.Lockin\API</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>31B1B4368B0E198DFE0E2F33420634CB</GUID>
+      <GUID>CE6548D04AB0010E41ABC08CDA5861D8</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1106,7 +1108,7 @@
         <Path>..\src\Instrument.Lockin\API\reset.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>01D6C8B6A01BDB0E2E311BE9B5ECBCF1</GUID>
+      <GUID>D6CA9E3B2C934EC44A2310A0D824DEEB</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
