@@ -132,15 +132,6 @@
 				<Property Name="NI.ClassItem.State" Type="Int">1074278912</Property>
 			</Item>
 		</Item>
-		<Item Name="deleteLockin.getAll--Cluster.ctl" Type="VI" URL="../Typedefs/deleteLockin.getAll--Cluster.ctl">
-			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!"[!!!!!A!71$$`````$5ZP&gt;#"4&gt;8"Q&lt;X*U:71!8!$R!!!!!!!!!!):37ZT&gt;(*V&lt;76O&gt;#Z-&lt;W.L;7YO&lt;(:D&lt;'&amp;T=S6*&lt;H.U=H6N:7ZU,ERP9WNJ&lt;CZH:82"&lt;'QN,5.M&gt;8.U:8)O9X2M!"2!5!!"!!!':W6U17RM!!!"!!%!!!!!</Property>
-			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-			<Property Name="NI.ClassItem.Flags" Type="Int">1048576</Property>
-			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
-			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
-			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-			<Property Name="NI.ClassItem.State" Type="Int">1082143232</Property>
-		</Item>
 		<Item Name="Lockin.getAllData--Cluster.ctl" Type="VI" URL="../Typedefs/Lockin.getAllData--Cluster.ctl">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!,G!!!!&amp;!"B!0%!!!!!!!!!!B*-&lt;W.L;7YO2%&amp;2,GRW9WRB=X-/5X2B&gt;'5N:7ZV&lt;3ZD&gt;'Q!.U!7!!5%;72M:1&gt;D=G6B&gt;'6E"X.U98*U:71(=X2P=("F:!BT&gt;W6F='FO:Q!&amp;=X2B&gt;'5!%%"5!!-)6W&amp;W:7:P=GU!!"2!1!!"`````Q!""E&amp;0)&amp;&gt;'41!!&amp;%"!!!(`````!!%'15EA6U:.!!!51%!!!@````]!!1&gt;3259A6U:.!"*!6!!'#F2J&lt;75A5X2B&lt;8!!!!R!-0````]$;W6Z!!N!#A!&amp;&gt;G&amp;M&gt;75!&amp;%"1!!)!"A!(#7NF?3VW97RV:1!C1%!!!@````]!#"23:8.V&lt;(2T)#B%;7.U;7^O98*Z+1!!2A$R!!!!!!!!!!)34'^D;WFO,E2"53ZM&gt;G.M98.T&amp;&amp;*F=X6M&gt;(-N,5.M&gt;8.U:8)O9X2M!":!5!!#!!5!#1&gt;3:8.V&lt;(2T!"*!6!!$#H.J:WZB&lt;#"P&gt;81!!":!1!!"`````Q!,#&amp;.X:76Q8U&amp;0!!!71%!!!@````]!#QB4&gt;W6F=&amp;^"31!!;!$R!!!!!!!!!!)34'^D;WFO,E2"53ZM&gt;G.M98.T,F"V9GRJ9U6W:7ZU=SUN4'^D;WFO,E2"53ZH:824&gt;W6F=&amp;&gt;B&gt;G6G&lt;X*N=SZD&gt;'Q!(E"1!!)!$!!.$F.X:76Q6W&amp;W:7:P=GVT!!!)1&amp;1!!Q&amp;Y!":!1!!"`````Q!0#6AA=G6T&gt;7RU=Q!71%!!!@````]!$QF:)&amp;*F=X6M&gt;(-!5Q$R!!!!!!!!!!)34'^D;WFO,E2"53ZM&gt;G.M98.T'6.X:76Q5G6T&gt;7RU=SUN1WRV=X2F=CZD&gt;'Q!(E"1!!)!%!!2$ERP9WNJ&lt;C"3:8.V&lt;(2T!!"@!0%!!!!!!!!!!BF*&lt;H.U=H6N:7ZU,ERP9WNJ&lt;CZM&gt;G.M98.T(ERP9WNJ&lt;CZH:82"&lt;'R%982B,3V$&lt;(6T&gt;'6S,G.U&lt;!!?1&amp;!!"Q!!!!)!!Q!%!!I!$A!3"%2B&gt;'%!!!%!%Q!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
@@ -584,33 +575,6 @@
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1107821072</Property>
-		</Item>
-		<Item Name="delete-getTrigger.vi" Type="VI" URL="../API/delete-getTrigger.vi">
-			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%-!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!!R!)1&gt;5=GFH:W6S!$:!=!!?!!!&lt;'5FO=X2S&gt;7VF&lt;H1O4'^D;WFO,GRW9WRB=X-!%5FO=X2S&gt;7VF&lt;H1O4'^D;WFO!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!91$Q!!Q!!Q!%!!5!"A!%!!1!"!!%!!=!"!!%!!9$!!"Y!!!.#!!!!!!!!!E!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!!!!!!!I!!!U!!!!-!!!!!!!!!!!!!!%!#!!!!!!</Property>
-			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
-			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
-			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
-			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-			<Property Name="NI.ClassItem.State" Type="Int">1350574608</Property>
-		</Item>
-		<Item Name="delete-getIVmode.vi" Type="VI" URL="../API/delete-getIVmode.vi">
-			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;+!!!!#A!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!!R!)1&gt;*6C"N&lt;W2F!$J!=!!?!!!&lt;'5FO=X2S&gt;7VF&lt;H1O4'^D;WFO,GRW9WRB=X-!&amp;5FO=X2S&gt;7VF&lt;H1O4'^D;WFO)'^V&gt;!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!$J!=!!?!!!&lt;'5FO=X2S&gt;7VF&lt;H1O4'^D;WFO,GRW9WRB=X-!&amp;%FO=X2S&gt;7VF&lt;H1O4'^D;WFO)'FO!!"B!0!!$!!$!!1!"1!'!!1!"!!%!!1!"Q!%!!1!#!-!!(A!!!U)!!!!!!!!#1!!!!U,!!!!!!!!!!!!!!!!!!!!!!!!#A!!!!!!!!!!!!!!#A!!$1!!!!Q!!!!!!!!!!!!!!1!*!!!!!!</Property>
-			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
-			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
-			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
-			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-			<Property Name="NI.ClassItem.State" Type="Int">1350574608</Property>
-		</Item>
-		<Item Name="delete-setIVmodeConfig.vi" Type="VI" URL="../API/delete-setIVmodeConfig.vi">
-			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;+!!!!#A!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$J!=!!?!!!&lt;'5FO=X2S&gt;7VF&lt;H1O4'^D;WFO,GRW9WRB=X-!&amp;5FO=X2S&gt;7VF&lt;H1O4'^D;WFO)'^V&gt;!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!!R!)1&gt;*6C"N&lt;W2F!$J!=!!?!!!&lt;'5FO=X2S&gt;7VF&lt;H1O4'^D;WFO,GRW9WRB=X-!&amp;%FO=X2S&gt;7VF&lt;H1O4'^D;WFO)'FO!!"B!0!!$!!$!!1!"!!&amp;!!1!"!!%!!1!"A!%!!=!#!-!!(A!!!U)!!!!!!!!!!!!!!U,!!!!!!!!!!!!!!!!!!!!!!!!#A!!!!!!!!!1!!!!#A!!$1!!!!Q!!!!!!!!!!!!!!1!*!!!!!!</Property>
-			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
-			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
-			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
-			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-			<Property Name="NI.ClassItem.State" Type="Int">1350574608</Property>
 		</Item>
 		<Item Name="setSampling.vi" Type="VI" URL="../API/setSampling.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!'1!!!!$!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$J!=!!?!!!&lt;'5FO=X2S&gt;7VF&lt;H1O4'^D;WFO,GRW9WRB=X-!&amp;5FO=X2S&gt;7VF&lt;H1O4'^D;WFO)'^V&gt;!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!!F!#A!#2H-!!!F!!Q!#)X-!!%!!]&gt;MS8[=!!!!#%ERP9WNJ&lt;CZ%16%O&lt;(:D&lt;'&amp;T=QR497VQ&lt;'FO:SZD&gt;'Q!'%"1!!)!"Q!)#&amp;.B&lt;8"M;7ZH!!![1(!!(A!!'RF*&lt;H.U=H6N:7ZU,ERP9WNJ&lt;CZM&gt;G.M98.T!"2*&lt;H.U=H6N:7ZU,ERP9WNJ&lt;C"J&lt;A!!91$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!*!!I$!!"Y!!!.#!!!!!!!!!!!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!%!!!!!I!!!U!!!!-!!!!!!!!!!!!!!%!#Q!!!!!</Property>
