@@ -2078,7 +2078,6 @@
 			<Item Name="GetTemplatePathFromLib.vi" Type="VI" URL="/&lt;resource&gt;/ChannelSupport/_ChannelScriptingSupport/GetTemplatePathFromLib.vi"/>
 			<Item Name="NI_MDF.lvlib" Type="Library" URL="../../../../../../../Program Files (x86)/National Instruments/LabVIEW 2019/applibs/distkit/MDF/NI_MDF.lvlib"/>
 			<Item Name="NIMdf.dll" Type="Document" URL="../../../../../../../Program Files (x86)/National Instruments/LabVIEW 2019/applibs/distkit/MDF/NIMdf.dll"/>
-			<Item Name="deleteLockin.getAll--Cluster.ctl" Type="VI" URL="../Instrument.Lockin/Typedefs/deleteLockin.getAll--Cluster.ctl"/>
 			<Item Name="delete-getTrigger.vi" Type="VI" URL="../Instrument.Lockin/API/delete-getTrigger.vi"/>
 			<Item Name="delete-getIVmode.vi" Type="VI" URL="../Instrument.Lockin/API/delete-getIVmode.vi"/>
 			<Item Name="delete-setIVmodeConfig.vi" Type="VI" URL="../Instrument.Lockin/API/delete-setIVmodeConfig.vi"/>
