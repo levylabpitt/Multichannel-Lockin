@@ -24,36 +24,9 @@
 			<Item Name="Example_IV_Curves.vi" Type="VI" URL="../Examples/Example_IV_Curves.vi"/>
 			<Item Name="Example_Lockin.vi" Type="VI" URL="../Examples/Example_Lockin.vi"/>
 		</Item>
-		<Item Name="Tests" Type="Folder">
-			<Item Name="Test API" Type="Folder">
-				<Item Name="Tests" Type="Folder">
-					<Item Name="Test Modes.vi" Type="VI" URL="../../Tests/Test API/Test Modes.vi"/>
-					<Item Name="Test AO Configuration.vi" Type="VI" URL="../../Tests/Test API/Test AO Configuration.vi"/>
-					<Item Name="Test Gain.vi" Type="VI" URL="../../Tests/Test API/Test Gain.vi"/>
-					<Item Name="Test REF Configuration.vi" Type="VI" URL="../../Tests/Test API/Test REF Configuration.vi"/>
-					<Item Name="Test Sampling.vi" Type="VI" URL="../../Tests/Test API/Test Sampling.vi"/>
-					<Item Name="Test Data.vi" Type="VI" URL="../../Tests/Test API/Test Data.vi"/>
-					<Item Name="Test Data 2.vi" Type="VI" URL="../../Tests/Test API/Test Data 2.vi"/>
-				</Item>
-				<Item Name="Test Lockin API.vi" Type="VI" URL="../../Tests/Test API/Test Lockin API.vi"/>
-			</Item>
-			<Item Name="Metrics" Type="Folder">
-				<Item Name="Lockin_Metrics.vi" Type="VI" URL="../../Tests/Expt/Lockin_Metrics.vi"/>
-				<Item Name="Lockin_Metrics_Results.vi" Type="VI" URL="../../Tests/Expt/Lockin_Metrics_Results.vi"/>
-				<Item Name="446xAntiAliasSimulator.vi" Type="VI" URL="../../Tests/Expt/446xAntiAliasSimulator.vi"/>
-				<Item Name="Lockin Noise Measurement.vi" Type="VI" URL="../../Tests/Expt/Lockin Noise Measurement.vi"/>
-				<Item Name="serialize_test.vi" Type="VI" URL="../../Tests/Expt/serialize_test.vi"/>
-			</Item>
-			<Item Name="API Tree.vi" Type="VI" URL="../../Tests/Test API/API Tree.vi"/>
-			<Item Name="Test Waveguide Model.vi" Type="VI" URL="../../Tests/Test Waveguide Model.vi"/>
-			<Item Name="Test Lockin API State Machine.vi" Type="VI" URL="../../Tests/Test Lockin API State Machine.vi"/>
-			<Item Name="Test Sweep Mode vs Lockin_Vsg.vi" Type="VI" URL="../../Tests/Test Sweep Mode vs Lockin_Vsg.vi"/>
-			<Item Name="Test EXE.vi" Type="VI" URL="../../Tests/Test EXE.vi"/>
-			<Item Name="Build Test EXE.vi" Type="VI" URL="../../Tests/Build Test EXE.vi"/>
-		</Item>
 		<Item Name="Instrument.Lockin.lvclass" Type="LVClass" URL="../Instrument.Lockin/Instrument.Lockin.lvclass"/>
-		<Item Name="Instrument.Lockin.UI.lvclass" Type="LVClass" URL="../Instrument.Lockinl.UI/Instrument.Lockin.UI.lvclass"/>
-		<Item Name="Lockin.DAQ.lvclass" Type="LVClass" URL="../Lockin.DAQ/Lockin.DAQ.lvclass"/>
+		<Item Name="Instrument UI.Lockin.lvclass" Type="LVClass" URL="../Instrument UI.Lockin/Instrument UI.Lockin.lvclass"/>
+		<Item Name="Instrument.DAQ.lvclass" Type="LVClass" URL="../Instrument.DAQ/Instrument.DAQ.lvclass"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="Array Size(s)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Array Size(s)__ogtk.vi"/>
@@ -409,16 +382,11 @@
 				<Item Name="1D Array to String__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/string/string.llb/1D Array to String__ogtk.vi"/>
 				<Item Name="Random Number Within Range - I32__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/numeric/numeric.llb/Random Number Within Range - I32__ogtk.vi"/>
 				<Item Name="Filter Error Codes__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/error/error.llb/Filter Error Codes__ogtk.vi"/>
-				<Item Name="Max_Min_conversion.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Control VI/SubVIs/Max_Min_conversion.vi"/>
 				<Item Name="Random Number Within Range__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/numeric/numeric.llb/Random Number Within Range__ogtk.vi"/>
 				<Item Name="Wait (ms)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/time/time.llb/Wait (ms)__ogtk.vi"/>
 				<Item Name="Tick Count (ms)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/time/time.llb/Tick Count (ms)__ogtk.vi"/>
 				<Item Name="MGI Get Executable Version.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Application Control/MGI Get Executable Version.vi"/>
-				<Item Name="Ramp.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Control VI/Ramp.vi"/>
 				<Item Name="Ramp_SubVI.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Control VI/Other/Ramp_SubVI.vi"/>
-				<Item Name="Format Path and Filename.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/LV to ITX/util/Format Path and Filename.vi"/>
-				<Item Name="XY Plot Commands.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/LV to ITX/util/XY Plot Commands.vi"/>
-				<Item Name="LV to ITX 2.2 XY.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/LV to ITX/Main/LV to ITX 2.2 XY.vi"/>
 				<Item Name="Logger.PGSQL.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/Levylab Instruments/SMOs/Logger.PGSQL/Logger.PGSQL.lvclass"/>
 				<Item Name="Search or Split String__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/string/string.llb/Search or Split String__ogtk.vi"/>
 				<Item Name="String to 1D Array__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/string/string.llb/String to 1D Array__ogtk.vi"/>
@@ -1849,8 +1817,8 @@
 			<Item Name="shell32.dll" Type="Document" URL="shell32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="Waveform Circular Buffer.vi" Type="VI" URL="../Lockin.DAQ/DAQ/Waveform Circular Buffer.vi"/>
-			<Item Name="PrivateEvents--LockinDAQ.Calibrate.ctl" Type="VI" URL="../Lockin.DAQ/Typedefs/PrivateEvents--LockinDAQ.Calibrate.ctl"/>
+			<Item Name="Waveform Circular Buffer.vi" Type="VI" URL="../Instrument.DAQ/DAQ/Waveform Circular Buffer.vi"/>
+			<Item Name="PrivateEvents--LockinDAQ.Calibrate.ctl" Type="VI" URL="../Instrument.DAQ/Typedefs/PrivateEvents--LockinDAQ.Calibrate.ctl"/>
 			<Item Name="nilvaiu.dll" Type="Document" URL="nilvaiu.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
@@ -2078,8 +2046,6 @@
 			<Item Name="GetTemplatePathFromLib.vi" Type="VI" URL="/&lt;resource&gt;/ChannelSupport/_ChannelScriptingSupport/GetTemplatePathFromLib.vi"/>
 			<Item Name="NI_MDF.lvlib" Type="Library" URL="../../../../../../../Program Files (x86)/National Instruments/LabVIEW 2019/applibs/distkit/MDF/NI_MDF.lvlib"/>
 			<Item Name="NIMdf.dll" Type="Document" URL="../../../../../../../Program Files (x86)/National Instruments/LabVIEW 2019/applibs/distkit/MDF/NIMdf.dll"/>
-			<Item Name="delete-getTrigger.vi" Type="VI" URL="../Instrument.Lockin/API/delete-getTrigger.vi"/>
-			<Item Name="delete-getIVmode.vi" Type="VI" URL="../Instrument.Lockin/API/delete-getIVmode.vi"/>
 			<Item Name="delete-setIVmodeConfig.vi" Type="VI" URL="../Instrument.Lockin/API/delete-setIVmodeConfig.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
@@ -2116,7 +2082,7 @@
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[2].itemID" Type="Ref">/My Computer/Lockin.DAQ.lvclass</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/Instrument.DAQ.lvclass</Property>
 				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[2].type" Type="Str">Library</Property>
 				<Property Name="SourceCount" Type="Int">3</Property>
@@ -2253,7 +2219,7 @@
 				<Property Name="Source[0].itemID" Type="Str">{225AE409-5E84-4BEF-A130-9CC3E6BFF118}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Tests/Test EXE.vi</Property>
+				<Property Name="Source[1].itemID" Type="Ref"></Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
 				<Property Name="SourceCount" Type="Int">2</Property>
