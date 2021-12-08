@@ -2047,6 +2047,10 @@
 			<Item Name="NI_MDF.lvlib" Type="Library" URL="../../../../../../../Program Files (x86)/National Instruments/LabVIEW 2019/applibs/distkit/MDF/NI_MDF.lvlib"/>
 			<Item Name="NIMdf.dll" Type="Document" URL="../../../../../../../Program Files (x86)/National Instruments/LabVIEW 2019/applibs/distkit/MDF/NIMdf.dll"/>
 			<Item Name="delete-setIVmodeConfig.vi" Type="VI" URL="../Instrument.Lockin/API/delete-setIVmodeConfig.vi"/>
+			<Item Name="deleteDAQ.getAI.vi" Type="VI" URL="../Instrument.DAQ/private/deleteDAQ.getAI.vi"/>
+			<Item Name="deleteDAQ.getAO.vi" Type="VI" URL="../Instrument.DAQ/private/deleteDAQ.getAO.vi"/>
+			<Item Name="delete_SweepResults--Cluster.ctl" Type="VI" URL="../Instrument.DAQ/Typedefs/delete_SweepResults--Cluster.ctl"/>
+			<Item Name="delete_SweepResults--Cluster.ctl" Type="Document"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lockin Application" Type="EXE">
