@@ -31,14 +31,15 @@
 			<Item Name="Scope.lvclass" Type="LVClass" URL="../SMOs/Scope/Scope.lvclass"/>
 		</Item>
 		<Item Name="UI" Type="Folder">
-			<Item Name="UI_Main.lvclass" Type="LVClass" URL="../SMOs/UI_Main_Test/UI_Main.lvclass"/>
-			<Item Name="UI_DAQ_config.lvclass" Type="LVClass" URL="../SMOs/UI_DAQ_config/UI_DAQ_config.lvclass"/>
-			<Item Name="UI_DSP_Config.lvclass" Type="LVClass" URL="../SMOs/UI_DSP_Config/UI_DSP_Config.lvclass"/>
-			<Item Name="UI_Generator_Config.lvclass" Type="LVClass" URL="../SMOs/UI_Generator_Config/UI_Generator_Config.lvclass"/>
-			<Item Name="UI_Scope.lvclass" Type="LVClass" URL="../SMOs/UI_Scope/UI_Scope.lvclass"/>
+			<Item Name="UI.Lockin.lvclass" Type="LVClass" URL="../SMOs/UI.Lockin/UI.Lockin.lvclass"/>
+			<Item Name="UI.Lockin.DAQ_config.lvclass" Type="LVClass" URL="../SMOs/UI_DAQ_config/UI.Lockin.DAQ_config.lvclass"/>
+			<Item Name="UI.Lockin.DSP_Config.lvclass" Type="LVClass" URL="../SMOs/UI_DSP_Config/UI.Lockin.DSP_Config.lvclass"/>
+			<Item Name="UI.Lockin.Generator_Config.lvclass" Type="LVClass" URL="../SMOs/UI_Generator_Config/UI.Lockin.Generator_Config.lvclass"/>
+			<Item Name="UI.Lockin.Scope.lvclass" Type="LVClass" URL="../SMOs/UI_Scope/UI.Lockin.Scope.lvclass"/>
 		</Item>
 		<Item Name="multichannel-lockin.lvclass" Type="LVClass" URL="../SMOs/lockin/multichannel-lockin.lvclass"/>
 		<Item Name="AppLauncher.vi" Type="VI" URL="../AppLauncher.vi"/>
+		<Item Name="Multichannel.LIA.AppLauncher.vi" Type="VI" URL="../Multichannel.LIA.AppLauncher.vi"/>
 		<Item Name="ToDo-2018-03-23.vi" Type="VI" URL="../ToDo-2018-03-23.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -1167,7 +1168,6 @@
 			<Item Name="mscorlib" Type="VI" URL="mscorlib">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="delete-instrument.lvclass" Type="LVClass" URL="../SMOs/instrument/delete-instrument.lvclass"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
