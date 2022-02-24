@@ -322,7 +322,6 @@
 				<Item Name="Search 1D Array (String)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/array/array.llb/Search 1D Array (String)__ogtk.vi"/>
 				<Item Name="Configuration.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/Instrument Framework/SMOs/Configuration/Configuration.lvclass"/>
 				<Item Name="PostBuildSupport.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/Build Support/PostBuildSupport/PostBuildSupport.lvclass"/>
-				<Item Name="Current VIs Reference__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/appcontrol/appcontrol.llb/Current VIs Reference__ogtk.vi"/>
 				<Item Name="RemoteControl.ZMQ.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/Instrument Framework/SMOs/RemoteControl.ZMQ/RemoteControl.ZMQ.lvclass"/>
 				<Item Name="JSON-RPC.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/Instrument Framework/SMOs/JSON-RPC/JSON-RPC/JSON-RPC.lvclass"/>
 				<Item Name="Random Number Within Range__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/numeric/numeric.llb/Random Number Within Range__ogtk.vi"/>
@@ -463,6 +462,55 @@
 				<Item Name="Instrument.CBridge.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/Instrument Framework/Instrument Types/CBridge/Instrument.CBridge.lvclass"/>
 				<Item Name="Instrument.Strain.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/Instrument Framework/Instrument Types/Strain/Instrument.Strain.lvclass"/>
 				<Item Name="Instrument.DelayLine.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/LevyLab/Instrument Framework/Instrument Types/Delay Line/Instrument.DelayLine.lvclass"/>
+				<Item Name="AI.coupling-enum.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Lockin.DAQ/Typedefs/AI.coupling-enum.ctl"/>
+				<Item Name="446xAI-enum.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Lockin.DAQ/Typedefs/446xAI-enum.ctl"/>
+				<Item Name="446xAO-enum.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Lockin.DAQ/Typedefs/446xAO-enum.ctl"/>
+				<Item Name="Sweep Pattern--Enum.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Lockin.DAQ/Typedefs/Sweep Pattern--Enum.ctl"/>
+				<Item Name="Sweep Channel--Cluster.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockinl.UI/Typedefs/Sweep Channel--Cluster.ctl"/>
+				<Item Name="write_lockin_FP_DSC.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Lockin.DAQ/DAQ/support/write_lockin_FP_DSC.vi"/>
+				<Item Name="read_lockin_FP_DSC.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Lockin.DAQ/DAQ/support/read_lockin_FP_DSC.vi"/>
+				<Item Name="Lockin.Read Configuration.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/Private/Lockin.Read Configuration.vi"/>
+				<Item Name="Lockin.DAQ.GetPublicEvents.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Lockin.DAQ/API/Lockin.DAQ.GetPublicEvents.vi"/>
+				<Item Name="Lockin.DAQ.setSampling.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Lockin.DAQ/API/Lockin.DAQ.setSampling.vi"/>
+				<Item Name="Lockin.DAQ.setstate.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Lockin.DAQ/API/Lockin.DAQ.setstate.vi"/>
+				<Item Name="Lockin.DAQ.setREF.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Lockin.DAQ/API/Lockin.DAQ.setREF.vi"/>
+				<Item Name="Lockin.DAQ.setAO.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Lockin.DAQ/API/Lockin.DAQ.setAO.vi"/>
+				<Item Name="Lockin.DAQ.setAOconfig.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Lockin.DAQ/API/Lockin.DAQ.setAOconfig.vi"/>
+				<Item Name="Lockin.DAQ.setAIconfig.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Lockin.DAQ/API/Lockin.DAQ.setAIconfig.vi"/>
+				<Item Name="Lockin.DAQ.setInputGain.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Lockin.DAQ/API/Lockin.DAQ.setInputGain.vi"/>
+				<Item Name="Set State-enum.ctl" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Lockin.DAQ/Typedefs/Set State-enum.ctl"/>
+				<Item Name="Write AO WFM.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/API (Class)/Write AO WFM.vi"/>
+				<Item Name="Write AI WFM.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/API (Class)/Write AI WFM.vi"/>
+				<Item Name="Write REF WFM.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/API (Class)/Write REF WFM.vi"/>
+				<Item Name="Write Results.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/API (Class)/Write Results.vi"/>
+				<Item Name="Write Channels_ AO.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/API (Class)/Write Channels_ AO.vi"/>
+				<Item Name="Write Channels_ REF.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/API (Class)/Write Channels_ REF.vi"/>
+				<Item Name="Write AO Configuration.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/API (Class)/Write AO Configuration.vi"/>
+				<Item Name="Write AI Configuration.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/API (Class)/Write AI Configuration.vi"/>
+				<Item Name="Write sampling.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/API (Class)/Write sampling.vi"/>
+				<Item Name="Write Input Gain.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/API (Class)/Write Input Gain.vi"/>
+				<Item Name="Lockin.DAQ.zeroOffset.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Lockin.DAQ/API/Lockin.DAQ.zeroOffset.vi"/>
+				<Item Name="Lockin.DAQ.measureOffset.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Lockin.DAQ/API/Lockin.DAQ.measureOffset.vi"/>
+				<Item Name="Lockin.DAQ.setPreFilter.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Lockin.DAQ/API/Lockin.DAQ.setPreFilter.vi"/>
+				<Item Name="Y Axis Output WFM Graph.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockinl.UI/private/Y Axis Output WFM Graph.vi"/>
+				<Item Name="X Axis WFM Graph.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockinl.UI/private/X Axis WFM Graph.vi"/>
+				<Item Name="Lockin.DAQ.autoConfigureDAQ.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Lockin.DAQ/API/Lockin.DAQ.autoConfigureDAQ.vi"/>
+				<Item Name="Lockin.DAQ.setCalibration.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Lockin.DAQ/API/Lockin.DAQ.setCalibration.vi"/>
+				<Item Name="Write Output Gain.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/API (Class)/Write Output Gain.vi"/>
+				<Item Name="Lockin.DAQ.setOutputGain.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Lockin.DAQ/API/Lockin.DAQ.setOutputGain.vi"/>
+				<Item Name="Legend - WaveformChart.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/UI/Legend - WaveformChart.vi"/>
+				<Item Name="Legend - XYGraph.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/UI/Legend - XYGraph.vi"/>
+				<Item Name="Legend - WaveformGraph.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/UI/Legend - WaveformGraph.vi"/>
+				<Item Name="Legend - WDTWaveformGraph.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/UI/Legend - WDTWaveformGraph.vi"/>
+				<Item Name="Lockin.DAQ.setAI.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Lockin.DAQ/Lockin.DAQ.setAI.vi"/>
+				<Item Name="Lockin.DAQ.ResetPhase.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Lockin.DAQ/Lockin.DAQ.ResetPhase.vi"/>
+				<Item Name="Plots Visible - All or None - WaveformGraph.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/UI/Plots Visible - All or None - WaveformGraph.vi"/>
+				<Item Name="Plots Visible - All or None - WaveformChart.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/UI/Plots Visible - All or None - WaveformChart.vi"/>
+				<Item Name="Plots Visible - All or None - XYGraph.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/UI/Plots Visible - All or None - XYGraph.vi"/>
+				<Item Name="Get Plot Visibility - WaveformChart.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/UI/Get Plot Visibility - WaveformChart.vi"/>
+				<Item Name="Set Plot Visibility - XYGraph.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/UI/Set Plot Visibility - XYGraph.vi"/>
+				<Item Name="Set Plot Visibility - WaveformGraph.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/UI/Set Plot Visibility - WaveformGraph.vi"/>
+				<Item Name="Set Plot Visibility - WaveformChart.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Instrument.Lockin/UI/Set Plot Visibility - WaveformChart.vi"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
