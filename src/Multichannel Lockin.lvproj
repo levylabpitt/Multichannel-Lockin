@@ -2002,6 +2002,7 @@
 			<Item Name="mscorlib" Type="VI" URL="mscorlib">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="DELETE_Lockin.Auto Sample Mode--Enum.ctl" Type="VI" URL="../Instrument.Lockin/Typedefs/DELETE_Lockin.Auto Sample Mode--Enum.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lockin Application" Type="EXE">
