@@ -21,6 +21,12 @@
 			<Item Name="Manual Post Build.vi" Type="VI" URL="../../build support/Manual Post Build.vi"/>
 		</Item>
 		<Item Name="Examples" Type="Folder">
+			<Item Name="Multi-Device Sync - DSA Analog Input and Output Using a Shared Timebase &amp; Trigger with DAQmx" Type="Folder">
+				<Item Name="Get_Terminal_Name_with_Device_Prefix.vi" Type="VI" URL="../Examples/Multi-Device Sync - DSA Analog Input and Output Using a Shared Timebase &amp; Trigger with DAQmx/Get_Terminal_Name_with_Device_Prefix.vi"/>
+				<Item Name="Multi-Device_Sync-AI_and_AO-Shared_Timebase_&amp;_Trig-DSA.html" Type="Document" URL="../Examples/Multi-Device Sync - DSA Analog Input and Output Using a Shared Timebase &amp; Trigger with DAQmx/Multi-Device_Sync-AI_and_AO-Shared_Timebase_&amp;_Trig-DSA.html"/>
+				<Item Name="Multi-Device_Sync-AI_and_AO-Shared_Timebase_&amp;_Trig-DSA.vi" Type="VI" URL="../Examples/Multi-Device Sync - DSA Analog Input and Output Using a Shared Timebase &amp; Trigger with DAQmx/Multi-Device_Sync-AI_and_AO-Shared_Timebase_&amp;_Trig-DSA.vi"/>
+				<Item Name="Waveform_Buffer_Generation.vi" Type="VI" URL="../Examples/Multi-Device Sync - DSA Analog Input and Output Using a Shared Timebase &amp; Trigger with DAQmx/Waveform_Buffer_Generation.vi"/>
+			</Item>
 			<Item Name="Example_IV_Curves.vi" Type="VI" URL="../Examples/Example_IV_Curves.vi"/>
 			<Item Name="Example_Lockin.vi" Type="VI" URL="../Examples/Example_Lockin.vi"/>
 		</Item>
@@ -1724,6 +1730,7 @@
 				<Item Name="Caraya Interactive Menu.rtm" Type="Document" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/menu/Caraya Interactive Menu.rtm"/>
 				<Item Name="JKI Unicode.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/_JKI.lib/Unicode/JKI Unicode.lvlib"/>
 				<Item Name="LVDateTimeRec.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVDateTimeRec.ctl"/>
+				<Item Name="DAQmx Is Task Done.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/task.llb/DAQmx Is Task Done.vi"/>
 			</Item>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="LVDFD.dll" Type="Document" URL="/&lt;resource&gt;/LVDFD.dll"/>
