@@ -71,12 +71,6 @@
 		<Item Name="Instrument.Lockin.lvclass" Type="LVClass" URL="../Instrument.Lockin/Instrument.Lockin.lvclass"/>
 		<Item Name="Instrument UI.Lockin.lvclass" Type="LVClass" URL="../Instrument UI.Lockin/Instrument UI.Lockin.lvclass"/>
 		<Item Name="Instrument.DAQ.lvclass" Type="LVClass" URL="../Instrument.DAQ/Instrument.DAQ.lvclass"/>
-		<Item Name="Test 2 2022-03-25.vi" Type="VI" URL="../../../../../Desktop/Test 2 2022-03-25.vi"/>
-		<Item Name="Test 3 2022-03-25 - lockin tab open.vi" Type="VI" URL="../../../../../Desktop/Test 3 2022-03-25 - lockin tab open.vi"/>
-		<Item Name="Test 4 2022-03-26 - display tab open.vi" Type="VI" URL="../../../../../Desktop/Test 4 2022-03-26 - display tab open.vi"/>
-		<Item Name="Test 5 2022-03-26.vi" Type="VI" URL="../../../../../Desktop/Test 5 2022-03-26.vi"/>
-		<Item Name="Test 6 2022-03-26.vi" Type="VI" URL="../../../../../Desktop/Test 6 2022-03-26.vi"/>
-		<Item Name="Test 7 2022-03-26.vi" Type="VI" URL="../../../../../Desktop/Test 7 2022-03-26.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="Array Size(s)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Array Size(s)__ogtk.vi"/>
