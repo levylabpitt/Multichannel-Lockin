@@ -241,8 +241,8 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1082130960</Property>
 		</Item>
-		<Item Name="Get Plot Visibility (WFChart).vi" Type="VI" URL="../private/Get Plot Visibility (WFChart).vi">
-			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%J!!!!$1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!%E!B$6"M&lt;X1O6GFT;7*M:4]!%5!$!!N"9X2J&gt;G5A5'RP&gt;!!%!!!!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!.1!-!"U&amp;D&gt;&amp;"M&lt;X1!%%"5!!-)6W&amp;W:7:P=GU!!!Q!1!!"`````Q!*!#"!=!!)!!%!#A!8!!!16W&amp;W:7:P=GV$;'&amp;S&gt;#"J&lt;A!!6!$Q!!Q!!Q!%!!5!"A!'!!9!"A!'!!=!"A!)!!M$!!"Y!!!.#!!!#1!!!!U+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!#!!!!!A!!!!!!1!-!!!!!!</Property>
+		<Item Name="Get Plot Visibility (WFGraph).vi" Type="VI" URL="../private/Get Plot Visibility (WFGraph).vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%D!!!!$1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!%E!B$6"M&lt;X1O6GFT;7*M:4]!%5!$!!N"9X2J&gt;G5A5'RP&gt;!!%!!!!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!.1!-!"U&amp;D&gt;&amp;"M&lt;X1!%%"5!!-)6W&amp;W:7:P=GU!!!Q!1!!"`````Q!*!"J!=!!)!!%!#A!9!!!+6U:(=G&amp;Q;#"J&lt;A!!6!$Q!!Q!!Q!%!!5!"A!'!!9!"A!'!!=!"A!)!!M$!!"Y!!!.#!!!#1!!!!U+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!#!!!!!A!!!!!!1!-!!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
 			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
@@ -250,8 +250,8 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1082130960</Property>
 		</Item>
-		<Item Name="Get Plot Visibility (WFGraph).vi" Type="VI" URL="../private/Get Plot Visibility (WFGraph).vi">
-			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%D!!!!$1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!%E!B$6"M&lt;X1O6GFT;7*M:4]!%5!$!!N"9X2J&gt;G5A5'RP&gt;!!%!!!!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!.1!-!"U&amp;D&gt;&amp;"M&lt;X1!%%"5!!-)6W&amp;W:7:P=GU!!!Q!1!!"`````Q!*!"J!=!!)!!%!#A!9!!!+6U:(=G&amp;Q;#"J&lt;A!!6!$Q!!Q!!Q!%!!5!"A!'!!9!"A!'!!=!"A!)!!M$!!"Y!!!.#!!!#1!!!!U+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!#!!!!!A!!!!!!1!-!!!!!!</Property>
+		<Item Name="Get Plot Visibility (WFChart).vi" Type="VI" URL="../private/Get Plot Visibility (WFChart).vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%J!!!!$1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!%E!B$6"M&lt;X1O6GFT;7*M:4]!%5!$!!N"9X2J&gt;G5A5'RP&gt;!!%!!!!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!.1!-!"U&amp;D&gt;&amp;"M&lt;X1!%%"5!!-)6W&amp;W:7:P=GU!!!Q!1!!"`````Q!*!#"!=!!)!!%!#A!8!!!16W&amp;W:7:P=GV$;'&amp;S&gt;#"J&lt;A!!6!$Q!!Q!!Q!%!!5!"A!'!!9!"A!'!!=!"A!)!!M$!!"Y!!!.#!!!#1!!!!U+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!#!!!!!A!!!!!!1!-!!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
 			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
@@ -267,6 +267,15 @@
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1082130960</Property>
+		</Item>
+		<Item Name="Set Plot Visibility (WDTWFGraph).vi" Type="VI" URL="../private/Set Plot Visibility (WDTWFGraph).vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;K!!!!%1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!"&amp;!!Q!,17.U;8:F)&amp;"M&lt;X1!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!31#%.5'RP&gt;#Z7;8.J9GRF0Q!.1!-!"U&amp;D&gt;&amp;"M&lt;X1!#5!+!!*G-!!!#5!+!!*E:A!!$5!+!!&gt;/&gt;7VF=GFD!":!1!!"`````Q!,#7VB:WZJ&gt;(6E:1!=1&amp;!!!Q!*!!I!$!ZQ&lt;X&gt;F=C"T='6D&gt;(*V&lt;1!!$!"!!!(`````!!U!)%"Q!!A!!1!/!"A!!""82E&gt;S98"I)#B82&amp;1J)'FO!!"5!0!!$!!$!!1!"1!%!!1!"!!%!!1!"A!(!!A!$Q-!!(A!!!U)!!!!!!!!$1I!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#A!!!!A!!!!)!!!!#!!!!!!"!"!!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1342710288</Property>
 		</Item>
 		<Item Name="Set Plot Visibility (WFChart).vi" Type="VI" URL="../private/Set Plot Visibility (WFChart).vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%J!!!!$1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!"&amp;!!Q!,17.U;8:F)&amp;"M&lt;X1!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!31#%.5'RP&gt;#Z7;8.J9GRF0Q!.1!-!"U&amp;D&gt;&amp;"M&lt;X1!%%"5!!-)6W&amp;W:7:P=GU!!!Q!1!!"`````Q!*!#"!=!!)!!%!#A!8!!!16W&amp;W:7:P=GV$;'&amp;S&gt;#"J&lt;A!!6!$Q!!Q!!Q!%!!5!"!!%!!1!"!!%!!9!"Q!)!!M$!!"Y!!!.#!!!!!!!!!U+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!I!!!!)!!!!#!!!!!A!!!!!!1!-!!!!!!</Property>
@@ -512,7 +521,7 @@
 		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">false</Property>
 		<Property Name="NI.ClassItem.MethodScope" Type="UInt">3</Property>
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-		<Property Name="NI.ClassItem.State" Type="Int">1115685392</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">1107821072</Property>
 		<Property Name="NI.LibItem.Scope" Type="Int">3</Property>
 	</Item>
 	<Item Name="Instrument UI.Lockin.TestLauncher.vi" Type="VI" URL="../Instrument UI.Lockin.TestLauncher.vi">
