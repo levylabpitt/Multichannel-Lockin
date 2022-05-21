@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2022-04-21 19:21:41" Creator="Patrick Irvin" Comments="" ID="adebf961e9834e2a8f313d3a5846141d">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2022-05-21 07:49:20" Creator="Patrick Irvin" Comments="" ID="70259ee4d3795e6d50aee35e930f6f6b">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.15.0.2</Library_Version>
+    <Library_Version>2.15.0.3</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -35,7 +35,9 @@
       <Packager>Patrick Irvin</Packager>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
       <Release_Notes>[2.15.0]
-- First release *inheriting* from the Instrument Framework (v1.11.3.2) (Issue #41)! </Release_Notes>
+- First release *inheriting* from the Instrument Framework (v1.11.3.2) (Issue #41)! 
+- Issue #52: Add support for a mix of real devices (with multiple chassis) and simulated devices (or both)
+- Issue #53: UI updates</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -961,7 +963,7 @@
         <Path>..\src\Instrument.Lockin\API\getInputGain.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B801CB984089125F9CB2B81BDD83A16F</GUID>
+      <GUID>F98ED6E0D647462397B9C78D95A616B3</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
