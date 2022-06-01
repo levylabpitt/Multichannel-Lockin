@@ -70,7 +70,6 @@
 		<Item Name="Instrument.Lockin.lvclass" Type="LVClass" URL="../Instrument.Lockin/Instrument.Lockin.lvclass"/>
 		<Item Name="Instrument UI.Lockin.lvclass" Type="LVClass" URL="../Instrument UI.Lockin/Instrument UI.Lockin.lvclass"/>
 		<Item Name="Instrument.DAQ.lvclass" Type="LVClass" URL="../Instrument.DAQ/Instrument.DAQ.lvclass"/>
-		<Item Name="Sayanwitas Data Analysis.vi" Type="VI" URL="../../../../../Desktop/Sayanwitas Data Analysis.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="Array Size(s)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Array Size(s)__ogtk.vi"/>
@@ -502,12 +501,6 @@
 				<Item Name="LV to ITX 2.2 XY.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/LV to ITX/Main/LV to ITX 2.2 XY.vi"/>
 				<Item Name="Format Path and Filename.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/LV to ITX/util/Format Path and Filename.vi"/>
 				<Item Name="XY Plot Commands.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/LV to ITX/util/XY Plot Commands.vi"/>
-				<Item Name="Close Generic Object Refnum (Scalar)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/appcontrol/appcontrol.llb/Close Generic Object Refnum (Scalar)__ogtk.vi"/>
-				<Item Name="Close Generic Object Refnum (Array)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/appcontrol/appcontrol.llb/Close Generic Object Refnum (Array)__ogtk.vi"/>
-				<Item Name="Close Generic Object Refnum (Array VI)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/appcontrol/appcontrol.llb/Close Generic Object Refnum (Array VI)__ogtk.vi"/>
-				<Item Name="Close Generic Object Refnum (Scalar VI)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/appcontrol/appcontrol.llb/Close Generic Object Refnum (Scalar VI)__ogtk.vi"/>
-				<Item Name="Close Generic Object Refnum__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/appcontrol/appcontrol.llb/Close Generic Object Refnum__ogtk.vi"/>
-				<Item Name="Fit VI window to Content__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/appcontrol/appcontrol.llb/Fit VI window to Content__ogtk.vi"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
@@ -2007,6 +2000,9 @@
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="System" Type="VI" URL="System">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 		</Item>
