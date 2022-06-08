@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2022-06-01 10:12:14" Creator="Patrick Irvin" Comments="" ID="5165abdb99add5f593dd241f4553c346">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2022-06-07 19:38:47" Creator="Patrick Irvin" Comments="" ID="af343bb624cfe84825d25ec8671d18e7">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.15.0.4</Library_Version>
+    <Library_Version>2.15.1.1</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -37,16 +37,8 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>[2.15.0]
-- First release *inheriting* from the Instrument Framework (v1.11.3.2) (Issue #41)! 
-- Issue #52: Add support for a mix of real devices (with multiple chassis) and simulated devices (or both)
-- Issue #53: UI updates
-- Issue #55: fix spelling errors
-- Issue #56: fixes related to sweep API
-- Issue #58: fix sweep control enable/disable
-- Issue #59: change sweep control channel ring to numeric
-- Issue #60: Remove redundant sampling controls
-- Fix issue with ADC/DAC filter delay
+      <Release_Notes>- Update to Instrument Framework v1.12.1
+- Fix version number display
 
 #### Dependencies
 - Please ensure that [Visual C++ Redistributable Packages for Visual Studio 2013 (32 bit / x86)](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is installed.
@@ -976,7 +968,7 @@
         <Path>..\src\Instrument.Lockin\API\getInputGain.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>48DF3676B0DBBB09C495454ABE389393</GUID>
+      <GUID>F4C1A4F031B7BF143BE959D7D74BBB3D</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
