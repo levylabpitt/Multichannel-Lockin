@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2022-06-08 18:29:54" Creator="Patrick Irvin" Comments="" ID="f23b8ffc2158de3474986954a3ff0f5f">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2022-06-13 21:45:01" Creator="Patrick Irvin" Comments="" ID="cbace323c3488d2701d46f6660aabb42">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
     <Library_Version>2.15.1.7</Library_Version>
@@ -17,7 +17,7 @@
   </Library_General_Settings>
   <Advanced_Settings>
     <Package_Dependencies>
-      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.11.3.2</Additional_External_Dependencies>
+      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.12.1.2</Additional_External_Dependencies>
     </Package_Dependencies>
     <Custom_Action_VIs>
       <Pre-Build_VI/>
@@ -968,7 +968,7 @@
         <Path>..\src\Instrument.Lockin\API\getInputGain.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>EF310FFA570A4A306E8EFC4D9EC180EB</GUID>
+      <GUID>6E0E104E76A1B1ACF6BEE9DFD035945A</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
