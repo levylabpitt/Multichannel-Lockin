@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2022-06-13 22:45:49" Creator="Patrick Irvin" Comments="" ID="9f761b96156515b20d2f542f25d1c589">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2022-06-17 17:45:13" Creator="Patrick Irvin" Comments="" ID="134a584e26a93106a7e84a367b6f6582">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.15.1.8</Library_Version>
+    <Library_Version>2.15.2.2</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -37,8 +37,9 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>- Update to Instrument Framework v1.12.1
-- Fix version number display
+      <Release_Notes>- This release should fix a long-standing issue in which there would be a phase shift when Fs/#s /= integer multiple of f_REF
+- Issue #61: Fix issues with sweep buffer
+- Issue #62: Fix device enumeration
 
 #### Dependencies
 - Please ensure that [Visual C++ Redistributable Packages for Visual Studio 2013 (32 bit / x86)](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is installed.
@@ -968,7 +969,7 @@
         <Path>..\src\Instrument.Lockin\API\getInputGain.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>0C5258EC814E6A6B05832E0E216D526F</GUID>
+      <GUID>4ACD87175352F39A5F4B1E31DD6430B1</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
