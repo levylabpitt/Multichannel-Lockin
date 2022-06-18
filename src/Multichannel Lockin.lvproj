@@ -2035,7 +2035,7 @@
 				<Property Name="Destination[1].path" Type="Path">../builds/Application/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/build support/Lockin-Multichannel.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{F4CDB291-3A18-4D49-ABAF-E9458154BB66}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{8EDAD331-4EF6-469D-B1DC-4AE58123248A}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Instrument.DAQ.lvclass</Property>
@@ -2050,11 +2050,11 @@
 				<Property Name="Source[3].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[3].type" Type="Str">VI</Property>
 				<Property Name="SourceCount" Type="Int">4</Property>
-				<Property Name="TgtF_companyName" Type="Str">Levylab</Property>
+				<Property Name="TgtF_companyName" Type="Str">LevyLab</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">Multichannel Lockin for National Instrument Dynamic Signal Acquisition hardware (4431, 4461, 4462). This version is configured to handle multiple cards for simultaneous, synchronized AI/AO. You can configure a number of analog outputs (8 or more) to output sine, square, sawtooth, or triangle functions with DC offsets. Each of the analog inputs (8 or more) can be demodulated at multiple frequencies.</Property>
 				<Property Name="TgtF_internalName" Type="Str">Multichannel Lockin Application</Property>
-				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2019 Levylab</Property>
-				<Property Name="TgtF_productName" Type="Str">Multichannel Lockin</Property>
+				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2022 Levylab</Property>
+				<Property Name="TgtF_productName" Type="Str">Multichannel Lock-In</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{F79A4A16-E3DA-45EF-AF6E-CE1DFAF4A4BE}</Property>
 				<Property Name="TgtF_targetfileName" Type="Str">Multichannel Lockin.exe</Property>
 			</Item>
@@ -2132,7 +2132,7 @@
 				<Property Name="INST_buildSpecName" Type="Str">Multichannel Lockin Installer</Property>
 				<Property Name="INST_defaultDir" Type="Str">{A127CC0D-3099-41C3-8104-2245C476C6E9}</Property>
 				<Property Name="INST_installerName" Type="Str">setup.exe</Property>
-				<Property Name="INST_productName" Type="Str">Multichannel Lockin</Property>
+				<Property Name="INST_productName" Type="Str">Multichannel Lock-In</Property>
 				<Property Name="INST_productVersion" Type="Str">2.15.2</Property>
 				<Property Name="InstSpecBitness" Type="Str">32-bit</Property>
 				<Property Name="InstSpecVersion" Type="Str">19018009</Property>
@@ -2160,7 +2160,7 @@
 				<Property Name="Source[0].File[0].dest" Type="Str">{A127CC0D-3099-41C3-8104-2245C476C6E9}</Property>
 				<Property Name="Source[0].File[0].name" Type="Str">Multichannel Lockin.exe</Property>
 				<Property Name="Source[0].File[0].Shortcut[0].destIndex" Type="Int">2</Property>
-				<Property Name="Source[0].File[0].Shortcut[0].name" Type="Str">Multichannel Lockin</Property>
+				<Property Name="Source[0].File[0].Shortcut[0].name" Type="Str">Multichannel Lock-In</Property>
 				<Property Name="Source[0].File[0].Shortcut[0].subDir" Type="Str">LevyLab</Property>
 				<Property Name="Source[0].File[0].ShortcutCount" Type="Int">1</Property>
 				<Property Name="Source[0].File[0].tag" Type="Str">{F79A4A16-E3DA-45EF-AF6E-CE1DFAF4A4BE}</Property>
