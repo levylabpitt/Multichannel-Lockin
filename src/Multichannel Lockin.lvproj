@@ -895,15 +895,6 @@
 				<Item Name="DAQmx Start Trigger (Time).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/trigger.llb/DAQmx Start Trigger (Time).vi"/>
 				<Item Name="DAQmx Start Trigger (Analog Multi Edge).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/trigger.llb/DAQmx Start Trigger (Analog Multi Edge).vi"/>
 				<Item Name="DAQmx Reference Trigger (Analog Multi Edge).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/trigger.llb/DAQmx Reference Trigger (Analog Multi Edge).vi"/>
-				<Item Name="remez_single band description.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/Digital Filter Design/_REMEZ.llb/remez_single band description.ctl"/>
-				<Item Name="remez_band specification.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/Digital Filter Design/_REMEZ.llb/remez_band specification.ctl"/>
-				<Item Name="remez_fir order and types.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/Digital Filter Design/_REMEZ.llb/remez_fir order and types.ctl"/>
-				<Item Name="remez_Filter Design Info.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/Digital Filter Design/_REMEZ.llb/remez_Filter Design Info.ctl"/>
-				<Item Name="remez_Filter Specification Parsing States.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/Digital Filter Design/_REMEZ.llb/remez_Filter Specification Parsing States.ctl"/>
-				<Item Name="remez_Filter Implementation Info.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/Digital Filter Design/_REMEZ.llb/remez_Filter Implementation Info.ctl"/>
-				<Item Name="NI_AAL_Filter.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AAL_Filter.lvlib"/>
-				<Item Name="dfd_Mutate Filter Obj QSetting 0x100 to 0x200.vi" Type="VI" URL="/&lt;vilib&gt;/addons/Digital Filter Design/_Objects.llb/dfd_Mutate Filter Obj QSetting 0x100 to 0x200.vi"/>
-				<Item Name="NI_DigFilter_FXP.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Digital Filter Design/NI_DigFilter_FXP.lvlib"/>
 				<Item Name="Parse State Queue__jki_lib_state_machine.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/State Machine/_JKI_lib_State_Machine.llb/Parse State Queue__jki_lib_state_machine.vi"/>
 				<Item Name="Add State(s) to Queue__jki_lib_state_machine.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/State Machine/_JKI_lib_State_Machine.llb/Add State(s) to Queue__jki_lib_state_machine.vi"/>
 				<Item Name="NI_AB_API_EXE.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/AppBuilder/AB_API/EXE/NI_AB_API_EXE.lvclass"/>
@@ -1732,6 +1723,16 @@
 				<Item Name="nisyscfg.lvlib" Type="Library" URL="/&lt;vilib&gt;/nisyscfg/nisyscfg.lvlib"/>
 				<Item Name="Base64 Support.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JDP Science Common Utilities/Base64/Base64 Support.lvlib"/>
 				<Item Name="RandomStringGenerator.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/LabVIEW Open Source Project/Unicity/RandomStringGenerator/RandomStringGenerator.lvclass"/>
+				<Item Name="LVMapReplaceAction.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVMapReplaceAction.ctl"/>
+				<Item Name="remez_fir order and types.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/Digital Filter Design/_REMEZ.llb/remez_fir order and types.ctl"/>
+				<Item Name="remez_band specification.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/Digital Filter Design/_REMEZ.llb/remez_band specification.ctl"/>
+				<Item Name="remez_single band description.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/Digital Filter Design/_REMEZ.llb/remez_single band description.ctl"/>
+				<Item Name="remez_Filter Implementation Info.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/Digital Filter Design/_REMEZ.llb/remez_Filter Implementation Info.ctl"/>
+				<Item Name="remez_Filter Design Info.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/Digital Filter Design/_REMEZ.llb/remez_Filter Design Info.ctl"/>
+				<Item Name="remez_Filter Specification Parsing States.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/Digital Filter Design/_REMEZ.llb/remez_Filter Specification Parsing States.ctl"/>
+				<Item Name="NI_AAL_Filter.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AAL_Filter.lvlib"/>
+				<Item Name="dfd_Mutate Filter Obj QSetting 0x100 to 0x200.vi" Type="VI" URL="/&lt;vilib&gt;/addons/Digital Filter Design/_Objects.llb/dfd_Mutate Filter Obj QSetting 0x100 to 0x200.vi"/>
+				<Item Name="NI_DigFilter_FXP.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Digital Filter Design/NI_DigFilter_FXP.lvlib"/>
 			</Item>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="LVDFD.dll" Type="Document" URL="/&lt;resource&gt;/LVDFD.dll"/>
