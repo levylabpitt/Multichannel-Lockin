@@ -1160,7 +1160,7 @@
 			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-			<Property Name="NI.ClassItem.State" Type="Int">1342710272</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1074536964</Property>
 		</Item>
 		<Item Name="AO Array Add or Remove.vi" Type="VI" URL="../private/AO Array Add or Remove.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!+?!!!!%Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!!R!)1&gt;&amp;&lt;G&amp;C&lt;'5`!!V!!Q!(1WBB&lt;GZF&lt;!!01!I!#5&amp;N='RJ&gt;(6E:1!.1!I!"E^G:H.F&gt;!!!$U!+!!F'=G6R&gt;76O9XE!#U!+!!61;'&amp;T:1"I!0(=&gt;][I!!!!!B:*&lt;H.U=H6N:7ZU,E2"53ZM&gt;G.M98.T(5&amp;0,E.I97ZO:7QO2H6O9X2J&lt;WYN,56O&gt;7UO9X2M!#N!&amp;A!$"&amp;.J&lt;G5)6(*J97ZH&lt;'5'5X&amp;V98*F!!!)2H6O9X2J&lt;WY!!!Z!)1F4&gt;W6F='FO:T]!61$RXDP\9Q!!!!)737ZT&gt;(*V&lt;76O&gt;#Z%16%O&lt;(:D&lt;'&amp;T=R&gt;"4SZ$;'&amp;O&lt;G6M,3V$&lt;(6T&gt;'6S,G.U&lt;!!?1&amp;!!#!!&amp;!!9!"Q!)!!E!#A!,!!Q#15]!!&amp;Y!]1!!!!!!!!!#&amp;EFO=X2S&gt;7VF&lt;H1O2%&amp;2,GRW9WRB=X-?15]O1WBB&lt;GZF&lt;#UN1WRV=X2F=CUN18*S98EO9X2M!#"!1!!"`````Q!.$U&amp;0)%.I97ZO:7RT)'^V&gt;!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!!N!!Q!%5WF[:1!!8A$R!!!!!!!!!!)737ZT&gt;(*V&lt;76O&gt;#Z%16%O&lt;(:D&lt;'&amp;T=RZ"4SZ$;'&amp;O&lt;G6M,3V$&lt;(6T&gt;'6S,3V"=H*B?3ZD&gt;'Q!)%"!!!(`````!!U/15]A1WBB&lt;GZF&lt;(-A;7Y!!&amp;1!]!!-!!-!"!!%!!Y!"!!%!!1!"!!0!!1!%!!2!A!!?!!!$1A!!!!!!!!!!!!!#1!!!!!!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!!I!!!%+!!!!!!%!%A!!!!!</Property>
@@ -1224,6 +1224,15 @@
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1342972416</Property>
+		</Item>
+		<Item Name="Initialize Sweep Channels.vi" Type="VI" URL="../private/Initialize Sweep Channels.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%S!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$:!=!!?!!!9&amp;EFO=X2S&gt;7VF&lt;H1O2%&amp;2,GRW9WRB=X-!!"**&lt;H.U=H6N:7ZU,E2"53"P&gt;81!!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!-E"Q!"Y!!"A737ZT&gt;(*V&lt;76O&gt;#Z%16%O&lt;(:D&lt;'&amp;T=Q!!$EFO=X2S&gt;7VF&lt;H1O2%&amp;2!!"B!0!!$!!$!!1!"!!&amp;!!1!"!!%!!1!"A!%!!1!"Q)!!(A!!!U)!!!!!!!!!!!!!!U,!!!!!!!!!!!!!!!!!!!!!!!!#!!!!!!!!!!!!!!!#A!!$1!!!!Q!!!!!!!!!!!!!!1!)!!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1107821056</Property>
 		</Item>
 		<Item Name="Get DAQ Offset.vi" Type="VI" URL="../DAQ/support/Get DAQ Offset.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;2!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!!N!#A!%2W&amp;J&lt;A!!&amp;%"!!!(`````!!5(4W:G=W6U=Q!W1(!!(A!!'":*&lt;H.U=H6N:7ZU,E2"53ZM&gt;G.M98.T!!!337ZT&gt;(*V&lt;76O&gt;#Z%16%A&lt;X6U!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!$*!=!!?!!!9&amp;EFO=X2S&gt;7VF&lt;H1O2%&amp;2,GRW9WRB=X-!!!Z*&lt;H.U=H6N:7ZU,E2"51!!91$Q!!Q!!Q!%!!9!"Q!%!!1!"!!%!!A!"!!%!!E#!!"Y!!!.#!!!!!!!!!E!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!A!!!!!!!!!!!!!!!A!!!U!!!!-!!!!!!!!!!!!!!%!#A!!!!!</Property>
