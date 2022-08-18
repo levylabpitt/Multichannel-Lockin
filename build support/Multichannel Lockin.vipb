@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2022-08-17 13:23:35" Creator="Patrick Irvin" Comments="" ID="f87d5ebca2e1dd765ed2576d9dc09666">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2022-08-18 12:16:27" Creator="Patrick Irvin" Comments="" ID="798296af1d3cb7f34cfd879c509049df">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.15.3.2</Library_Version>
+    <Library_Version>2.15.3.3</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -37,7 +37,7 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>- Issue #63: Implement arbitrary sweep "table" support.
+      <Release_Notes>- Issue #63: Implement arbitrary sweep table support.
   - Rudimentary tables can be created inside the UI (e.g., [0,1,2,0])
   - More complicated arbitrary waveforms can be loaded via the API "setSweepTable" method
 - Issue #64: implement output sampling rate to avoid memory overflow errors during sweep mode
@@ -1013,7 +1013,7 @@
         <Path>..\src\Instrument.Lockin\API\State\getStatus.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E748F7B3B3BDBF614EB55F520CC728C3</GUID>
+      <GUID>3F5AEC34794233D45E7E86EACF83070F</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
