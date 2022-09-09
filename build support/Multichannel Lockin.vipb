@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2022-09-07 07:52:14" Creator="Patrick Irvin" Comments="" ID="f7226eb3a9f0e841736f3139159db840">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2022-09-08 21:38:09" Creator="Patrick Irvin" Comments="" ID="e8e2066a687f5f3aa1b4aabcdbc99765">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.15.3.15</Library_Version>
+    <Library_Version>2.15.3.16</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -17,7 +17,7 @@
   </Library_General_Settings>
   <Advanced_Settings>
     <Package_Dependencies>
-      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.12.4.1</Additional_External_Dependencies>
+      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.12.5.3</Additional_External_Dependencies>
     </Package_Dependencies>
     <Custom_Action_VIs>
       <Pre-Build_VI/>
@@ -45,7 +45,7 @@
 - Fix issues with measuring offset; updated notch filter
 - Updated waveguide model (AI1 gain)
 - Miscellaneous bugfixes and UI improvements (add show/hide DAQ UI button)
-- Update to Instrument Framework v1.12.4
+- Update to Instrument Framework v1.12.5
 
 #### Dependencies
 - Please ensure that [Visual C++ Redistributable Packages for Visual Studio 2013 (32 bit / x86)](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is installed.
@@ -1017,7 +1017,7 @@
         <Path>..\src\Instrument.Lockin\API\State\getStatus.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>74FD03A10A74CAD6FA293D2DE24DCB76</GUID>
+      <GUID>9ED0D1F8D374E00BC95D54D2F45CE1D4</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
