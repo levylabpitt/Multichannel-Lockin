@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2022-09-14 10:08:25" Creator="Patrick Irvin" Comments="" ID="1a71d9bb2266205f908842b5180a9d0a">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2023-07-14 13:44:05" Creator="Patrick Irvin" Comments="" ID="e2f2da32154df1bd19ff3506c718adf7">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.15.3.18</Library_Version>
+    <Library_Version>2.15.4.1</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -37,15 +37,19 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>- Issue #63: Implement arbitrary sweep table support.
-  - Rudimentary tables can be created inside the UI (e.g., [0,1,2,0])
-  - More complicated arbitrary waveforms can be loaded via the API "setSweepTable" method
-- Issue #64: implement output sampling rate to avoid memory overflow errors during sweep mode
-- Issue #65: better support for USB-4431 Devices
-- Fix issues with measuring offset; updated notch filter
-- Updated waveguide model (AI1 gain)
-- Miscellaneous bugfixes and UI improvements (add show/hide DAQ UI button)
-- Update to Instrument Framework v1.12.5
+      <Release_Notes>[2.15.4]
+Issues:
+- Issue #54: plot name issue (possible fix)
+- Issue #66: calibration status issue (possible fix)
+- Issue #71: fix issue with number of displayed significant digits in sweep time
+- Issue #72: sweeping a non existent table the lockin will give a popup warning and abort the sweep
+- Issue #75: (partial) improvement to lockin DSP
+- Issue #76: getStatus API has short timeout to varify connection to lock-in
+
+
+Other bug fixes:
+- (possible) improvements to phase shift vs frequency issue
+- Enumerate Chassis.vi is more reliable
 
 #### Dependencies
 - Please ensure that [Visual C++ Redistributable Packages for Visual Studio 2013 (32 bit / x86)](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is installed.
@@ -190,6 +194,7 @@
       <close_labview_before_install>false</close_labview_before_install>
       <restart_labview_after_install>false</restart_labview_after_install>
       <skip_mass_compile_after_install>false</skip_mass_compile_after_install>
+      <install_into_global_environment>false</install_into_global_environment>
     </LabVIEW>
     <VI_Docs>
       <Edit_VI_Description>false</Edit_VI_Description>
@@ -1017,7 +1022,7 @@
         <Path>..\src\Instrument.Lockin\API\State\getStatus.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>2396527D9C500FBE2AC6DCEB895E87F7</GUID>
+      <GUID>D3D20C4C777320B2F815C93968F17B9A</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
