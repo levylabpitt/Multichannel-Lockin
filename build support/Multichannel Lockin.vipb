@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2023-07-26 10:57:37" Creator="Patrick Irvin" Comments="" ID="418d44712f2a51661654f1b19d620d23">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2023-07-27 18:16:40" Creator="Patrick Irvin" Comments="" ID="eefc62af86bea7f5df0bac657399aef7">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.15.4.1</Library_Version>
+    <Library_Version>2.15.4.2</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -1021,7 +1021,7 @@ Other bug fixes:
         <Path>..\src\Instrument.Lockin\API\State\getStatus.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F886CE69740D3F0204A63948655193C4</GUID>
+      <GUID>2864B5D8139D18696679E06A0D42A3A8</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
