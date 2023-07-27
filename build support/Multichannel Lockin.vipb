@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2023-07-14 13:44:05" Creator="Patrick Irvin" Comments="" ID="e2f2da32154df1bd19ff3506c718adf7">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2023-07-27 18:16:40" Creator="Patrick Irvin" Comments="" ID="eefc62af86bea7f5df0bac657399aef7">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.15.4.1</Library_Version>
+    <Library_Version>2.15.4.2</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -17,7 +17,7 @@
   </Library_General_Settings>
   <Advanced_Settings>
     <Package_Dependencies>
-      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.12.5.3</Additional_External_Dependencies>
+      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.13.0.8</Additional_External_Dependencies>
     </Package_Dependencies>
     <Custom_Action_VIs>
       <Pre-Build_VI/>
@@ -44,8 +44,7 @@ Issues:
 - Issue #71: fix issue with number of displayed significant digits in sweep time
 - Issue #72: sweeping a non existent table the lockin will give a popup warning and abort the sweep
 - Issue #75: (partial) improvement to lockin DSP
-- Issue #76: getStatus API has short timeout to varify connection to lock-in
-
+- Issue #76: getStatus API has short timeout in order to quickly verify connection to lock-in
 
 Other bug fixes:
 - (possible) improvements to phase shift vs frequency issue
@@ -1022,7 +1021,7 @@ Other bug fixes:
         <Path>..\src\Instrument.Lockin\API\State\getStatus.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>D3D20C4C777320B2F815C93968F17B9A</GUID>
+      <GUID>2864B5D8139D18696679E06A0D42A3A8</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
