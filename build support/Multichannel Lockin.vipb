@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2023-07-27 18:16:40" Creator="Patrick Irvin" Comments="" ID="eefc62af86bea7f5df0bac657399aef7">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2023-09-06 13:05:23" Creator="Patrick Irvin" Comments="" ID="68455ecea6aceda64108cc729f4a4275">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
     <Library_Version>2.15.4.2</Library_Version>
@@ -17,7 +17,7 @@
   </Library_General_Settings>
   <Advanced_Settings>
     <Package_Dependencies>
-      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.13.0.8</Additional_External_Dependencies>
+      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.13.0.9</Additional_External_Dependencies>
     </Package_Dependencies>
     <Custom_Action_VIs>
       <Pre-Build_VI/>
@@ -45,6 +45,7 @@ Issues:
 - Issue #72: sweeping a non existent table the lockin will give a popup warning and abort the sweep
 - Issue #75: (partial) improvement to lockin DSP
 - Issue #76: getStatus API has short timeout in order to quickly verify connection to lock-in
+- Issue #77: fix issue where sweep data was not being saved correctly
 
 Other bug fixes:
 - (possible) improvements to phase shift vs frequency issue
@@ -1021,7 +1022,7 @@ Other bug fixes:
         <Path>..\src\Instrument.Lockin\API\State\getStatus.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>2864B5D8139D18696679E06A0D42A3A8</GUID>
+      <GUID>0A0DC4055D0A1CDEBE965FE424586E3E</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
