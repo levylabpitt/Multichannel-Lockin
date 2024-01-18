@@ -502,6 +502,15 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1117782528</Property>
 		</Item>
+		<Item Name="Instrument UI.Lockin.State History.vi" Type="VI" URL="../private/Instrument UI.Lockin.State History.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!#B!!!!"1!%!!!!%%!Q`````Q&gt;);8.U&lt;X*Z!"N!!Q!5;'FT&gt;'^S?3"M:7ZH&gt;'AA+$%Q-#E!!":!-0````].1X6S=G6O&gt;#"4&gt;'&amp;U:1"5!0!!$!!!!!!!!!!"!!!!!!!!!!)!!!!!!!!!!Q)!!(A!!!!!!!!!!!!!!!!!!!E!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!!!!!!!!!!!##!!!!!!"!!1!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">32</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1074278912</Property>
+		</Item>
 	</Item>
 	<Item Name="Tests" Type="Folder">
 		<Item Name="sandbox.vi" Type="VI" URL="../Tests/sandbox.vi">
