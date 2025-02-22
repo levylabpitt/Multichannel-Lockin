@@ -468,6 +468,7 @@
 				<Item Name="RemoteControl.ZMQ.lvlib" Type="Library" URL="/&lt;userlib&gt;/LevyLab/RemoteControl.ZMQ/RemoteControl.ZMQ.lvlib"/>
 				<Item Name="Instrument.lvlib" Type="Library" URL="/&lt;userlib&gt;/LevyLab/Instrument Framework/Instrument.lvlib"/>
 				<Item Name="Powershell Terminal.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Build Support/G-CLI/Powershell Terminal.vi"/>
+				<Item Name="enum to string.vim" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Instrument Framework/enum to string.vim"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
