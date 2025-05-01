@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-03-12 08:41:59" Creator="Patrick Irvin" Comments="" ID="6f7f2469a7c82a32e576d7c30cb7ee34">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-04-30 22:56:53" Creator="Patrick Irvin" Comments="" ID="39fa40e26f5ae7d40ece331455b5704d">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.20.0.6</Library_Version>
+    <Library_Version>2.20.1.6</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -37,17 +37,9 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>[2.20.0]
+      <Release_Notes>[2.20.1]
 Issues:
-- #78: differential/pseudodifferential can be selected on advanced tab in DAQ window
-- #85: preliminary support for logging to a postgres database. Note that in this release the database tables are hardcoded; this will be remedied in a future release.
-- #86: retrieve Chassis and DAQ card serial numbers
-- #89: Sampling APIs supported: setSampling [Fs and N], (get)setSampleFsMode {Manual, Auto Fs, Max Fs}, fix setREF_TC
-- #90: coerce Fs output s.t. Fs/N &lt;= Fs output &lt;= Fs
-- #91: updated API names
-- #92: enable 64 bit builds
-- #94: upgrade to Instrument Framework v1.14/v2.0
-
+- #96: change to Instrument Framework 1.15 / SMO 1.4
 #### Dependencies
 - Please ensure that [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is installed. The bitness must match the application you're targeting.
 </Release_Notes>
@@ -977,7 +969,7 @@ Issues:
         <Path>..\src\Instrument.Lockin\API\Lockin.HELP.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>9BF62FC7D4B21A1247E3965163F1E2CA</GUID>
+      <GUID>95AE55F32178BF45D6F9FE6D7C1A43DC</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
