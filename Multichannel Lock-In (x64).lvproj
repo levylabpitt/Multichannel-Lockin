@@ -1830,6 +1830,9 @@
 			</Item>
 			<Item Name="NI_MDF.lvlib" Type="Library" URL="../../../../../../../Program Files/National Instruments/LabVIEW 2019/applibs/distkit/MDF/NI_MDF.lvlib"/>
 			<Item Name="NIMdf.dll" Type="Document" URL="../../../../../../../Program Files/National Instruments/LabVIEW 2019/applibs/distkit/MDF/NIMdf.dll"/>
+			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lock-In (x64) Application" Type="EXE">
@@ -1846,7 +1849,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{BE714A7E-B7D4-4888-A1F2-966F210EC573}</Property>
-				<Property Name="Bld_version.build" Type="Int">6</Property>
+				<Property Name="Bld_version.build" Type="Int">8</Property>
 				<Property Name="Bld_version.major" Type="Int">2</Property>
 				<Property Name="Bld_version.minor" Type="Int">20</Property>
 				<Property Name="Bld_version.patch" Type="Int">1</Property>
