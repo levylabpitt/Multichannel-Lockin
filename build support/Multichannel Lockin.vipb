@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-05-01 00:37:25" Creator="Patrick Irvin" Comments="" ID="b323b777529b2c68466c2d5255c7bbe3">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-05-01 22:58:03" Creator="Patrick Irvin" Comments="" ID="6ace26dac5775a7174e0ef90d0c2027d">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.20.1.7</Library_Version>
+    <Library_Version>2.20.1.8</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -969,7 +969,7 @@ Issues:
         <Path>..\src\Instrument.Lockin\API\Lockin.HELP.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B6CB4695AA43B10F8A65396B67B78D05</GUID>
+      <GUID>7F6CFEC20E9F504B9393C9ED68EC3B0D</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
