@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-05-06 09:50:32" Creator="Patrick Irvin" Comments="" ID="1bedc7cc0d701b8b8ea45d917895fa74">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-05-21 18:18:08" Creator="Patrick Irvin" Comments="" ID="c74175b675d87d337198ab4e619154f9">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.20.1.11</Library_Version>
+    <Library_Version>2.20.2.11</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -37,9 +37,11 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>[2.20.1]
+      <Release_Notes>[2.20.2]
 Issues:
-- #96: change to Instrument Framework 1.15 / SMO 1.4
+#97 Fix IDN query
+#98: Disable logging if device array is not initialized or data arrays are empty
+#99: API methods that use parent API overrides should also use parent typedefs
 
 #### Dependencies
 - Please ensure that [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is installed. The bitness must match the application you're targeting.
@@ -366,20 +368,6 @@ Issues:
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\Instrument.Lockin\API\REF\setREF_TC.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getREF.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>8</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\REF\getREF.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -970,7 +958,21 @@ Issues:
         <Path>..\src\Instrument.Lockin\API\Lockin.HELP.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>2A7D09674980B9E4B4657A41E84713AF</GUID>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>getREFconfig.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>3</Row>
+          <Column>8</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\REF\getREFconfig.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <GUID>BEC57CEE9DAAE0422CC7120BA8A19C54</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
