@@ -18,6 +18,7 @@
 			<Item Name="Lockin-Multichannel-64.ico" Type="Document" URL="../build support/Lockin-Multichannel-64.ico"/>
 			<Item Name="Multichannel Lockin.vipb" Type="Document" URL="../build support/Multichannel Lockin.vipb"/>
 			<Item Name="Multichannel Lockin.vipc" Type="Document" URL="../build support/Multichannel Lockin.vipc"/>
+			<Item Name="Pre-Build Custom Action.vi" Type="VI" URL="../build support/Pre-Build Custom Action.vi"/>
 			<Item Name="Post-Build Custom Action.vi" Type="VI" URL="../build support/Post-Build Custom Action.vi"/>
 			<Item Name="Manual Post Build.vi" Type="VI" URL="../build support/Manual Post Build.vi"/>
 		</Item>

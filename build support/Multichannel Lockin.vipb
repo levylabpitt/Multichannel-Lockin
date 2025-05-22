@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-05-21 19:00:26" Creator="Patrick Irvin" Comments="" ID="e06c738ca251eebe7ca97e630fa3e91d">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-05-22 09:11:45" Creator="Patrick Irvin" Comments="" ID="3a9ef8e6ca2cfd801b441b6265fd7247">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.20.2.12</Library_Version>
+    <Library_Version>2.20.3.12</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -17,10 +17,10 @@
   </Library_General_Settings>
   <Advanced_Settings>
     <Package_Dependencies>
-      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.15.0.33</Additional_External_Dependencies>
+      <Additional_External_Dependencies>levylab_lib_instrument_type &gt;=1.1.3.10</Additional_External_Dependencies>
     </Package_Dependencies>
     <Custom_Action_VIs>
-      <Pre-Build_VI/>
+      <Pre-Build_VI>Pre-Build Custom Action.vi</Pre-Build_VI>
       <Post-Build_VI>Post-Build Custom Action.vi</Post-Build_VI>
       <Pre-Install_VI/>
       <Post-Install_VI/>
@@ -37,11 +37,8 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>[2.20.2]
-Issues:
-#97 Fix IDN query
-#98: Disable logging if device array is not initialized or data arrays are empty
-#99: API methods that use parent API overrides should also use parent typedefs
+      <Release_Notes>[2.20.3]
+- #100 Fix display version number
 
 #### Dependencies
 - Please ensure that [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is installed. The bitness must match the application you're targeting.
@@ -972,7 +969,7 @@ Issues:
         <Path>..\src\Instrument.Lockin\API\REF\getREFconfig.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>4B32242A0337FC3C21FB29C18A939B29</GUID>
+      <GUID>F346EBD4673C3C9EFFE901C6A378627B</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
