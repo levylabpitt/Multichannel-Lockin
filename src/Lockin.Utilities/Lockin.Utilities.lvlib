@@ -6,5 +6,6 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">419463168</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Item Name="Application Version.vi" Type="VI" URL="../Application Version.vi"/>
 	<Item Name="Lockin.Local Client.vim" Type="VI" URL="../Lockin.Local Client.vim"/>
 </Library>
