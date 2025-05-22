@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-05-22 09:11:45" Creator="Patrick Irvin" Comments="" ID="3a9ef8e6ca2cfd801b441b6265fd7247">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-05-22 09:53:45" Creator="Patrick Irvin" Comments="" ID="2991905db4260e7c1d8976e4d354a258">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.20.3.12</Library_Version>
+    <Library_Version>2.20.3.13</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -969,7 +969,7 @@
         <Path>..\src\Instrument.Lockin\API\REF\getREFconfig.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F346EBD4673C3C9EFFE901C6A378627B</GUID>
+      <GUID>4C2903AAAA79F23DF9D465B4B53183B2</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
