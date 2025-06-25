@@ -1,0 +1,3 @@
+[project]
+labview-version = 2019
+vipc = 'build support\Multichannel Lockin.vipc'
