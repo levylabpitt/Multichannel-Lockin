@@ -72,6 +72,7 @@
 			<Item Name="Untitled 1.vi" Type="VI" URL="../src/Instrument.DAQ/Tests/Untitled 1.vi"/>
 		</Item>
 		<Item Name="Instrument.Lockin.lvlib" Type="Library" URL="../src/Instrument.Lockin.lvlib"/>
+		<Item Name="Untitled 3.vi" Type="VI" URL="../src/Instrument.Lockin/Untitled 3.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="Array Size(s)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Array Size(s)__ogtk.vi"/>
