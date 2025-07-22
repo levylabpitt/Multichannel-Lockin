@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-06-25 13:56:25" Creator="Patrick Irvin" Comments="" ID="5fabe08008c8e3f769347d3aa4bb5ee1">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-07-22 13:51:18" Creator="Patrick Irvin" Comments="" ID="be884ef90628a6565bab52257e8e8ce7">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.21.0.14</Library_Version>
+    <Library_Version>2.22.0.15</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -18,6 +18,7 @@
   <Advanced_Settings>
     <Package_Dependencies>
       <Additional_External_Dependencies>levylab_lib_instrument_type &gt;=1.1.3.10</Additional_External_Dependencies>
+      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.15.5.40</Additional_External_Dependencies>
     </Package_Dependencies>
     <Custom_Action_VIs>
       <Pre-Build_VI>Pre-Build Custom Action.vi</Pre-Build_VI>
@@ -37,10 +38,12 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>[2.21.0]
-- Ensure UI uses only "local" communication
-- Updated ZMQ backend
-- #101 fix Logging button behavior
+      <Release_Notes>[2.22.0]
+#103 fix logging while sweeping 
+#104 logging paths are now configured via configuration file
+#105 simulation mode chassis serial number is random number between 10101000 and 10101999
+#106 updated Logging API: commands are startLogging(interval in milliseconds) and stopLogging()
+#107 fix get version using framework's new Get SMO Version.vi override
 
 #### Dependencies
 - Please ensure that [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is installed. The bitness must match the application you're targeting.
@@ -890,20 +893,6 @@
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setLogMode.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>6</Row>
-          <Column>13</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\State\setLogMode.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
         <NameSub_Menu_Name>stopLogging.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
@@ -971,7 +960,7 @@
         <Path>..\src\Instrument.Lockin\API\REF\getREFconfig.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>BB64C31EAEA054FC5876E90FE41D1F22</GUID>
+      <GUID>711EDF498B4D02F86FED84BBF5D768C6</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
