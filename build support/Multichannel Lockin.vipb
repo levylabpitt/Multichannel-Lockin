@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-07-22 15:35:07" Creator="Patrick Irvin" Comments="" ID="97ab8883e0db3ab5bb1710d98df41339">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-07-24 15:16:20" Creator="Patrick Irvin" Comments="" ID="b5c87b8f6a5ea0d0d0845aed54959083">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.22.0.16</Library_Version>
+    <Library_Version>2.23.0.16</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -38,12 +38,12 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>[2.22.0]
-#103 fix logging while sweeping 
-#104 logging paths are now configured via configuration file
-#105 simulation mode chassis serial number is random number between 10101000 and 10101999
-#106 updated Logging API: commands are startLogging(interval in milliseconds) and stopLogging()
-#107 fix get version using framework's new Get SMO Version.vi override
+      <Release_Notes>[2.23.0]
+#108 build with updated LV-Data library to use microsconds resolution when logging to postgres
+#110 Update filtering VIs:
+   1. fix timestamp drift issue by not replacing timestamps (as DFD library does)
+   2. implement forward and reverse low pass filtering to eliminate phase shift (zero phase filtering)
+   3. note that filter orders are now 2*n
 
 #### Dependencies
 - Please ensure that [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is installed. The bitness must match the application you're targeting.
@@ -960,7 +960,7 @@
         <Path>..\src\Instrument.Lockin\API\REF\getREFconfig.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>47306D6FE8332592B58A666DAA7CA114</GUID>
+      <GUID>B5BB02AD12393A2A0FFD31CD7FB3D0A2</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
