@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-08-08 19:02:53" Creator="Patrick Irvin" Comments="" ID="5a4ff453e7fe52a43629b3ea22b62e80">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-08-11 19:08:15" Creator="Patrick Irvin" Comments="" ID="f97801e470af4f37c57aa46796bcc211">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.25.0.23</Library_Version>
+    <Library_Version>2.25.1.24</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -38,11 +38,10 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>[2.25.0]
-#16, #17: control input and output terminal configuration from UI window.
-   - Also configurable from setDAQ API
-#95: Per Channel AO Limits (AC and DC)
-- note also that DAQ settings are not configurable per channel rather than per device
+      <Release_Notes>[2.25.1]
+#54: update plot legends after start button is pushed
+#113: fix bug inside AO clipping that output number of channels equal to number of devices (rather than 2 channels per device for 4461)
+#114: relabel calibration indicator
 
 #### Dependencies
 - Please ensure that [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is installed. The bitness must match the application you're targeting.
@@ -973,7 +972,7 @@
         <Path>..\src\Instrument.Lockin\API\setSweep.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>A1EF3E9E75DF5220875B33D849880BF7</GUID>
+      <GUID>C48BBFED625D1DB6B185F838BE268EED</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
