@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-08-29 17:16:38" Creator="Patrick Irvin" Comments="" ID="8efab0e147dbb1b713cf30bae98079a4">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-08-29 18:47:04" Creator="Patrick Irvin" Comments="" ID="7f6fd8037bb503d839360cefce203c60">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.25.2.26</Library_Version>
+    <Library_Version>2.25.3.26</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -38,8 +38,9 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>[2.25.2]
-#115: adjust setSampling and related to not stop and start acquisition more than necessary (and unify behavior of commands from UI and API)
+      <Release_Notes>[2.25.3]
+Issue #117 use more/better in place element structures for dealing with waveform data
+
 
 #### Dependencies
 - Please ensure that [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is installed. The bitness must match the application you're targeting.
@@ -970,7 +971,7 @@
         <Path>..\src\Instrument.Lockin\API\setSweep.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F1EC0DDF7829C1DD1273DD52C8DDBE1B</GUID>
+      <GUID>DAEECAA3A088A4153AAB99FD7F6999E2</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
