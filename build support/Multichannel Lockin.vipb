@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-09-05 16:13:28" Creator="Patrick Irvin" Comments="" ID="0fed53c9265d6d425961978ab3a04f66">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-09-05 17:55:57" Creator="Patrick Irvin" Comments="" ID="f3619843c9e640d8c988c0e1df76a356">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.25.4.27</Library_Version>
+    <Library_Version>2.25.4.28</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -971,7 +971,7 @@
         <Path>..\src\Instrument.Lockin\API\setSweep.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>89BB79B2D564A5E19884290BF7CCDE31</GUID>
+      <GUID>5BA120EC2347082D8708E71D11CEEBA2</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
