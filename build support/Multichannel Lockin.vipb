@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-08-29 19:27:02" Creator="Patrick Irvin" Comments="" ID="bd22dd8988a636b9276144ab23589fa7">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-09-05 17:55:57" Creator="Patrick Irvin" Comments="" ID="f3619843c9e640d8c988c0e1df76a356">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.25.3.27</Library_Version>
+    <Library_Version>2.25.4.28</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -38,8 +38,8 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>[2.25.3]
-Issue #117 use more/better in place element structures for dealing with waveform data
+      <Release_Notes>[2.25.4]
+#118: adjust getSweep* API timeout 500 ms to 5000 ms
 
 
 #### Dependencies
@@ -971,7 +971,7 @@ Issue #117 use more/better in place element structures for dealing with waveform
         <Path>..\src\Instrument.Lockin\API\setSweep.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>2B5E705C752D6FBCD16BD0B1F96741D1</GUID>
+      <GUID>5BA120EC2347082D8708E71D11CEEBA2</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
