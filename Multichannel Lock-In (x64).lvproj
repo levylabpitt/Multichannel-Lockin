@@ -70,9 +70,9 @@
 			<Item Name="Test Sweep Mode vs Lockin_Vsg.vi" Type="VI" URL="../Tests/Test Sweep Mode vs Lockin_Vsg.vi"/>
 			<Item Name="Test Waveguide Model.vi" Type="VI" URL="../Tests/Test Waveguide Model.vi"/>
 			<Item Name="Untitled 1.vi" Type="VI" URL="../Tests/Untitled 1.vi"/>
+			<Item Name="Test NES.vi" Type="VI" URL="../Tests/Test NES.vi"/>
 		</Item>
 		<Item Name="Instrument.Lockin.lvlib" Type="Library" URL="../src/Instrument.Lockin.lvlib"/>
-		<Item Name="Test NES.vi" Type="VI" URL="../Tests/Test NES.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="Array Size(s)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Array Size(s)__ogtk.vi"/>
