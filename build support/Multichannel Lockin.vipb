@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-09-08 17:45:09" Creator="Patrick Irvin" Comments="" ID="22ab5ebdc4ff95557e94c4302ba3f5de">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-09-12 16:27:18" Creator="Patrick Irvin" Comments="" ID="05dbee39a8147493589dcd5ef1d4c537">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.25.5.29</Library_Version>
+    <Library_Version>2.25.6.29</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -38,10 +38,8 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>[2.25.5]
-#116
-- Run 'Get Calibration' state after every DAQ: Start
-- Disable debugging in process.vi(s)
+      <Release_Notes>[2.25.6]
+- change 'getSweepData' timeout to 25,000 ms
 
 
 #### Dependencies
@@ -973,7 +971,7 @@
         <Path>..\src\Instrument.Lockin\API\setSweep.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>66D6DB9B4B7D3545F2E31F476B3BCC9D</GUID>
+      <GUID>8F98D9DFB4307FE5505CB40B04CA74F8</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
