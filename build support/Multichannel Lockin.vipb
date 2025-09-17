@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-09-12 16:54:37" Creator="Patrick Irvin" Comments="" ID="7c838ee0e0387023e7911b90a282fcca">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-09-17 14:40:43" Creator="Patrick Irvin" Comments="" ID="a40785b45df6217169a3cec98df9d204">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.25.6.30</Library_Version>
+    <Library_Version>2.25.6.31</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -40,6 +40,7 @@
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
       <Release_Notes>[2.25.6]
 - change 'getSweepData' timeout to 25,000 ms
+- other improvements to reduce memory and CPU usage
 
 
 #### Dependencies
@@ -971,7 +972,7 @@
         <Path>..\src\Instrument.Lockin\API\setSweep.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>FD5BD58C3827D3BF5C0762BDE0DAF07F</GUID>
+      <GUID>D8DC3D963BECB0404419A01517CE8D93</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
