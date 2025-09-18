@@ -73,7 +73,10 @@
 			<Item Name="Test NES.vi" Type="VI" URL="../Tests/Test NES.vi"/>
 		</Item>
 		<Item Name="Instrument.Lockin.lvlib" Type="Library" URL="../src/Instrument.Lockin.lvlib"/>
+		<Item Name="DAQ.lvclass" Type="LVClass" URL="../src/DAQ/DAQ.lvclass"/>
 		<Item Name="DAQmx.lvclass" Type="LVClass" URL="../src/DAQmx/DAQmx.lvclass"/>
+		<Item Name="Generator.lvclass" Type="LVClass" URL="../src/Generator/Generator.lvclass"/>
+		<Item Name="Lockin.lvclass" Type="LVClass" URL="../src/Lockin/Lockin.lvclass"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="Array Size(s)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Array Size(s)__ogtk.vi"/>
@@ -1083,6 +1086,19 @@
 			<Item Name="System" Type="VI" URL="System">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="DAQ.Config.Sampling.Sampling--Cluster.ctl" Type="VI" URL="../src/Instrument.DAQ/Typedefs/DAQ.Config.Sampling.Sampling--Cluster.ctl"/>
+			<Item Name="DAQ.Config.Sampling.Fs Mode--enum.ctl" Type="VI" URL="../src/Instrument.DAQ/Typedefs/DAQ.Config.Sampling.Fs Mode--enum.ctl"/>
+			<Item Name="DAQ.Config.Sampling--Cluster.ctl" Type="VI" URL="../src/Instrument.DAQ/Typedefs/DAQ.Config.Sampling--Cluster.ctl"/>
+			<Item Name="DAQ.Config.AO.Range--enum.ctl" Type="VI" URL="../src/Instrument.DAQ/Typedefs/DAQ.Config.AO.Range--enum.ctl"/>
+			<Item Name="DAQ.Sampling.Sampling--Cluster.ctl" Type="VI" URL="../src/Instrument.DAQ/Typedefs/DAQ.Sampling.Sampling--Cluster.ctl"/>
+			<Item Name="DAQ.Sampling.Fs Mode--enum.ctl" Type="VI" URL="../src/Instrument.DAQ/Typedefs/DAQ.Sampling.Fs Mode--enum.ctl"/>
+			<Item Name="DAQ.Sampling.Sampling--Cluster.ctl" Type="Document"/>
+			<Item Name="DAQ.Sampling.Fs Mode--enum.ctl" Type="Document"/>
+			<Item Name="DAQ.Sampling--Cluster.ctl" Type="Document"/>
+			<Item Name="DAQ.Config.AI.Range--enum.ctl" Type="VI" URL="../src/Instrument.DAQ/Typedefs/DAQ.Config.AI.Range--enum.ctl"/>
+			<Item Name="DAQ.Config.AI.Coupling--enum.ctl" Type="VI" URL="../src/Instrument.DAQ/Typedefs/DAQ.Config.AI.Coupling--enum.ctl"/>
+			<Item Name="DAQ.Calibration--Cluster.ctl" Type="VI" URL="../src/Instrument.DAQ/Typedefs/DAQ.Calibration--Cluster.ctl"/>
+			<Item Name="DAQ.Calibration--Cluster--Array.ctl" Type="VI" URL="../src/Instrument.DAQ/Typedefs/DAQ.Calibration--Cluster--Array.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lock-In (x64) Application" Type="EXE">
