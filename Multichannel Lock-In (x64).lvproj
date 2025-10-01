@@ -1598,7 +1598,6 @@
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="DAQ.Config.Sampling.Sampling--Cluster.ctl" Type="VI" URL="../src/Instrument.DAQ/Typedefs/DAQ.Config.Sampling.Sampling--Cluster.ctl"/>
-			<Item Name="DAQ.Config.Sampling.Fs Mode--enum.ctl" Type="VI" URL="../src/Instrument.DAQ/Typedefs/DAQ.Config.Sampling.Fs Mode--enum.ctl"/>
 			<Item Name="DAQ.Config.AO.Range--enum.ctl" Type="VI" URL="../src/Instrument.DAQ/Typedefs/DAQ.Config.AO.Range--enum.ctl"/>
 			<Item Name="DAQ.Config.AI.Range--enum.ctl" Type="VI" URL="../src/Instrument.DAQ/Typedefs/DAQ.Config.AI.Range--enum.ctl"/>
 			<Item Name="DAQ.Config.AI.Coupling--enum.ctl" Type="VI" URL="../src/Instrument.DAQ/Typedefs/DAQ.Config.AI.Coupling--enum.ctl"/>
@@ -1837,10 +1836,8 @@
 			<Item Name="IB_SRdB_Write.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Builds/Installer/SRdB/IB_SRdB_Write.vi"/>
 			<Item Name="IB_SRdB_Unlock.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Builds/Installer/SRdB/IB_SRdB_Unlock.vi"/>
 			<Item Name="logosbrw.dll" Type="Document" URL="/&lt;resource&gt;/logosbrw.dll"/>
-			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
-				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
-			</Item>
 			<Item Name="AO.Channel--Cluster--Array.ctl" Type="VI" URL="../src/Instrument.DAQ/Typedefs/AO.Channel--Cluster--Array.ctl"/>
+			<Item Name="DELETEDAQ.Config.Sampling.Fs Mode--enum.ctl" Type="VI" URL="../src/DELETEDAQ.Config.Sampling.Fs Mode--enum.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lock-In (x64) Application" Type="EXE">
