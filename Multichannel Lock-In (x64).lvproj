@@ -1836,9 +1836,6 @@
 			<Item Name="logosbrw.dll" Type="Document" URL="/&lt;resource&gt;/logosbrw.dll"/>
 			<Item Name="NI_MDF.lvlib" Type="Library" URL="../../../../../../../Program Files/National Instruments/LabVIEW 2019/applibs/distkit/MDF/NI_MDF.lvlib"/>
 			<Item Name="NIMdf.dll" Type="Document" URL="../../../../../../../Program Files/National Instruments/LabVIEW 2019/applibs/distkit/MDF/NIMdf.dll"/>
-			<Item Name="DEL DAQ.44xx.Get DAQ Type from Task.vi" Type="VI" URL="../src/DEL DAQ.44xx.Get DAQ Type from Task.vi"/>
-			<Item Name="DEL DAQ.44xx.Get DAQ Type from Device.vi" Type="VI" URL="../src/DEL DAQ.44xx.Get DAQ Type from Device.vi"/>
-			<Item Name="DEL DAQ.44xx.Get DAQ Type from Product Type.vi" Type="VI" URL="../src/Instrument.DAQ/DAQ/DEL DAQ.44xx.Get DAQ Type from Product Type.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lock-In (x64) Application" Type="EXE">
