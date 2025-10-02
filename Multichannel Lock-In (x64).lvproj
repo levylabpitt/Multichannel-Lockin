@@ -76,7 +76,7 @@
 		<Item Name="DAQ.lvclass" Type="LVClass" URL="../src/DAQ/DAQ.lvclass"/>
 		<Item Name="DAQmx.lvclass" Type="LVClass" URL="../src/DAQmx/DAQmx.lvclass"/>
 		<Item Name="Generator.lvclass" Type="LVClass" URL="../src/Generator/Generator.lvclass"/>
-		<Item Name="Lockin.lvclass" Type="LVClass" URL="../src/Lockin/Lockin.lvclass"/>
+		<Item Name="DSP.lvclass" Type="LVClass" URL="../src/DSP/DSP.lvclass"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="Array Size(s)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Array Size(s)__ogtk.vi"/>
@@ -1838,6 +1838,9 @@
 			<Item Name="logosbrw.dll" Type="Document" URL="/&lt;resource&gt;/logosbrw.dll"/>
 			<Item Name="AO.Channel--Cluster--Array.ctl" Type="VI" URL="../src/Instrument.DAQ/Typedefs/AO.Channel--Cluster--Array.ctl"/>
 			<Item Name="DELETEDAQ.Config.Sampling.Fs Mode--enum.ctl" Type="VI" URL="../src/DELETEDAQ.Config.Sampling.Fs Mode--enum.ctl"/>
+			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lock-In (x64) Application" Type="EXE">
