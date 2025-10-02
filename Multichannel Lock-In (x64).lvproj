@@ -24,7 +24,6 @@
 		</Item>
 		<Item Name="Examples" Type="Folder">
 			<Item Name="Multi-Device Sync - DSA Analog Input and Output Using a Shared Timebase &amp; Trigger with DAQmx" Type="Folder">
-				<Item Name="Multi-Device_Sync-AI_and_AO-Shared_Timebase_&amp;_Trig-DSA-PRI.vi" Type="VI" URL="../src/Examples/Multi-Device Sync - DSA Analog Input and Output Using a Shared Timebase &amp; Trigger with DAQmx/Multi-Device_Sync-AI_and_AO-Shared_Timebase_&amp;_Trig-DSA-PRI.vi"/>
 				<Item Name="Get_Terminal_Name_with_Device_Prefix.vi" Type="VI" URL="../src/Examples/Multi-Device Sync - DSA Analog Input and Output Using a Shared Timebase &amp; Trigger with DAQmx/Get_Terminal_Name_with_Device_Prefix.vi"/>
 				<Item Name="Multi-Device_Sync-AI_and_AO-Shared_Timebase_&amp;_Trig-DSA.html" Type="Document" URL="../src/Examples/Multi-Device Sync - DSA Analog Input and Output Using a Shared Timebase &amp; Trigger with DAQmx/Multi-Device_Sync-AI_and_AO-Shared_Timebase_&amp;_Trig-DSA.html"/>
 				<Item Name="Multi-Device_Sync-AI_and_AO-Shared_Timebase_&amp;_Trig-DSA.vi" Type="VI" URL="../src/Examples/Multi-Device Sync - DSA Analog Input and Output Using a Shared Timebase &amp; Trigger with DAQmx/Multi-Device_Sync-AI_and_AO-Shared_Timebase_&amp;_Trig-DSA.vi"/>
@@ -73,7 +72,6 @@
 			<Item Name="Untitled 1.vi" Type="VI" URL="../Tests/Untitled 1.vi"/>
 			<Item Name="Test NES.vi" Type="VI" URL="../Tests/Test NES.vi"/>
 			<Item Name="DSA_Sync_Metrics.vi" Type="VI" URL="../Tests/Expt/DSA_Sync_Metrics.vi"/>
-			<Item Name="Phase vs frequency 2025-09-25a.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Lockin-Multichannel/Phase vs frequency 2025-09-25a.vi"/>
 		</Item>
 		<Item Name="Instrument.Lockin.lvlib" Type="Library" URL="../src/Instrument.Lockin.lvlib"/>
 		<Item Name="SMO.DAQmx.lvclass" Type="LVClass" URL="../src/SMO.DAQmx/SMO.DAQmx.lvclass"/>
@@ -1590,7 +1588,6 @@
 			<Item Name="version.dll" Type="Document" URL="version.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="Waveform Circular Buffer.vi" Type="VI" URL="../src/Instrument.DAQ/DAQ/Waveform Circular Buffer.vi"/>
 			<Item Name="nilvaiu.dll" Type="Document" URL="nilvaiu.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
@@ -1836,6 +1833,7 @@
 			<Item Name="logosbrw.dll" Type="Document" URL="/&lt;resource&gt;/logosbrw.dll"/>
 			<Item Name="NI_MDF.lvlib" Type="Library" URL="../../../../../../../Program Files/National Instruments/LabVIEW 2019/applibs/distkit/MDF/NI_MDF.lvlib"/>
 			<Item Name="NIMdf.dll" Type="Document" URL="../../../../../../../Program Files/National Instruments/LabVIEW 2019/applibs/distkit/MDF/NIMdf.dll"/>
+			<Item Name="DEL Multi-Device_Sync-AI_and_AO-Shared_Timebase_&amp;_Trig-DSA-PRI.vi" Type="VI" URL="../src/DEL Multi-Device_Sync-AI_and_AO-Shared_Timebase_&amp;_Trig-DSA-PRI.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lock-In (x64) Application" Type="EXE">
