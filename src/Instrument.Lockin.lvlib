@@ -10,4 +10,5 @@
 	<Item Name="Instrument.Lockin.lvclass" Type="LVClass" URL="../Instrument.Lockin/Instrument.Lockin.lvclass"/>
 	<Item Name="Lockin.Utilities.lvlib" Type="Library" URL="../Lockin.Utilities/Lockin.Utilities.lvlib"/>
 	<Item Name="Lockin.vi" Type="VI" URL="../Lockin.vi"/>
+	<Item Name="Message Queue.lvlib" Type="Library" URL="../Message Queue/Message Queue.lvlib"/>
 </Library>

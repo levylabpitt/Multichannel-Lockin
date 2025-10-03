@@ -1834,6 +1834,10 @@
 			<Item Name="NI_MDF.lvlib" Type="Library" URL="../../../../../../../Program Files/National Instruments/LabVIEW 2019/applibs/distkit/MDF/NI_MDF.lvlib"/>
 			<Item Name="NIMdf.dll" Type="Document" URL="../../../../../../../Program Files/National Instruments/LabVIEW 2019/applibs/distkit/MDF/NIMdf.dll"/>
 			<Item Name="DEL Multi-Device_Sync-AI_and_AO-Shared_Timebase_&amp;_Trig-DSA-PRI.vi" Type="VI" URL="../src/DEL Multi-Device_Sync-AI_and_AO-Shared_Timebase_&amp;_Trig-DSA-PRI.vi"/>
+			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="DAQ.TimedLoop2.vi" Type="VI" URL="../src/Instrument.DAQ/support/DAQ/DAQ.TimedLoop2.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lock-In (x64) Application" Type="EXE">
