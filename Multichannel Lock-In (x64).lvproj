@@ -72,6 +72,8 @@
 			<Item Name="Untitled 1.vi" Type="VI" URL="../Tests/Untitled 1.vi"/>
 			<Item Name="Test NES.vi" Type="VI" URL="../Tests/Test NES.vi"/>
 			<Item Name="DSA_Sync_Metrics.vi" Type="VI" URL="../Tests/Expt/DSA_Sync_Metrics.vi"/>
+			<Item Name="Test Event Registration.vi" Type="VI" URL="../Tests/Test Event Registration.vi"/>
+			<Item Name="Test Queues.vi" Type="VI" URL="../Tests/Test Queues.vi"/>
 		</Item>
 		<Item Name="Instrument.Lockin.lvlib" Type="Library" URL="../src/Instrument.Lockin.lvlib"/>
 		<Item Name="SMO.DAQmx.lvclass" Type="LVClass" URL="../src/SMO.DAQmx/SMO.DAQmx.lvclass"/>
@@ -79,7 +81,6 @@
 		<Item Name="DAQmx.lvclass" Type="LVClass" URL="../src/DAQmx/DAQmx.lvclass"/>
 		<Item Name="Generator.lvclass" Type="LVClass" URL="../src/Generator/Generator.lvclass"/>
 		<Item Name="DSP.lvclass" Type="LVClass" URL="../src/DSP/DSP.lvclass"/>
-		<Item Name="test queues and notifiers.vi" Type="VI" URL="../Tests/test queues and notifiers.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="Array Size(s)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Array Size(s)__ogtk.vi"/>
@@ -1836,7 +1837,6 @@
 			<Item Name="IB_SRdB_Unlock.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Builds/Installer/SRdB/IB_SRdB_Unlock.vi"/>
 			<Item Name="logosbrw.dll" Type="Document" URL="/&lt;resource&gt;/logosbrw.dll"/>
 			<Item Name="DEL Multi-Device_Sync-AI_and_AO-Shared_Timebase_&amp;_Trig-DSA-PRI.vi" Type="VI" URL="../src/DEL Multi-Device_Sync-AI_and_AO-Shared_Timebase_&amp;_Trig-DSA-PRI.vi"/>
-			<Item Name="DAQ.TimedLoop2.vi" Type="VI" URL="../src/Instrument.DAQ/support/DAQ/DAQ.TimedLoop2.vi"/>
 			<Item Name="Read AI.vi" Type="VI" URL="../src/DAQmx/Read AI.vi"/>
 			<Item Name="NI_MDF.lvlib" Type="Library" URL="../../../../../../../Program Files/National Instruments/LabVIEW 2019/applibs/distkit/MDF/NI_MDF.lvlib"/>
 			<Item Name="NIMdf.dll" Type="Document" URL="../../../../../../../Program Files/National Instruments/LabVIEW 2019/applibs/distkit/MDF/NIMdf.dll"/>
