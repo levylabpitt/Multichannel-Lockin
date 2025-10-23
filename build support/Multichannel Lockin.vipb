@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-10-23 17:01:22" Creator="Patrick Irvin" Comments="" ID="71c8c028b1fa57a9ec814d4bf27ae37f">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-10-23 18:46:03" Creator="Patrick Irvin" Comments="" ID="cebd18f572aaf107c54c84b95c7b8138">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.0.0.32</Library_Version>
+    <Library_Version>3.0.0.33</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -980,7 +980,7 @@ This release fixes a long-standing issue in which the demodulated phase a strong
         <Path>..\src\Instrument.Lockin\API\setSweep.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>235B93F489994791F3F3A8CB1C92C45F</GUID>
+      <GUID>234C6EA82372EB91B0EDECD13FF6A805</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
