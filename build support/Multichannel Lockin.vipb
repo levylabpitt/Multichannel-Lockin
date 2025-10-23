@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-09-18 20:38:34" Creator="Patrick Irvin" Comments="" ID="ef04420cc373eb5ec8dad67fbf4a4050">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-10-23 17:01:22" Creator="Patrick Irvin" Comments="" ID="71c8c028b1fa57a9ec814d4bf27ae37f">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>2.26.0.32</Library_Version>
+    <Library_Version>3.0.0.32</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -38,10 +38,18 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>[2.26.0]
-- fix bug calculating Fs for lockin filter
-- fix bug in which AI was routed to AO
-- revert filters to "2.15.4"-style
+      <Release_Notes>[3.0.0]
+This release fixes a long-standing issue in which the demodulated phase a strong function of both the reference frequency and sampling frequency. Details are discussed in Issue #122
+
+#### Other features and bug fixes
+#121 Work is distributed among child classes (DAQ, DSP, Signal Generator)
+#122 Fix phase vs frequency
+#123 Fix issue in which AO settings were not recalled properly from disk
+#124 DAQ would stop when changing the reference frequency
+#125 Improve recall of plot visibility
+#126 Improve AO and Ref waveform graph
+#127 Bug fix related to phase resetting at random
+#128 Renable offset measurement
 
 #### Dependencies
 - Please ensure that [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is installed. The bitness must match the application you're targeting.
@@ -972,7 +980,7 @@
         <Path>..\src\Instrument.Lockin\API\setSweep.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>20C7302DB6F92D333038D20E4A96BC7D</GUID>
+      <GUID>235B93F489994791F3F3A8CB1C92C45F</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
