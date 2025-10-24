@@ -68,7 +68,6 @@
 			<Item Name="Test EXE.vi" Type="VI" URL="../Tests/Test EXE.vi"/>
 			<Item Name="Test Lockin API State Machine.vi" Type="VI" URL="../Tests/Test Lockin API State Machine.vi"/>
 			<Item Name="Test Sweep Mode vs Lockin_Vsg.vi" Type="VI" URL="../Tests/Test Sweep Mode vs Lockin_Vsg.vi"/>
-			<Item Name="Test Waveguide Model.vi" Type="VI" URL="../Tests/Test Waveguide Model.vi"/>
 			<Item Name="Untitled 1.vi" Type="VI" URL="../Tests/Untitled 1.vi"/>
 			<Item Name="Test NES.vi" Type="VI" URL="../Tests/Test NES.vi"/>
 			<Item Name="DSA_Sync_Metrics.vi" Type="VI" URL="../Tests/Expt/DSA_Sync_Metrics.vi"/>
@@ -1836,6 +1835,9 @@
 			</Item>
 			<Item Name="NI_MDF.lvlib" Type="Library" URL="../../../../../../../Program Files/National Instruments/LabVIEW 2019/applibs/distkit/MDF/NI_MDF.lvlib"/>
 			<Item Name="NIMdf.dll" Type="Document" URL="../../../../../../../Program Files/National Instruments/LabVIEW 2019/applibs/distkit/MDF/NIMdf.dll"/>
+			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lock-In (x64) Application" Type="EXE">
@@ -1852,9 +1854,8 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{BE714A7E-B7D4-4888-A1F2-966F210EC573}</Property>
-				<Property Name="Bld_version.build" Type="Int">31</Property>
-				<Property Name="Bld_version.major" Type="Int">2</Property>
-				<Property Name="Bld_version.minor" Type="Int">26</Property>
+				<Property Name="Bld_version.build" Type="Int">34</Property>
+				<Property Name="Bld_version.major" Type="Int">3</Property>
 				<Property Name="Destination[0].destName" Type="Str">Multichannel Lockin.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/Application (x64)/NI_AB_PROJECTNAME.exe</Property>
 				<Property Name="Destination[0].path.type" Type="Str">relativeToProject</Property>
