@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-10-23 22:52:42" Creator="Patrick Irvin" Comments="" ID="db8b2a0acfd82cdca61664c299c7c4b6">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-10-27 16:13:55" Creator="Patrick Irvin" Comments="" ID="12ba2e6b1bac29c1982289dd7b5f2a8e">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.0.0.36</Library_Version>
+    <Library_Version>3.0.0.37</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -50,6 +50,9 @@ This release fixes a long-standing issue in which the demodulated phase a strong
 #126 Improve AO and Ref waveform graph
 #127 Bug fix related to phase resetting at random
 #128 Renable offset measurement
+#130 rearragne right tab graphs and indicators
+#131 Rename right tabs
+#132 fix DAQmx window behavior
 
 #### Dependencies
 - Please ensure that [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is installed. The bitness must match the application you're targeting.
@@ -980,7 +983,7 @@ This release fixes a long-standing issue in which the demodulated phase a strong
         <Path>..\src\Instrument.Lockin\API\setSweep.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>75F2B72D2D49AB39DF0778F27A63C264</GUID>
+      <GUID>D4A1AAF588EB70AD6068924390805EB1</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
