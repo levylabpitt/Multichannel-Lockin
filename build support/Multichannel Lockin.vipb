@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-10-29 17:15:46" Creator="Patrick Irvin" Comments="" ID="22b9f69e917b212f860d042f544879d5">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-10-30 16:36:34" Creator="Patrick Irvin" Comments="" ID="4209ecf084274afb14a8e73f18269631">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
     <Library_Version>3.0.0.42</Library_Version>
@@ -55,6 +55,7 @@ This release fixes a long-standing issue in which the demodulated phase a strong
 #132 Fix DAQmx window behavior
 #133 Add sawtooth waveform and duty cycle control for square waveform
 #134 Add better error handling if DAQmx stops on error: DAQ process will try to automatically restart DAQmx
+#135 Fix lockin channel labels when there are multiple reference channels
 
 #### Dependencies
 - Please ensure that [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is installed. The bitness must match the application you're targeting.
@@ -985,7 +986,7 @@ This release fixes a long-standing issue in which the demodulated phase a strong
         <Path>..\src\Instrument.Lockin\API\setSweep.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F82E7B1747A77C19434C466574E673FC</GUID>
+      <GUID>C2361A5AE48EF45AACF0E66EEA62787F</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
