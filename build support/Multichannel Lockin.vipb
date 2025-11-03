@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-10-30 17:24:40" Creator="Patrick Irvin" Comments="" ID="25e3dbc4f08548e75724af6e77b51642">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-11-03 17:09:06" Creator="Patrick Irvin" Comments="" ID="35d124c4cf01e5896a63ee40affb1aba">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.0.0.43</Library_Version>
+    <Library_Version>3.0.1.43</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -38,24 +38,9 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>[3.0.0]
-This release fixes a long-standing issue in which the demodulated phase a strong function of both the reference frequency and sampling frequency. Details are discussed in Issue #122
-
-#### Other features and bug fixes
-#121 Work is distributed among child classes (DAQ, DSP, Signal Generator)
-#122 Fix phase vs frequency
-#123 Fix issue in which AO settings were not recalled properly from disk
-#124 DAQ would stop when changing the reference frequency
-#125 Improve recall of plot visibility
-#126 Improve AO and Ref waveform graph
-#127 Bug fix related to phase resetting at random
-#128 Re-enable offset measurement
-#130 Re-arrange right tab graphs and indicators
-#131 Rename right tabs
-#132 Fix DAQmx window behavior
-#133 Add sawtooth waveform and duty cycle control for square waveform
-#134 Add better error handling if DAQmx stops on error: DAQ process will try to automatically restart DAQmx
-#135 Fix lockin channel labels when there are multiple reference channels
+      <Release_Notes>[3.0.1]
+#137 add buffer to guard against waveform timeout
+#138 fix updating AO channels to alert user during sweep
 
 #### Dependencies
 - Please ensure that [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is installed. The bitness must match the application you're targeting.
@@ -986,7 +971,7 @@ This release fixes a long-standing issue in which the demodulated phase a strong
         <Path>..\src\Instrument.Lockin\API\setSweep.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>AD84F424CD9B921C3502E0342F131754</GUID>
+      <GUID>AFFB461FBD8C16764A57D85B51BB96AB</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
