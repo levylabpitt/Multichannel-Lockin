@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-11-04 12:08:35" Creator="Patrick Irvin" Comments="" ID="5b7a76a0e2a9e2f0b56fce57dcef17c3">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-11-06 12:41:17" Creator="Patrick Irvin" Comments="" ID="92aaa4026631f16098bd0c4ecdd8c011">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.0.1.46</Library_Version>
+    <Library_Version>3.0.2.47</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -38,9 +38,8 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>[3.0.1]
-#137 add buffer to guard against waveform timeout
-#138 fix updating AO channels to alert user during sweep
+      <Release_Notes>[3.0.2]
+#140 Remove dependency on DFD Toolkit
 
 #### Dependencies
 - Please ensure that [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is installed. The bitness must match the application you're targeting.
@@ -971,7 +970,7 @@
         <Path>..\src\Instrument.Lockin\API\setSweep.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>8E574CA5A91048E7E8F20A9929901E3F</GUID>
+      <GUID>B791D250F9AF30AC3132B490AF7DA63C</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
