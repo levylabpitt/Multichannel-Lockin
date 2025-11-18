@@ -93,14 +93,15 @@
 		</Item>
 	</Item>
 	<Item Name="private" Type="Folder">
+		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 		<Item Name="Notch Filter Coefficients.vi" Type="VI" URL="../Notch Filter Coefficients.vi">
-			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%N!!!!#A!%!!!!"1!+!!!C1%!!!@````]!!22'&lt;X*X98*E)%.P:7:G;7.J:7ZU=Q!!)E"!!!(`````!!%55G6W:8*T:3"$&lt;W6G:GFD;76O&gt;(-!!$6!&amp;Q!#$5F*5C!S&lt;G1A4X*E:8).35F3)$2U;#"0=G2F=A!1:GFM&gt;'6S)(.U=H6D&gt;(6S:1!!)%"1!!-!"!!$!!)335F3)%:J&lt;(2F=C"$&lt;(6T&gt;'6S!!!(1!I!!6%!%5!+!!JO&lt;X2D;#!I3(IJ!!!81!I!%&amp;.B&lt;8"M:3"S982F)#B)?CE!!&amp;1!]!!-!!!!!A!$!!5!!!!!!!!!!!!!!!9!"Q!)!A!!?!!!!!!!!!E!!!!*!!!!#1!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#A!!!!I!!!!)!!!!!!%!#1!!!!!</Property>
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%]!!!!#Q!%!!!!"1!+!!!C1%!!!@````]!!22'&lt;X*X98*E)%.P:7:G;7.J:7ZU=Q!!)E"!!!(`````!!%55G6W:8*T:3"$&lt;W6G:GFD;76O&gt;(-!!$6!&amp;Q!#$5F*5C!S&lt;G1A4X*E:8).35F3)$2U;#"0=G2F=A!1:GFM&gt;'6S)(.U=H6D&gt;(6S:1!!)%"1!!-!"!!$!!)335F3)%:J&lt;(2F=C"$&lt;(6T&gt;'6S!!!01!-!#7BB=GVP&lt;GFD=Q!(1!I!!6%!%5!+!!JO&lt;X2D;#!I3(IJ!!!81!I!%&amp;.B&lt;8"M:3"S982F)#B)?CE!!&amp;1!]!!-!!!!!A!$!!5!!!!!!!!!!!!'!!=!#!!*!A!!?!!!!!!!!!E!!!!*!!!!#1!!!!!!!!!!!!!!!!!!!!!!!!!+!!!!#A!!!!I!!!!+!!!!!!%!#A!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
 			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-			<Property Name="NI.ClassItem.State" Type="Int">1342710274</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1074266626</Property>
 		</Item>
 	</Item>
 	<Item Name="Tests" Type="Folder">
@@ -290,13 +291,13 @@
 		<Property Name="NI.ClassItem.State" Type="Int">268967952</Property>
 	</Item>
 	<Item Name="Create Notch Filter (FGV).vi" Type="VI" URL="../Create Notch Filter (FGV).vi">
-		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!'9!!!!%!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$6!&amp;Q!#$5F*5C!S&lt;G1A4X*E:8).35F3)$2U;#"0=G2F=A!1:GFM&gt;'6S)(.U=H6D&gt;(6S:1!!"1!+!!!C1%!!!@````]!"B23:8:F=H.F)%.P:7:G;7.J:7ZU=Q!!)E"!!!(`````!!952G^S&gt;W&amp;S:#"$&lt;W6G:GFD;76O&gt;(-!!#"!5!!$!!5!"Q!)%EF*5C"';7RU:8)A1WRV=X2F=A!!'%"!!!(`````!!E,35F3)%:J&lt;(2F=H-!#E!B"7FO;81`!!V!#A!(:H-A+%B[+1!/1#%);7ZJ&gt;#"&lt;2FU!!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!6!$Q!!Q!!Q!%!!I!"!!%!!M!$!!.!!Y!"!!%!!1#!!"Y!!!.#!!!!!!!!!E!!!!!!!!!!!!!!!E!!!!)!!!!#!!!!!I!!!!!!!!!!!!!!!!!!!!!!1!0!!!!!!</Property>
+		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!'9!!!!%!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$6!&amp;Q!#$5F*5C!S&lt;G1A4X*E:8).35F3)$2U;#"0=G2F=A!1:GFM&gt;'6S)(.U=H6D&gt;(6S:1!!"1!+!!!C1%!!!@````]!"B23:8:F=H.F)%.P:7:G;7.J:7ZU=Q!!)E"!!!(`````!!952G^S&gt;W&amp;S:#"$&lt;W6G:GFD;76O&gt;(-!!#"!5!!$!!5!"Q!)%EF*5C"';7RU:8)A1WRV=X2F=A!!'%"!!!(`````!!E,35F3)%:J&lt;(2F=H-!#E!B"7FO;81`!!V!#A!(:H-A+%B[+1!/1#%);7ZJ&gt;#"&lt;2FU!!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!6!$Q!!Q!!Q!%!!I!"!!%!!M!$!!.!!Y!"!!%!!1#!!"Y!!!.#!!!!!!!!!E!!!!!!!!!!!!!!!E!!!!)!!!!#!!!!!A!!!!!!!!!!!!!!!!!!!!!!1!0!!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
 		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
 		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-		<Property Name="NI.ClassItem.State" Type="Int">268967936</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">34078720</Property>
 	</Item>
 	<Item Name="Decimate DFD (Decimation Factor).vi" Type="VI" URL="../Decimate DFD (Decimation Factor).vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%C!!!!$!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!!B!6!!$!8A!'E"!!!(`````!!5.&gt;W&amp;W:7:P=GVT)'^V&gt;!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!"&gt;!!Q!22'6D;7VB&gt;'FP&lt;C"'97.U&lt;X)!%E"5!!-+=WFH&lt;G&amp;M)'^V&gt;!!!'E"!!!(`````!!E-6W&amp;W:7:P=GVT)'FO!!"5!0!!$!!$!!1!"!!'!!1!"!!%!!1!"Q!%!!A!#A-!!(A!!!U)!!!!!!!!!!!!!!U,!!!!!!!!!!!!!!!!!!!!!!!!#A!!!!!!!!!)!!!"#A!!!!!"!!M!!!!!</Property>
