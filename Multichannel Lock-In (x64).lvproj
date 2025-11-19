@@ -75,6 +75,11 @@
 			<Item Name="DSA_Sync_Metrics.vi" Type="VI" URL="../Tests/Expt/DSA_Sync_Metrics.vi"/>
 			<Item Name="Test Event Registration.vi" Type="VI" URL="../Tests/Test Event Registration.vi"/>
 			<Item Name="Test Queues.vi" Type="VI" URL="../Tests/Test Queues.vi"/>
+			<Item Name="Test Decimation.vi" Type="VI" URL="../Tests/Test Decimation.vi"/>
+			<Item Name="Decimate Metrics.vi" Type="VI" URL="../Tests/Decimate Metrics.vi"/>
+			<Item Name="Test Dynamic Filter.vi" Type="VI" URL="../Tests/Test Dynamic Filter.vi"/>
+			<Item Name="Filter Metrics.vi" Type="VI" URL="../Tests/Filter Metrics.vi"/>
+			<Item Name="Test LIA Filtering.vi" Type="VI" URL="../Tests/Test LIA Filtering.vi"/>
 		</Item>
 		<Item Name="Instrument.Lockin.lvlib" Type="Library" URL="../src/Instrument.Lockin.lvlib"/>
 		<Item Name="SMO.DAQmx.lvclass" Type="LVClass" URL="../src/SMO.DAQmx/SMO.DAQmx.lvclass"/>
