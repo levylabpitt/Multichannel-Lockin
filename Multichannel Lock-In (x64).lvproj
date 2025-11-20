@@ -64,6 +64,9 @@
 				<Item Name="PLL_Simple_WithTime.vi" Type="VI" URL="../Tests/PLL/PLL/PLL_Simple_WithTime.vi"/>
 				<Item Name="Simple_PI.vi" Type="VI" URL="../Tests/PLL/PLL/Simple_PI.vi"/>
 			</Item>
+			<Item Name="Probes" Type="Folder">
+				<Item Name="DFD Filter Response.vi" Type="VI" URL="../Tests/Probes/DFD Filter Response.vi"/>
+			</Item>
 			<Item Name="Build Test EXE.vi" Type="VI" URL="../Tests/Build Test EXE.vi"/>
 			<Item Name="Test EXE.vi" Type="VI" URL="../Tests/Test EXE.vi"/>
 			<Item Name="Test Lockin API State Machine.vi" Type="VI" URL="../Tests/Test Lockin API State Machine.vi"/>
@@ -79,6 +82,7 @@
 			<Item Name="Decimate Metrics.vi" Type="VI" URL="../Tests/Decimate Metrics.vi"/>
 			<Item Name="Test Dynamic Filter.vi" Type="VI" URL="../Tests/Test Dynamic Filter.vi"/>
 			<Item Name="Filter Metrics.vi" Type="VI" URL="../Tests/Filter Metrics.vi"/>
+			<Item Name="LP Filter Metrics.vi" Type="VI" URL="../Tests/LP Filter Metrics.vi"/>
 			<Item Name="Test LIA Filtering.vi" Type="VI" URL="../Tests/Test LIA Filtering.vi"/>
 		</Item>
 		<Item Name="Instrument.Lockin.lvlib" Type="Library" URL="../src/Instrument.Lockin.lvlib"/>
@@ -1554,6 +1558,8 @@
 				<Item Name="NI_DigFilter_Process.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Digital Filter Design/NI_DigFilter_Process.lvlib"/>
 				<Item Name="Shuffle 1D Array.vim" Type="VI" URL="/&lt;vilib&gt;/Array/Shuffle 1D Array.vim"/>
 				<Item Name="DAQmx Self Calibrate.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/calibration/calibrationInfo.llb/DAQmx Self Calibrate.vi"/>
+				<Item Name="NI_DigFilter_FXP.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Digital Filter Design/NI_DigFilter_FXP.lvlib"/>
+				<Item Name="dfd_Mutate Filter Obj QSetting 0x100 to 0x200.vi" Type="VI" URL="/&lt;vilib&gt;/addons/Digital Filter Design/_Objects.llb/dfd_Mutate Filter Obj QSetting 0x100 to 0x200.vi"/>
 			</Item>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="provcom_StringGlobals.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_StringGlobals.vi"/>
