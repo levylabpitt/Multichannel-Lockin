@@ -540,15 +540,6 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1074278928</Property>
 		</Item>
-		<Item Name="Waveform Circular Buffer.vi" Type="VI" URL="../private/Waveform Circular Buffer.vi">
-			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%6!!!!$!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!"2!6!!$$(&gt;B&gt;G6G&lt;X*N)'^V&gt;!!!'E"!!!(`````!!5-&gt;W&amp;W:7:P=GUA&lt;X6U!!!71&amp;!!!Q!!!!%!!ABF=H*P=C"J&lt;A!!#E!B"8*F=W6U!"*!6!!$#X&gt;B&gt;G6G&lt;X*N)'FO!"B!1!!"`````Q!*#X&gt;B&gt;G6G&lt;X*N)'FO!&amp;1!]!!-!!-!"!!%!!9!"!!%!!1!"!!(!!A!"!!+!A!!?!!!$1A!!!!!!!!!!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!)!!!!#A!!!!!!!!%3!!!!!!%!#Q!!!!!</Property>
-			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-			<Property Name="NI.ClassItem.Flags" Type="Int">16777216</Property>
-			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
-			<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
-			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-			<Property Name="NI.ClassItem.State" Type="Int">34078720</Property>
-		</Item>
 		<Item Name="Scope.vi" Type="VI" URL="../private/Scope.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!#W!!!!"Q!%!!!!%%"5!!-)6W&amp;W:7:P=GU!!"*!1!!"`````Q!""6*&amp;2F^:!"*!1!!"`````Q!""6*&amp;2F^9!"*!1!!"`````Q!""5&amp;*&gt;W:N!""!1!!"`````Q!"!E&amp;0!!"5!0!!$!!!!!!!!!!!!!!!!!!!!!!!!A!$!!1!"1)!!(A!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!##!!!!AA!!!))!!!##!!!!!!"!!9!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
