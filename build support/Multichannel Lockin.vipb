@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-11-06 12:41:17" Creator="Patrick Irvin" Comments="" ID="92aaa4026631f16098bd0c4ecdd8c011">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-11-25 16:14:08" Creator="Patrick Irvin" Comments="" ID="4b915cb1fd2a368db05ee7eb170e45df">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
     <Library_Version>3.0.2.47</Library_Version>
@@ -38,8 +38,12 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>[3.0.2]
-#140 Remove dependency on DFD Toolkit
+      <Release_Notes>[3.1.0]
+#138 Improve status update during Sweep
+#139 Information about hardware is now logged to the database
+#141 Update Lockin chart
+#142 Output filtering: Low pass filters are now cascade instead of direct form; F.output is calculated automatically based on Nyquist criteria and to minimize processing time; Lockin charts are updated with all new pionts (no longer simple sampling or averaging)
+#146 Fix issue in which sweep would not be stopped
 
 #### Dependencies
 - Please ensure that [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is installed. The bitness must match the application you're targeting.
@@ -970,7 +974,7 @@
         <Path>..\src\Instrument.Lockin\API\setSweep.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B791D250F9AF30AC3132B490AF7DA63C</GUID>
+      <GUID>39CAA3DCB13E23F1B254006D6F82615A</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
