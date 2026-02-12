@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2025-12-12 17:25:16" Creator="Patrick Irvin" Comments="" ID="2a8e0475d0d65c5c5f37cb15a3e008ed">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-02-12 12:13:04" Creator="Patrick Irvin" Comments="" ID="d92b1f23c7c3c2047b229e1d77306a40">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
     <Library_Version>3.2.0.50</Library_Version>
@@ -38,10 +38,10 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>[3.2.0]
-#147:
-- getResults.vi reverted Results dictionary containing scaler elements
-- new API methods getResultsArray.vi and analogous Parse Results Array *.vi handles Results dictionary containing array elements
+      <Release_Notes>[3.3.0]
+#148 Enhanced Power Spectrum tab
+#149 Improved Waveguide Simulation
+#150 Synchronize AO/AI/Ref graphs with a selected Reference channel
 
 #### Dependencies
 - Please ensure that [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is installed. The bitness must match the application you're targeting.
@@ -1028,7 +1028,7 @@
         <Path>..\src\Instrument.Lockin\API\Data\Parse Results (single).vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>28E6C56D4043D18F06AD31220E86B047</GUID>
+      <GUID>5E7A9479B48E5F3546B4FBD3550BCF3F</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
