@@ -43,7 +43,7 @@ A demodulated lockin signal can also be routed to another analog output.
 
 ### Power Spectrum
 
-**(TO DO)**
+- Power spectrum or power spectral density can be plotted for any of AI, AO, or demodulated lockin channels X, Y, R, Theta
 
 ## Simulation Mode
 
@@ -70,14 +70,17 @@ In simulation mode the analog inputs can be somulated in three different ways:
 
 #### Noisy AI Simulation
 
-**(TODO)**
+AI = AO + noise
 
 #### Waveguide Simulation
-The simulated device is a three terminal quantum wire with conductance that quanitized in units of e2/h as a function of an applied gate voltage.
+The simulated device is a 3 terminal quantum wire with conductance that quanitized in units of e2/h as a function of an applied gate voltage.
 
-- AO1 = source voltage
-- AO2 = gate voltage
-- AI1 = drain current
+- AO1 = source voltage (Vsd)
+- AO5 = gate voltage (V_sg)
+- AI1 = source current (I+)
+- AI2 = drain current (I-)
+- AI3 = Voltage on source terminal (V+)
+- AI4 = Voltage on drain terminal (V-)
 
 ![Block Diagram 4](documentation/images/Lockin-Block-Diagram-4.png)
 
