@@ -72,7 +72,6 @@
 			<Item Name="Test Lockin API State Machine.vi" Type="VI" URL="../Tests/Test Lockin API State Machine.vi"/>
 			<Item Name="Test Sweep Mode vs Lockin_Vsg.vi" Type="VI" URL="../Tests/Test Sweep Mode vs Lockin_Vsg.vi"/>
 			<Item Name="Filter Sandbox.vi" Type="VI" URL="../src/DSP/Tests/Filter Sandbox.vi"/>
-			<Item Name="ListDevicesSandbox.vi" Type="VI" URL="../Tests/ListDevicesSandbox.vi"/>
 			<Item Name="Untitled 1.vi" Type="VI" URL="../Tests/Untitled 1.vi"/>
 			<Item Name="Test NES.vi" Type="VI" URL="../Tests/Test NES.vi"/>
 			<Item Name="DSA_Sync_Metrics.vi" Type="VI" URL="../Tests/Expt/DSA_Sync_Metrics.vi"/>

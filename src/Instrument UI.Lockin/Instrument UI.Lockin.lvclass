@@ -541,13 +541,13 @@
 			<Property Name="NI.ClassItem.State" Type="Int">1074278912</Property>
 		</Item>
 		<Item Name="Display Synchronous.vi" Type="VI" URL="../private/Display Synchronous.vi">
-			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%@!!!!$!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!""!6!!$#&amp;&gt;B&gt;G6G&lt;X*N!!!?1%!!!@````]!"2"0&gt;82Q&gt;81A6W&amp;W:7:P=GVT!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!!N!!Q!&amp;;7ZE:8A!$5!$!!:M:7ZH&gt;'A!!"R!1!!"`````Q!&amp;$UFO=(6U)&amp;&gt;B&gt;G6G&lt;X*N=Q"5!0!!$!!$!!1!"!!'!!1!"!!%!!1!"Q!)!!E!#A)!!(A!!!U)!!!!!!!!!!!!!!U,!!!!!!!!!!!!!!!!!!!!!!!!#!!!!!I!!!!+!!!##A!!!!!"!!M!!!!!</Property>
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!'P!!!!$Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!""!6!!$#&amp;&gt;B&gt;G6G&lt;X*N!!!?1%!!!@````]!"2"0&gt;82Q&gt;81A6W&amp;W:7:P=GVT!!!*1!I!!E:T!!!*1!-!!C.T!!"S!0(DYD7H!!!!!R&gt;*&lt;H.U=H6N:7ZU,ERP9WNJ&lt;CZM&gt;GRJ9B:*&lt;H.U=H6N:7ZU,E2"53ZM&gt;G.M98.T)E2"53Z497VQ&lt;'FO:SZ497VQ&lt;'FO:SUN1WRV=X2F=CZD&gt;'Q!'%"1!!)!"Q!)#&amp;.B&lt;8"M;7ZH!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!!^!#A!*='BB=W5A+,!J!"6!#A!/:H*F=86F&lt;G.Z)#B)?CE!!"R!1!!"`````Q!&amp;$UFO=(6U)&amp;&gt;B&gt;G6G&lt;X*N=Q"5!0!!$!!$!!1!"!!'!!1!"!!*!!1!#A!,!!Q!$1)!!(A!!!U)!!!!!!!!!!!!!!U,!!!!!!!!!!!!!!A!!!!!!!!!#!!!!!I!!!!+!!!"#A!!!!!"!!Y!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">16777216</Property>
 			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-			<Property Name="NI.ClassItem.State" Type="Int">41943040</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">8396800</Property>
 		</Item>
 		<Item Name="PS Chart.vi" Type="VI" URL="../private/PS Chart.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!'$!!!!%A!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!!&gt;!#A!"?1!71%!!!P``````````!!5&amp;1WBB=H1!#E!B"'&amp;M&lt;$]!!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!#5!+!!*G-!!!#5!+!!*E:A!!$5!+!!&gt;/&gt;7VF=GFD!":!1!!"`````Q!,#7VB:WZJ&gt;(6E:1!=1&amp;!!!Q!*!!I!$!ZQ&lt;X&gt;F=C"T='6D&gt;(*V&lt;1!!)E"!!!(`````!!U55'^X:8)A5X"F9X2S&gt;7UA,S"15U1!!!Q!1!!"`````Q!.!#"!=!!)!!%!$Q!9!!!16U:(=G&amp;Q;#!I6U25+3"J&lt;A!!6!$Q!!Q!!Q!%!!1!"A!%!!1!"!!(!!A!"!!/!"!$!!"Y!!!.#!!!!!!!!!!!!!!*!!!!!!!!!!!!!!!!!!!!#!!!!!I!!!!!!!!##!!!!!A!!!!!!1!2!!!!!!</Property>
