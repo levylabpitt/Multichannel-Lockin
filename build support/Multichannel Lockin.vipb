@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-02-13 19:11:47" Creator="Patrick Irvin" Comments="" ID="ce5b67e090c887d608384310b7e7a6e4">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-02-16 15:12:47" Creator="Patrick Irvin" Comments="" ID="181cbd258fc4e0a3290d754168d032b9">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.3.0.56</Library_Version>
+    <Library_Version>3.3.1.56</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -38,10 +38,8 @@
       <Copyright/>
       <Packager>Patrick Irvin</Packager>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>[3.3.0]
-#148 Enhanced Power Spectrum tab
-#149 Improved Waveguide Simulation
-#150 Synchronize AO/AI/Ref graphs with a selected Ref channel
+      <Release_Notes>[3.3.1]
+#151 but fix in which sweep mode would not properly sweep to the initial condition if the wait time /= 0
 
 #### Dependencies
 - Please ensure that [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is installed. The bitness must match the application you're targeting.
@@ -1028,7 +1026,7 @@
         <Path>..\src\Instrument.Lockin\API\Data\Parse Results (single).vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>71649F034E4ACBBA93F2D210532178C3</GUID>
+      <GUID>31F23F2F33A98F40BAB4CB8A53B0DB9F</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
