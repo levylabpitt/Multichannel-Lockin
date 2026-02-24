@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-02-21 23:52:26" Creator="Patrick Irvin" Comments="" ID="f75806b261bc5068d5c1307fbd0c8eb7">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-02-23 22:12:37" Creator="Patrick Irvin" Comments="" ID="df920af47ff1981b76ff40877785c97d">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.3.1.69</Library_Version>
+    <Library_Version>3.3.1.70</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -36,14 +36,9 @@
 - The analog outputs can be configured to output sine, square, sawtooth, or triangle functions with (swept) DC offsets.
 - Each of the analog inputs can be demodulated at multiple frequencies.</Description>
       <Copyright/>
-      <Packager>Patrick Irvin</Packager>
+      <Packager/>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>[3.3.1]
-#151 fix bug in which sweep mode would not properly sweep to the initial condition if the wait time /= 0
-
-#### Dependencies
-- Please ensure that [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is installed. The bitness must match the application you're targeting.
-</Release_Notes>
+      <Release_Notes>- build with ZMQ 1.3.4</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -1029,7 +1024,7 @@
         <Path>..\src\Instrument.Lockin\API\Data\Parse Results (single).vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>21E285DF6B9FD38BF3926D6734FF4543</GUID>
+      <GUID>555CE71C1C52D2C6DCD30DFEAEACACE4</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
