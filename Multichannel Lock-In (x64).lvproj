@@ -436,10 +436,6 @@
 				<Item Name="MGI Running Maximum (DBL).vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/1D Array/MGI Running Maximum/MGI Running Maximum (DBL).vi"/>
 				<Item Name="MGI Round Up to Power of Two.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Numeric/Rounding/MGI Round Up to Power of Two.vi"/>
 				<Item Name="MGI Running Maximum (SGL).vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/1D Array/MGI Running Maximum/MGI Running Maximum (SGL).vi"/>
-				<Item Name="066FE7A400D914C7F921F08481BF06BBVIPBuild.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/_Build Support_internal_deps/066FE7A400D914C7F921F08481BF06BBVIPBuild.vi"/>
-				<Item Name="066FE7A400D914C7F921F08481BF06BBCONSTANT - VIP API Version.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/_Build Support_internal_deps/066FE7A400D914C7F921F08481BF06BBCONSTANT - VIP API Version.vi"/>
-				<Item Name="066FE7A400D914C7F921F08481BF06BBUpdate VIPB Version.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/_Build Support_internal_deps/066FE7A400D914C7F921F08481BF06BBUpdate VIPB Version.vi"/>
-				<Item Name="066FE7A400D914C7F921F08481BF06BBGet VIP Builder Config.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/_Build Support_internal_deps/066FE7A400D914C7F921F08481BF06BBGet VIP Builder Config.vi"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
@@ -2096,7 +2092,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{BE714A7E-B7D4-4888-A1F2-966F210EC573}</Property>
-				<Property Name="Bld_version.build" Type="Int">68</Property>
+				<Property Name="Bld_version.build" Type="Int">69</Property>
 				<Property Name="Bld_version.major" Type="Int">3</Property>
 				<Property Name="Bld_version.minor" Type="Int">3</Property>
 				<Property Name="Bld_version.patch" Type="Int">1</Property>
