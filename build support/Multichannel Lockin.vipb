@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-05-07 16:32:49" Creator="Patrick Irvin" Comments="" ID="ece1c11a7b60d8c72d7fbc522d605bb6">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-05-07 18:12:01" Creator="Patrick Irvin" Comments="" ID="17156ca751d22f50853f75e3459a7414">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.4.0.74</Library_Version>
+    <Library_Version>3.4.0.75</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -1044,7 +1044,7 @@
         <Path>..\src\DAQmx</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>FD14B045C9EFB45A652A8B048F23A534</GUID>
+      <GUID>75A23A04447B71DC33170452E5FFF58F</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1345,7 +1345,7 @@
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>4607CFFE41BECD9E3548F0C60CCAF7BC</GUID>
+      <GUID>DCA0E46B3BD45148B9A241DF0B24AC65</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1436,7 +1436,7 @@
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>4E7DC8136DB3F637BFDC961536562C14</GUID>
+      <GUID>B2A0DF541D2BE6796E65DFA021323CEF</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
