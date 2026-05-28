@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-05-07 18:12:01" Creator="Patrick Irvin" Comments="" ID="17156ca751d22f50853f75e3459a7414">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-05-27 23:20:33" Creator="Patrick Irvin" Comments="" ID="bb340b8d88b9c41e5f423f1ad8de504f">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.4.0.75</Library_Version>
+    <Library_Version>3.4.1.76</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -18,7 +18,7 @@
   <Advanced_Settings>
     <Package_Dependencies>
       <Additional_External_Dependencies>levylab_lib_instrument_type &gt;=1.2.1.13</Additional_External_Dependencies>
-      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.15.11.52</Additional_External_Dependencies>
+      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.15.12.53</Additional_External_Dependencies>
     </Package_Dependencies>
     <Custom_Action_VIs>
       <Pre-Build_VI>Pre-Build Custom Action.vi</Pre-Build_VI>
@@ -39,12 +39,8 @@
       <Packager/>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
       <Release_Notes>Issues:
-#152: use of 1 device is now supported (eg 1 PXI card or 1 USB device)
-#155: acquisiton without demodulation is now supported
-#156: add API for simplified synchronous measurments
-#157: better support for USB-4431 devices
-#158: 'clear graph' option on waveform charts is better supported
-#159: the number of input and output channels is better synchronized to the number of configured devices</Release_Notes>
+#160 Make changes to address lockin going to idle state
+build with Instrument 1.15.12 for improved error logging</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -1044,7 +1040,7 @@
         <Path>..\src\DAQmx</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>75A23A04447B71DC33170452E5FFF58F</GUID>
+      <GUID>CE580F9FAFB983CE001204C9B44A8572</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1345,7 +1341,7 @@
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>DCA0E46B3BD45148B9A241DF0B24AC65</GUID>
+      <GUID>09B6767215036E8C44E5DBB426019CF9</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1436,7 +1432,7 @@
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B2A0DF541D2BE6796E65DFA021323CEF</GUID>
+      <GUID>B8EF6D1D19F3B089644942E30390A5E1</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
