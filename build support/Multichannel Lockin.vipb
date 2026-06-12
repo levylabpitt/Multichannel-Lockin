@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-06-12 17:04:37" Creator="Patrick Irvin" Comments="" ID="dceb216f061a048619dadfbe34288330">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-06-12 17:32:27" Creator="Patrick Irvin" Comments="" ID="4cf876d57f932f65cc18b7ee83522b08">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.5.0.76</Library_Version>
+    <Library_Version>3.5.0.77</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -38,9 +38,8 @@
       <Copyright/>
       <Packager/>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>Issues:
-#161: low pass filters after lockin: change to cascaded RC fitlers, limit n to 1..4, new calculation of Fout
-#162: Fix bug in output sampling; add Nyquist filter to downsample AI and AO channels
+      <Release_Notes>#161: low pass filters after demodulation: change to cascaded RC filters, limit n to 1..4, new calculation of f_out, ENBW, etc
+#162: Fix bug in output sampling; add Nyquist filter to downsample AI and AO channels; preserve state in decimator to improve behavior when N/M is not an integer
 * Input filters: these are retained to allow the user to filter data going to the front panel scope; they are not applied before lockin demodulation.</Release_Notes>
     </Description>
     <Destinations>
@@ -1041,7 +1040,7 @@
         <Path>..\src\DAQmx</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>BB6C08A0C4E0AA9770F6FBFC8D2E7242</GUID>
+      <GUID>CA115CF14605346AFF791B15372117E9</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1342,7 +1341,7 @@
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>4D6C897B719F780E19EC47BE0FFC3BBB</GUID>
+      <GUID>24A4A629A2FA274F2D0BE222CAADA61E</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1433,7 +1432,7 @@
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>12B0F1E4E8577F50881A0A20F8ECC545</GUID>
+      <GUID>94AB9EBF2D26674DB12F4F379EE10478</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
