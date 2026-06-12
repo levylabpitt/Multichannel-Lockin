@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-05-27 23:20:33" Creator="Patrick Irvin" Comments="" ID="bb340b8d88b9c41e5f423f1ad8de504f">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-06-12 17:04:37" Creator="Patrick Irvin" Comments="" ID="dceb216f061a048619dadfbe34288330">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.4.1.76</Library_Version>
+    <Library_Version>3.5.0.76</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -39,8 +39,9 @@
       <Packager/>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
       <Release_Notes>Issues:
-#160 Make changes to address lockin going to idle state
-build with Instrument 1.15.12 for improved error logging</Release_Notes>
+#161: low pass filters after lockin: change to cascaded RC fitlers, limit n to 1..4, new calculation of Fout
+#162: Fix bug in output sampling; add Nyquist filter to downsample AI and AO channels
+* Input filters: these are retained to allow the user to filter data going to the front panel scope; they are not applied before lockin demodulation.</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -1040,7 +1041,7 @@ build with Instrument 1.15.12 for improved error logging</Release_Notes>
         <Path>..\src\DAQmx</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>CE580F9FAFB983CE001204C9B44A8572</GUID>
+      <GUID>BB6C08A0C4E0AA9770F6FBFC8D2E7242</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1341,7 +1342,7 @@ build with Instrument 1.15.12 for improved error logging</Release_Notes>
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>09B6767215036E8C44E5DBB426019CF9</GUID>
+      <GUID>4D6C897B719F780E19EC47BE0FFC3BBB</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1432,7 +1433,7 @@ build with Instrument 1.15.12 for improved error logging</Release_Notes>
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B8EF6D1D19F3B089644942E30390A5E1</GUID>
+      <GUID>12B0F1E4E8577F50881A0A20F8ECC545</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
