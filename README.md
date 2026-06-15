@@ -21,16 +21,6 @@ The main controls are found on the "AO/REF Setup" tab:
 
 The DSA DAQ settings (hardware addresses, input/output ranges, ac/dc coupling) are configured on the "DAQ Settings" section.
 
-### Auxilliary Output
-
-The lockin can be configured to output a static voltage on a multifunction DAQ in the "Auxilliary Output" section of the "AUX" tab. 
-
-![Block Diagram 2](documentation/images/Lockin-Block-Diagram-2.png)
-
-A demodulated lockin signal can also be routed to another analog output.
-
-![Block Diagram 3](documentation/images/Lockin-Block-Diagram-3.png)
-
 ### Sweep Mode
 
 - Sweep Mode will ramp a DC offset of **Sweep Channel** from the **Sweep Start** to **Sweep End** values in time givem by **Sweep Time**.
