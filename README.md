@@ -33,7 +33,7 @@ X,Y,R,Theta charts are graphed after the final downsampling. Similarly AO and AI
 
 The DSA DAQ settings (hardware addresses, input/output ranges, ac/dc coupling) are configured on the "DAQ Settings" section.
 
-![Device Settings](documentation/images/Lockin-Device-Settings.png)
+![Device Settings](documentation/images/Lockin-Device-Setting.png)
 
 ### Sweep Mode
 
