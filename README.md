@@ -12,14 +12,28 @@ Multichannel Lockin for National Instruments Dynamic Signal Acquisition hardware
 ## Usage
 ### Basic Usage
 
-The main controls are found on the "AO/REF Setup" tab:
-- Analog outputs are configured in the "Output" section.
-- Input prefilters and offsets are configured in the "Input" section.
-- The lockin stage is configured in the "Reference" section.
-
 ![Block Diagram 1](documentation/images/Lockin-Block-Diagram-1.png)
 
+The main controls are found on the "AO/REF Setup" tab:
+- Analog outputs are configured in the "Output" section.
+- Input channels are configured in the "Input" section.
+- The lockin stage is configured in the "Reference" section.
+- Sampling Rate and buffer size are configured on the DAQ Settings tab
+- The time constant and filter order of reference channel 1 are used to figure all output filters 
+
+AO/AI Graphs
+
+The software has an oscilloscope display to to view AO, References, and AI (with gain: input = Device; wihout gain: input = ADC) channels. The following diagram shows where in the signal path the waveforms are displayed. Note that the input filters (60 Hz/LP) are only applied to the waveforms going to the oscilloscope display.
+
+![Block Diagram 2](documentation/images/Lockin-Block-Diagram-2.png)
+
+X,Y,R,Theta charts are graphed after the final downsampling. Similarly AO and AI waveforms are passed through the same output filters in sweep mode (see section below for further discussion).
+
+![Block Diagram 3](documentation/images/Lockin-Block-Diagram-3.png)
+
 The DSA DAQ settings (hardware addresses, input/output ranges, ac/dc coupling) are configured on the "DAQ Settings" section.
+
+![Device Settings](documentation/images/Lockin-Device-Settings.png)
 
 ### Sweep Mode
 
@@ -33,7 +47,9 @@ The DSA DAQ settings (hardware addresses, input/output ranges, ac/dc coupling) a
 
 ### Power Spectrum
 
-- Power spectrum or power spectral density can be plotted for any of AI, AO, or demodulated lockin channels X, Y, R, Theta
+The power spectrum or power spectral density can be plotted for any of AI, AO, or demodulated lockin channels X, Y, R, Theta
+
+![Power Spectrum](documentation/images/Lockin-Power-Spectrum.png)
 
 ## Simulation Mode
 
