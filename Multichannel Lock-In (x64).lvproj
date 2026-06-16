@@ -1077,7 +1077,12 @@
 				<Item Name="TRef Traverse for References.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/traverseref.llb/TRef Traverse for References.vi"/>
 				<Item Name="Has LLB Extension.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Has LLB Extension.vi"/>
 				<Item Name="Caraya Interactive Menu.rtm" Type="Document" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/menu/Caraya Interactive Menu.rtm"/>
-				<Item Name="VIPBuild.vi" Type="VI" URL="/&lt;vilib&gt;/G CLI Tools/VIPBuild.vi"/>
+				<Item Name="G CLI VIP.lvlib" Type="Library" URL="/&lt;vilib&gt;/Wiresmith Technology/G CLI VI Package Manager Tools/G CLI VIP.lvlib"/>
+				<Item Name="Option Parser.lvlib" Type="Library" URL="/&lt;vilib&gt;/Wiresmith Technology/G CLI/Argument Parser/Option Parser.lvlib"/>
+				<Item Name="CLI.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Wiresmith Technology/G CLI/CLI Class/CLI.lvclass"/>
+				<Item Name="TCP_NoDelay_Windows.vi" Type="VI" URL="/&lt;vilib&gt;/Wiresmith Technology/G CLI/Dependencies/TCP_NoDelay_Windows.vi"/>
+				<Item Name="TCP Get Raw Net Object.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tcp.llb/TCP Get Raw Net Object.vi"/>
+				<Item Name="TCP_NoDelay_Linux.vi" Type="VI" URL="/&lt;vilib&gt;/Wiresmith Technology/G CLI/Dependencies/TCP_NoDelay_Linux.vi"/>
 			</Item>
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="MGI Get Executable Version.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Application Control/MGI Get Executable Version.vi"/>
@@ -2129,8 +2134,14 @@
 			<Item Name="IB_SRdB_Write.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Builds/Installer/SRdB/IB_SRdB_Write.vi"/>
 			<Item Name="IB_SRdB_Unlock.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Builds/Installer/SRdB/IB_SRdB_Unlock.vi"/>
 			<Item Name="logosbrw.dll" Type="Document" URL="/&lt;resource&gt;/logosbrw.dll"/>
-			<Item Name="NI_MDF.lvlib" Type="Library" URL="../../../../../../Program Files/National Instruments/LabVIEW 2019/applibs/distkit/MDF/NI_MDF.lvlib"/>
-			<Item Name="NIMdf.dll" Type="Document" URL="../../../../../../Program Files/National Instruments/LabVIEW 2019/applibs/distkit/MDF/NIMdf.dll"/>
+			<Item Name="wsock32.dll" Type="Document" URL="wsock32.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="libc.so.6" Type="Document" URL="libc.so.6">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="NI_MDF.lvlib" Type="Library" URL="../../../../../../../Program Files/National Instruments/LabVIEW 2019/applibs/distkit/MDF/NI_MDF.lvlib"/>
+			<Item Name="NIMdf.dll" Type="Document" URL="../../../../../../../Program Files/National Instruments/LabVIEW 2019/applibs/distkit/MDF/NIMdf.dll"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lock-In (x64) Application" Type="EXE">
@@ -2147,9 +2158,10 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{BE714A7E-B7D4-4888-A1F2-966F210EC573}</Property>
-				<Property Name="Bld_version.build" Type="Int">76</Property>
+				<Property Name="Bld_version.build" Type="Int">77</Property>
 				<Property Name="Bld_version.major" Type="Int">3</Property>
 				<Property Name="Bld_version.minor" Type="Int">5</Property>
+				<Property Name="Bld_version.patch" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">Multichannel Lockin.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/Application (x64)/NI_AB_PROJECTNAME.exe</Property>
 				<Property Name="Destination[0].path.type" Type="Str">relativeToProject</Property>
@@ -2210,7 +2222,7 @@
 				<Property Name="INST_defaultDir" Type="Str">{A127CC0D-3099-41C3-8104-2245C476C6E9}</Property>
 				<Property Name="INST_installerName" Type="Str">setup.exe</Property>
 				<Property Name="INST_productName" Type="Str">Multichannel Lock-In (x64)</Property>
-				<Property Name="INST_productVersion" Type="Str">3.5.0</Property>
+				<Property Name="INST_productVersion" Type="Str">3.5.1</Property>
 				<Property Name="InstSpecBitness" Type="Str">64-bit</Property>
 				<Property Name="InstSpecVersion" Type="Str">19000000</Property>
 				<Property Name="MSI_arpCompany" Type="Str">University of Pittsburgh</Property>
