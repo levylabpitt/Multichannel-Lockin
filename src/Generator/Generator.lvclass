@@ -357,7 +357,7 @@
 		</Item>
 	</Item>
 	<Item Name="Tests" Type="Folder">
-		<Item Name="Generater.TestLauncher.vi" Type="VI" URL="../Generater.TestLauncher.vi">
+		<Item Name="Generator.TestLauncher.vi" Type="VI" URL="../Generator.TestLauncher.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!"A!!!!!A!%!!!!6!$Q!!Q!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!$!!"Y!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1!"!!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">1073742080</Property>
