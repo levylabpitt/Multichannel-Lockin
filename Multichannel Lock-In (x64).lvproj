@@ -34,6 +34,7 @@
 			<Item Name="Lockin API State Machine.vi" Type="VI" URL="../src/Examples/Lockin API State Machine.vi"/>
 		</Item>
 		<Item Name="Instrument.Lockin.lvlib" Type="Library" URL="../src/Instrument.Lockin.lvlib"/>
+		<Item Name="Waveform.Attributes.lvlib" Type="Library" URL="../src/Waveform.Attributes/Waveform.Attributes.lvlib"/>
 		<Item Name="DAQ.lvclass" Type="LVClass" URL="../src/DAQ/DAQ.lvclass"/>
 		<Item Name="DAQmx.lvclass" Type="LVClass" URL="../src/DAQmx/DAQmx.lvclass"/>
 		<Item Name="Generator.lvclass" Type="LVClass" URL="../src/Generator/Generator.lvclass"/>
