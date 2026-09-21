@@ -6,6 +6,8 @@ A second verification pass on 2026-09-20 re-checked every load-bearing claim by 
 
 Issue: https://github.com/levylabpitt/Multichannel-Lockin/issues/160 (open, "Status: In Progress" since 2026-05-26)
 
+**Implementation instructions now live in [issue-160-changespec.md](issue-160-changespec.md).** This file keeps the reasoning.
+
 Keep this file updated as decisions are made. Each candidate change carries a status: **proposed / accepted / rejected / done**.
 
 ## Symptom
@@ -146,11 +148,11 @@ Specifically **reject B2** (the intent flag). It was motivated by a gate that tu
 
 | # | Change | Status |
 |---|---|---|
-| A1 | Suppress public status publication (or hold `started`) for the duration of a recovery attempt, so the parent and the API never see `error`/`idle` for a fault that is about to be cleared; publish `error` only when retries are exhausted | proposed (deferred to step 4) |
-| A2 | Teardown states must not replace the state queue. See the change spec below | **accepted** |
+| A1 | Suppress public status publication (or hold `started`) for the duration of a recovery attempt, so the parent and the API never see `error`/`idle` for a fault that is about to be cleared; publish `error` only when retries are exhausted | accepted - spec in [issue-160-changespec.md](issue-160-changespec.md) |
+| A2 | Teardown states must not replace the state queue. See the change spec below | **done** 2026-09-21 (Changes 1-4; Change 3 implemented as a single status constant outside the inner case) |
 | A3 | Prefer Clear over Stop for an already-errored task | **rejected** - the second Stop succeeds (DAQmx surfaces a latched error once), and Clear would hit the same latched error. A2 makes this unnecessary |
 | A4 | Append `DAQ: ACQUIRE` explicitly to `Macro: Recover` | **done** - already in the uncommitted `Macro: Recover` constant |
-| A5 | Retry counter with a time window; log a recovery marker on success, publish `error` + reason on exhaustion | accepted (step 3) |
+| A5 | Retry counter with a time window; log a recovery marker on success, publish `error` + reason on exhaustion | accepted - spec in [issue-160-changespec.md](issue-160-changespec.md) |
 
 #### A2 change spec
 
@@ -323,6 +325,6 @@ Third pass, while writing the A2 spec:
 
 ## Adjacent work (done, unrelated to the pause)
 
-- `DAQmx.Clip AO Waveforms.vi` raised -200488 then -200486 on a DAQmx Channel property node. Cause: reading task channel-configuration properties (`AO.Min`/`AO.Max`) with a bare channel reference instead of the task + **Active Channels**. Fixed 2026-09-20 by wiring the task and selecting via Active Channels. A 1 s debug Wait is still in that VI and must be removed before commit.
+- `DAQmx.Clip AO Waveforms.vi` raised -200488 then -200486 on a DAQmx Channel property node. Cause: reading task channel-configuration properties (`AO.Min`/`AO.Max`) with a bare channel reference instead of the task + **Active Channels**. Fixed 2026-09-20 by wiring the task and selecting via Active Channels. (The 1 s debug Wait noted here earlier is gone; confirmed 2026-09-21.)
 - A sweep of all 30 property-node VIs in the DAQmx class found only 6 with DAQmx **Channel** nodes; the other 5 are correct (task-referenced). `DAQmx.44xx.Coerce Fs.vi` reads `ChanType` off a generic refnum and appears to have **no callers** - possible dead code.
 - Planned but not done: delete the case structure in `getWFMQueue.vi` that merges error 123, so a min-buffer timeout falls through to the dequeue attempt. Caveat: at `DAQ: START` there is no previous waveform, so guard the "dequeue empty **and** no previous waveform" case.
