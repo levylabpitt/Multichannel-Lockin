@@ -6,22 +6,90 @@ Instructions only. The reasoning behind each item is in [issue-160-random-pauses
 
 | Item | What | Status |
 |---|---|---|
-| A2 | Teardown errors no longer replace the state queue | **done** (verified with `lvkit diff` 2026-09-21) |
+| A2 | Teardown errors no longer replace the state queue | **done** |
 | A4 | `Macro: Recover` ends with `DAQ: ACQUIRE`, routed through `Add State(s) to Queue` | **done** |
-| A5 | Bounded retry, recovery log markers | step 1-2 below - **required** |
-| A1 | Parent and API see no status change during a recovery | step 3 - **recommended** |
-| B1' | Delete the parent's broken auto-restart | step 4 - **required** |
-| B3 | Delete unreachable sweep code in the parent | step 5 - optional, zero runtime effect |
-| Test harness | Fake faults on the dev machine | step 6 - **recommended**, lets you test steps 1-4 without the hardware PC |
+| A5 | Bounded retry, recovery log markers | **done** (fixes 2-5 applied, verified) |
+| A1 | Parent and API see no status change during a recovery | **done** (fix 1 applied, verified) |
+| B1' | Delete the parent's broken auto-restart | **done**, verified |
+| B3 | Delete unreachable sweep code in the parent | **done**, verified |
+| Test harness | Fake faults on the dev machine | skipped for now |
 | A3, B1, B2 | | rejected - no action |
 
 Do steps 1-4 and 6 in one sitting, run the step 6 tests on the dev machine with simulated devices, then take it to the hardware PC once.
 
 No change here touches a JSON payload or public API, so this does not need a Transport release.
 
+## Review of the implementation (2026-09-21)
+
+Checked with `lvkit diff` against HEAD and, for the three small VIs, LabVIEW's own block-diagram export.
+
+### Fixes (second review, 2026-09-21)
+
+| # | VI | Status |
+|---|---|---|
+| 1 | `setStatus.vi` publishes in `False`, passes through in `True` | **done**, verified in LabVIEW's export |
+| 2 | `DAQ: CREATE` / `DAQ: START` now queue `Macro: Recover` | **done**, verified |
+| 3 | `DAQmx.Acquire Recovery.vi` sets `Recovering?` = F in its `True` frame | **done**, verified |
+| 4 | `DAQmx.Recovery Error Handler.vi` computes the new count before the retry-or-give-up check | **done**, verified: first fault, tight loop (gives up on the 4th, i.e. after 3 attempts) and the five-hour case all behave |
+| 5 | Both subVIs call `Handle Error.vi` with `Stop on Unhandled Error` = F | **done**, verified |
+| 5b | Markers kept off the loop error wire: `error out` now comes from `Handle Error.vi`'s `handling error` output | **done**, verified |
+
+
+**Markers are errors, not warnings:** `is warning?` = F in both subVIs (2026-09-21), so 5160 / 5161 take the same logging path as every other entry. This is safe only because 5b keeps them off the loop error wire; do not wire `Unhandled error` back to `error out`.
+
+Side effect of 5b, no action needed: both subVIs now drop whatever arrives on their `error in` (`handling error` is clean unless publishing itself fails). Their callers only ever pass a clean wire or a warning there, so nothing is lost.
+
+#### Fix 4 - `DAQmx.Recovery Error Handler.vi` (done; kept for reference)
+
+**What "the window" is.** The 10-second rule: an attempt adds to the count only if the previous attempt was less than `Window (s)` ago; otherwise the count restarts at 1. In your diagram that rule is the `now` - `Last Attempt (s)` <= `Window (s)` comparison and the Select with the constant `1`, inside the `True` frame.
+
+**The problem.** The retry-or-give-up case is selected from the count **left over from the last recovery**, before that restart-at-1 rule runs, because the rule sits inside the `True` frame. Nothing resets the count when a recovery succeeds, so:
+
+| Time | Event | Count read | Decision | Count after |
+|---|---|---|---|---|
+| 09:00:00 | fault | 0 | retry | 1 |
+| 09:00:02 | fault | 1 | retry | 2 |
+| 09:00:04 | fault | 2 | retry | 3 |
+| 09:00:06 | fault | 3 | retry (4th attempt), succeeds | 4 |
+| 14:00:00 | one ordinary underflow | **4** | **give up** | 0 |
+
+At 14:00 the five hours since the last attempt are never considered, because the rule that would restart the count at 1 is in the frame that did not run.
+
+**The fix is a rewire; no new logic.**
+
+1. Move these out of the `True` frame to the left of the case structure: the Unbundle (`Attempts`, `Last Attempt (s)`), the `+1`, the stopwatch (`now`), the Subtract, the `<=` against `Window (s)`, and the Select with the constant `1`.
+2. Delete the outer Unbundle of `Recovery.Attempts`. Wire the **Select's output** (the new count) into the `<=` against `Max Attempts` instead.
+3. `True` frame: wire the new count into the Bundle's `Attempts` and `now` into `Last Attempt (s)`, through tunnels. `retry?` stays T.
+4. `False` frame: unchanged. Optionally feed the new count into the 5161 message's `%d attempts` instead of the unbundled old one.
+
+Afterwards, the 14:00 fault computes a new count of 1 (last attempt five hours ago) and retries, and a tight loop gives up after exactly 3 attempts instead of 4.
+
+#### 5b - keep the markers off the loop error wire (done; kept for reference)
+
+In both subVIs `error out` is wired from `Handle Error.vi`'s **`Unhandled error`** output, which is its `error in` unchanged, i.e. the 5160 / 5161 cluster itself. That goes onto the loop error wire in `Process.vi`. **It is harmless today only because the cluster is a warning** (`is warning?` = T): JKI diverts only on status TRUE, and in `DAQ: ACQUIRE` the next iteration's `Is Value Changed` case drops the warning, so it is logged once.
+
+- **Do not change `is warning?` to F without also doing the next step.** A 5160 error on the loop wire sends the state machine to `Error Handler` -> `Macro: Stop`, which would stop acquisition immediately after every successful recovery.
+- Recommended: wire each subVI's `error out` from its own **`error in`** terminal, branched before the case structure, and leave `Unhandled error` unwired. Then the marker only goes to the log, and `is warning?` can be either value.
+- Why you might want F: whether the logger records warnings is untested (SMO `Handle Error.vi` publishes them, since it fires on status OR non-zero code). If a 5160 does not show up in the log on the first hardware run, this is the first thing to check.
+
+### Verified correct
+
+- `DAQ: ACQUIRE` `"Error"`: `Recovering?` <- `DAQmx Error?` and `Fault` <- `setWaveforms.vi` error, bundled **before** `setStatus.vi`.
+- `DAQmx.Error Handler.vi`: `DAQmx Error?` unchanged; new `retry?` output; bundles `Recovering?` := `Recovering? AND DAQmx Error?`.
+- `Macro: Recover` queues the five states on `retry?`, else `Macro: Stop`, through `Add State(s) to Queue`.
+- `Recovering?` = F in `Macro: Stop` and `Error Handler`.
+- `Data: Process State`: reset branch gone; `DAQ.getDAQState.vi` class and error correctly rewired.
+- Timeout case reads `"idle, stopped, sweeping"`; `Macro: Sweep`, `Sweep: Wait`, `Sweep: Status` gone and nothing references them; `Data: Process Sampling` cleaned.
+
+### Notes, no action needed
+
+- Because `DAQmx.Error Handler.vi` is shared by all five `DAQ: *` frames, an **unrecognised** error in `DAQ: STOP` or `DAQ: CLEAR` mid-recovery now clears `Recovering?`. The recovery still completes (A2); it just stops being suppressed and logs no 5160. Acceptable.
+- lvkit reads a changed execution flag (shared clone -> non-reentrant) in **both** edited `Process.vi` files. You have confirmed shared clone in LabVIEW, so this is probably an lvkit misread; the only reason to glance at VI Properties > Execution again is that both flipped together.
+- B3 also removed five parent front-panel indicators (`waiting (s)`, `Sweep Wait`, `sweeping (s)`, `Sweep Time`, `sweep remain (s)`). The deleted sweep states were writing them, which lvkit had not shown, so the reasoning doc's "compute and discard" description of those frames was wrong on that point. Since the states were unreachable, the indicators never updated anyway.
+
 ## Before you start
 
-- `src/DAQmx/Process.vi` reentrancy is now **non-reentrant** (HEAD has shared clone). Revert it in VI Properties > Execution unless you changed it on purpose.
+- Reentrancy: see the note under Review.
 
 ## Step 1 - recovery state (new typedef, one private-data field)
 
