@@ -247,7 +247,7 @@ Run `lvkit diff` against `HEAD` (set `PYTHONIOENCODING=utf-8`). Changes 1-3 shou
 
 | # | Change | Status |
 |---|---|---|
-| C1 | Raise min buffer above 1 (`ObtainPublicQueues.vi` / `onStart.vi`) | proposed |
+| C1 | Raise min buffer above 1 (`ObtainPublicQueues.vi` / `onStart.vi`) | proposed - **not on its own**: the Generator only generates when the AO queue is empty, so the queue never exceeds one block and `DAQ: START` would wait 5 s for a second block and fail with error 123. Needs the Generator to generate while count < target. See `issue-5-external-reference.md` G1 |
 | C2 | Revisit `AO.DataXferReqCond` (set in `DAQmx.Create Sample Clock.vi`) - keep the FIFO topped up rather than refilling when empty | proposed |
 | C3 | Test whether driver-side `Output.BufSize` is settable on these cards | proposed |
 | C4 | Fewer, larger writes (more samples per update) | proposed |
