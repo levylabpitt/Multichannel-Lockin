@@ -5,7 +5,7 @@ Multichannel Lockin for National Instruments Dynamic Signal Acquisition hardware
 ![Multichannel Lockin Front Panel](documentation/images/Lockin-Front-Panel.png)
 
 ## Installation
-- LabVIEW 2019 32-bit required
+- LabVIEW: developed in 2019, but should be compatible with any future version, 32 or 64 bit will both work
 - Multichannel Lockin.exe can be installed by downloading the latest installer found here [here](https://github.com/levylabpitt/Multichannel-Lockin/releases/latest)
 - The LabVIEW API can be installed using VI Package Manager as described [here](https://levylabpitt.github.io/)
 
