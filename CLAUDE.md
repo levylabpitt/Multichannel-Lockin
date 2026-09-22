@@ -13,8 +13,10 @@ Release versions live in the build spec (`Bld_version.*`) and in the `.vipb` (`L
 
 ## Building and releasing
 
-- There is **no `build support\build.cfg`**, so the shared `build.bat` from levylabpitt/build-support does not apply to this repo; it stops with "config not found". Do not try to fix that by pointing it here without adding a config deliberately.
-- `builds\build_vip.bat` is generated per release (by "Patrick Builder") with the version hard-coded. It builds the VIP with g-cli, commits "Release x" on `develop`, merges to `main` with `--no-ff`, tags on `main`, pushes both branches and the tag, and runs `gh release create`. Treat it as a record of the last release, not a script to rerun as-is.
+- Releases go through the shared `build.bat` from levylabpitt/build-support, normally run by "Patrick Builder" via `%LOCALAPPDATA%\LevyLab\build-support\scripts\build_all.bat`. It reads `build support\build.cfg`: builds the VIP, clears the compiled cache, builds the app spec (`APP_SPEC`) then the installer spec (`INST_SPEC`), and with `DO_RELEASE=true` commits "Release x" on `develop`, merges to `main` with `--no-ff`, tags on `main`, pushes both branches and the tag, and runs `gh release create`. A full run takes about 45 minutes (VIP ~27 min, app ~14 min).
+- `APP_SPEC` and `INST_SPEC` must match the build-spec names in the `.lvproj` exactly (`Multichannel Lock-In (x64) Application`, `Multichannel Lock-In (x64) Installer`). A mismatch fails only in the scripted build, as lvBuild error 1 "The build specification ... was not found" (LabVIEW's "GPIB Controller-In-Charge" explanation for error 1 is irrelevant); building from the project UI works because the spec is picked by clicking.
+- A failed `build_all.bat` run still leaves side effects: the VIP build bumps the version in the `.vipb`, `.lvproj` and `src\Lockin.Utilities\Application Version.vi` (left uncommitted), and Patrick Builder's publish step afterwards pushes the staged `.vip` to the VIPM repository even though no tag or GitHub release was made.
+- `builds\build_vip.bat` is an older per-release script (version hard-coded) from before `build.cfg`. Treat it as a record, not a script to rerun.
 - Release tags sit on the merge commits on `main`, so `git describe` on `develop` reports an older release. Get the newest release with `gh release view --json tagName -q .tagName`.
 
 ## Layout
