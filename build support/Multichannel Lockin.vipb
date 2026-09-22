@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-06-16 14:23:43" Creator="Patrick Irvin" Comments="" ID="a48c2398262eab243e157698ce076c13">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-09-22 09:08:17" Creator="Patrick Irvin" Comments="" ID="d166dc8ffe29e7d803c2772949043be0">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.5.1.78</Library_Version>
+    <Library_Version>3.6.0.81</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -22,7 +22,7 @@
     </Package_Dependencies>
     <Custom_Action_VIs>
       <Pre-Build_VI>Pre-Build Custom Action.vi</Pre-Build_VI>
-      <Post-Build_VI>Post-Build Custom Action.vi</Post-Build_VI>
+      <Post-Build_VI/>
       <Pre-Install_VI/>
       <Post-Install_VI/>
       <Pre-Uninstall_VI/>
@@ -38,7 +38,32 @@
       <Copyright/>
       <Packager/>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>#163: fix issue in which empty results would result in NaN values on front panel</Release_Notes>
+      <Release_Notes># Multichannel Lockin 3.6.0 (pre-release)
+
+## Fixes
+
+- **#160** The lock-in no longer stops and sits in idle after an AO buffer underflow (-200621) or another recoverable DAQmx error, including mid-sweep. It now tears down and restarts its tasks on its own. Sporadic faults always recover; it gives up only after 3 attempts within 10 s of each other. The UI and API keep showing the running state during a recovery. The error log records **5160** for each successful recovery and **5161** if it gives up.
+- Fixed errors -200488 / -200486 at start in `DAQmx.Clip AO Waveforms.vi`.
+- Removed a broken automatic restart in Instrument.DAQ that discarded sweep data instead of restarting.
+
+## Breaking changes
+
+- **#164** Sweep configuration fields renamed to match the Transport Server: `Sweep Time (s)` -&gt; `sweepTime`, `Initial Wait (s)` -&gt; `initialWaitTime`, `Return to Start` -&gt; `returnToStart`, `Channels` -&gt; `sweepChannels`. These are JSON keys on the wire. **Requires Transport 1.5.2 or later.** Older Transport versions send keys this version ignores, and sweeps then run with default settings.
+- Waveform attribute VIs (`Get/Set Waveform AI Channel`, `AO Channel`, `Reference Channel`, `Quadrature`, `Sweep Status`) moved into the new `Waveform.Attributes.lvlib`. Code that calls them from their old location in the Generator must be relinked.
+
+## Changes
+
+- Generator reworked into a proper SMO and separated from Instrument.DAQ.
+- Removed obsolete gain-change behaviour; AO gain scaling now happens only in Instrument.DAQ.
+- Removed dead code, including unreachable sweep states in Instrument.DAQ.
+
+## Experimental
+
+- **#5 External reference (PLL / FLL)** Prototype code for locking the reference to an external signal is included but switched off, and is not exposed in the UI or API. See `documentation/issue-5-external-reference.md`.
+
+## Testing
+
+- The #160 recovery has been verified by code review and has not yet run on hardware.</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -1038,7 +1063,7 @@
         <Path>..\src\DAQmx</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E036BD6947B7670C9EB24288D9242877</GUID>
+      <GUID>ABC3A2C960B53A14E7500E5E17F2A81C</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1339,7 +1364,7 @@
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>1DC3B75D535EB0E26E5ABA4556949FF8</GUID>
+      <GUID>87C7757D30FA1A22465BE708BB2BA8B9</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1430,7 +1455,7 @@
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>121DE99BA388D1E47C909E4ABDE7682B</GUID>
+      <GUID>61B148605901C820EBBE12C5EFBCCAD6</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
