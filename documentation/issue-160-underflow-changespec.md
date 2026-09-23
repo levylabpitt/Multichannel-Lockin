@@ -10,6 +10,7 @@ Instructions first; the evidence is at the bottom. Follows [issue-160-changespec
 | 2 | After a recovery, write the block that failed before anything new | stops a sweep from skipping a block | **done** 2026-09-22, see "AS BUILT" |
 | 3 | Stop reading DAQmx properties on every write | trims per-write latency | optional, only if 1 is not enough |
 | 4 | Pair each pre-write with its own dequeue | the first block after every start and recovery was paired with the wrong REF | **done** 2026-09-22, see "Change 4" |
+| 5 | Size the AO buffer explicitly to two blocks (#167) | without it the second pre-write fails with -200547 on every start | **open** 2026-09-23, see "Change 5" |
 
 ### Change 1 - two-block AO lead (done, verified 2026-09-22)
 
@@ -63,6 +64,27 @@ Fixed by moving each write next to its own dequeue, which also removed six termi
 The invariant is now structural: **every `DAQmx.Write.vi` call is immediately preceded, on the same class wire, by the dequeue that set `Recovery.Pending`.**
 
 **Watch the polarity of the two `Empty Array?` gates - they are opposite.** The first asks "is anything owed?", so its **True** frame (nothing owed) is the one that dequeues. The second asks "did the second dequeue produce a block?", so its **False** frame (a block is there) is the one that writes. Copying the shape of the first into the second inverts it, which is what happened on the first pass; caught by reading the IR and fixed 2026-09-22 22:39. An inverted second gate never writes block 2 in normal operation, silently undoing Change 1.
+
+### Change 5 - size the AO output buffer before the first write (#167, open)
+
+**Symptom (3.6.1.81, hardware).** `DAQmx.Write.vi` returns -200547, "a previous DAQmx Write automatically configured the output buffer size ... no more data can be written prior to starting the task". It fires on the second pre-write in `DAQmx.Prime AO.vi`, so `DAQ: START` fails on every start and every recovery attempt. 3.6.1.81 cannot acquire.
+
+**Cause.** Change 1 step 3 relied on writing two blocks before `DAQmx Start Task`, but nothing configures the AO buffer, so DAQmx does it implicitly: the first Multiple Samples write creates a buffer exactly the size of that write (one block), and with auto start = F nothing more can be written until the task starts. The evidence section below already says "DAQmx sizes the output buffer from the data written before start"; the spec drew the wrong conclusion from it (that writing two blocks would give a two-block buffer).
+
+**Why keep two writes rather than one concatenated write.** A single two-block write would size the buffer correctly by itself, but it pushes one waveform through `DAQmx.Write.vi`'s delay line, so the REF pairing from Changes 2 and 4 would be off by one block. Writing block 1, starting, then writing block 2 brings back the race Change 1 removed. Configuring the buffer is what NI's error text prescribes and leaves Changes 1-4 as they are.
+
+**Where.** `src/DAQmx/private/DAQmx.Create Sample Clock.vi`, frame `"No Error"`. It is the only place timing is set (called only from `Sync.Create.vi`, i.e. `DAQ: CREATE`, which the recovery path re-runs), and it runs before any write. The buffer size therefore follows every change of block size.
+
+1. After the `DAQmx Timing (Sample Clock).vi` for-loop, add a new for-loop that auto-indexes the **AO task array**: the second array into the `Build Array` feeding the timing loop, the same array the existing `Output.BufSize` read loop indexes. (lvkit labels it `#s`; class field labels are scrambled, so identify it by that loop, not the name.)
+2. Inside, a `DAQmx Buffer` property node, **write** `Output.BufSize` (U32) = **2 x samples per channel**. Samples per channel is the I32 class field already wired to the timing VI's `samples per channel` input (the same field `DAQmx.Read.vi` uses as `number of samples per channel`, i.e. the block length; lvkit prints it as `Fs.Output`). `DAQmx Configure Output Buffer.vi` is equivalent if you prefer the VI.
+3. Error chain: the timing loop's error output -> shift register on the new loop -> `error out` of the frame (currently `case_139::out0` comes straight from the timing loop).
+4. Optional: wire the task out of the new loop into the `Output.BufSize` read loop so the `Output.Buffer` indicator is read after the write and shows the configured size.
+
+The factor 2 must be at least the number of blocks pre-written, i.e. the `Min Queue Buffer` constant in `Methods (overrides)/onCreated.vi`. A larger factor is harmless with regeneration off (the lead is still what is written, the writes just never wait for space), but 2 is the minimum that works and keeps the two numbers visibly the same.
+
+**Check on hardware.** After a start, `Output.Buffer` on `DAQmx.Create Sample Clock.vi` should read 2 x samples per block per AO task, and `DAQ: START` should complete with no -200547.
+
+**Tests.** `Test Sync.vi`, `Test Sync with Queues.vi` and `Test Sync (DAQmx).vi` all go through `Sync.Create.vi`, so they pick up the fix; the two that pre-write twice currently fail the same way.
 
 ### Verified as built, 2026-09-22 22:40
 

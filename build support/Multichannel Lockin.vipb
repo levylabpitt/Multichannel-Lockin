@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-09-23 07:12:54" Creator="Patrick Irvin" Comments="" ID="e676ddaea9b409de48752eab5147edfe">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-09-23 12:37:41" Creator="Patrick Irvin" Comments="" ID="ee28c21f25b2c56ba40646b70393596d">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.6.1.82</Library_Version>
+    <Library_Version>3.6.2.83</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -38,15 +38,12 @@
       <Copyright/>
       <Packager/>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes># Multichannel Lockin 3.6.1
+      <Release_Notes># Multichannel Lockin 3.6.2
 
 ## Fixes
 
-- **#165** Channels with a non-unity output gain now report and drive the amplitude and offset you set. Offset was not gain-compensated at all before.
-- **#165** Sweep setpoints are gain-compensated too: a 0 to 1 V sweep on a gain-10 channel no longer reads back as 0 to 0.1 V.
-- **#160** AO buffer underflows (-200621) should now be rare. The lock-in keeps two AO blocks ahead of the hardware instead of one, so ordinary Windows jitter no longer starves the output.
-- **#160** A sweep that hits an underflow no longer steps at the recovery point: the block that failed to write is replayed instead of skipped.
-- **#160** The first data point after a start or a recovery was demodulated against the wrong reference waveform. Visible only during a frequency sweep.
+- **#167** 3.6.1 could not start acquisition: every start failed with DAQmx error -200547. The AO output buffer is now set to two blocks before the first write, so the two-block lead introduced in 3.6.1 works as intended. Do not use 3.6.1.81.
+- DAQmx read and write timeouts cut from 10 s to 5 s, so a stalled acquisition is detected and recovered sooner
 
 No API or wire-protocol changes.
 
@@ -56,8 +53,8 @@ No API or wire-protocol changes.
 
 ## Testing
 
-- Automatic recovery was confirmed on hardware: 27 underflows, 26 recoveries, no manual restarts.
-- The lower underflow rate, the reference fix and the #165 gain fixes have not yet run on hardware.</Release_Notes>
+- Confirmed on hardware: the AO buffer is two blocks (20480 samples per task) and the tasks start without error.
+- Because 3.6.1 never acquired, its changes (#160 underflow rate and reference pairing, #165 output gain) have still not run on hardware.</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -1057,7 +1054,7 @@ No API or wire-protocol changes.
         <Path>..\src\DAQmx</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>36FAEEEF3E492706A8EB7C1766DC424D</GUID>
+      <GUID>7E4557956B12D2E176CF479DE07F98ED</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1358,7 +1355,7 @@ No API or wire-protocol changes.
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>AAF4D09824C1CC6951435A4E3812ACDE</GUID>
+      <GUID>044944DC74E40E44139B870518F67DE5</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1449,7 +1446,7 @@ No API or wire-protocol changes.
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>439EA5A99EEBEE55A652888822ED2A31</GUID>
+      <GUID>73CF73C43D136D4FB4BF207F596BD39D</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
