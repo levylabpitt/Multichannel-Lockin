@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-09-22 09:08:17" Creator="Patrick Irvin" Comments="" ID="d166dc8ffe29e7d803c2772949043be0">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-09-22 17:44:37" Creator="Patrick Irvin" Comments="" ID="efec5ecb446a4c8b0427282a45e4deb9">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.6.0.81</Library_Version>
+    <Library_Version>3.6.1.81</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -38,32 +38,32 @@
       <Copyright/>
       <Packager/>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes># Multichannel Lockin 3.6.0 (pre-release)
+      <Release_Notes># Multichannel Lockin 3.6.1
 
 ## Fixes
 
-- **#160** The lock-in no longer stops and sits in idle after an AO buffer underflow (-200621) or another recoverable DAQmx error, including mid-sweep. It now tears down and restarts its tasks on its own. Sporadic faults always recover; it gives up only after 3 attempts within 10 s of each other. The UI and API keep showing the running state during a recovery. The error log records **5160** for each successful recovery and **5161** if it gives up.
-- Fixed errors -200488 / -200486 at start in `DAQmx.Clip AO Waveforms.vi`.
-- Removed a broken automatic restart in Instrument.DAQ that discarded sweep data instead of restarting.
+- **#165** Channels with a non-unity output gain now report and drive the amplitude you asked for. The Generator's echo used to overwrite the stored value with the card-side amplitude, so with a gain of G the UI and API reported A/G within a block, and the output dropped by another factor of G on every later AO change. `Offset` is gain-compensated as well now - DC was not scaled at all before.
+- **#165** Sweep setpoints are gain-compensated too. The card gets card units while the UI and API keep reporting the volts you asked for, so a 0 to 1 V sweep on a gain-10 channel no longer reads back as 0 to 0.1 V.
+- **#160** AO buffer underflows (-200621) should now be rare. The lock-in keeps **two** AO blocks ahead of the hardware instead of one: the Generator keeps a spare block queued, `DAQ: START` writes two blocks before starting the tasks, and the minimum queue depth is 2. Previously every write had to land within a single block time, so ordinary Windows jitter was enough to starve the output.
+- **#160** If an underflow does happen mid-sweep, the block whose write failed is now replayed after the recovery instead of being skipped, so a sweep ramp no longer steps at a recovery point.
+- **#160** The first block published after every start, and after every recovery, was demodulated against the reference waveform of the *following* block. This was invisible at a fixed frequency, where consecutive blocks are identical, but produced one wrong point after a mid-sweep recovery during a frequency sweep.
 
-## Breaking changes
+## Internal
 
-- **#164** Sweep configuration fields renamed to match the Transport Server: `Sweep Time (s)` -&gt; `sweepTime`, `Initial Wait (s)` -&gt; `initialWaitTime`, `Return to Start` -&gt; `returnToStart`, `Channels` -&gt; `sweepChannels`. These are JSON keys on the wire. **Requires Transport 1.5.2 or later.** Older Transport versions send keys this version ignores, and sweeps then run with default settings.
-- Waveform attribute VIs (`Get/Set Waveform AI Channel`, `AO Channel`, `Reference Channel`, `Quadrature`, `Sweep Status`) moved into the new `Waveform.Attributes.lvlib`. Code that calls them from their old location in the Generator must be relinked.
+- AO, REF and AI waveforms are carried on the DAQmx class wire rather than through terminals, and AI/AO pairing was shifted to match the deeper buffer.
+- Each AO pre-write now sits next to the dequeue that produced it, so a block and its reference can no longer come apart. `getWFMQueue.Initial.vi` became `DAQmx.Prime AO.vi` and performs both pre-writes itself; `Sync.Start.vi` and `DAQmx.Start AO.vi` no longer take AO blocks.
+- The output-gain conversions were renamed to `Divide` / `Multiply Amplitude and Offset by Output Gain.vi`, and `Divide Sweep Config by Output Gain.vi` was added.
 
-## Changes
+No API or wire-protocol changes.
 
-- Generator reworked into a proper SMO and separated from Instrument.DAQ.
-- Removed obsolete gain-change behaviour; AO gain scaling now happens only in Instrument.DAQ.
-- Removed dead code, including unreachable sweep states in Instrument.DAQ.
+## Known issues
 
-## Experimental
-
-- **#5 External reference (PLL / FLL)** Prototype code for locking the reference to an external signal is included but switched off, and is not exposed in the UI or API. See `documentation/issue-5-external-reference.md`.
+- Sweeps started from Transport still run with default settings until Transport is rebuilt against this package: 2.5.1.55 and earlier send the pre-#164 sweep field names, which this version ignores.
 
 ## Testing
 
-- The #160 recovery has been verified by code review and has not yet run on hardware.</Release_Notes>
+- The automatic recovery from 3.6.0 was confirmed on hardware: 27 underflows, 26 recoveries, none needing a manual restart.
+- The reduction in the underflow rate, the reference-pairing fix and the #165 gain conversions have not yet run on hardware.</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -1063,7 +1063,7 @@
         <Path>..\src\DAQmx</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>ABC3A2C960B53A14E7500E5E17F2A81C</GUID>
+      <GUID>619266E1992B2BBCD48B61006DC40B95</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1364,7 +1364,7 @@
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>87C7757D30FA1A22465BE708BB2BA8B9</GUID>
+      <GUID>880BC0ACEBF8674E42AC810E0524B969</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1455,7 +1455,7 @@
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>61B148605901C820EBBE12C5EFBCCAD6</GUID>
+      <GUID>E246C2F0B5C060F86CDD09A8960EF0D2</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>

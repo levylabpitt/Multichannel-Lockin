@@ -9,6 +9,7 @@ Instructions first; the evidence is at the bottom. Follows [issue-160-changespec
 | 1 | Keep **two** AO blocks ahead instead of one | removes the structural cause of the underflow | **done** 2026-09-22: Generator gate 0..1, min buffer 2, two pre-writes, feedback delay 2 - all four verified |
 | 2 | After a recovery, write the block that failed before anything new | stops a sweep from skipping a block | **done** 2026-09-22, see "AS BUILT" |
 | 3 | Stop reading DAQmx properties on every write | trims per-write latency | optional, only if 1 is not enough |
+| 4 | Pair each pre-write with its own dequeue | the first block after every start and recovery was paired with the wrong REF | **done** 2026-09-22, see "Change 4" |
 
 ### Change 1 - two-block AO lead (done, verified 2026-09-22)
 
@@ -36,13 +37,43 @@ Implemented differently from, and better than, the draft below: the owed block l
 
 Why this covers both failure modes: a failed write leaves Pending set, so the block is replayed. A failed read with a good write clears Pending, and the written block plays out during the recovery (1.2 s median against a block time of order 100 ms), so nothing is owed.
 
-**Residual issues** (all minor, none blocking a hardware run):
+**Residual issues.** Status re-read from the VIs 2026-09-22 22:00:
 
-1. `Macro: Stop` clears `Recovering?` and one waveform field only; `Pending REF_X/REF_Y` keep stale values. Harmless, because every write path is preceded by a dequeue that rewrites all three, but clear all three for consistency.
-2. If `Sync.Start.vi` itself fails during a recovery, one block is lost: `getWFMQueue.Initial.vi`'s second dequeue has already overwritten `Pending AO` with the second block, so the first is unrecoverable. Rare, costs one block. Fix only if it shows up.
-3. The two pre-writes inside `DAQmx.Start AO.vi` both read the same `Pending REF_X/REF_Y` (the second block's), so the delay line gets REF(m+1) twice instead of REF(m), REF(m+1). Benign **only because** each block holds an integer number of REF periods, which makes the arrays identical; that is a silent dependency on `Find Integer Period Fs and Ns`. Pass REF per write if you want it exact.
-4. `setWaveforms.vi`'s publish gate tests only `Waveforms.AO` and `Waveforms.AI`; the two `Empty Array?` nodes on REF_X / REF_Y are unused. Either add them to the gate or delete them.
-5. Dead terminals now that data rides the class wire: `Sync.Acquire.vi`'s `AO` input and its `AOwfm out (previous)` / `AIwfm` outputs, `DAQmx.Write.vi`'s `AOwfm out (previous)`, and `setWaveforms.vi`'s four waveform inputs. Remove them from the connector panes so nobody rewires them later.
+1. ~~`Macro: Stop` leaves `Pending REF_X` / `Pending REF_Y` stale.~~ **Done** - its Bundle By Name now writes the flag plus all three `[MeasureData]` fields as empty.
+2. **Open - won't fix.** If anything in `DAQ: START` fails after block 1's write (block 2's write, or `DAQmx Start Task`), block 1 is lost: it sits in an AO buffer that `DAQ: CLEAR` discards, and `Recovery.Pending AO` has already moved on to block 2. A real fix means changing the recovery contract from one pending block to a queue of pending blocks - `Recovery.Pending AO` becomes an array, and `getWFMQueue.vi`, `Sync.Acquire.vi`, `DAQmx.Prime AO.vi` and `Macro: Stop` all change with it. That is a lot of surface for a one-block loss in a path that did not occur once in 27 recoveries. Revisit only if a sweep shows a step that survives the fixes above.
+3. ~~The two pre-writes read the same `Pending REF_X/REF_Y`.~~ **Done** 2026-09-22 - see "Change 4".
+4. ~~`setWaveforms.vi` computes `Empty Array?` on REF_X / REF_Y and leaves them unwired.~~ **Done** - the two nodes were deleted. The publish gate is deliberately AO **and** AI non-empty.
+5. ~~Dead terminals on the connector panes.~~ **Done** - `Sync.Acquire.vi`, `setWaveforms.vi` and `DAQmx.Write.vi` all have clean panes.
+
+### Change 4 - pair each pre-write with its own dequeue (done 2026-09-22)
+
+`DAQmx.Write.vi` takes its REF by unbundling `Recovery.Pending REF_X/REF_Y` off the class wire it is handed. That is correct in the acquire path, where `DAQ: ACQUIRE` calls `getWFMQueue.vi` immediately before `Sync.Acquire.vi`. The start path broke it: `getWFMQueue.Initial.vi` did **both** dequeues, so the class it returned carried block 2's REF and both pre-writes saw it. The delay line got REF(2) twice instead of REF(1), REF(2), so the **first AI block published after every start and every recovery** was paired with the wrong reference.
+
+That is only invisible when consecutive blocks are REF-identical. During a frequency sweep they are not, so after a mid-sweep recovery the first published point demodulated against the wrong reference - the same symptom as the ramp step this spec is trying to remove.
+
+Fixed by moving each write next to its own dequeue, which also removed six terminals:
+
+- `getWFMQueue.Initial.vi` -> renamed **`DAQmx.Prime AO.vi`**. It keeps the `Empty Array?(Recovery.Pending AO)` case (replay the owed block, else dequeue with `wait for min buffer?` = T), then calls `DAQmx.Write.vi` on that class, then `getWFMQueue.vi` with `wait for min buffer?` = F, then unbundles `Recovery.Pending AO` and calls `DAQmx.Write.vi` again. Outputs `AO 1` and `AO 2` are gone; the pane is class + error only.
+- `DAQmx.Start AO.vi` lost both `DAQmx.Write.vi` calls, the `Empty Array?` gate and the inputs `AO in 1` / `AO in 2`. It is now just the Start Task loop, reading the AO task array from `DAQmx in`.
+- `Sync.Start.vi` lost `AO 1` / `AO 2`.
+- `DAQ: START` calls `DAQmx.Prime AO.vi` then `Sync.Start.vi` on the class and error chain; the writes still all happen before any task starts.
+
+`getWFMQueue.vi`'s whole body sits inside `case error in (no error)`, so a failed first write skips the second dequeue and leaves `Pending AO` holding block 1.
+
+The invariant is now structural: **every `DAQmx.Write.vi` call is immediately preceded, on the same class wire, by the dequeue that set `Recovery.Pending`.**
+
+**Watch the polarity of the two `Empty Array?` gates - they are opposite.** The first asks "is anything owed?", so its **True** frame (nothing owed) is the one that dequeues. The second asks "did the second dequeue produce a block?", so its **False** frame (a block is there) is the one that writes. Copying the shape of the first into the second inverts it, which is what happened on the first pass; caught by reading the IR and fixed 2026-09-22 22:39. An inverted second gate never writes block 2 in normal operation, silently undoing Change 1.
+
+### Verified as built, 2026-09-22 22:40
+
+Read back from the VIs with `lvkit describe --format lvnet` and `read_vi`:
+
+- `DAQmx.Prime AO.vi`, `Sync.Start.vi` and `DAQmx.Start AO.vi` all have the same pane: `DAQmx in` @11, `error in` @8 -> `DAQmx out` @3, `error out` @0. The AO blocks no longer cross a connector pane at all; they go straight from each dequeue into the `DAQmx.Write.vi` next to it.
+- `DAQmx.Prime AO.vi` body: `Empty Array?(Pending AO)` [False -> replay the owed block on the incoming class; True -> `getWFMQueue.vi(wait=T)`] -> `DAQmx.Write.vi` -> `getWFMQueue.vi(wait=F)` -> `Empty Array?(Pending AO)` [False -> `DAQmx.Write.vi`; True -> pass through].
+- `DAQ: START` is `setStatus.vi` -> `DAQmx.Prime AO.vi` -> `Sync.Start.vi`, on the class and error chain.
+- `Sync.Start.vi` is `DAQmx.Start AO.vi` -> `DAQmx.Start AI.vi`; `DAQmx.Start AO.vi` is the Start Task loop alone.
+- `getWFMQueue.vi` and `DAQmx.Write.vi` both have their whole body inside `case error in (no error)`, so a failed first write leaves `Recovery.Pending AO` holding block 1 and the second dequeue and write become no-ops.
+- `src/DAQmx/DAQmx.lvclass` lists `DAQmx.Prime AO.vi` and no longer lists `getWFMQueue.Initial.vi`.
 
 `Write.TotalSampPerChanGenerated` (option (b) below) is now only needed if a recovery ever completes faster than the AO buffer drains, which would leave written-but-unplayed blocks discarded by `DAQ: CLEAR`. Not the case at the current timings.
 
@@ -83,6 +114,18 @@ Every write reads task properties: `DAQmx.Write.vi` reads `NumChans` and `Device
 ### Not recommended: a shorter `getWFMQueue.vi` timeout
 
 The 0.75-block wait does eat most of the slack. But a shorter wait means more fallbacks to the previous waveform, and **during a sweep the fallback is itself a discontinuity**: it replays the last ramp segment, so the output steps back. With a two-block lead the wait is harmless, so leave it.
+
+## Test VIs
+
+`src/DAQmx/Tests/Test Sync.vi` and `Test Sync with Queues.vi` were relinked 2026-09-22 to the new panes: `Sync.Acquire.vi` is called with class + error only and the AO/AI blocks are unbundled off the class wire afterwards. `Test Clip.vi`, `Test Sync (DAQmx).vi`, `Test Sync SMO.vi` and `Test Waveforms.vi` call nothing whose pane changed. The Caraya suites under `Tests/Unit Test/` call only public `Instrument.Lockin` API VIs, none of whose panes changed, so they were not stale - `Test Sweep API.vi` uses `setSweepTable.vim` and never bundles a `Sweep.Configuration--Cluster`, so the #164 rename missed it too.
+
+`ObtainPublicQueues.vi` in `Test Sync with Queues.vi` now gets `Min Queue Buffer` = **2**, matching `Methods (overrides)/onCreated.vi`, so its acquire loop waits for two blocks as production does.
+
+Change 4 removed `Sync.Start.vi`'s `AO 1` / `AO 2` inputs, so each test now does its own priming: **two `DAQmx.Write.vi` calls in series** between `Test Waveforms.vi` and `Sync.Start.vi`, chained on class and error. Both tests are members of `DAQmx.lvclass`, so calling the private `DAQmx.Write.vi` is allowed. Both writes are fed from the same `Test Waveforms.vi` call, so blocks 1 and 2 are identical and the AO output has a phase jump at block 3 - harmless for a lead test; add a second `Test Waveforms.vi` call if you want it phase-continuous.
+
+Neither test calls `DAQmx.Prime AO.vi`, deliberately: `Test Sync.vi` has no queues at all, and in `Test Sync with Queues.vi` both loops start after `Sync.Start.vi`, so the queue is empty at start time and the priming VI's first dequeue would block.
+
+`Test Sync SMO.vi` goes through the real SMO path, so it picks up min buffer 2 from `onCreated.vi`, and it does not call `Sync.Start.vi` directly. No change needed.
 
 ## Check on the hardware PC
 
