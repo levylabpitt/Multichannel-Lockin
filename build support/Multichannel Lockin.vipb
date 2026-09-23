@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-09-23 12:37:41" Creator="Patrick Irvin" Comments="" ID="ee28c21f25b2c56ba40646b70393596d">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-09-23 17:34:59" Creator="Patrick Irvin" Comments="" ID="76807218b317255700abd07bb6a52afe">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.6.2.83</Library_Version>
+    <Library_Version>3.6.3.84</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -38,23 +38,14 @@
       <Copyright/>
       <Packager/>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes># Multichannel Lockin 3.6.2
+      <Release_Notes>## 3.6.3
 
-## Fixes
+### Fixes
+- Sweeps: fixed an intermittent problem where reading the sweep data right after a sweep finished returned only the last few points (~20) instead of the full sweep. (#168)
+- Startup without a saved DAQ configuration: the lock-in now sets itself up from the installed hardware without needing a restart. (#166)
 
-- **#167** 3.6.1 could not start acquisition: every start failed with DAQmx error -200547. The AO output buffer is now set to two blocks before the first write, so the two-block lead introduced in 3.6.1 works as intended. Do not use 3.6.1.81.
-- DAQmx read and write timeouts cut from 10 s to 5 s, so a stalled acquisition is detected and recovered sooner
-
-No API or wire-protocol changes.
-
-## Known issues
-
-- Sweeps started from Transport 2.5.1.55 and earlier run with default settings: they send the old sweep field names, which this version ignores. Rebuild Transport against this package to fix.
-
-## Testing
-
-- Confirmed on hardware: the AO buffer is two blocks (20480 samples per task) and the tasks start without error.
-- Because 3.6.1 never acquired, its changes (#160 underflow rate and reference pairing, #165 output gain) have still not run on hardware.</Release_Notes>
+### Changes
+- DAQ read/write timeout set to 5 s.</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -1054,7 +1045,7 @@ No API or wire-protocol changes.
         <Path>..\src\DAQmx</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>7E4557956B12D2E176CF479DE07F98ED</GUID>
+      <GUID>6B17B5DA09DBA54C0AE3CF85C0050744</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1355,7 +1346,7 @@ No API or wire-protocol changes.
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>044944DC74E40E44139B870518F67DE5</GUID>
+      <GUID>455407EA1D0DEBCB8909426EA48D9C84</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1446,7 +1437,7 @@ No API or wire-protocol changes.
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>73CF73C43D136D4FB4BF207F596BD39D</GUID>
+      <GUID>DF923504EB191231D55C2439DB968BED</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
