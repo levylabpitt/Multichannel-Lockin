@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-09-22 17:44:37" Creator="Patrick Irvin" Comments="" ID="efec5ecb446a4c8b0427282a45e4deb9">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-09-23 07:12:54" Creator="Patrick Irvin" Comments="" ID="e676ddaea9b409de48752eab5147edfe">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.6.1.81</Library_Version>
+    <Library_Version>3.6.1.82</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -42,28 +42,22 @@
 
 ## Fixes
 
-- **#165** Channels with a non-unity output gain now report and drive the amplitude you asked for. The Generator's echo used to overwrite the stored value with the card-side amplitude, so with a gain of G the UI and API reported A/G within a block, and the output dropped by another factor of G on every later AO change. `Offset` is gain-compensated as well now - DC was not scaled at all before.
-- **#165** Sweep setpoints are gain-compensated too. The card gets card units while the UI and API keep reporting the volts you asked for, so a 0 to 1 V sweep on a gain-10 channel no longer reads back as 0 to 0.1 V.
-- **#160** AO buffer underflows (-200621) should now be rare. The lock-in keeps **two** AO blocks ahead of the hardware instead of one: the Generator keeps a spare block queued, `DAQ: START` writes two blocks before starting the tasks, and the minimum queue depth is 2. Previously every write had to land within a single block time, so ordinary Windows jitter was enough to starve the output.
-- **#160** If an underflow does happen mid-sweep, the block whose write failed is now replayed after the recovery instead of being skipped, so a sweep ramp no longer steps at a recovery point.
-- **#160** The first block published after every start, and after every recovery, was demodulated against the reference waveform of the *following* block. This was invisible at a fixed frequency, where consecutive blocks are identical, but produced one wrong point after a mid-sweep recovery during a frequency sweep.
-
-## Internal
-
-- AO, REF and AI waveforms are carried on the DAQmx class wire rather than through terminals, and AI/AO pairing was shifted to match the deeper buffer.
-- Each AO pre-write now sits next to the dequeue that produced it, so a block and its reference can no longer come apart. `getWFMQueue.Initial.vi` became `DAQmx.Prime AO.vi` and performs both pre-writes itself; `Sync.Start.vi` and `DAQmx.Start AO.vi` no longer take AO blocks.
-- The output-gain conversions were renamed to `Divide` / `Multiply Amplitude and Offset by Output Gain.vi`, and `Divide Sweep Config by Output Gain.vi` was added.
+- **#165** Channels with a non-unity output gain now report and drive the amplitude and offset you set. Offset was not gain-compensated at all before.
+- **#165** Sweep setpoints are gain-compensated too: a 0 to 1 V sweep on a gain-10 channel no longer reads back as 0 to 0.1 V.
+- **#160** AO buffer underflows (-200621) should now be rare. The lock-in keeps two AO blocks ahead of the hardware instead of one, so ordinary Windows jitter no longer starves the output.
+- **#160** A sweep that hits an underflow no longer steps at the recovery point: the block that failed to write is replayed instead of skipped.
+- **#160** The first data point after a start or a recovery was demodulated against the wrong reference waveform. Visible only during a frequency sweep.
 
 No API or wire-protocol changes.
 
 ## Known issues
 
-- Sweeps started from Transport still run with default settings until Transport is rebuilt against this package: 2.5.1.55 and earlier send the pre-#164 sweep field names, which this version ignores.
+- Sweeps started from Transport 2.5.1.55 and earlier run with default settings: they send the old sweep field names, which this version ignores. Rebuild Transport against this package to fix.
 
 ## Testing
 
-- The automatic recovery from 3.6.0 was confirmed on hardware: 27 underflows, 26 recoveries, none needing a manual restart.
-- The reduction in the underflow rate, the reference-pairing fix and the #165 gain conversions have not yet run on hardware.</Release_Notes>
+- Automatic recovery was confirmed on hardware: 27 underflows, 26 recoveries, no manual restarts.
+- The lower underflow rate, the reference fix and the #165 gain fixes have not yet run on hardware.</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -1063,7 +1057,7 @@ No API or wire-protocol changes.
         <Path>..\src\DAQmx</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>619266E1992B2BBCD48B61006DC40B95</GUID>
+      <GUID>36FAEEEF3E492706A8EB7C1766DC424D</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1364,7 +1358,7 @@ No API or wire-protocol changes.
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>880BC0ACEBF8674E42AC810E0524B969</GUID>
+      <GUID>AAF4D09824C1CC6951435A4E3812ACDE</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1455,7 +1449,7 @@ No API or wire-protocol changes.
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E246C2F0B5C060F86CDD09A8960EF0D2</GUID>
+      <GUID>439EA5A99EEBEE55A652888822ED2A31</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
