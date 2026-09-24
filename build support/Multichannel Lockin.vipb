@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-09-24 14:53:37" Creator="Patrick Irvin" Comments="" ID="927eef9f0422287132783ec4abdfabfb">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-09-24 16:14:08" Creator="Patrick Irvin" Comments="" ID="aa472f4d16ffae8584f24485313157af">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.6.4.84</Library_Version>
+    <Library_Version>3.6.4.85</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -41,7 +41,8 @@
       <Release_Notes>## 3.6.4
 
 ### Fixes
-#171 fix stop sweep function</Release_Notes>
+#171 fix stop sweep function
+#172 more informative HELP for setSweep command</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -1041,7 +1042,7 @@
         <Path>..\src\DAQmx</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>75AE635EAE760B669C05349BB9E740F6</GUID>
+      <GUID>A78302784F0EBB2A45DA7056A006D2D8</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1342,7 +1343,7 @@
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>EA61D7E498A1A73295EC501C8B4859ED</GUID>
+      <GUID>5A06EA1F23A8818D7C4F6FF1DDED4C09</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1433,7 +1434,7 @@
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>AA5C0A94C78F719B5C0C8EF4DBF0A3BC</GUID>
+      <GUID>754C040F87304DAD894F1EF062AFBEC4</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
