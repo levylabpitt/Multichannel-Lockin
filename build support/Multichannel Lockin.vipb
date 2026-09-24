@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-09-23 17:34:59" Creator="Patrick Irvin" Comments="" ID="76807218b317255700abd07bb6a52afe">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-09-24 14:53:37" Creator="Patrick Irvin" Comments="" ID="927eef9f0422287132783ec4abdfabfb">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.6.3.84</Library_Version>
+    <Library_Version>3.6.4.84</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -38,14 +38,10 @@
       <Copyright/>
       <Packager/>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>## 3.6.3
+      <Release_Notes>## 3.6.4
 
 ### Fixes
-- Sweeps: fixed an intermittent problem where reading the sweep data right after a sweep finished returned only the last few points (~20) instead of the full sweep. (#168)
-- Startup without a saved DAQ configuration: the lock-in now sets itself up from the installed hardware without needing a restart. (#166)
-
-### Changes
-- DAQ read/write timeout set to 5 s.</Release_Notes>
+#171 fix stop sweep function</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -1045,7 +1041,7 @@
         <Path>..\src\DAQmx</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>6B17B5DA09DBA54C0AE3CF85C0050744</GUID>
+      <GUID>75AE635EAE760B669C05349BB9E740F6</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1346,7 +1342,7 @@
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>455407EA1D0DEBCB8909426EA48D9C84</GUID>
+      <GUID>EA61D7E498A1A73295EC501C8B4859ED</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1437,7 +1433,7 @@
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>DF923504EB191231D55C2439DB968BED</GUID>
+      <GUID>AA5C0A94C78F719B5C0C8EF4DBF0A3BC</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
