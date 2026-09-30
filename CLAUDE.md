@@ -24,6 +24,15 @@ Release versions live in the build spec (`Bld_version.*`) and in the `.vipb` (`L
 - `builds\build_vip.bat` is an older per-release script (version hard-coded) from before `build.cfg`. Treat it as a record, not a script to rerun.
 - Release tags sit on the merge commits on `main`, so `git describe` on `develop` reports an older release. Get the newest release with `gh release view --json tagName -q .tagName`.
 
+## Older lab CPUs (error 1124 at startup)
+
+- The built exe must start on the oldest lab PCs, which include an i7-950 (Nehalem, no AVX) and an i7-2600K (Sandy Bridge, AVX but no AVX2/FMA). Releases 3.6.0-3.6.4 failed there at launch with "(Hex 0x464) VI is not loadable ... compiled with CPU features, such as SSE, that this target does not support ... loading VI 'DSP.lvclass:Mixer subVI.vi'", while starting normally on newer PCs. 3.5.1 was fine.
+- Cause: `src\DSP\Mixer subVI.vi` (added in afbdf49, first shipped in 3.6.0), a non-reentrant subVI holding the mixer multiply (`signal.Y * reference.Y * 2.0` in an In-Place Element structure). The same math inline on `Lockin.Mixer.vi`'s diagram (3.5.1) loaded fine from the same build machine, so the standalone subVI's compiled code is what the old CPUs reject. Exactly why is not known.
+- Fix: `Mixer subVI.vi` is preallocated reentrant with "Inline subVI into calling VIs"; the build spec's `Bld_excludeInlineSubVIs=true` keeps it out of the exe. Confirmed on the i7-2600K.
+- It is not caused by Inno Setup (`build support\Inno.iss` only runs NI's `setup.exe`), the build machine (same one for 3.5.1 and 3.6.0), or the build-spec settings (unchanged).
+- The dialog names only the first VI that fails to load. If it reappears, the named VI is the lead: try inlining it before suspecting the build.
+- Before publishing a release, start the installed exe on the oldest lab CPU as well as a modern one. Nothing else catches this; it only shows at launch on the old hardware.
+
 ## Layout
 
 - `Multichannel Lock-In (x64).lvproj` - the main project: `Instrument.Lockin.lvlib`, `Waveform.Attributes.lvlib`, the `DAQ`, `DAQmx`, `Generator`, `DSP` classes, `src\Examples`, `build support`, and the build specs.
@@ -55,6 +64,7 @@ The Instrument Framework parses command payloads with `JSON to LVtype.vim`, whic
 - **`lvkit render --format svg -o out.svg` writes a text file**, so every label on the diagram can be pulled out with a regex over the `<text>` elements rather than looking at an image. Useful for reading bundle/unbundle field labels and comment text quickly.
 - lvkit is wrong in known ways:
   - **Class private-data field labels are scrambled, not merely unreliable** - in the lvnet *and* in the SVG render. `Divide` and `Multiply Amplitude and Offset by Output Gain.vi` are mirror VIs and render the same two fields under different names. **Identify a class field by its type** (a `[Sweep.Channel--Cluster]`, a `[Channel.Gain--Cluster]`), never by the name lvkit prints. Typedef field labels reached through a connector pane *are* reliable.
+  - The lvnet lists subVI calls inside a Diagram Disable structure like live ones. Only the `frame Enabled` branch runs; calls under `frame Disabled` are dead code. Exclude them when counting callers.
   - Multi-value case frames report only their first value; local variable names are unreliable; event-structure timeouts are not modelled.
 - When the above is still not enough, render with the `lv-vi-index` skill (`--version 2019`) for LabVIEW's own image. Rendering a whole folder under `Instrument.Lockin.lvlib` is very slow (minutes per VI); call the skill's `export_one` on the specific VIs instead (pass Windows-style output paths, or LabVIEW reports "folder path does not exist"). LabVIEW's print does not emit every case frame: `Instrument.DAQ\Process.vi` renders 163 pages but has no page for "Data: Process AO Channels".
 - To tell whether a **connector pane** changed, check whether the owning `.lvclass` is dirty in git: LabVIEW caches each member's pane in the class file as `NI.ClassItem.ConnectorPane`, so an unmodified `.lvclass` means no member's pane changed. Method scope lives there too (`NI.ClassItem.MethodScope`, 2 = private) - useful for checking whether a test VI may call a private member.
