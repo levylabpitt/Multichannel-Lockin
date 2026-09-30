@@ -373,7 +373,7 @@
 			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-			<Property Name="NI.ClassItem.State" Type="Int">44564480</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">44040192</Property>
 		</Item>
 		<Item Name="Read Test Queues.vi" Type="VI" URL="../Tests/Read Test Queues.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!'\!!!!$Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!$%!B"X*F=X6M&gt;$]!%E"5!!-+=WFH&lt;G&amp;M)'^V&gt;!!!%%"!!!(`````!!5#15]!!"*!1!!"`````Q!&amp;"6*&amp;2F^9!"*!1!!"`````Q!&amp;"6*&amp;2F^:!%M!]1!!!!!!!!!#%5&gt;F&lt;G6S982P=CZM&gt;G.M98.T&amp;F&gt;B&gt;G6G&lt;X*N=SUN1WRV=X2F=CZD&gt;'Q!'E"1!!-!"A!(!!A*&gt;W&amp;W:7:P=GVT!#J!=!!?!!!4%5&gt;F&lt;G6S982P=CZM&gt;G.M98.T!!V(:7ZF=G&amp;U&lt;X)A&lt;X6U!!1!!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!#J!=!!?!!!4%5&gt;F&lt;G6S982P=CZM&gt;G.M98.T!!R(:7ZF=G&amp;U&lt;X)A;7Y!!'%!]!!-!!-!"!!*!!I!#Q!,!!M!#Q!-!!M!#Q!.!Q!!?!!!#1!!!!E!!!!*!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!!!!!!!)!!!.!!!!$!!!!!!!!!!!!!!"!!Y!!!!!</Property>
@@ -409,7 +409,7 @@
 			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-			<Property Name="NI.ClassItem.State" Type="Int">1342710290</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1342710288</Property>
 		</Item>
 		<Item Name="Test Sweep Manager Subsystems.vi" Type="VI" URL="../Tests/Test Sweep Manager Subsystems.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%?!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#J!=!!?!!!4%5&gt;F&lt;G6S982P=CZM&gt;G.M98.T!!V(:7ZF=G&amp;U&lt;X)A&lt;X6U!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!+E"Q!"Y!!"-22W6O:8*B&gt;'^S,GRW9WRB=X-!$%&gt;F&lt;G6S982P=C"J&lt;A!!91$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!%!!=$!!"Y!!!*!!!!!!!!!!!!!!!*!!!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!!!!!!")!!!U!!!!-!!!!!!!!!!!!!!%!#!!!!!!</Property>
@@ -700,15 +700,6 @@
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">8396816</Property>
-		</Item>
-		<Item Name="State History.vi" Type="VI" URL="../Private/State History.vi">
-			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!#B!!!!"1!%!!!!%%!Q`````Q&gt;);8.U&lt;X*Z!"N!!Q!5;'FT&gt;'^S?3"M:7ZH&gt;'AA+$%Q-#E!!":!-0````].1X6S=G6O&gt;#"4&gt;'&amp;U:1"5!0!!$!!!!!!!!!!"!!!!!!!!!!)!!!!!!!!!!Q)!!(A!!!!!!!!!!!!!!!!!!!E!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!!!!!!!!!!!##!!!!!!"!!1!!!!!</Property>
-			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-			<Property Name="NI.ClassItem.Flags" Type="Int">16777216</Property>
-			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
-			<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
-			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-			<Property Name="NI.ClassItem.State" Type="Int">1342713856</Property>
 		</Item>
 	</Item>
 	<Item Name="Generate AO Sweep Waveforms.vi" Type="VI" URL="../Generate AO Sweep Waveforms.vi">
