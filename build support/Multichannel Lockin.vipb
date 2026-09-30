@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-09-24 16:14:08" Creator="Patrick Irvin" Comments="" ID="aa472f4d16ffae8584f24485313157af">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-09-30 12:25:17" Creator="Patrick Irvin" Comments="" ID="fd9c0a5a287c7240409e56ae9db97fa4">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.6.4.85</Library_Version>
+    <Library_Version>3.6.5.86</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -38,11 +38,9 @@
       <Copyright/>
       <Packager/>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>## 3.6.4
+      <Release_Notes>## 3.6.5
 
-### Fixes
-#171 fix stop sweep function
-#172 more informative HELP for setSweep command</Release_Notes>
+#173 Change `Mixer subVI.vi` execution from non-reentrant to inline (preallocated-clone reentrant)</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -1042,7 +1040,7 @@
         <Path>..\src\DAQmx</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>A78302784F0EBB2A45DA7056A006D2D8</GUID>
+      <GUID>89087B0A1AE9CCCCF34678E42E3A8BCA</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1343,7 +1341,7 @@
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>5A06EA1F23A8818D7C4F6FF1DDED4C09</GUID>
+      <GUID>524F3133EA0D1F4E49436338363DD029</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1434,7 +1432,7 @@
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>754C040F87304DAD894F1EF062AFBEC4</GUID>
+      <GUID>9B2CFEAAD59BA6D6BB6CFB8CF62C9EEF</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
