@@ -439,7 +439,6 @@
 			<Property Name="NI.ClassItem.State" Type="Int">1074536976</Property>
 		</Item>
 	</Item>
-	<Item Name="Waveform Attributes" Type="Folder"/>
 	<Item Name="unknown or unused" Type="Folder">
 		<Item Name="Forward Lockin Result to Output.vi" Type="VI" URL="../Sweep/Forward Lockin Result to Output.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;I!!!!$!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!""!6!!$#&amp;&gt;B&gt;G6G&lt;X*N!!!?1%!!!@````]!"2"898:F:G^S&lt;8-A7VUA&lt;X6U!!!K1(!!(A!!%R&amp;(:7ZF=G&amp;U&lt;X)O&lt;(:D&lt;'&amp;T=Q!.2W6O:8*B&gt;'^S)'^V&gt;!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!"R!1!!"`````Q!&amp;$V&gt;B&gt;G6G&lt;X*N=S"&lt;83"J&lt;A!K1(!!(A!!%R&amp;(:7ZF=G&amp;U&lt;X)O&lt;(:D&lt;'&amp;T=Q!-2W6O:8*B&gt;'^S)'FO!!"B!0!!$!!$!!1!"A!(!!1!"!!%!!1!#!!%!!E!#A)!!(A!!!U)!!!!!!!!$1I!!!U,!!!!!!!!!!!!!!!!!!!!!!!!#!!!!!!!!!))!!!!#!!!$1!!!!Q!!!!!!!!!!!!!!1!,!!!!!!</Property>

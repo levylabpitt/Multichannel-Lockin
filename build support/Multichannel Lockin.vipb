@@ -38,9 +38,12 @@
       <Copyright/>
       <Packager/>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>## 3.6.5
+      <Release_Notes>## 3.6.5.86
 
-#173 Change `Mixer subVI.vi` execution from non-reentrant to inline (preallocated-clone reentrant)</Release_Notes>
+- #175 The actual sample clock rate is reported to the Generator and the UI. DAQmx can coerce the requested rate (on a USB-4431 with AO sharing the clock, 102.4 kS/s runs at 96 kS/s). The event carries only the sample rate and samples per block.
+- #160 DAQmx self-recovery after AO underflow (-200621) works again.
+- Performance: `Mixer subVI.vi` (#173), `Initialize Filter State.vi` and `Wrap Phase.vi` are inlined; `Match Key Regex.vi` no longer uses a regex (130 to 30 us per call); Generator `Process.vi` no longer queues extra states on every 10 ms timeout; duplicate State History VIs are replaced by `Instrument:State History.vi`.
+- Built with the Logger.Error release that fixes levylabpitt/Logger.Error#1 (the logger's CPU use grew with uptime).</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
