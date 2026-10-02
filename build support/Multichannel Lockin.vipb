@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-01 17:20:10" Creator="Patrick Irvin" Comments="" ID="1bf21881c50e17cca741c2518433e741">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-02 00:40:30" Creator="Patrick Irvin" Comments="" ID="10d59adb808fa7ae9a3e6a01024f57fa">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.7.0.87</Library_Version>
+    <Library_Version>3.7.1.88</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -38,12 +38,9 @@
       <Copyright/>
       <Packager/>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>## 3.6.5.86
+      <Release_Notes>## 3.7.1
 
-- #175 The actual sample clock rate is reported to the Generator and the UI. DAQmx can coerce the requested rate (on a USB-4431 with AO sharing the clock, 102.4 kS/s runs at 96 kS/s). The event carries only the sample rate and samples per block.
-- #160 DAQmx self-recovery after AO underflow (-200621) works again.
-- Performance: `Mixer subVI.vi` (#173), `Initialize Filter State.vi` and `Wrap Phase.vi` are inlined; `Match Key Regex.vi` no longer uses a regex (130 to 30 us per call); Generator `Process.vi` no longer queues extra states on every 10 ms timeout; duplicate State History VIs are replaced by `Instrument:State History.vi`.
-- Built with the Logger.Error release that fixes levylabpitt/Logger.Error #1 (the logger's CPU use grew with uptime).</Release_Notes>
+- `DAQ.Simulate Noisy AI.vi` reads the AI data only when a device is simulated. On real hardware it went from about 0.6 ms to 15 us per block (96 kS/s, 20480 samples per block).</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -1043,7 +1040,7 @@
         <Path>..\src\DAQmx</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>25B589CB4BD7429D1C26CB9FD316435E</GUID>
+      <GUID>1FC826466462750F2699A09FBD1E5A07</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1344,7 +1341,7 @@
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>8DFB9470F860AEBFDAE2B04BC9949439</GUID>
+      <GUID>D24653111EDD385CB0A900562D9ED051</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1435,7 +1432,7 @@
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>48A0A27EEB4D9C1AA427F7644239D8B5</GUID>
+      <GUID>9EA067425E8CDFDB86F4D5B33EC9EB8D</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
