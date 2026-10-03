@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-02 00:40:30" Creator="Patrick Irvin" Comments="" ID="10d59adb808fa7ae9a3e6a01024f57fa">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-03 00:32:27" Creator="Patrick Irvin" Comments="" ID="f9994f557b281eed27cbeb55d870650f">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.7.1.88</Library_Version>
+    <Library_Version>3.7.2.89</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -40,7 +40,10 @@
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
       <Release_Notes>## 3.7.1
 
-- `DAQ.Simulate Noisy AI.vi` reads the AI data only when a device is simulated. On real hardware it went from about 0.6 ms to 15 us per block (96 kS/s, 20480 samples per block).</Release_Notes>
+#177 Per-channel Limit? flags are no longer overwritten by the global limit at startup; each channel's own flag decides clamping, and the global Limit? is replaced by Limit All/None buttons.
+#178 Sweep graphs are published only when the sweep finishes, instead of one chunk at a time with a jumping time axis.
+#179 A sweep shorter than one update now runs as a single update instead of dividing by zero.
+#180 Changing the output gain re-sends AO and sweep settings to the Generator, and the gains are restored first at startup, so amplified outputs are no longer applied 25x too large.</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -1040,7 +1043,7 @@
         <Path>..\src\DAQmx</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>1FC826466462750F2699A09FBD1E5A07</GUID>
+      <GUID>B46045FDF0A08823637DAA2710538E62</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1341,7 +1344,7 @@
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>D24653111EDD385CB0A900562D9ED051</GUID>
+      <GUID>50F961DB11A6B1C2E1E6142791B691D8</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1432,7 +1435,7 @@
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>9EA067425E8CDFDB86F4D5B33EC9EB8D</GUID>
+      <GUID>D9889360F1AACB5C5C5CE8289D0A0BB8</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
