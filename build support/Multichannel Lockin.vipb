@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-05 14:20:21" Creator="Patrick Irvin" Comments="" ID="bee9eb258f62b0847f042032f996fa9c">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-06 19:45:04" Creator="Patrick Irvin" Comments="" ID="90a7cf42a2a2e690ca2b3da3ca823cef">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.7.3.90</Library_Version>
+    <Library_Version>3.7.4.91</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -38,9 +38,9 @@
       <Copyright/>
       <Packager/>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>## 3.7.3
+      <Release_Notes>### 3.7.4
 
-#180 improved handling of gains and default offsets</Release_Notes>
+- Auto DAQ now gives a default sample rate, and the input/output gains and offsets are rebuilt to match the detected hardware (new channels get gain 1 and offset 0). You no longer need to restart before the first acquisition.</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -1040,7 +1040,7 @@
         <Path>..\src\DAQmx</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>40B735B80D0968338EB0193325EF9533</GUID>
+      <GUID>B59F6B7A42CAC64C45B980121123A0B3</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1341,7 +1341,7 @@
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>92194888B281EBC4A30A488EB6BDD841</GUID>
+      <GUID>11138B1B16B401D0F1292E7F01BBBF5C</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1432,7 +1432,7 @@
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>281B5FDA96F01D4BDF84DD34783980CB</GUID>
+      <GUID>A2EE95E0C674D91F25FDFBACE9E1D9F1</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
