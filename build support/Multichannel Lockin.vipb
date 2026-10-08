@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-08 13:03:35" Creator="Patrick Irvin" Comments="" ID="77fa4c50da5127da960f721dd723e7c1">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-08 14:55:29" Creator="Patrick Irvin" Comments="" ID="40551e685f9256d57ba0482219f3aaae">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
     <Library_Version>3.8.0.91</Library_Version>
@@ -17,8 +17,8 @@
   </Library_General_Settings>
   <Advanced_Settings>
     <Package_Dependencies>
-      <Additional_External_Dependencies>levylab_lib_instrument_type &gt;=1.2.1.13</Additional_External_Dependencies>
-      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.15.12.53</Additional_External_Dependencies>
+      <Additional_External_Dependencies>levylab_lib_instrument_type &gt;=1.2.2.14</Additional_External_Dependencies>
+      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.15.13.55</Additional_External_Dependencies>
     </Package_Dependencies>
     <Custom_Action_VIs>
       <Pre-Build_VI>Pre-Build Custom Action.vi</Pre-Build_VI>
@@ -893,34 +893,6 @@
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getSamplingFsMode.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>5</Row>
-          <Column>8</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getSamplingFsMode.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getSampling.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>4</Row>
-          <Column>8</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getSampling.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
         <NameSub_Menu_Name>getResults.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
@@ -1030,7 +1002,21 @@
         <Path>..\src\DAQmx</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>44BED1591066AD10348382BCDB29381A</GUID>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>getSampling.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>4</Row>
+          <Column>8</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\getSampling.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <GUID>4069A07D894F357E1EB17D2FE34C5B89</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1331,7 +1317,7 @@
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>DB583376472B9A80E87BC53F990DEF85</GUID>
+      <GUID>C5297833DE19D50518D0093E9C9D78EB</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1422,7 +1408,7 @@
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>FA089E307560B42A6DAE0738E1BBBC81</GUID>
+      <GUID>06C9F4248967F33694C1CCF4F18C88EE</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
