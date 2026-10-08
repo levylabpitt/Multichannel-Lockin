@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-06 19:45:04" Creator="Patrick Irvin" Comments="" ID="90a7cf42a2a2e690ca2b3da3ca823cef">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-08 16:26:57" Creator="Patrick Irvin" Comments="" ID="d6056feed2dc739a66551736459b78b7">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.7.4.91</Library_Version>
+    <Library_Version>3.8.0.92</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -17,8 +17,8 @@
   </Library_General_Settings>
   <Advanced_Settings>
     <Package_Dependencies>
-      <Additional_External_Dependencies>levylab_lib_instrument_type &gt;=1.2.1.13</Additional_External_Dependencies>
-      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.15.12.53</Additional_External_Dependencies>
+      <Additional_External_Dependencies>levylab_lib_instrument_type &gt;=1.2.2.14</Additional_External_Dependencies>
+      <Additional_External_Dependencies>levylab_lib_levylab_instruments &gt;=1.15.13.55</Additional_External_Dependencies>
     </Package_Dependencies>
     <Custom_Action_VIs>
       <Pre-Build_VI>Pre-Build Custom Action.vi</Pre-Build_VI>
@@ -38,9 +38,13 @@
       <Copyright/>
       <Packager/>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>### 3.7.4
+      <Release_Notes>### 3.8.0
 
-- Auto DAQ now gives a default sample rate, and the input/output gains and offsets are rebuilt to match the detected hardware (new channels get gain 1 and offset 0). You no longer need to restart before the first acquisition.</Release_Notes>
+- Simulated NI-DAQmx devices work again (#182). Simulated inputs now keep one waveform per AI channel, with each card's AO looped back to its own AI plus noise. Previously AI was replaced by a copy of AO, so with more inputs than outputs the extra channels were empty: no lock-in results, a sweep that never finished, and error -20003 from DFD Filter Array.vi on every block.
+- The Simulation mode control is hidden for now; simulated inputs are always AO loopback plus noise. The waveguide simulation is unavailable until it is moved to the DAQmx layer.
+- The Nyquist low-pass filter in front of decimation is now redesigned when the sample rate or output rate changes. Before, it was designed once per session and kept whatever rate it first saw. An invalid sample rate or cutoff now returns an error instead of leaving a bad filter in place.
+- Sampling settings are reduced to Fs, #s and Fs_Out.
+-  API methods getSamplingFsMode and setSamplingFsMode are removed, along with the sampling mode, Fs multiplier, refresh rate and decimation settings. Clients that send these commands must be updated.</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -889,48 +893,6 @@
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setSamplingFsMode.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>5</Row>
-          <Column>7</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setSamplingFsMode.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getSamplingFsMode.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>5</Row>
-          <Column>8</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getSamplingFsMode.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getSampling.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>4</Row>
-          <Column>8</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getSampling.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
         <NameSub_Menu_Name>getResults.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
@@ -1040,7 +1002,21 @@
         <Path>..\src\DAQmx</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B59F6B7A42CAC64C45B980121123A0B3</GUID>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>getSampling.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>4</Row>
+          <Column>8</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\getSampling.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <GUID>96E88BC7E4435DEBBBC37A017065F963</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1341,7 +1317,7 @@
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>11138B1B16B401D0F1292E7F01BBBF5C</GUID>
+      <GUID>F4BE3FD2B6C10268C00152F81F32C022</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1432,7 +1408,7 @@
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>A2EE95E0C674D91F25FDFBACE9E1D9F1</GUID>
+      <GUID>B49487B01A76237D59FBA3E5F72F3A85</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
