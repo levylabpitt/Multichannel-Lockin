@@ -6,8 +6,8 @@ Instructions first; the evidence is at the bottom. Scope is deliberately small: 
 
 | # | What | Why | Priority |
 |---|---|---|---|
-| 1 | Channel-map helper shared by write and simulation | AO/AI pairing must use the same per-device split as `DAQmx.Write.vi` | **open**, prerequisite for 2 |
-| 2 | `DAQmx.Simulate AI.vi` in `DAQ: ACQUIRE`, after `Sync.Acquire.vi` | simulated AI keeps the acquired shape (12 waveforms), only Y changes | **open**, the fix |
+| 1 | Channel map built in Create, stored in the class | AO/AI pairing must use the same per-device split as `DAQmx.Write.vi` | **done** 2026-10-08 |
+| 2 | `DAQmx.Simulate AI.vi` inside `Sync.Acquire.vi`, before AI is stored | simulated AI keeps the acquired shape (12 waveforms), only Y changes | **open**, the fix |
 | 3 | Forward `Simulation mode` (and waveguide inputs) to DAQmx | DAQmx needs the mode; today it only lives in Instrument.DAQ | **open**, needed by 2 |
 | 4 | Remove the simulation from Instrument.DAQ | one place simulates, and it is at the hardware boundary | **open**, after 2 and 3 |
 | 5 | Guards: Mixer range check, empty-Y pass-through in `DFD Filter Array.vi` | one empty channel must not stop every result | **open**, independent |
@@ -17,21 +17,33 @@ Instructions first; the evidence is at the bottom. Scope is deliberately small: 
 
 `src/DAQmx/private/DAQmx.Write.vi`, first for-loop: per AO task it reads `DAQmx Task` > `NumChans` and `Devices`, and takes `Array Subset(AO, offset, NumChans)` with the offset in a shift register (init 0, += `NumChans`). The AO array is therefore the concatenation of every task's channels in task order, and the AI read is laid out the same way over the AI tasks.
 
-1. New `src/DAQmx/private/DAQmx.Get Channel Map.vi`: input a task array, output an array of `{Device : String, Offset : I32, Count : I32}`, one element per task (`Devices[0]`, running offset, `NumChans`). Typedef the element as `DAQmx.Channel Map--Cluster.ctl`.
-2. Optional, recommended: make `DAQmx.Write.vi`'s first loop use the helper, so the write and the simulation cannot disagree about which waveform belongs to which device.
+**As built (2026-10-08).**
+
+- `src/DAQmx/private/DAQmx.Get Channel Map.vi`: task array in, array of `DAQmx.Channel Map--Cluster.ctl` out, one element per task in task order: `{Task, Device, Offset, Count}`. `Device` is `Devices[0]`; `Count` is the task's `NumChans` (channels in the task, not channels on the card); `Offset` is the running sum of the earlier tasks' counts, i.e. the index of the task's first waveform in the joined array.
+- Built for the AO and the AI tasks in Create and stored in the class (`AO Map`, `AI Map`). Tasks are only created or replaced inside Create (`DAQmx Replace Existing Task.vi` is called only from `DAQmx.Create AI Tasks.vi` / `DAQmx.Create AO Tasks.vi`), and recovery re-runs Create, so the maps always match the tasks. After `DAQ: CLEAR` they hold dead refnums until the next Create, which is harmless because only `DAQ: ACQUIRE` uses them.
+- `src/DAQmx/private/Get Device Waveforms.vi`: map entry + waveform array -> `Array Subset(waveforms, Offset, Count)`.
+- Should a task ever report more than one device, `Devices[0]` is wrong; the map builder should return an error rather than silently use the first.
+- Optional: make `DAQmx.Write.vi`'s first loop iterate over `AO Map` instead of reading `NumChans`/`Devices` on every write. That also removes per-write property reads (issue-160 underflow spec, Change 3).
 
 ### Change 2 - simulate in DAQmx, starting from the acquired AI
 
-**Where.** `src/DAQmx/Process.vi`, frame `DAQ: ACQUIRE`, which today is `getWFMQueue.vi` -> `Sync.Acquire.vi` -> `setWaveforms.vi` -> ... Insert `DAQmx.Simulate AI.vi` between `Sync.Acquire.vi` and `setWaveforms.vi`, on the class and error chain.
+**Where.** `src/DAQmx/Sync.Acquire.vi`. It runs `DAQmx.Read.vi` and `DAQmx.Write.vi` in parallel on the incoming class. The write's No Error frame clears the `Recovery.Pending` fields; its class output (`case_1394::out1`) already carries the `Waveforms.AO` that `DAQmx.Write.vi` stored through its delay-2 feedback node. The read's No Error frame bundles `AIwfm` into `Waveforms.AI` on that class wire (lvkit prints the field as `REF_Y`; labels are scrambled, it is the field `AIwfm` goes into).
 
-**Inputs from the class** (see issue-160 change spec, Change 2 as built): `Waveforms.AI` (stored by `Sync.Acquire.vi` on read success) and `Waveforms.AO` (written by `DAQmx.Write.vi` through the delay-2 feedback node, i.e. the AO block that pairs with the AI block just read). Using `Waveforms.AO` rather than the block just dequeued gives the loopback the same AO-to-AI pairing as real hardware. Class field labels are scrambled in lvkit; identify the fields by where `Sync.Acquire.vi` and `DAQmx.Write.vi` write them.
+Insert `DAQmx.Simulate AI.vi` in the read's No Error frame, between `AIwfm` and that Bundle: class in = `case_1394::out1` (maps, simulation settings, paired `Waveforms.AO`), AI in = `AIwfm`, AI out -> the Bundle into `Waveforms.AI`. Consequences:
 
-**Output.** `Waveforms.AI` with the same number of waveforms, the same t0, dt and attributes, and only Y replaced. `setWaveforms.vi` then publishes it as usual.
+- A failed read never simulates.
+- `setWaveforms.vi` (and anything else downstream) only ever sees the simulated AI.
+- `Test Sync*.vi` exercise the simulation too; with the mode left at "AI = HW simulated" it passes through and the tests behave as before.
+- If the write fails and the read succeeds, `Waveforms.AO` still holds the previous block, so one stale block is looped back; the write error sends the process into recovery anyway.
+
+`Waveforms.AO` is the AO block that pairs with the AI block just read (issue-160 change spec, Change 2 as built), so the loopback has the same AO-to-AI pairing as real hardware.
+
+**Output.** The AI array with the same number of waveforms, the same t0, dt and attributes, and only Y replaced.
 
 **Body.**
 
 1. Skip everything (pass the class through) unless at least one device has `DevIsSimulated` = T. Use the DeviceInfo array DAQmx already holds (`DAQ: Query Hardware`). Only replace Y on AI channels whose device is simulated, so a mixed real + simulated setup also works.
-2. Build `AO map` and `AI map` with Change 1's helper over the AO and AI task arrays.
+2. Read `AO Map` and `AI Map` from the class (Change 1).
 3. `Simulation mode` (Change 3):
    - **"AI = HW simulated"**: pass `Waveforms.AI` through unchanged. (Today this mode returns a copy of AO; that was the bug, not a feature.)
    - **"AI = noise*AO"**: for each AI map entry, find the AO map entry with the same `Device` (match by name, not by index). For `k` in `0 .. Count_AI - 1`: if `k < Count_AO`, set `AI[Offset_AI + k].Y = AO[Offset_AO + k].Y`; otherwise keep the acquired Y. Then run `Add Noise.vi` over the whole AI array (it only needs the waveforms and the sampling cluster, no Instrument.DAQ data).
