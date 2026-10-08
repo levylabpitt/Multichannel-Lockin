@@ -7,9 +7,9 @@ Instructions first; the evidence is at the bottom. Scope is deliberately small: 
 | # | What | Why | Priority |
 |---|---|---|---|
 | 1 | Channel map built in Create, stored in the class | AO/AI pairing must use the same per-device split as `DAQmx.Write.vi` | **done** 2026-10-08 |
-| 2 | `DAQmx.Simulate AI.vi` inside `Sync.Acquire.vi`, before AI is stored | simulated AI keeps the acquired shape (12 waveforms), only Y changes | **open**, the fix |
-| 3 | Forward `Simulation mode` (and waveguide inputs) to DAQmx | DAQmx needs the mode; today it only lives in Instrument.DAQ | **open**, needed by 2 |
-| 4 | Remove the simulation from Instrument.DAQ | one place simulates, and it is at the hardware boundary | **open**, after 2 and 3 |
+| 2 | `DAQmx.Simulate AI.vi` inside `Sync.Acquire.vi`, before AI is stored | simulated AI keeps the acquired shape (12 waveforms), only Y changes | **done** 2026-10-08, loopback + noise only, see "As built" |
+| 3 | Forward `Simulation mode` (and waveguide inputs) to DAQmx | DAQmx needs the mode; today it only lives in Instrument.DAQ | **deferred**: Simulation mode control hidden; only loopback + noise exists |
+| 4 | Remove the simulation from Instrument.DAQ | one place simulates, and it is at the hardware boundary | **partly done**: call removed; empty `DSP: Simulate` frame and old VIs remain |
 | 5 | Guards: Mixer range check, empty-Y pass-through in `DFD Filter Array.vi` | one empty channel must not stop every result | **open**, independent |
 | 6 | `Create Low Pass Filter (FGV).vi`: change detection fixed, bad-input guard | filter was designed once and never redesigned | **done** 2026-10-07 |
 
@@ -62,7 +62,19 @@ To keep the math without dragging Instrument.DAQ into DAQmx:
 3. Move `Add Noise.vi`, `Waveguide Model.vim`, `Waveguide Model--Cluster.ctl` and `Simulation Mode--enum.ctl` with it (into `src/DAQmx/Simulate/`, members of `DAQmx.lvclass` or a small library). Leave `Simulation Mode--enum.ctl` as the single typedef; Instrument.DAQ and the UI link to the new path.
 4. Drop the block-pacing wait from `DAQ.Simulate Noisy AI.vi`. It is multiplied by 0.0 today, so it never waits; the simulated tasks already pace the loop.
 
+**As built (2026-10-08).** `src/DAQmx/private/DAQmx.Simulate AI.vi`, called in `Sync.Acquire.vi`'s read No Error frame. Verified from LabVIEW's own render of the diagram; the lock-in works with the simulated rig (4x 4461 + 4431).
+
+- Outer check: if no device in the DeviceInfo array is simulated, the class passes through.
+- Loop over `AI Map`. Per entry, `DevIsSimulated` comes from the map entry (no DAQmx property node per block). Not simulated: the AI array passes through.
+- Search loop over `AO Map`, stop on `Device = Device`; the `Equal?` result leaves the loop as `found?`. An empty AO map or no match gives `found?` = F, which masks the stale Count/Offset.
+- Inner loop, N = `Count_AI`: in-place on `AI[AI Offset + i]`; `AO[AO Offset + i]` by plain `Index Array`. If `found? AND i < Count_AO`, bundle the AO element's Y into the AI element (AI keeps its own t0, dt, attributes). Then `Add Noise Single.vi` on every AI element, so noise is per channel and only on simulated devices.
+- Not implemented: Simulation mode ("AI = HW simulated" pass-through, waveguide). Every simulated device gets loopback + noise.
+- Optional guard not added: `AO Offset + i < size(Waveforms.AO)` in the AND. Without it, a short `Waveforms.AO` would put an empty Y into AI and bring back -20003. Not expected, because `DAQmx.Prime AO.vi`'s two pre-writes fill the delay line before the first acquire.
+
 ### Change 3 - give DAQmx the simulation settings
+
+**Deferred (2026-10-08).** The Simulation mode control is hidden/disabled; simulated AI is always loopback + noise (Change 2 as built). The waveguide model is not available until this is done. The plan below still stands for when it is picked up.
+
 
 `Simulation mode` reaches Instrument.DAQ with `setAIconfig` (`PrivateEvents--DAQ.setAIconfig = {AI Configuration, Simulation mode}`, handled in `src/Instrument.DAQ/Process.vi`). Forward it to DAQmx the same way the AI configuration is forwarded (check the path in that handler; DAQmx has `private/setAIconfig(private).vi`), and store it in a DAQmx class field.
 
@@ -70,7 +82,8 @@ The waveguide additionally needs the `Waveguide Model--Cluster` (today a constan
 
 ### Change 4 - remove the simulation from Instrument.DAQ
 
-Only after Changes 2 and 3 work:
+**Partly done (2026-10-08).** The `DSP: Simulate` frame no longer calls `DAQ.Simulate Noisy AI.vi`; the frame is empty but still queued. Remaining:
+
 1. `src/Instrument.DAQ/Process.vi`: remove `DSP: Simulate` from the queued string `'DSP: Simulate\nDSP: Phase\nDSP: Filter\nDSP: Lockin'` and delete the `DSP: Simulate` frame.
 2. Delete `src/Instrument.DAQ/support/DAQ/DAQ.Simulate Noisy AI.vi` and the old copies in `src/Instrument.DAQ/support/Simulate/` (update `Tests/Test Resampling.vi`, which links `Add Noise.vi`).
 3. Save All, then check that the `.lvclass`/`.lvproj` no longer list the deleted files.
