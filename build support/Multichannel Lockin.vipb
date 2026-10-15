@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-08 16:26:57" Creator="Patrick Irvin" Comments="" ID="d6056feed2dc739a66551736459b78b7">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-14 19:54:10" Creator="Patrick Irvin" Comments="" ID="a04ae2791375a9b86a8c85285be2155f">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.8.0.92</Library_Version>
+    <Library_Version>3.8.1.93</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -38,13 +38,9 @@
       <Copyright/>
       <Packager/>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>### 3.8.0
+      <Release_Notes>### 3.8.1
 
-- Simulated NI-DAQmx devices work again (#182). Simulated inputs now keep one waveform per AI channel, with each card's AO looped back to its own AI plus noise. Previously AI was replaced by a copy of AO, so with more inputs than outputs the extra channels were empty: no lock-in results, a sweep that never finished, and error -20003 from DFD Filter Array.vi on every block.
-- The Simulation mode control is hidden for now; simulated inputs are always AO loopback plus noise. The waveguide simulation is unavailable until it is moved to the DAQmx layer.
-- The Nyquist low-pass filter in front of decimation is now redesigned when the sample rate or output rate changes. Before, it was designed once per session and kept whatever rate it first saw. An invalid sample rate or cutoff now returns an error instead of leaving a bad filter in place.
-- Sampling settings are reduced to Fs, #s and Fs_Out.
--  API methods getSamplingFsMode and setSamplingFsMode are removed, along with the sampling mode, Fs multiplier, refresh rate and decimation settings. Clients that send these commands must be updated.</Release_Notes>
+Rebuilt against RemoteControl.ZMQ 1.4.0.32. Clients now get a timeout error (123) when the lock-in doesn’t answer, instead of error 91; retries re-send the original command instead of HELP; and a connection-cleanup bug that could hang or crash LabVIEW is fixed (levylabpitt/RemoteControl.ZMQ#1).</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -1016,7 +1012,7 @@
         <Path>..\src\Instrument.Lockin\API\getSampling.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>96E88BC7E4435DEBBBC37A017065F963</GUID>
+      <GUID>3DF7A178CA4EA513B68FFBD890A3CF9F</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1317,7 +1313,7 @@
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F4BE3FD2B6C10268C00152F81F32C022</GUID>
+      <GUID>11A1D86B265AE19EF636C28889870567</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1408,7 +1404,7 @@
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B49487B01A76237D59FBA3E5F72F3A85</GUID>
+      <GUID>C7B2A4130D4535315E2649FBEB91B961</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
