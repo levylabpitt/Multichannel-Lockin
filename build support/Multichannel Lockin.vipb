@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-15 23:02:25" Creator="Patrick Irvin" Comments="" ID="208c8c80e9e735edd7407fe9227b5b7e">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-15 23:32:04" Creator="Patrick Irvin" Comments="" ID="189ea73edb78815c811c30763c0bcab2">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.8.2.93</Library_Version>
+    <Library_Version>3.8.2.94</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -1017,7 +1017,7 @@ Machines that run Transport or other LabVIEW clients need labview-zmq 3.7.0 and 
         <Path>..\src\Instrument.Lockin\API\getSampling.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>4D29B5D70BCEB478921D6805204C0F94</GUID>
+      <GUID>78F49B1E3AF478178D2D60392BD5A53B</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1318,7 +1318,7 @@ Machines that run Transport or other LabVIEW clients need labview-zmq 3.7.0 and 
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>6A1CE9BA4EC95A54DC343BB05A9C080D</GUID>
+      <GUID>FD819EEE756C231D56F9373DD59D2A1E</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1409,7 +1409,7 @@ Machines that run Transport or other LabVIEW clients need labview-zmq 3.7.0 and 
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>A1D071825A76DF1013B50EFC0880F457</GUID>
+      <GUID>1789EE45394C02A54191BE3D436B2F4D</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
