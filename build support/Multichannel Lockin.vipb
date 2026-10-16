@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-14 19:54:10" Creator="Patrick Irvin" Comments="" ID="a04ae2791375a9b86a8c85285be2155f">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-15 23:02:25" Creator="Patrick Irvin" Comments="" ID="208c8c80e9e735edd7407fe9227b5b7e">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.8.1.93</Library_Version>
+    <Library_Version>3.8.2.93</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -38,9 +38,14 @@
       <Copyright/>
       <Packager/>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>### 3.8.1
+      <Release_Notes>### 3.8.2
 
-Rebuilt against RemoteControl.ZMQ 1.4.0.32. Clients now get a timeout error (123) when the lock-in doesn’t answer, instead of error 91; retries re-send the original command instead of HELP; and a connection-cleanup bug that could hang or crash LabVIEW is fixed (levylabpitt/RemoteControl.ZMQ#1).</Release_Notes>
+Rebuilt against RemoteControl.ZMQ 1.5.0 and labview-zmq 3.7.0 (libzmq 4.3.4).
+
+- Fixes LabVIEW and the lock-in crashing ("ZeroMQ Abort: Socket operation on non-socket", or error 1097) when the lock-in restarts while a client such as Transport is polling it. The cause was a bug in libzmq 4.3.2 (levylabpitt/RemoteControl.ZMQ#1).
+- The lock-in process now exits cleanly when closed.
+
+Machines that run Transport or other LabVIEW clients need labview-zmq 3.7.0 and RemoteControl.ZMQ 1.5.0 installed as well; updating the lock-in alone does not fix the crash on the client side.</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -1012,7 +1017,7 @@ Rebuilt against RemoteControl.ZMQ 1.4.0.32. Clients now get a timeout error (123
         <Path>..\src\Instrument.Lockin\API\getSampling.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>3DF7A178CA4EA513B68FFBD890A3CF9F</GUID>
+      <GUID>4D29B5D70BCEB478921D6805204C0F94</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1313,7 +1318,7 @@ Rebuilt against RemoteControl.ZMQ 1.4.0.32. Clients now get a timeout error (123
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>11A1D86B265AE19EF636C28889870567</GUID>
+      <GUID>6A1CE9BA4EC95A54DC343BB05A9C080D</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1404,7 +1409,7 @@ Rebuilt against RemoteControl.ZMQ 1.4.0.32. Clients now get a timeout error (123
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>C7B2A4130D4535315E2649FBEB91B961</GUID>
+      <GUID>A1D071825A76DF1013B50EFC0880F457</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
