@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-16 19:59:52" Creator="Patrick Irvin" Comments="" ID="47de49654754ef5974c17ac0b8f41f41">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-17 12:49:41" Creator="Patrick Irvin" Comments="" ID="f3737ae91399aa116108b5b23ec7222b">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.8.3.95</Library_Version>
+    <Library_Version>3.8.4.96</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -38,13 +38,9 @@
       <Copyright/>
       <Packager/>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>### 3.8.3
+      <Release_Notes>### 3.8.4
 
-Rebuilt against RemoteControl.ZMQ 1.5.1.
-
-- Fixes LabVIEW crashing ("ZeroMQ Abort", then error 1097) when a client keeps polling the lock-in while it is closed or restarting (levylabpitt/RemoteControl.ZMQ#2). Clients now wait for the lock-in to come back, reconnect within about a second once it is up, and otherwise return error 123.
-
-Machines that run Transport or other LabVIEW clients need RemoteControl.ZMQ 1.5.1 and labview-zmq 3.7.0 installed too; the crash happens in the client, so updating the lock-in alone does not fix it.</Release_Notes>
+Rebuilt against RemoteControl.ZMQ 1.5.2: improvements in ZMQ error logging</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -1016,7 +1012,7 @@ Machines that run Transport or other LabVIEW clients need RemoteControl.ZMQ 1.5.
         <Path>..\src\Instrument.Lockin\API\getSampling.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B5FF672A7277F3B9A713745D8834B149</GUID>
+      <GUID>3130B75F34F91618CE712C8AAD98F2EB</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1317,7 +1313,7 @@ Machines that run Transport or other LabVIEW clients need RemoteControl.ZMQ 1.5.
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>BD09B62DFBB06E9761CAF0FE6B222B48</GUID>
+      <GUID>3CACAF41EDA93FDC1A75E37A62996ED1</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1408,7 +1404,7 @@ Machines that run Transport or other LabVIEW clients need RemoteControl.ZMQ 1.5.
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>09434FC4BBFD9D4A5D3E847582FBD1CD</GUID>
+      <GUID>71F6C303922CD070F78B90CA09B5C58F</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
