@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-17 12:49:41" Creator="Patrick Irvin" Comments="" ID="f3737ae91399aa116108b5b23ec7222b">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-19 13:15:02" Creator="Patrick Irvin" Comments="" ID="802386c0437185001b14960e915e3129">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.8.4.96</Library_Version>
+    <Library_Version>3.8.5.97</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -38,9 +38,9 @@
       <Copyright/>
       <Packager/>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>### 3.8.4
+      <Release_Notes>### 3.8.5
 
-Rebuilt against RemoteControl.ZMQ 1.5.2: improvements in ZMQ error logging</Release_Notes>
+Rebuilt against RemoteControl.ZMQ 1.5.3: fix potential stuck ZMQ context when shutting down</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -1012,7 +1012,7 @@ Rebuilt against RemoteControl.ZMQ 1.5.2: improvements in ZMQ error logging</Rele
         <Path>..\src\Instrument.Lockin\API\getSampling.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>3130B75F34F91618CE712C8AAD98F2EB</GUID>
+      <GUID>B7A1746C529D81DFF1CB791BC62D8498</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1313,7 +1313,7 @@ Rebuilt against RemoteControl.ZMQ 1.5.2: improvements in ZMQ error logging</Rele
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>3CACAF41EDA93FDC1A75E37A62996ED1</GUID>
+      <GUID>49279B5FBDF021AF503A65FEF5457095</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1404,7 +1404,7 @@ Rebuilt against RemoteControl.ZMQ 1.5.2: improvements in ZMQ error logging</Rele
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>71F6C303922CD070F78B90CA09B5C58F</GUID>
+      <GUID>3F37A7DA0F41B3A6E12A7F380DA22853</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
