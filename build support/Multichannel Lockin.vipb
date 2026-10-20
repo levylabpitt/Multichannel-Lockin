@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-20 15:06:07" Creator="Patrick Irvin" Comments="" ID="678e419914c0d703de53b7f632fe20cf">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-20 15:36:44" Creator="Patrick Irvin" Comments="" ID="582d8cc5b4d9f18336bc3d39d1a0c1a4">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.8.6.97</Library_Version>
+    <Library_Version>3.8.6.98</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -1016,7 +1016,7 @@ Machines that run Transport, FLEX or other clients need RemoteControl.ZMQ 1.5.4 
         <Path>..\src\Instrument.Lockin\API\getSampling.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>D9D6F39FCFB4949AA3F0F9FFE774999C</GUID>
+      <GUID>9576F235F9EA7C3D078225B15E24C563</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1317,7 +1317,7 @@ Machines that run Transport, FLEX or other clients need RemoteControl.ZMQ 1.5.4 
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>74EF6E159F9F770B15990605FD9D1860</GUID>
+      <GUID>2ED5D4413EB941E7E5A721C4197B6F7E</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1408,7 +1408,7 @@ Machines that run Transport, FLEX or other clients need RemoteControl.ZMQ 1.5.4 
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>DC588686C2F05CF28629EDF31EC0FD47</GUID>
+      <GUID>DB7824C63CE0588A440E8D0DA00D3D49</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
