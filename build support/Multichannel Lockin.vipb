@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-19 13:15:02" Creator="Patrick Irvin" Comments="" ID="802386c0437185001b14960e915e3129">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-20 15:36:44" Creator="Patrick Irvin" Comments="" ID="582d8cc5b4d9f18336bc3d39d1a0c1a4">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.8.5.97</Library_Version>
+    <Library_Version>3.8.6.98</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -38,9 +38,13 @@
       <Copyright/>
       <Packager/>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>### 3.8.5
-
-Rebuilt against RemoteControl.ZMQ 1.5.3: fix potential stuck ZMQ context when shutting down</Release_Notes>
+      <Release_Notes>### 3.8.6
+Rebuilt against RemoteControl.ZMQ 1.5.4 and labview-zmq 3.7.1.
+- Fixes occasional crashes ("ZeroMQ Abort" dialog, then error 1097) in the lock-in and in LabVIEW clients: labview-zmq 3.7.1 ships a libzmq built without WSAPoll (levylabpitt/RemoteControl.ZMQ#2).
+- #183 getStatus replies in ~8 ms around startSweep; fixes getStatus timeouts during Transport sweeps (requires RemoteControl.ZMQ 1.5.4 and labview-zmq 3.7.1)
+- #184 Improved DAQmx error classification (recoverable vs. fatal errors)
+- #185 setSweepTable, and the sweep-pattern table in the UI, applied only the last table when several channels were given one; all tables are applied now. New method names setSweepTime and setSweepTable; setSweep_Time and setSweep_Table still work but are deprecated.
+Machines that run Transport, FLEX or other clients need RemoteControl.ZMQ 1.5.4 and labview-zmq 3.7.1 installed too; the crash fix only applies where they are installed.</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -1012,7 +1016,7 @@ Rebuilt against RemoteControl.ZMQ 1.5.3: fix potential stuck ZMQ context when sh
         <Path>..\src\Instrument.Lockin\API\getSampling.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B7A1746C529D81DFF1CB791BC62D8498</GUID>
+      <GUID>9576F235F9EA7C3D078225B15E24C563</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1313,7 +1317,7 @@ Rebuilt against RemoteControl.ZMQ 1.5.3: fix potential stuck ZMQ context when sh
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>49279B5FBDF021AF503A65FEF5457095</GUID>
+      <GUID>2ED5D4413EB941E7E5A721C4197B6F7E</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1404,7 +1408,7 @@ Rebuilt against RemoteControl.ZMQ 1.5.3: fix potential stuck ZMQ context when sh
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>3F37A7DA0F41B3A6E12A7F380DA22853</GUID>
+      <GUID>DB7824C63CE0588A440E8D0DA00D3D49</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
