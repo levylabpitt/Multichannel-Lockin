@@ -140,3 +140,21 @@ Restart the app first. Only send valid JSON-RPC 2.0. Simulated rig: 12 AI, 9 AO.
 | 8 | output gain 1, sweep AO1 from 0 to 1 V with offset 0.1 | | swept card value 0.1 below the requested ramp, no step at start or end (M2) |
 | 9 | `HELP ["getInputOffset"]`, `HELP ["setOutputOffset"]` | first one falls to the default text (B5) | descriptions |
 | 10 | restart the app, `getOutputOffset` | | the values set before restart (D5) |
+
+## Test results (2026-10-27, simulated lock-in, working tree after 81840fe2)
+
+The simulated AO clips the card value at ±0.1 V, so rows 5 to 8 were run with DC 0.05, amplitude 0.01 and OutputOffset 0.02 instead of 1 V and 0.1. AI1 is looped back to AO1 in the simulation. The server does not reply to a request without a `params` key; send `"params": {}` for getters.
+
+| # | Result |
+| --- | --- |
+| 1 | Pass after the fix in the UI macro (initially failed: `getOutputOffset` returned `[]` until `setOutputOffset` was called). |
+| 2 | Pass: 16 input gains in, 12 out. |
+| 3 | Pass: `getOutputOffset` unchanged after `setOutputGain` 2s (B1). |
+| 4 | Pass: `getOutputGain` returns 2s (B2). |
+| 5 | Pass: AI1 drops from 0.049 to 0.029; `getAOconfig` DC and the reported AO waveform stay at 0.05; amplitude unchanged, so the subtraction hits DC (B4, D4, M3). |
+| 6 | Pass: DC still 0.05 after two unrelated AO changes (M1). |
+| 7 | Pass: gain 2 gives card value 0.016 (expected 0.015, the rest is sine-mean bias from 1.25 periods per buffer); reported AO stays 0.05. |
+| 8 | Pass: requested minus card is 0.0195 to 0.0196 across the sweep; card -0.02 before and 0.03 after, no step (M2). `getAOconfig` ends at the requested 0.05. |
+| 9 | Pass: both HELP entries return descriptions with units (B5). |
+| 10 | Pass: OutputOffset `[0.011, 0.012, 0.013, 0, 0, 0, 0, 0, 0.019]` and InputOffset 0.001 on AI1 survive a restart (D5). |
+| extra | InputOffset 0.007 on AI1 lowers AI1 by 0.007 and leaves AO unchanged, so the Add/Subtract OutputOffset VIs read OutputOffset, not InputOffset. |
