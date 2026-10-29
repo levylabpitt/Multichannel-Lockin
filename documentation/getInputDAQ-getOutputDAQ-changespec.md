@@ -54,20 +54,20 @@ Once these typedefs are public, their field types are part of the API too. Recom
   - in an **enum**, position is the value, so a blank goes **last**. A blank inserted first shifts every item and changes saved config files and existing wires. The defaults `AO.Range = 4` / `AI.Range = 6` in `config not UI to UI` are these blank last items.
 - **Coupling: enum `{AC, DC, GND}`** instead of the DAQmx ring. Convert to the DAQmx constant (10045 / 10050 / 10066) in the DAQmx class, where the channel is created. The JSON then reads `"Coupling": "DC"`, the enum restricts the values (a plain string would accept typos and pass them on silently), and DAQmx constants stay inside DAQmx code.
 - **Terminal configuration: enum `{Default, Differential, Pseudodifferential}`**, mapped to -1 / 10106 / 12529 in the DAQmx class. Name the device-default item `Default` instead of leaving it blank: it is a real setting (today the `< 0` value that `config not UI to UI` replaces). The 4431 and 446x support only differential and pseudodifferential.
-- **Range: a number in volts (DBL), not the `±` enum.** `±` is byte 0xB1 in LabVIEW's Windows-1252 strings, which is not valid UTF-8 (lvkit already prints it as `�0.316`). A JSON reply carrying it can fail to decode in Python or arrive garbled. DAQmx takes min/max as numbers and picks the smallest hardware range that covers them, so `"Range": 10.0` (meaning ±10 V) is what DAQmx needs and what a client can compare. The UI can keep its dropdown and convert. If you would rather keep a fixed list, use an enum with ASCII names (`"10 V"`, `"3.16 V"`). Either way, keep every wire string ASCII.
+- **Range: keep the enums, relabel the items without `±`** (decided): AI `{0.316, 1.00, 3.16, 10.0, 31.6, 42.4}`, AO `{0.1, 1.0, 3.5, 10.0}`, each meaning ±that many volts. The hardware has a fixed set of ranges, so an enum is the right type. `±` has to go because it is byte 0xB1 in LabVIEW's Windows-1252 strings, which is not valid UTF-8 (lvkit already prints it as `�0.316`); a reply carrying it can fail to decode in Python or arrive garbled. Relabeling keeps every item's value, so wires and the per-`Type` coercions are unaffected. On the wire the value is the item name as a **string** (`"Range": "10.0"`), so clients compare strings, or convert with `float()`. Keep every wire string ASCII.
 - **JSONtext behavior to confirm:** enums are written as the item name. Whether an unknown name on input raises an error or silently falls back to the default is unverified; check it before relying on enums for validation.
 
 Knock-on edits:
 
-- `config not UI to UI (AO and AI).vi` and `config UI to not UI (AO and AI).vi`: the per-`Type` range coercions (USB-4431: AO -> ±3.5, AI -> ±10.0; otherwise AO ±3.5 -> ±10.0) compare enum values, and the conversions now have to map the UI rings/enums to the new types.
-- The DAQmx class code that creates AI/AO channels: map the Coupling and terminal-configuration enums to DAQmx constants, and pass Range as min = -Range, max = +Range.
+- `config not UI to UI (AO and AI).vi` and `config UI to not UI (AO and AI).vi`: map the UI rings to the new Coupling and terminal-configuration enums. The per-`Type` range coercions (USB-4431: AO -> 3.5, AI -> 10.0; otherwise AO 3.5 -> 10.0) compare enum values, which the relabel keeps.
+- The DAQmx class code that creates AI/AO channels: map the Coupling and terminal-configuration enums to DAQmx constants. Range is turned into min/max by `DAQmx/private/DAQmx.44xx.Get AI Min and Max.vi` / `Get AO Min and Max.vi` (from the names; not read). If they map by enum value, the relabel does not affect them; if they parse the item text, they need updating.
 - The saved configuration file: changing enum items or a field's type changes what the INI stores, as label renames do. Load a config file saved before the change and check the DAQ section.
 
 With these changes the replies would look like:
 
 ```json
 [
-  {"Channels": "PXI1Slot2/ai0", "Coupling": "DC", "Range": 10.0, "terminal configuration": "Differential", "Type": "PXI-446x"}
+  {"Channels": "PXI1Slot2/ai0", "Coupling": "DC", "Range": "10.0", "terminal configuration": "Differential", "Type": "PXI-446x"}
 ]
 ```
 
