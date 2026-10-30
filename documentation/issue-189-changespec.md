@@ -123,3 +123,42 @@ Start with acquisition started, InputOffset 0, OutputOffset 0, output gain 1, AO
 | 8 | `setOffsetMode ["Measure"]` | same as 1 with the defaults (10 buffers) |
 | 9 | `setOffsetMode ["Remove"]` | all InputOffsets 0 |
 | 10 | `HELP ["measureInputOffset"]` | the description above |
+
+## As built (deviations from the design above)
+
+- **Small states instead of one step frame.** `Macro: Measure InputOffset` only queues `Data: Zero AO Outputs`, `Data: Begin Offset Measurement`, `Data: Process AO Channels`. Per buffer, `Macro: DSP` inserts `DSP: Offset Measurement Phase`, `DSP: Accumulate InputOffset` and `Macro: Offset Measurement` before `DSP: Filter`. `Macro: Offset Measurement` cases on `phase` and queues the finish: `done` stores the offset (`DSP: Store InputOffset`), restores the AO and the status; `timed out` restores without storing; `aborted` (status changed, for example a sweep started) restores the AO only; `cancelled` (an AO command) restores the status only, keeping the new AO. All end in `Data: End Offset Measurement`.
+- **Support VIs.** `Offset Measurement Next Phase.vi` (abort/cancel/timeout checks and the zeroing/settling transitions), `Offset Measurement Accumulate.vi`, `Offset Measurement Result.vi` (sum/count into the listed channels), `Zero AO Outputs.vi`, `Restore AO Outputs.vi`.
+- **Abort detection in one place.** Instead of touching every AO event, `Offset Measurement Next Phase.vi` cancels when any AO `Amplitude` or `Offset` in the class is no longer 0, and aborts when `DAQ Status` is no longer `measuring offset`.
+- **Only Amplitude and Offset are saved and restored**, not the whole AO config, so a frequency or phase change made during the measurement is kept.
+- **`timeout` is a Tick Count deadline** (ms) rather than a buffer count, so no Fs or #s lookup.
+- **`phase`** gained `done`, `aborted`, `cancelled`, `timed out`; the cluster holds `deadline` instead of `timeout remaining`.
+- **Warnings, not errors.** Refusals (`-89766`, not started or sweeping) and aborts (`-89765`) are raised as warnings. An error in the DAQ engine goes through `Error Handler` and `Macro: Post Error Handling`, which drops the queued states and queues `DAQ: STOP`, so an error would stop acquisition.
+- **`getState` returns the DAQ `Status--enum` directly.** The Instrument Framework's `LockinAPI.getState.states--enum` has no `measuring offset`, so coercing to it reported `sweeping`. `Handle Command.vi` frame "21, 22" now sends `Status--enum` to To Variant.
+- **`DAQ Status` tracks sweeps.** Event [36] now stores `sweeping` and `Data: Save Sweep Data` "final" stores `started` in the state cluster, not only in the published `getDAQState`. Before that, the engine's own status stayed `started` during a sweep, so a request during a sweep was accepted and ended the sweep.
+- **Event [26] `setState start`** treats `measuring offset` like `created, started` (no restart). Event [18]'s stray bundle into the old `measureInputOffset` flag is gone.
+- **Stale Generator echoes are filtered.** The Generator publishes its AO channels on every `Generator: Generate` (event [37]), and echoes generated before it received a new `setAOChannels` still carry the old values. Event [37] now drops every echo while `phase` is not `idle`, and otherwise checks it against a countdown `stale echo left` (I32) in the state cluster: `Data: Process AO Channels` sets it to 3; while it is above 0, `AO Echo Matches.vi` converts the echo to user units and compares every channel's `Amplitude` and `Offset` with the class (`MGI Approximately Equal`); a match merges and resets the count to 0, a mismatch is dropped and decrements it. At 0 every echo merges, so a Generator that changes values itself (a sweep) catches up within three buffers. `Merge AO Settings from Generator.vi` now includes the user-unit conversion (`Multiply Amplitude and Offset by OutputGain`, `Add OutputOffset to Offset`). This also fixes the general race where any `setAO_*` was briefly overwritten by an older echo.
+
+## Test results (simulated lock-in, 2026-10-30)
+
+Run with a Python JSON-RPC client against port 29170. The client snapshots gains, offsets, AO config and state first and restores them afterwards (all restored, state `idle`). Tests 6b, 7 and 7b are additions to the plan. No entries were written to the error log.
+
+| # | Result | Observed |
+| --- | --- | --- |
+| 1 | PASS | `measuring offset` then `started`, 1.25 s |
+| 2 | PASS | AI1 offset 0.00010; AO1 back at 0.05 DC / 0.01 amplitude on the first read; AI1 mean 0.0500 (0.0500 before) |
+| 3 | PASS | AI1 offsets 0.00010, 0.00014, 0.00014 |
+| 4 | PASS | AI1 0.00015, AI2 0.00015 (was 0.003), AI3 kept at 0.007, the rest unchanged |
+| 5 | PASS | AI1 offset -0.01987 with OutputOffset AO1 = 0.02 |
+| 6 | PASS | `setAO_DC 0.03` during the measurement: back to `started`, DC 0.03 kept, offsets unchanged |
+| 6b | PASS | `setState start` during the measurement: no restart, finished in 1.78 s, AI1 offset 0.00013 |
+| 7 | PASS | refused while stopped; state `idle`, offsets unchanged |
+| 7b | PASS | refused while sweeping; state stayed `sweeping`, offsets unchanged |
+| 8 | PASS | `setOffsetMode ["Measure"]`: finished in 1.77 s (10 buffers), AI1 offset 0.00015 |
+| 9 | PASS | all InputOffsets 0 |
+| 10 | PASS | HELP text as above |
+
+Stress runs: 40 measurements alternating `setOffsetMode ["Measure"]` and `measureInputOffset {}` with 1.7 s between them, and 20 `measureInputOffset {}` calls each started as soon as the previous one ended. All completed, stored an offset and restored AO1 to 0.01 / 0.05; `getAOconfig` showed the restored values on the first read after `getState` returned `started`. Durations range from 1.2 to 1.8 s for 10 buffers.
+
+The `buffers` default of 10 had to be set in three places: the typedef, the `measureInputOffset` control default of `DAQ.measureInputOffset.vi` (used by `setOffsetMode`, which leaves that input unwired) and the config constant in the `measureInputOffset` frame of `Handle Command.vi` (used for keys missing from the JSON). LabVIEW does not carry a typedef's new default into existing instances.
+
+Fixed during testing: measurements that ended about 0.1 s after starting with the InputOffset unchanged. Event [37] merged a Generator echo generated before the zeroing reached the Generator, so the class showed non-zero AO and `Offset Measurement Next Phase.vi` cancelled; the AO was then left at 0. The same race just after a measurement ended let a stale all-zero echo into the class, so a measurement started at once saved zeros, and `getAOconfig` showed zeros for up to 0.1 s after `started`. Both are fixed by the echo filter above. The `-89765` warning message now reports the DAQ status, previous status, buffers averaged and the saved amplitudes and offsets.
