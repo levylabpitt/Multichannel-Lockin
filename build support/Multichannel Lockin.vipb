@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-20 15:36:44" Creator="Patrick Irvin" Comments="" ID="582d8cc5b4d9f18336bc3d39d1a0c1a4">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-30 08:30:50" Creator="Patrick Irvin" Comments="" ID="dc3c71464a48961272c1459ac8d3e64b">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
     <Library_Version>3.8.6.98</Library_Version>
@@ -38,13 +38,11 @@
       <Copyright/>
       <Packager/>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>### 3.8.6
-Rebuilt against RemoteControl.ZMQ 1.5.4 and labview-zmq 3.7.1.
-- Fixes occasional crashes ("ZeroMQ Abort" dialog, then error 1097) in the lock-in and in LabVIEW clients: labview-zmq 3.7.1 ships a libzmq built without WSAPoll (levylabpitt/RemoteControl.ZMQ#2).
-- #183 getStatus replies in ~8 ms around startSweep; fixes getStatus timeouts during Transport sweeps (requires RemoteControl.ZMQ 1.5.4 and labview-zmq 3.7.1)
-- #184 Improved DAQmx error classification (recoverable vs. fatal errors)
-- #185 setSweepTable, and the sweep-pattern table in the UI, applied only the last table when several channels were given one; all tables are applied now. New method names setSweepTime and setSweepTable; setSweep_Time and setSweep_Table still work but are deprecated.
-Machines that run Transport, FLEX or other clients need RemoteControl.ZMQ 1.5.4 and labview-zmq 3.7.1 installed too; the crash fix only applies where they are installed.</Release_Notes>
+      <Release_Notes>### 3.9.0
+#186/#188: gain and offset tracking, plus new get/set InputOffset and OutputOffset commands
+#187: getInputDAQ and getOutputDAQ
+#189: measureInputOffset
+#190: setLinkFrequency and getLinkFrequency</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -482,62 +480,6 @@ Machines that run Transport, FLEX or other clients need RemoteControl.ZMQ 1.5.4 
         </Position>
         <Icon>00000000</Icon>
         <Path>..\src\Instrument.Lockin\API\Macros\waitStatusSweepingStarted.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setOutputGain.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>6</Row>
-          <Column>10</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setOutputGain.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getOutputGain.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>6</Row>
-          <Column>11</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getOutputGain.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>setInputGain.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>7</Row>
-          <Column>10</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\setInputGain.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>getInputGain.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>7</Row>
-          <Column>11</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\Instrument.Lockin\API\getInputGain.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1016,7 +958,147 @@ Machines that run Transport, FLEX or other clients need RemoteControl.ZMQ 1.5.4 
         <Path>..\src\Instrument.Lockin\API\getSampling.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>9576F235F9EA7C3D078225B15E24C563</GUID>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>getInputDAQ.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>1</Row>
+          <Column>7</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\getInputDAQ.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>getOutputDAQ.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>1</Row>
+          <Column>8</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\getOutputDAQ.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>getOutputGain.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>8</Row>
+          <Column>11</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\getOutputGain.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>setInputOffset.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>5</Row>
+          <Column>10</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\setInputOffset.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>setInputGain.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>6</Row>
+          <Column>10</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\setInputGain.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>getInputGain.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>6</Row>
+          <Column>11</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\getInputGain.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>setOutputGain.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>8</Row>
+          <Column>10</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\setOutputGain.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>setOutputOffset.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>7</Row>
+          <Column>10</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\setOutputOffset.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>getInputOffset.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>5</Row>
+          <Column>11</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\getInputOffset.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>getOutputOffset.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>7</Row>
+          <Column>11</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\getOutputOffset.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <GUID>6C55E0BE938DF888F36F9B2A32C8B4D9</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1317,7 +1399,7 @@ Machines that run Transport, FLEX or other clients need RemoteControl.ZMQ 1.5.4 
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>2ED5D4413EB941E7E5A721C4197B6F7E</GUID>
+      <GUID>60E113A50850A05F8D28040BFD85615F</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1408,7 +1490,7 @@ Machines that run Transport, FLEX or other clients need RemoteControl.ZMQ 1.5.4 
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>DB7824C63CE0588A440E8D0DA00D3D49</GUID>
+      <GUID>2247067C1772C65A6D0699189A1EA342</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
