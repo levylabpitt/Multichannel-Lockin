@@ -10,7 +10,8 @@
 
 The exe's process is sampled once a second the whole time (CPU, RSS, private bytes, handles, threads).
 Sampling, AO, REF, link frequency and state are snapshotted first and restored at the end.
-Results go to Tests/stress/results/<date>_<firmware>/: summary JSON, monitor CSV and a PNG per run.
+Results go to Tests/stress/results/<setup>/<date>_<firmware>/, where <setup> names the computer and DAQ hardware
+(default <COMPUTERNAME>_<DAQ devices>, or --setup): summary JSON, monitor CSV and a PNG per run.
 """
 
 from __future__ import annotations
@@ -22,7 +23,9 @@ import glob
 import json
 import os
 import random
+import platform
 import statistics
+import subprocess
 import sys
 import threading
 import time
@@ -39,7 +42,7 @@ CORES = psutil.cpu_count()
 
 DEFAULT = ["profile", "blocksize", "latency", "freshness", "concurrency", "setters", "state", "sweep", "churn",
            "soak"]
-OPT_IN = ["grid", "sampling", "overrun", "torn", "robustness"]  # reconfigure hard, or can stop acquisition
+OPT_IN = ["grid", "phase", "sampling", "overrun", "torn", "robustness"]  # reconfigure hard, or can stop acquisition
 
 
 class RpcError(Exception):
@@ -88,6 +91,27 @@ class Client:
 
 
 # --- helpers ---------------------------------------------------------------------------------------
+
+
+def host_info() -> dict:
+    """The computer and the DAQ devices Windows sees (real devices only; simulated ones are not PnP devices)."""
+    ps = ("$c = Get-CimInstance Win32_ComputerSystem; [pscustomobject]@{"
+          "cpu = (Get-CimInstance Win32_Processor | Select-Object -First 1).Name.Trim(); "
+          "model = \"$($c.Manufacturer) $($c.Model)\"; hypervisor_present = $c.HypervisorPresent; "
+          "daq = @(Get-PnpDevice -PresentOnly -Class DAQDevice -EA SilentlyContinue | ForEach-Object FriendlyName)"
+          "} | ConvertTo-Json")
+    try:
+        info = json.loads(subprocess.run(["powershell", "-NoProfile", "-Command", ps], capture_output=True,
+                                         text=True, timeout=60).stdout)
+    except (OSError, ValueError, subprocess.TimeoutExpired):
+        info = {"daq": []}
+    return dict(name=platform.node(), os=platform.platform(), cores=CORES,
+                physical_cores=psutil.cpu_count(logical=False),
+                ram_gb=round(psutil.virtual_memory().total / 1e9, 1), **info)
+
+
+def default_setup(host: dict) -> str:
+    return "_".join([host["name"]] + sorted(set(host.get("daq") or [])))
 
 
 def log(*a):
@@ -612,6 +636,73 @@ def p_grid(c: Client, args):
     return out
 
 
+def unwrap_deg(xs: list[float]) -> list[float]:
+    out = []
+    for x in xs:
+        if out:
+            x += 360 * round((out[-1] - x) / 360)
+        out.append(x)
+    return out
+
+
+def p_phase(c: Client, args):
+    """Demodulated phase stability for each --phase-cases Fs:#s:f. Sets Fs and #s, links AO and REF to f, waits
+    for the filter to settle, then records every new getResults for --phase-s: Theta and R of every AI against
+    Ref1. A stable setup gives a constant Theta; a Fs/#s/f combination that breaks phase continuity between blocks
+    shows up as scatter, steps or drift."""
+    orig_link = c.call("getLinkFrequency")
+    out = []
+    for case in args.phase_cases:
+        fs, ns, f = (float(x) for x in case.split(":"))
+        c.call("setSampling", {"Fs": fs, "#s": int(ns)})
+        c.call("setLinkFrequency", {"Link": True, "Frequency": f})
+        applied = c.call("getSampling")
+        tc = max(r["TC"] for r in c.call("getREFconfig"))
+        block = applied["#s"] / applied["Fs"]
+        time.sleep(max(5.0, 10 * tc + 3 * block))
+        ensure_started(c)
+        label = f"phase: Fs={fs:g} #s={int(ns)} f={f:g}"
+        MON.mark = label
+        mark = log_mark()
+        series, last, t_end = {}, None, time.time() + args.phase_s
+        while time.time() < t_end:
+            t = time.time()
+            try:
+                r = c.call("getResults")
+            except (TimeoutError, RpcError):
+                continue
+            if r["Time Stamp"] != last:
+                last = r["Time Stamp"]
+                d = {kv["key"]: kv["value"] for kv in r["Results (Dictionary)"]}
+                for k, v in d.items():
+                    if k.endswith(".Ref1.Theta"):
+                        ch = k.split(".")[0]
+                        series.setdefault(ch, []).append((last, v, d.get(f"{ch}.Ref1.R")))
+            time.sleep(max(0.0, 0.1 - (time.time() - t)))
+        row = dict(fs_req=fs, ns_req=int(ns), f=f, fs_applied=applied["Fs"], ns_applied=applied["#s"],
+                   block_ms=round(block * 1e3, 2), cycles_per_block=round(f * block, 4),
+                   state=c.call("getState"), errors=errors_since(mark), channels={})
+        for ch, s in series.items():
+            ts = [dt.datetime.fromisoformat(x[0].replace("Z", "+00:00")).timestamp() for x in s]
+            th = unwrap_deg([x[1] for x in s])
+            steps = [abs(b - a) for a, b in zip(th, th[1:])]
+            row["channels"][ch] = dict(
+                n=len(s), R_mean=statistics.mean(x[2] for x in s if x[2] is not None),
+                theta_mean=round(statistics.mean(th), 4), theta_std=round(statistics.pstdev(th), 4),
+                theta_min=round(min(th), 4), theta_max=round(max(th), 4),
+                drift_deg_per_min=round(slope_per_min(ts, th), 4), max_step_deg=round(max(steps, default=0), 4),
+                series=[[x[0], round(x[1], 5), x[2]] for x in s])
+        out.append(row)
+        log(f"  Fs {fs:g} (applied {applied['Fs']:.3f}) #s {int(ns)} f {f:g}: block {row['block_ms']} ms, "
+            f"{row['cycles_per_block']} cycles/block, {row['state']}, errors {row['errors']}")
+        for ch, v in row["channels"].items():
+            log(f"    {ch}: R {v['R_mean']:.4g} V  theta {v['theta_mean']:+.3f} deg  std {v['theta_std']:.4f}  "
+                f"range {v['theta_max'] - v['theta_min']:.4f}  drift {v['drift_deg_per_min']:+.4f} deg/min  "
+                f"max step {v['max_step_deg']:.4f}  (n {v['n']})")
+    c.call("setLinkFrequency", orig_link)
+    return out
+
+
 def p_overrun(c: Client, args):
     """Small blocks: do DAQmx reads fall behind (-200279) with and without RPC load? Can stop acquisition."""
     orig = c.call("getSampling")
@@ -696,7 +787,7 @@ def p_robustness(c: Client, args):
 
 PHASES = dict(profile=p_profile, blocksize=p_blocksize, soak=p_soak, latency=p_latency, freshness=p_freshness,
               concurrency=p_concurrency, setters=p_setters, state=p_state, sweep=p_sweep, churn=p_churn,
-              sampling=p_sampling, grid=p_grid, overrun=p_overrun, torn=p_torn, robustness=p_robustness)
+              sampling=p_sampling, grid=p_grid, phase=p_phase, overrun=p_overrun, torn=p_torn, robustness=p_robustness)
 
 
 # --- output ----------------------------------------------------------------------------------------
@@ -757,10 +848,14 @@ def main():
     ap.add_argument("--grid-ns", type=int, nargs="+", default=[1000, 2500, 5000, 10000, 25000, 50000, 100000])
     ap.add_argument("--grid-s", type=float, default=20, help="seconds per grid combination")
     ap.add_argument("--grid-max-block", type=float, default=5, help="skip combinations with longer blocks (s)")
+    ap.add_argument("--phase-cases", nargs="+", default=["94000:10000:500", "94000:10000:5000", "48000:10000:1355",
+                                                          "94000:9400:1355"], help="phase: Fs:#s:f per case")
+    ap.add_argument("--phase-s", type=float, default=30, help="seconds of results per phase case")
     ap.add_argument("--soak-min", type=float, default=20, help="soak duration in minutes")
     ap.add_argument("--max-samples", type=int, default=100000, help="largest #s for the sampling phase")
     ap.add_argument("--destructive", action="store_true", help="robustness: include requests known to change config")
-    ap.add_argument("--out", type=Path, help="results folder (default results/<date>_<firmware>)")
+    ap.add_argument("--setup", help="name of the computer + hardware (default <COMPUTERNAME>_<DAQ devices>)")
+    ap.add_argument("--out", type=Path, help="results folder (default results/<setup>/<date>_<firmware>)")
     args = ap.parse_args()
     names = args.phases or DEFAULT
     bad = [n for n in names if n not in PHASES]
@@ -769,18 +864,23 @@ def main():
 
     c = Client()
     idn = c.call("IDN")
-    out_dir = args.out or HERE / "results" / f"{dt.date.today()}_{idn['firmware']}"
+    host = host_info()
+    setup = args.setup or default_setup(host)
+    out_dir = args.out or HERE / "results" / setup / f"{dt.date.today()}_{idn['firmware']}"
     out_dir.mkdir(parents=True, exist_ok=True)
     stamp = dt.datetime.now().strftime("%H%M%S")
     tag = f"{stamp}_{'-'.join(names)}"
     snap = {m: c.call(m) for m in ("getSampling", "getAOconfig", "getREFconfig", "getState", "getLinkFrequency")}
+    channels = dict(ai=[w.get("attributes", {}).get("NI_ChannelName") for w in c.call("getAI")],
+                    ao=[a["Channel"] for a in snap["getAOconfig"]])
     p = proc()
     results: dict = dict(idn=idn, phases=names, args={k: str(v) for k, v in vars(args).items()},
-                         host=dict(cores=CORES, ram_gb=round(psutil.virtual_memory().total / 1e9, 1)),
+                         setup=setup, host=host, channels=channels,
                          exe=dict(pid=p.pid, started=dt.datetime.fromtimestamp(p.create_time()).isoformat(),
                                   private_mb_at_start=round(p.memory_info().private / 1e6, 1),
                                   handles_at_start=p.num_handles()),
                          snapshot=snap)
+    log(f"{setup}: {host.get('cpu')}, {len(channels['ai'])} AI, {len(channels['ao'])} AO")
     log(f"{idn['model']} {idn['firmware']}  pid {p.pid}  private {results['exe']['private_mb_at_start']} MB  "
         f"handles {results['exe']['handles_at_start']}  -> {out_dir}")
     global MON
@@ -824,7 +924,7 @@ def main():
                                               "cpu_core_pct", "system_cpu_pct", "dead"])
             w.writeheader()
             w.writerows(MON.samples)
-        plot(MON.samples, out_dir / f"{tag}_monitor.png", f"{idn['model']} {idn['firmware']}  {tag}")
+        plot(MON.samples, out_dir / f"{tag}_monitor.png", f"{setup}  {idn['firmware']}  {tag}")
         log(f"restored: {results['restored']}")
         log(f"wrote {out_dir / tag}_*")
 
