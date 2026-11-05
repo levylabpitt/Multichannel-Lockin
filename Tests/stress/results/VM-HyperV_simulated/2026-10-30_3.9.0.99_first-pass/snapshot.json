@@ -1,0 +1,140 @@
+{
+ "getSampling": {
+  "Fs": 96000.0010672957,
+  "#s": 10000
+ },
+ "getAOconfig": [
+  {
+   "Enable?": true,
+   "Channel": 1,
+   "Amplitude": 0,
+   "Offset": 0,
+   "Frequency": 10,
+   "Phase": 0,
+   "Function": "sine",
+   "Sweeping?": false,
+   "Limit AC": false,
+   "Limit DC?": false,
+   "Duty Cycle": false
+  },
+  {
+   "Enable?": true,
+   "Channel": 2,
+   "Amplitude": 0,
+   "Offset": 0,
+   "Frequency": 10,
+   "Phase": 0,
+   "Function": "sine",
+   "Sweeping?": false,
+   "Limit AC": false,
+   "Limit DC?": false,
+   "Duty Cycle": false
+  },
+  {
+   "Enable?": true,
+   "Channel": 3,
+   "Amplitude": 0,
+   "Offset": 0,
+   "Frequency": 10,
+   "Phase": 0,
+   "Function": "sine",
+   "Sweeping?": false,
+   "Limit AC": false,
+   "Limit DC?": false,
+   "Duty Cycle": false
+  },
+  {
+   "Enable?": true,
+   "Channel": 4,
+   "Amplitude": 0,
+   "Offset": 0,
+   "Frequency": 10,
+   "Phase": 0,
+   "Function": "sine",
+   "Sweeping?": false,
+   "Limit AC": false,
+   "Limit DC?": false,
+   "Duty Cycle": false
+  },
+  {
+   "Enable?": true,
+   "Channel": 5,
+   "Amplitude": 0,
+   "Offset": 0,
+   "Frequency": 10,
+   "Phase": 0,
+   "Function": "sine",
+   "Sweeping?": false,
+   "Limit AC": false,
+   "Limit DC?": false,
+   "Duty Cycle": false
+  },
+  {
+   "Enable?": true,
+   "Channel": 6,
+   "Amplitude": 0,
+   "Offset": 0,
+   "Frequency": 10,
+   "Phase": 0,
+   "Function": "sine",
+   "Sweeping?": false,
+   "Limit AC": false,
+   "Limit DC?": false,
+   "Duty Cycle": false
+  },
+  {
+   "Enable?": true,
+   "Channel": 7,
+   "Amplitude": 0,
+   "Offset": 0,
+   "Frequency": 10,
+   "Phase": 0,
+   "Function": "sine",
+   "Sweeping?": false,
+   "Limit AC": false,
+   "Limit DC?": false,
+   "Duty Cycle": false
+  },
+  {
+   "Enable?": true,
+   "Channel": 8,
+   "Amplitude": 0,
+   "Offset": 0,
+   "Frequency": 10,
+   "Phase": 0,
+   "Function": "sine",
+   "Sweeping?": false,
+   "Limit AC": false,
+   "Limit DC?": false,
+   "Duty Cycle": false
+  },
+  {
+   "Enable?": true,
+   "Channel": 9,
+   "Amplitude": 0,
+   "Offset": 0,
+   "Frequency": 10,
+   "Phase": 0,
+   "Function": "sine",
+   "Sweeping?": false,
+   "Limit AC": false,
+   "Limit DC?": false,
+   "Duty Cycle": false
+  }
+ ],
+ "getREFconfig": [
+  {
+   "Enable?": true,
+   "Channel": 1,
+   "Frequency": 10,
+   "Phase": 0,
+   "TC": 0.3,
+   "Roll-Off": 2
+  }
+ ],
+ "getState": "started",
+ "getLinkFrequency": {
+  "Link": true,
+  "Frequency": 10
+ }
+}

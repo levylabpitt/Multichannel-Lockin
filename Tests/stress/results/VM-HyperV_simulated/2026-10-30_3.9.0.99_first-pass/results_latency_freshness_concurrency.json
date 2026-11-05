@@ -1,0 +1,297 @@
+{
+ "latency": {
+  "ACK": {
+   "n": 300,
+   "mean": 5.97,
+   "p50": 5.9,
+   "p95": 7.49,
+   "p99": 9.75,
+   "max": 10.62,
+   "reply_bytes": 23
+  },
+  "IDN": {
+   "n": 300,
+   "mean": 6.11,
+   "p50": 5.96,
+   "p95": 7.46,
+   "p99": 11.63,
+   "max": 15.31,
+   "reply_bytes": 105
+  },
+  "getState": {
+   "n": 300,
+   "mean": 6.02,
+   "p50": 5.92,
+   "p95": 7.57,
+   "p99": 10.81,
+   "max": 11.61,
+   "reply_bytes": 9
+  },
+  "getStatus": {
+   "n": 300,
+   "mean": 6.04,
+   "p50": 5.91,
+   "p95": 7.63,
+   "p99": 9.99,
+   "max": 11.04,
+   "reply_bytes": 9
+  },
+  "getSampling": {
+   "n": 300,
+   "mean": 6.09,
+   "p50": 5.96,
+   "p95": 7.65,
+   "p99": 10.01,
+   "max": 10.79,
+   "reply_bytes": 37
+  },
+  "getAOconfig": {
+   "n": 300,
+   "mean": 7.57,
+   "p50": 7.31,
+   "p95": 9.24,
+   "p99": 13.87,
+   "max": 17.42,
+   "reply_bytes": 1719
+  },
+  "getREFconfig": {
+   "n": 300,
+   "mean": 6.27,
+   "p50": 6.07,
+   "p95": 7.85,
+   "p99": 9.33,
+   "max": 12.16,
+   "reply_bytes": 88
+  },
+  "getInputGain": {
+   "n": 300,
+   "mean": 6.16,
+   "p50": 6.01,
+   "p95": 7.63,
+   "p99": 9.76,
+   "max": 12.83,
+   "reply_bytes": 36
+  },
+  "getResults": {
+   "n": 200,
+   "mean": 9.03,
+   "p50": 8.66,
+   "p95": 12.55,
+   "p99": 13.91,
+   "max": 14.01,
+   "reply_bytes": 3588
+  },
+  "getAO": {
+   "n": 40,
+   "mean": 269.82,
+   "p50": 268.31,
+   "p95": 302.94,
+   "p99": 307.24,
+   "max": 307.24,
+   "reply_bytes": 271309
+  },
+  "getAI": {
+   "n": 40,
+   "mean": 561.08,
+   "p50": 562.23,
+   "p95": 601.81,
+   "p99": 611.48,
+   "max": 611.48,
+   "reply_bytes": 2492385
+  },
+  "getAll": {
+   "n": 20,
+   "mean": 975.78,
+   "p50": 968.73,
+   "p95": 1148.72,
+   "p99": 1148.72,
+   "max": 1148.72,
+   "reply_bytes": 3174884
+  },
+  "getAllData": {
+   "n": 20,
+   "mean": 998.71,
+   "p50": 997.14,
+   "p95": 1045.47,
+   "p99": 1045.47,
+   "max": 1045.47,
+   "reply_bytes": 3142269
+  }
+ },
+ "latency_wall_s": 97.6,
+ "freshness": {
+  "calls": 3177,
+  "calls_per_s": 105.9,
+  "updates": 288,
+  "expected_block_ms": 104.2,
+  "update_gap_ms": {
+   "n": 287,
+   "mean": 104.07,
+   "p50": 105.03,
+   "p95": 120.28,
+   "p99": 133.88,
+   "max": 152.67
+  }
+ },
+ "freshness_wall_s": 30.0,
+ "concurrency": {
+  "small_1": {
+   "clients": 1,
+   "req_per_s": 141.3,
+   "latency": {
+    "n": 2119,
+    "mean": 7.07,
+    "p50": 6.74,
+    "p95": 9.94,
+    "p99": 11.91,
+    "max": 35.87
+   },
+   "errors": 0,
+   "sample_errors": [],
+   "hung_threads": 0
+  },
+  "small_2": {
+   "clients": 2,
+   "req_per_s": 140.1,
+   "latency": {
+    "n": 2102,
+    "mean": 14.25,
+    "p50": 14.0,
+    "p95": 18.53,
+    "p99": 20.47,
+    "max": 29.56
+   },
+   "errors": 0,
+   "sample_errors": [],
+   "hung_threads": 0
+  },
+  "small_4": {
+   "clients": 4,
+   "req_per_s": 138.2,
+   "latency": {
+    "n": 2073,
+    "mean": 28.93,
+    "p50": 28.41,
+    "p95": 35.75,
+    "p99": 38.63,
+    "max": 40.74
+   },
+   "errors": 0,
+   "sample_errors": [],
+   "hung_threads": 0
+  },
+  "small_8": {
+   "clients": 8,
+   "req_per_s": 138.1,
+   "latency": {
+    "n": 2071,
+    "mean": 57.83,
+    "p50": 57.44,
+    "p95": 67.74,
+    "p99": 71.65,
+    "max": 82.55
+   },
+   "errors": 0,
+   "sample_errors": [],
+   "hung_threads": 0
+  },
+  "small_16": {
+   "clients": 16,
+   "req_per_s": 137.7,
+   "latency": {
+    "n": 2065,
+    "mean": 116.04,
+    "p50": 115.42,
+    "p95": 135.27,
+    "p99": 152.2,
+    "max": 168.34
+   },
+   "errors": 0,
+   "sample_errors": [],
+   "hung_threads": 0
+  },
+  "small_32": {
+   "clients": 32,
+   "req_per_s": 142.5,
+   "latency": {
+    "n": 2138,
+    "mean": 223.49,
+    "p50": 227.0,
+    "p95": 240.57,
+    "p99": 246.51,
+    "max": 257.66
+   },
+   "errors": 0,
+   "sample_errors": [],
+   "hung_threads": 0
+  },
+  "large_1": {
+   "clients": 1,
+   "req_per_s": 3.1,
+   "latency": {
+    "n": 47,
+    "mean": 331.67,
+    "p50": 325.73,
+    "p95": 643.44,
+    "p99": 648.59,
+    "max": 648.59
+   },
+   "errors": 0,
+   "sample_errors": [],
+   "hung_threads": 0
+  },
+  "large_2": {
+   "clients": 2,
+   "req_per_s": 3.0,
+   "latency": {
+    "n": 45,
+    "mean": 682.12,
+    "p50": 654.03,
+    "p95": 1233.0,
+    "p99": 1302.55,
+    "max": 1302.55
+   },
+   "errors": 0,
+   "sample_errors": [],
+   "hung_threads": 0
+  },
+  "large_4": {
+   "clients": 4,
+   "req_per_s": 3.7,
+   "latency": {
+    "n": 55,
+    "mean": 1129.37,
+    "p50": 1071.09,
+    "p95": 1959.68,
+    "p99": 2336.81,
+    "max": 2336.81
+   },
+   "errors": 0,
+   "sample_errors": [],
+   "hung_threads": 0
+  },
+  "large_8": {
+   "clients": 8,
+   "req_per_s": 4.0,
+   "latency": {
+    "n": 60,
+    "mean": 2097.66,
+    "p50": 2075.89,
+    "p95": 3767.3,
+    "p99": 4049.37,
+    "max": 4049.37
+   },
+   "errors": 0,
+   "sample_errors": [],
+   "hung_threads": 0
+  }
+ },
+ "concurrency_wall_s": 154.2,
+ "restored": {
+  "getSampling": true,
+  "getAOconfig": true,
+  "getREFconfig": true,
+  "getState": true,
+  "getLinkFrequency": true
+ }
+}

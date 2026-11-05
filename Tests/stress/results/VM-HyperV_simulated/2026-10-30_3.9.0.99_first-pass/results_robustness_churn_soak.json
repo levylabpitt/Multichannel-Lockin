@@ -1,0 +1,150 @@
+{
+ "robustness": {
+  "not_json": {
+   "reply_ms": 3.8,
+   "reply": "{\"jsonrpc\":\"2.0\",\"id\":null,\"error\":{\"code\":-32700,\"message\":\"Parse error\"}}",
+   "alive_after": true,
+   "ack_ms": 14.5
+  },
+  "empty": {
+   "reply_ms": 3.9,
+   "reply": "{\"jsonrpc\":\"2.0\",\"id\":null,\"error\":{\"code\":-32700,\"message\":\"Parse error\"}}",
+   "alive_after": true,
+   "ack_ms": 12.1
+  },
+  "truncated_json": {
+   "reply_ms": 8.4,
+   "reply": "{\"jsonrpc\":\"2.0\",\"id\":null,\"error\":{\"code\":-32700,\"message\":\"Parse error\"}}",
+   "alive_after": true,
+   "ack_ms": 8.7
+  },
+  "json_array": {
+   "reply_ms": 5.1,
+   "reply": "{\"jsonrpc\":\"2.0\",\"id\":\"-1\t-1\t-1\",\"error\":{\"code\":-32700,\"message\":\"Parse error\"}}",
+   "alive_after": true,
+   "ack_ms": 4.4
+  },
+  "no_method": {
+   "reply_ms": 3.0,
+   "reply": "{\"jsonrpc\":\"2.0\",\"id\":\"1\",\"error\":{\"code\":-32600,\"message\":\"Invalid Request\"}}",
+   "alive_after": true,
+   "ack_ms": 4.1
+  },
+  "unknown_method": {
+   "reply_ms": 18.1,
+   "reply": "{\"jsonrpc\":\"2.0\",\"id\":\"1\",\"error\":{\"code\":4001,\"message\":\"Instrument.lvlib:Instrument.lvclass:Handle Command.vi<ERR>\\ncommand \\\"selfDestruct\\\" not supported\"}}",
+   "alive_after": true,
+   "ack_ms": 9.8
+  },
+  "wrong_param_type": {
+   "reply_ms": 35.1,
+   "reply": "{\"jsonrpc\":\"2.0\",\"id\":\"1\",\"error\":{\"code\":402844,\"message\":\"JSONtext.lvlib:JSON text to Variant.vi:4410001<ERR>\\nCannot Get as a Cluster: String\\n\\n\\n<b>Complete call chain:<\\/b>\\r\\n     JSONtext.lvlib:JSON text to Variant.vi:4410001\\r\\n     Instrument.Lockin.lvlib:Instrument.Lockin.lvclass:Handle C",
+   "alive_after": true,
+   "ack_ms": 3.0
+  },
+  "unknown_keys": {
+   "reply_ms": 5.0,
+   "reply": "{\"jsonrpc\":\"2.0\",\"id\":\"1\"}",
+   "alive_after": true,
+   "ack_ms": 4.7
+  },
+  "negative_samples": {
+   "reply_ms": 5.6,
+   "reply": "{\"jsonrpc\":\"2.0\",\"id\":\"1\"}",
+   "alive_after": true,
+   "ack_ms": 4.6
+  },
+  "bad_state": {
+   "reply_ms": 12.6,
+   "reply": "{\"jsonrpc\":\"2.0\",\"id\":\"1\",\"error\":{\"code\":402844,\"message\":\"JSONtext.lvlib:Scalar JSON text to Variant (not inlined).vi:5750001<ERR>\\nUnknown Enum element \\\"explode\\\" for 'State'\"}}",
+   "alive_after": true,
+   "ack_ms": 18.7
+  },
+  "nan_literal": {
+   "reply_ms": 41.8,
+   "reply": "{\"jsonrpc\":\"2.0\",\"id\":\"1\"}",
+   "alive_after": true,
+   "ack_ms": 4.8
+  },
+  "binary_garbage": {
+   "reply_ms": 12.5,
+   "reply": "{\"jsonrpc\":\"2.0\",\"id\":null,\"error\":{\"code\":-32700,\"message\":\"Parse error\"}}",
+   "alive_after": true,
+   "ack_ms": 40.3
+  },
+  "huge_10MB": {
+   "reply_ms": 928.3,
+   "reply": "{\"jsonrpc\":\"2.0\",\"id\":\"1\"}",
+   "alive_after": true,
+   "ack_ms": 10.0
+  },
+  "deep_nesting": {
+   "reply_ms": 1933.7,
+   "reply": "{\"jsonrpc\":\"2.0\",\"id\":\"1\",\"result\":\"ACK received 18:30:12\"}",
+   "alive_after": true,
+   "ack_ms": 4.1
+  },
+  "unicode_method": {
+   "reply_ms": 5.1,
+   "reply": "{\"jsonrpc\":\"2.0\",\"id\":\"1\",\"error\":{\"code\":4001,\"message\":\"Instrument.lvlib:Instrument.lvclass:Handle Command.vi<ERR>\\ncommand \\\"g\u00e9tState??\\\" not supported\"}}",
+   "alive_after": true,
+   "ack_ms": 2.2
+  },
+  "state_after": "idle",
+  "sampling_after": {
+   "Fs": 204789,
+   "#s": 15753
+  },
+  "ref_after": [
+   {
+    "Enable?": true,
+    "Channel": 1,
+    "Frequency": 10,
+    "Phase": 0,
+    "TC": NaN,
+    "Roll-Off": 2
+   }
+  ]
+ },
+ "robustness_wall_s": 3.5,
+ "churn": {
+  "connections": 500,
+  "failures": 0,
+  "latency": {
+   "n": 500,
+   "mean": 5.02,
+   "p50": 4.4,
+   "p95": 5.8,
+   "p99": 23.6,
+   "max": 25.6
+  },
+  "handles_before": 114481,
+  "handles_after": 114482,
+  "ack_after_50_abandoned_getAI": "ACK received 18:30:19",
+  "ack_after_abandoned_ms": 779.4,
+  "handles_final": 114481
+ },
+ "churn_wall_s": 10.4,
+ "soak": {
+  "seconds": 180,
+  "requests": 372,
+  "errors": 0,
+  "latency": {
+   "n": 372,
+   "mean": 2919.96,
+   "p50": 2864.26,
+   "p95": 3289.32,
+   "p99": 3399.76,
+   "max": 3402.85
+  },
+  "sample_errors": []
+ },
+ "soak_wall_s": 181.6,
+ "restored": {
+  "getSampling": true,
+  "getAOconfig": true,
+  "getREFconfig": true,
+  "getState": false,
+  "getLinkFrequency": true
+ }
+}
