@@ -1,6 +1,6 @@
 # Astartes_USB-4431: 3.9.0.99 (2026-11-03, physical PC, one real USB-4431, 4 AI, 1 AO, 96 kHz, #s 10000)
 
-Host: Gigabyte B450M DS3H, AMD Ryzen 7 2700X (8 cores / 16 threads, the same CPU that hosted the VM in [VM-HyperV_simulated](../VM-HyperV_simulated/README.md)), 128 GB RAM, Windows 11 with Hyper-V enabled. Device `Dev1` (USB-4431), channels `Dev1/ai0-3`, AO1 looped back to AI1 (R = 0.100 V at 0.1 V amplitude); AI2-4 carry no signal. One exe instance (pid 31732) for every run, so later runs start from the memory left by earlier ones. Raw data in `2026-11-03_3.9.0.99/`.
+Host: Gigabyte B450M DS3H, AMD Ryzen 7 2700X (8 cores / 16 threads, the same CPU that hosted the VM in [VM-HyperV_simulated](../VM-HyperV_simulated/README.md)), 128 GB RAM, Windows 11 with Hyper-V enabled. Device `Dev1` (USB-4431), channels `Dev1/ai0-3`, AO1 looped back to AI1 (R = 0.100 V at 0.1 V amplitude); AI2-4 carry no signal. One exe instance (pid 31732) for every run, so later runs start from the memory left by earlier ones. Raw data in `2026-11-03_3.9.0.99/` and `2026-11-04_3.9.0.99/` (a repeat of the phase test).
 
 Note the channel count: 4 AI and 1 AO here against 12 AI and 9 AO on the VM, so memory, reply sizes and getAI times are not directly comparable; CPU per situation is.
 
@@ -83,24 +83,30 @@ From `094617_profile-...-soak_*` (60 s per scenario, 45 s per block size, 20 min
 
 ## Demodulated phase
 
-`phase` (`103937_phase_*`, `105615_phase_*`): AO and REF linked at f, TC 0.3 s, 30 s of results after settling, AI1 (loopback). "Jitter" is the phase std expressed as time, std / (360 f).
+`phase` (`2026-11-03_3.9.0.99/103937_phase_*`, `2026-11-03_3.9.0.99/105615_phase_*`, `2026-11-04_3.9.0.99/165441_phase_*`): AO and REF linked at f, TC 0.3 s, roll-off 2, a 5.3 s wait after each change, then 30 s of results; AI1 (loopback). Cases run one after another, so each starts from the previous one's settings ("Before"; the first case of a run starts from the exe's 96 kHz / 10000 / 1355 Hz). "Initial offset" is the first result minus the settled value (mean of the last 50 results), also as a time, offset / (360 f). "Steady std" is the scatter over the last three quarters of the window.
 
-| Fs | #s | Block (ms) | f (Hz) | Cycles per block | Theta (deg) | Std (deg) | Jitter (ns) | Drift (deg/min) | Largest step (deg) |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 94000 | 10000 | 106.4 | 500 | 53.19 | -104.890 | 0.0030 | 17 | +0.007 | 0.004 |
-| 94000 | 10000 | 106.4 | 5000 | 531.91 | -161.154 | 0.0256 | 14 | -0.063 | 0.038 |
-| 48000 | 10000 | 208.3 | 1355 | 282.29 | -131.817 | 0.0002 | 0.4 | -0.0002 | 0.0002 |
-| 94000 | 9400 | 100 | 1355 | 135.5 | +29.949 | 0.0107 | 22 | +0.027 | 0.012 |
-| 94000 | 9400 | 100 | 500 | 50 | -20.636 | 0.0017 | 9 | +0.005 | 0.002 |
-| 94000 | 9400 | 100 | 1360 | 136 | -16.069 | 0.0018 | 3.7 | +0.004 | 0.005 |
-| 94000 | 9400 | 100 | 5000 | 500 | -38.605 | 0.0088 | 4.9 | -0.021 | 0.020 |
-| 94000 | 18800 | 200 | 1360 | 272 | -115.584 | 0.0002 | 0.4 | -0.0001 | 0.0001 |
+| Run, case | Fs / #s / f | Before | Cycles per block | Settled theta (deg) | Initial offset (deg) | Steady std (deg) |
+| --- | --- | --- | --- | --- | --- | --- |
+| `103937` 1 | 94000 / 10000 / 500 | 96000 / 10000 / 1355 | 53.19 | -104.889 | -0.0272 (-151 ns) | 0.0001 |
+| `103937` 2 | 94000 / 10000 / 5000 | 94000 / 10000 / 500 | 531.9 | -161.159 | +0.2352 (+131 ns) | 0.0001 |
+| `103937` 3 | 48000 / 10000 / 1355 | 94000 / 10000 / 5000 | 282.29 | -131.817 | -0.0003 (-1 ns) | 0.0002 |
+| `103937` 4 | 94000 / 9400 / 1355 | 48000 / 10000 / 1355 | 135.5 | +29.951 | -0.0941 (-193 ns) | 0.0001 |
+| `105615` 1 | 94000 / 9400 / 500 | 96000 / 10000 / 1355 | 50 | -20.635 | -0.0156 (-86 ns) | 0.0002 |
+| `105615` 2 | 94000 / 9400 / 1360 | 94000 / 9400 / 500 | 136 | -16.069 | -0.0179 (-37 ns) | 0.0002 |
+| `105615` 3 | 94000 / 9400 / 5000 | 94000 / 9400 / 1360 | 500 | -38.606 | +0.0861 (+48 ns) | 0.0002 |
+| `105615` 4 | 94000 / 18800 / 1360 | 94000 / 9400 / 5000 | 272 | -115.584 | +0.0001 (0 ns) | 0.0002 |
+| `165441` 1 | 94000 / 9400 / 1360 | 96000 / 10000 / 1355 | 136 | -16.069 | -0.0121 (-25 ns) | 0.0002 |
+| `165441` 2 | 94000 / 18800 / 1360 | 94000 / 9400 / 1360 | 272 | -16.069 | -0.0001 (0 ns) | 0.0002 |
+| `165441` 3 | 94000 / 9400 / 1360 | 94000 / 18800 / 1360 | 136 | -16.069 | -0.0001 (0 ns) | 0.0002 |
+| `165441` 4 | 94000 / 18800 / 1360 | 94000 / 9400 / 1360 | 272 | -16.069 | 0.0000 (0 ns) | 0.0002 |
+| `165441` 5 | 94000 / 9400 / 1360 | 94000 / 18800 / 1360 | 136 | -16.069 | -0.0001 (0 ns) | 0.0002 |
 
-- The phase is continuous across blocks in every case: no steps at block boundaries, even with half a cycle left over per block (135.5).
-- A whole number of cycles per block reduces scatter 2-6x. The cleanest pair is 1355 against 1360 Hz at 94 kHz x 9400: 0.0107 against 0.0018 deg.
-- Doubling the block to 200 ms reduces it another 9x (0.0018 -> 0.0002 deg at 1360 Hz). 48 kHz x 10000 also has about 200 ms blocks and the same 0.0002 deg, so the block length, not the rate, sets it. A 9x drop from halving the number of results is far more than random noise would give (about 1.4x), which suggests a block-dependent error such as residual 2f ripple sampled once per block.
-- The absolute phase differs between cases (the 4431's filter delay depends on Fs, and each case restarts AO and REF), so compare absolute values only within one setting.
-- getResults updated about 10 times a second at 48 kHz x 10000 (289 results in 30 s with 208 ms blocks), but once per block at 94 kHz x 18800 (151 in 30 s). Not explained.
+- Once settled, the phase scatter is 0.0001-0.0002 deg in every case, whatever the rate, block length, frequency, or whether the block holds a whole number of cycles. There are no steps at block boundaries, even with half a cycle left over per block (135.5).
+- The differences in the full-window std (0.0002 to 0.026 deg, as first reported from these runs) all come from a **settling transient**: after a change, the phase starts 25-190 ns (as a time delay) away from its final value and creeps there, settled to 0.0005 deg about 3-4 s into the window, so about 8-10 s after the change. That is about 30 TC, so it is not the demodulation filter; it behaves like a delay between AO and AI that settles after the tasks restart. The size in ns does not depend on f, which is why it looked like more scatter at 5 kHz.
+- Changing only `#s` (9400 <-> 18800 at 1360 Hz, four times in `165441`) left the phase unchanged to 0.001 deg with no transient. 7 of the 9 changes of f or Fs had the transient; the two that did not both came from a 5 kHz case.
+- The settled absolute phase is reproducible: 94 kHz / 1360 Hz settled at -16.069 deg in six cases across two days, after five different predecessors, except once: right after the 5 kHz case (`105615` 4) it settled at -115.584 deg, 99.5 deg away. Not explained; the 5 kHz predecessor stands out again.
+- For measurements: wait about 10 s after changing f or Fs, not just a few TC; changing `#s` alone is safe.
+- getResults updated about 10 times a second at 48 kHz x 10000 (289 results in 30 s with 208 ms blocks), but once per block at 94 kHz x 18800 (151-155 in 30 s). Not explained.
 - AI2-4 have no signal at f (5-70 uV), so their phase is noise.
 
 ## RPC performance
