@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-11-05 15:45:27" Creator="Patrick Irvin" Comments="" ID="b913f49981afdc82718ddda83921915e">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-11-05 16:21:32" Creator="Patrick Irvin" Comments="" ID="8fbfaff3f869ad4aed08d8056b6b3aa4">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.10.2.102</Library_Version>
+    <Library_Version>3.10.2.103</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -1105,7 +1105,7 @@ following improvemnts under #194 the remaining internal delay is under half a sa
         <Path>..\src\Instrument.Lockin\API\getOutputOffset.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>1870732EAF6018C194086C6BFF5A55FE</GUID>
+      <GUID>C799D9267BD5A91D1C03E49FF18BA718</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1406,7 +1406,7 @@ following improvemnts under #194 the remaining internal delay is under half a sa
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>0C48653FCE9CB37F6D10FFC2FFA59A5A</GUID>
+      <GUID>6DCD789F4C04B77F6909252A5A9F299D</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1497,7 +1497,7 @@ following improvemnts under #194 the remaining internal delay is under half a sa
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>0F785406258AC7751F202FE5603CB84A</GUID>
+      <GUID>CA3D7237724D5396C2B3FC3377B17EC4</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
