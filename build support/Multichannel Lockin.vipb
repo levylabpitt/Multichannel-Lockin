@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-10-30 13:38:58" Creator="Patrick Irvin" Comments="" ID="b2cf0ba5b7b21ee4e7c23d0fcbd00cba">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-11-05 13:06:48" Creator="Patrick Irvin" Comments="" ID="d5e27826420bce3a8032b7c96001f9be">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.9.0.100</Library_Version>
+    <Library_Version>3.10.0.101</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -38,11 +38,17 @@
       <Copyright/>
       <Packager/>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>### 3.9.0
-#186/#188: gain and offset tracking, plus new get/set InputOffset and OutputOffset commands
-#187: getInputDAQ and getOutputDAQ
-#189: measureInputOffset
-#190: setLinkFrequency and getLinkFrequency</Release_Notes>
+      <Release_Notes>### 3.10.0
+
+#191: Start no longer hangs on an empty or stale DAQ configuration; it reports an error, and AUTO configures the DAQ on Start
+#192: AI/AO graph legends and plot visibility follow the channel count; Mean matches AI keys only
+#193: Fs Output follows the fastest enabled REF (Auto) or a manual rate, with an Fs/#s floor; Auto/Manual selector in the UI
+#194: AO-to-AI loopback phase is deterministic: AO and REF phases reset together, and the converter delay table uses NI's published delays plus measured corrections for each Fs band (USB-4431, PXI-4461), with band edges matching NI's tables
+#195: output gain and offset arrays are sized to the AO channel count on every AO config change
+- Offsets: controls are moved to gain tab; users are warned that output values will change when measuring input offsets, indicator moved to main tab
+- Sampling rate and buffer size are now shown on main tab
+
+## Phase accuracy: following improvemnts under #194 the remaining internal delay is under half a sample (phase error at most 180°·f/Fs). Delays in external circuitry (amplifiers, filters, cables) are not compensated; zero the phase in your setup at your operating frequency and sample rate.</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -1098,7 +1104,7 @@
         <Path>..\src\Instrument.Lockin\API\getOutputOffset.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>1F38EFEBE8E1CB8CC7DB9542E2048147</GUID>
+      <GUID>01D81316336507B071320AEB4EC54875</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1399,7 +1405,7 @@
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E40028BE8448E51E9730956CBDE2DDDC</GUID>
+      <GUID>12019833B5F23725139D04C7CEC01839</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1490,7 +1496,7 @@
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>D600D55AD758036FA8835FCD977C4DF2</GUID>
+      <GUID>3608D9337853A71A0B40261AA987CFBF</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
