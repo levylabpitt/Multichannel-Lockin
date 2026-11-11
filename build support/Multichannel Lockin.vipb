@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-11-06 18:43:24" Creator="Patrick Irvin" Comments="" ID="204d06dead5ce98973d8d6e026e697c7">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-02-19 10:43:53" Modified_Date="2026-11-10 22:04:02" Creator="Patrick Irvin" Comments="" ID="9f4309df1fefa318dd5a983d42c2748a">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Lockin_Multichannel</Package_File_Name>
-    <Library_Version>3.10.3.104</Library_Version>
+    <Library_Version>3.10.4.105</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -38,9 +38,10 @@
       <Copyright/>
       <Packager/>
       <URL>https://github.com/levylabpitt/Multichannel-Lockin</URL>
-      <Release_Notes>### 3.10.3
+      <Release_Notes>### 3.10.4
 
-#196: measureInputOffset takes a "zero" option: both (default, as before), ac, dc or none. With none, the input offset is measured at the current AO settings instead of stepping the outputs to 0 V. setAO is ignored while the measurement runs.</Release_Notes>
+#197: add device type to getInputDAQ and getOutputDAQ
+#198: add new method getDevices</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -1096,7 +1097,21 @@
         <Path>..\src\Instrument.Lockin\API\getOutputOffset.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>3AF72218349B96BFC61AB159F5EDE1A1</GUID>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>getDevices.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>1</Row>
+          <Column>9</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>..\src\Instrument.Lockin\API\getDevices.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <GUID>726765A20C58667083E5F3CA0920C2AC</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1397,7 +1412,7 @@
         <Path>..\src\DAQmx\Tests</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>684BDB58065205E269D3337D4A4AE0CD</GUID>
+      <GUID>F6E1BE7FC5A011915D570DF5269E9912</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -1488,7 +1503,7 @@
         <Path>..\src\DAQmx\Tests\Test Waveforms.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>23A3130DFCEE3E5B158E7D2C0652A324</GUID>
+      <GUID>58B35E251BCF1F481082CFE677D29B08</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
