@@ -60,7 +60,11 @@ So today Transport loads the whole lock-in engine for its sweep typedefs alone.
 
 ## Phase 0: tests out of the classes, stale links
 
-Move each of these out of its class into `Tests\<Class>\` and add it to `Multichannel Lock-In (x64) - Unit Tests.lvproj`. Do it in the LabVIEW project (drag out of the class), not by editing the `.lvclass` XML. Members marked "private" call private methods of their class: either keep those methods private and make the test a friend of the class (community scope), or make the called methods community scope.
+Move each of these out of its class into a test library, `Tests\<Class>\Tests.<Class>.lvlib` (one per tested class, e.g. `Tests\DAQmx\Tests.DAQmx.lvlib`), and add the library to `Multichannel Lock-In (x64) - Unit Tests.lvproj`. Do it in the LabVIEW project (drag out of the class), not by editing the `.lvclass` XML.
+
+Tests that call private methods (the second column below) need access: list the test library as a friend of its class, and change only the listed methods from private to community scope. A friend can call community-scope members but never private ones, so the scope change is required either way; community scope stays hidden from other callers, so the public API does not grow. Tests with an empty second column need no friendship. If `Waveguide Model.vim` misbehaves as a community-scope malleable VI called by a friend, check that case on its own.
+
+A library rather than a test class: both namespace and both can be friends, but opening any member of a class loads every member, while opening a library member loads only the library file and that VI. With a library, opening one test does not pull in its siblings' dependencies (e.g. Caraya, which only `Test Decimator with State.vi` links).
 
 | Class member | Calls private |
 | --- | --- |
@@ -104,7 +108,7 @@ Move each of these out of its class into `Tests\<Class>\` and add it to `Multich
 | `Instrument.Lockin.lvclass:Benchmark Match Key Regex.vi` | `Match Key Regex.vi` |
 | `Instrument.Lockin.lvclass:Measure getStatus Latency.vi` | |
 
-Also check whether `Instrument.DAQ.lvclass:OLD_Generator.Generate Waveforms.vi` has any caller besides the three tests; if not, move it with them or delete it.
+Also check whether `Instrument.DAQ.lvclass:OLD_Generator.Generate Waveforms.vi` has any caller besides the three tests; if not, move it into the test library with them (rather than making it community scope) or delete it.
 
 Then fix the four stale links listed above, Save All, and confirm the VIP still builds.
 
@@ -220,7 +224,7 @@ Phases 1-2 give Transport the light load but do not shorten the build: VIPM stil
 
 | # | Check | Expected |
 | --- | --- | --- |
-| 1 | After Phase 0: build the VIP | builds; no Caraya in the package dependencies; `Tests\` VIs run from the Unit Tests project |
+| 1 | After Phase 0: build the VIP | builds; no Caraya or `Tests.*.lvlib` in the package dependencies (the friend entries point outside `src\` and must not be pulled in); `Tests\` VIs run from the Unit Tests project |
 | 2 | After Phase 0: search `src\` for `Get State-enum.ctl`, `TerminalConfiguration--ring.ctl`, `Instrument.DAQ.lvclass` + `Simulation Mode` | no hits |
 | 3 | After Phase 1: open `Lockin.Types.lvlib` alone | nothing else loads |
 | 4 | After Phase 2: open `Instrument.Lockin.API\...\Get SMO Port.vi` alone | only framework + `Instrument.Lockin.API` + `Lockin.Types` in memory; no `Instrument.DAQ`, DAQmx, `nidaqmx` |
