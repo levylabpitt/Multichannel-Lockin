@@ -26,5 +26,10 @@
 		<Item Name="REF.Channel--Cluster.ctl" Type="VI" URL="../REF/REF.Channel--Cluster.ctl"/>
 		<Item Name="REF.Channel--Cluster--Array.ctl" Type="VI" URL="../REF/REF.Channel--Cluster--Array.ctl"/>
 	</Item>
-	<Item Name="Sweep" Type="Folder"/>
+	<Item Name="Sweep" Type="Folder">
+		<Item Name="Sweep.Channel--Cluster--Array.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/Sweep.Channel--Cluster--Array.ctl"/>
+		<Item Name="Sweep.Channel--Cluster.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/Sweep.Channel--Cluster.ctl"/>
+		<Item Name="Sweep.Configuration--Cluster.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/Sweep.Configuration--Cluster.ctl"/>
+		<Item Name="Sweep.Pattern--Enum.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/Sweep.Pattern--Enum.ctl"/>
+	</Item>
 </Library>
