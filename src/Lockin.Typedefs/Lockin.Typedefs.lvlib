@@ -56,6 +56,7 @@
 	</Item>
 	<Item Name="other" Type="Folder">
 		<Item Name="Results--Cluster.ctl" Type="VI" URL="../other/Results--Cluster.ctl"/>
+		<Item Name="Simulation Mode--enum.ctl" Type="VI" URL="../../DAQmx/typedefs/Simulation Mode--enum.ctl"/>
 		<Item Name="State--enum.ctl" Type="VI" URL="../other/State--enum.ctl"/>
 		<Item Name="Status--enum.ctl" Type="VI" URL="../other/Status--enum.ctl"/>
 	</Item>
