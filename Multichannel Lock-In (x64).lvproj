@@ -33,15 +33,18 @@
 			<Item Name="Example_Lockin.vi" Type="VI" URL="../src/Examples/Example_Lockin.vi"/>
 			<Item Name="Lockin API State Machine.vi" Type="VI" URL="../src/Examples/Lockin API State Machine.vi"/>
 		</Item>
+		<Item Name="Tests" Type="Folder">
+			<Item Name="Tests.DSP.lvlib" Type="Library" URL="../Tests/DSP/Tests.DSP.lvlib"/>
+			<Item Name="Tests.Instrument.Lockin.lvlib" Type="Library" URL="../Tests/Instrument.Lockin/Tests.Instrument.Lockin.lvlib"/>
+		</Item>
 		<Item Name="Instrument.Lockin.lvlib" Type="Library" URL="../src/Instrument.Lockin.lvlib"/>
+		<Item Name="Lockin.Typedefs.lvlib" Type="Library" URL="../src/Lockin.Typedefs/Lockin.Typedefs.lvlib"/>
 		<Item Name="Lockin.Utilities.lvlib" Type="Library" URL="../src/Lockin.Utilities/Lockin.Utilities.lvlib"/>
 		<Item Name="Waveform.Attributes.lvlib" Type="Library" URL="../src/Waveform.Attributes/Waveform.Attributes.lvlib"/>
 		<Item Name="DAQ.lvclass" Type="LVClass" URL="../src/DAQ/DAQ.lvclass"/>
 		<Item Name="DAQmx.lvclass" Type="LVClass" URL="../src/DAQmx/DAQmx.lvclass"/>
 		<Item Name="Generator.lvclass" Type="LVClass" URL="../src/Generator/Generator.lvclass"/>
 		<Item Name="DSP.lvclass" Type="LVClass" URL="../src/DSP/DSP.lvclass"/>
-		<Item Name="Tests.DSP.lvlib" Type="Library" URL="../Tests/DSP/Tests.DSP.lvlib"/>
-		<Item Name="Tests.Instrument.Lockin.lvlib" Type="Library" URL="../Tests/Instrument.Lockin/Tests.Instrument.Lockin.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="NI_App_Builder_API.lvlib" Type="Library" URL="/&lt;vilib&gt;/AppBuilder/AB_API_Simple/NI_App_Builder_API.lvlib"/>
