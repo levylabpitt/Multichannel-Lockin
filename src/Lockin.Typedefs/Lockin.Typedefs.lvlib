@@ -4,7 +4,9 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">419463168</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
-	<Item Name="AO and AI" Type="Folder"/>
+	<Item Name="AO and AI" Type="Folder">
+		<Item Name="AO.Channel.Function--Enum.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/AO.Channel.Function--Enum.ctl"/>
+	</Item>
 	<Item Name="API" Type="Folder"/>
 	<Item Name="Configuration" Type="Folder"/>
 	<Item Name="DAQ" Type="Folder"/>
