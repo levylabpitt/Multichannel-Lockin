@@ -21,6 +21,10 @@
 	<Item Name="Configuration" Type="Folder"/>
 	<Item Name="DAQ" Type="Folder"/>
 	<Item Name="other" Type="Folder"/>
-	<Item Name="REF" Type="Folder"/>
+	<Item Name="REF" Type="Folder">
+		<Property Name="NI.SortType" Type="Int">3</Property>
+		<Item Name="REF.Channel--Cluster.ctl" Type="VI" URL="../REF/REF.Channel--Cluster.ctl"/>
+		<Item Name="REF.Channel--Cluster--Array.ctl" Type="VI" URL="../REF/REF.Channel--Cluster--Array.ctl"/>
+	</Item>
 	<Item Name="Sweep" Type="Folder"/>
 </Library>
