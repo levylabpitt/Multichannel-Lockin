@@ -5,16 +5,17 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="AO and AI" Type="Folder">
-		<Item Name="AI.Channel--Cluster--Array.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/AI.Channel--Cluster--Array.ctl"/>
-		<Item Name="AI.Channel--Cluster.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/AI.Channel--Cluster.ctl"/>
-		<Item Name="AO.Channel--Cluster--Array.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/AO.Channel--Cluster--Array.ctl"/>
-		<Item Name="AO.Channel--Cluster.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/AO.Channel--Cluster.ctl"/>
-		<Item Name="AO.Channel.Function--Enum.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/AO.Channel.Function--Enum.ctl"/>
-		<Item Name="Channel.Gain--Cluster--Array.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/Channel.Gain--Cluster--Array.ctl"/>
-		<Item Name="Channel.Gain--Cluster.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/Channel.Gain--Cluster.ctl"/>
-		<Item Name="Channel.GainsAndOffsets--Cluster.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/Channel.GainsAndOffsets--Cluster.ctl"/>
-		<Item Name="Channel.Offset--Cluster--Array.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/Channel.Offset--Cluster--Array.ctl"/>
-		<Item Name="Channel.Offset--Cluster.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/Channel.Offset--Cluster.ctl"/>
+		<Property Name="NI.SortType" Type="Int">3</Property>
+		<Item Name="AI.Channel--Cluster.ctl" Type="VI" URL="../AO and AI/AI.Channel--Cluster.ctl"/>
+		<Item Name="AI.Channel--Cluster--Array.ctl" Type="VI" URL="../AO and AI/AI.Channel--Cluster--Array.ctl"/>
+		<Item Name="AO.Channel--Cluster.ctl" Type="VI" URL="../AO and AI/AO.Channel--Cluster.ctl"/>
+		<Item Name="AO.Channel--Cluster--Array.ctl" Type="VI" URL="../AO and AI/AO.Channel--Cluster--Array.ctl"/>
+		<Item Name="AO.Channel.Function--Enum.ctl" Type="VI" URL="../AO and AI/AO.Channel.Function--Enum.ctl"/>
+		<Item Name="Channel.Gain--Cluster.ctl" Type="VI" URL="../AO and AI/Channel.Gain--Cluster.ctl"/>
+		<Item Name="Channel.Gain--Cluster--Array.ctl" Type="VI" URL="../AO and AI/Channel.Gain--Cluster--Array.ctl"/>
+		<Item Name="Channel.Offset--Cluster.ctl" Type="VI" URL="../AO and AI/Channel.Offset--Cluster.ctl"/>
+		<Item Name="Channel.Offset--Cluster--Array.ctl" Type="VI" URL="../AO and AI/Channel.Offset--Cluster--Array.ctl"/>
+		<Item Name="Channel.GainsAndOffsets--Cluster.ctl" Type="VI" URL="../AO and AI/Channel.GainsAndOffsets--Cluster.ctl"/>
 	</Item>
 	<Item Name="API" Type="Folder"/>
 	<Item Name="Configuration" Type="Folder"/>
