@@ -21,7 +21,16 @@
 		<Item Name="measureInputOffset Config--Cluster.ctl" Type="VI" URL="../API/Offset/measureInputOffset Config--Cluster.ctl"/>
 		<Item Name="measureInputOffset.zero--enum.ctl" Type="VI" URL="../API/Offset/measureInputOffset.zero--enum.ctl"/>
 	</Item>
-	<Item Name="Configuration" Type="Folder"/>
+	<Item Name="Configuration" Type="Folder">
+		<Item Name="Configuration--Cluster.ctl" Type="VI" URL="../Configuration/Configuration--Cluster.ctl"/>
+		<Item Name="Configuration.AmplitudeLimit--Cluster.ctl" Type="VI" URL="../Configuration/Configuration.AmplitudeLimit--Cluster.ctl"/>
+		<Item Name="Configuration.Channels--Cluster.ctl" Type="VI" URL="../Configuration/Configuration.Channels--Cluster.ctl"/>
+		<Item Name="Configuration.DAQ--Cluster.ctl" Type="VI" URL="../Configuration/Configuration.DAQ--Cluster.ctl"/>
+		<Item Name="Configuration.DCLimit--Cluster.ctl" Type="VI" URL="../Configuration/Configuration.DCLimit--Cluster.ctl"/>
+		<Item Name="Configuration.DutyCycle--Cluster.ctl" Type="VI" URL="../Configuration/Configuration.DutyCycle--Cluster.ctl"/>
+		<Item Name="Configuration.LinkFrequencies--Cluster.ctl" Type="VI" URL="../Configuration/Configuration.LinkFrequencies--Cluster.ctl"/>
+		<Item Name="Configuration.Prefilter--Cluster.ctl" Type="VI" URL="../Configuration/Configuration.Prefilter--Cluster.ctl"/>
+	</Item>
 	<Item Name="DAQ" Type="Folder">
 		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Item Name="DAQ.Configuration--Cluster.ctl" Type="VI" URL="../DAQ/DAQ.Configuration--Cluster.ctl"/>
