@@ -108,6 +108,47 @@ A library rather than a test class: both namespace and both can be friends, but 
 | `Instrument.Lockin.lvclass:Benchmark Match Key Regex.vi` | `Match Key Regex.vi` |
 | `Instrument.Lockin.lvclass:Measure getStatus Latency.vi` | |
 
+### Evaluation: keep, move or delete
+
+Most of these are sandboxes, not tests: run-until-stop loops with graphs, no Caraya and no pass/fail output. The verdicts below come from each VI's wiring, its callees, whether production uses the same methods, and git history (2026-11-12, not checked by opening each VI). Sandboxes that would need new accessors to work outside their class are deleted rather than given accessors.
+
+**Keep as tests in `Tests\` (convert to Caraya where needed):**
+
+| VI | Why |
+| --- | --- |
+| `DSP:Test Decimator with State` | Already a Caraya test. |
+| `Instrument.Lockin:Test Insert sweepTable` | Five pass/fail booleans for the #185 regression; turn them into asserts. Calls `Replace Sweep Waveforms.vi`, used by `Process.vi`. |
+| `Instrument.Lockin:Test Handle Command` | Sends every `Lockin.Commands` value through `Handle Command.vi` and collects errors; assert no error per command. |
+| `DSP:Test Mixer` | DSP lock-in engine on synthetic signals, no hardware; assert X/Y for a known frequency and phase. |
+| `DAQmx:Test Clip` | `DAQmx.Clip AO Waveforms.vi` (called by `DAQmx.Write`); assert a clipped sine stays within range. |
+| `Generator:Test Sweep Generate Waveforms` | Drives the top-level `Generate Waveforms.vi` (AO, REF and sweep states). Needs ~5 accessors, or stays in the class. |
+
+**Keep as development harnesses in `Tests\`:** `Instrument.Lockin.TestLauncher`, `Instrument.DAQ.TestLauncher` (calls private `Initialize Input Gain.vi`, which needs community scope), `Generator.TestLauncher` (public setters only), `Instrument UI.Lockin.TestLauncher` (last real change 2025; check it still runs), `DAQmx:Test Sync SMO` (drives the DAQmx SMO on hardware; ~2 accessors).
+
+**Move to `experiments\` if still wanted:** `DAQmx:Test Sync (DAQmx)` (raw DAQmx AI/AO alignment with `Fs to FilterDelay`; useful for the untested 4461 AO phase delay), `Instrument.DAQ:Test PLL`, `Test Lockin Engine`, `Test Pre-filter` (they exercise `PLL.vi`, `Lockin.Engine.vi` and `Prefilter.vi`, all called from `Process.vi`, but generate signals with `OLD_Generator.Generate Waveforms.vi`).
+
+**Delete:**
+
+| VI | Why |
+| --- | --- |
+| `Generator:Test Generate AO Waveforms`, `Test Generate REF Waveforms`, `Test Sweep Manager`, `Test Sweep Manager Subsystems` | Subsets of `Test Sweep Generate Waveforms`. |
+| `Generator:Create Test Queues`, `Read Test Queues`, `Test Queues` | Scaffolding from the 2026-06 SMO conversion. |
+| `DAQmx:Test Sync`, `Test Sync with Queues`, `Test Waveforms` | Exercise `Sync.Config.vi`, which production never calls; `Test Waveforms` is only their helper. |
+| `DAQmx:Test Noise Simulator` | One-off visual check from #182. |
+| `DSP:Test Post-filter` | Visual filter-response check. |
+| `Instrument UI.Lockin:sandbox`, `Test Circular Buffer`, `Test Set Legend` | Spinner experiments; a vi.lib demo; #192 debugging (the lesson is in CLAUDE.md). |
+| `Instrument.DAQ:Test DAQ` | Hard-coded `PXI1Slot3` devices, bundles private data; superseded by the TestLauncher. |
+| `Instrument.DAQ:Test Resampling` | 2023; `Test Decimator with State` covers decimation. |
+| `Instrument.DAQ:Test Serialize` | 2022 JSON vs flatten benchmark. |
+| `Instrument.DAQ:Test Multitone`, `Multitone Eval` | Timing comparison; `Multitone Eval` has no other caller. |
+| `Instrument.DAQ:Test Waveguide Model` | Its subject is unused (see below). |
+| `Instrument.Lockin:Benchmark Match Key Regex` | One-off benchmark. |
+| `Instrument.Lockin:Measure getStatus Latency` | Superseded by the latency profile in `Tests\stress\lockin_stress.py`. |
+
+**Left without callers after the deletes** (from a raw link-table scan; confirm in LabVIEW before deleting): `Instrument.DAQ:OLD_Generator.Generate Waveforms.vi` (if the three engine harnesses go too), `Instrument.DAQ:Slow Step.vi`, `DAQmx:Sync.Config.vi`, `DAQmx:Get Number of Channels.vi`, `DAQmx:Get Sampling.vi`, and `DAQmx:Device to String.vi` (used only by `Test Sync SMO`). `Instrument.DAQ:Simulate Waveguide.vi` already has no caller, so `Waveguide Model.vim` and the waveguide simulation look dead, not just their test.
+
+With these verdicts, only `Test Sweep Generate Waveforms` and `Test Sync SMO` among the moved VIs touch private data (about 7 accessors in total, instead of 26 bundle/unbundle nodes across 13 VIs).
+
 Also check whether `Instrument.DAQ.lvclass:OLD_Generator.Generate Waveforms.vi` has any caller besides the three tests; if not, move it into the test library with them (rather than making it community scope) or delete it.
 
 Then fix the four stale links listed above, Save All, and confirm the VIP still builds.
