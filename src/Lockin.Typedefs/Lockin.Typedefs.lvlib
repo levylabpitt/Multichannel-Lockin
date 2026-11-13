@@ -17,7 +17,10 @@
 		<Item Name="Channel.Offset--Cluster--Array.ctl" Type="VI" URL="../AO and AI/Channel.Offset--Cluster--Array.ctl"/>
 		<Item Name="Channel.GainsAndOffsets--Cluster.ctl" Type="VI" URL="../AO and AI/Channel.GainsAndOffsets--Cluster.ctl"/>
 	</Item>
-	<Item Name="API" Type="Folder"/>
+	<Item Name="API" Type="Folder">
+		<Item Name="measureInputOffset Config--Cluster.ctl" Type="VI" URL="../API/Offset/measureInputOffset Config--Cluster.ctl"/>
+		<Item Name="measureInputOffset.zero--enum.ctl" Type="VI" URL="../API/Offset/measureInputOffset.zero--enum.ctl"/>
+	</Item>
 	<Item Name="Configuration" Type="Folder"/>
 	<Item Name="DAQ" Type="Folder">
 		<Property Name="NI.SortType" Type="Int">3</Property>
@@ -40,7 +43,11 @@
 		<Item Name="DAQ.TerminalConfiguration--enum.ctl" Type="VI" URL="../DAQ/DAQ.TerminalConfiguration--enum.ctl"/>
 		<Item Name="DAQ.Type--enum.ctl" Type="VI" URL="../DAQ/DAQ.Type--enum.ctl"/>
 	</Item>
-	<Item Name="other" Type="Folder"/>
+	<Item Name="other" Type="Folder">
+		<Item Name="Results--Cluster.ctl" Type="VI" URL="../other/Results--Cluster.ctl"/>
+		<Item Name="State--enum.ctl" Type="VI" URL="../other/State--enum.ctl"/>
+		<Item Name="Status--enum.ctl" Type="VI" URL="../other/Status--enum.ctl"/>
+	</Item>
 	<Item Name="REF" Type="Folder">
 		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Item Name="REF.Channel--Cluster.ctl" Type="VI" URL="../REF/REF.Channel--Cluster.ctl"/>
