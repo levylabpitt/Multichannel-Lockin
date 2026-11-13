@@ -116,13 +116,12 @@ The second column of the table lists the private methods each VI calls, as found
 
 Most of these are sandboxes, not tests: run-until-stop loops with graphs, no Caraya and no pass/fail output. The verdicts below come from each VI's wiring, its callees, whether production uses the same methods, and git history (2026-11-12, not checked by opening each VI). Sandboxes that would need new accessors to work outside their class are deleted rather than given accessors.
 
-**Keep as tests (convert to Caraya where needed).** Black-box ones move to `Tests.<Class>.lvlib`; white-box ones stay in their class: `DAQmx:Test Clip` (private `DAQmx.Clip AO Waveforms.vi`) and `Generator:Test Sweep Generate Waveforms` (Generator private data). `DSP:Test Decimator with State` moves as the exception above. The rest (`Test Insert sweepTable`, `Test Handle Command`, `Test Mixer`) are black-box and move.
+**Keep as tests (convert to Caraya where needed).** Black-box ones move to `Tests.<Class>.lvlib`; white-box ones stay in their class: `DAQmx:Test Clip` (private `DAQmx.Clip AO Waveforms.vi`) and `Generator:Test Sweep Generate Waveforms` (Generator private data). `DSP:Test Decimator with State` moves as the exception above. The rest (`Test Insert sweepTable`, `Test Mixer`) are black-box and move.
 
 | VI | Why |
 | --- | --- |
 | `DSP:Test Decimator with State` | Already a Caraya test. |
 | `Instrument.Lockin:Test Insert sweepTable` | Five pass/fail booleans for the #185 regression; turn them into asserts. Calls `Replace Sweep Waveforms.vi`, used by `Process.vi`. |
-| `Instrument.Lockin:Test Handle Command` | Sends every `Lockin.Commands` value through `Handle Command.vi` and collects errors; assert no error per command. |
 | `DSP:Test Mixer` | DSP lock-in engine on synthetic signals, no hardware; assert X/Y for a known frequency and phase. |
 | `DAQmx:Test Clip` | `DAQmx.Clip AO Waveforms.vi` (called by `DAQmx.Write`); assert a clipped sine stays within range. |
 | `Generator:Test Sweep Generate Waveforms` | Drives the top-level `Generate Waveforms.vi` (AO, REF and sweep states). Needs ~5 accessors, or stays in the class. |
@@ -151,6 +150,7 @@ Most of these are sandboxes, not tests: run-until-stop loops with graphs, no Car
 | `Instrument.DAQ:Test Waveguide Model` | Its subject is unused (see below). |
 | `Instrument.Lockin:Benchmark Match Key Regex` | One-off benchmark. |
 | `Instrument.Lockin:Measure getStatus Latency` | Superseded by the latency profile in `Tests\stress\lockin_stress.py`. |
+| `Instrument.Lockin:Test Handle Command` | One-off: sends every `Lockin.Commands` value through `Handle Command.vi` with no data, so every get command returns an error; no clear purpose. |
 
 **Left without callers after the deletes** (from a raw link-table scan; confirm in LabVIEW before deleting): `Instrument.DAQ:OLD_Generator.Generate Waveforms.vi` (if the three engine harnesses go too), `Instrument.DAQ:Slow Step.vi`, `DAQmx:Sync.Config.vi`, `DAQmx:Get Number of Channels.vi`, `DAQmx:Get Sampling.vi`, and `DAQmx:Device to String.vi` (used only by `Test Sync SMO`). `Instrument.DAQ:Simulate Waveguide.vi` already has no caller, so `Waveguide Model.vim` and the waveguide simulation look dead, not just their test.
 
