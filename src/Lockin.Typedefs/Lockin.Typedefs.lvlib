@@ -5,6 +5,10 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="AO and AI" Type="Folder">
+		<Item Name="AI.Channel--Cluster--Array.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/AI.Channel--Cluster--Array.ctl"/>
+		<Item Name="AI.Channel--Cluster.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/AI.Channel--Cluster.ctl"/>
+		<Item Name="AO.Channel--Cluster--Array.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/AO.Channel--Cluster--Array.ctl"/>
+		<Item Name="AO.Channel--Cluster.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/AO.Channel--Cluster.ctl"/>
 		<Item Name="AO.Channel.Function--Enum.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/AO.Channel.Function--Enum.ctl"/>
 		<Item Name="Channel.Gain--Cluster--Array.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/Channel.Gain--Cluster--Array.ctl"/>
 		<Item Name="Channel.Gain--Cluster.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/Channel.Gain--Cluster.ctl"/>
