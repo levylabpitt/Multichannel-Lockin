@@ -60,11 +60,15 @@ So today Transport loads the whole lock-in engine for its sweep typedefs alone.
 
 ## Phase 0: tests out of the classes, stale links
 
-Move each of these out of its class into a test library, `Tests\<Class>\Tests.<Class>.lvlib` (one per tested class, e.g. `Tests\DAQmx\Tests.DAQmx.lvlib`), and add the library to `Multichannel Lock-In (x64) - Unit Tests.lvproj`. Do it in the LabVIEW project (drag out of the class), not by editing the `.lvclass` XML.
+Each VI below is deleted, moved to `experiments\`, moved to a test library, or left in its class; the verdicts are in "Evaluation" after the table. Do the moves in the LabVIEW project (drag out of the class), not by editing the `.lvclass` XML.
 
-Tests that call private methods (the second column below) need access: list the test library as a friend of its class, and change only the listed methods from private to community scope. A friend can call community-scope members but never private ones, so the scope change is required either way; community scope stays hidden from other callers, so the public API does not grow. Tests with an empty second column need no friendship. If `Waveguide Model.vim` misbehaves as a community-scope malleable VI called by a friend, check that case on its own.
+**The rule: black-box tests move, white-box tests stay.** A black-box test uses only public methods and can live anywhere. A white-box test calls private (or protected) methods or reads the class's private data; it stays in its class. LabVIEW has no "private except for tests" scope: a friend can call community-scope members only, and a child class reaches protected but never private. Moving a white-box test out would mean community scope plus a friend entry, or accessor VIs, for each private thing it touches, which is not worth it for a handful of small VIs. The TestLaunchers stay in their classes too (see below).
 
-A library rather than a test class: both namespace and both can be friends, but opening any member of a class loads every member, while opening a library member loads only the library file and that VI. With a library, opening one test does not pull in its siblings' dependencies (e.g. Caraya, which only `Test Decimator with State.vi` links).
+**Where moved tests go:** `Tests\<Class>\Tests.<Class>.lvlib`, one library per tested class (e.g. `Tests\DSP\Tests.DSP.lvlib`), added to `Multichannel Lock-In (x64) - Unit Tests.lvproj`. A library rather than a test class: the tests have no private data and no inheritance. Opening a library member does not load its siblings, so Ctrl+L does not show every broken test at once; check with a mass compile of `Tests\` instead (test plan row 1).
+
+**One exception:** `DSP:Test Decimator with State` is white-box (it calls the protected `Decimate DFD (Array).vi`) but is the only VI in `src\` that links Caraya, so leaving it in DSP keeps Caraya in the exe and the package. Move it to `Tests.DSP.lvlib`, change `Decimate DFD (Array).vi` from protected to community, and list `Tests.DSP.lvlib` as a friend of `DSP.lvclass`. DSP has no child classes (no other `.lvclass` references it), so protected bought nothing; its only other caller is `Decimate DFD (Fs).vi` inside DSP.
+
+The second column of the table lists the private methods each VI calls, as found before the evaluation.
 
 | Class member | Calls private |
 | --- | --- |
@@ -112,7 +116,7 @@ A library rather than a test class: both namespace and both can be friends, but 
 
 Most of these are sandboxes, not tests: run-until-stop loops with graphs, no Caraya and no pass/fail output. The verdicts below come from each VI's wiring, its callees, whether production uses the same methods, and git history (2026-11-12, not checked by opening each VI). Sandboxes that would need new accessors to work outside their class are deleted rather than given accessors.
 
-**Keep as tests in `Tests\` (convert to Caraya where needed):**
+**Keep as tests (convert to Caraya where needed).** Black-box ones move to `Tests.<Class>.lvlib`; white-box ones stay in their class: `DAQmx:Test Clip` (private `DAQmx.Clip AO Waveforms.vi`) and `Generator:Test Sweep Generate Waveforms` (Generator private data). `DSP:Test Decimator with State` moves as the exception above. The rest (`Test Insert sweepTable`, `Test Handle Command`, `Test Mixer`) are black-box and move.
 
 | VI | Why |
 | --- | --- |
@@ -126,7 +130,7 @@ Most of these are sandboxes, not tests: run-until-stop loops with graphs, no Car
 **Development harnesses** (run by hand to drive one SMO in isolation; no pass/fail):
 
 - The four TestLaunchers (`Instrument.Lockin`, `Instrument.DAQ`, `Generator`, `Instrument UI.Lockin`) **stay in their classes**, as in the other Instrument Framework repos (Krohn-Hite, Oxford 1820, ...). Each is one VI, so consistency wins over keeping it out of the build. Drop them from the move list above. `Instrument UI.Lockin.TestLauncher` last changed in 2025; check it still runs.
-- `DAQmx:Test Sync SMO` (drives the DAQmx SMO on hardware; ~2 accessors) moves to `Tests.DAQmx.lvlib`, in a "Harnesses" virtual folder so a future run-all-tests VI can skip it (it waits for Stop).
+- `DAQmx:Test Sync SMO` (drives the DAQmx SMO on hardware) is white-box (private `Device to String.vi` and DAQmx private data), so it stays in `DAQmx.lvclass`.
 
 **Move to `experiments\` if still wanted:** `DAQmx:Test Sync (DAQmx)` (raw DAQmx AI/AO alignment with `Fs to FilterDelay`; useful for the untested 4461 AO phase delay), `Instrument.DAQ:Test PLL`, `Test Lockin Engine`, `Test Pre-filter` (they exercise `PLL.vi`, `Lockin.Engine.vi` and `Prefilter.vi`, all called from `Process.vi`, but generate signals with `OLD_Generator.Generate Waveforms.vi`).
 
@@ -150,13 +154,13 @@ Most of these are sandboxes, not tests: run-until-stop loops with graphs, no Car
 
 **Left without callers after the deletes** (from a raw link-table scan; confirm in LabVIEW before deleting): `Instrument.DAQ:OLD_Generator.Generate Waveforms.vi` (if the three engine harnesses go too), `Instrument.DAQ:Slow Step.vi`, `DAQmx:Sync.Config.vi`, `DAQmx:Get Number of Channels.vi`, `DAQmx:Get Sampling.vi`, and `DAQmx:Device to String.vi` (used only by `Test Sync SMO`). `Instrument.DAQ:Simulate Waveguide.vi` already has no caller, so `Waveguide Model.vim` and the waveguide simulation look dead, not just their test.
 
-With these verdicts, only `Test Sweep Generate Waveforms` and `Test Sync SMO` among the moved VIs touch private data (about 7 accessors in total, instead of 26 bundle/unbundle nodes across 13 VIs).
+With these verdicts, no moved VI touches private data and no accessors are needed. The only scope change is `DSP:Decimate DFD (Array).vi` (protected to community), and the only friend entry is `Tests.DSP.lvlib` on `DSP.lvclass`. In-class tests that stay: the four TestLaunchers, `DAQmx:Test Clip`, `DAQmx:Test Sync SMO` and `Generator:Test Sweep Generate Waveforms`.
 
-Also check whether `Instrument.DAQ.lvclass:OLD_Generator.Generate Waveforms.vi` has any caller besides the three tests; if not, move it into the test library with them (rather than making it community scope) or delete it.
+Also check whether `Instrument.DAQ.lvclass:OLD_Generator.Generate Waveforms.vi` has any caller besides the three engine harnesses; if not, it goes wherever they go (`experiments\` or deleted).
 
 Then fix the four stale links listed above, Save All, and confirm the VIP still builds.
 
-Expected result: about 41 fewer files in `src\` (~8% of the VIP's file count, ~4 MB), Caraya out of the exe and the package's dependency tree, and smaller member lists to sort through in Phases 1 and 2.
+Expected result: 32 of the 39 listed VIs leave `src\` (the four TestLaunchers and three white-box tests stay), plus any helpers left without callers, about 7% of the VIP's file count; Caraya out of the exe and the package's dependency tree, and smaller member lists to sort through in Phases 1 and 2.
 
 ## Phase 1: `Lockin.Types.lvlib`
 
@@ -268,7 +272,7 @@ Phases 1-2 give Transport the light load but do not shorten the build: VIPM stil
 
 | # | Check | Expected |
 | --- | --- | --- |
-| 1 | After Phase 0: build the VIP | builds; no Caraya or `Tests.*.lvlib` in the package dependencies (the friend entries point outside `src\` and must not be pulled in); `Tests\` VIs run from the Unit Tests project |
+| 1 | After Phase 0: build the VIP | builds; no Caraya or `Tests.DSP.lvlib` in the package dependencies (the friend entry points outside `src\` and must not be pulled in); mass compile of `Tests\` reports no broken VIs; `Tests\` VIs run from the Unit Tests project |
 | 2 | After Phase 0: search `src\` for `Get State-enum.ctl`, `TerminalConfiguration--ring.ctl`, `Instrument.DAQ.lvclass` + `Simulation Mode` | no hits |
 | 3 | After Phase 1: open `Lockin.Types.lvlib` alone | nothing else loads |
 | 4 | After Phase 2: open `Instrument.Lockin.API\...\Get SMO Port.vi` alone | only framework + `Instrument.Lockin.API` + `Lockin.Types` in memory; no `Instrument.DAQ`, DAQmx, `nidaqmx` |
