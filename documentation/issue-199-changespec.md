@@ -116,14 +116,13 @@ The second column of the table lists the private methods each VI calls, as found
 
 Most of these are sandboxes, not tests: run-until-stop loops with graphs, no Caraya and no pass/fail output. The verdicts below come from each VI's wiring, its callees, whether production uses the same methods, and git history (2026-11-12, not checked by opening each VI). Sandboxes that would need new accessors to work outside their class are deleted rather than given accessors.
 
-**Keep as tests (convert to Caraya where needed).** Black-box ones move to `Tests.<Class>.lvlib`; white-box ones stay in their class: `DAQmx:Test Clip` (private `DAQmx.Clip AO Waveforms.vi`) and `Generator:Test Sweep Generate Waveforms` (Generator private data). `DSP:Test Decimator with State` moves as the exception above. The rest (`Test Insert sweepTable`, `Test Mixer`) are black-box and move.
+**Keep as tests (convert to Caraya where needed).** Black-box ones move to `Tests.<Class>.lvlib`; the white-box one, `Generator:Test Sweep Generate Waveforms` (Generator private data), stays in its class. `DSP:Test Decimator with State` moves as the exception above. The rest (`Test Insert sweepTable`, `Test Mixer`) are black-box and move.
 
 | VI | Why |
 | --- | --- |
 | `DSP:Test Decimator with State` | Already a Caraya test. |
 | `Instrument.Lockin:Test Insert sweepTable` | Five pass/fail booleans for the #185 regression; turn them into asserts. Calls `Replace Sweep Waveforms.vi`, used by `Process.vi`. |
 | `DSP:Test Mixer` | DSP lock-in engine on synthetic signals, no hardware; assert X/Y for a known frequency and phase. |
-| `DAQmx:Test Clip` | `DAQmx.Clip AO Waveforms.vi` (called by `DAQmx.Write`); assert a clipped sine stays within range. |
 | `Generator:Test Sweep Generate Waveforms` | Drives the top-level `Generate Waveforms.vi` (AO, REF and sweep states). Needs ~5 accessors, or stays in the class. |
 
 **Development harnesses** (run by hand to drive one SMO in isolation; no pass/fail):
@@ -150,17 +149,18 @@ Most of these are sandboxes, not tests: run-until-stop loops with graphs, no Car
 | `Instrument.DAQ:Test Waveguide Model` | Its subject is unused (see below). |
 | `Instrument.Lockin:Benchmark Match Key Regex` | One-off benchmark. |
 | `Instrument.Lockin:Measure getStatus Latency` | Superseded by the latency profile in `Tests\stress\lockin_stress.py`. |
+| `DAQmx:Test Clip` | `DAQmx.Clip AO Waveforms.vi` needs a valid DAQmx task, so the test cannot run as is; not worth reworking. |
 | `Instrument.Lockin:Test Handle Command` | One-off: sends every `Lockin.Commands` value through `Handle Command.vi` with no data, so every get command returns an error; no clear purpose. |
 
 **Left without callers after the deletes** (from a raw link-table scan; confirm in LabVIEW before deleting): `Instrument.DAQ:OLD_Generator.Generate Waveforms.vi` (if the three engine harnesses go too), `Instrument.DAQ:Slow Step.vi`, `DAQmx:Sync.Config.vi`, `DAQmx:Get Number of Channels.vi`, `DAQmx:Get Sampling.vi`, and `DAQmx:Device to String.vi` (used only by `Test Sync SMO`). `Instrument.DAQ:Simulate Waveguide.vi` already has no caller, so `Waveguide Model.vim` and the waveguide simulation look dead, not just their test.
 
-With these verdicts, no moved VI touches private data and no accessors are needed. The only scope change is `DSP:Decimate DFD (Array).vi` (protected to community), and the only friend entry is `Tests.DSP.lvlib` on `DSP.lvclass`. In-class tests that stay: the four TestLaunchers, `DAQmx:Test Clip`, `DAQmx:Test Sync SMO` and `Generator:Test Sweep Generate Waveforms`.
+With these verdicts, no moved VI touches private data and no accessors are needed. The only scope change is `DSP:Decimate DFD (Array).vi` (protected to community), and the only friend entry is `Tests.DSP.lvlib` on `DSP.lvclass`. In-class tests that stay: the four TestLaunchers, `DAQmx:Test Sync SMO` and `Generator:Test Sweep Generate Waveforms`.
 
 Also check whether `Instrument.DAQ.lvclass:OLD_Generator.Generate Waveforms.vi` has any caller besides the three engine harnesses; if not, it goes wherever they go (`experiments\` or deleted).
 
 Then fix the four stale links listed above, Save All, and confirm the VIP still builds.
 
-Expected result: 32 of the 39 listed VIs leave `src\` (the four TestLaunchers and three white-box tests stay), plus any helpers left without callers, about 7% of the VIP's file count; Caraya out of the exe and the package's dependency tree, and smaller member lists to sort through in Phases 1 and 2.
+Expected result: 33 of the 39 listed VIs leave `src\` (the four TestLaunchers, `Test Sync SMO` and `Test Sweep Generate Waveforms` stay), plus any helpers left without callers, about 7% of the VIP's file count; Caraya out of the exe and the package's dependency tree, and smaller member lists to sort through in Phases 1 and 2.
 
 ## Phase 1: `Lockin.Types.lvlib`
 
