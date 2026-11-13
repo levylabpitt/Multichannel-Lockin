@@ -58,9 +58,9 @@ They are probably nested inside a typedef or constant that still carries the old
 
 So today Transport loads the whole lock-in engine for its sweep typedefs alone.
 
-## Phase 0: tests out of the classes, stale links
+## Phase 0: tests out of the classes
 
-Each VI below is deleted, moved to `experiments\`, moved to a test library, or left in its class; the verdicts are in "Evaluation" after the table. Do the moves in the LabVIEW project (drag out of the class), not by editing the `.lvclass` XML.
+Each VI below was deleted, moved to a test library, or left in its class; see "Outcome" after the table. Do the moves in the LabVIEW project (drag out of the class), not by editing the `.lvclass` XML.
 
 **The rule: black-box tests move, white-box tests stay.** A black-box test uses only public methods and can live anywhere. A white-box test calls private (or protected) methods or reads the class's private data; it stays in its class. LabVIEW has no "private except for tests" scope: a friend can call community-scope members only, and a child class reaches protected but never private. Moving a white-box test out would mean community scope plus a friend entry, or accessor VIs, for each private thing it touches, which is not worth it for a handful of small VIs. The TestLaunchers stay in their classes too (see below).
 
@@ -112,57 +112,59 @@ The second column of the table lists the private methods each VI calls, as found
 | `Instrument.Lockin.lvclass:Benchmark Match Key Regex.vi` | `Match Key Regex.vi` |
 | `Instrument.Lockin.lvclass:Measure getStatus Latency.vi` | |
 
-### Evaluation: keep, move or delete
+### Outcome (2026-11-13)
 
-Most of these are sandboxes, not tests: run-until-stop loops with graphs, no Caraya and no pass/fail output. The verdicts below come from each VI's wiring, its callees, whether production uses the same methods, and git history (2026-11-12, not checked by opening each VI). Sandboxes that would need new accessors to work outside their class are deleted rather than given accessors.
+Most of these were sandboxes, not tests: run-until-stop loops with graphs, no Caraya and no pass/fail output. A first evaluation (2026-11-12, from wiring, callees and git history) proposed verdicts; the table below is what was actually done. Of the 39 VIs, 4 moved to `Tests\`, 21 were deleted and 14 stayed in their classes.
 
-**Keep as tests (convert to Caraya where needed).** Black-box ones move to `Tests.<Class>.lvlib`; the white-box one, `Generator:Test Sweep Generate Waveforms` (Generator private data), stays in its class. `DSP:Test Decimator with State` moves as the exception above. The rest (`Test Insert sweepTable`, `Test Mixer`) are black-box and move.
+**Moved to `Tests\` (black-box, plus one exception):**
+
+| VI | Now in | Note |
+| --- | --- | --- |
+| `DSP:Test Decimator with State` | `Tests.DSP.lvlib` | Caraya test; the exception above (`Decimate DFD (Array).vi` now community, `Tests.DSP.lvlib` friend of `DSP.lvclass`). |
+| `DSP:Test Mixer` | `Tests.DSP.lvlib` | DSP lock-in engine on synthetic signals; candidate for asserts on X/Y at a known frequency and phase. |
+| `DSP:Test Post-filter` | `Tests.DSP.lvlib` | Visual filter-response check, kept. |
+| `Instrument.Lockin:Test Insert sweepTable` | `Tests.Instrument.Lockin.lvlib` | Five pass/fail booleans for the #185 regression; candidate for Caraya asserts. |
+
+**Stayed in their classes:**
 
 | VI | Why |
 | --- | --- |
-| `DSP:Test Decimator with State` | Already a Caraya test. |
-| `Instrument.Lockin:Test Insert sweepTable` | Five pass/fail booleans for the #185 regression; turn them into asserts. Calls `Replace Sweep Waveforms.vi`, used by `Process.vi`. |
-| `DSP:Test Mixer` | DSP lock-in engine on synthetic signals, no hardware; assert X/Y for a known frequency and phase. |
-| `Generator:Test Sweep Generate Waveforms` | Drives the top-level `Generate Waveforms.vi` (AO, REF and sweep states). Needs ~5 accessors, or stays in the class. |
+| The four TestLaunchers (`Instrument.Lockin`, `Instrument.DAQ`, `Generator`, `Instrument UI.Lockin`) | Consistent with the other Instrument Framework repos (Krohn-Hite, Oxford 1820, ...); one VI each. `Instrument UI.Lockin.TestLauncher` last changed in 2025; check it still runs. |
+| `Generator:Create Test Queues`, `Read Test Queues` | Called by `Generator.TestLauncher`. |
+| `Generator:Test Sweep Generate Waveforms` | White-box (Generator private data); drives the top-level `Generate Waveforms.vi`. |
+| `DAQmx:Test Sync SMO`, `Test Sync (DAQmx)`, `Test Waveforms` | Hardware harnesses, now in `src\DAQmx\develop\`. `Test Sync SMO` is white-box (`Device to String.vi`, private data); `Test Sync (DAQmx)` checks raw AI/AO alignment with `Fs to FilterDelay` (useful for the untested 4461 AO phase delay). |
+| `Instrument.DAQ:Test PLL`, `Test Lockin Engine`, `Test Pre-filter`, `Slow Step` | Exercise `PLL.vi`, `Lockin.Engine.vi` and `Prefilter.vi` (all called from `Process.vi`). Their signal source `OLD_Generator.Generate Waveforms.vi` was renamed `support\Generator\Generate Waveforms.vi`. |
 
-**Development harnesses** (run by hand to drive one SMO in isolation; no pass/fail):
-
-- The four TestLaunchers (`Instrument.Lockin`, `Instrument.DAQ`, `Generator`, `Instrument UI.Lockin`) **stay in their classes**, as in the other Instrument Framework repos (Krohn-Hite, Oxford 1820, ...). Each is one VI, so consistency wins over keeping it out of the build. Drop them from the move list above. `Instrument UI.Lockin.TestLauncher` last changed in 2025; check it still runs.
-- `DAQmx:Test Sync SMO` (drives the DAQmx SMO on hardware) is white-box (private `Device to String.vi` and DAQmx private data), so it stays in `DAQmx.lvclass`.
-
-**Move to `experiments\` if still wanted:** `DAQmx:Test Sync (DAQmx)` (raw DAQmx AI/AO alignment with `Fs to FilterDelay`; useful for the untested 4461 AO phase delay), `Instrument.DAQ:Test PLL`, `Test Lockin Engine`, `Test Pre-filter` (they exercise `PLL.vi`, `Lockin.Engine.vi` and `Prefilter.vi`, all called from `Process.vi`, but generate signals with `OLD_Generator.Generate Waveforms.vi`).
-
-**Delete:**
+**Deleted:**
 
 | VI | Why |
 | --- | --- |
 | `Generator:Test Generate AO Waveforms`, `Test Generate REF Waveforms`, `Test Sweep Manager`, `Test Sweep Manager Subsystems` | Subsets of `Test Sweep Generate Waveforms`. |
-| `Generator:Create Test Queues`, `Read Test Queues`, `Test Queues` | Scaffolding from the 2026-06 SMO conversion. |
-| `DAQmx:Test Sync`, `Test Sync with Queues`, `Test Waveforms` | Exercise `Sync.Config.vi`, which production never calls; `Test Waveforms` is only their helper. |
+| `Generator:Test Queues` | Scaffolding from the 2026-06 SMO conversion. |
+| `DAQmx:Test Sync`, `Test Sync with Queues` | Exercise `Sync.Config.vi`, which production never calls. |
 | `DAQmx:Test Noise Simulator` | One-off visual check from #182. |
-| `DSP:Test Post-filter` | Visual filter-response check. |
+| `DAQmx:Test Clip` | `DAQmx.Clip AO Waveforms.vi` needs a valid DAQmx task, so the test cannot run as is. |
 | `Instrument UI.Lockin:sandbox`, `Test Circular Buffer`, `Test Set Legend` | Spinner experiments; a vi.lib demo; #192 debugging (the lesson is in CLAUDE.md). |
-| `Instrument.DAQ:Test DAQ` | Hard-coded `PXI1Slot3` devices, bundles private data; superseded by the TestLauncher. |
-| `Instrument.DAQ:Test Resampling` | 2023; `Test Decimator with State` covers decimation. |
+| `Instrument.DAQ:Test DAQ` | Hard-coded `PXI1Slot3` devices; superseded by the TestLauncher. |
+| `Instrument.DAQ:Test Resampling` | `Test Decimator with State` covers decimation. |
 | `Instrument.DAQ:Test Serialize` | 2022 JSON vs flatten benchmark. |
-| `Instrument.DAQ:Test Multitone`, `Multitone Eval` | Timing comparison; `Multitone Eval` has no other caller. |
+| `Instrument.DAQ:Test Multitone`, `Multitone Eval` | Timing comparison. |
 | `Instrument.DAQ:Test Waveguide Model` | Its subject is unused (see below). |
 | `Instrument.Lockin:Benchmark Match Key Regex` | One-off benchmark. |
 | `Instrument.Lockin:Measure getStatus Latency` | Superseded by the latency profile in `Tests\stress\lockin_stress.py`. |
-| `DAQmx:Test Clip` | `DAQmx.Clip AO Waveforms.vi` needs a valid DAQmx task, so the test cannot run as is; not worth reworking. |
-| `Instrument.Lockin:Test Handle Command` | One-off: sends every `Lockin.Commands` value through `Handle Command.vi` with no data, so every get command returns an error; no clear purpose. |
+| `Instrument.Lockin:Test Handle Command` | Sends every command with no data, so every get command errors; no clear purpose. |
 
-**Left without callers after the deletes** (from a raw link-table scan; confirm in LabVIEW before deleting): `Instrument.DAQ:OLD_Generator.Generate Waveforms.vi` (if the three engine harnesses go too), `Instrument.DAQ:Slow Step.vi`, `DAQmx:Sync.Config.vi`, `DAQmx:Get Number of Channels.vi`, `DAQmx:Get Sampling.vi`, and `DAQmx:Device to String.vi` (used only by `Test Sync SMO`). `Instrument.DAQ:Simulate Waveguide.vi` already has no caller, so `Waveguide Model.vim` and the waveguide simulation look dead, not just their test.
+### Remaining Phase 0 work
 
-With these verdicts, no moved VI touches private data and no accessors are needed. The only scope change is `DSP:Decimate DFD (Array).vi` (protected to community), and the only friend entry is `Tests.DSP.lvlib` on `DSP.lvclass`. In-class tests that stay: the four TestLaunchers, `DAQmx:Test Sync SMO` and `Generator:Test Sweep Generate Waveforms`.
+1. **Build the VIP** to confirm Phase 0 (test plan row 1).
+2. **Remove the empty test libraries** `Tests\DAQmx\Tests.DAQmx.lvlib` and `Tests\Generator\Tests.Generator.lvlib` (no members after the DAQmx and Generator tests stayed in their classes) and their entries in the Unit Tests project.
+3. **Code without callers** (raw link-table scan; confirm in LabVIEW): `DAQmx:Sync.Config.vi`; `Instrument.DAQ:Simulate Waveguide.vi` and `Waveguide Model.vim` (the waveguide simulation looks dead); `DAQmx:Read Waveforms.vi` (added during Phase 0, no caller yet).
 
-Also check whether `Instrument.DAQ.lvclass:OLD_Generator.Generate Waveforms.vi` has any caller besides the three engine harnesses; if not, it goes wherever they go (`experiments\` or deleted).
-
-Then fix the four stale links listed above, Save All, and confirm the VIP still builds.
-
-Expected result: 33 of the 39 listed VIs leave `src\` (the four TestLaunchers, `Test Sync SMO` and `Test Sweep Generate Waveforms` stay), plus any helpers left without callers, about 7% of the VIP's file count; Caraya out of the exe and the package's dependency tree, and smaller member lists to sort through in Phases 1 and 2.
+Expected result: 25 of the 39 VIs leave `src\` (about 5% of the VIP's file count), Caraya leaves the exe and the package's dependency tree (confirmed: nothing in `src\` links Caraya), and the member lists for Phases 1 and 2 are shorter.
 
 ## Phase 1: `Lockin.Types.lvlib`
+
+**Step 1: fix the four stale links** listed under "What exists today", before moving any typedef, so the moves start from clean link tables. Three of the four point at typedefs this phase moves (`Simulation Mode`, `State`, `TerminalConfiguration`). As of 2026-11-13 all four are still present: `Instrument.DAQ:Simulation Mode--enum.ctl` (112 files; the real typedef is `src\DAQmx\typedefs\Simulation Mode--enum.ctl`), `Get State-enum.ctl` (AO API VIs such as `getAOconfig.vi`, `setAO.vi`), `TerminalConfiguration--ring.ctl` (`DAQ.autoConfigureDAQ.vi`, `DAQ.setAI.vi`, ...), and `setSweepTable.vim` linking `Instrument.Lockin:setSweepTable.vi`. Relink each carrier, Save All, and build the VIP.
 
 A new library with no classes in it, at `src\Lockin.Types\Lockin.Types.lvlib`, **not** inside `Instrument.Lockin.lvlib`. It holds only typedefs. A typedef in a class-free library links only itself and whatever it nests, so using one does not load any class.
 
