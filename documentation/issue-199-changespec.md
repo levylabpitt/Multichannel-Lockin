@@ -275,7 +275,7 @@ Phases 1-2 give Transport the light load but do not shorten the build: VIPM stil
 | # | Check | Expected |
 | --- | --- | --- |
 | 1 | After Phase 0: build the VIP | builds; no Caraya or `Tests.DSP.lvlib` in the package dependencies (the friend entry points outside `src\` and must not be pulled in); mass compile of `Tests\` reports no broken VIs; `Tests\` VIs run from the Unit Tests project |
-| 2 | After Phase 0: search `src\` for `Get State-enum.ctl`, `TerminalConfiguration--ring.ctl`, `Instrument.DAQ.lvclass` + `Simulation Mode` | no hits |
+| 2 | After Phase 1 step 1: search `src\` for `Get State-enum.ctl`, `TerminalConfiguration--ring.ctl`, `Instrument.DAQ.lvclass` + `Simulation Mode` | no hits |
 | 3 | After Phase 1: open `Lockin.Types.lvlib` alone | nothing else loads |
 | 4 | After Phase 2: open `Instrument.Lockin.API\...\Get SMO Port.vi` alone | only framework + `Instrument.Lockin.API` + `Lockin.Types` in memory; no `Instrument.DAQ`, DAQmx, `nidaqmx` |
 | 5 | Run the exe; JSON-RPC `HELP`, `getAll`, `setAO`, `setSweepTable`, `startSweep`, `getSweepData` | same replies as 3.10.4.104 (labels unchanged) |
