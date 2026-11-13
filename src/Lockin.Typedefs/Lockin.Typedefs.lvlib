@@ -6,6 +6,10 @@
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="AO and AI" Type="Folder">
 		<Item Name="AO.Channel.Function--Enum.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/AO.Channel.Function--Enum.ctl"/>
+		<Item Name="Channel.Gain--Cluster--Array.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/Channel.Gain--Cluster--Array.ctl"/>
+		<Item Name="Channel.Gain--Cluster.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/Channel.Gain--Cluster.ctl"/>
+		<Item Name="Channel.Offset--Cluster--Array.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/Channel.Offset--Cluster--Array.ctl"/>
+		<Item Name="Channel.Offset--Cluster.ctl" Type="VI" URL="../../Instrument.DAQ/Typedefs/Channel.Offset--Cluster.ctl"/>
 	</Item>
 	<Item Name="API" Type="Folder"/>
 	<Item Name="Configuration" Type="Folder"/>
