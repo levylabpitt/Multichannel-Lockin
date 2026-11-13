@@ -181,8 +181,8 @@ A new library with no classes in it, at `src\Lockin.Typedefs\Lockin.Typedefs.lvl
 Order:
 
 1. AO and AI (done 2026-11-13, commits `915f40f5` to `b96673fe`, plus the `DAQ.GetPublicEvents.vi` connector-pane fix).
-2. DAQ, REF, Sweep and other from `Instrument.DAQ`, plus `Simulation Mode--enum.ctl` from DAQmx, in small groups, leaves first.
-3. Configuration, once everything it nests is in `Lockin.Typedefs`.
+2. REF, Sweep, DAQ and other from `Instrument.DAQ` (done 2026-11-13, commits `f13fb31c` to `c1f6a838`). Two were renamed on the way: `DeviceInfo--Cluster.ctl` to `DAQ\DAQ.DeviceInfo--Cluster.ctl`, and `DAQ.measureInputOffset Config--Cluster.ctl` / `DAQ.measureInputOffset.zero--enum.ctl` to `API\Offset\measureInputOffset Config--Cluster.ctl` / `measureInputOffset.zero--enum.ctl`. `Simulation Mode--enum.ctl` is still a `DAQmx` member (not moved yet).
+3. Configuration (done 2026-11-13, commit `3ce9011a`). Neither `Process.vi` was re-saved in that commit, and as of `68b0202c` both still link only the old `Instrument.DAQ.lvclass:Configuration*` names (8 in `Instrument.Lockin:Process.vi`, 11 in `Instrument.DAQ:Process.vi`), unlike after the AO/AI move. Still in `Instrument.DAQ` and not in the tables below: `Offset Measurement--Cluster.ctl`, `Sweep.Table--Cluster--Array.ctl`, `Waveguide Model--Cluster.ctl` (dead code, see Phase 0), and the PrivateEvents/PublicEvents typedefs (class-internal, stay).
 4. The `Instrument.Lockin` typedefs (Commands, Logging).
 5. Save All, then check the link tables for leftover `Instrument.DAQ.lvclass:` / `Instrument.Lockin.lvclass:` / `DAQmx.lvclass:` names of moved typedefs. Keep the file names and the labels inside each typedef, which keeps the JSON keys. Organize the library by domain, not by provenance: once moved, these typedefs have no owner class, and the tables below plus git history record where each came from. The `Instrument.DAQ` virtual folders are already domain groups and can be reused as is; put the `Instrument.Lockin` typedefs into a Commands and a Logging folder by topic, and `Simulation Mode--enum.ctl` into DAQ. Mirror each virtual folder with a disk folder under `src\Lockin.Typedefs\`.
 
