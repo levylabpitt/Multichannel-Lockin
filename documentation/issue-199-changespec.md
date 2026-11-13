@@ -123,7 +123,10 @@ Most of these are sandboxes, not tests: run-until-stop loops with graphs, no Car
 | `DAQmx:Test Clip` | `DAQmx.Clip AO Waveforms.vi` (called by `DAQmx.Write`); assert a clipped sine stays within range. |
 | `Generator:Test Sweep Generate Waveforms` | Drives the top-level `Generate Waveforms.vi` (AO, REF and sweep states). Needs ~5 accessors, or stays in the class. |
 
-**Keep as development harnesses in `Tests\`:** `Instrument.Lockin.TestLauncher`, `Instrument.DAQ.TestLauncher` (calls private `Initialize Input Gain.vi`, which needs community scope), `Generator.TestLauncher` (public setters only), `Instrument UI.Lockin.TestLauncher` (last real change 2025; check it still runs), `DAQmx:Test Sync SMO` (drives the DAQmx SMO on hardware; ~2 accessors).
+**Development harnesses** (run by hand to drive one SMO in isolation; no pass/fail):
+
+- The four TestLaunchers (`Instrument.Lockin`, `Instrument.DAQ`, `Generator`, `Instrument UI.Lockin`) **stay in their classes**, as in the other Instrument Framework repos (Krohn-Hite, Oxford 1820, ...). Each is one VI, so consistency wins over keeping it out of the build. Drop them from the move list above. `Instrument UI.Lockin.TestLauncher` last changed in 2025; check it still runs.
+- `DAQmx:Test Sync SMO` (drives the DAQmx SMO on hardware; ~2 accessors) moves to `Tests.DAQmx.lvlib`, in a "Harnesses" virtual folder so a future run-all-tests VI can skip it (it waits for Stop).
 
 **Move to `experiments\` if still wanted:** `DAQmx:Test Sync (DAQmx)` (raw DAQmx AI/AO alignment with `Fs to FilterDelay`; useful for the untested 4461 AO phase delay), `Instrument.DAQ:Test PLL`, `Test Lockin Engine`, `Test Pre-filter` (they exercise `PLL.vi`, `Lockin.Engine.vi` and `Prefilter.vi`, all called from `Process.vi`, but generate signals with `OLD_Generator.Generate Waveforms.vi`).
 
