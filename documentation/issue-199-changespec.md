@@ -170,7 +170,15 @@ Expected result: 25 of the 39 VIs leave `src\` (about 5% of the VIP's file count
 
 A new library with no classes in it, at `src\Lockin.Types\Lockin.Types.lvlib`, **not** inside `Instrument.Lockin.lvlib`. It holds only typedefs. A typedef in a class-free library links only itself and whatever it nests, so using one does not load any class.
 
-Move the whole set in one LabVIEW session so no class is left linking a half-moved set. Keep the file names and the labels inside each typedef, which keeps the JSON keys. Organize the library by domain, not by provenance: once moved, these typedefs have no owner class, and the tables below plus git history record where each came from. The `Instrument.DAQ` virtual folders are already domain groups and can be reused as is; put the `Instrument.Lockin` typedefs into a Commands and a Logging folder by topic, and `Simulation Mode--enum.ctl` into DAQ. Mirror each virtual folder with a disk folder under `src\Lockin.Types\`.
+Move the whole set in one LabVIEW session so no class is left linking a half-moved set, and save only at the end (Save All).
+
+**Move bottom-up: leaves first, containers last.** A typedef moved into `Lockin.Types` while it still nests a typedef owned by a class creates a cycle: `Lockin.Types` links the class, and the class's private data links `Lockin.Types`. On 2026-11-13 moving the Configuration typedefs first (they nest `DAQ.*`, `REF.*` and `Sweep.*` typedefs still in `Instrument.DAQ`, whose private data nests `Configuration--Cluster`) left LabVIEW at 100% of one core for 20+ minutes with no disk I/O, and it had to be killed. Moving AO and AI first worked: they nest nothing owned by a class. Order:
+
+1. AO and AI (done and saved 2026-11-13).
+2. DAQ, REF, Sweep and other from `Instrument.DAQ`, plus `Simulation Mode--enum.ctl` from DAQmx, in one drag (each drag triggers its own relink pass over the same callers).
+3. Configuration, once everything it nests is in `Lockin.Types`.
+4. The `Instrument.Lockin` typedefs (Commands, Logging).
+5. Save All, then check the link tables for leftover `Instrument.DAQ.lvclass:` / `Instrument.Lockin.lvclass:` / `DAQmx.lvclass:` names of moved typedefs. Keep the file names and the labels inside each typedef, which keeps the JSON keys. Organize the library by domain, not by provenance: once moved, these typedefs have no owner class, and the tables below plus git history record where each came from. The `Instrument.DAQ` virtual folders are already domain groups and can be reused as is; put the `Instrument.Lockin` typedefs into a Commands and a Logging folder by topic, and `Simulation Mode--enum.ctl` into DAQ. Mirror each virtual folder with a disk folder under `src\Lockin.Types\`.
 
 ### From `Instrument.DAQ.lvclass` (47)
 
