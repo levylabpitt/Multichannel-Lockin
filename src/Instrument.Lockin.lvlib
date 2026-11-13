@@ -9,6 +9,5 @@
 	<Item Name="Instrument UI.Lockin.lvclass" Type="LVClass" URL="../Instrument UI.Lockin/Instrument UI.Lockin.lvclass"/>
 	<Item Name="Instrument.DAQ.lvclass" Type="LVClass" URL="../Instrument.DAQ/Instrument.DAQ.lvclass"/>
 	<Item Name="Instrument.Lockin.lvclass" Type="LVClass" URL="../Instrument.Lockin/Instrument.Lockin.lvclass"/>
-	<Item Name="Lockin.Utilities.lvlib" Type="Library" URL="../Lockin.Utilities/Lockin.Utilities.lvlib"/>
 	<Item Name="Lockin.vi" Type="VI" URL="../Lockin.vi"/>
 </Library>
