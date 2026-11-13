@@ -170,11 +170,11 @@ Expected result: 25 of the 39 VIs leave `src\` (about 5% of the VIP's file count
 
 A new library with no classes in it, at `src\Lockin.Types\Lockin.Types.lvlib`, **not** inside `Instrument.Lockin.lvlib`. It holds only typedefs. A typedef in a class-free library links only itself and whatever it nests, so using one does not load any class.
 
-Move the whole set in one LabVIEW session so no class is left linking a half-moved set. Keep the file names and the labels inside each typedef, which keeps the JSON keys. Suggested folders inside the library mirror the current ones.
+Move the whole set in one LabVIEW session so no class is left linking a half-moved set. Keep the file names and the labels inside each typedef, which keeps the JSON keys. Organize the library by domain, not by provenance: once moved, these typedefs have no owner class, and the tables below plus git history record where each came from. The `Instrument.DAQ` virtual folders are already domain groups and can be reused as is; put the `Instrument.Lockin` typedefs into a Commands and a Logging folder by topic, and `Simulation Mode--enum.ctl` into DAQ. Mirror each virtual folder with a disk folder under `src\Lockin.Types\`.
 
 ### From `Instrument.DAQ.lvclass` (47)
 
-| Folder | Typedefs |
+| Current folder (`Instrument.DAQ.lvclass` > Typedefs) | Typedefs |
 | --- | --- |
 | AO and AI (10) | `AI.Channel--Cluster.ctl`, `AI.Channel--Cluster--Array.ctl`, `AO.Channel--Cluster.ctl`, `AO.Channel--Cluster--Array.ctl`, `AO.Channel.Function--Enum.ctl`, `Channel.Gain--Cluster.ctl`, `Channel.Gain--Cluster--Array.ctl`, `Channel.GainsAndOffsets--Cluster.ctl`, `Channel.Offset--Cluster.ctl`, `Channel.Offset--Cluster--Array.ctl` |
 | Configuration (8) | `Configuration--Cluster.ctl`, `Configuration.AmplitudeLimit--Cluster.ctl`, `Configuration.Channels--Cluster.ctl`, `Configuration.DAQ--Cluster.ctl`, `Configuration.DCLimit--Cluster.ctl`, `Configuration.DutyCycle--Cluster.ctl`, `Configuration.LinkFrequencies--Cluster.ctl`, `Configuration.Prefilter--Cluster.ctl` |
@@ -185,7 +185,7 @@ Move the whole set in one LabVIEW session so no class is left linking a half-mov
 
 ### From `Instrument.Lockin.lvclass` (22)
 
-| Folder | Typedefs |
+| Group (not a current folder) | Typedefs |
 | --- | --- |
 | API commands (17) | `Lockin.Commands--Enum.ctl`, `Lockin.Commands.Local--Enum.ctl`, `Lockin.setAO_Amp--cluster.ctl`, `Lockin.setAO_DC--cluster.ctl`, `Lockin.setAO_f--cluster.ctl`, `Lockin.setAO_phi--cluster.ctl`, `Lockin.setAO_function--cluster.ctl`, `Lockin.setREF_f--cluster.ctl`, `Lockin.setREF_phi--cluster.ctl`, `Lockin.setREF_TC--cluster.ctl`, `Lockin.setREF_RollOff--cluster.ctl`, `Lockin.setSamplingMode--cluster.ctl`, `Lockin.setSamplingFsMode--cluster.ctl`, `Lockin.setSweep_Time--cluster.ctl`, `Lockin.setSweep_Table--cluster.ctl`, `Lockin.setState--cluster.ctl`, `Lockin.getAllData--Cluster.ctl` |
 | other (5) | `Results Type--Enum.ctl`, `Offset Mode--Enum.ctl`, `REF Parameter--Enum.ctl`, `Lockin.setLogMode--cluster.ctl`, `Lockin.Logging Mode--Enum.ctl` |
