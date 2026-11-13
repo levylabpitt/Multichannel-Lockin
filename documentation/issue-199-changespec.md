@@ -1,4 +1,4 @@
-# Change spec: tests out of classes, `Lockin.Types.lvlib`, `Instrument.Lockin.API` (#199)
+# Change spec: tests out of classes, `Lockin.Typedefs.lvlib`, `Instrument.Lockin.API` (#199)
 
 Goal: a client (Transport, a script, another instrument) can call the lock-in API without loading the acquisition engine, and the VIP and exe stop carrying test code. Single inheritance only, LabVIEW 2019, no change to the Instrument Framework or to other instruments (Krohn-Hite, Oxford, ...).
 
@@ -162,23 +162,29 @@ Most of these were sandboxes, not tests: run-until-stop loops with graphs, no Ca
 
 Expected result: 25 of the 39 VIs leave `src\` (about 5% of the VIP's file count), Caraya leaves the exe and the package's dependency tree (confirmed: nothing in `src\` links Caraya), and the member lists for Phases 1 and 2 are shorter.
 
-## Phase 1: `Lockin.Types.lvlib`
+## Phase 1: `Lockin.Typedefs.lvlib`
 
 **Step 1: fix the four stale links** listed under "What exists today", before moving any typedef, so the moves start from clean link tables. Three of the four point at typedefs this phase moves (`Simulation Mode`, `State`, `TerminalConfiguration`). As of 2026-11-13 all four are still present: `Instrument.DAQ:Simulation Mode--enum.ctl` (112 files; the real typedef is `src\DAQmx\typedefs\Simulation Mode--enum.ctl`), `Get State-enum.ctl` (AO API VIs such as `getAOconfig.vi`, `setAO.vi`), `TerminalConfiguration--ring.ctl` (`DAQ.autoConfigureDAQ.vi`, `DAQ.setAI.vi`, ...), and `setSweepTable.vim` linking `Instrument.Lockin:setSweepTable.vi`. Relink each carrier, Save All, and build the VIP.
 
 **Step 1b (done 2026-11-13): `Lockin.Utilities.lvlib` out of `Instrument.Lockin.lvlib`.** The rule for this repo: `Instrument.Lockin.lvlib` holds only the server pieces that load together anyway (`Instrument.Lockin`, `Instrument.DAQ`, `Instrument UI.Lockin`); anything that must load on its own lives outside it, because loading any member of a library loads the library and every class nested in it. `Lockin.Utilities.lvlib` holds `Application Version.vi` (shared by both `Process.vi`s and the AppLauncher, and rewritten by `Pre-Build Custom Action.vi` with the package version) and `Lockin.Local Client.vim` (server `Process.vi`s only). `Instrument.Lockin:Get SMO Version.vi` calls `Application Version.vi` and moves to `Instrument.Lockin.API` in Phase 2, so inside `Instrument.Lockin.lvlib` the utilities would have pulled the whole server into the API. The files did not move; only the qualified names changed (`Instrument.Lockin.lvlib:Lockin.Utilities.lvlib:...` to `Lockin.Utilities.lvlib:...`), and the callers were relinked and saved.
 
-A new library with no classes in it, at `src\Lockin.Types\Lockin.Types.lvlib`, **not** inside `Instrument.Lockin.lvlib`. It holds only typedefs. A typedef in a class-free library links only itself and whatever it nests, so using one does not load any class.
+A new library with no classes in it, at `src\Lockin.Typedefs\Lockin.Typedefs.lvlib`, **not** inside `Instrument.Lockin.lvlib`. It holds only typedefs. A typedef in a class-free library links only itself and whatever it nests, so using one does not load any class.
 
-Move the whole set in one LabVIEW session so no class is left linking a half-moved set, and save only at the end (Save All).
+**Move in small groups, Save All and commit after each.** Moving all ten AO and AI typedefs in one drag churned for 35+ minutes without writing a file and had to be killed. The same ten in four groups (`AO.Channel.Function--Enum`; the four `Channel.Gain`/`Channel.Offset` typedefs; `Channel.GainsAndOffsets`; the four `AO.Channel`/`AI.Channel` typedefs) took about a minute each. A group that has not written any file after about 5 minutes is the one to look at, and the commit before it is a clean place to reset to. Moving into the library and moving on disk are separate steps: dragging into the library changes only the qualified name, and the `.ctl` stays in its old folder until it is moved on disk (done for AO and AI in a separate commit).
 
-**Move bottom-up: leaves first, containers last.** A typedef moved into `Lockin.Types` while it still nests a typedef owned by a class creates a cycle: `Lockin.Types` links the class, and the class's private data links `Lockin.Types`. On 2026-11-13 moving the Configuration typedefs first (they nest `DAQ.*`, `REF.*` and `Sweep.*` typedefs still in `Instrument.DAQ`, whose private data nests `Configuration--Cluster`) left LabVIEW at 100% of one core for 20+ minutes with no disk I/O, and it had to be killed. Moving AO and AI first worked: they nest nothing owned by a class. Order:
+**Move bottom-up: leaves first, containers last.** A typedef moved into `Lockin.Typedefs` while it still nests a typedef owned by a class creates a cycle: `Lockin.Typedefs` links the class, and the class's private data links `Lockin.Typedefs`. On 2026-11-13 moving the Configuration typedefs first (they nest `DAQ.*`, `REF.*` and `Sweep.*` typedefs still in `Instrument.DAQ`, whose private data nests `Configuration--Cluster`) left LabVIEW at 100% of one core for 20+ minutes with no disk I/O, and it had to be killed.
 
-1. AO and AI (done and saved 2026-11-13).
-2. DAQ, REF, Sweep and other from `Instrument.DAQ`, plus `Simulation Mode--enum.ctl` from DAQmx, in one drag (each drag triggers its own relink pass over the same callers).
-3. Configuration, once everything it nests is in `Lockin.Types`.
+**Rewire the event registrations after each group.** Event structures and Register For Events nodes cache the event data types and do not pick up a typedef's new qualified name. After the AO and AI move, the `DAQ Public Events.getAIChannels` case in `Instrument.Lockin:Process.vi` still produced `Channels.AI` with the old `Instrument.DAQ.lvclass:AI.Channel--Cluster--Array.ctl` identity. A wire typed with the old identity and one typed with the new are not compatible even though they display the same, so `Lockin.Local Client.vim` broke with "the malleable VI does not support the wired data types" (the same call worked in a blank VI; clearing the compiled object cache, restarting and dropping a fresh `.vim` did not help, and inserting `To Variant` hid it but changes what the `setData` path flattens). The fix was to rewire every "get public events" terminal (`DAQ.GetPublicEvents.vi`, `Lockin.getDAQPublicEvents.vi`, the registrations in `Process.vi`), which also re-saved `PublicEvents--Cluster.ctl`. The DAQ, Sweep and Configuration groups travel through the same DAQ Public/Private Events, so expect the same after each.
+
+**Leftover old names in unsaved files.** After the AO and AI move, about 300 files (mostly `Instrument.DAQ` and `Instrument.Lockin` members that never touch an AO/AI typedef directly) still contained the old `Instrument.DAQ.lvclass:` names inside embedded copies of the class private-data types, because LabVIEW did not mark them dirty. They load without errors. Flush them with a mass compile of `src\` before the VIP build (stale links have caused VIPM error 43 before).
+
+Order:
+
+1. AO and AI (done 2026-11-13, commits `915f40f5` to `b96673fe`, plus the event-registration rewiring).
+2. DAQ, REF, Sweep and other from `Instrument.DAQ`, plus `Simulation Mode--enum.ctl` from DAQmx, in small groups, leaves first.
+3. Configuration, once everything it nests is in `Lockin.Typedefs`.
 4. The `Instrument.Lockin` typedefs (Commands, Logging).
-5. Save All, then check the link tables for leftover `Instrument.DAQ.lvclass:` / `Instrument.Lockin.lvclass:` / `DAQmx.lvclass:` names of moved typedefs. Keep the file names and the labels inside each typedef, which keeps the JSON keys. Organize the library by domain, not by provenance: once moved, these typedefs have no owner class, and the tables below plus git history record where each came from. The `Instrument.DAQ` virtual folders are already domain groups and can be reused as is; put the `Instrument.Lockin` typedefs into a Commands and a Logging folder by topic, and `Simulation Mode--enum.ctl` into DAQ. Mirror each virtual folder with a disk folder under `src\Lockin.Types\`.
+5. Save All, then check the link tables for leftover `Instrument.DAQ.lvclass:` / `Instrument.Lockin.lvclass:` / `DAQmx.lvclass:` names of moved typedefs. Keep the file names and the labels inside each typedef, which keeps the JSON keys. Organize the library by domain, not by provenance: once moved, these typedefs have no owner class, and the tables below plus git history record where each came from. The `Instrument.DAQ` virtual folders are already domain groups and can be reused as is; put the `Instrument.Lockin` typedefs into a Commands and a Logging folder by topic, and `Simulation Mode--enum.ctl` into DAQ. Mirror each virtual folder with a disk folder under `src\Lockin.Typedefs\`.
 
 ### From `Instrument.DAQ.lvclass` (47)
 
@@ -210,13 +216,13 @@ Move the whole set in one LabVIEW session so no class is left linking a half-mov
 
 ### Checks
 
-- None of the moved typedefs embeds a typedef from `Generator`, `DSP` or `DAQmx` (from the link tables). Confirm after the move: open `Lockin.Types.lvlib` alone in an empty project; nothing else should load.
+- None of the moved typedefs embeds a typedef from `Generator`, `DSP` or `DAQmx` (from the link tables). Confirm after the move: open `Lockin.Typedefs.lvlib` alone in an empty project; nothing else should load.
 - Do not merge duplicate copies in this phase. Merging two copies can change labels, which changes JSON keys with no error (`JSON to LVtype.vim` ignores unknown keys). If merging is wanted later, diff the labels first and treat it as a wire-protocol change.
 - `Instrument.LockinAPI` (framework) has overlapping `LockinAPI.*` typedefs (`LockinAPI.AO_f--cluster`, `LockinAPI.SweepTable--cluster`, ...). Leave them alone here.
 
 ### Result
 
-`Instrument.DAQ`, `Instrument.Lockin` and `Instrument UI.Lockin` all use `Lockin.Types` and no longer load each other's typedefs. The `Instrument.Lockin` -> `Instrument.DAQ` typedef cycle is gone. What remains between them are real calls (the SMO calls `DAQ.set*` VIs; the UI calls server helpers), handled in Phase 2.
+`Instrument.DAQ`, `Instrument.Lockin` and `Instrument UI.Lockin` all use `Lockin.Typedefs` and no longer load each other's typedefs. The `Instrument.Lockin` -> `Instrument.DAQ` typedef cycle is gone. What remains between them are real calls (the SMO calls `DAQ.set*` VIs; the UI calls server helpers), handled in Phase 2.
 
 ## Phase 2: `Instrument.Lockin.API`
 
@@ -240,7 +246,7 @@ Instrument                    (framework, unchanged)
 | Identity overrides (9, dynamic dispatch) | `Get SMO Name.vi`, `Get SMO Port.vi`, `Get SMO Vendor.vi`, `Get SMO Version.vi`, `Get SMO Serial Number.vi`, `Get SMO Public API.vi`, `Get SMO HELP.vi`, `Get SMO HELP getAll.vi`, `Get SMO Database Paths.vi` |
 | `API\` (65 VIs + `setSweepTable.vim`) | all of `API`, `API\AO`, `API\DAQ`, `API\Data`, `API\Gain`, `API\Macros`, `API\REF`, `API\State`, `API\Sweep`, including `Parse Results Array (all).vi` and the other `Parse Results*` VIs used by the UI, `Instrument.DAQ` and Transport |
 
-Check before moving: `Get SMO HELP.vi` and `Get SMO HELP getAll.vi` build example request/response clusters; after Phase 1 those use `Lockin.Types` and need nothing else. `Get SMO Public API.vi` may list API VIs by path; check it after the move.
+Check before moving: `Get SMO HELP.vi` and `Get SMO HELP getAll.vi` build example request/response clusters; after Phase 1 those use `Lockin.Typedefs` and need nothing else. `Get SMO Public API.vi` may list API VIs by path; check it after the move.
 
 ### Stays in `Instrument.Lockin` (the SMO)
 
@@ -258,13 +264,13 @@ Check before moving: `Get SMO HELP.vi` and `Get SMO HELP getAll.vi` build exampl
 2. Change `Instrument.Lockin`'s parent to `Instrument.Lockin.API` (class Properties > Inheritance).
 3. Move the identity overrides: in the project, drag each `Get SMO *.vi` from `Instrument.Lockin` to `Instrument.Lockin.API`, then change its dynamic-dispatch input and output from `Instrument.Lockin` to `Instrument.Lockin.API` (replace the class control on the front panel; keep the connector pane). `Instrument.Lockin` inherits them.
 4. Move the `API\` VIs the same way and retype their class terminals. The API VIs do not unbundle `Instrument.Lockin` private data (they only call `Client.vi`), so the retype is the whole edit; any VI that turns out broken after the retype is one that touches private data and should stay in the server class. Callers that wire an `Instrument.Lockin` object still work (a child wire fits a parent terminal).
-5. Save All. Confirm: open `Get SMO Port.vi` alone; only the framework, `Instrument.Lockin.API` and `Lockin.Types` should be in memory.
+5. Save All. Confirm: open `Get SMO Port.vi` alone; only the framework, `Instrument.Lockin.API` and `Lockin.Typedefs` should be in memory.
 
 The other way round (rename `Instrument.Lockin` to `Instrument.Lockin.API` and pull the server out into a new child) has fewer terminals to retype (~45 vs ~75), but every server VI unbundles the private data, which would have to be rebuilt in the new class. Not recommended.
 
 ## Transport migration
 
-Labels do not change, so the JSON wire protocol is unchanged. Qualified names do change (`Instrument.DAQ.lvclass:Sweep.Channel--Cluster.ctl` -> `Lockin.Types.lvlib:Sweep.Channel--Cluster.ctl`, `Instrument.Lockin.lvclass:startSweep.vi` -> `Instrument.Lockin.API.lvclass:startSweep.vi`), so Transport has to be relinked once and released together with this (same rule as #164).
+Labels do not change, so the JSON wire protocol is unchanged. Qualified names do change (`Instrument.DAQ.lvclass:Sweep.Channel--Cluster.ctl` -> `Lockin.Typedefs.lvlib:Sweep.Channel--Cluster.ctl`, `Instrument.Lockin.lvclass:startSweep.vi` -> `Instrument.Lockin.API.lvclass:startSweep.vi`), so Transport has to be relinked once and released together with this (same rule as #164).
 
 Transport loads the installed copy in `<user.lib>\LevyLab\Lockin-Multichannel`, not this checkout, so moving things here does not relink Transport by itself. Suggested approach:
 
@@ -274,11 +280,11 @@ Transport loads the installed copy in `<user.lib>\LevyLab\Lockin-Multichannel`, 
 
 Fallback if the junction is not wanted: install the new package, open Transport and replace the disconnected typedefs by hand. Only the ~10 carrier typedefs listed above and the handful of VIs that use lock-in VIs directly (`Open Me.vi`, `Tree.vi`, `Lockin_sweep.vi`, `Lockin_time.vi`, `Results (Dictionary) to X and Y Arrays.vi`) need it; the other ~60 files follow their typedefs.
 
-After this, Transport's sweep typedefs load `Lockin.Types` only, and its `Lockin_*` experiments load `Instrument.Lockin.API` only. `Open Me.vi` still launches the server through `Instrument.Lockin.AppLauncher.vi`, which loads the engine, as intended.
+After this, Transport's sweep typedefs load `Lockin.Typedefs` only, and its `Lockin_*` experiments load `Instrument.Lockin.API` only. `Open Me.vi` still launches the server through `Instrument.Lockin.AppLauncher.vi`, which loads the engine, as intended.
 
 ## Phase 3 (optional): package split
 
-Phases 1-2 give Transport the light load but do not shorten the build: VIPM still packages every file under `src\` (~3 s per file). To shorten releases, build two packages: an API package (`Lockin.Types` + `Instrument.Lockin.API`) that Transport depends on, and the server (engine, UI, SMO). The server may not need to be a VIP at all if only the exe uses it. A release would then rebuild only the package that changed. This needs a second `.vipb` and a `build.cfg` per product (`build.bat "<repo root>" release <name>`), and `TAG_PREFIX` so the two products' tags do not collide. Decide after Phase 2.
+Phases 1-2 give Transport the light load but do not shorten the build: VIPM still packages every file under `src\` (~3 s per file). To shorten releases, build two packages: an API package (`Lockin.Typedefs` + `Instrument.Lockin.API`) that Transport depends on, and the server (engine, UI, SMO). The server may not need to be a VIP at all if only the exe uses it. A release would then rebuild only the package that changed. This needs a second `.vipb` and a `build.cfg` per product (`build.bat "<repo root>" release <name>`), and `TAG_PREFIX` so the two products' tags do not collide. Decide after Phase 2.
 
 ## Test plan
 
@@ -286,8 +292,8 @@ Phases 1-2 give Transport the light load but do not shorten the build: VIPM stil
 | --- | --- | --- |
 | 1 | After Phase 0: build the VIP | builds; no Caraya or `Tests.DSP.lvlib` in the package dependencies (the friend entry points outside `src\` and must not be pulled in); mass compile of `Tests\` reports no broken VIs; `Tests\` VIs run from the Unit Tests project |
 | 2 | After Phase 1 step 1: search `src\` for `Get State-enum.ctl`, `TerminalConfiguration--ring.ctl`, `Instrument.DAQ.lvclass` + `Simulation Mode` | no hits |
-| 3 | After Phase 1: open `Lockin.Types.lvlib` alone | nothing else loads |
-| 4 | After Phase 2: open `Instrument.Lockin.API\...\Get SMO Port.vi` alone | only framework + `Instrument.Lockin.API` + `Lockin.Types` in memory; no `Instrument.DAQ`, DAQmx, `nidaqmx` |
+| 3 | After Phase 1: open `Lockin.Typedefs.lvlib` alone | nothing else loads |
+| 4 | After Phase 2: open `Instrument.Lockin.API\...\Get SMO Port.vi` alone | only framework + `Instrument.Lockin.API` + `Lockin.Typedefs` in memory; no `Instrument.DAQ`, DAQmx, `nidaqmx` |
 | 5 | Run the exe; JSON-RPC `HELP`, `getAll`, `setAO`, `setSweepTable`, `startSweep`, `getSweepData` | same replies as 3.10.4.104 (labels unchanged) |
 | 6 | Unit Tests project: run all | same results as before |
 | 7 | Transport: open project after relink | no missing or broken VIs; `Lockin_sweep` and `Lockin_time` run against the exe |
