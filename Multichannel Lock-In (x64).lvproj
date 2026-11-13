@@ -2136,6 +2136,17 @@
 			<Item Name="IB_SRdB_Write.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Builds/Installer/SRdB/IB_SRdB_Write.vi"/>
 			<Item Name="IB_SRdB_Unlock.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Builds/Installer/SRdB/IB_SRdB_Unlock.vi"/>
 			<Item Name="logosbrw.dll" Type="Document" URL="/&lt;resource&gt;/logosbrw.dll"/>
+			<Item Name="DAQ.Sampling--Cluster.ctl" Type="Document"/>
+			<Item Name="DAQ.Sampling.Sampling--Cluster.ctl" Type="Document"/>
+			<Item Name="DeviceInfo--Cluster.ctl" Type="Document"/>
+			<Item Name="DAQ.Config.AO.Range--enum.ctl" Type="Document"/>
+			<Item Name="DAQ.TerminalConfiguration--enum.ctl" Type="Document"/>
+			<Item Name="DAQ.Config.AI.Range--enum.ctl" Type="Document"/>
+			<Item Name="DAQ.Config.AI.Coupling--enum.ctl" Type="Document"/>
+			<Item Name="DAQ.Configuration--Cluster.ctl" Type="Document"/>
+			<Item Name="DAQ.Configuration--Cluster--Array.ctl" Type="Document"/>
+			<Item Name="DAQ.Calibration--Cluster.ctl" Type="Document"/>
+			<Item Name="DAQ.Calibration--Cluster--Array.ctl" Type="Document"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lock-In (x64) Application" Type="EXE">

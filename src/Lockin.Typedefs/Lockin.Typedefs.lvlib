@@ -19,7 +19,27 @@
 	</Item>
 	<Item Name="API" Type="Folder"/>
 	<Item Name="Configuration" Type="Folder"/>
-	<Item Name="DAQ" Type="Folder"/>
+	<Item Name="DAQ" Type="Folder">
+		<Property Name="NI.SortType" Type="Int">3</Property>
+		<Item Name="DAQ.Configuration--Cluster.ctl" Type="VI" URL="../DAQ/DAQ.Configuration--Cluster.ctl"/>
+		<Item Name="DAQ.Configuration--Cluster--Array.ctl" Type="VI" URL="../DAQ/DAQ.Configuration--Cluster--Array.ctl"/>
+		<Item Name="DAQ.Calibration--Cluster--Array.ctl" Type="VI" URL="../DAQ/DAQ.Calibration--Cluster--Array.ctl"/>
+		<Item Name="DAQ.Calibration--Cluster.ctl" Type="VI" URL="../DAQ/DAQ.Calibration--Cluster.ctl"/>
+		<Item Name="DAQ.Config.AI--Cluster.ctl" Type="VI" URL="../DAQ/DAQ.Config.AI--Cluster.ctl"/>
+		<Item Name="DAQ.Config.AI--Cluster--Array.ctl" Type="VI" URL="../DAQ/DAQ.Config.AI--Cluster--Array.ctl"/>
+		<Item Name="DAQ.Config.AI.Coupling--enum.ctl" Type="VI" URL="../DAQ/DAQ.Config.AI.Coupling--enum.ctl"/>
+		<Item Name="DAQ.Config.AI.Range--enum.ctl" Type="VI" URL="../DAQ/DAQ.Config.AI.Range--enum.ctl"/>
+		<Item Name="DAQ.Config.AO--Cluster.ctl" Type="VI" URL="../DAQ/DAQ.Config.AO--Cluster.ctl"/>
+		<Item Name="DAQ.Config.AO--Cluster--Array.ctl" Type="VI" URL="../DAQ/DAQ.Config.AO--Cluster--Array.ctl"/>
+		<Item Name="DAQ.Config.AO.Range--enum.ctl" Type="VI" URL="../DAQ/DAQ.Config.AO.Range--enum.ctl"/>
+		<Item Name="DAQ.DeviceInfo--Cluster.ctl" Type="VI" URL="../DAQ/DAQ.DeviceInfo--Cluster.ctl"/>
+		<Item Name="DAQ.Sampling--Cluster.ctl" Type="VI" URL="../DAQ/DAQ.Sampling--Cluster.ctl"/>
+		<Item Name="DAQ.Sampling.Fs Mode--enum.ctl" Type="VI" URL="../DAQ/DAQ.Sampling.Fs Mode--enum.ctl"/>
+		<Item Name="DAQ.Sampling.Sampling--Cluster.ctl" Type="VI" URL="../DAQ/DAQ.Sampling.Sampling--Cluster.ctl"/>
+		<Item Name="DAQ.Sampling.Sample Mode--Ring.ctl" Type="VI" URL="../DAQ/DAQ.Sampling.Sample Mode--Ring.ctl"/>
+		<Item Name="DAQ.TerminalConfiguration--enum.ctl" Type="VI" URL="../DAQ/DAQ.TerminalConfiguration--enum.ctl"/>
+		<Item Name="DAQ.Type--enum.ctl" Type="VI" URL="../DAQ/DAQ.Type--enum.ctl"/>
+	</Item>
 	<Item Name="other" Type="Folder"/>
 	<Item Name="REF" Type="Folder">
 		<Property Name="NI.SortType" Type="Int">3</Property>
@@ -27,8 +47,9 @@
 		<Item Name="REF.Channel--Cluster--Array.ctl" Type="VI" URL="../REF/REF.Channel--Cluster--Array.ctl"/>
 	</Item>
 	<Item Name="Sweep" Type="Folder">
-		<Item Name="Sweep.Channel--Cluster--Array.ctl" Type="VI" URL="../Sweep/Sweep.Channel--Cluster--Array.ctl"/>
+		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Item Name="Sweep.Channel--Cluster.ctl" Type="VI" URL="../Sweep/Sweep.Channel--Cluster.ctl"/>
+		<Item Name="Sweep.Channel--Cluster--Array.ctl" Type="VI" URL="../Sweep/Sweep.Channel--Cluster--Array.ctl"/>
 		<Item Name="Sweep.Configuration--Cluster.ctl" Type="VI" URL="../Sweep/Sweep.Configuration--Cluster.ctl"/>
 		<Item Name="Sweep.Pattern--Enum.ctl" Type="VI" URL="../Sweep/Sweep.Pattern--Enum.ctl"/>
 	</Item>
