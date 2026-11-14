@@ -14,16 +14,16 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="Unit Tests" Type="Folder">
-			<Item Name="API Tree.vi" Type="VI" URL="../tests/API Tree.vi"/>
-			<Item Name="Test Lockin API.vi" Type="VI" URL="../tests/Unit Test/Test Lockin API.vi"/>
-			<Item Name="Test AO Configuration.vi" Type="VI" URL="../tests/Unit Test/Test AO Configuration.vi"/>
-			<Item Name="Test REF Configuration.vi" Type="VI" URL="../tests/Unit Test/Test REF Configuration.vi"/>
-			<Item Name="Test Data.vi" Type="VI" URL="../tests/Unit Test/Test Data.vi"/>
-			<Item Name="Test Data 2.vi" Type="VI" URL="../tests/Unit Test/Test Data 2.vi"/>
-			<Item Name="Test Gain.vi" Type="VI" URL="../tests/Unit Test/Test Gain.vi"/>
-			<Item Name="Test Modes.vi" Type="VI" URL="../tests/Unit Test/Test Modes.vi"/>
-			<Item Name="Test Sampling.vi" Type="VI" URL="../tests/Unit Test/Test Sampling.vi"/>
-			<Item Name="Test Sweep API.vi" Type="VI" URL="../tests/Unit Test/Test Sweep API.vi"/>
+			<Item Name="API Tree.vi" Type="VI" URL="../Tests/API Tree.vi"/>
+			<Item Name="Test Lockin API.vi" Type="VI" URL="../Tests/Unit Test/Test Lockin API.vi"/>
+			<Item Name="Test AO Configuration.vi" Type="VI" URL="../Tests/Unit Test/Test AO Configuration.vi"/>
+			<Item Name="Test REF Configuration.vi" Type="VI" URL="../Tests/Unit Test/Test REF Configuration.vi"/>
+			<Item Name="Test Data.vi" Type="VI" URL="../Tests/Unit Test/Test Data.vi"/>
+			<Item Name="Test Data 2.vi" Type="VI" URL="../Tests/Unit Test/Test Data 2.vi"/>
+			<Item Name="Test Gain.vi" Type="VI" URL="../Tests/Unit Test/Test Gain.vi"/>
+			<Item Name="Test Modes.vi" Type="VI" URL="../Tests/Unit Test/Test Modes.vi"/>
+			<Item Name="Test Sampling.vi" Type="VI" URL="../Tests/Unit Test/Test Sampling.vi"/>
+			<Item Name="Test Sweep API.vi" Type="VI" URL="../Tests/Unit Test/Test Sweep API.vi"/>
 		</Item>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
@@ -255,7 +255,6 @@
 				<Item Name="Wait (ms)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/time/time.llb/Wait (ms)__ogtk.vi"/>
 				<Item Name="Tick Count (ms)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/time/time.llb/Tick Count (ms)__ogtk.vi"/>
 				<Item Name="MGI Get Executable Version.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Application Control/MGI Get Executable Version.vi"/>
-				<Item Name="Ramp_SubVI.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Control VI/Other/Ramp_SubVI.vi"/>
 				<Item Name="MGI Approximately Equal.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Numeric/Comparison/MGI Approximately Equal.vi"/>
 				<Item Name="Index 2D Array Elements (LVObject)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/array/array.llb/Index 2D Array Elements (LVObject)__ogtk.vi"/>
 				<Item Name="Index 1D Array Elements (LVObject)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/array/array.llb/Index 1D Array Elements (LVObject)__ogtk.vi"/>
@@ -838,7 +837,6 @@
 				<Item Name="RGB to Color.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/colorconv.llb/RGB to Color.vi"/>
 				<Item Name="Caraya Interactive Menu.rtm" Type="Document" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/Caraya/menu/Caraya Interactive Menu.rtm"/>
 				<Item Name="LVDateTimeRec.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVDateTimeRec.ctl"/>
-				<Item Name="DAQmx Is Task Done.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/task.llb/DAQmx Is Task Done.vi"/>
 				<Item Name="Check for Equality.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/Check for Equality.vi"/>
 				<Item Name="nisyscfg.lvlib" Type="Library" URL="/&lt;vilib&gt;/nisyscfg/nisyscfg.lvlib"/>
 				<Item Name="Base64 Support.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JDP Science Common Utilities/Base64/Base64 Support.lvlib"/>
@@ -943,6 +941,9 @@
 				<Item Name="SMO.UI.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/JKI/JKI SMO/SMO.UI/SMO.UI.lvclass"/>
 				<Item Name="Is Value Changed.vim" Type="VI" URL="/&lt;vilib&gt;/Utility/Is Value Changed.vim"/>
 				<Item Name="DAQmx Self Calibrate.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/calibration/calibrationInfo.llb/DAQmx Self Calibrate.vi"/>
+				<Item Name="Waveform Min Max.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/Waveform Min Max.vi"/>
+				<Item Name="URI.lvlib" Type="Library" URL="/&lt;vilib&gt;/JKI/JKI SMO/URI Parsing/URI.lvlib"/>
+				<Item Name="Stall Data Flow.vim" Type="VI" URL="/&lt;vilib&gt;/Utility/Stall Data Flow.vim"/>
 			</Item>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="version.dll" Type="Document" URL="version.dll">
@@ -954,13 +955,18 @@
 			<Item Name="mscorlib" Type="VI" URL="mscorlib">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
-				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
-			</Item>
 			<Item Name="Instrument.Lockin.lvlib" Type="Library" URL="../src/Instrument.Lockin.lvlib"/>
 			<Item Name="DAQmx.lvclass" Type="LVClass" URL="../src/DAQmx/DAQmx.lvclass"/>
 			<Item Name="Generator.lvclass" Type="LVClass" URL="../src/Generator/Generator.lvclass"/>
 			<Item Name="DSP.lvclass" Type="LVClass" URL="../src/DSP/DSP.lvclass"/>
+			<Item Name="Waveform.Attributes.lvlib" Type="Library" URL="../src/Waveform.Attributes/Waveform.Attributes.lvlib"/>
+			<Item Name="Lockin.Typedefs.lvlib" Type="Library" URL="../src/Lockin.Typedefs/Lockin.Typedefs.lvlib"/>
+			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="Lockin.Utilities.lvlib" Type="Library" URL="../src/Lockin.Utilities/Lockin.Utilities.lvlib"/>
+			<Item Name="Lockin.setSweep_Table--cluster.ctl" Type="VI" URL="../src/Instrument.Lockin/Typedefs/API/Lockin.setSweep_Table--cluster.ctl"/>
+			<Item Name="Lockin.Commands--Enum.ctl" Type="VI" URL="../src/Instrument.Lockin/Typedefs/API/Lockin.Commands--Enum.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lock-In (x64) Application" Type="EXE">
