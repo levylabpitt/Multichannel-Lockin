@@ -156,8 +156,8 @@ Most of these were sandboxes, not tests: run-until-stop loops with graphs, no Ca
 
 ### Remaining Phase 0 work
 
-1. **Build the VIP** to confirm Phase 0 (test plan row 1).
-2. **Remove the empty test libraries** `Tests\DAQmx\Tests.DAQmx.lvlib` and `Tests\Generator\Tests.Generator.lvlib` (no members after the DAQmx and Generator tests stayed in their classes) and their entries in the Unit Tests project.
+1. **Build the VIP** to confirm Phase 0 (test plan row 1). Done 2026-11-14: released as 3.10.5.105 (with Phase 1). The first attempt failed with VIPM "source VIs or Libraries are missing: Tests.Generator.lvlib, Tests.DAQmx.lvlib; callers: Generator.lvclass, DAQmx.lvclass": deleting those two test libraries (item 2, `da160bc9`) left them listed as Friended Library in `Generator.lvclass` and `DAQmx.lvclass`. LabVIEW loads a class with a missing friend silently; the VIP build does not. Removing the two friends (class Properties > Friends) fixed it. When a test library is deleted, remove it from every class's friend list.
+2. **Remove the empty test libraries** `Tests\DAQmx\Tests.DAQmx.lvlib` and `Tests\Generator\Tests.Generator.lvlib` (no members after the DAQmx and Generator tests stayed in their classes) and their entries in the Unit Tests project. Done (`da160bc9`), plus their friend entries in the classes (see item 1).
 3. **Code without callers** (raw link-table scan; confirm in LabVIEW): `DAQmx:Sync.Config.vi`; `Instrument.DAQ:Simulate Waveguide.vi` and `Waveguide Model.vim` (the waveguide simulation looks dead); `DAQmx:Read Waveforms.vi` (added during Phase 0, no caller yet).
 
 Expected result: 25 of the 39 VIs leave `src\` (about 5% of the VIP's file count), Caraya leaves the exe and the package's dependency tree (confirmed: nothing in `src\` links Caraya), and the member lists for Phases 1 and 2 are shorter.
@@ -291,7 +291,7 @@ Phases 1-2 give Transport the light load but do not shorten the build: VIPM stil
 
 | # | Check | Expected |
 | --- | --- | --- |
-| 1 | After Phase 0: build the VIP | builds; no Caraya or `Tests.DSP.lvlib` in the package dependencies (the friend entry points outside `src\` and must not be pulled in); mass compile of `Tests\` reports no broken VIs; `Tests\` VIs run from the Unit Tests project |
+| 1 | After Phase 0: build the VIP (passed 2026-11-14, 3.10.5.105: 725 files vs 747 in 3.10.4.104; dependencies only `levylab_lib_instrument_type` and `levylab_lib_levylab_instruments`; no `Tests.*.lvlib` in the package) | builds; no Caraya or `Tests.DSP.lvlib` in the package dependencies (the friend entry points outside `src\` and must not be pulled in); mass compile of `Tests\` reports no broken VIs; `Tests\` VIs run from the Unit Tests project |
 | 2 | After Phase 1 step 1: search `src\` for `Get State-enum.ctl`, `TerminalConfiguration--ring.ctl`, `Instrument.DAQ.lvclass` + `Simulation Mode` | no hits |
 | 3 | After Phase 1: open `Lockin.Typedefs.lvlib` alone | nothing else loads |
 | 4 | After Phase 2: open `Instrument.Lockin.API\...\Get SMO Port.vi` alone | only framework + `Instrument.Lockin.API` + `Lockin.Typedefs` in memory; no `Instrument.DAQ`, DAQmx, `nidaqmx` |
