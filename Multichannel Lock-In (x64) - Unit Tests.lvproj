@@ -14,16 +14,16 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="Unit Tests" Type="Folder">
-			<Item Name="API Tree.vi" Type="VI" URL="../tests/API Tree.vi"/>
-			<Item Name="Test Lockin API.vi" Type="VI" URL="../tests/Unit Test/Test Lockin API.vi"/>
-			<Item Name="Test AO Configuration.vi" Type="VI" URL="../tests/Unit Test/Test AO Configuration.vi"/>
-			<Item Name="Test REF Configuration.vi" Type="VI" URL="../tests/Unit Test/Test REF Configuration.vi"/>
-			<Item Name="Test Data.vi" Type="VI" URL="../tests/Unit Test/Test Data.vi"/>
-			<Item Name="Test Data 2.vi" Type="VI" URL="../tests/Unit Test/Test Data 2.vi"/>
-			<Item Name="Test Gain.vi" Type="VI" URL="../tests/Unit Test/Test Gain.vi"/>
-			<Item Name="Test Modes.vi" Type="VI" URL="../tests/Unit Test/Test Modes.vi"/>
-			<Item Name="Test Sampling.vi" Type="VI" URL="../tests/Unit Test/Test Sampling.vi"/>
-			<Item Name="Test Sweep API.vi" Type="VI" URL="../tests/Unit Test/Test Sweep API.vi"/>
+			<Item Name="API Tree.vi" Type="VI" URL="../Tests/API Tree.vi"/>
+			<Item Name="Test Lockin API.vi" Type="VI" URL="../Tests/Unit Test/Test Lockin API.vi"/>
+			<Item Name="Test AO Configuration.vi" Type="VI" URL="../Tests/Unit Test/Test AO Configuration.vi"/>
+			<Item Name="Test REF Configuration.vi" Type="VI" URL="../Tests/Unit Test/Test REF Configuration.vi"/>
+			<Item Name="Test Data.vi" Type="VI" URL="../Tests/Unit Test/Test Data.vi"/>
+			<Item Name="Test Data 2.vi" Type="VI" URL="../Tests/Unit Test/Test Data 2.vi"/>
+			<Item Name="Test Gain.vi" Type="VI" URL="../Tests/Unit Test/Test Gain.vi"/>
+			<Item Name="Test Modes.vi" Type="VI" URL="../Tests/Unit Test/Test Modes.vi"/>
+			<Item Name="Test Sampling.vi" Type="VI" URL="../Tests/Unit Test/Test Sampling.vi"/>
+			<Item Name="Test Sweep API.vi" Type="VI" URL="../Tests/Unit Test/Test Sweep API.vi"/>
 		</Item>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
@@ -255,7 +255,6 @@
 				<Item Name="Wait (ms)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/time/time.llb/Wait (ms)__ogtk.vi"/>
 				<Item Name="Tick Count (ms)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/time/time.llb/Tick Count (ms)__ogtk.vi"/>
 				<Item Name="MGI Get Executable Version.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Application Control/MGI Get Executable Version.vi"/>
-				<Item Name="Ramp_SubVI.vi" Type="VI" URL="/&lt;userlib&gt;/LevyLab/Control VI/Other/Ramp_SubVI.vi"/>
 				<Item Name="MGI Approximately Equal.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Numeric/Comparison/MGI Approximately Equal.vi"/>
 				<Item Name="Index 2D Array Elements (LVObject)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/array/array.llb/Index 2D Array Elements (LVObject)__ogtk.vi"/>
 				<Item Name="Index 1D Array Elements (LVObject)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/array/array.llb/Index 1D Array Elements (LVObject)__ogtk.vi"/>
@@ -961,7 +960,13 @@
 			<Item Name="Generator.lvclass" Type="LVClass" URL="../src/Generator/Generator.lvclass"/>
 			<Item Name="DSP.lvclass" Type="LVClass" URL="../src/DSP/DSP.lvclass"/>
 			<Item Name="Waveform.Attributes.lvlib" Type="Library" URL="../src/Waveform.Attributes/Waveform.Attributes.lvlib"/>
-			<Item Name="DAQ.TerminalConfiguration--ring.ctl" Type="VI" URL="../src/Instrument.DAQ/Typedefs/DAQ.TerminalConfiguration--ring.ctl"/>
+			<Item Name="Lockin.Typedefs.lvlib" Type="Library" URL="../src/Lockin.Typedefs/Lockin.Typedefs.lvlib"/>
+			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="Lockin.Utilities.lvlib" Type="Library" URL="../src/Lockin.Utilities/Lockin.Utilities.lvlib"/>
+			<Item Name="Lockin.setSweep_Table--cluster.ctl" Type="VI" URL="../src/Instrument.Lockin/Typedefs/API/Lockin.setSweep_Table--cluster.ctl"/>
+			<Item Name="Lockin.Commands--Enum.ctl" Type="VI" URL="../src/Instrument.Lockin/Typedefs/API/Lockin.Commands--Enum.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lock-In (x64) Application" Type="EXE">
