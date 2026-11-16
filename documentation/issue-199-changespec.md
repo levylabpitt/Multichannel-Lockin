@@ -281,6 +281,8 @@ Transport loads the installed copy in `<user.lib>\LevyLab\Lockin-Multichannel`, 
 
 Fallback if the junction is not wanted: install the new package, open Transport and replace the disconnected typedefs by hand. Only the ~10 carrier typedefs listed above and the handful of VIs that use lock-in VIs directly (`Open Me.vi`, `Tree.vi`, `Lockin_sweep.vi`, `Lockin_time.vi`, `Results (Dictionary) to X and Y Arrays.vi`) need it; the other ~60 files follow their typedefs.
 
+**Phase 1 status (2026-11-16):** Transport was relinked against lock-in 3.10.5.105 and released as 2.7.1.66 (`Transport.vipb` requires `levylab_lib_lockin_multichannel >=3.10.5.105`); 3 Transport files link `Lockin.Typedefs`. Still linking the old `Instrument.DAQ.lvclass:` names (link entries with a path, so they will show as missing once 3.10.5 is installed): 6 files of **Sweep Control** (a separate product in the Transport repo, `Sweep Control\build support\Sweep Control.vipb`, last released 2.0.0.14): `Continuous B sweep.vi`, `API\Read Sweep Configuration File.vi`, `API\Read Sweep Configuration Example.vi`, `API (file)\Read Continuous B Sweep.json.vi`, `Typedefs\Continuous B Sweep JSON--Cluster.ctl`, `Typedefs\Lockin Sweep--Cluster.ctl` (AO/REF/Sweep channel typedefs); plus `documentation\Open Me.vi` and `Tests\Sandbox\Cluster Typedef JSON Staging.vi`, which are outside Transport's `src\`. Another 68 Transport files embed old names only inside type copies.
+
 After this, Transport's sweep typedefs load `Lockin.Typedefs` only, and its `Lockin_*` experiments load `Instrument.Lockin.API` only. `Open Me.vi` still launches the server through `Instrument.Lockin.AppLauncher.vi`, which loads the engine, as intended.
 
 ## Phase 3 (optional): package split
