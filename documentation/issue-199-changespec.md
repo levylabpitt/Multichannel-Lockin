@@ -4,6 +4,8 @@ Goal: a client (Transport, a script, another instrument) can call the lock-in AP
 
 Everything below was read from the files on `develop` after Release 3.10.4.104 (2026-11-11): class membership from the `.lvclass` XML, dependencies from the link tables inside the `.vi`/`.ctl` files (qualified names `Owner.lvclass:Item.ctl`). Link-table reads cannot see wiring; anything marked "check" needs a look in LabVIEW.
 
+**Status (2026-11-16): Phase 0 and Phase 1 shipped; Phase 2 and Phase 3 shelved.** Phase 0 and Phase 1 were released in lock-in 3.10.5.105, with Transport relinked and released as 2.7.1.66. They did not measurably shorten this repo's builds (the VIP packages all of `src\` and the exe compiles the whole engine either way; the exe still takes about 14 min), but they removed test code and Caraya from the package and exe, broke the `Instrument.DAQ` / `Instrument.Lockin` typedef cycle, and let Transport's sweep typedefs load without the engine. Phase 2 would mainly save Transport the engine load. Measured: the Transport Server's first load of the lock-in (via Configure Experiment) takes about 30 s once per session, part of which is the framework and other instruments, and Phase 2 would only remove the engine part if Transport's Control Experiment also switched to loading `Instrument.Lockin.API`. That does not justify retyping ~75 class terminals plus another Transport relink and joint release. Phase 3 depends on Phase 2 and is shelved with it. Revisit if there is a concrete need: the API on a PC without DAQmx, split API/server packages, or slow Transport loads. The Phase 2 plan below is kept for that case.
+
 ## What exists today
 
 **Hierarchy.** `Instrument` (framework) -> `Instrument.LockinAPI` (framework, `user.lib\LevyLab\Instrument Framework\Instrument Types\Lockin`) -> `Instrument.Lockin` (this repo). `Instrument.LockinAPI` already has its own API VIs and `LockinAPI.*` typedefs.
@@ -225,7 +227,7 @@ Order:
 
 `Instrument.DAQ`, `Instrument.Lockin` and `Instrument UI.Lockin` all use `Lockin.Typedefs` and no longer load each other's typedefs. The `Instrument.Lockin` -> `Instrument.DAQ` typedef cycle is gone. What remains between them are real calls (the SMO calls `DAQ.set*` VIs; the UI calls server helpers), handled in Phase 2.
 
-## Phase 2: `Instrument.Lockin.API`
+## Phase 2: `Instrument.Lockin.API` (shelved 2026-11-16, see Status at the top)
 
 ```
 Instrument                    (framework, unchanged)
