@@ -107,7 +107,7 @@ A client subscribes once and receives every new result (and, when asked for, wav
 The PUB socket is purely additive:
 
 - It is a **second socket on its own port**, owned by its own loop. ZeroMQ sockets are not thread-safe, so the REP loop and the PUB loop each own one socket. They can share the ZeroMQ context (`ZMQ.ContextManager` already manages one per process).
-- It **listens to the DAQ engine's existing public events** (`Lockin.getDAQPublicEvents.vi`). The DAQ engine, `Instrument.Lockin\Process.vi`, `Handle Command.vi` and every REP command are unchanged. A client that never connects to the PUB port sees no difference.
+- Its data comes from the DAQ engine's **existing public events** (`Lockin.getDAQPublicEvents.vi`), read by a lock-in adapter loop (see "Where the publisher lives in LabVIEW"). The DAQ engine, `Instrument.Lockin\Process.vi`, `Handle Command.vi` and every REP command are unchanged. A client that never connects to the PUB port sees no difference.
 - A PUB socket **never blocks the sender**. If a subscriber is slow, ZeroMQ drops messages for that subscriber once its send queue (high-water mark) is full. Acquisition can't be stalled by a client.
 
 So existing clients (Transport, LabVIEW API callers, the Python configurator) keep working, and the stream can be released on its own without the "release together" rule that applies to payload renames.
@@ -138,7 +138,7 @@ Short answer: small for `results` and `state`, and nothing for waveforms unless 
 
 Compared with today: `getAI` over REP converts the same 1.5 MB per call into JSON text (several times larger, and number formatting is far slower than a memory copy). A client that currently polls waveforms will cost the lock-in much less over the binary stream.
 
-The one cost to watch is **LabVIEW event data copies**: each event registration may receive its own copy of the event data, so a publisher that is permanently registered for `getWaveforms` could add a 1.5 MB copy per buffer even with no subscribers. Registering for the waveform event only while there is a waveform subscriber (dynamic registration with `Register For Events`, re-run when XPUB reports a subscribe or unsubscribe) removes that cost.
+The one cost to watch is **LabVIEW event data copies**: each event registration may receive its own copy of the event data, so a publisher that is permanently registered for `getWaveforms` could add a 1.5 MB copy per buffer even with no subscribers. Registering for the waveform event only while there is a waveform subscriber (dynamic registration with `Register For Events`, re-run on the XPUB SMO's subscription event) removes that cost; the adapter starts without it and adds it if profiling shows the copy.
 
 ### Socket and port
 
@@ -162,7 +162,7 @@ Topic names are part of the public contract once released. Use dotted lower-case
 
 ### Message format
 
-Every message is a ZeroMQ multipart message with three frames:
+Every message is a ZeroMQ multipart message with three frames. Multipart works the same on every socket type (REQ/REP uses it too, with REP hiding the envelope frames): the frames are sent with `ZMQ_SNDMORE` on all but the last, travel as one unit, and are delivered all or none, so a subscriber never sees a header without its payload. What is specific to PUB/SUB is filtering: the subscription prefix is matched against the **first frame only**, which is why the topic gets a frame of its own and the binary payload never takes part in matching. In `zeromq.lvlib` this is `zmq_send_multi.vi` (an array of strings, one per frame) on the sending side and `zmq_recv_multi.vi` on the receiving side; a Python client uses `send_multipart` / `recv_multipart`.
 
 1. **Topic** (ASCII), as in the table.
 2. **Header** (JSON, UTF-8):
@@ -181,8 +181,8 @@ Why binary for waveforms: one AI buffer is 12 channels x 15753 samples x 8 bytes
 
 A plain PUB socket can't tell the sender who is listening, so it would format 20 MB/s of waveforms even with no subscribers. The XPUB socket receives each subscriber's subscribe and unsubscribe messages (one frame: byte `1` or `0` followed by the topic). The publisher keeps a count per topic and:
 
-- registers for `DAQ.getWaveforms` when the count for any `waveforms.` topic goes from 0 to 1, and unregisters when it returns to 0;
-- formats only the directions (`ai`, `ao`) that have subscribers.
+- exposes the counts through `Is Subscribed.vi`, so the adapter formats only the directions (`ai`, `ao`) that have subscribers;
+- optionally fires an event on 0 <-> 1 transitions, so the adapter can register for `DAQ.getWaveforms` only while someone listens (see "Where the publisher lives in LabVIEW").
 
 Set `ZMQ_XPUB_VERBOSE` so every subscribe message is delivered, not only the first per topic; then the per-topic count is exact. ZeroMQ delivers an unsubscribe when a subscriber disconnects, so a crashed client doesn't leave waveforms running.
 
@@ -202,15 +202,38 @@ Configuration is **not** streamed in this design: it changes rarely and REP is t
 
 ### Where the publisher lives in LabVIEW
 
-A new loop, ideally an SMO of its own (`Instrument.Lockin.Publisher` or a framework-level `RemoteControl.ZMQ.Publisher`), launched next to the REP server in `Instrument.Lockin\Overrides\onStart.vi` and stopped with it:
+Two pieces, connected by a queue of already-serialized messages, so that the socket owner never sees lock-in data types and no variants are involved:
 
-1. On start: get the stream port, create and bind the XPUB socket, register for `getResults`, `getSweepWaveforms`, `getDAQState` from `Lockin.getDAQPublicEvents.vi` (`getWaveforms` only once a waveform subscriber appears).
-2. Event structure: one case per event. Each case increments that topic's `seq`, formats header and payload, and sends three frames (`zmq_send` with `ZMQ_SNDMORE` on the first two). The timeout case (or a short-timeout `zmq_recv`) reads subscription messages from the XPUB socket and updates the per-topic counts and the waveform registration. Reading and sending on the XPUB socket from the same loop keeps the socket single-threaded.
-3. On stop: unregister events, close the socket (`ZMQ_LINGER` 0 so shutdown never waits on slow subscribers).
+```
+DAQ SMO --public events--> lock-in adapter loop --Publish.vi (lossy queue)--> XPUB SMO --> socket
+                                   ^                                              |
+                                   +--------- Is Subscribed.vi (counts) ----------+
+```
 
-Keep formatting out of the DAQ engine's loop: the user event queue decouples them. If the publisher falls behind, its event queue grows; limit the waveform event to 1-2 queued instances ("Limit maximum instances of this event in the event queue" in the Edit Events dialog), so the publisher drops stale waveforms and catches up instead of growing without limit. Subscribers see the drop as a `seq` gap only if `seq` counts DAQ buffers rather than sent messages, so count buffers.
+Not in `Instrument.Lockin\Process.vi` (serializing every buffer there would delay command handling, the problem this part removes) and not in the RemoteControl SMO (a publish would wait behind a slow command and the reverse; one socket per loop also keeps each ZeroMQ socket single-threaded, as ZeroMQ requires).
 
-The DAQ engine's events are generated with **high priority** (`DAQ.getResults.vi`, `DAQ.getWaveforms.vi`), which is fine for a separate registration: each registration has its own queue.
+**1. XPUB SMO (generic).** Knows nothing about the lock-in. Built in this repo first; once proven, it moves to the framework as a shared SMO next to RemoteControl so every instrument can stream (move it straight there if another instrument needs streaming soon).
+
+- Input type, fixed:
+  ```
+  Publish.Message--Cluster
+    topic   : string   ("results", "waveforms.ai", ...)
+    header  : string   (JSON)
+    payload : string   (JSON text or raw f64le bytes; a LabVIEW string is a byte array)
+  ```
+- **Transport: a queue owned by the XPUB SMO**, not an event. It creates a queue of `Publish.Message--Cluster` with a fixed size (about 8) and exposes `Publish.vi`, which calls **Lossy Enqueue Element**. If the socket or the loop falls behind, the oldest message is dropped instead of memory growing; subscribers see it as a `seq` gap. A queue also suits the loop, which must read subscription frames from the socket anyway: dequeue with a short timeout, then a non-blocking `zmq_recv` on the XPUB socket, in one loop without an event structure.
+- Loop: on start get the stream port, create the XPUB socket (`ZMQ_XPUB_VERBOSE` 1, `ZMQ_SNDHWM`, `ZMQ_LINGER` 0) and bind. Each iteration: dequeue (timeout ~10 ms) and send the three frames with `zmq_send_multi.vi`; then drain subscription frames (byte `1`/`0` + topic) and update the per-topic subscriber counts. On stop: close the socket.
+- **Subscriber counts** are kept in a DVR (or FGV) and read by `Is Subscribed.vi` (topic or prefix -> boolean). Optionally the SMO also fires its own typed public event `{topic, count}` on 0 <-> 1 transitions; also no variants.
+- Started from `Instrument.Lockin\Overrides\onStart.vi` next to the REP server, stopped with it.
+
+**2. Lock-in adapter loop (lock-in specific).** A helper loop in the lock-in, started from `onStart.vi` after the XPUB SMO. It subscribes to the DAQ public events the same way `Instrument.Lockin` and the UI already do, and does all serialization:
+
+- One event case per topic. Each case checks `Is Subscribed.vi` first (skip the work if nobody listens), builds the header (`seq`, `t0`, `encoding`, and for waveforms `channels`, `samples`, `dt`), serializes the payload (JSONtext for `results`, `sweep`, `state`; for waveforms the `Y` arrays into one 2D DBL array and **Flatten To String** with byte order little-endian and "prepend array or string size" False), and calls `Publish.vi`.
+- `seq` counts DAQ buffers per topic, kept here, so a buffer dropped anywhere (adapter event queue, lossy publish queue, subscriber HWM) shows as a gap.
+- The `getWaveforms` case is limited to 1 queued instance ("Limit maximum instances of this event in the event queue"), so the adapter drops stale waveforms instead of falling further behind.
+- **Waveform registration:** start simple, with the adapter permanently registered for `getWaveforms` and the `Is Subscribed.vi` check skipping the serialization. Add dynamic registration (register on the XPUB SMO's 0 -> 1 event, unregister on 1 -> 0) only if profiling shows that an idle registration costs a buffer copy (see "Cost").
+
+The DAQ engine's events are generated with **high priority** (`DAQ.getResults.vi`, `DAQ.getWaveforms.vi`), which is fine for a separate registration: each registration has its own queue. Formatting stays out of the DAQ engine's loop because the event queue decouples them.
 
 ### Python client (illustration)
 
@@ -262,7 +285,7 @@ The JSON-RPC error envelope, once a prerequisite here, is already fixed (`PRIrvi
 
 ## Open questions
 
-- **XPUB in `zeromq.lvlib`:** expected to work (the binding wraps libzmq, and socket type 9 and `ZMQ_XPUB_VERBOSE` are plain libzmq options). Confirm in the first prototype that the socket-type typedef includes XPUB and that `zmq_recv` on it returns the subscription frames. The framework only uses REQ/REP today (`ZMQ Rep Test.vi` / `ZMQ Req Test.vi`).
+- **XPUB in `zeromq.lvlib`:** supported in the API: `socket_type.ctl` has `ZMQ_XPUB`, `socket_options.ctl` has `ZMQ_XPUB_VERBOSE`, `ZMQ_SNDHWM` and `ZMQ_LINGER`, and multipart is `zmq_send_multi.vi` / `zmq_recv_multi.vi` (read 2026-11-19 from the installed `vi.lib\addons\zeromq`). Still to confirm in the first prototype: that receiving on the XPUB socket returns the subscription frames as expected. The framework only uses REQ/REP today (`ZMQ Rep Test.vi` / `ZMQ Req Test.vi`).
 - **Measure the cost.** The cost table is an estimate from data sizes. Profile the publisher at the largest Fs and channel count you use, with and without a waveform subscriber.
 - **Framework or lock-in:** putting the publisher in `RemoteControl.ZMQ` makes it reusable by other instruments, but each instrument's events are different, so only the socket/sequence/framing part generalizes. Suggested split: a generic publisher class in the framework (bind, topics, seq, send multipart), and the lock-in-specific event-to-topic mapping in this repo.
 - **Results payload shape:** `Results (Dictionary)` is a list of `{key, value}` pairs. A plain JSON object `{"AI1.X": 0.12, ...}` is easier for clients; decide before the topic is released, because the payload is then part of the contract. Keeping it identical to the `getResults` reply has the advantage that one parser serves both.
