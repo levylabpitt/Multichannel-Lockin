@@ -15,7 +15,7 @@
 | --- | --- | --- |
 | Command server | `RemoteControl.ZMQ.lvclass:Open Server Connection.vi` | Binds a ZeroMQ socket of type 4 (`ZMQ_REP`). One request, one reply, strictly alternating. |
 | Lock-in port | `Instrument.Lockin\Overrides\Get SMO Port.vi` | Constant `29170`. |
-| Wire format | `JSON-RPC.lvlib` (`<vi.lib>\PRIrvin\JSON-RPC`) | JSON-RPC 2.0 request/response. Instrument errors currently reach the client as a bare `null` (fix tracked in the JSON-RPC repo, see `getInputDAQ-getOutputDAQ-changespec.md`). |
+| Wire format | `JSON-RPC.lvlib` (`<vi.lib>\PRIrvin\JSON-RPC`) | JSON-RPC 2.0 request/response. Instrument errors (including 4001 for unknown commands) are returned as a JSON-RPC `error` object, fixed in `PRIrvin/JSON-RPC` `be26bc50` (2026-10-28) and installed. |
 | Command list | `Instrument.Lockin\Overrides\Get SMO Public API.vi` | Parent's commands plus the items of `Lockin.Commands--Enum`, as `[String]`. |
 | `HELP` command | `Instrument\Private\Handle Help.vi` (framework) | With no `command` parameter, returns the command list. With `{"command": "<name>"}`, calls `Get SMO HELP.vi` and returns `Help.lvclass:Get JSON API Documentation.vi` of the result, as a string: the command description plus, for each side, `request_example` / `response_example` (generated from the typedef constant) and `request_schema` / `response_schema`. |
 | Schema in `HELP` | `Instrument Framework\subsystems\Help\private\Create Request Description.vi` (and the Response twin) | The schema is **not generated**: it is read from the typedef's VI description with `JSON-Schema.lvlib:Read Typedef Description (variant).vi`, and omitted when the description is empty. It exists only if someone ran `Create JSON Schema.vi` with `Write to File? = True` on that typedef. |
@@ -253,13 +253,12 @@ Part 1 itself adds no command: it changes what `HELP` returns. Each new command 
 
 ## Order of work
 
-1. **Fix the error envelope** in `JSON-RPC.lvlib` (already planned). Every client benefits, and schema-driven clients need real errors to report.
-2. **`HELP` generates schemas** (framework: `Create Request/Response Description.vi`), plus the isolated `Get SMO HELP.vi` fixes.
-3. **Publisher with `results` and `state` topics**, JSON only. This replaces `waitNewResults` polling and is the bulk of the value.
-4. **Waveform topics** (binary, gated by XPUB subscriptions).
-5. **Python client package**: models generated from `HELP` schemas, a REP client, a stream iterator.
+1. **`HELP` generates schemas** (framework: `Create Request/Response Description.vi`), plus the isolated `Get SMO HELP.vi` fixes.
+2. **Publisher with `results` and `state` topics**, JSON only. This replaces `waitNewResults` polling and is the bulk of the value.
+3. **Waveform topics** (binary, gated by XPUB subscriptions).
+4. **Python client package**: models generated from `HELP` schemas, a REP client, a stream iterator.
 
-Steps 2 and 3 are independent and can be done in either order.
+The JSON-RPC error envelope, once a prerequisite here, is already fixed (`PRIrvin/JSON-RPC` `be26bc50`). Steps 1 and 2 are independent and can be done in either order.
 
 ## Open questions
 
