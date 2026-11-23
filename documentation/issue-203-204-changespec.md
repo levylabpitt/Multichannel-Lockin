@@ -22,13 +22,14 @@ Benefits:
 | Command server | `RemoteControl.ZMQ.lvclass:Open Server Connection.vi` | `ZMQ_REP` socket, port from `Instrument.Lockin\Overrides\Get SMO Port.vi` (29170) |
 | Data events | `Instrument.DAQ\private\DAQ.getResults.vi`, `DAQ.getWaveforms.vi`, `DAQ.getSweepWaveforms.vi`, `DAQ.getDAQState.vi` | User events in `PublicEvents--Cluster`, generated with high priority |
 | Event access | `Instrument.Lockin\API (Class)\Lockin.getDAQPublicEvents.vi` | Returns `PublicEvents--Cluster`; used by `Instrument.Lockin` and the UI |
-| ZeroMQ binding | `<vi.lib>\addons\zeromq` | Has `ZMQ_XPUB` (`socket_type.ctl`), `ZMQ_XPUB_VERBOSE`, `ZMQ_SNDHWM`, `ZMQ_LINGER` (`socket_options.ctl`), `zmq_send_multi.vi`, `zmq_recv_multi.vi` |
+| ZeroMQ binding | `<vi.lib>\addons\zeromq` | Has `ZMQ_XPUB` (`socket_type.ctl`), `ZMQ_SNDHWM`, `ZMQ_LINGER` (`socket_options.ctl`), `zmq_send_multi.vi`, `zmq_recv_multi.vi` |
 
 ## Socket
 
 - Type `ZMQ_XPUB`, bound to `tcp://*:<stream port>`. Subscribers use `ZMQ_SUB`; XPUB behaves as PUB toward them and also delivers their subscribe and unsubscribe messages to the publisher.
+- Subscription messages are one frame: byte `0x01` (subscribe) or `0x00` (unsubscribe) followed by the prefix. With the default `ZMQ_XPUB_VERBOSE` = 0, XPUB removes duplicates: a subscribe is delivered only for the first subscriber to a prefix, and an unsubscribe only when the last one leaves (including on disconnect). Each message is therefore a transition of that prefix between "no subscribers" and "at least one", and no counting is needed. `ZMQ_XPUB_VERBOSE` = 1 would deliver every subscribe but still only the last unsubscribe, which breaks counting; do not set it.
 - Stream port: command port + 1 (29171). Also reported by `getStreamInfo`.
-- Options: `ZMQ_XPUB_VERBOSE` = 1, `ZMQ_SNDHWM` = 100 for #203 (lower once waveforms are added), `ZMQ_LINGER` = 0.
+- Options: `ZMQ_XPUB_VERBOSE` left at its default (0; see below), `ZMQ_SNDHWM` = 100 for #203 (lower once waveforms are added), `ZMQ_LINGER` = 0.
 
 ## Topics
 
@@ -62,7 +63,7 @@ Each message is a ZeroMQ multipart message of three frames, sent with `zmq_send_
 ```
 DAQ SMO --public events--> lock-in adapter loop --Publish.vi (lossy queue)--> XPUB SMO --> socket
                                    ^                                              |
-                                   +--------- Is Subscribed.vi (counts) ----------+
+                                   +--------- Is Subscribed.vi (prefixes) --------+
 ```
 
 The publisher is not placed in `Instrument.Lockin\Process.vi`, where serialization would delay command handling, nor in the RemoteControl SMO, where publishing and command handling would block each other. Each ZeroMQ socket is owned by one loop.
@@ -72,8 +73,8 @@ The publisher is not placed in `Instrument.Lockin\Process.vi`, where serializati
 No lock-in types. Built in this repo; moved to the framework once proven.
 
 - Input: a fixed-size queue (about 8 elements) of `Publish.Message--Cluster {topic: String, header: String, payload: String}`. The payload string holds JSON text or raw bytes. `Publish.vi` calls Lossy Enqueue Element, so an overloaded publisher drops the oldest message rather than growing memory.
-- Loop: dequeue with a 10 ms timeout and send the three frames; then read pending subscription frames (byte `1` or `0` followed by the topic) without blocking and update per-topic subscriber counts.
-- Subscriber counts are held in a DVR and read with `Is Subscribed.vi` (topic or prefix, returns Boolean). Optionally, a public event `{topic, count}` is fired on 0/1 transitions.
+- Loop: dequeue with a 10 ms timeout and send the three frames; then read pending subscription messages without blocking: on `0x01` add the prefix to the set of subscribed prefixes, on `0x00` remove it.
+- The set of subscribed prefixes is held in a DVR. `Is Subscribed.vi` takes a topic and returns True if any subscribed prefix is a prefix of it. The empty prefix (a client subscribed to everything) matches every topic, including waveforms. Optionally, a public event `{prefix, subscribed: Boolean}` is fired on each change.
 - Started from `Instrument.Lockin\Overrides\onStart.vi` and stopped with the instrument.
 
 ### Lock-in adapter loop
@@ -88,7 +89,7 @@ A helper loop started from `onStart.vi` after the XPUB SMO. It registers for the
 
 - Payload: the `Y` arrays as one 2D DBL array, Flatten To String with byte order little-endian and "prepend array or string size" False.
 - The `getWaveforms` event case is limited to 1 queued instance.
-- The adapter stays registered for `getWaveforms` and skips serialization when unsubscribed. If profiling shows that the idle registration copies event data, register and unregister on the XPUB SMO's 0/1 transition event instead.
+- The adapter stays registered for `getWaveforms` and skips serialization when unsubscribed. If profiling shows that the idle registration copies event data, register and unregister on the XPUB SMO's subscription-change event instead.
 - Fallback if XPUB subscription frames are not usable: a REP command `setStream {"waveforms": true|false}`. It is global across clients.
 
 ## New REP commands
@@ -141,7 +142,7 @@ Estimates from data sizes at Fs = 204789 S/s, 15753 samples per buffer, 12 AI ch
 
 #203:
 
-1. Prototype: XPUB socket receives subscription frames through `zmq_recv` in LabVIEW.
+1. Prototype: `zmq_recv` on the XPUB socket returns `0x01` + prefix when the first SUB subscribes and `0x00` + prefix when the last one unsubscribes or disconnects.
 2. A Python subscriber to `results` receives consecutive `seq` values for 10 minutes with no gaps at default sampling.
 3. REP command latency (`getStatus`) is unchanged with the publisher running.
 4. Stopping and restarting the instrument closes and rebinds the stream port without error.
