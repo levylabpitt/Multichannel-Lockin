@@ -1,6 +1,6 @@
 # Issues #203 and #204 - data stream over a ZeroMQ XPUB socket (change spec)
 
-Status: proposal. Read on `develop` at `67c0043d` (2026-11-19). #203 covers the socket, the publisher structure and the JSON topics; #204 adds binary waveform topics.
+Status: proposal. Read on `develop` at `67c0043d` (2026-11-19). #203 covers the socket, the publisher structure and the JSON topics (`results`, `state`); #204 adds the binary topics that carry waveform data (`waveforms.*`, `sweep.*`).
 
 ## Summary
 
@@ -36,10 +36,12 @@ Benefits:
 | Topic | Issue | Source event | Rate | Payload |
 | --- | --- | --- | --- | --- |
 | `results` | #203 | `getResults` | Every buffer (about 13/s at Fs = 204789 S/s, 15753 samples) | JSON, same as the `getResults` reply |
-| `sweep` | #203 | `getSweepWaveforms` | End of each sweep | JSON, same as the `getSweepResults` reply |
 | `state` | #203 | `getDAQState` | Each state change | JSON `{"state": "<state>"}` |
 | `waveforms.ai` | #204 | `getWaveforms` | Every buffer, only while subscribed | Binary f64le |
 | `waveforms.ao` | #204 | `getWaveforms` | Every buffer, only while subscribed | Binary f64le |
+| `sweep.ao`, `sweep.ai`, `sweep.x`, `sweep.y` | #204 | `getSweepWaveforms` | End of each sweep, one message per group | Binary f64le |
+
+All waveform data is sent as f64le; JSON is used only for scalars and status. A sweep is typically a few minutes at the output rate (up to about 100 S/s): 5 minutes and 44 channels is about 1.3 M values, roughly 10 MB as f64le and 25 MB as JSON, and converting that many values to JSON text would block the adapter loop for an estimated second or more per sweep.
 
 Topic names become part of the public interface on release.
 
@@ -87,8 +89,10 @@ A helper loop started from `onStart.vi` after the XPUB SMO. It registers for the
 
 ### Waveform handling (#204)
 
-- Payload: the `Y` arrays as one 2D DBL array, Flatten To String with byte order little-endian and "prepend array or string size" False.
-- The `getWaveforms` event case is limited to 1 queued instance.
+- Payload: the `Y` arrays of one group (AI, AO, or one sweep group) as one 2D DBL array, Flatten To String with byte order little-endian and "prepend array or string size" False. All channels in a group must have the same number of samples.
+- Measured on a 16 x 100000 array in steady state: building the 2D array about 4.7 ms, flatten about 3.7 ms, together about 1 ms per 1.5 MB buffer. Single-shot timings are 2-3 times higher because of first-touch allocation.
+- The `getWaveforms` event case is limited to 1 queued instance. The `getSweepWaveforms` case is not limited; sweeps are never dropped by the adapter.
+- `sweep.*` topics are serialized whenever subscribed; the registration discussion below applies only to `waveforms.*`.
 - The adapter stays registered for `getWaveforms` and skips serialization when unsubscribed. If profiling shows that the idle registration copies event data, register and unregister on the XPUB SMO's subscription-change event instead.
 - Fallback if XPUB subscription frames are not usable: a REP command `setStream {"waveforms": true|false}`. It is global across clients.
 
@@ -129,14 +133,15 @@ while True:
 
 ## Estimated cost
 
-Estimates from data sizes at Fs = 204789 S/s, 15753 samples per buffer, 12 AI channels. To be measured (Profile Performance and Memory) as part of each issue.
+Estimates from data sizes at Fs = 204789 S/s, 15753 samples per buffer, 12 AI channels; the f64le encode figure is from a sandbox benchmark. To be measured (Profile Performance and Memory) as part of each issue.
 
 | Stream | Data rate | CPU | Memory |
 | --- | --- | --- | --- |
 | `results` | 10-20 KB per buffer, about 0.2 MB/s | One JSON serialization per buffer (a few ms); less than one client polling `getResults` at 20 Hz | About 2 MB per subscriber at HWM 100 |
-| `sweep`, `state` | Small | Negligible | Negligible |
+| `state` | Small | Negligible | Negligible |
+| `sweep.*` | About 10 MB per sweep (5 min at 100 S/s, 44 channels), once every few minutes | About 10 ms per sweep | One sweep per subscriber in the send queue |
 | Waveforms, no subscriber | 0 | None beyond a possible event data copy (see above) | None |
-| Waveforms, subscribed | About 1.5 MB per buffer, 20 MB/s per direction | Memory copies only; well under 1% of a core | About 6 MB per subscriber at HWM 4; network 160 Mb/s per remote subscriber |
+| Waveforms, subscribed | About 1.5 MB per buffer, 20 MB/s per direction | About 1 ms per buffer (2D array + flatten), about 1.3% of a core per direction | About 6 MB per subscriber at HWM 4; network 160 Mb/s per remote subscriber |
 
 ## Test plan
 
@@ -152,6 +157,7 @@ Estimates from data sizes at Fs = 204789 S/s, 15753 samples per buffer, 12 AI ch
 1. With no `waveforms.*` subscriber, CPU and memory match the #203 baseline.
 2. With a subscriber, the decoded `waveforms.ai` array equals the `getAI` reply for the same buffer.
 3. A subscriber that stops reading causes `seq` gaps but no growth in lock-in memory.
+4. After a sweep, each decoded `sweep.*` array equals the matching group of the `getSweepResults` reply.
 
 ## Open questions
 
