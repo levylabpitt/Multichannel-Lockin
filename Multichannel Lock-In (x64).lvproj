@@ -45,6 +45,7 @@
 		<Item Name="DAQmx.lvclass" Type="LVClass" URL="../src/DAQmx/DAQmx.lvclass"/>
 		<Item Name="Generator.lvclass" Type="LVClass" URL="../src/Generator/Generator.lvclass"/>
 		<Item Name="DSP.lvclass" Type="LVClass" URL="../src/DSP/DSP.lvclass"/>
+		<Item Name="XPUB.lvclass" Type="LVClass" URL="../src/XPUB/XPUB.lvclass"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="NI_App_Builder_API.lvlib" Type="Library" URL="/&lt;vilib&gt;/AppBuilder/AB_API_Simple/NI_App_Builder_API.lvlib"/>
@@ -2136,9 +2137,6 @@
 			<Item Name="IB_SRdB_Write.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Builds/Installer/SRdB/IB_SRdB_Write.vi"/>
 			<Item Name="IB_SRdB_Unlock.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Builds/Installer/SRdB/IB_SRdB_Unlock.vi"/>
 			<Item Name="logosbrw.dll" Type="Document" URL="/&lt;resource&gt;/logosbrw.dll"/>
-			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
-				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
-			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Multichannel Lock-In (x64) Application" Type="EXE">
